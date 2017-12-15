@@ -14,10 +14,11 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <style>{`body { margin: 0 } /* custom! */`}</style>
-          <link rel="stylesheet" href="/static/bootstrap.min.css"/>
-          <link rel="stylesheet" href="/static/index.css"/>
+          <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+          <link rel="stylesheet" href="/static/css/index.css"/>
+          <link rel= "stylesheet" href = "../static/css/wide.css"/>
         </Head>
-        <body className="custom_class bgHome">
+        <body className="custom_class">
           {this.props.customValue}
           <Main />
           <NextScript />

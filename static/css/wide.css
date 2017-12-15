@@ -1,0 +1,13 @@
+.wide{
+    width: 50%;
+}
+.margin{
+    padding: 10% 10%;
+}
+table{
+    height:500px;    
+    width:100%;
+}
+.text {    
+    text-align: right;
+}
