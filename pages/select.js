@@ -1,24 +1,21 @@
+import React from 'react'
+import Link from 'next/link'
+import Selectling from '../components/Selectling'
+import Selectyak from '../components/Selectyak'
+
 
 const Index = ()=> (
 
-<div className ="container" >
-
-      <h1 className><center>เลือกตัวละคร</center></h1>
-
-    <div className="container progress wide"> 
-
-      <div className="progress-bar bg-warning" role="progressbar" style={{width: '50%'}}>50%</div>
-      <div className="progress-bar bg-danger" role="progressbar" style={{width: '50%'}}>50%</div>
-
+<div className ="container-fluid" >      
+    <div className="row">
+      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <Selectyak/>
+      </div>
+      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <Selectling/>      
+      </div>
     </div>
-
-  <table className ="table-responsive-sm" border>    
-
-      <tr className = ""><div className="margin"><h3>ทีมพี่ยักษ์</h3><h5>เลือก</h5></div></tr>   
-      <tr className = "text"><div className="margin"><h3>ทีมพี่ลิง</h3><h5>เลือก</h5></div></tr>    
-      
-  </table>
-
+  
 </div>
 )
 
