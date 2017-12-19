@@ -3,24 +3,27 @@ import Link from 'next/link'
 import Selectling from '../components/Selectling'
 import Selectyak from '../components/Selectyak'
 import styled from 'styled-components'
-const Back = styled.div`
+const Div = styled.div`
   width: 100vw;
   height: 100vh;
 ` 
+const Fit = styled.div`
+  padding-right: 0px;
+  padding-left: 0px;
+`
 const Index = ()=> (
 
-<div className ="container-fluid" >      
-    <Back className="row">
-      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div className ="container-fluid">      
+    <Div className="row">
+      <Fit className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <Selectyak/>
-      </div>
-      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      </Fit>
+      <Fit className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <Selectling/>      
-      </div>
-    </Back>
+      </Fit>
+    </Div>
   
 </div>
-
 )
 
 export default Index
