@@ -5,8 +5,8 @@ import styled from 'styled-components'
 const Box = styled.div`
     background-color: red;
     width: 100%;
-    height: 50%;
-    max-height: 100%;
+    min-height: 290px;
+    height: 100%;
 `
 const Text = styled.h3`
     padding-right:10%;

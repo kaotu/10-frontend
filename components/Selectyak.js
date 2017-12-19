@@ -6,19 +6,20 @@ const Box = styled.div`
     background-color: blue;
     width: 100%;
     height: 50%;
-    max-height: 100%;
+    min-height: 272px;
+    height: 100%;
 `
 const Text = styled.h3`
     padding-right:10%;
     padding-left:10%;
-    padding-top: 10%;
+    padding-top: 8%;
     padding-bottom:0px;
     
     `
 const Choose = styled.h5`
     padding-top:0px;
     padding-left:10%;
-    padding-bottom:11%;
+    /* padding-bottom:2%; */
     
 `
 
