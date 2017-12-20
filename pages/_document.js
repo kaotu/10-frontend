@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
           <link rel="stylesheet" href="/static/css/index.css"/>
           <link rel= "stylesheet" href = "../static/css/wide.css"/>
+          <link rel="stylesheet" href ="../static/css/keyframes.css"/>
         </Head>
         <body className="custom_class">
           {this.props.customValue}

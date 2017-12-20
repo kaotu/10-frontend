@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import Selectling from '../components/Selectling'
-import Selectyak from '../components/Selectyak'
+import Selectling from '../components/Character/Selectling'
+import Selectyak from '../components/Character/Selectyak'
 import styled from 'styled-components'
+import MoveToLeft from '../components/PageTransition/MoveToLeft'
+
 const Div = styled.div`
   width: 100vw;
   height: 100vh;
@@ -12,7 +14,7 @@ const Fit = styled.div`
   padding-left: 0px;
 `
 const Index = ()=> (
-
+<MoveToLeft>
 <div className ="container-fluid">      
     <Div className="row">
       <Fit className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -24,6 +26,7 @@ const Index = ()=> (
     </Div>
   
 </div>
+</MoveToLeft>
 )
 
 export default Index
