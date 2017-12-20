@@ -1,0 +1,15 @@
+.bgHome{
+    background-color: #002D40;
+    height: 100vh;
+}
+p{
+    color: white
+}
+
+@font-face{
+    font-family: 'Niramit';
+    src: url('../font/TH Niramit AS.ttf');
+}
+.Niramit{
+    font-family: 'Niramit';
+}
