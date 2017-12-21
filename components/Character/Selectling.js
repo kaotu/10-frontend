@@ -16,9 +16,6 @@ const Text = styled.h3`
     padding-top: 5%;
     padding-bottom:0px;
     text-align: right;
-    @media (max-width: 576px) {
-        font-size: 4rem;
-    }
 `
 const Choose = styled.h5`
     font-family: "Niramit";
@@ -27,9 +24,6 @@ const Choose = styled.h5`
     padding-right:20%;
     padding-bottom:11%;
     text-align: right;
-    @media (max-width: 576px) {
-        font-size: 3rem;
-    }
 `
 
 const Select =()=> (

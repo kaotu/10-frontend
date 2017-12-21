@@ -16,18 +16,13 @@ const Text = styled.h3`
     padding-left: 20%;
     padding-top: 5%;
     padding-bottom:0px;
-    @media (max-width: 576px) {
-        font-size: 4rem;
-    }    
+
 `
 const Choose = styled.h5`
     font-family: "Niramit";
     color : #FFA644;
     padding-top:0px;
     padding-left:20%;
-    @media (max-width: 576px) {
-        font-size: 3rem;
-    }    
 `
 const SelectChar = styled.h1`
     font-family: "Niramit";
