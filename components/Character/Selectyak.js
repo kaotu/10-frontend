@@ -4,28 +4,15 @@ import styled from 'styled-components'
 
 import Yak from './Yak'
 import Teamyak from './Teamyak'
-
-const Img = styled.div`
-    background-image: url(../../static/image/bbg2.svg);
-    width: 100%;
-    height: 100vh;
-    @media (max-width: 720px) {
-        height: 50vh;
-    }
-`
+import Bgyak from './Bgyak'
+import '../global-style'
 
 const Box = styled.div`
-    background-color: #295949;
-    width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    @media (max-width: 720px) {
-        height: 50vh;
-    }
+    background-color:transparent;
+    height: 50vh;
 `
-
 const Choose = styled.h5`
-    font-family: "Niramit";
+    font-family: 'My custom family';
     color : #FFA644;
     padding-top:0px;
     padding-left:20%;
@@ -34,21 +21,22 @@ const Choose = styled.h5`
     }    
 `
 const SelectChar = styled.h1`
+    font-family: 'My custom family';
     color : #FFA644;
 `
 
 const Select =()=> (
     <div>
         <Link href="/what-y">
-            {/* <Bgyak> */}
+            <Bgyak>
                 <Box>
-                    <Img opacity="0.1">
-                        <Teamyak/>
-                        <Choose>เลือก</Choose>  
-                        <Yak/>
-                    </Img>
+                    <SelectChar><center>เลือกตัวละคร</center></SelectChar>
+                        <Scorebar/>
+                            <Teamyak/>
+                                <Choose>เลือก</Choose>  
+                                    <Yak/>
                 </Box> 
-            {/* </Bgyak>         */}
+            </Bgyak>        
         </Link>
     </div>
 )

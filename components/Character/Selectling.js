@@ -8,14 +8,12 @@ import Teamling from './Teamling'
 const Box = styled.div`
     background-color: #002D40;
     width: 100%;
-    height: 100vh;
-    max-height: 100%;
-    @media (max-width: 720px) {
-        height: 50vh;
-    }
+    height: 50vh;
+    max-height: 100%
+    
 `
-
 const Choose = styled.h5`
+    font-family: 'My custom family';
     color : #FFA644;
     padding-top:0px;
     padding-right:0%;
