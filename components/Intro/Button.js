@@ -6,7 +6,7 @@ const Button = styled.button`
     background-color: transparent;
     color: #FFA644;
     border: 2px solid  #FFA644;
-    font-size: 3.5vh;
+    font-size: 2vw;
     font-family: 'Niramit';
     &:hover {
         background-color: #FFA644; 

@@ -1,14 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-<<<<<<< HEAD
-import Box1 from '../components/boxling'
-=======
 import Ling from './Ling'
->>>>>>> 1d8f38c... component yak ling
+import Teamling from './Teamling'
 
 const Box = styled.div`
-    background-color: red;
+    background-color:transparent;
     width: 100%;
     height: 50vh;
     max-height: 100%
@@ -24,6 +21,8 @@ const Text = styled.h3`
     }
 `
 const Choose = styled.h5`
+    font-family: "Niramit";
+    color : #FFA644;
     padding-top:0px;
     padding-right:20%;
     padding-bottom:11%;
@@ -35,12 +34,14 @@ const Choose = styled.h5`
 
 const Select =()=> (
     <div>
-        <Link href="/what-l">    
+        <Link href="/what-l">
+        <body className="bgLing">    
             <Box>
-                <Text>ทีมพี่ลิง</Text>
+                <Teamling/>
                 <Choose>เลือก</Choose>  
                 <Ling/>             
             </Box>
+            </body>
         </Link>
         
     </div>

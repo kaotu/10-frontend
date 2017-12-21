@@ -14,6 +14,7 @@ const Fit = styled.div`
   padding-left: 0px;
 `
 const Index = ()=> (
+<body className="bgHome">
 <MoveToLeft>
 <div className ="container-fluid">      
     <Div className="row">
@@ -27,6 +28,7 @@ const Index = ()=> (
   
 </div>
 </MoveToLeft>
+</body>
 )
 
 export default Index

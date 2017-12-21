@@ -13,3 +13,11 @@ p{
 .Niramit{
     font-family: 'Niramit';
 }
+
+.bgYak{
+    background-image: url("../image/BG1.svg");
+}
+
+.bgLing{
+    background-image: url("../image/BG2.svg")
+}
