@@ -8,10 +8,9 @@ import Teamyak from './Teamyak'
 const Img = styled.div`
     background-image: url('../../static/image/kanok.svg');
     width: 100%;
-    height: 100vh;
-    @media (max-width: 720px) {
-        height: 50vh;
-    }
+    height: 50vh;
+    max-height: 100%;
+    
 `
 
 const Box = styled.div`

@@ -10,6 +10,7 @@ const Index = () => (
 	<HomeIntro/>
 	
 	</div>
+	
 )
 
 export default Index

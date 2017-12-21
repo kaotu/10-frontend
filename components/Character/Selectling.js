@@ -18,7 +18,7 @@ const Box = styled.div`
     background-color: #002D40;
     width: 100%;
     height: 50vh;
-    max-height: 100%
+    max-height: 100%;
     
 `
 const Choose = styled.h5`
