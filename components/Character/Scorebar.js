@@ -5,7 +5,7 @@ import Scoreling from './Scoreling'
 import Scoreyak from './Scoreyak'
 
 const SelectChar = styled.h1`
-    font-family: "Niramit";
+    font-family: 'My custom family';
     color : #FFA644;
 `
 
