@@ -21,7 +21,7 @@ const ImgL = styled.img`
     height: 80%;
     display: flex;
     position: absolute;
-    margin-left: 4.5%;
+    margin-left: 6.9%;
     margin-top: -1.5%;
     ${props => props.primary && `
         margin-left: 56%;
