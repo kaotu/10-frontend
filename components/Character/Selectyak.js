@@ -4,8 +4,15 @@ import styled from 'styled-components'
 
 import Yak from './Yak'
 import Teamyak from './Teamyak'
-import Bgyak from './Bgyak'
-import '../global-style'
+
+const Img = styled.div`
+    background-image: url('../../static/image/bbg.svg');
+    width: 100%;
+    height: 100vh;
+    @media (max-width: 720px) {
+        height: 50vh;
+    }
+`
 
 const Box = styled.div`
     background-color:transparent;
@@ -15,14 +22,19 @@ const Choose = styled.h5`
     font-family: 'My custom family';
     color : #FFA644;
     padding-top:0px;
-    padding-left:20%;
-    @media (max-width: 576px) {
-        font-size: 3rem;
-    }    
-`
-const SelectChar = styled.h1`
-    font-family: 'My custom family';
-    color : #FFA644;
+    padding-left:10%;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    margin-top: 54%;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    &:hover{
+	    -webkit-transform: scale(1.3);
+	    transform: scale(1.3);
+    }
 `
 
 const Select =()=> (

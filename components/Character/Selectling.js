@@ -5,6 +5,15 @@ import styled from 'styled-components'
 import Ling from './Ling'
 import Teamling from './Teamling'
 
+const Img = styled.div`
+    background-image: url('../../static/image/bbg.svg');
+    width: 100%;
+    height: 100vh;
+    @media (max-width: 720px) {
+        height: 50vh;
+    }
+`
+
 const Box = styled.div`
     background-color: #002D40;
     width: 100%;
@@ -35,9 +44,11 @@ const Select =()=> (
         <Link href="/what-l">
         {/* <Bgling>    */}
             <Box>
+                <Img>
                 <Teamling/>
                 <Choose>เลือก</Choose>  
-                <Ling/>             
+                <Ling/>
+                </Img>             
             </Box>
             {/* </Bgling> */}
         </Link>

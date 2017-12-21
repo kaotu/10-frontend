@@ -17,18 +17,19 @@ const Fit = styled.div`
 `
 const Index = ()=> (
 <Bg>
-<MoveToLeft>
-<div className ="container-fluid">      
-    <Div className="row">
-      <Fit className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <Selectyak/>
-      </Fit>
-      <Fit className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <Selectling/>      
-      </Fit>
-    </Div>
-</div>
-</MoveToLeft>
+    <MoveToLeft>
+      <Scorebar/>
+        <div className ="container-fluid">      
+          <Div className="row">
+            <Fit className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <Selectling/>      
+            </Fit>
+            <Fit className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <Selectyak/>
+            </Fit>
+          </Div>  
+      </div>
+    </MoveToLeft>
 </Bg>
 )
 
