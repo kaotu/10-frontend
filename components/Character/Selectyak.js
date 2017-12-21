@@ -6,7 +6,7 @@ import Yak from './Yak'
 import Teamyak from './Teamyak'
 
 const Img = styled.div`
-    background-image: url('../../static/image/bbg.svg');
+    background-image: url('../../static/image/kanok.svg');
     width: 100%;
     height: 100vh;
     @media (max-width: 720px) {
@@ -27,14 +27,7 @@ const Choose = styled.h5`
     position: absolute;
     z-index: 2;
     margin-top: 54%;
-    -webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-    &:hover{
-	    -webkit-transform: scale(1.3);
-	    transform: scale(1.3);
-    }
+
 `
 
 const Select =()=> (
