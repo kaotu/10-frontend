@@ -8,6 +8,10 @@ const Button = styled.button`
     border: 2px solid  #FFA644;
     font-size: 3.5vh;
     font-family: 'Niramit';
+    &:hover {
+        background-color: #FFA644; 
+        color: #002D40;
+    }
 `;
 
 export default Button;
