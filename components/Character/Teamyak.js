@@ -1,7 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Textyak = styled.img`
+    width: 40%;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    margin-top: 40.5%;
+    margin-left: 9%
+`
 
 const Teamyak = () => (
-    <img src="../../static/image/Font-peeyak2.svg" style={{width:'10%',margin:'0%',marginTop:'5%',marginLeft:'20%'}}/>    
+    <Textyak src="../../static/image/Font-peeyak2.svg"/>    
 )
 
 export default Teamyak
