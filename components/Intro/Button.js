@@ -17,13 +17,13 @@ const Button = styled.button`
     box-shadow: 0 0.9vh #999;
     
     &:hover {
-        box-shadow:  0.2vw 0.9vh #999 ;
+        box-shadow:  0.3vw 0.9vh #999 ;
         background-color: #E4943B; 
         transition:scale(1.1);
     }
     &:active{
         background-color: #E4943B;
-        box-shadow: 0.2vw 0.5vh #666;
+        box-shadow: 0.1vw 0.5vh #666;
         transform: translateY(0.4vh);
     }
 `;

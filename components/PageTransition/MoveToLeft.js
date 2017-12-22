@@ -6,7 +6,7 @@ const moveToLeft = keyframes`
 `
 
 const MoveToLeft = styled.div`
-    -webkit-animation: ${moveToLeft} .99s ease-in-out both;
-    animation: ${moveToLeft} .99s ease-in-out both ;
+    -webkit-animation: ${moveToLeft} 1s ease-in-out both;
+    animation: ${moveToLeft} 1s ease-in-out both ;
 `
 export default MoveToLeft
