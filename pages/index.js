@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import HomeIntro from '../pages/HomeIntro'
-import Select from '../pages/Select'
+import HomeIntro from '../components/Intro/HomeIntro'
+
 
 
 const Index = () => (
