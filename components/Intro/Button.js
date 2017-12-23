@@ -17,6 +17,7 @@ const Button = styled.button`
     transition: .2s transform ease-in-out;
     z-index: 0;
     background-color: transparent;
+    cursor: pointer;
     
     &:hover{
         border: 0.2vw solid transparent;
