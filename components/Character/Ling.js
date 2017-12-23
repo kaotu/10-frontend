@@ -8,6 +8,7 @@ const Modelling = styled.img`
     display: block;
     margin-left: 3.5%;
     margin-top: 24%;
+    cursor: pointer;
 
     @media (max-width:720px) {
         width: 43%;

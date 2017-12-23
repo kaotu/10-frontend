@@ -21,23 +21,6 @@ const Box = styled.div`
     max-height: 100%;
     
 `
-const Choose = styled.h5`
-    font-family: 'My custom family';
-    color : #FFA644;
-    padding-top:0px;
-    padding-right:0%;
-    padding-bottom:11%;
-    text-align: right;
-    display: flex;
-    position: absolute;
-    z-index: 2;
-    margin-top: 54%;
-    margin-left: 81%;
-
-    @media (max-width:720px) {
-        margin-left: 74.5%;
-    }
-`
 
 const Select =()=> (
     <div>
@@ -45,8 +28,7 @@ const Select =()=> (
         {/* <Bgling>    */}
             <Box>
                 <Img>
-                <Teamling/>
-                <Choose>เลือก</Choose>  
+                <Teamling/> 
                 <Ling/>
                 </Img>             
             </Box>

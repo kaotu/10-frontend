@@ -9,6 +9,7 @@ const Modelyak = styled.img`
     display: block;
     margin-left: 45%;
     margin-top: 17%;
+    cursor: pointer;
 
     @media (max-width:720px) {
         width: 47%;

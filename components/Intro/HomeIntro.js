@@ -9,12 +9,15 @@ import Bg from '../Bg'
 
 
 const Index = () => (
-	<div className="container-fluid" >
-		<div className="row">
-			<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<center><Logo /></center>
-				<center><Link href="/character"><a><Button style={{ width: '7%', marginTop: '1%' }}>ถัดไป</Button></a></Link></center>
-			</div>			
-		</div></div>
+	<Bg>
+		<div className="container-fluid" >
+			<div className="row">
+				<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<center><Logo /></center>
+					<center><Link href="/character"><a><Button>ไปผจญภัยกัน!</Button></a></Link></center>
+				</div>
+			</div></div>
+	</Bg>
 )
+
 export default Index

@@ -13,6 +13,7 @@ const Img = styled.div`
     
 `
 
+<<<<<<< HEAD
 const Box = styled.div`
     background-color:transparent;
     height: 50vh;
@@ -29,16 +30,25 @@ const Choose = styled.h5`
 
 `
 
+=======
+>>>>>>> c0f3e08... [chang] button [fix] selectling,selectyak
 const Select =()=> (
     <div>
         <Link href="/what-y">
             <Bgyak>
                 <Box>
+<<<<<<< HEAD
                     <SelectChar><center>เลือกตัวละคร</center></SelectChar>
                         <Scorebar/>
                             <Teamyak/>
                                 <Choose>เลือก</Choose>  
                                     <Yak/>
+=======
+                    <Img>
+                        <Teamyak/> 
+                        <Yak/>
+                    </Img>
+>>>>>>> c0f3e08... [chang] button [fix] selectling,selectyak
                 </Box> 
             </Bgyak>        
         </Link>
