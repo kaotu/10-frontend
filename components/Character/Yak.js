@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 
 const Modelyak = styled.img`
-    width: 55%;
+    width: 50vw;
     position: absolute;
     z-index: 1;
     display: block;
-    margin-left: 45%;
-    margin-top: 17%;
+    margin-left: 65%;
+    margin-top: .2%;
     cursor: pointer;
 
     @media (max-width:720px) {
@@ -26,7 +26,7 @@ const Modelyak = styled.img`
 `
 
 const Yak = () => (
-    <img src="../../static/image/yak.svg" style={{width:'18vw',margin:'0%',marginTop:'-13%',marginLeft:'75%'}}/>    
+    <Modelyak src="../../static/image/Giant.svg"/>    
 )
 
 export default Yak
