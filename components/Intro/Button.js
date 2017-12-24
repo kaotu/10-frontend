@@ -3,7 +3,7 @@ import '../global-style'
 
 
 const Button = styled.button`
-    font-family: 'My custom family';
+    font-family: 'Niramit';
     border 0.2vw solid currentColor;
     border-radius: 3rem;
     color: #FFA644;
