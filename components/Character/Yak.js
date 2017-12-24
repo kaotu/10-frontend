@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Modelyak = styled.img`
     width: 50vw;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     display: block;
     margin-left: 65%;
     margin-top: .2%;

@@ -1,7 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const BarYak = styled.div `
+    width: 50%;
+`
 
 const Scoreyak =()=> (
-    <div className="progress-bar bg-warning" role="progressbar" style={{width: '50%'}}>50%</div>
+    <BarYak className="progress-bar bg-warning" role="progressbar">50%</BarYak>
 )
 
 export default Scoreyak

@@ -1,7 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const BarLing = styled.div `
+    width: 50%;
+`
 
 const Scoreling =()=> (
-    <div className="progress-bar bg-danger" role="progressbar" style={{width: '50%'}}>50%</div>
+    <BarLing className="progress-bar bg-danger" role="progressbar">50%</BarLing>
 )
 
 export default Scoreling
