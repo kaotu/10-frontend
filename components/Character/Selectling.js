@@ -9,6 +9,7 @@ const Img = styled.div`
     background-image: url('../../static/image/kanok.svg');
     width: 100%;
     height: 100vh;
+    
     @media (max-width: 720px) {
         height: 50vh;
     }
@@ -20,6 +21,11 @@ const Box = styled.div`
     height: 50vh;
     max-height: 100%;
     cursor: pointer;
+    div:hover {
+        /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
+        background-image: url(''); 
+    }
+
     @media (max-width: 720px) {
         height: 50vh;
     }

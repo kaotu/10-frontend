@@ -22,6 +22,11 @@ const Choose = styled.h5`
     height: 100vh;
     max-height: 100%;
     cursor: pointer;
+    div:hover {
+        /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
+        background-image: url('');
+    }
+    
     @media (max-width: 720px) {
         height: 50vh;
     }

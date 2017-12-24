@@ -18,10 +18,6 @@ const Modelling = styled.img`
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    &:hover{
-        -webkit-transform: scale(1.5);
-        transform: scale(1.5);
-    }
 `
 
 const Ling = () => (
