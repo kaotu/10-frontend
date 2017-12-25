@@ -7,6 +7,7 @@ const RightTo = keyframes`
 `
 
 const RightToLeft = styled.div`
+    overflow:hidden;
     animation: ${props => (props.check ? RightTo : '')} 500ms ease-in-out both ;
 `
 export default RightToLeft

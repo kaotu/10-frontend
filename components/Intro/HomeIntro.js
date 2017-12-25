@@ -17,7 +17,6 @@ const setCheck = (callback, data) => {
 	setTimeout(() => Router.push('/character'), 300)
 }
 
-
 const Index = (props) => (
 	<Bg>
 		<div className="container-fluid" >
