@@ -23,7 +23,8 @@ const Box = styled.div`
     cursor: pointer;
     div:hover {
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
-        background-image: url(''); 
+        background-image: url('../../static/image/Artboardling.svg');
+        background-size: 100%; 
     }
 
     @media (max-width: 720px) {
@@ -34,14 +35,12 @@ const Box = styled.div`
 const Select =()=> (
     <div>
         <Link href="/what-l">
-        {/* <Bgling>    */}
             <Box>
                 <Img>
-                <Teamling/> 
-                <Ling/>
+                    <Teamling/>
+                    <Ling/>
                 </Img>             
             </Box>
-            {/* </Bgling> */}
         </Link>
         
     </div>

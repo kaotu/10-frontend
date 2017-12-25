@@ -23,7 +23,8 @@ const Choose = styled.h5`
     cursor: pointer;
     div:hover {
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
-        background-image: url('');
+        background-image: url('../../static/image/Artboardyak.svg');
+        background-size: 100%;
     }
     
     @media (max-width: 720px) {
