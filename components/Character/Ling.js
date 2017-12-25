@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Modelling = styled.img`
-    width: 15vw;
+    width: 21.155vw;
     position: absolute;
     z-index: 0;
     display: block;

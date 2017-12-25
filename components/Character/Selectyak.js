@@ -38,7 +38,9 @@ const Select =()=> (
             <Box>
                 <Img>
                     <Teamyak/> 
-                    <Yak/>
+                    <div className="d-flex justify-content-end">
+                        <Yak />
+                    </div>
                 </Img>
             </Box> 
         </Link>

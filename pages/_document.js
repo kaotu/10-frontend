@@ -23,9 +23,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
           {this.props.styleTags}
         </Head>
-        <body className="custom_class">
-          {this.props.customValue}
-          
+        <body>
           <Main />
           <NextScript />
         </body>

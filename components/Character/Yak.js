@@ -4,9 +4,8 @@ import styled from 'styled-components'
 
 const Modelyak = styled.img`
     width: 17.35vw;
-    position: absolute;
     z-index: 0;
-    display: block;
+    position: absolute;
     cursor: pointer;
 
     @media (max-width:720px) {
@@ -15,7 +14,7 @@ const Modelyak = styled.img`
 `
 
 const Yak = () => (
-    <Modelyak src="../../static/image/Giant.svg" className=""/>    
+    <Modelyak src="../../static/image/Giant.svg"/>    
 )
 
 export default Yak
