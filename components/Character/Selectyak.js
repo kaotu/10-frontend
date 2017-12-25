@@ -1,8 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
+
 import Yak from './Yak'
 import Teamyak from './Teamyak'
+import MoveUp from '../PageTransition/MoveUp';
+
 
 const Img = styled.div`
     background-image: url('../../static/image/kanok.svg');
@@ -25,6 +27,7 @@ const Choose = styled.h5`
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
         background-image: url('../../static/image/Artboardyak.svg');
         background-size: 100%;
+        transition: 1s;
     }
     
     @media (max-width: 720px) {
@@ -32,10 +35,10 @@ const Choose = styled.h5`
     }
 `
 
-const Select =()=> (
+
+const Select = props => (
     <div>
-        <Link href="/what-y">
-            <Box>
+            <Box >
                 <Img>
                     <Teamyak/> 
                     <div className="d-flex justify-content-end">
@@ -43,7 +46,8 @@ const Select =()=> (
                     </div>
                 </Img>
             </Box> 
-        </Link>
     </div>
 )
-export default Select;
+
+
+export default Select

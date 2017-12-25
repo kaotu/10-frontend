@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import styled from 'styled-components'
 
 import Ling from './Ling'
@@ -24,7 +23,8 @@ const Box = styled.div`
     div:hover {
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
         background-image: url('../../static/image/Artboardling.svg');
-        background-size: 100%; 
+        background-size: 100%;
+        transition: 1s; 
     }
 
     @media (max-width: 720px) {
@@ -34,15 +34,14 @@ const Box = styled.div`
 
 const Select =()=> (
     <div>
-        <Link href="/what-l">
+        
             <Box>
                 <Img>
                     <Teamling/>
                     <Ling/>
                 </Img>             
             </Box>
-        </Link>
         
     </div>
 )
-export default Select;
+export default Select

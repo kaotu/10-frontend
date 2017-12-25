@@ -7,6 +7,7 @@ import Scoreyak from './Scoreyak'
 const SelectChar = styled.h1`
     font-family: 'Niramit';
     color : #FFA644;
+    font-size: 5em;
 `
 
 const Head = styled.div`

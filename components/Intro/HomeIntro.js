@@ -1,14 +1,15 @@
 // นี่คือหน้า Home นะ
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
+import { compose, withState } from 'recompose'
+import Router from 'next/router'
+import ReactTimeOut from 'react-timeout'
+
+import MoveToLeft from '../PageTransition/MoveToLeft'
 import Logo from './Logo'
 import Button from './Button'
 import Bg from '../Bg'
-import { compose, withState } from 'recompose'
-import MoveToLeft from '../PageTransition/MoveToLeft'
-import ReactTimeOut from 'react-timeout'
-import Router from 'next/router'
+
 
 const state = withState('check', 'setCheck', false)
 
