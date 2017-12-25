@@ -1,13 +1,13 @@
-import styled , { keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 
 const moveToLeft = keyframes`
-    from { -webkit-transform: translateX(0%); transform: translateX(0%);}
-    to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+    from {transform: translateX(0%);}
+    to {transform: translateX(-100%); }
 `
 
 const MoveToLeft = styled.div`
-    -webkit-animation: ${props => (props.check ? moveToLeft : '')} 1s ease-in-out both;
+    
     animation: ${props => (props.check ? moveToLeft : '')} 1s ease-in-out both ;
 `
 export default MoveToLeft
