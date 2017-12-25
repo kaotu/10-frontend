@@ -7,7 +7,6 @@ const moveToLeft = keyframes`
 `
 
 const MoveToLeft = styled.div`
-    
-    animation: ${props => (props.check ? moveToLeft : '')} 1s ease-in-out both ;
+    animation: ${props => (props.check ? moveToLeft : '')} 500ms ease-in-out both ;
 `
 export default MoveToLeft
