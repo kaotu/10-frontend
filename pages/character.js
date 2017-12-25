@@ -1,9 +1,9 @@
 import React from 'react'
 import Select from '../components/Character/Select'
 
-const Character = () => (
+const character = () => (
   <div>
     <Select/>
     </div>
 )
-export default Character
+export default character

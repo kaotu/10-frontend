@@ -14,7 +14,7 @@ const state = withState('check', 'setCheck', false)
 
 const setCheck = (callback, data) => {
 	callback(!data)
-	setTimeout(() => Router.push('/Character'), 900)
+	setTimeout(() => Router.push('/character'), 900)
 }
 
 
