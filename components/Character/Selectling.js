@@ -24,7 +24,8 @@ const Box = styled.div`
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
         background-image: url('../../static/image/Artboardling.svg');
         background-size: 100%;
-        transition: 1s; 
+        transition: .7s;
+         
     }
 
     @media (max-width: 720px) {
