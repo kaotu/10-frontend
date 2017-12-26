@@ -2,11 +2,12 @@ import react from 'react'
 import Bg from '../Bg'
 import Content from '../OurCamp/ContentOurCamp'
 import NavOurCamp from '../OurCamp/NavOurCamp'
+import Button from '../OurCamp/ButtonCon'
+import RegisBut from '../OurCamp/RegisBut'
+
 
 const HomeOurCamp = () => (
-
     <Bg>
-        <button type="button" class="fixed-top btn btn-danger">ลงทะเบียน</button>
         <div className="container">
             <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -15,7 +16,8 @@ const HomeOurCamp = () => (
                 </div>
             </div>
         </div>
+        <Button />
+        <RegisBut />        
     </Bg>
-
 )
 export default HomeOurCamp
