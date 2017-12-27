@@ -9,7 +9,6 @@ import Selectling from './Selectling'
 import Selectyak from './Selectyak'
 import RightToLeft from '../PageTransition/RightToLeft'
 import Scorebar from './Scorebar'
-import Bg from '../Bg'
 import MoveDown from '../PageTransition/MoveDown'
 import MoveUp from '../PageTransition/MoveUp'
 
@@ -31,7 +30,7 @@ const setGo = (callback, data) => (
 
 const Select = props => (
 
-  <Bg>
+  <section>
     <MoveDown go={props.go}>
         <RightToLeft check={!props.check}>
           <Scorebar />
@@ -44,11 +43,10 @@ const Select = props => (
                 <Selectyak />
               </Fit>
             </Div>
-
           </div>
         </RightToLeft>
     </MoveDown>
-  </Bg>
+  </section>
 
 )
 
