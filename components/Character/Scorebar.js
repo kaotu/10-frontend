@@ -37,6 +37,10 @@ const Head = styled.div`
 const Score = styled.div`
     height: 30px;
 
+    -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+
     @media (max-width:567px) {
         font-size: 1em;
         height: 25px;
