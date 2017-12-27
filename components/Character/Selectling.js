@@ -5,7 +5,7 @@ import Ling from './Ling'
 import Teamling from './Teamling'
 
 const Img = styled.div`
-    background-image: url('../../static/image/kanok.svg');
+    /* background-image: url('../../static/image/kanok.svg'); */
     width: 100%;
     height: 100vh;
     
@@ -23,8 +23,8 @@ const Box = styled.div`
     div:hover {
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
         background-image: url('../../static/image/Artboardling.svg');
-        background-size: 100%;
-        transition: .7s;
+        background-repeat: no-repeat;
+        background-size: cover;
          
     }
 

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Modelyak = styled.img`
     width: 17.35vw;
     z-index: 0;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
 
     @media (max-width:720px) {

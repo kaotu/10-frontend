@@ -8,7 +8,7 @@ import ReactTimeOut from 'react-timeout'
 import MoveToLeft from '../PageTransition/MoveToLeft'
 import Logo from './Logo'
 import Button from './Button'
-import Bg from '../Bg'
+import BgIntro from '../BgIntro'
 
 
 const state = withState('check', 'setCheck', false)
@@ -19,7 +19,7 @@ const setCheck = (callback, data) => {
 }
 
 const Index = (props) => (
-	<Bg>
+	<BgIntro>
 		<div className="container-fluid" >
 			<MoveToLeft check={props.check}>
 				<div className="row">
@@ -36,7 +36,7 @@ const Index = (props) => (
 				</div>
 			</MoveToLeft>
 		</div>
-	</Bg>
+	</BgIntro>
 )
 
 const Indexcompose = compose(state)(Index)

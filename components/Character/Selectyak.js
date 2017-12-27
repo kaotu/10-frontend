@@ -7,7 +7,7 @@ import MoveUp from '../PageTransition/MoveUp';
 
 
 const Img = styled.div`
-    background-image: url('../../static/image/kanok.svg');
+    /* background-image: url('../../static/image/kanok.svg'); */
     width: 100%;
     height: 50vh;
     max-height: 100%;
@@ -26,8 +26,8 @@ const Choose = styled.h5`
     div:hover {
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
         background-image: url('../../static/image/Artboardyak.svg');
-        background-size: 100%;
-        transition: .7s;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     
     @media (max-width: 720px) {

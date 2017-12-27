@@ -1,23 +1,23 @@
 import react from 'react'
-import Bg from '../Bg'
-import Content from '../OurCamp/ContentOurCamp'
-import NavOurCamp from '../OurCamp/NavOurCamp'
-import Button from '../OurCamp/ButtonCon'
-import RegisBut from '../OurCamp/RegisBut'
 
+import Content from '../OurCamp/ContentOurCamp'
+import NavOurCamp from '../Content/NavOurCamp'
+import Button from '../OurCamp/ButtonCon'
+import RegisBut from '../Content/RegisBut'
+import BgStory from '../Content/BgStory'
 
 const HomeOurCamp = () => (
-    <Bg>
+    <BgStory>
+        <NavOurCamp />
         <div className="container">
             <div className="row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <NavOurCamp />
                     <Content />
                 </div>
             </div>
         </div>
         <Button />
-        <RegisBut />        
-    </Bg>
+        <RegisBut />
+    </BgStory>
 )
 export default HomeOurCamp
