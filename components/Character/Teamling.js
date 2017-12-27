@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Textling = styled.img`
-    width: 30%;
+    width: 15vw;
     display: flex;
     position: absolute;
     z-index: 2;
-    margin-top: 40%;
-    margin-left: 60%;
+    margin-top: 30%;
+    margin-left: 50%;
 `
 
 const Teamling = () => (
-    <Textling src="../../static/image/Font-peeling2.svg"/>    
+    <Textling src="../../static/image/teamling.svg"/>    
 )
 
 export default Teamling

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Scoreling from './Scoreling'
 import Scoreyak from './Scoreyak'
+import Choose from './choose'
 
 const SelectChar = styled.h1`
     font-family: 'Niramit';
@@ -60,7 +61,7 @@ const Scorebar = () => (
                 <Scoreyak/>
             </Score>
         </div>
-        <SelectChar className="d-flex justify-content-center">เลือกตัวละคร</SelectChar>
+        <SelectChar className="d-flex justify-content-center"><Choose/></SelectChar>
     </Head>
 
 )
