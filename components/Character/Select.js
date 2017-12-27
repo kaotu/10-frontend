@@ -9,8 +9,9 @@ import Selectling from './Selectling'
 import Selectyak from './Selectyak'
 import RightToLeft from '../PageTransition/RightToLeft'
 import Scorebar from './Scorebar'
+import Bg from '../BgIntro'
 import MoveDown from '../PageTransition/MoveDown'
-import MoveUp from '../PageTransition/MoveUp'
+import MoveToLeft from '../PageTransition/MoveToLeft'
 
 
 const Div = styled.div`
@@ -25,28 +26,30 @@ const go = withState('go', 'setGo', false)
 
 const setGo = (callback, data) => (
   callback(!data),
-  setTimeout( () => Router.push('/what-l'), 300)
+  setTimeout( () => Router.push('/what-l'), 700)
 )
 
-const Select = props => (
+const Select = (props) => (
 
-  <section>
-    <MoveDown go={props.go}>
-        <RightToLeft check={!props.check}>
+  <Bg>
+        <MoveToLeft check={props.check}>
+        <MoveDown go={props.go}>
           <Scorebar />
           <div className="container-fluid">
             <Div className="row">
-              <Fit onClick={() => setGo(props.setGo, props.go)} className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <Fit onClick={ () => setGo(props.setGo, props.go)} className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <Selectling />
               </Fit>
               <Fit className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <Selectyak />
               </Fit>
             </Div>
+
           </div>
-        </RightToLeft>
-    </MoveDown>
-  </section>
+       </MoveDown> 
+       </MoveToLeft>
+    
+  </Bg>
 
 )
 

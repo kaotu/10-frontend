@@ -5,6 +5,7 @@ import { compose, withState } from 'recompose'
 import Router from 'next/router'
 import ReactTimeOut from 'react-timeout'
 
+import MoveLeft from '../PageTransition/MoveLeft'
 import MoveToLeft from '../PageTransition/MoveToLeft'
 import Logo from './Logo'
 import Button from './Button'
@@ -16,13 +17,13 @@ const state = withState('check', 'setCheck', false)
 
 const setCheck = (callback, data) => {
 	callback(!data)
-	setTimeout(() => Router.push('/character'), 300)
+	setTimeout(() => Router.push('/character'), 1000)
 }
 
 const Index = (props) => (
 	<BgIntro>
 		<div className="container-fluid">
-			<MoveToLeft check={props.check}>
+			<MoveLeft check={props.check}>
 			  <Cloud1/><Cloud2/>
 				<div className="row">
 					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -36,7 +37,7 @@ const Index = (props) => (
 						</div>
 					</div>
 				</div>
-			</MoveToLeft>
+			</MoveLeft>
 		</div>
 	</BgIntro>
 )

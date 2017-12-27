@@ -1,13 +1,19 @@
-import styled, { keyframes } from 'styled-components'
+import styled , { keyframes } from 'styled-components'
+import { BaseAnimation } from 'animate-css-styled-components'
 
+const SlideOutDownAnimation = keyframes`
+    from {
+      transform: translate3d(0, 0, 0);
+    }
 
-const movedown = keyframes`
-    from {transform: translateY(0%);}
-    to {transform: translateY(-100%); }
-`
+    to {
+      visibility: hidden;
+      transform: translate3d(0,-100vh, 0);
+    }
+  `
 
-const MoveDown = styled.div`
-    overflow:hidden;
-    animation: ${props => (props.go ? movedown : '')} 200ms ease-in-out both ;
-`
-export default MoveDown
+  const SlideOutDown = styled(BaseAnimation)`
+    animation-name: ${ props => props.go ? SlideOutDownAnimation: ''}
+  `
+  export default SlideOutDown
+

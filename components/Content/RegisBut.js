@@ -2,8 +2,8 @@ import react from 'react'
 import styled from 'styled-components'
 
 const RegisButton = styled.div`
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
     border: solid 1px rgb(255, 255, 255);
     border-radius: 50%;
     background-color: #EECC6B;
@@ -11,11 +11,21 @@ const RegisButton = styled.div`
     cursor: pointer;
     position : absolute;
     z-index: 1;
+
+    @media(max-width:720px) {
+        width: 65px;            
+        height: 65px;            
+    }
+
 `
 
 const Regis = styled.span`
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
+
+    @media(max-width:720px) {
+        font-size: 1em;            
+    }
 `
 
 const RegisBut = () => (

@@ -1,14 +1,20 @@
-import styled, { keyframes } from 'styled-components'
+import styled , { keyframes } from 'styled-components'
+import { BaseAnimation } from 'animate-css-styled-components'
 
+const SlideOutDownAnimation = keyframes`
+    from {
+      transform: translate3d(100vw, 0, 0);
+    }
 
-const moveToLeft = keyframes`
+    to {
+      visibility: hidden;
+      transform: translate3d(0, 0, 0);
+    }
+  `
+
+  const SlideOutDown = styled(BaseAnimation)`
     
-    from {transform: translateX(0%);}
-    to {transform: translateX(-100%); }
-`
+    animation-name: ${props => props.check ?SlideOutDownAnimation: ''};
+  `
+  export default SlideOutDown
 
-const MoveToLeft = styled.div`
-    overflow:hidden;
-    animation: ${props => (props.check ? moveToLeft : '')} 500ms ease-in-out both ;
-`
-export default MoveToLeft
