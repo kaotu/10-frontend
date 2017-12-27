@@ -1,25 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-
-import Content from './ContentOurCamp'
-import Story from './StoryOurCamp'
-import Button from './ButtonCon'
+import react from 'react'
+import Content from '../OurCamp/ContentOurCamp'
+import Button from '../OurCamp/ButtonCon'
+import RegisBut from '../Content/RegisBut'
 import BgStory from '../Content/BgStory'
-import Footer from '../Content/Footer'
-
-
-const Div = styled.div`
-    height: 80vh;
-`
-
-const HiddenRespone = styled.div`
-    @media(max-width: 720px) {
-        display: none;
-    }
-`
-
+import Menu from '../Content/Burger'
+ 
 const HomeOurCamp = () => (
     <BgStory>
+        <Menu/>        
         <div className="container">
             <Div className="d-flex flex-column">
                 <div className="d-flex p-2 row justify-content-center">

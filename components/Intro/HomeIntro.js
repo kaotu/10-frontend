@@ -9,7 +9,8 @@ import MoveToLeft from '../PageTransition/MoveToLeft'
 import Logo from './Logo'
 import Button from './Button'
 import BgIntro from '../BgIntro'
-
+import Cloud1 from './Cloud1'
+import Cloud2 from './Cloud2'
 
 const state = withState('check', 'setCheck', false)
 
@@ -20,8 +21,9 @@ const setCheck = (callback, data) => {
 
 const Index = (props) => (
 	<BgIntro>
-		<div className="container-fluid" >
+		<div className="container-fluid">
 			<MoveToLeft check={props.check}>
+			  <Cloud1/><Cloud2/>
 				<div className="row">
 					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<center><Logo /></center>
