@@ -4,45 +4,35 @@ import styled from 'styled-components'
 import Ling from './Ling'
 import Teamling from './Teamling'
 
-const Img = styled.div`
-    /* background-image: url('../../static/image/kanok.svg'); */
-    width: 100%;
-    height: 100vh;
-    
-    @media (max-width: 720px) {
-        height: 50vh;
-    }
+const ImgBox = styled.div`
+    padding: 0px;
 `
 
 const Box = styled.div`
+    margin: 0;
     background-color: #002D40;
-    width: 100%;
-    height: 50vh;
-    max-height: 100%;
+    height: 100%;
     cursor: pointer;
-    div:hover {
+    &:hover {
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
         background-image: url('../../static/image/Artboardling.svg');
         background-repeat: no-repeat;
         background-size: cover;
-         
     }
 
     @media (max-width: 720px) {
-        height: 50vh;
+        height: 50%;
     }
 `
 
-const Select =()=> (
-    <div>
-        
-            <Box>
-                <Img>
-                    <Teamling/>
-                    <Ling/>
-                </Img>             
-            </Box>
-        
-    </div>
+const Select = () => (
+    <Box className="row">
+        <ImgBox className="col-sm-6">                 
+            <Ling />     
+        </ImgBox>
+        <ImgBox className="col-sm-6">  
+            <Teamling />    
+        </ImgBox>
+    </Box>
 )
 export default Select

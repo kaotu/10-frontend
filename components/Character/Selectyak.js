@@ -6,24 +6,21 @@ import Teamyak from './Teamyak'
 import MoveUp from '../PageTransition/MoveUp';
 
 
-const Img = styled.div`
+const ImgBox = styled.div`
     /* background-image: url('../../static/image/kanok.svg'); */
-    width: 100%;
-    height: 50vh;
-    max-height: 100%;
-    
+    padding: 0px;
+    /*width: 100%;
+    height: 100vh;
+    @media (max-width: 720px) {
+        height: 50vh;
+    }*/
 `
 const Box = styled.div`
-    background-color:transparent;
-    height: 50vh;
-`
-const Choose = styled.h5`
+    margin: 0px;
     background-color: #295949;
-    width: 100%;
-    height: 100vh;
-    max-height: 100%;
+    height: 100%;
     cursor: pointer;
-    div:hover {
+    &:hover {
         /* ใส่รูปพื้นหลังผ่าครึ่งตรงนี้ */
         background-image: url('../../static/image/Artboardyak.svg');
         background-repeat: no-repeat;
@@ -31,22 +28,20 @@ const Choose = styled.h5`
     }
     
     @media (max-width: 720px) {
-        height: 50vh;
+        height: 50%;
     }
 `
 
 
 const Select = props => (
-    <div>
-            <Box >
-                <Img>
-                    <Teamyak/> 
-                    <div className="d-flex justify-content-end">
-                        <Yak />
-                    </div>
-                </Img>
-            </Box> 
-    </div>
+    <Box className="row">
+        <ImgBox className="col-sm-6">   
+            <Teamyak />   
+        </ImgBox>
+        <ImgBox className="col-sm-6 text-right">                
+            <Yak />      
+        </ImgBox>
+    </Box>
 )
 
 

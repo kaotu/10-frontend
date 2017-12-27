@@ -6,9 +6,9 @@ import BgStory from '../Content/BgStory'
 import Menu from '../Content/Burger'
  
 const HomeOurCamp = () => (
-    <BgStory>
+    <BgStory id="outer-container">
         <Menu/>        
-        <div className="container">
+        <div id="page-wrap" className="container">
             <Div className="d-flex flex-column">
                 <div className="d-flex p-2 row justify-content-center">
                     <HiddenRespone className="col-md-5 col-lg-5">

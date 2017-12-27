@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
         <Head>
           <style>{`body { margin: 0 } /* custom! */`}</style>
           <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
-          <link rel="stylesheet" href="/static/css/font-awesome.min.css"/>
+          <link rel="stylesheet" href="/static/css/font-awesome.min.css"/>          
           {this.props.styleTags}
         </Head>
         <body>
