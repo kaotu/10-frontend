@@ -1,5 +1,6 @@
 import react from 'react'
 import styled from 'styled-components'
+import '../global-style'
 
 const RegisButton = styled.div`
     width: 110px;
@@ -22,6 +23,7 @@ const RegisButton = styled.div`
 const Regis = styled.span`
     font-size: 1.5em;
     font-weight: bold;
+    font-family: 'Niramit';
 
     @media(max-width:720px) {
         font-size: 1em;            
