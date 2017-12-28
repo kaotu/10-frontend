@@ -35,23 +35,26 @@ const setGo = (callback, data) => (
 
 const Select = (props) => (
 
-  	<section>
-		<MoveDown go={props.go}>
-			<RightToLeft check={!props.check}>
-				<Scorebar />
-				<div className="container-fluid">
-					<Div className="row">
-						<Fit onClick={() => setGo(props.setGo, props.go)} className="col-lg-6 col-sm-12">
-							<Selectling />
-						</Fit>
-						<Fit className="col-lg-6 col-sm-12">
-							<Selectyak />
-						</Fit>
-					</Div>
-				</div>
-			</RightToLeft>
-		</MoveDown>
-  	</section>
+  <Bg>
+        <MoveToLeft check={props.check}>
+        <MoveDown go={props.go}>
+          <Scorebar />
+          <div className="container-fluid">
+            <Div className="row">
+              <Fit onClick={ () => setGo(props.setGo, props.go)} className="col-sm-12 col-md-12 col-lg-6">
+                <Selectling />
+              </Fit>
+              <Fit className="col-sm-12 col-md-12 col-lg-6">
+                <Selectyak />
+              </Fit>
+            </Div>
+
+          </div>
+       </MoveDown> 
+       </MoveToLeft>
+    
+  </Bg>
+
 )
 
 const selectcompose = compose(go)(Select)

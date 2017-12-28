@@ -14,11 +14,11 @@ const Item = styled.a`
 `
 var styles = {
   bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
+    position: 'absolute',
+    width: '30px',
+    height: '26px',
     left: '36px',
-    top: '36px'
+    top: '20px'
   },
   bmBurgerBars: {
     background: '#373a47'
@@ -51,8 +51,7 @@ class BurgerMenu extends React.Component {
   render() {
     return (
       <div className="d-lg-none">
-      
-      <link rel="stylesheet" href="/static/css/test.css"/>
+        <link rel="stylesheet" href="/static/css/test.css" />
         <Menu styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
           <Item className="menu-item" href="#">หน้าแรก</Item>
           <Item className="menu-item" href="#">ค่ายของเรา</Item>
@@ -63,7 +62,7 @@ class BurgerMenu extends React.Component {
           <Item className="menu-item" href="#">ติดต่อสอบถาม</Item>
           <Item className="menu-item" href="#">เกม</Item>
         </Menu>
-</div>
+      </div>
     )
   }
 }

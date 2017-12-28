@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import content from './content.json'
+import Button from './ButtonCon'
 import BgStory from '../Core/BgStory'
 import Footer from '../Core/Footer'
 import Menu from '../Core/Burger'
@@ -22,7 +23,7 @@ const HiddenRespone = styled.div`
     }
 `
 
-const Index = () => (
+const HomeOurCamp = () => (
     <BgStory id="outer-container">
         <Menu/>        
         <div id="page-wrap" className="container">
@@ -48,4 +49,4 @@ const Index = () => (
         </div>
     </BgStory>
 )
-export default Index
+export default HomeOurCamp

@@ -1,19 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Yak from './Yak'
-import Teamyak from './Teamyak'
 import MoveUp from '../PageTransition/MoveUp';
 
 
 const ImgBox = styled.div`
-    /* background-image: url('../../static/image/kanok.svg'); */
     padding: 0px;
-    /*width: 100%;
-    height: 100vh;
-    @media (max-width: 720px) {
-        height: 50vh;
-    }*/
 `
 const Box = styled.div`
     margin: 0px;
@@ -32,14 +24,21 @@ const Box = styled.div`
     }
 `
 
+const Model = styled.img`
+    height: 100%;
+`
+
+const Text = styled.img`
+    margin-top: 50%;
+`
 
 const Select = props => (
     <Box className="row">
         <ImgBox className="col-sm-6">   
-            <Teamyak />   
+            <Text className="img-fluid" src="../../static/image/Teamyak.png"/>   
         </ImgBox>
         <ImgBox className="col-sm-6 text-right">                
-            <Yak />      
+            <Model class="img-fluid" src="../../static/image/Giant.svg"/>     
         </ImgBox>
     </Box>
 )

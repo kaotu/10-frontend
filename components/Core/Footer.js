@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import RegisBut from '../Content/RegisBut'
+import RegisBut from '../Core/RegisBut'
 
 const Foot = styled.div`
 

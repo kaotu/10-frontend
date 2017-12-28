@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Ling from './Ling'
 import Teamling from './Teamling'
 
 const ImgBox = styled.div`
@@ -25,13 +24,21 @@ const Box = styled.div`
     }
 `
 
+const Model = styled.img`
+    height: 100%;
+`
+
+const Text = styled.img`
+margin-top: 50%;
+`
+
 const Select = () => (
     <Box className="row">
         <ImgBox className="col-sm-6">                 
-            <Ling />     
+            <Model class="img-fluid" src="../../static/image/Mongkey.svg"/>
         </ImgBox>
         <ImgBox className="col-sm-6">  
-            <Teamling />    
+            <Text className="img-fluid" src="../../static/image/Teamling.png"/>    
         </ImgBox>
     </Box>
 )

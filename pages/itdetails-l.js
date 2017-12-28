@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeLearner from '../components/WhatLearner/HomeLearner'
+import HomeLearner from '../components/WhatLearner/index'
 
 const WhatMonkey = () => (
     <section>

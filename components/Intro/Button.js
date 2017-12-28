@@ -1,10 +1,10 @@
+
 import styled from 'styled-components'
 import '../global-style'
 
-
 const Button = styled.button`
     font-family: 'Niramit';
-    border 0.2vw solid currentColor;
+    border: 0.2vw solid currentColor;
     border-radius: 3rem;
     color: #FFA644;
     font-size: 2em;
@@ -19,7 +19,9 @@ const Button = styled.button`
     z-index: 0;
     background-color: transparent;
     cursor: pointer;
-    
+    width: 10%;
+    margin-top: 1%;
+
     &:hover{
         border: 0.2vw solid transparent;
         color: #002d40;
@@ -29,7 +31,3 @@ const Button = styled.button`
         
     }
 `
-
-
-
-export default Button
