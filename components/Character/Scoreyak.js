@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const BarYak = styled.div `
     width: 50%;
-    background-color : pink;
+    background-color : #FFA644;
 `
 
 const Scoreyak =()=> (

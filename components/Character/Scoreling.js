@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const BarLing = styled.div `
     width: 50%;
-    background-color : black;
+    background-color : #E53D36;
 `
 
 const Scoreling =()=> (
