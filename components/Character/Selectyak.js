@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import MoveUp from '../PageTransition/MoveUp';
 
-
 const ImgBox = styled.div`
     padding: 0px;
 `

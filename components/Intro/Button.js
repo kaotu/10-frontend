@@ -7,9 +7,9 @@ const Button = styled.button`
     border: 0.2vw solid currentColor;
     border-radius: 3rem;
     color: #FFA644;
-    font-size: 2em;
+    font-size: 3em;
     overflow: hidden;
-    padding: 0.2em 1.5em;
+    padding: 0.5em 0.1em;
     position: relative;
     text-decoration: none;
     transition:all 350ms ease-in-out;
@@ -31,3 +31,4 @@ const Button = styled.button`
         
     }
 `
+export default Button

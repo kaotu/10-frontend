@@ -1,9 +1,9 @@
 import React from 'react'
-import HomeLearner from '../components/WhatLearner/index-L'
+import Who from '../components/Who/index-Y'
 
 const index = () => (
     <section>
-        <HomeLearner />              
+        <Who />              
     </section>
 )
 

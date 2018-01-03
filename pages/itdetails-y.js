@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeLearner from '../components/WhatLearner/index-L'
+import HomeLearner from '../components/WhatLearner/index-Y'
 
 const index = () => (
     <section>

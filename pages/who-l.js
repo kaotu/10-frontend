@@ -1,10 +1,10 @@
 import React from 'react'
-import Who from '../components/Who/index'
+import Who from '../components/Who/index-L'
 
-const WhatMonkey = () => (
+const index = () => (
     <section>
         <Who />              
     </section>
 )
 
-export default WhatMonkey
+export default index

@@ -1,16 +1,10 @@
 import React from 'react'
-import OurCamp from '../components/OurCamp/HomeOurCamp'
-import HomeLearner from '../components/WhatLearner/HomeLearner'
-import HomeWho from '../components/Who/HomeWho'
-import FadeD from '../components/PageTransition/Fadein'
+import OurCamp from '../components/OurCamp/index-Y'
 
-const WhatGiant = () => (
-    <FadeD>
+const WhatMonkey = () => (
     <section>
-        <OurCamp />        
-        <HomeLearner />
-        <HomeWho />
+        <OurCamp />              
     </section>
-    </FadeD>
 )
-export default WhatGiant
+
+export default WhatMonkey

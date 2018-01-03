@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Teamling from './Teamling'
-
 const ImgBox = styled.div`
     padding: 0px;
 `

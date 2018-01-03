@@ -1,10 +1,10 @@
 import React from 'react'
-import Intro from '../components/Intro/index'
+import Intro from '../components/Intro/'
 
-const Index = () => (
+const index = () => (
 	<section>
 		<Intro/>
 	</section>
 )
 
-export default Index
+export default index
