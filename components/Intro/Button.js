@@ -7,7 +7,7 @@ const Button = styled.button`
     border: 0.2vw solid currentColor;
     border-radius: 3rem;
     color: #FFA644;
-    font-size: 3em;
+    font-size: 2em;
     overflow: hidden;
     padding: 0.5em 0.1em;
     position: relative;
@@ -19,7 +19,7 @@ const Button = styled.button`
     z-index: 0;
     background-color: transparent;
     cursor: pointer;
-    width: 10%;
+    width: 15%;
     margin-top: 1%;
 
     &:hover{
