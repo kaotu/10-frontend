@@ -16,10 +16,6 @@ const Box = styled.div`
         background-repeat: no-repeat;
         background-size: cover;
     }
-
-    @media (max-width: 720px) {
-        height: 50%;
-    }
 `
 
 const Model = styled.img`
@@ -27,15 +23,15 @@ const Model = styled.img`
 `
 
 const Text = styled.img`
-margin-top: 50%;
+    margin-top: 50%;
 `
 
 const Select = () => (
     <Box className="row">
-        <ImgBox className="col-sm-6">                 
-            <Model class="img-fluid" src="../../static/image/Mongkey.svg"/>
+        <ImgBox className="col-6 col-sm-6 col-md-6">                 
+            <Model className="img-fluid" src="../../static/image/Mongkey.svg"/>
         </ImgBox>
-        <ImgBox className="col-sm-6">  
+        <ImgBox className="col-6 col-sm-6 col-md-6">  
             <Text className="img-fluid" src="../../static/image/Teamling.png"/>    
         </ImgBox>
     </Box>

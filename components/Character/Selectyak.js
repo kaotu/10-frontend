@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import MoveUp from '../PageTransition/MoveUp';
-
 const ImgBox = styled.div`
     padding: 0px;
 `
@@ -17,10 +15,6 @@ const Box = styled.div`
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
-    @media (max-width: 720px) {
-        height: 50%;
-    }
 `
 
 const Model = styled.img`
@@ -33,10 +27,10 @@ const Text = styled.img`
 
 const Select = props => (
     <Box className="row">
-        <ImgBox className="col-sm-6">   
+        <ImgBox className="col-6 col-sm-6 col-md-6">   
             <Text className="img-fluid" src="../../static/image/Teamyak.png"/>   
         </ImgBox>
-        <ImgBox className="col-sm-6 text-right">                
+        <ImgBox className="col-6 col-sm-6 col-md-6 text-right">                
             <Model class="img-fluid" src="../../static/image/Giant.svg"/>     
         </ImgBox>
     </Box>

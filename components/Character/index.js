@@ -41,10 +41,10 @@ const Select = (props) => (
           <Scorebar />
           <div className="container-fluid">
             <Div className="row">
-              <Fit onClick={ () => setGo(props.setGo, props.go)} className="col-sm-12 col-md-12 col-lg-6">
+              <Fit onClick={ () => setGo(props.setGo, props.go)} className="col-12 col-sm-12 col-md-12 col-lg-6">
                 <Selectling />
               </Fit>
-              <Fit className="col-sm-12 col-md-12 col-lg-6">
+              <Fit className="col-12 col-sm-12 col-md-12 col-lg-6">
                 <Selectyak />
               </Fit>
             </Div>
