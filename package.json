@@ -7,22 +7,34 @@
   },
   "dependencies": {
     "animate-css-styled-components": "0.0.20",
-    "bootstrap": "4.0.0-beta.2",
-    "eslint": "^4.4.1",
+    "bootstrap": "^4.0.0-beta.2",
     "eslint-config-standard-react": "^5.0.0",
-    "eslint-plugin-react": "^7.3.0",
+    "install": "^0.10.2",
     "next": "^4.2.1",
     "next.js": "^1.0.3",
+    "npm": "^5.6.0",
     "react": "^16.2.0",
-    "react-burger-menu": "^2.1.11",
+    "react-bootstrap": "^0.31.5",
+    "react-burger-menu": "^2.2.3",
     "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
     "react-timeout": "^1.0.1",
     "recompose": "^0.26.0",
-    "styled-components": "^2.3.3"
+    "styled-components": "^2.4.0"
   },
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/wipcamp/10-frontend.git",
+  "repository": "git+https://github.com/wipcamp/10-frontend.git",
   "author": "mild20091931 <mild20091931@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/wipcamp/10-frontend/issues"
+  },
+  "homepage": "https://github.com/wipcamp/10-frontend#readme",
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-plugin-react": "^7.5.1"
+  },
+  "keywords": []
 }
