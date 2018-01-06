@@ -1,10 +1,11 @@
 import React from 'react'
-import OurCamp from '../components/OurCamp/index-L'
+import Who from '../components/Who/index-L'
+import Nav from '../components/Core/Navbar'
 
 const WhatMonkey = () => (
-    <section>
-        <OurCamp />              
-    </section>
+	<section>
+		<Who/>
+	</section>
 )
 
 export default WhatMonkey

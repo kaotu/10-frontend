@@ -41,7 +41,7 @@ const Background = () => (
         <PositionMountain src='/static/image/moutain.svg'/>
         <PositionCloud src='/static/image/cloud-bottom.svg'/>
         <PositionMonkey src='/static/image/mongkey-Home.svg'/>
-        <PositionGiant src='/static/image/yak-Home.svg'/>
+        <PositionGiant src='/static/image/giantwithcloud.svg'/>
         <PositionCloud src='/static/image/cloud-bottom-Front.svg'/>
     </div>
 )

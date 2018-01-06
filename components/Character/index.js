@@ -30,7 +30,7 @@ const go = withState('go', 'setGo', false)
 
 const setGo = (callback, data) => (
   callback(!data),
-  setTimeout( () => Router.push('/what-l'), 700)
+  setTimeout( () => Router.push('/singlepage-l'), 700)
 )
 
 const Select = (props) => (
