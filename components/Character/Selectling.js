@@ -24,6 +24,8 @@ const Model = styled.img`
 
 const Text = styled.img`
     margin-top: 50%;
+    margin-left: 20%;
+    width: 16.3vw;
 `
 
 const Select = () => (

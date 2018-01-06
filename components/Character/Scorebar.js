@@ -28,10 +28,11 @@ box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
 
 
 const Textchoose = styled.img`
-    width: 30vw;
+    width: 25vw;
     display: flex;
     position: absolute;
     z-index: 2;
+    margin-top: 1%; 
 `
 
 const Head = styled.div`

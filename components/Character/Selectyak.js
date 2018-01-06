@@ -23,6 +23,8 @@ const Model = styled.img`
 
 const Text = styled.img`
     margin-top: 50%;
+    margin-left: 10%;
+    width: 20vw;
 `
 
 const Select = props => (
