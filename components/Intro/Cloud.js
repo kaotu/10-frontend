@@ -5,9 +5,8 @@ const Cloud = styled.div`
     width: 20vw;
     margin-top: 10vh;
     position:absolute;
-    z-index:2;
-    opacity: 10;
-    animation: moveclouds 20s linear infinite;
+    z-index:1;
+    animation: moveclouds 60s linear infinite;
     @keyframes moveclouds {
         0% {margin-left: 100vw;}
         100% {margin-left: -20vw;}
