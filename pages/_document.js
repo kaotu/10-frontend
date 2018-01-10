@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
+          <title>WipCamp10</title>
         <Head>
           <style>{`body { margin: 0 } /* custom! */`}</style>
           <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>

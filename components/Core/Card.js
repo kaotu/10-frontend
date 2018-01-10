@@ -37,9 +37,6 @@ const HomeOurCamp = (props) => (
                             <p>{props.text}</p>
                         </div>
                     </div>
-                    <HiddenRespone className="col-md-1 col-lg-1">
-                        <p>รอบาร์อยู่เด้อ</p>
-                    </HiddenRespone>
                 </Row>
             </Div>
         </div>
