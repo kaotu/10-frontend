@@ -16,7 +16,7 @@ const state = withState('check', 'setCheck', false)
 
 const setCheck = (callback, data) => {
 	callback(!data)
-	setTimeout(() => Router.push('/what-l'), 1000)
+	setTimeout(() => Router.push('/page'), 1000)
 }
 const Position = styled.div`
 	width: 100vw;
