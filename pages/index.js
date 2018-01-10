@@ -1,16 +1,29 @@
 import React from 'react'
 import Intro from '../components/Intro/'
-import Page from './page'
 
+import What from '../components/What/index'
+import Who from '../components/Who/index'
+import ITdetails from '../components/ITdetails/index'
+import RegisBut from '../components/Core/RegisBut'
+import GameBut from '../components/Core/GameBut'
 
 const index = () => (
 	<div>
-	<section>
-		<Intro/>
-	</section>
-	<section>
-		<Page/>
-	</section>
+        <GameBut/>
+        <RegisBut/>        
+		<section>
+			<Intro />
+		</section>
+		<section>
+        	
+			<What />
+		</section>
+		<section>
+			<Who />
+		</section>
+		<section>
+			<ITdetails />
+		</section>
 	</div>
 )
 
