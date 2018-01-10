@@ -7,5 +7,6 @@ const Bg = styled.div`
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
+    width: 100vw;
 `
 export default Bg
