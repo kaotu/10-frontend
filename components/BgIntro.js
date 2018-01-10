@@ -8,7 +8,5 @@ const Bg = styled.body`
     background-attachment: fixed;
     background-size: cover;
     height: 100vh;
-    position: absolute;
-    overflow:hidden;
 `
 export default Bg

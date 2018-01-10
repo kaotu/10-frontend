@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import BgStory from './BgStory'
-import Footer from './Footer'
-import Menu from './Burger'
-import RegisBut from './RegisBut'
-import GameBut from './GameBut'
+
 const Div = styled.div`
     height: 80vh;
 `
@@ -21,11 +19,7 @@ const HiddenRespone = styled.div`
 `
 
 const HomeOurCamp = (props) => (
-    <BgStory id="outer-container">
-        <Menu/>
-        <GameBut/>
-        <RegisBut/>        
-        <div id="page-wrap" className="container">
+    <BgStory>     
             <Div className="d-flex flex-column">
                 <Row className="d-flex p-2 row justify-content-center">
                     <HiddenRespone className="col-md-5 col-lg-5">
@@ -39,7 +33,6 @@ const HomeOurCamp = (props) => (
                     </div>
                 </Row>
             </Div>
-        </div>
     </BgStory>
 )
 export default HomeOurCamp
