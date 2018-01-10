@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import BgStory from './BgStory'
 import Footer from './Footer'
 import Menu from './Burger'
-
-
+import RegisBut from './RegisBut'
+import GameBut from './GameBut'
 const Div = styled.div`
     height: 80vh;
 `
@@ -23,7 +22,9 @@ const HiddenRespone = styled.div`
 
 const HomeOurCamp = (props) => (
     <BgStory id="outer-container">
-        <Menu/>        
+        <Menu/>
+        <GameBut/>
+        <RegisBut/>        
         <div id="page-wrap" className="container">
             <Div className="d-flex flex-column">
                 <Row className="d-flex p-2 row justify-content-center">

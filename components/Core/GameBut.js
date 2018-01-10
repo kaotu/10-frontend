@@ -3,17 +3,17 @@ import styled from 'styled-components'
 import '../global-style'
 
 const RegisButton = styled.div`
-    width: 250px;
+    width: 80px;
     height: 80px;    
     border-radius: 10%;
-    background-color: #FF3333;
+    background-color: #FFFFFF;
     transition:all 550ms ease-in-out;
     cursor: pointer;
     position:fixed;
-    right:-90px;
-    top:400px;          
+    right:-5px;
+    top:200px;          
     z-index: 1;
-    color: white;
+    color: #FF3333;
     letter-spacing: 5px;
     -webkit-transform:rotate(270deg);
 
@@ -33,9 +33,9 @@ const Regis = styled.span`
     }
 `
 
-const RegisBut = () => (
+const GameBut = () => (
     <RegisButton className="d-flex justify-content-center align-items-center" data-toggle="" data-target="#">
-        <Regis className="text-center">ลงทะเบียน</Regis>
+        <Regis className="text-center">เกม</Regis>
     </RegisButton>
 )
-export default RegisBut
+export default GameBut

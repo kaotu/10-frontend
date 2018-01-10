@@ -3992,9 +3992,9 @@ next.js@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/next.js/-/next.js-1.0.3.tgz#b7d5a4c6e241c3d914c94007aa4f31d108799fa8"
 
-next@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/next/-/next-4.2.1.tgz#37b5637050235b92a487ca484e20088ace7e37fe"
+next@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/next/-/next-4.2.2.tgz#2f0d05c3ed534b9cabea856b42b09e9f938e679a"
   dependencies:
     ansi-html "0.0.7"
     babel-core "6.26.0"
