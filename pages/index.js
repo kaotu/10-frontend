@@ -6,9 +6,11 @@ import Who from '../components/Who/index'
 import ITdetails from '../components/ITdetails/index'
 import RegisBut from '../components/Core/RegisBut'
 import GameBut from '../components/Core/GameBut'
+import Navbar from '../components/Core/Navbar'
 
 const index = () => (
 	<div>
+		<Navbar/>
         <GameBut/>
         <RegisBut/>        
 		<section>
