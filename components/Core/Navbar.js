@@ -14,8 +14,16 @@ color: #FFFFFF;
 const NavItem = styled.nav`
 color: #FFFFFF;
 background-color:#;
-}
 `
+
+const RegisterButton = styled.div`
+    position:absolute;
+    right: 0;
+    background-color: red;
+    width: 300px;
+    height:500px;
+`
+
 const Navbar = () => (
     <NavItem className="sticky-top">
         <div>
@@ -34,6 +42,7 @@ const Navbar = () => (
                         <LinkItem className="nav-item nav-link " href="#">Contact</LinkItem>
                     </div>
                 </div>
+                <RegisterButton />
             </nav>
         </div>
     </NavItem>
