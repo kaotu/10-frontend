@@ -6,7 +6,6 @@ const Bg = styled.section`
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
 `
 export default Bg

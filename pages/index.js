@@ -22,9 +22,6 @@ const index = () => (
 		<section>
 			<Where/>
 		</section>
-		<section>
-			<FAQs />
-		</section>
 	</div>
 )
 
