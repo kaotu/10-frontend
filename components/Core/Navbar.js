@@ -16,14 +16,15 @@ color: #FFFFFF;
 background-color:#;
 `
 
-const RegisterButton = styled.div`
-    position:absolute;
-    right: 0;
-    background-color: red;
-    width: 300px;
-    height:500px;
-`
 
+const RegisterBtn = styled.div`
+    width: 150px;
+    position:absolute;
+    background-color:#cd4a20;
+    right: 0;
+    height: 80px;
+    margin-right:1vw;
+`
 const Navbar = () => (
     <NavItem className="sticky-top">
         <div>
@@ -42,7 +43,7 @@ const Navbar = () => (
                         <LinkItem className="nav-item nav-link " href="#">Contact</LinkItem>
                     </div>
                 </div>
-                <RegisterButton />
+                <RegisterBtn/>
             </nav>
         </div>
     </NavItem>
