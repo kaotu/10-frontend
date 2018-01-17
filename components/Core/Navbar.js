@@ -22,8 +22,9 @@ const RegisterBtn = styled.div`
     position:absolute;
     background-color:#cd4a20;
     right: 0;
-    height: 80px;
-    margin-right:1vw;
+    background-color: red;
+    width: 5em;
+    height: 8em;
 `
 const Navbar = () => (
     <NavItem className="sticky-top">

@@ -16,6 +16,8 @@ export default class MyDocument extends Document {
       <html>
           <title>WipCamp10</title>
         <Head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
           <style>{`body { margin: 0 } /* custom! */`}</style>
           <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
           <link rel="stylesheet" href="/static/css/font-awesome.min.css"/>          
