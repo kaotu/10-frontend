@@ -1,5 +1,6 @@
 import React from 'react'
-import Intro from '../components/Intro/'
+// import Intro from '../components/Intro/'
+
 import What from '../components/What/index'
 import Who from '../components/Who/index'
 import Where from '../components/Where/index'
@@ -11,10 +12,10 @@ import Contact from '../components/Contact/index'
 
 const index = () => (
 	<div>
-		<section>
-			{/* <Intro /> */}
-		</section>
-			<Navbar/>  
+		<Navbar/>                
+		{/* <section>
+			<Intro />
+		</section> */}
 		<section>        	
 			<What />
 		</section>
