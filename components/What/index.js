@@ -7,12 +7,18 @@ import Story from './Story'
 import Navbar  from '../Core/Navbar'
 import Bg from '../Core/BgStory'
 
-const Icon = styled.div`
+const Info = styled.div`
     margin-top: 5%;
 `
 
+const Icon = styled.img`
+    @media (max-width:720px) {
+        width: 50%;
+    }
+`
+
 const index =()=> ( 
-    <Bg>
+    <Bg className="d-flex align-items-center">
         <div className="container">
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-6">
@@ -23,27 +29,25 @@ const index =()=> (
                     <span>ค่ายนี้คืออะไร?</span>
                     <br/>
                     {content.text}
-                    <Icon className="row">
-                        <div className="col-6 col-md-3 img-responesive">
-                            <img src="/static/image/question.svg"/>
+                    <Info className="row text-center">
+                        <div className="col-6 col-md-3 img-responesive ">
+                            <Icon src="/static/image/question.svg"/>
+                            <p>Java programing</p>
                         </div>
-                        <div className="col-6 col-md-3 img-responesive">
-                            <img src="/static/image/question.svg"/>
+                        <div className="col-6 col-md-3 img-responesive ">
+                            <Icon src="/static/image/question.svg"/>
+                            <p>IT Functions</p>
                         </div>
-                        <div className="col-6 col-md-3 img-responesive">
-                            <img src="/static/image/question.svg"/>
+                        <div className="col-6 col-md-3 img-responesive ">
+                            <Icon src="/static/image/question.svg"/>
+                            <p>Network</p>
                         </div>
-                        <div className="col-6 col-md-3 img-responesive">
-                            <img src="/static/image/question.svg"/>
+                        <div className="col-6 col-md-3 img-responesive  ">
+                            <Icon src="/static/image/question.svg"/>
+                            <p>HTML5&CSS</p>
                         </div>
                 
-                    </Icon>
-                    <div className="row text-center">
-                        <div className="col-6 col-md-3">Java programing</div>
-                        <div className="col-6 col-md-3">IT Functions</div>
-                        <div className="col-6 col-md-3">Network</div>
-                        <div className="col-6 col-md-3">HTML5&CSS</div>
-                    </div>
+                    </Info>
                 </div>
             </div>
         </div>

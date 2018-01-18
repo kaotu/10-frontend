@@ -7,19 +7,24 @@ width:50%;
 `
 
 const index = () => (
-
-    <Bg>
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6"><Img src="../../static/image/LookOver-01.svg" className="img-responsive"></Img></div>
-                <div className="col-md-6">
-                    <div className="display-4">Where ค่ายนี้จัดที่ไหน</div>
-                    <div className ><img src="../../static/image/SITLOGO.png"></img></div>
-                    <div className>คลิกที่รูปภาพเพื่อดูแผนที่</div>
+    <DivWhere>
+        <Bg>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-6">
+                        <Img src="static/image/LookOver-01.svg" className="img-responsive"/>
+                    </div> 
+                    <div className="col-md-6">
+                            <h1>Where</h1>
+                            <span>ค่ายนี้จัดที่ไหน</span>
+                        <div>
+                            <Img src="static/image/SITLOGO.png"/>
+                        </div>
+                        <div>คลิกที่รูปภาพเพื่อดูแผนที่</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </Bg>
-
+        </Bg>
+    </DivWhere>
 )
 export default index
