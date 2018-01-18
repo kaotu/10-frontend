@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import content from './content.json'
 // import Card from '../Core/Card'
 import Story from './Story'
@@ -17,6 +16,12 @@ const Icon = styled.img`
     }
 `
 
+const Mobile = styled.div`
+    @media (max-width:720px) {
+        text-align:center;
+    }
+`
+
 const index =()=> ( 
     <Bg className="d-flex align-items-center">
         <div className="container">
@@ -25,8 +30,10 @@ const index =()=> (
                     <img src="/static/image/fullHill.svg"/>
                 </div>
                 <div className="col-12 col-sm-12 col-md-6">
-                    <h1>WHAT</h1>
-                    <span>ค่ายนี้คืออะไร?</span>
+                    <Mobile>
+                        <h1>WHAT</h1>
+                        <span>ค่ายนี้คืออะไร</span>
+                    </Mobile>
                     <br/>
                     {content.text}
                     <Info className="row text-center">
