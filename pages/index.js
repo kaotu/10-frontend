@@ -7,14 +7,14 @@ import When from '../components/When/index'
 import GameBut from '../components/Core/GameBut'
 import Navbar from '../components/Core/Navbar'
 import FAQs from '../components/FAQs/index'
-import Contact from '../components/์Contact/index'
+import Contact from '../components/Contact/index'
 
 const index = () => (
 	<div>
 		<section>
 			{/* <Intro /> */}
 		</section>
-			<Navbar/>                
+			<Navbar/>  
 		<section>        	
 			<What />
 		</section>
