@@ -16,30 +16,30 @@ const Img2 = styled.img`
 width:28%;
 padding:1.5vw;
 `
-const FrontCon = styled.p`
-color: #FFFFFF;
+const FrontCon = styled.h1`
+color: #000000;
 `
 
 const index = () => (
     <DivWhere>
-        <Bg>
+        <Bg className="d-flex align-items-center">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-12">
-                        <FrontCon className="display-4">Contact</FrontCon>
+                        <FrontCon>Contact</FrontCon>
                         <p>ติดต่อเรา</p>
                         <div class="row">
                             <div class="col-sm">
-                                <Img1 src='../../static/image/ContactPhone.svg'/>
+                                <Img1 src="/static/image/ContactPhone.svg"/>
                                 <p>088-8888-888</p>
                             </div>
                             <div class="col-sm">
-                                <Img2 src='../../static/image/Facebook.svg'/>
-                                <Img2 src='../../static/image/Youtube.svg'/>
-                                <Img2 src='../../static/image/Ig.svg'/>
+                                <Img2 src="/static/image/Facebook.svg"/>
+                                <Img2 src="/static/image/Youtube.svg"/>
+                                <Img2 src="/static/image/Ig.svg"/>
                              </div>
                             <div class="col-sm">
-                                <Img1 src='../../static/image/ContactMail.svg'/>
+                                <Img1 src="/static/image/ContactMail.svg"/>
                                 <p>konlao@gmail.com</p>
                             </div>
                         </div>

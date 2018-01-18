@@ -3,19 +3,28 @@ import Bg from '../Core/BgStory'
 import styled from 'styled-components'
 
 const Img = styled.img`
-    width:30vw
+    width:40vw;
+`
+
+const Mobile = styled.div`
+    text-align: right;
+    @media (max-width:720px) {
+        text-align:center;
+    }
 `
 
 const index = () => (
-    <Bg>
+    <Bg className="d-flex align-items-center">
         <div className="container">
             <div className="row">
-                <div className="col-12 col-sm-12 col-md-6 order-md-2">
-                    <Img src="../../static/image/Climing.svg" />
+                <div className="col-8 order-2 text-right">
+                    <Img src="/static/image/Climing.svg" />
                 </div>
-                <div className="col-12 col-sm-12 col-md-6  order-md-1">
-                    <h1 className="text-center">When</h1>
-                    <h3 className="text-center">ค่ายนี้จัดเมื่อไหร่</h3>
+                <div className="col-4 order-1">
+                    <Mobile>
+                        <h1>WHEN</h1>
+                        <span>ค่ายนี้จัดเมื่อไหร่</span>
+                    </Mobile>
                 </div>                
             </div>
         </div>

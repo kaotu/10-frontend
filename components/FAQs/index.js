@@ -18,8 +18,8 @@ const ImgRight = styled.img`
     margin-right:15vw;
     right: 0;
 `
-const FrontFQAS = styled.p`
-    color: #FFFFFF;
+const FrontFQAS = styled.h1`
+    color: #000000;
 `
 const Box = styled.div`
     width: 47vw;
@@ -31,18 +31,18 @@ const Box = styled.div`
 `
 const index = () => (
     <DivWhere>
-        <Bg>
+        <Bg className="d-flex align-items-center">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-12">
-                        <FrontFQAS className="display-4">FAQs</FrontFQAS>
+                        <FrontFQAS>FAQs</FrontFQAS>
                         <p>คำถามที่พบบ่อย</p>
                     </div>
                 </div>
-                <Content/>
-                <Content/>
-                <Content/>
-                <Content/>
+                <Content />
+                <Content />
+                <Content />
+                <Content />
             </div>
         </Bg>
     </DivWhere>

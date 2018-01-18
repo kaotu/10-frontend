@@ -1,3 +1,4 @@
+
 import react from 'react'
 import styled from 'styled-components'
 
@@ -24,27 +25,27 @@ const Box = styled.div`
     margin-bottom:1vw;
 `
 const Content = () => (
-            <div className="container-fluid">
-                <div className="row">
-                    <div class="col img-responesive">
-                        <ImgLefe src="/static/image/question.svg" />
-                    </div>
-                    <div class="col-6 bg-dark">
-                        <Box>ถามสิ่</Box>
-                    </div>
-                    <div class="col">
-                    </div>
-                </div>
-                <div className="row">
-                    <div class="col img-responesive">
-                    </div>
-                    <div class="col-6 bg-dark">
-                        <Box>ตอบสิ่</Box>
-                    </div>
-                    <div class="col">
-                        <ImgRight src="/static/image/question.svg" />
-                    </div>
-                </div>
+    <div className="container-fluid">
+        <div className="row">
+            <div class="col img-responesive">
+                <ImgLefe src="/static/image/question.svg" />
             </div>
+            <div class="col-6 bg-dark">
+                <Box>ถามสิ่</Box>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+        <div className="row">
+            <div class="col img-responesive">
+            </div>
+            <div class="col-6 bg-dark">
+                <Box>ตอบสิ่</Box>
+            </div>
+            <div class="col">
+                <ImgRight src="/static/image/question.svg" />
+            </div>
+        </div>
+    </div>
 )
 export default Content
