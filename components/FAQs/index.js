@@ -1,33 +1,50 @@
 import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
+import Content from './ContentFAQs'
 
 const DivWhere = styled.div`
-top:200px;
-text-align: center;    
-width: 100%;  
-
+    top:200px;
+    text-align: center;    
+    width: 100%;  
 `
-const Img = styled.img`
-width:50%;
+const ImgLefe = styled.img`
+    width:20%;
+    margin-left:15vw;
+    right: 0;
 `
-
+const ImgRight = styled.img`
+    width:20%;
+    margin-right:15vw;
+    right: 0;
+`
+const FrontFQAS = styled.p`
+    color: #FFFFFF;
+`
+const Box = styled.div`
+    width: 47vw;
+    height: 35hw;    
+    padding: 1vw;
+    background-color:white;
+    opecity:0.8;
+    margin-top:1vw;
+`
 const index = () => (
-<DivWhere>    
-    <Bg>
-    <div className="container-fluid">
-        <div className="row">
-            <div className="col-md-12">
-                <p className="display-4">FAQs</p>
+    <DivWhere>
+        <Bg>
+            <div className="container-fluid">
                 <div className="row">
-                <div className="col-md-12">
-                <div className>คลิกที่รูปภาพเพื่อดูแผนที่</div>
+                    <div className="col-md-12">
+                        <FrontFQAS className="display-4">FAQs</FrontFQAS>
+                        <p>คำถามที่พบบ่อย</p>
+                    </div>
                 </div>
-                </div>
+                <Content/>
+                <Content/>
+                <Content/>
+                <Content/>
             </div>
-        </div>
-    </div>
-    </Bg>
-</DivWhere>        
+        </Bg>
+    </DivWhere>
 )
 export default index
