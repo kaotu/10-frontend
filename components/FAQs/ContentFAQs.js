@@ -26,8 +26,8 @@ const Box = styled.div`
 `
 const Content = () => (
     <div className="container-fluid">
-        <div className="row">
-            <div class="col img-responesive">
+        <div className="row d-flex">
+            <div class="col img-responesive align-self-center">
                 <ImgLefe src="/static/image/question.svg" />
             </div>
             <div class="col-6 bg-dark">
@@ -36,13 +36,13 @@ const Content = () => (
             <div class="col">
             </div>
         </div>
-        <div className="row">
-            <div class="col img-responesive">
+        <div className="row d-flex">
+            <div class="col">
             </div>
             <div class="col-6 bg-dark">
                 <Box>ตอบสิ่</Box>
             </div>
-            <div class="col">
+            <div class="col img-responesive align-self-center">
                 <ImgRight src="/static/image/question.svg" />
             </div>
         </div>
