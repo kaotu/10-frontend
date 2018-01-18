@@ -1,6 +1,7 @@
 import React from 'react'
-// import Intro from '../components/Intro/'
+import styled from 'styled-components'
 
+// import Intro from '../components/Intro/'
 import What from '../components/What/index'
 import Who from '../components/Who/index'
 import Where from '../components/Where/index'
@@ -10,30 +11,34 @@ import Navbar from '../components/Core/Navbar'
 import FAQs from '../components/FAQs/index'
 import Contact from '../components/Contact/index'
 
+const Section = styled.section`
+	margin-bottom:5%;
+`
+
 const index = () => (
-	<div>
-		<Navbar/>                
+	<div>                
 		{/* <section>
 			<Intro />
 		</section> */}
-		<section>        	
+		<Navbar/>                
+		<Section>        	
 			<What />
-		</section>
-		<section>
+		</Section>
+		<Section>
 			<Who />
-		</section>
-		<section>
-			<When/>
-		</section>
-		<section>
+		</Section>
+		<Section>
 			<Where/>
-		</section>
-		<section>
+		</Section>
+		<Section>
+			<When/>
+		</Section>
+		<Section>
 			<FAQs />
-		</section>
-		<section>
+		</Section>
+		<Section>
 			<Contact />
-		</section>
+		</Section>
 	</div>
 )
 

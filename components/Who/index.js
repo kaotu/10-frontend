@@ -1,24 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import content from './content.json'
 import Bg from '../Core/BgStory'
 
 const Icon = styled.div`
     margin-top: 5%;
 `
 
-const Content = styled.div`
-    
+const Mobile = styled.div`
+    text-align:right;
+    @media (max-width:720px) {
+        text-align:center;
+    }
 `
 
 const index =()=> (
-    <Bg>
+    <Bg className="d-flex align-items-center">
         <div className="container">    
             <div className="row">
-                <Content className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
-                    <h1>WHO</h1>
-                    <span>ค่ายนี้เหมาะกับใคร?</span>
+                <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
+                    <Mobile>
+                        <h1>WHO</h1>
+                        <span>ค่ายนี้เหมาะกับใคร</span>
+                    </Mobile>
                     <Icon className="row">
                         <div className="col-3">
                             <img src="/static/image/question.svg"/>
@@ -33,7 +37,7 @@ const index =()=> (
                             <img src="/static/image/question.svg"/>
                         </div>
                     </Icon>
-                </Content>
+                </div>
                 <div className="col-12 col-md-6 order-1 order-md-2">
                     <img src="/static/image/halfHill.svg"/>
                 </div>
