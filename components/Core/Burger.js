@@ -18,7 +18,7 @@ var styles = {
     width: '36px',
     height: '30px',
     left: '36px',
-    top:'10px'
+    top:'11px'
   },
   bmBurgerBars: {
     background: '#fff'
@@ -59,7 +59,6 @@ var styles = {
           <Item className="menu-item" href="#">เวลาและสถานที่</Item>
           <Item className="menu-item" href="#">คำถามที่พบบ่อย</Item>
           <Item className="menu-item" href="#">ติดต่อสอบถาม</Item>
-          <Item className="menu-item" href="#">เกม</Item>
          </Menu>
       </div>
      )
