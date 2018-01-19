@@ -17,10 +17,10 @@ const index = () => (
     <Bg className="d-flex align-items-center">
         <div className="container">
             <div className="row">
-                <div className="col-8 order-2 text-right">
+                <div className="col-12 col-sm-12 col-md-6 order-2 text-right">
                     <Img src="/static/image/Climing.svg" />
                 </div>
-                <div className="col-4 order-1">
+                <div className="col-12 col-sm-12 col-md-6 order-1">
                     <Mobile>
                         <h1>WHEN</h1>
                         <span>ค่ายนี้จัดเมื่อไหร่</span>
