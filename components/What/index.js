@@ -9,6 +9,20 @@ import Bg from '../Core/BgStory'
 const Info = styled.div`
     margin-top: 5%;
 `
+const Cloud = styled.img`
+    width: 20%;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 20%;
+` 
+const Cloud2 = styled.img`
+    width: 20%;
+    position: absolute;
+    z-index: 2;
+    left: 35%;
+    top: 30%;
+` 
 
 const Icon = styled.img`
     @media (max-width:720px) {
@@ -27,7 +41,11 @@ const index =()=> (
         <div className="container">
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-6">
-                    <img src="/static/image/fullHill.svg"/>
+                    <div>
+                        <Cloud src="/static/image/clound-yak-back.svg"/>
+                        <Cloud2 src="/static/image/clound-yak-back.svg"/>
+                        <img src="/static/image/fullHill.svg"/>
+                    </div>
                 </div>
                 <div className="col-12 col-sm-12 col-md-6">
                     <Mobile>
