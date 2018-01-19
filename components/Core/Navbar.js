@@ -15,6 +15,7 @@ margin-left:2vw;
     border: 2vw;
     padding-rigth:2vw;
     padding-left:2vw;
+    border-radius: 12px;
 }
 `
 const NavItem = styled.nav`
@@ -32,6 +33,9 @@ const RegisterBtn = styled.div`
     background-color: red;
     width: 5em;
     height: 8em;
+`
+const Navcolor = styled.div`
+
 `
 
 const Navbar = () => (
