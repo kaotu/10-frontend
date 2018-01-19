@@ -1,8 +1,8 @@
 import { injectGlobal } from 'styled-components';
 
 injectGlobal`
-  @font-face {
+  body{
      font-family: 'Pridi';
-     src: url('../static/font/Pridi-Medium.ttf') format('opentype');
+     src: url('../static/font/Pridi-Light.ttf');
   }
 `
