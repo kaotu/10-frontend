@@ -27,17 +27,17 @@ const index = () => (
           <div className="col-md-12">
             <FrontCon>Contact</FrontCon>
             <p>ติดต่อเรา</p>
-            <div class="row">
-              <div class="col-sm">
+            <div className="row">
+              <div className="col-sm">
                 <Img1 src="/static/image/ContactPhone.svg" />
                 <p>088-8888-888</p>
               </div>
-              <div class="col-sm">
+              <div className="col-sm">
                 <Img2 src="/static/image/Facebook.svg" />
                 <Img2 src="/static/image/Youtube.svg" />
                 <Img2 src="/static/image/Ig.svg" />
               </div>
-              <div class="col-sm">
+              <div className="col-sm">
                 <Img1 src="/static/image/ContactMail.svg" />
                 <p>konlao@gmail.com</p>
               </div>

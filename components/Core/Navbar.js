@@ -38,12 +38,12 @@ const Navbar = () => (
     <NavItem className="sticky-top">
     <Burger/>
         <div>
-            <div class="navbar navbar-expand-lg">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <div className="navbar navbar-expand-lg">
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    <div class="navbar-nav  justify-content-center ">
+                <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                    <div className="navbar-nav  justify-content-center ">
                         <LinkItem className="nav-item nav-link " href="#"> Home </LinkItem>
                         <LinkItem className="nav-item nav-link " href="#">What</LinkItem>
                         <LinkItem className="nav-item nav-link" href="#">Who</LinkItem>
