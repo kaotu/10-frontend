@@ -18,10 +18,10 @@ var styles = {
     width: '36px',
     height: '30px',
     left: '36px',
-    top: '36px'
+    top:'10px'
   },
   bmBurgerBars: {
-    background: '#373a47'
+    background: '#fff'
   },
   bmCrossButton: {
     height: '24px',
@@ -32,7 +32,7 @@ var styles = {
   },
   bmMenu: {
     background: '#373a47',
-    padding: '2.5em 1.5em 0',
+    padding: '0em',
     fontSize: '1.15em'
   },
   bmMorphShape: {
