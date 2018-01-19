@@ -2,7 +2,7 @@ import { injectGlobal } from 'styled-components';
 
 injectGlobal`
   @font-face {
-     font-family: 'Niramit';
-     src: url('../static/font/TH Niramit AS.ttf');
+     font-family: 'Pridi';
+     src: url('../static/font/Pridi-Medium.ttf') format('opentype');
   }
 `
