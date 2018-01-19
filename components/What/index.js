@@ -29,12 +29,8 @@ const index =()=> (
         <div className="container">
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-6">
-                    <div>
-                        <Cloud/>
-                        {/* <Cloud src="/static/image/clound-yak-back.svg"/>
-                        <Cloud2 src="/static/image/clound-yak-back.svg"/> */}
-                        <img src="/static/image/fullHill.svg"/>
-                    </div>
+                    <Cloud/>    
+                    <img src="/static/image/fullHill.svg"/>
                 </div>
                 <div className="col-12 col-sm-12 col-md-6">
                     <Mobile>
