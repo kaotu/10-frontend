@@ -5,6 +5,8 @@ import What from '../components/What/index'
 import Who from '../components/Who/index'
 import Where from '../components/Where/index'
 import When from '../components/When/index'
+import Faqs from '../components/FAQs'
+import Contact from '../components/Contact'
 import GameBut from '../components/Core/GameBut'
 import Navbar from '../components/Core/Navbar'
 import Burger from '../components/Core/Burger'
@@ -27,6 +29,12 @@ const index = () => (
 		</section>
 		<section>
 			<When/>
+		</section>
+		<section>
+			<Faqs/>
+		</section>
+		<section>
+			<Contact/>
 		</section>
 	</div>
 )
