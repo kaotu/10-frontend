@@ -9,12 +9,10 @@ import Faqs from '../components/FAQs'
 import Contact from '../components/Contact'
 import GameBut from '../components/Core/GameBut'
 import Navbar from '../components/Core/Navbar'
-import Burger from '../components/Core/Burger'
 
 const index = () => (
 	<div>
 		<Navbar/>
-		<Burger/>                
 		<section>
 			{/* <Intro /> */}
 		</section>
