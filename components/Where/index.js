@@ -13,6 +13,7 @@ const Story = styled.img`
 const Local = styled.img`
     width:70%;
     margin-top : 5%;
+    margin-bottom: 5%; 
 `
 
 const Mobile = styled.div`
