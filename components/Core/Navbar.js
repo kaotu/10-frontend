@@ -1,6 +1,8 @@
 import react from 'react'
 import styled from 'styled-components'
 
+import Burger from './Burger'
+
 
 const LinkItem = styled.a`
 color: #FFFFFF;
@@ -17,6 +19,7 @@ margin-left:2vw;
 `
 const NavItem = styled.nav`
     color: #FFFFFF;
+    background-color:#240;
     
 `
 const RegisterBtn = styled.div`
@@ -30,10 +33,12 @@ const RegisterBtn = styled.div`
     width: 5em;
     height: 8em;
 `
+
 const Navbar = () => (
     <NavItem className="sticky-top">
+    <Burger/>
         <div>
-            <div class="navbar navbar-expand-lg bg-dark ">
+            <div class="navbar navbar-expand-lg">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -49,6 +54,7 @@ const Navbar = () => (
                     </div>
                 </div>
                 <RegisterBtn/>
+                
             </div>
         </div>
     </NavItem>
