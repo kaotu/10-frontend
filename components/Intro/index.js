@@ -30,9 +30,9 @@ const Index = (props) => (
 	<BgIntro>
 		<div className="container-fluid">
 			<MoveLeft check={props.check}>
-			  	<div className="row">
+				<div className="row">
 					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<Background/>
+						<Background />
 						<Position>
 							<Logo />
 						</Position>
@@ -40,7 +40,7 @@ const Index = (props) => (
 				</div>
 			</MoveLeft>
 		</div>
-	</BgIntro> 
+	</BgIntro>
 )
 
 const Indexcompose = compose(state)(Index)

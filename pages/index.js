@@ -12,27 +12,27 @@ import Navbar from '../components/Core/Navbar'
 
 const index = () => (
 	<div>
-		<Navbar/>
+		<Navbar />
 		<section>
 			{/* <Intro /> */}
 		</section>
-		<section>        	
+		<section>
 			<What />
 		</section>
 		<section>
 			<Who />
 		</section>
 		<section>
-			<Where/>
+			<Where />
 		</section>
 		<section>
-			<When/>
+			<When />
 		</section>
 		<section>
-			<Faqs/>
+			<Faqs />
 		</section>
 		<section>
-			<Contact/>
+			<Contact />
 		</section>
 	</div>
 )
