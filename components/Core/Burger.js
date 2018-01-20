@@ -8,7 +8,8 @@ const Item = styled.a`
   transition: .1s;
   &:hover{
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(0, 0, 0, 0.3);
+    // border-radius: .3em; 
     text-decoration:none;
   }
   &:focus {
@@ -17,6 +18,10 @@ const Item = styled.a`
     padding: 0.5em;
     text-decoration:none;
 }
+`
+
+const BlankSpace = styled.a`
+  padding: 1em;
 `
 var styles = {
   bmBurgerButton: {
@@ -30,11 +35,11 @@ var styles = {
     background: '#fff'
   },
   bmCrossButton: {
-    height: '24px',
-    width: '24px'
+    marginRight: '15em'
   },
   bmCross: {
-    background: '#bdc3c7'
+    background: '#fff',
+    height: '4vh',
   },
   bmMenu: {
     background: '#002D40',
@@ -58,6 +63,7 @@ var styles = {
      return (
       <div className="d-lg-none">      
         <Menu styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
+          <BlankSpace/>
           <Item className="menu-item" href="#">HOME</Item>
           <Item className="menu-item" href="#">WHAT</Item>
           <Item className="menu-item" href="#">WHO</Item>
