@@ -2,18 +2,18 @@ import react from 'react'
 import styled from 'styled-components'
 import '../global-style'
 
-const RegisButton = styled.div`
-  width: 80px;
-  height: 80px;    
+const GameButton = styled.div`
+  width: 130px;
+  height: 60px;    
   border-radius: 10%;
-  background-color: #FFFFFF;
+  background-color: red;
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position:fixed;
-  right:-5px;
+  right:-40px;
   top:200px;          
   z-index: 1;
-  color: #FF3333;
+  color: white;
   letter-spacing: 5px;
   -webkit-transform:rotate(270deg);
 
@@ -23,10 +23,9 @@ const RegisButton = styled.div`
   }
 `
 
-const Regis = styled.span`
-  font-size: 2.5em;
-  font-weight: bold;
-  font-family: 'Niramit';
+const Game = styled.span`
+  font-size: 1.5em;
+  font-weight: bold;  
 
   @media(max-width:720px) {
     font-size: 1em;            
@@ -34,8 +33,8 @@ const Regis = styled.span`
 `
 
 const GameBut = () => (
-  <RegisButton className="d-flex justify-content-center align-items-center" data-toggle="" data-target="#">
-    <Regis className="text-center">เกม</Regis>
-  </RegisButton>
+  <GameButton className="d-flex justify-content-center align-items-center" data-toggle="" data-target="#">
+    <Game className="text-center">GAME</Game>
+  </GameButton>
 )
 export default GameBut
