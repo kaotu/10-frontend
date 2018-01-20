@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import { compose, withState } from 'recompose'
 import Router from 'next/router'
 import ReactTimeOut from 'react-timeout'
-import MoveLeft from '../PageTransition/MoveLeft'
-import MoveToLeft from '../PageTransition/MoveToLeft'
 
 import Logo from './Logo'
 import BgIntro from '../BgIntro'
@@ -29,7 +27,6 @@ const Position = styled.div`
 const Index = (props) => (
 	<BgIntro>
 		<div className="container-fluid">
-			<MoveLeft check={props.check}>
 				<div className="row">
 					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<Background />
@@ -38,7 +35,6 @@ const Index = (props) => (
 						</Position>
 					</div>
 				</div>
-			</MoveLeft>
 		</div>
 	</BgIntro>
 )
