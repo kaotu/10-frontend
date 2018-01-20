@@ -2,6 +2,7 @@ import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
 import Content from './ContentFAQs'
+import Respon from './ResponFAQs'
 
 const DivWhere = styled.div`
     top:200px;
@@ -43,6 +44,7 @@ const index = () => (
                 <Content />
                 <Content />
                 <Content />
+                <Respon/>
             </div>
         </Bg>
     </DivWhere>

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Bg = styled.section`
-    background-color: #FFFFFF;
+    background-color: #4682B4;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;

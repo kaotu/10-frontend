@@ -26,7 +26,7 @@ const Box = styled.div`
 `
 const Content = () => (
     <div className="container-fluid">
-        <div className="row d-flex">
+        <div className="row d-flex ">
             <div class="col img-responesive align-self-center">
                 <ImgLefe src="/static/image/question.svg" />
             </div>
