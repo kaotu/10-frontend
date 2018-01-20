@@ -30,7 +30,7 @@ const index = () => (
           <Story src="static/image/LookOver-01.svg" />
         </div>
         <div className="col-md-6">
-          <Mobile>
+          <Mobile className="text-center">
             <h1>WHERE</h1>
             <span>ค่ายนี้จัดที่ไหน</span>
           </Mobile>
