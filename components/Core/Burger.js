@@ -7,11 +7,12 @@ const Item = styled.a`
   padding: 0.8em;
   transition: .1s;
   &:hover{
-    color: #27BFFF;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3); 
     text-decoration:none;
   }
   &:focus {
-    color: #27BFFF;
+    color: #FFF;
     font-size: 1.5em;
     padding: 0.5em;
     text-decoration:none;
