@@ -1,15 +1,20 @@
 import react from 'react'
- import { slide as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
 
 const Item = styled.a`
-  color: #b8b7ad;
+  color: #fff;
   padding: 0.8em;
+  transition: .1s;
   &:hover{
-      color: #c94e50;
+    color: #27BFFF;
+    text-decoration:none;
   }
   &:focus {
-    color: #c94e50;
+    color: #27BFFF;
+    font-size: 1.5em;
+    padding: 0.5em;
+    text-decoration:none;
 }
 `
 var styles = {
@@ -31,7 +36,7 @@ var styles = {
     background: '#bdc3c7'
   },
   bmMenu: {
-    background: '#373a47',
+    background: '#002D40',
     padding: '0em',
     fontSize: '1.15em'
   },
@@ -39,7 +44,7 @@ var styles = {
     fill: '#373a47'
   },
   bmItemList: {
-    color: '#b8b7ad',
+    color: '#fff',
     padding: '0.8em'
   },
   bmOverlay: {
@@ -52,13 +57,13 @@ var styles = {
      return (
       <div className="d-lg-none">      
         <Menu styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
-          <Item className="menu-item" href="#">หน้าแรก</Item>
-          <Item className="menu-item" href="#">ค่ายของเรา</Item>
-          <Item className="menu-item" href="#">เหมาะกับใคร</Item>
-          <Item className="menu-item" href="#">สิ่งที่จะได้เรียนรู้</Item>
-          <Item className="menu-item" href="#">เวลาและสถานที่</Item>
-          <Item className="menu-item" href="#">คำถามที่พบบ่อย</Item>
-          <Item className="menu-item" href="#">ติดต่อสอบถาม</Item>
+          <Item className="menu-item" href="#">HOME</Item>
+          <Item className="menu-item" href="#">WHAT</Item>
+          <Item className="menu-item" href="#">WHO</Item>
+          <Item className="menu-item" href="#">WHERE</Item>
+          <Item className="menu-item" href="#">WHEN</Item>
+          <Item className="menu-item" href="#">FAQS</Item>
+          <Item className="menu-item" href="#">CONTACT</Item>
          </Menu>
       </div>
      )
