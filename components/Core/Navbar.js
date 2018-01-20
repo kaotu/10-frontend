@@ -10,7 +10,7 @@ margin-left:2vw;
 &:hover{
     color: #000000;
     text-decoration: none;
-    background-color: #B0E0E6;
+    background-color: #27BFFF;
     border: 2vw;
     padding-rigth:2vw;
     padding-left:2vw;
@@ -19,7 +19,7 @@ margin-left:2vw;
 `
 const NavItem = styled.nav`
     color: #FFFFFF;
-    background-color:#240;
+    background-color:#002D40;
     
 `
 const RegisterBtn = styled.div`
