@@ -11,11 +11,12 @@ import GameBut from '../components/Core/GameBut'
 import Navbar from '../components/Core/Navbar'
 
 const index = () => (
-	<div>
-		<Navbar />
+	<div>		
 		<section>
 			{/* <Intro /> */}
 		</section>
+		<Navbar />
+		<GameBut/>
 		<section>
 			<What />
 		</section>
