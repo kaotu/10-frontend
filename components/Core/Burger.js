@@ -15,6 +15,7 @@ const Item = styled.a`
   &:focus {
     color: #FFF;
     font-size: 1.5em;
+    font-weight: bold;
     padding: 0.5em;
     text-decoration:none;
 }
