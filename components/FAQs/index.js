@@ -31,21 +31,22 @@ const Box = styled.div`
   margin-top:1vw;
 `
 const index = () => (
-  <DivWhere>
-    <Bg className="d-flex align-items-center">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-12">
-            <FrontFQAS>FAQs</FrontFQAS>
-            <p>คำถามที่พบบ่อย</p>
-          </div>
-        </div>
-        <Content />
-        <Content />
-        <Content />
-        <Content />
-      </div>
-    </Bg>
-  </DivWhere>
+    <DivWhere>
+        <Bg faqs className="d-flex align-items-center">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12">
+                        <FrontFQAS>FAQs</FrontFQAS>
+                        <p>คำถามที่พบบ่อย</p>
+                    </div>
+                </div>
+                <Content />
+                <Content />
+                <Content />
+                <Content />
+                <Respon/>
+            </div>
+        </Bg>
+    </DivWhere>
 )
 export default index

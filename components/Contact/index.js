@@ -59,7 +59,7 @@ margin-top:3vw
 
 const index = () => (
   <DivWhere>
-    <Bg className="d-flex align-items-center">
+    <Bg contact className="d-flex align-items-center">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">

@@ -15,7 +15,7 @@ const Mobile = styled.div`
 `
 
 const index =()=> (
-    <Bg className="d-flex align-items-center">
+    <Bg who className="d-flex align-items-center">
         <div className="container">    
             <div className="row">
                 <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
