@@ -27,19 +27,16 @@ const NavItem = styled.nav`
   background-color:#002D40;
     
 `
-const RegisterBtn = styled.div`
-  width: 150px;
+const RegisterBtn = styled.img`
+  height: 250%;
   position:absolute;
-  background-color:#cd4a20;
-  right: 0;
-  height: 80px;
-  margin-right:1vw;
-  background-color: red;
-  width: 5em;
-  height: 8em;
-`
-const Navcolor = styled.div`
-
+  top: 0%;
+  right: 2%;
+  z-index:2;
+  cursor:pointer;
+  @media(max-width:720px) {            
+    height:150%;           
+  }
 `
 
 const Navbar = () => (
@@ -61,8 +58,8 @@ const Navbar = () => (
             <LinkItem className="nav-item nav-link " href="#">CONTACT</LinkItem>
           </div>
         </div>
-        <RegisterBtn />
 
+        <RegisterBtn src='../../static/image/regisred.svg' />
       </div>
     </div>
   </NavItem>
