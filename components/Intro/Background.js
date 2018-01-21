@@ -1,18 +1,21 @@
 import react from 'react'
 import styled from 'styled-components'
 
+
 const PositionMountain = styled.img`
   position:absolute;
   left:0px;
   bottom:0vh;
   height: 80vh;
-  left: 40vw;
+  left: 30vw;
+  top:23vh;
 `
 const PositionCloud = styled.img`
   position:absolute;
   left:0px;
   bottom:0vh;
   width:100vw;
+  top:55vh;
 `
 const PositionStar = styled.img`
   position:absolute;
@@ -22,10 +25,10 @@ const PositionStar = styled.img`
 `
 const PositionMonkey = styled.img`
   position:absolute;
-  right:0px;
   bottom:15vh;
   width:auto;
   height: 50vh;
+  top:50vh;
   @media(max-width: 720px){
     width:auto;
     right: 5vw;
@@ -35,8 +38,8 @@ const PositionMonkey = styled.img`
 `
 const PositionGiant = styled.img`
   position:absolute;
-  left:100px;
-  top:10vh;
+  right:0px;
+  top:50vh;
   width:auto;
   height: 50vh;
 `
@@ -49,7 +52,6 @@ const Background = () => (
     <PositionCloud src='/static/image/cloud-bottom.svg' />
     <PositionMonkey src='/static/image/mongkey-Home.svg' />
     <PositionGiant src='/static/image/giantwithcloud.svg' />
-    <PositionCloud src='/static/image/cloud-bottom-Front.svg' />
   </div>
 )
 
