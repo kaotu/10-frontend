@@ -4,63 +4,68 @@ import Burger from './Burger'
 
 
 const LinkItem = styled.a`
-color: #FFFFFF;
-margin-rigth:2vw;
-margin-left:2vw;
-&:hover{
-    color: #000000;
+  color: #fff;
+  margin-rigth:2vw;
+  margin-left:2vw;
+  &:hover{
+    color: #fff;
     text-decoration: none;
-    background-color: #27BFFF;
+    background-color: rgba(0, 0, 0, 0.3);
     border: 2vw;
     padding-rigth:2vw;
     padding-left:2vw;
     border-radius: 12px;
-}
+  }
+  &:focus{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-radius: 12px; 
+  }
 `
 const NavItem = styled.nav`
-    color: #FFFFFF;
-    background-color:#002D40;
+  color: #fff;
+  background-color:#002D40;
     
 `
 const RegisterBtn = styled.div`
-    width: 150px;
-    position:absolute;
-    background-color:#cd4a20;
-    right: 0;
-    height: 80px;
-    margin-right:1vw;
-    background-color: red;
-    width: 5em;
-    height: 8em;
+  width: 150px;
+  position:absolute;
+  background-color:#cd4a20;
+  right: 0;
+  height: 80px;
+  margin-right:1vw;
+  background-color: red;
+  width: 5em;
+  height: 8em;
 `
 const Navcolor = styled.div`
 
 `
 
 const Navbar = () => (
-    <NavItem className="sticky-top">
-    <Burger/>
-        <div>
-            <div className="navbar navbar-expand-lg">
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                    <div className="navbar-nav  justify-content-center ">
-                        <LinkItem className="nav-item nav-link " href="#"> HOME </LinkItem>
-                        <LinkItem className="nav-item nav-link " href="#">WHAT</LinkItem>
-                        <LinkItem className="nav-item nav-link" href="#">WHO</LinkItem>
-                        <LinkItem className="nav-item nav-link" href="#">WHERE</LinkItem>
-                        <LinkItem className="nav-item nav-link " href="#">WHEN</LinkItem>
-                        <LinkItem className="nav-item nav-link " href="#">FAQs</LinkItem>
-                        <LinkItem className="nav-item nav-link " href="#">CONTACT</LinkItem>
-                    </div>
-                </div>
-                <RegisterBtn/>
-                
-            </div>
+  <NavItem className="sticky-top">
+    <Burger />
+    <div>
+      <div className="navbar navbar-expand-lg">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+          <div className="navbar-nav  justify-content-center ">
+            <LinkItem className="nav-item nav-link " href="#"> HOME </LinkItem>
+            <LinkItem className="nav-item nav-link " href="#">WHAT</LinkItem>
+            <LinkItem className="nav-item nav-link" href="#">WHO</LinkItem>
+            <LinkItem className="nav-item nav-link" href="#">WHERE</LinkItem>
+            <LinkItem className="nav-item nav-link " href="#">WHEN</LinkItem>
+            <LinkItem className="nav-item nav-link " href="#">FAQs</LinkItem>
+            <LinkItem className="nav-item nav-link " href="#">CONTACT</LinkItem>
+          </div>
         </div>
-    </NavItem>
+        <RegisterBtn />
+
+      </div>
+    </div>
+  </NavItem>
 )
 
 export default Navbar
