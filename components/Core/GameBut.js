@@ -15,7 +15,6 @@ const GameButton = styled.div`
   color: white;
   letter-spacing: 5px;
   -webkit-transform:rotate(270deg);
-
   @media(max-width:720px) {
     width: 65px;            
     height: 65px;            
