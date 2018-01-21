@@ -9,7 +9,7 @@ const Item = styled.a`
   &:hover{
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
-    // border-radius: .3em; 
+    border-radius: .3em; 
     text-decoration:none;
   }
   &:focus {
@@ -69,7 +69,7 @@ var styles = {
           <Item className="menu-item" href="#">WHO</Item>
           <Item className="menu-item" href="#">WHERE</Item>
           <Item className="menu-item" href="#">WHEN</Item>
-          <Item className="menu-item" href="#">FAQS</Item>
+          <Item className="menu-item" href="#">FAQs</Item>
           <Item className="menu-item" href="#">CONTACT</Item>
          </Menu>
       </div>

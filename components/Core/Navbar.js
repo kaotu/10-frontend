@@ -47,13 +47,13 @@ const Navbar = () => (
                 </button>
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div className="navbar-nav  justify-content-center ">
-                        <LinkItem className="nav-item nav-link " href="#"> Home </LinkItem>
-                        <LinkItem className="nav-item nav-link " href="#">What</LinkItem>
-                        <LinkItem className="nav-item nav-link" href="#">Who</LinkItem>
-                        <LinkItem className="nav-item nav-link" href="#">When</LinkItem>
-                        <LinkItem className="nav-item nav-link " href="#">Where</LinkItem>
+                        <LinkItem className="nav-item nav-link " href="#"> HOME </LinkItem>
+                        <LinkItem className="nav-item nav-link " href="#">WHAT</LinkItem>
+                        <LinkItem className="nav-item nav-link" href="#">WHO</LinkItem>
+                        <LinkItem className="nav-item nav-link" href="#">WHERE</LinkItem>
+                        <LinkItem className="nav-item nav-link " href="#">WHEN</LinkItem>
                         <LinkItem className="nav-item nav-link " href="#">FAQs</LinkItem>
-                        <LinkItem className="nav-item nav-link " href="#">Contact</LinkItem>
+                        <LinkItem className="nav-item nav-link " href="#">CONTACT</LinkItem>
                     </div>
                 </div>
                 <RegisterBtn/>
