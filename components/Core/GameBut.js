@@ -1,6 +1,5 @@
 import react from 'react'
 import styled from 'styled-components'
-import '../global-style'
 
 const GameButton = styled.div`
   width: 130px;
@@ -11,7 +10,7 @@ const GameButton = styled.div`
   cursor: pointer;
   position:fixed;
   right:-40px;
-  top:200px;          
+  top:40%;          
   z-index: 1;
   color: white;
   letter-spacing: 5px;
