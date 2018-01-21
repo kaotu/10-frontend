@@ -13,7 +13,7 @@ import Navbar from '../components/Core/Navbar'
 const index = () => (
 	<div>		
 		<section>
-			{/* <Intro /> */}
+			<Intro />
 		</section>
 		<Navbar />
 		<GameBut/>
