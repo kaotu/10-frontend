@@ -35,7 +35,7 @@ const index = () => (
             <span>ค่ายนี้จัดที่ไหน</span>
           </Mobile>
           <div className="text-center">
-            <a href="https://www.google.co.th/maps/place/คณะเทคโนโลยีสารสนเทศ/" target="_blank" >
+            <a href="https://goo.gl/fC42M6" target="_blank" >
               <Local src="static/image/sit-kmutt.jpg" />
             </a>
             <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p>
