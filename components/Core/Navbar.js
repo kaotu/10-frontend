@@ -34,6 +34,8 @@ const RegisterBtn = styled.img`
   right: 2%;
   z-index:2;
   cursor:pointer;
+  transition:all 550ms ease-in-out;
+  
   @media(max-width:720px) {            
     height:150%;           
   }
