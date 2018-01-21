@@ -1,22 +1,76 @@
 import react from 'react'
 import styled from 'styled-components'
+import Content from '../FAQs/ContentFAQs'
 
-const Box = styled.div`
-height: 35hw;    
-padding: 1vw;
-background-color:#000;
-opecity:0.8;
-margin-top:1vw;
-margin-bottom:1vw;
+const ImgLefe = styled.img`
+  width:5vw;
+  margin-left:8vw;
+
+  @media (max-width:720px) {
+    width:8vw;
+    margin-left:1vw;
+  }
+`
+const ImgRight = styled.img`
+  width:5vw;
+  margin-left:1vw;
+
+  @media (max-width:720px) {
+    width:8vw;
+    margin-left:-6vw;
+  }  
+`
+
+const BoxR = styled.div`
+  width: 46vw;
+  height: 35hw;    
+  padding: 1vw;
+  background-color:white;
+  opecity:0.8;
+  margin-top:1vw;
+  margin-bottom:1vw;
+
+  @media (max-width:720px) {
+    width:36vw;
+  }
+`
+const BoxL = styled.div`
+  width: 46vw;
+  height: 35hw;    
+  padding: 1vw;
+  background-color:white;
+  opecity:0.8;
+  margin-top:1vw;
+  margin-bottom:1vw;
+
+  @media (max-width:720px) {
+    width:36vw;
+  }
+
 `
 
 const ContentRespon = () => (
-    <div className="container-fluid">
-    <div className="row">
-    <div className="col-8">
-        <Box></Box>
-    </div>
-    </div>
+    <div className="container-fluid bg-secondary">        
+        <div class="row">
+            <div className="col-3">
+                <div className="img-responesive align-self-center">
+                    <ImgLefe src="/static/image/question.svg" />
+                </div>
+            </div>
+            <div className="col-9 bg-dark">
+                <BoxR>คำถาม</BoxR>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-9 bg-dark">
+                <BoxL>คำตอบ</BoxL>
+            </div>
+            <div className="col-3">
+                <div class="col img-responesive align-self-center">
+                    <ImgRight src="/static/image/question.svg" />
+                </div>
+            </div>
+        </div>
     </div>
 )
 export default ContentRespon
