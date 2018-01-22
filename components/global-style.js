@@ -1,6 +1,6 @@
 import { injectGlobal } from 'styled-components';
 
-injectGlobal`
+export default injectGlobal`
   @font-face {
     font-family: 'Pridi';
     src: url('/static/font/Pridi-Light.ttf');
