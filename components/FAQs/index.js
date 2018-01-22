@@ -30,6 +30,21 @@ const Box = styled.div`
   opecity:0.8;
   margin-top:1vw;
 `
+
+const DisplayDesktop = styled.div`
+
+@media (max-width:720px){
+    display:none;
+}
+
+`
+const DisplayMoblie = styled.div`
+
+@media (min-width:720px){
+     display:none;
+}
+
+`
 const index = () => (
     <DivWhere>
         <Bg faqs className="d-flex align-items-center">
@@ -40,12 +55,18 @@ const index = () => (
                         <p>คำถามที่พบบ่อย</p>
                     </div>
                 </div>
-                <Content />
-                <Content />
-                <Content />
-                <Content />
+                <DisplayDesktop>
+                    <Content />
+                    <Content />
+                    <Content />
+                    <Content />
+                </DisplayDesktop>
+                <DisplayMoblie>
                 <Respon/>
+                </DisplayMoblie>
+                <br/>
             </div>
+            
         </Bg>
     </DivWhere>
 )

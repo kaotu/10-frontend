@@ -8,7 +8,7 @@ const ImgLefe = styled.img`
 
   @media (max-width:720px) {
     width:8vw;
-    margin-left:1vw;
+    margin: auto;
   }
 `
 const ImgRight = styled.img`
@@ -17,7 +17,7 @@ const ImgRight = styled.img`
 
   @media (max-width:720px) {
     width:8vw;
-    margin-left:-6vw;
+    margin: auto;
   }  
 `
 
@@ -31,11 +31,11 @@ const BoxR = styled.div`
   margin-bottom:1vw;
 
   @media (max-width:720px) {
-    width:36vw;
+    width:42vw;
   }
 `
 const BoxL = styled.div`
-  width: 46vw;
+  width: 49vw;
   height: 35hw;    
   padding: 1vw;
   background-color:white;
@@ -44,12 +44,14 @@ const BoxL = styled.div`
   margin-bottom:1vw;
 
   @media (max-width:720px) {
-    width:36vw;
+    width:42vw;
   }
 
 `
 
+
 const ContentRespon = () => (
+    
     <div className="container-fluid bg-secondary">        
         <div class="row">
             <div className="col-3">
@@ -72,5 +74,6 @@ const ContentRespon = () => (
             </div>
         </div>
     </div>
+    
 )
 export default ContentRespon
