@@ -5,7 +5,7 @@ const GameButton = styled.div`
   width: 18%;
   height: 30%;    
   border-radius: 10%;
-  background-color: #E23D37;
+  background-color: #e53c35;
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position:fixed;
