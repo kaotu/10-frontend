@@ -65,13 +65,13 @@ var styles = {
       <div className="d-lg-none">      
         <Menu styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
           <BlankSpace/>
-          <Item className="menu-item" href="#">HOME</Item>
-          <Item className="menu-item" href="#">WHAT</Item>
-          <Item className="menu-item" href="#">WHO</Item>
-          <Item className="menu-item" href="#">WHERE</Item>
-          <Item className="menu-item" href="#">WHEN</Item>
-          <Item className="menu-item" href="#">FAQs</Item>
-          <Item className="menu-item" href="#">CONTACT</Item>
+          <Item className="menu-item" href="#home">HOME</Item>
+          <Item className="menu-item" href="#what">WHAT</Item>
+          <Item className="menu-item" href="#who">WHO</Item>
+          <Item className="menu-item" href="#where">WHERE</Item>
+          <Item className="menu-item" href="#when">WHEN</Item>
+          <Item className="menu-item" href="#faqs">FAQs</Item>
+          <Item className="menu-item" href="#contact">CONTACT</Item>
          </Menu>
       </div>
      )
