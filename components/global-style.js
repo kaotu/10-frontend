@@ -6,6 +6,6 @@ injectGlobal`
     src: url('/static/font/Pridi-Light.ttf');
   }
   body {
-    font-family: 'Pridi', serif;
+    font-family: 'Pridi';
   }
 `

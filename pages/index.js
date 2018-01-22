@@ -1,5 +1,16 @@
 import React from 'react'
 import Intro from '../components/Intro/'
+import {injectGlobal} from 'styled-components'
+
+injectGlobal`
+	@font-face {
+		font-family: 'Pridi';
+		src: url('/static/font/Pridi-Light.ttf');
+	}
+	body {
+		font-family: 'Pridi';
+	}
+`
 
 import What from '../components/What/index'
 import Who from '../components/Who/index'
