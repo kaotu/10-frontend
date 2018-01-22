@@ -16,27 +16,27 @@ injectGlobal
 
 const index = () => (
 	<div>		
-		{/* <section>
-			<Intro />
-		</section> */}
+		<section id="home">
+			{/* <Intro /> */}
+		</section>
 		<Navbar />
 		<GameBut/>
-		<section>
+		<section id="what">
 			<What />
 		</section>
-		<section>
+		<section id="who">
 			<Who />
 		</section>
-		<section>
+		<section id="where">
 			<Where />
 		</section>
-		<section>
+		<section id="when">
 			<When />
 		</section>
-		<section>
+		<section id="faqs">
 			<Faqs />
 		</section>
-		<section>
+		<section id="contact">
 			<Contact />
 		</section>
 	</div>
