@@ -2,68 +2,49 @@ import react from 'react'
 import styled from 'styled-components'
 
 const GameButton = styled.div`
-  width: 60px;
-  height: 160px;    
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  width: 18%;
+  height: 30%;    
+  border-radius: 10%;
   background-color: #E23D37;
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position:fixed;
-  right: 0%;
+  right:-13%;
   top:35%;          
+  z-index: 1;
   color: white;
-  
-  @media(max-width:1200px) {
-    width: 70px;            
-    height: 80px;          
-  }
+  letter-spacing: 5px;
+  padding: 0px;
   @media(max-width:720px) {
-    width: 45px;            
-    height: 55px; 
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;         
+    width: 10%;            
+    height: 10%;   
+    right:-3%;         
   }
+`
 
-`
-const Rotate = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 0px;
-    margin-left: -38px;
-`
-const Font = styled.div`
-  position: absolute;
+const Game = styled.div`
   font-size: 1.4em;
   font-weight: bold;  
-  letter-spacing: 5px;
   -webkit-transform:rotate(270deg);
-  @media(max-width:1200px) {
-    font-size: 0em;            
+  position: relative;
+  right: 35%;
+  @media(max-width:720px) {
+    font-size: 0em;  
+    right: 10%;           
   }
 `
 const IconGame = styled.img`
-  width: 50%; 
-  position: relative;
-  top: -65px;
-  left: 23px;
-  -webkit-transform:rotate(0deg);
-  @media(max-width:1200px) {
-    width: 50%; 
-    top: -20px;         
-  }
+  width: 15%; 
+  -webkit-transform:rotate(90deg);
   @media(max-width:720px) {
-    width: 50%; 
-    top: -16px;         
+    width: 50%;          
   }
 `
 
 
 const GameBut = () => (
-  <GameButton className="justify-content-center align-items-center" data-toggle="" data-target="#">
-       <Rotate><Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/></Rotate>
+  <GameButton className="d-flex justify-content-center align-items-center" data-toggle="" data-target="#">
+    <div><Game className="text-center">GAME<IconGame src="/static/image/icongame-monkey.png"/></Game></div>
   </GameButton>
 )
-
 export default GameBut
