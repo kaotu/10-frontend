@@ -8,7 +8,7 @@ const ImgLefe = styled.img`
 
   @media (max-width:720px) {
     width:8vw;
-    margin-left:1vw;
+    margin: auto;
   }
 `
 const ImgRight = styled.img`
@@ -17,53 +17,41 @@ const ImgRight = styled.img`
 
   @media (max-width:720px) {
     width:8vw;
-    margin-left:-6vw;
+    margin: auto;
   }  
 `
 
-const BoxR = styled.div`
+const Box = styled.div`
   width: 46vw;
   height: 35hw;    
   padding: 1vw;
-  background-color:white;
+  background-color:#FBFBEF;
   opecity:0.8;
   margin-top:1vw;
   margin-bottom:1vw;
+  border-radius: 10px; 
 
   @media (max-width:720px) {
-    width:36vw;
+    width:42vw;
   }
-`
-const BoxL = styled.div`
-  width: 46vw;
-  height: 35hw;    
-  padding: 1vw;
-  background-color:white;
-  opecity:0.8;
-  margin-top:1vw;
-  margin-bottom:1vw;
-
-  @media (max-width:720px) {
-    width:36vw;
-  }
-
 `
 
 const ContentRespon = () => (
-    <div className="container-fluid bg-secondary">        
+    
+    <div className="container-fluid">        
         <div class="row">
             <div className="col-3">
                 <div className="img-responesive align-self-center">
                     <ImgLefe src="/static/image/question.svg" />
                 </div>
             </div>
-            <div className="col-9 bg-dark">
-                <BoxR>คำถาม</BoxR>
+            <div className="col-9">
+                <Box>คำถาม</Box>
             </div>
         </div>
         <div className="row">
-            <div className="col-9 bg-dark">
-                <BoxL>คำตอบ</BoxL>
+            <div className="col-9">
+                <Box>คำตอบ</Box>
             </div>
             <div className="col-3">
                 <div class="col img-responesive align-self-center">
@@ -72,5 +60,6 @@ const ContentRespon = () => (
             </div>
         </div>
     </div>
+    
 )
 export default ContentRespon
