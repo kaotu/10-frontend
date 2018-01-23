@@ -1,7 +1,7 @@
 import react from 'react'
 import styled from 'styled-components'
 import Burger from './Burger'
-
+import GameBut from './GameBut'
 
 const LinkItem = styled.a`
   color: #fff;
@@ -66,6 +66,7 @@ const Navbar = () => (
 
         <RegisterBtn src='/static/image/regisred.svg' />
       </div>
+      <GameBut/>
     </div>
   </NavItem>
 )

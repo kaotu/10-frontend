@@ -8,7 +8,6 @@ import Where from '../components/Where/index'
 import When from '../components/When/index'
 import Faqs from '../components/FAQs'
 import Contact from '../components/Contact'
-import GameBut from '../components/Core/GameBut'
 import Navbar from '../components/Core/Navbar'
 
 injectGlobal
@@ -19,7 +18,6 @@ const index = () => (
 			<Intro />
 		</section>
 		<Navbar />
-		<GameBut/>
 		<section id="what">
 			<What />
 		</section>
