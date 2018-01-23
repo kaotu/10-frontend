@@ -9,16 +9,10 @@ import BgIntro from '../BgIntro'
 import LogoSIT from './LogoSIT'
 import Background from './Background'
 
-const state = withState('check', 'setCheck', false)
 
-const setCheck = (callback, data) => {
-	callback(!data)
-	setTimeout(() => Router.push('/page'), 1000)
-}
 const Position = styled.div`
 	width: 100vw;
 	margin-top: 50vh;
-	position: relative;
 	transform: translate(-50%, -50%);
 `
 
@@ -35,6 +29,5 @@ const Index = (props) => (
 	</BgIntro>
 )
 
-const Indexcompose = compose(state)(Index)
 
-export default Indexcompose
+export default Index
