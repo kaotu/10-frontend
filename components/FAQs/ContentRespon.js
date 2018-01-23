@@ -39,7 +39,7 @@ const Box = styled.div`
 const ContentRespon = () => (
     
     <div className="container-fluid">        
-        <div class="row">
+        <div className="row">
             <div className="col-3">
                 <div className="img-responesive align-self-center">
                     <ImgLefe src="/static/image/question.svg" />

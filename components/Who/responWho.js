@@ -27,7 +27,7 @@ export default class AdaptiveHeight extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div class="col">
+          <div className="col">
             <Slider {...settings}>
             {
               IconData.map((data)=>
