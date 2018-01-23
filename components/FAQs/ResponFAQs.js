@@ -19,7 +19,7 @@ export default class AdaptiveHeight extends Component {
       <div>
         
         <div className="row d-flex ">
-          <div class="col img-responesive align-self-center">
+          <div className="col img-responesive align-self-center">
             <p></p>
           </div>
 
@@ -37,7 +37,7 @@ export default class AdaptiveHeight extends Component {
             </Slider>
           </div>
 
-          <div class="col">
+          <div className="col">
           </div>
         </div>
       </div>

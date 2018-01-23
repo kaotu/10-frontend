@@ -56,13 +56,19 @@ const FooterBg = Bg.extend`
 `
 
 const Head = styled.h1`
-  font-size : 10vw;
+  font-size : 8vw;
   font-weight: bold;
   margin-bottom : -2vw;
+  @media(max-width:576px){
+    font-size : 10vw;
+  }
 `
 
 const Subhead = styled.p`
-  font-size : 3.5vw;
+  font-size : 2.5vw;
+  @media(max-width:576px){
+    font-size : 3.5vw;
+  }
 `
 
 const index = () => (
