@@ -12,17 +12,16 @@ const ImgRight = styled.img`
   margin-right:15vw;
   right: 0;
 `
-const FrontFQAS = styled.p`
-  color: #FFFFFF;
-`
+
 const Box = styled.div`
   width: 46vw;
   height: 35hw;    
   padding: 1vw;
-  background-color:white;
+  background-color:#FBFBEF;
   opecity:0.8;
   margin-top:1vw;
-  margin-bottom:1vw;
+	margin-bottom:1vw;
+	border-radius: 10px;
 `
 const Content = () => (
 	<div className="container-fluid">
@@ -30,7 +29,7 @@ const Content = () => (
 			<div class="col img-responesive align-self-center">
 				<ImgLefe src="/static/image/question.svg" />
 			</div>
-			<div class="col-6 bg-dark">
+			<div class="col-6">
 				<Box>ถามสิ่</Box>
 			</div>
 			<div class="col">
@@ -39,7 +38,7 @@ const Content = () => (
 		<div className="row d-flex">
 			<div class="col">
 			</div>
-			<div class="col-6 bg-dark">
+			<div class="col-6">
 				<Box>ตอบสิ่</Box>
 			</div>
 			<div class="col img-responesive align-self-center">
