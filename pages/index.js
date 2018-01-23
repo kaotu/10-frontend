@@ -17,7 +17,7 @@ injectGlobal
 const index = () => (
 	<Scroll>		
 		<section id="home">
-			{/* <Intro /> */}
+			<Intro />
 		</section>
 		<Navbar />
 		<GameBut/>
