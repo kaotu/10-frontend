@@ -54,7 +54,7 @@ const ContentRespon = () => (
                 <Box>คำตอบ</Box>
             </div>
             <div className="col-3">
-                <div class="col img-responesive align-self-center">
+                <div className="col img-responesive align-self-center">
                     <ImgRight src="/static/image/question.svg" />
                 </div>
             </div>
