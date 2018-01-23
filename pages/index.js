@@ -2,7 +2,7 @@ import React from 'react'
 import Intro from '../components/Intro/'
 import injectGlobal from '../components/global-style'
 
-
+import Scroll from '../components/Core/Scroll'
 import What from '../components/What/index'
 import Who from '../components/Who/index'
 import Where from '../components/Where/index'
@@ -15,7 +15,7 @@ import Navbar from '../components/Core/Navbar'
 injectGlobal
 
 const index = () => (
-	<div>		
+	<Scroll>		
 		<section id="home">
 			{/* <Intro /> */}
 		</section>
@@ -39,7 +39,7 @@ const index = () => (
 		<section id="contact">
 			<Contact />
 		</section>
-	</div>
+	</Scroll>
 )
 
 export default index
