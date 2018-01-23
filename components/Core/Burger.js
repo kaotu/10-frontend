@@ -26,7 +26,7 @@ const BlankSpace = styled.a`
 `
 var styles = {
   bmBurgerButton: {
-    position: 'fixed',
+    position: 'absolute',
     width: '36px',
     height: '30px',
     left: '36px',
@@ -62,8 +62,8 @@ var styles = {
  class BurgerMenu extends React.Component {
    render() {
      return (
-      <div className="d-lg-none">      
-        <Menu styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
+      <div className="d-lg-none sticky">      
+        <Menu className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
           <BlankSpace/>
           <Item className="menu-item" href="#home">HOME</Item>
           <Item className="menu-item" href="#what">WHAT</Item>
