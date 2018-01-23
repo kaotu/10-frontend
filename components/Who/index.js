@@ -47,6 +47,17 @@ const Mobile = styled.div`
     text-align: center;
   }
 `;
+const H1 = styled.div`
+  font-size: 65px;
+  margin-top:20px;
+  margin-bottom:-25px;
+  margin-left:-120px;
+`;
+const H2 = styled.div`
+font-size: 35px;
+margin-top:0px;
+margin-bottom:0px;
+`
 
 const index = props => (
   <Bg who className="d-flex align-items-center">
@@ -54,9 +65,9 @@ const index = props => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <h1>WHO</h1>
+            <H1 className="text-center font-weight-bold">WHO</H1>
             {/* {`${props.checkButton}`} */}
-            <span>ค่ายนี้เหมาะกับใคร</span>
+            <H2 className="text-center font-weight-bold">ค่ายนี้เหมาะกับใคร?</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">
