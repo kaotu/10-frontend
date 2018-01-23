@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
-          <title>Wip Camp #10 : Ways to IT Professionals Camp</title>
+          <title>WIP Camp #10 : Ways to IT Professionals Camp</title>
         <Head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>

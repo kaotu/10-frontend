@@ -1,21 +1,21 @@
 import styled from 'styled-components'
 
 const Bg = styled.section`
-  background-color:#96cbdb;
+  background-color:#a4b792;
   ${props => props.who && `
-    background-color:#9addde; 
+    background-color:#ceeaa5; 
   `}
   ${props => props.where && `
-    background-color:#ade6df; 
+    background-color:#e1f6b3; 
   `}
   ${props => props.when && `
-    background-color:#d5eff2; 
+    background-color:#def5bf; 
   `}
   ${props => props.faqs && `
-    background-color:#d9f1f2; 
+    background-color:#def5bf; 
   `}
   ${props => props.contact &&`
-    background-color:#e7f6fa; 
+    background-color:#e7f6da; 
   `}
   background-position: center center;
   background-repeat: no-repeat;

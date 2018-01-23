@@ -9,43 +9,47 @@ const DivWhere = styled.div`
   text-align: center;    
   width: 100%;  
 `
-const ImgLefe = styled.img`
-  width:20%;
-  margin-left:15vw;
-  right: 0;
-`
-const ImgRight = styled.img`
-  width:20%;
-  margin-right:15vw;
-  right: 0;
-`
+
 const FrontFQAS = styled.h1`
   color: #000000;
 `
-const Box = styled.div`
-  width: 47vw;
-  height: 35hw;    
-  padding: 1vw;
-  background-color:white;
-  opecity:0.8;
-  margin-top:1vw;
+
+const DisplayDesktop = styled.div`
+
+@media (max-width:720px){
+    display:none;
+}
+
+`
+const DisplayMoblie = styled.div`
+
+@media (min-width:720px){
+     display:none;
+}
+
 `
 const index = () => (
     <DivWhere>
         <Bg faqs className="d-flex align-items-center">
-            <div className="container-fluid">
+            <div className="container-fluid my-5">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 mt-4">
                         <FrontFQAS>FAQs</FrontFQAS>
                         <p>คำถามที่พบบ่อย</p>
                     </div>
                 </div>
-                <Content />
-                <Content />
-                <Content />
-                <Content />
+                <DisplayDesktop>
+                    <Content />
+                    <Content />
+                    <Content />
+                    <Content />
+                </DisplayDesktop>
+                <DisplayMoblie>
                 <Respon/>
+                </DisplayMoblie>
+                <br/>
             </div>
+            
         </Bg>
     </DivWhere>
 )
