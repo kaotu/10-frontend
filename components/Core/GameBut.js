@@ -13,6 +13,7 @@ const GameButton = styled.div`
   right: 0%;
   top:35%;          
   color: white;
+  z-index: 1;
   
   @media(max-width:1200px) {
     width: 70px;            
