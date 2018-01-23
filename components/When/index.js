@@ -13,6 +13,16 @@ const Mobile = styled.div`
   }
 `
 
+const H1 = styled.div`
+  font-size: 90px;
+  margin-top:15vh;
+  margin-bottom:-25px;
+`
+const H2 = styled.div`
+  font-size: 35px;
+  margin-top: 0px;
+`
+
 const index = () => (
   <Bg when className="d-flex align-items-center">
     <div className="container">
@@ -22,8 +32,8 @@ const index = () => (
         </div>
         <div className="col-12 col-sm-12 col-md-6 order-1">
           <Mobile>
-            <h1>WHEN</h1>
-            <span>ค่ายนี้จัดเมื่อไหร่</span>
+            <H1 className="text-center font-weight-bold">WHEN</H1>
+            <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
           </Mobile>
         </div>
       </div>
