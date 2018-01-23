@@ -82,7 +82,7 @@ const index = () => (
         <div className="row">
           <div className="col-md-12">
             <Head>Contact</Head>
-            <Subhead>ติดต่อเรา</Subhead>
+            <Subhead className="font-weight-bold">ติดต่อเรา</Subhead>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
