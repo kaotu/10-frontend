@@ -30,9 +30,9 @@ const index = () => (
 		<section id="where">
 			<Where />
 		</section>
-		<section id="when">
+		{/* <section id="when">
 			<When />
-		</section>
+		</section> */}
 		<section id="faqs">
 			<Faqs />
 		</section>
