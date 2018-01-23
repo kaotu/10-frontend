@@ -24,13 +24,13 @@ const Mobile = styled.div`
 
 const index = () => (
   <Bg where className="d-flex align-items-center">
-    <div className="container-fluid">
+    <div className="container-fluid my-5">
       <div className="row">
-        <div className="col-md-6 text-center">
+        <div className="col-md-6 text-center mt-4">
           <Story src="static/image/LookOver-01.svg" />
         </div>
         <div className="col-md-6">
-          <Mobile className="text-center">
+          <Mobile className="text-center mt-4">
             <h1>WHERE</h1>
             <span>ค่ายนี้จัดที่ไหน</span>
           </Mobile>
