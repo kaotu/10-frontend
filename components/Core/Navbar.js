@@ -61,7 +61,7 @@ const Navbar = () => (
           </div>
         </div>
 
-        <RegisterBtn src='../../static/image/regisred.svg' />
+        <RegisterBtn src='/static/image/regisred.svg' />
       </div>
     </div>
   </NavItem>
