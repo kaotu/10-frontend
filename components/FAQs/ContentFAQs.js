@@ -26,22 +26,22 @@ const Box = styled.div`
 const Content = () => (
 	<div className="container-fluid">
 		<div className="row d-flex">
-			<div class="col img-responesive align-self-center">
+			<div className="col img-responesive align-self-center">
 				<ImgLefe src="/static/image/question.svg" />
 			</div>
-			<div class="col-6">
+			<div className="col-6">
 				<Box>ถามสิ่</Box>
 			</div>
-			<div class="col">
+			<div className="col">
 			</div>
 		</div>
 		<div className="row d-flex">
-			<div class="col">
+			<div className="col">
 			</div>
-			<div class="col-6">
+			<div className="col-6">
 				<Box>ตอบสิ่</Box>
 			</div>
-			<div class="col img-responesive align-self-center">
+			<div className="col img-responesive align-self-center">
 				<ImgRight src="/static/image/question.svg" />
 			</div>
 		</div>

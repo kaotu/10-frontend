@@ -6,13 +6,14 @@ const Wip = styled.img`
   position: relative;
   left: 25vw;
   top:-20vh;
+  margin-top: 50vh;
   @media(max-width: 720px){
     width: 90%;
 	  left: 5vw;
   }
 `
 const Logo = () => (
-	<Wip src="../../static/image/LOGO-TH.svg" />
+	<Wip src="/static/image/LOGO-TH.svg" />
 )
 
 export default Logo;

@@ -15,6 +15,9 @@ const ImgLeft = styled.img`
 const ImgCenter = styled.img`
   width:5vw;
   cursor:pointer;
+  margin-top : 17px;
+  margin-left : 1vw;
+  margin-right : 1vw;
   @media(max-width:720px) {
   }
 `
@@ -26,6 +29,21 @@ const ImgRight = styled.img`
 const Line = styled.div`
   border-left: thick solid #fff;
   border-right: thick solid #fff;
+  @media(max-width:575px) {
+    border-left: none;
+    border-right: none;
+  }
+`
+
+const Linerespon = styled.div`
+    width : 50vw;
+    height : 5px;
+    margin-left : 22vw;
+    margin-top : 5vw;
+    background-color: white;
+  @media(min-width:576px){
+    display : none;
+  }
 `
 
 const ContentBg = Bg.extend`
@@ -37,25 +55,37 @@ const FooterBg = Bg.extend`
   background-color: #FFFFFF;
 `
 
+const Head = styled.h1`
+  font-size : 10vw;
+  font-weight: bold;
+  margin-bottom : -2vw;
+`
+
+const Subhead = styled.p`
+  font-size : 3.5vw;
+`
+
 const index = () => (
   <DivWhere>
     <ContentBg contact className="d-flex align-items-center">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <h1>Contact</h1>
-            <p>ติดต่อเรา</p>
+            <Head>Contact</Head>
+            <Subhead>ติดต่อเรา</Subhead>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
                 <p className="mt-3"><strong>พี่วิปโป้: 088-8888-888</strong></p>
               </div>
               <Line className="col-sm-6 col-md-6">
+              <Linerespon/>
                 <ImgCenter src="/static/image/Facebook.svg" />
                 <ImgCenter src="/static/image/Youtube.svg" />
                 <ImgCenter src="/static/image/Ig.svg" />
                 <ImgCenter src="/static/image/Lineicon.svg" />
                 <ImgCenter src="/static/image/Twitter.svg" />
+              <Linerespon/>
               </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgRight src="/static/image/ContactMail.svg" />
