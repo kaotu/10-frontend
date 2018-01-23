@@ -1,7 +1,7 @@
 import react from 'react'
 import styled from 'styled-components'
 import Burger from './Burger'
-
+import GameBut from './GameBut'
 
 const LinkItem = styled.a`
   color: #fff;
@@ -25,6 +25,10 @@ const LinkItem = styled.a`
 const NavItem = styled.nav`
   color: #fff;
   background-color:#154051;
+  ${props => props.primaryNav &&`
+    background-color:#24372f; 
+  `}
+
     
 `
 const RegisterBtn = styled.img`
@@ -35,7 +39,6 @@ const RegisterBtn = styled.img`
   z-index:2;
   cursor:pointer;
   transition:all 550ms ease-in-out;
-  
   @media(max-width:720px) {            
     height:150%;           
   }
@@ -63,6 +66,7 @@ const Navbar = () => (
 
         <RegisterBtn src='/static/image/regisred.svg' />
       </div>
+      <GameBut/>
     </div>
   </NavItem>
 )

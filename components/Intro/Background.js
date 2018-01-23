@@ -48,10 +48,10 @@ const PositionGiant = styled.img`
 const Background = () => (
   <div>
     {/* <PositionStar src='/static/image/star.svg'/> */}
-    <PositionMountain src='/static/image/moutain.svg' />
+    {/* <PositionMountain src='/static/image/moutain.svg' />
     <PositionCloud src='/static/image/cloud-bottom.svg' />
     <PositionMonkey src='/static/image/mongkey-Home.svg' />
-    <PositionGiant src='/static/image/giantwithcloud.svg' />
+    <PositionGiant src='/static/image/giantwithcloud.svg' /> */}
   </div>
 )
 
