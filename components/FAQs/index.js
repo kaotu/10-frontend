@@ -31,9 +31,9 @@ const DisplayMoblie = styled.div`
 const index = () => (
     <DivWhere>
         <Bg faqs className="d-flex align-items-center">
-            <div className="container-fluid">
+            <div className="container-fluid my-5">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 mt-4">
                         <FrontFQAS>FAQs</FrontFQAS>
                         <p>คำถามที่พบบ่อย</p>
                     </div>
