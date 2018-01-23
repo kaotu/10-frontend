@@ -46,12 +46,12 @@ const ContentRespon = () => (
                 </div>
             </div>
             <div className="col-9">
-                <Box>คำถาม</Box>
+                <Box>Q : อยากเป็นส่วนนึงของค่ายนี้มากๆ ต้องทำอย่างไร ?</Box>
             </div>
         </div>
         <div className="row">
             <div className="col-9">
-                <Box>คำตอบ</Box>
+                <Box>A : น้องๆ เพียงแค่ตอบคำถามในการสมัครด้วยตนเองเพื่อแสดงถึงตัวตนของน้องๆ และมีความตั้งใจในการตอบคำถาม</Box>
             </div>
             <div className="col-3">
                 <div className="col img-responesive align-self-center">
