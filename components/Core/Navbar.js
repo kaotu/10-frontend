@@ -25,6 +25,10 @@ const LinkItem = styled.a`
 const NavItem = styled.nav`
   color: #fff;
   background-color:#154051;
+  ${props => props.primaryNav &&`
+    background-color:#24372f; 
+  `}
+
     
 `
 const RegisterBtn = styled.img`
