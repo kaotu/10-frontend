@@ -15,6 +15,9 @@ const ImgLeft = styled.img`
 const ImgCenter = styled.img`
   width:5vw;
   cursor:pointer;
+  margin-top : 17px;
+  margin-left : 1vw;
+  margin-right : 1vw;
   @media(max-width:720px) {
   }
 `
@@ -37,14 +40,24 @@ const FooterBg = Bg.extend`
   background-color: #FFFFFF;
 `
 
+const Head = styled.h1`
+  font-size : 7em;
+  font-weight: bold;
+  margin-bottom : -20px;
+`
+
+const Subhead = styled.p`
+  font-size : 2em;
+`
+
 const index = () => (
   <DivWhere>
     <ContentBg contact className="d-flex align-items-center">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <h1>Contact</h1>
-            <p>ติดต่อเรา</p>
+            <Head>Contact</Head>
+            <Subhead>ติดต่อเรา</Subhead>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
