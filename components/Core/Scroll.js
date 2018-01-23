@@ -6,7 +6,6 @@ display: block;
 height: 100vh;
 overflow-y: scroll;
 scroll-behavior: smooth;
-text-align: center;
 width: 100vw;
 `
 

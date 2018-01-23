@@ -9,11 +9,11 @@ const GameButton = styled.div`
   background-color: #E23D37;
   transition:all 550ms ease-in-out;
   cursor: pointer;
-  position:fixed;
+  position: absolute;
   right: 0%;
   top:35%;          
   color: white;
-  z-index: 1;
+  z-index: 2560;
   
   @media(max-width:1200px) {
     width: 70px;            

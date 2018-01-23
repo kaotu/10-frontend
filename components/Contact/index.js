@@ -10,6 +10,7 @@ const DivWhere = styled.div`
 const ImgLeft = styled.img`
   width:5vw;
   @media(max-width:720px) {
+    width : 13vw;
   }
 `
 const ImgCenter = styled.img`
@@ -19,11 +20,14 @@ const ImgCenter = styled.img`
   margin-left : 1vw;
   margin-right : 1vw;
   @media(max-width:720px) {
+    width : 13vw;
   }
 `
 const ImgRight = styled.img`
   width : 5vw;
   @media(max-width:720px) {
+    margin-top : 7vw;
+    width : 13vw;
   }
 `
 const Line = styled.div`
@@ -38,7 +42,7 @@ const Line = styled.div`
 const Linerespon = styled.div`
     width : 50vw;
     height : 5px;
-    margin-left : 22vw;
+    margin-left : 20vw;
     margin-top : 5vw;
     background-color: white;
   @media(min-width:576px){
@@ -56,13 +60,19 @@ const FooterBg = Bg.extend`
 `
 
 const Head = styled.h1`
-  font-size : 10vw;
+  font-size : 5vw;
   font-weight: bold;
-  margin-bottom : -2vw;
+  margin-bottom : -1vw;
+  @media(max-width:576px){
+    font-size : 10vw;
+  }
 `
 
 const Subhead = styled.p`
-  font-size : 3.5vw;
+  font-size : 2vw;
+  @media(max-width:576px){
+    font-size : 4vw;
+  }
 `
 
 const index = () => (
