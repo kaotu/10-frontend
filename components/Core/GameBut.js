@@ -19,7 +19,7 @@ const GameButton = styled.div`
     height: 80px;          
   }
   @media(max-width:720px) {
-    width: 45px;            
+    width: 50px;            
     height: 55px; 
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;         
@@ -47,7 +47,7 @@ const IconGame = styled.img`
   width: 50%; 
   position: relative;
   top: -65px;
-  left: 23px;
+  left: 8px;
   -webkit-transform:rotate(0deg);
   @media(max-width:1200px) {
     width: 50%; 
