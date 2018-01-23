@@ -29,6 +29,21 @@ const ImgRight = styled.img`
 const Line = styled.div`
   border-left: thick solid #fff;
   border-right: thick solid #fff;
+  @media(max-width:575px) {
+    border-left: none;
+    border-right: none;
+  }
+`
+
+const Linerespon = styled.div`
+    width : 50vw;
+    height : 5px;
+    margin-left : 22vw;
+    margin-top : 5vw;
+    background-color: white;
+  @media(min-width:576px){
+    display : none;
+  }
 `
 
 const ContentBg = Bg.extend`
@@ -41,13 +56,13 @@ const FooterBg = Bg.extend`
 `
 
 const Head = styled.h1`
-  font-size : 7em;
+  font-size : 10vw;
   font-weight: bold;
-  margin-bottom : -20px;
+  margin-bottom : -2vw;
 `
 
 const Subhead = styled.p`
-  font-size : 2em;
+  font-size : 3.5vw;
 `
 
 const index = () => (
@@ -64,11 +79,13 @@ const index = () => (
                 <p className="mt-3"><strong>พี่วิปโป้: 088-8888-888</strong></p>
               </div>
               <Line className="col-sm-6 col-md-6">
+              <Linerespon/>
                 <ImgCenter src="/static/image/Facebook.svg" />
                 <ImgCenter src="/static/image/Youtube.svg" />
                 <ImgCenter src="/static/image/Ig.svg" />
                 <ImgCenter src="/static/image/Lineicon.svg" />
                 <ImgCenter src="/static/image/Twitter.svg" />
+              <Linerespon/>
               </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgRight src="/static/image/ContactMail.svg" />
