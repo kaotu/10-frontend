@@ -3,12 +3,14 @@ import styled from 'styled-components'
 import { compose, withState, lifecycle } from 'recompose'
 
 import Bg from '../Core/BgStory'
+import ResponWho from './responWho'
 
 const state = withState('checkButton', 'setCheck', 0)
+
 const Topic = [
   'น้อง ๆ มัธยมศึกษาตอนปลาย',
   'น้อง ๆ ที่มีความสนใจด้านไอที',
-  'น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง', 
+  'น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง',
   'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้'
 ]
 const Content = [
@@ -18,23 +20,33 @@ const Content = [
   'ตลอดระยะเวลา 5 วัน'
 ]
 const IconData = [
-  { id: 0, image: '/static/image/question.svg', text: '' },
-  { id: 1, image: '/static/image/question.svg', text: 'IT Funtionals' },
-  { id: 2, image: '/static/image/question.svg', text: 'Network' },
-  { id: 3, image: '/static/image/question.svg', text: 'HTML5&CSS' },
+  { id: 0, image: '/static/image/question.svg' },
+  { id: 1, image: '/static/image/question.svg' },
+  { id: 2, image: '/static/image/question.svg' },
+  { id: 3, image: '/static/image/question.svg' },
 ]
 
 const Icon = styled.div`
   margin-top: 5%;
   cursor: pointer;
 `
-// const 
+const HideMobile = styled.div`
+  @media (max-width:720px) {
+    display: none;
+  }
+`
+const HideDesktop = styled.div`
+@media (min-width:721px) {
+  display: none;
+}
+`
 const Mobile = styled.div`
   text-align:right;
   @media (max-width:720px) {
     text-align:center;
   }
 `
+
 
 const index = props => (
   <Bg who className="d-flex align-items-center">
@@ -47,29 +59,28 @@ const index = props => (
             {/* {`${props.checkButton}`} */}
             <span>ค่ายนี้เหมาะกับใคร</span>
           </Mobile>
-          <Icon className="row">
-            {
-              IconData.map((data) =>
-                <div className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <img src={data.image} />
-                  <div className="text-center">
-                    {/* {data.text} */}
+          <HideMobile>
+            <Icon className="row">
+              {
+                IconData.map((data) =>
+                  <div className="col-3" onClick={() => props.setCheck(data.id)}>
+                    <img src={data.image} />
                   </div>
-                  {/* {
-                    console.log(data)
-                  } */}
-                </div>
-              )
-            }
-          </Icon>
-          <div className="mt-5">
-            <h4>
-              <strong>{`${Topic[props.checkButton]}`}</strong>
-            </h4>
-            <p>
-              {`${Content[props.checkButton]}`}
-            </p>
-          </div>
+                )
+              }
+            </Icon>
+            <div className="mt-5">
+              <h4>
+                <strong>{`${Topic[props.checkButton]}`}</strong>
+              </h4>
+              <p>
+                {`${Content[props.checkButton]}`}
+              </p>
+            </div>
+          </HideMobile>
+          <HideDesktop>
+            <ResponWho />
+          </HideDesktop>
         </div>
         <div className="col-12 col-md-6 order-1 order-md-2">
           <img src="/static/image/halfHill.svg" />
