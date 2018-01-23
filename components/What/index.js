@@ -11,7 +11,6 @@ const Info = styled.div`
   margin-top: 5%;
 `
 
-
 const Icon = styled.img`
   @media (max-width:720px) {
     width: 50%;
@@ -23,6 +22,20 @@ const Mobile = styled.div`
     text-align:center;
   }
 `
+const H1 = styled.div`
+  font-size: 65px;
+  margin-top:50px;
+  margin-bottom:-25px;
+  margin-left:px;
+`
+const H2 = styled.div`
+font-size: 30px;
+margin-top:0px;
+margin-bottom:-10px;
+`
+const IMG = styled.img`
+margin-top:60px;
+`
 
 const index = () => (
   <Bg className="d-flex align-items-center">
@@ -30,12 +43,12 @@ const index = () => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6">
           <Cloud />
-          <img src="/static/image/fullHill.svg" />
+          <IMG src="/static/image/fullHill.svg" />
         </div>
         <div className="col-12 col-sm-12 col-md-6">
           <Mobile>
-            <h1>WHAT</h1>
-            <span>ค่ายนี้คืออะไร</span>
+            <H1 className="font-weight-bold">WHAT</H1>
+            <H2 className="font-weight-bold">ค่ายนี้คืออะไร ?</H2>
           </Mobile>
           <br />
           {content.text}
