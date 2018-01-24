@@ -31,8 +31,8 @@ const ImgRight = styled.img`
   }
 `
 const Line = styled.div`
-  border-left: thick solid #fff;
-  border-right: thick solid #fff;
+  border-left: thick solid #000;
+  border-right: thick solid #000;
   @media(max-width:575px) {
     border-left: none;
     border-right: none;
@@ -41,10 +41,10 @@ const Line = styled.div`
 
 const Linerespon = styled.div`
     width : 50vw;
-    height : 5px;
+    height : 2px;
     margin-left : 20vw;
     margin-top : 5vw;
-    background-color: white;
+    background-color: #000;
   @media(min-width:576px){
     display : none;
   }
@@ -56,7 +56,7 @@ const ContentBg = Bg.extend`
 
 const FooterBg = Bg.extend`
   min-height: 5vh;
-  background-color: #FFFFFF;
+  background-color: #FFF;
 `
 
 const Head = styled.h1`
