@@ -1,5 +1,6 @@
 import react from 'react'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const GameButton = styled.div`
   width: 60px;
@@ -63,7 +64,9 @@ const IconGame = styled.img`
 
 const GameBut = () => (
   <GameButton className="justify-content-center align-items-center" data-toggle="" data-target="#">
+  <Link href="https://game.wip.camp">
        <Rotate><Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/></Rotate>
+  </Link>
   </GameButton>
 )
 

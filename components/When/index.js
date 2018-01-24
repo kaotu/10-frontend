@@ -14,17 +14,19 @@ const Mobile = styled.div`
 `
 
 const H1 = styled.div`
-  font-size: 90px;
-  margin-top:15vh;
+  font-size: 65px;
+  margin-top:50px;
   margin-bottom:-25px;
+  margin-left:px;
 `
 const H2 = styled.div`
-  font-size: 35px;
-  margin-top: 0px;
+  font-size: 30px;
+  margin-top:0px;
+  margin-bottom:-10px;
 `
 
 const index = () => (
-  <Bg when className="d-flex align-items-center">
+  <Bg bgColor="#d5eff2" className="d-flex align-items-center">
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 text-right">

@@ -77,7 +77,7 @@ const Subhead = styled.p`
 
 const index = () => (
   <DivWhere>
-    <ContentBg contact className="d-flex align-items-center">
+    <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">

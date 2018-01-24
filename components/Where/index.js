@@ -34,7 +34,7 @@ margin-bottom:0px;
 `
 
 const index = () => (
-  <Bg where className="d-flex align-items-center">
+  <Bg bgColor="#ade6df" where className="d-flex align-items-center">
     <div className="container-fluid my-5">
       <div className="row">
         <div className="col-md-6 text-center mt-4">
