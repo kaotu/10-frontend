@@ -33,10 +33,10 @@ export default class AdaptiveHeight extends Component {
               IconData.map((data, i)=> (
               <div key={i} className="container-fluid px-0">
                 <div className="row float-left">
-                    <div className="col-3 px-0">
+                    <div className="col-3">
                       <Img src={data.image}/>
                     </div>
-                    <div className="col-9 px-0">
+                    <div className="col-9">
                       <strong>{data.topic}</strong>
                       <br/>
                       <span>{data.content}</span>
