@@ -50,19 +50,28 @@ position:absolute;
 bottom:15vh;
 width:3vw;
 top:42vh;
-left:8vw;  
+left:8vw;
+cursor:pointer;
 `
 const PositionScrolldown2 = styled.img`
 position:absolute;
 bottom:15vh;
 width:3vw;
 top:42vh;
-right:10vw;  
+right:10vw;
+cursor:pointer;  
 `
-
+const PositionScrolldown3 = styled.img`
+position:absolute;
+width:3vw;
+top:90vh;
+left:50vw;
+cursor:pointer;  
+`
 
 const Background = () => (
   <div>
+    <PositionScrolldown3 src="/static/image/icon-arrow-white-down.png"/>
     <PositionScrolldown2 src='/static/image/double-arrow-down-128.png'/>
     <PositionScrolldown src='/static/image/double-arrow-down-128.png'/>
     {/* <PositionStar src='/static/image/star.svg'/> */}
