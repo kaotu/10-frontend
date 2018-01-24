@@ -64,7 +64,7 @@ const Navbar = () => (
           </div>
         </div>
 
-        <RegisterBtn src='/static/image/regisred.svg' />
+        <RegisterBtn src='/static/image/regisred.png' />
       </div>
       <GameBut/>
     </div>
