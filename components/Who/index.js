@@ -71,11 +71,13 @@ const index = props => (
           </Mobile>
           <HideMobile>
             <Icon className="row">
-              {IconData.map(data => (
-                <div className="col-3" onClick={() => props.setCheck(data.id)}>
+              {
+                IconData.map((data, i) => (
+                <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
                   <img src={data.image} />
                 </div>
-              ))}
+              ))
+              }
             </Icon>
             <div className="mt-5">
               <Block>
