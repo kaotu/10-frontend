@@ -1,6 +1,5 @@
 {
-    "text": "คองเกรสแคนยอนออร์แกนิกิูวีปาสกาล ไทยแลนด์โมเต็ลโลโก้แต๋วฟยอร์ดนอมินี ซิตี้เห่ยแลนด์ คอนโดเพียวกิมจิยากูซ่า แอสเตอร์ บลูเบอร์รีเนิร์สเซอรี่สเปคบอยคอตวันเวย์ สโรชาเวิร์ค คอร์ปอเรชั่นหลินจือพุทธศตวรรษภควัทคีตา หลวงปู่ สี่แยกสเตริโอ เจ๊าะแจ๊ะอริยสงฆ์สุริยยาตร์อาร์ติสต์ คาร์ พฤหัสเทวาก๊วน คาร์ซะเวณิกาจิตเภท รีวิวอันตรกิริยาโปรโมทซีเนียร์มอยส์เจอไรเซอร์ ทริปหมวยมาร์เก็ตทอร์นาโดไฟแนนซ์ ไคลแมกซ์",
-    "info" : [{"icon":"/static/image/question.svg","cap":"Java programming"},
+      "info" : [{"icon":"/static/image/question.svg","cap":"Java programming"},
       {"icon":"/static/image/question.svg","cap":"IT Functions"},
       {"icon":"/static/image/question.svg","cap":"Networks"},
       {"icon":"/static/image/question.svg","cap":"HTML&CSS"}]
