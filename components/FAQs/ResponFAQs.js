@@ -23,7 +23,7 @@ export default class AdaptiveHeight extends Component {
             <p></p>
           </div>
 
-          <div class="col-8">
+          <div className="col-10">
             <Slider {...settings}>
               <div>
                 <ContentRespon />
@@ -34,6 +34,7 @@ export default class AdaptiveHeight extends Component {
               <div>
                 <ContentRespon />
               </div>
+              
             </Slider>
           </div>
 

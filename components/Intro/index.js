@@ -8,6 +8,7 @@ import Logo from './Logo'
 import BgIntro from '../BgIntro'
 import LogoSIT from './LogoSIT'
 import Background from './Background'
+import Sponser from '../Sponser/index'
 
 
 const Position = styled.div`
@@ -17,16 +18,19 @@ const Position = styled.div`
 `
 
 const Index = (props) => (
-	<BgIntro>
-		<div className="container-fluid">
-				<div className="row">
-					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<Background />
-							<Logo />
-					</div>
-				</div>
-		</div>
-	</BgIntro>
+  <div>
+  <BgIntro>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <Background />
+          <Logo />
+        </div>
+      </div>
+    </div>
+  </BgIntro>
+  <Sponser/>
+  </div>
 )
 
 

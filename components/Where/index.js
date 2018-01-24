@@ -21,9 +21,20 @@ const Mobile = styled.div`
     text-align:center;
   }
 `
+const H1 = styled.div`
+  font-size: 80px;
+  margin-top:20px;
+  margin-bottom:-25px;
+  
+`;
+const H2 = styled.div`
+font-size: 35px;
+margin-top:0px;
+margin-bottom:0px;
+`
 
 const index = () => (
-  <Bg where className="d-flex align-items-center">
+  <Bg bgColor="#ade6df" where className="d-flex align-items-center">
     <div className="container-fluid my-5">
       <div className="row">
         <div className="col-md-6 text-center mt-4">
@@ -31,8 +42,8 @@ const index = () => (
         </div>
         <div className="col-md-6">
           <Mobile className="text-center mt-4">
-            <h1>WHERE</h1>
-            <span>ค่ายนี้จัดที่ไหน</span>
+            <H1 className="text-center font-weight-bold">WHERE</H1>
+            <H2 className="text-center font-weight-bold">ค่ายนี้จัดที่ไหน ?</H2>
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >

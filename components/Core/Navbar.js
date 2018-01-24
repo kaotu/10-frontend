@@ -1,7 +1,9 @@
 import react from 'react'
 import styled from 'styled-components'
-import Burger from './Burger'
+import Link from 'next/link'
 
+import Burger from './Burger'
+import GameBut from './GameBut'
 
 const LinkItem = styled.a`
   color: #fff;
@@ -63,9 +65,11 @@ const Navbar = () => (
             <LinkItem className="nav-item nav-link " href="#contact">CONTACT</LinkItem>
           </div>
         </div>
-
-        <RegisterBtn src='/static/image/regisred.svg' />
+        <Link href='https://itim.wip.camp'>
+        <RegisterBtn src='/static/image/regisred.png' />
+        </Link>
       </div>
+      <GameBut/>
     </div>
   </NavItem>
 )

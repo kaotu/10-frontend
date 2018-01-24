@@ -1,4 +1,3 @@
-
 import react from 'react'
 import styled from 'styled-components'
 
@@ -30,7 +29,7 @@ const Content = () => (
 				<ImgLefe src="/static/image/question.svg" />
 			</div>
 			<div className="col-6">
-				<Box>ถามสิ่</Box>
+				<Box>Q : อยากเป็นส่วนนึงของค่ายนี้มากๆ ต้องทำอย่างไร ?</Box>
 			</div>
 			<div className="col">
 			</div>
@@ -39,7 +38,7 @@ const Content = () => (
 			<div className="col">
 			</div>
 			<div className="col-6">
-				<Box>ตอบสิ่</Box>
+				<Box>A : น้องๆ เพียงแค่ตอบคำถามในการสมัครด้วยตนเองเพื่อแสดงถึงตัวตนของน้องๆ และมีความตั้งใจในการตอบคำถาม</Box>
 			</div>
 			<div className="col img-responesive align-self-center">
 				<ImgRight src="/static/image/question.svg" />

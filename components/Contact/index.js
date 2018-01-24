@@ -77,29 +77,39 @@ const Subhead = styled.p`
 
 const index = () => (
   <DivWhere>
-    <ContentBg contact className="d-flex align-items-center">
+    <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
             <Head>Contact</Head>
-            <Subhead>ติดต่อเรา</Subhead>
+            <Subhead className="font-weight-bold">ติดต่อเรา</Subhead>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
-                <p className="mt-3"><strong>พี่วิปโป้: 088-8888-888</strong></p>
+                <p className="mt-3"><strong>พี่วิปโป้: 08-3082-2189</strong></p>
               </div>
               <Line className="col-sm-6 col-md-6">
-              <Linerespon/>
-                <ImgCenter src="/static/image/Facebook.svg" />
-                <ImgCenter src="/static/image/Youtube.svg" />
-                <ImgCenter src="/static/image/Ig.svg" />
-                <ImgCenter src="/static/image/Lineicon.svg" />
-                <ImgCenter src="/static/image/Twitter.svg" />
-              <Linerespon/>
+                <Linerespon />
+                <a href="https://www.facebook.com/wipcamp/">
+                  <ImgCenter src="/static/image/Facebook.svg" />
+                </a>
+                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
+                  <ImgCenter src="/static/image/Lineicon.svg" />
+                </a>
+                <a href="https://twitter.com/WIPCamp">
+                  <ImgCenter src="/static/image/Twitter.svg" />
+                </a>
+                <a href="https://www.instagram.com/wipcamp/">
+                  <ImgCenter src="/static/image/Ig.svg" />
+                </a>
+                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
+                  <ImgCenter src="/static/image/Youtube.svg" />
+                </a>                
+                <Linerespon />
               </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgRight src="/static/image/ContactMail.svg" />
-                <p className="mt-3"><strong>konlao@gmail.com</strong></p>
+                <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
           </div>
@@ -111,8 +121,8 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg>
-      <span>Footer</span>
+    <FooterBg className="float-left ">
+    <i className="fa fa-code" aria-hidden="true"> with <i className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer</i>
     </FooterBg>
   </DivWhere>
 )
