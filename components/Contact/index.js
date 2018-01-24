@@ -109,7 +109,7 @@ const index = () => (
               </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgRight src="/static/image/ContactMail.svg" />
-                <p className="mt-3"><strong>wippowippo@wip.camp</strong></p>
+                <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
           </div>
@@ -121,8 +121,8 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg>
-      <span>Footer</span>
+    <FooterBg className="float-left ">
+    <i className="fa fa-code" aria-hidden="true"> with <i className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer</i>
     </FooterBg>
   </DivWhere>
 )
