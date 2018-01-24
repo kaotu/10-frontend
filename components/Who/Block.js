@@ -10,7 +10,7 @@ const Block = styled.div`
 }
   :after, :before {
 	bottom: 100%;
-	left: 50%;
+	left: ${props => props.left || '40%' };
   border: solid transparent;
 	content: " ";
 	height: 0;
