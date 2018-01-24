@@ -13,7 +13,7 @@ const Wip = styled.img`
   }
 `
 const Logo = () => (
-	<Wip src="/static/image/LOGO-TH.svg" />
+	<Wip src="/static/image/WIPlogo.svg" />
 )
 
 export default Logo;
