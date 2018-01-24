@@ -29,6 +29,7 @@ const PositionMonkey = styled.img`
   width:auto;
   height: 50vh;
   top:50vh;
+  left:5vw;
   @media(max-width: 720px){
     width:auto;
     right: 5vw;
@@ -38,20 +39,37 @@ const PositionMonkey = styled.img`
 `
 const PositionGiant = styled.img`
   position:absolute;
-  right:0px;
+  right:5vh;
   top:50vh;
   width:auto;
   height: 50vh;
+  
+`
+const PositionScrolldown = styled.img`
+position:absolute;
+bottom:15vh;
+width:3vw;
+top:42vh;
+left:8vw;  
+`
+const PositionScrolldown2 = styled.img`
+position:absolute;
+bottom:15vh;
+width:3vw;
+top:42vh;
+right:10vw;  
 `
 
 
 const Background = () => (
   <div>
+    <PositionScrolldown2 src='/static/image/double-arrow-down-128.png'/>
+    <PositionScrolldown src='/static/image/double-arrow-down-128.png'/>
     {/* <PositionStar src='/static/image/star.svg'/> */}
-    {/* <PositionMountain src='/static/image/moutain.svg' />
-    <PositionCloud src='/static/image/cloud-bottom.svg' />
+    {/* <PositionMountain src='/static/image/moutain.svg' /> */}
+    {/* <PositionCloud src='/static/image/cloud-bottom.svg' /> */}
     <PositionMonkey src='/static/image/mongkey-Home.svg' />
-    <PositionGiant src='/static/image/giantwithcloud.svg' /> */}
+    <PositionGiant src='/static/image/giantwithcloud.svg' />
   </div>
 )
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Bg = styled.body`
+const Bg = styled.section`
   background-color: #002D40;
   background-image: url('../static/image/effect-BG.svg');
   background-position: center center;

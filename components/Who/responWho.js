@@ -30,8 +30,8 @@ export default class AdaptiveHeight extends Component {
           <div className="col">
             <Slider {...settings}>
             {
-              IconData.map((data)=>
-              <div className="container-fluid">
+              IconData.map((data, i)=> (
+              <div key={i} className="container-fluid px-0">
                 <div className="row float-left">
                     <div className="col-3">
                       <Img src={data.image}/>
@@ -43,7 +43,7 @@ export default class AdaptiveHeight extends Component {
                       </div>
                   </div>
               </div>
-              )
+              ))
             }
             </Slider>
           </div>
