@@ -44,10 +44,16 @@ const H2 = styled.div`
 const IMG = styled.img`
   margin-top:60px;
 `
+const Padding = styled.div`
+  @media (max-width:720px){
+  padding : 50px;
+  }
+`
+
 
 const index = props => (
   <Bg className="d-flex align-items-center">
-    <div className="container">
+    <Padding className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6">
           <Cloud />
@@ -72,7 +78,7 @@ const index = props => (
           </Info>
         </div>
       </div>
-    </div>
+    </Padding>
   </Bg>
 )
 export default index
