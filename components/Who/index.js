@@ -52,7 +52,18 @@ const Mobile = styled.div`
   text-align: right;
   @media (max-width: 720px) {
     text-align: center;
+    margin-bottom : 25px;
   }
+`;
+const Head = styled.div`
+  font-size: 65px;
+  margin-bottom:-25px;
+  margin-left:px;
+`
+const Subhead = styled.div`
+  font-size: 30px;
+  margin-top:0px;
+  margin-bottom:-10px;
 `
 
 const index = props => (
@@ -61,8 +72,8 @@ const index = props => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <h1>WHO</h1>
-            <span>ค่ายนี้เหมาะกับใคร</span>
+            <Head className="font-weight-bold">WHO</Head>
+            <Subhead className="font-weight-bold">ค่ายนี้เหมาะกับใคร</Subhead>
           </Mobile>
           <HideMobile>
             <Icon className="row">

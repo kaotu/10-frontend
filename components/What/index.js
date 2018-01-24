@@ -37,12 +37,12 @@ const H1 = styled.div`
   margin-left:px;
 `
 const H2 = styled.div`
-font-size: 30px;
-margin-top:0px;
-margin-bottom:-10px;
+  font-size: 30px;
+  margin-top:0px;
+  margin-bottom:-10px;
 `
 const IMG = styled.img`
-margin-top:60px;
+  margin-top:60px;
 `
 
 const index = props => (

@@ -14,13 +14,15 @@ const Mobile = styled.div`
 `
 
 const H1 = styled.div`
-  font-size: 90px;
-  margin-top:15vh;
+  font-size: 65px;
+  margin-top:50px;
   margin-bottom:-25px;
+  margin-left:px;
 `
 const H2 = styled.div`
-  font-size: 35px;
-  margin-top: 0px;
+  font-size: 30px;
+  margin-top:0px;
+  margin-bottom:-10px;
 `
 
 const index = () => (
