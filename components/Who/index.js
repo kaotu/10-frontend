@@ -27,6 +27,13 @@ const IconData = [
   { id: 3, image: "/static/image/question.svg" }
 ];
 
+const PositionTextBox =[
+  "10%",
+  "36.7%",
+  "63.5%",
+  "90.5%"
+]
+
 const Icon = styled.div`
   margin-top: 5%;
   cursor: pointer;
@@ -47,27 +54,15 @@ const Mobile = styled.div`
     text-align: center;
   }
 `;
-const H1 = styled.div`
-  font-size: 65px;
-  margin-top:20px;
-  margin-bottom:-25px;
-  margin-left:-120px;
-`;
-const H2 = styled.div`
-font-size: 35px;
-margin-top:0px;
-margin-bottom:0px;
-`
 
 const index = props => (
-  <Bg who className="d-flex align-items-center">
+  <Bg bgColor="#9addde" who className="d-flex align-items-center">
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H1 className="text-center font-weight-bold">WHO</H1>
-            {/* {`${props.checkButton}`} */}
-            <H2 className="text-center font-weight-bold">ค่ายนี้เหมาะกับใคร?</H2>
+            <h1>WHO</h1>
+            <span>ค่ายนี้เหมาะกับใคร</span>
           </Mobile>
           <HideMobile>
             <Icon className="row">
@@ -78,7 +73,7 @@ const index = props => (
               ))}
             </Icon>
             <div className="mt-5">
-              <Block>
+              <Block left= {`${PositionTextBox[props.checkButton]}`}>
                 <h4>
                   <strong>{`${Topic[props.checkButton]}`}</strong>
                 </h4>
