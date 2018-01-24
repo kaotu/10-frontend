@@ -26,7 +26,7 @@ const H2 = styled.div`
 `
 
 const index = () => (
-  <Bg when className="d-flex align-items-center">
+  <Bg bgColor="#d5eff2" className="d-flex align-items-center">
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 text-right">

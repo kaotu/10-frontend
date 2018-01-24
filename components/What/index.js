@@ -22,6 +22,14 @@ const Mobile = styled.div`
     text-align:center;
   }
 `
+
+const IconInfo = [
+  {icon : "/static/image/question.svg", text: "Java programming"},
+  {icon : "/static/image/question.svg", text: "IT Funtionals"},
+  {icon : "/static/image/question.svg", text: "Network"},
+  {icon : "/static/image/question.svg", text: "HTML5&CSS"}
+]
+
 const H1 = styled.div`
   font-size: 65px;
   margin-top:50px;
@@ -37,7 +45,7 @@ const IMG = styled.img`
   margin-top:60px;
 `
 
-const index = () => (
+const index = props => (
   <Bg className="d-flex align-items-center">
     <div className="container">
       <div className="row">
@@ -53,22 +61,14 @@ const index = () => (
           <br />
           {content.text}
           <Info className="row text-center">
-            <div className="col-6 col-md-3 img-responesive ">
-              <Icon src="/static/image/question.svg" />
-              <p>Java programing</p>
-            </div>
-            <div className="col-6 col-md-3 img-responesive ">
-              <Icon src="/static/image/question.svg" />
-              <p>IT Functions</p>
-            </div>
-            <div className="col-6 col-md-3 img-responesive ">
-              <Icon src="/static/image/question.svg" />
-              <p>Network</p>
-            </div>
-            <div className="col-6 col-md-3 img-responesive  ">
-              <Icon src="/static/image/question.svg" />
-              <p>HTML5&CSS</p>
-            </div>
+          { 
+            IconInfo.map((info, i) => (
+              <div key={i} className="col-6 col-md-3 img-responesive ">
+                <Icon src={info.icon}/>
+                <p>{info.text}</p>
+              </div>
+            ))
+          }
           </Info>
         </div>
       </div>
