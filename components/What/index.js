@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import content from './content.json'
-// import Card from '../Core/Card'
 import Navbar from '../Core/Navbar'
 import Bg from '../Core/BgStory'
 import Cloud from './cloud'
@@ -25,7 +23,7 @@ const Mobile = styled.div`
 
 const IconInfo = [
   {icon : "/static/image/question.svg", text: "Java programming"},
-  {icon : "/static/image/question.svg", text: "IT Funtionals"},
+  {icon : "/static/image/question.svg", text: "IT Fundamentals"},
   {icon : "/static/image/question.svg", text: "Network"},
   {icon : "/static/image/question.svg", text: "HTML5&CSS"}
 ]
@@ -69,7 +67,7 @@ const index = props => (
             &nbsp;&nbsp;&nbsp;&nbsp;<strong>ครบรอบทศวรรษกับ ค่ายเส้นทางสู่ฝันนักไอที (WIP Camp)</strong> ค่ายนี้จะกลับมาตอกย้ำอีกครั้งให้รู้ว่าการเป็นนักไอทีของน้อง ๆ จะไม่หยุดอยู่เพียงความฝันอีกต่อไป 
           </p>
           <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;<strong>10 ปี</strong> WIP Camp นี้จะพาน้อง ๆ ไปพบกับการเรียนจริง, เล่นจริง และปฏิบัติจริง ตลอดระยะเวลา 5 วัน 4 คืน ณ มหาวิทยาลัยพระจอมเกล้าธนบุรี ไม่จำเป็นต้องมีพื้นฐาน ไม่ต้องกลัวกับการเผชิญหน้า มาร่วมตอกย้ำฝันไปด้วยกัน!   
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>10 ปี</strong> WIP Camp นี้จะพาน้อง ๆ ไปพบกับการเรียนจริง, เล่นจริง และปฏิบัติจริง ตลอดระยะเวลา 5 วัน 4 คืน ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ไม่จำเป็นต้องมีพื้นฐาน ไม่ต้องกลัวกับการเผชิญหน้า มาร่วมตอกย้ำฝันไปด้วยกัน!   
           </p>
           <Info className="row text-center">
           { 
