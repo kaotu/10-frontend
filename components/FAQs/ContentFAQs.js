@@ -14,7 +14,7 @@ const ImgRight = styled.img`
 
 const Box = styled.div`
   width: 46vw;
-  height: 35hw;    
+  min-height: 35hw;    
   padding: 1vw;
   background-color:#FBFBEF;
   opecity:0.8;
