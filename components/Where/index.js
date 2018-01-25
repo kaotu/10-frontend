@@ -1,6 +1,8 @@
 import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 
 const Story = styled.img`
@@ -20,19 +22,6 @@ const Mobile = styled.div`
   @media (max-width:720px) {
     text-align:center;
   }
-`
-const H1 = styled.div`
-  font-size: 80px;
-  margin-top:20px;
-  margin-bottom:-25px;
-  margin-left:-14vw;
-  
-`;
-const H2 = styled.div`
-font-size: 35px;
-margin-top:0px;
-margin-bottom:0px;
-margin-left:-17vw;
 `
 
 const index = () => (

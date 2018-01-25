@@ -5,6 +5,8 @@ import { compose, withState, lifecycle } from "recompose"
 import Bg from "../Core/BgStory"
 import ResponWho from "./responWho"
 import Block from "./Block"
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const state = withState("checkButton", "setCheck", 0)
 
@@ -73,8 +75,8 @@ const index = props => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <Head className="font-weight-bold">WHO</Head>
-            <Subhead className="font-weight-bold">ค่ายนี้เหมาะกับใคร</Subhead>
+            <H1 className="font-weight-bold">WHO</H1>
+            <H2 className="font-weight-bold">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">
