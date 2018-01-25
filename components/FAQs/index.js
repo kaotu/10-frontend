@@ -33,6 +33,11 @@ const DisplayMoblie = styled.div`
      display:none;
 }
 `
+const DisplayMoblie2 = styled.div`
+@media (max-width:720px){
+     margin-top : 20px;
+}`
+
 const index = () => (
     <DivWhere>
         <Bg bgColor="#d9f1f2" faqs className="d-flex align-items-center">
@@ -41,6 +46,7 @@ const index = () => (
                     <div className="col-md-12 mt-4">
                         <FrontFQAS className="text-center font-weight-bold">FAQs</FrontFQAS>
                         <P className="text-center font-weight-bold">คำถามที่พบบ่อย ?</P>
+                        <DisplayMoblie2/>
                     </div>
                 </div>
                 <DisplayDesktop>
