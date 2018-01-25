@@ -21,6 +21,7 @@ const FrontFQAS = styled.div`
 const P = styled.div`
   font-size: 25px;
   margin-top: 0px;
+  padding-top:0.5em;
 `
 
 const DisplayDesktop = styled.div`

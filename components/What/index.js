@@ -38,6 +38,7 @@ const H2 = styled.div`
   font-size: 30px;
   margin-top:0px;
   margin-bottom:-10px;
+  padding-top:0.5em;
 `
 const IMG = styled.img`
   margin-top:60px;
