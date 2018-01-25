@@ -1,6 +1,8 @@
 import react from 'react'
 import Bg from '../Core/BgStory'
 import styled from 'styled-components'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const Img = styled.img`
     width:40vw;
@@ -12,17 +14,7 @@ const Mobile = styled.div`
       text-align:center;
     }
 `
-const H1 = styled.div`
-    font-size: 65px;
-    margin-top:50px;
-    margin-bottom:-25px;
-    margin-left:px;
-`
-const H2 = styled.div`
-    font-size: 30px;
-    margin-top:0px;
-    margin-bottom:-10px;
-`
+
 const Box1 = styled.div`
     width: 20vw;
     height: 55hw;    

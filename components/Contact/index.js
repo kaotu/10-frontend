@@ -2,6 +2,8 @@ import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
 import HeartBox from './HeartBox'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const DivWhere = styled.div`
   text-align: center;    
@@ -51,33 +53,16 @@ const Linerespon = styled.div`
 `
 
 const ContentBg = Bg.extend`
-  min-height: 95vh;
+  min-height: 90vh;
 `
 
 const FooterBg = Bg.extend`
-  min-height: 5vh;
-  background-color: #FFF;
+  min-height: 10vh;
 `
 
-const Head = styled.h1`
-  font-size : 5vw;
-  font-weight: bold;
-  margin-bottom : -1vw;
-  @media(max-width:576px){
-    font-size : 10vw;
-  }
-`
-
-const Subhead = styled.p`
-  font-size : 2vw;
-  @media(max-width:576px){
-    font-size : 4vw;
-  }
-`
 const FrontFooter = styled.i`
-  padding-top:0.3vw;
-  background-color: #FFF;
-  
+  padding-top:  1.6em;
+  padding-bottom: auto;  
 `
 const index = () => (
   <DivWhere>
@@ -85,8 +70,8 @@ const index = () => (
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <Head>Contact</Head>
-            <Subhead className="font-weight-bold">ติดต่อเรา</Subhead>
+            <H1>Contact</H1>
+            <H2 className="font-weight-bold">ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
@@ -125,8 +110,8 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg className="float-left ">
-    <FrontFooter className="fa fa-code" aria-hidden="true"> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer</FrontFooter>
+    <FooterBg className="">
+    <FrontFooter className="fa fa-code" aria-hidden="true"/> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer
     </FooterBg>
   </DivWhere>
 )
