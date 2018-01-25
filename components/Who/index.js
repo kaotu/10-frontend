@@ -58,12 +58,13 @@ const Mobile = styled.div`
 const Head = styled.div`
   font-size: 65px;
   margin-bottom:-25px;
-  margin-left:px;
+  margin-right:30vw;
 `
 const Subhead = styled.div`
   font-size: 30px;
   margin-top:0px;
   margin-bottom:-10px;
+  margin-right:24vw;
 `
 
 const index = props => (
