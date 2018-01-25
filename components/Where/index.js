@@ -31,7 +31,6 @@ const H2 = styled.div`
 font-size: 35px;
 margin-top:0px;
 margin-bottom:0px;
-padding-top:0.3em;
 `
 
 const index = () => (

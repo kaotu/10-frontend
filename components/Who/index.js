@@ -64,7 +64,6 @@ const Subhead = styled.div`
   font-size: 30px;
   margin-top:0px;
   margin-bottom:-10px;
-  padding-top:0.4em;
 `
 
 const index = props => (
