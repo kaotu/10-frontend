@@ -74,7 +74,11 @@ const Subhead = styled.p`
     font-size : 4vw;
   }
 `
-
+const FrontFooter = styled.i`
+  padding-top:0.3vw;
+  background-color: #FFF;
+  
+`
 const index = () => (
   <DivWhere>
     <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
@@ -122,7 +126,7 @@ const index = () => (
       </div>
     </ContentBg>
     <FooterBg className="float-left ">
-    <i className="fa fa-code" aria-hidden="true"> with <i className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer</i>
+    <FrontFooter className="fa fa-code" aria-hidden="true"> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer</FrontFooter>
     </FooterBg>
   </DivWhere>
 )
