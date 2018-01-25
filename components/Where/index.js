@@ -25,12 +25,14 @@ const H1 = styled.div`
   font-size: 80px;
   margin-top:20px;
   margin-bottom:-25px;
+  margin-left:-14vw;
   
 `;
 const H2 = styled.div`
 font-size: 35px;
 margin-top:0px;
 margin-bottom:0px;
+margin-left:-17vw;
 `
 
 const index = () => (
@@ -42,8 +44,8 @@ const index = () => (
         </div>
         <div className="col-md-6">
           <Mobile className="text-center mt-4">
-            <H1 className="text-center font-weight-bold">WHERE</H1>
-            <H2 className="text-center font-weight-bold">ค่ายนี้จัดที่ไหน ?</H2>
+            <H1 className="font-weight-bold">WHERE</H1>
+            <H2 className="font-weight-bold">ค่ายนี้จัดที่ไหน ?</H2>
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
