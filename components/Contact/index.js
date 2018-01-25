@@ -53,15 +53,16 @@ const Linerespon = styled.div`
 `
 
 const ContentBg = Bg.extend`
-  min-height: 95vh;
+  min-height: 90vh;
 `
 
 const FooterBg = Bg.extend`
-  min-height: 5vh;
+  min-height: 10vh;
 `
 
 const FrontFooter = styled.i`
-  padding-top:0.3vw;  
+  padding-top:  1.6em;
+  padding-bottom: auto;  
 `
 const index = () => (
   <DivWhere>
@@ -109,7 +110,7 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg className="d-flex justify-content-start">
+    <FooterBg className="">
     <FrontFooter className="fa fa-code" aria-hidden="true"/> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer
     </FooterBg>
   </DivWhere>
