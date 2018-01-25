@@ -2,6 +2,8 @@ import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
 import HeartBox from './HeartBox'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const DivWhere = styled.div`
   text-align: center;    
@@ -59,21 +61,6 @@ const FooterBg = Bg.extend`
   background-color: #FFF;
 `
 
-const Head = styled.h1`
-  font-size : 5vw;
-  font-weight: bold;
-  margin-bottom : -1vw;
-  @media(max-width:576px){
-    font-size : 10vw;
-  }
-`
-
-const Subhead = styled.p`
-  font-size : 2vw;
-  @media(max-width:576px){
-    font-size : 4vw;
-  }
-`
 const FrontFooter = styled.i`
   padding-top:0.3vw;
   background-color: #FFF;
@@ -85,8 +72,8 @@ const index = () => (
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <Head>Contact</Head>
-            <Subhead className="font-weight-bold">ติดต่อเรา</Subhead>
+            <H1>Contact</H1>
+            <H2 className="font-weight-bold">ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
