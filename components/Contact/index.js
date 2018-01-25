@@ -56,7 +56,6 @@ const ContentBg = Bg.extend`
 
 const FooterBg = Bg.extend`
   min-height: 5vh;
-  background-color: #FFF;
 `
 
 const Head = styled.h1`
@@ -75,9 +74,7 @@ const Subhead = styled.p`
   }
 `
 const FrontFooter = styled.i`
-  padding-top:0.3vw;
-  background-color: #FFF;
-  
+  padding-top:0.3vw;  
 `
 const index = () => (
   <DivWhere>
@@ -125,7 +122,7 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg className="float-left">
+    <FooterBg className="d-flex justify-content-start">
     <FrontFooter className="fa fa-code" aria-hidden="true"/> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer
     </FooterBg>
   </DivWhere>
