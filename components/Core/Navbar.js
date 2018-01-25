@@ -1,6 +1,5 @@
 import react from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 
 import Burger from './Burger'
 import GameBut from './GameBut'
@@ -65,9 +64,9 @@ const Navbar = () => (
             <LinkItem className="nav-item nav-link " href="#contact">CONTACT</LinkItem>
           </div>
         </div>
-        <Link href='https://itim.wip.camp'>
+        <a href='https://itim.wip.camp'>
         <RegisterBtn src='/static/image/regisred.png' />
-        </Link>
+        </a>
       </div>
       <GameBut/>
     </div>

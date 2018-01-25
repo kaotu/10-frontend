@@ -8,7 +8,7 @@ import Logo from './Logo'
 import BgIntro from '../BgIntro'
 import LogoSIT from './LogoSIT'
 import Background from './Background'
-import Sponser from '../Sponser/index'
+import Sponsor from '../Sponsor/index'
 
 
 const Position = styled.div`
@@ -29,7 +29,7 @@ const Index = (props) => (
       </div>
     </div>
   </BgIntro>
-  <Sponser/>
+  <Sponsor/>
   </div>
 )
 

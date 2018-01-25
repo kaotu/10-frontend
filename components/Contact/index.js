@@ -31,8 +31,8 @@ const ImgRight = styled.img`
   }
 `
 const Line = styled.div`
-  border-left: thick solid #fff;
-  border-right: thick solid #fff;
+  border-left: thick solid #000;
+  border-right: thick solid #000;
   @media(max-width:575px) {
     border-left: none;
     border-right: none;
@@ -41,10 +41,10 @@ const Line = styled.div`
 
 const Linerespon = styled.div`
     width : 50vw;
-    height : 5px;
+    height : 2px;
     margin-left : 20vw;
     margin-top : 5vw;
-    background-color: white;
+    background-color: #000;
   @media(min-width:576px){
     display : none;
   }
@@ -56,7 +56,7 @@ const ContentBg = Bg.extend`
 
 const FooterBg = Bg.extend`
   min-height: 5vh;
-  background-color: #FFFFFF;
+  background-color: #FFF;
 `
 
 const Head = styled.h1`
@@ -74,7 +74,11 @@ const Subhead = styled.p`
     font-size : 4vw;
   }
 `
-
+const FrontFooter = styled.i`
+  padding-top:0.3vw;
+  background-color: #FFF;
+  
+`
 const index = () => (
   <DivWhere>
     <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
@@ -109,7 +113,7 @@ const index = () => (
               </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgRight src="/static/image/ContactMail.svg" />
-                <p className="mt-3"><strong>wippowippo@wip.camp</strong></p>
+                <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
           </div>
@@ -121,8 +125,8 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg>
-      <span>Footer</span>
+    <FooterBg className="float-left ">
+    <FrontFooter className="fa fa-code" aria-hidden="true"> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer</FrontFooter>
     </FooterBg>
   </DivWhere>
 )
