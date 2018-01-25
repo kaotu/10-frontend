@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components"
 import { compose, withState, lifecycle } from "recompose"
-
 import Bg from "../Core/BgStory"
 import ResponWho from "./responWho"
 import Block from "./Block"
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const state = withState("checkButton", "setCheck", 0)
 
@@ -58,12 +59,13 @@ const Mobile = styled.div`
 const Head = styled.div`
   font-size: 65px;
   margin-bottom:-25px;
-  margin-left:px;
+  margin-right:30vw;
 `
 const Subhead = styled.div`
   font-size: 30px;
   margin-top:0px;
   margin-bottom:-10px;
+  margin-right:24vw;
 `
 
 const index = props => (
@@ -72,8 +74,8 @@ const index = props => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <Head className="font-weight-bold">WHO</Head>
-            <Subhead className="font-weight-bold">ค่ายนี้เหมาะกับใคร</Subhead>
+            <H1 className="font-weight-bold">WHO</H1>
+            <H2 className="font-weight-bold">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">
