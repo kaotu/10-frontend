@@ -22,14 +22,14 @@ const Item = styled.a`
 `
 
 const BlankSpace = styled.a`
-  padding: 1em;
+  padding: .7em;
 `
 var styles = {
   bmBurgerButton: {
     position: 'absolute',
     width: '36px',
     height: '30px',
-    left: '36px',
+    left: '12px',
     top:'11px'
   },
   bmBurgerBars: {
@@ -45,14 +45,14 @@ var styles = {
   bmMenu: {
     background: '#002D40',
     padding: '0em',
-    fontSize: '1.15em'
+    fontSize: '1.75em'
   },
   bmMorphShape: {
     fill: '#373a47'
   },
   bmItemList: {
     color: '#fff',
-    padding: '0.8em'
+    padding: '0.3em'
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)'
