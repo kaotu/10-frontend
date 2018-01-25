@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components"
 import { compose, withState, lifecycle } from "recompose"
-
 import Bg from "../Core/BgStory"
 import ResponWho from "./responWho"
 import Block from "./Block"
