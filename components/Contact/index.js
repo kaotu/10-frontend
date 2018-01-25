@@ -125,8 +125,8 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg className="float-left ">
-    <FrontFooter className="fa fa-code" aria-hidden="true"> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer</FrontFooter>
+    <FooterBg className="float-left">
+    <FrontFooter className="fa fa-code" aria-hidden="true"/> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer
     </FooterBg>
   </DivWhere>
 )
