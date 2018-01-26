@@ -1,5 +1,14 @@
 import react from 'react'
 import styled from 'styled-components'
+import {compose, withState} from 'recompose'
+
+import {yak,mongkey} from '../Core/Color'
+
+const state = withState('check','setCheck',false)
+
+const setCheck = (callback, data) =>(
+  callback(data ? yak : mongkey)
+)
 
 const PositionMountain1 = styled.img`
   position:absolute;
@@ -81,6 +90,7 @@ const PositionMonkey = styled.img`
   height: 65vh;
   top:35vh;
   left:5vw;
+  cursor:pointer;
   @media(max-width: 720px){
     width:auto;
     height: 20vh;
@@ -94,6 +104,7 @@ const PositionGiant = styled.img`
   top:35vh;
   width:auto;
   height: 65vh;
+  cursor:pointer;
   @media(max-width: 720px){
     width:auto;
     height: 20vh;
@@ -146,9 +157,9 @@ const Background = () => (
     {/* <PositionCloud1 src='/static/image/cloud-bottom.svg' /> */}
     <PositionMountain2 src='/static/image/moutain.svg' />
     
-    <PositionMonkey src='/static/image/mongkey-Home.svg' />
+    <PositionMonkey onClick={ () => check.setCheck(false)} src='/static/image/mongkey-Home.svg' />
     <ScrollLing src='/static/image/double-arrow-down-128.png'/>
-    <PositionGiant src='/static/image/giantwithcloud.svg' />
+    <PositionGiant onClick={ () => check.setCheck(true)} src='/static/image/giantwithcloud.svg' />
     <ScrollYak src='/static/image/double-arrow-down-128.png'/>
     {/* <PositionCloud2 src='/static/image/cloud-bottom-Front.svg'/> */}
     
