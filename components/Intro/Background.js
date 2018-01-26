@@ -103,9 +103,8 @@ const Monkey = styled.img`
   z-index: 4;
   bottom:0vh;
   height: 65vh;
-  top:35vh;
-  left:5vw;
   cursor:pointer;
+  left:10vw;
   @media(max-width: 720px){
     height: 20vh;
   }
@@ -125,6 +124,7 @@ const Giant = styled.img`
   bottom:0vh;
   height: 65vh;
   cursor:pointer;
+  right:10vw;
   @media(max-width: 720px){
     height: 20vh;
   }
@@ -166,6 +166,7 @@ const Logo = styled.img`
     100% {
       opacity: 1;
     }
+  }
 `
 const Scrolldown = styled.img`
     position:absolute;
@@ -176,20 +177,19 @@ const Scrolldown = styled.img`
     cursor:pointer;  
 `
 const Background = () => (
-  <div>
-  <CloudBack src='/static/image/cloud-bottom.svg'/>
-  <MountainLeft src='/static/image/Mongkey.svg'/>
-  <MountainCenter src='/static/image/moutain.svg'/>
-  <MountainRight src='/static/image/Giant.svg'/>
-  <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
-  <Monkey src='/static/image/mongkey-Home.svg'/>
-  <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
-  <Giant src='/static/image/giantwithcloud.svg'/>
-  <CloudBottom src='/static/image/CloudBottom.svg'/>
-  <Logo src="/static/image/WIPlogo.svg" />
-  <Scrolldown src='/static/image/ScrollDown.png'/>
-</div>
-
+    <div>
+        <CloudBack src='/static/image/cloud-bottom.svg'/>
+        <MountainLeft src='/static/image/Mongkey.svg'/>
+        <MountainCenter src='/static/image/moutain.svg'/>
+        <MountainRight src='/static/image/Giant.svg'/>
+        <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
+        <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
+        <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
+        <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
+        <CloudBottom src='/static/image/CloudBottom.svg'/>
+        <Logo src="/static/image/WIPlogo.svg" />
+        <Scrolldown src='/static/image/ScrollDown.png'/>
+    </div>
 )
 
 export default Background
