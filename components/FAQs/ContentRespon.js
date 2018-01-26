@@ -55,7 +55,6 @@ const ContentRespon = (props) => (
         </div>
       </div>
     </div>
-
   </div>
 
 )
