@@ -180,14 +180,6 @@ const LogoSIT = styled.img`
     width: 90%;
 	  left: 5vw;
   }
-  @keyframes FadeOut {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 `
 const Scrolldown = styled.img`
     position:absolute;
@@ -195,7 +187,19 @@ const Scrolldown = styled.img`
     width:3vw;
     bottom:5vh;
     left:50vw;
+    animation: Dukdik 1s linear infinite;
     cursor:pointer;  
+    @keyframes Dukdik {
+      0% {
+        bottom:5vh;
+      }
+      50% {
+        bottom:7vh;
+      }
+      100% {
+        bottom:5vh;
+      }
+    }
 `
 const Background = () => (
     <div>

@@ -9,6 +9,13 @@ const Bg = styled.div`
   position: relative;
   z-index: 4;
 `
+const Cloud = styled.img`
+  position:absolute;
+  z-index:-1;
+  top:-50vh;
+  left:-25%;
+  width:150%;
+`
 const BImg = styled.img`
   width: 30%; 
   height: 30%;
@@ -39,9 +46,16 @@ const SmallSponsor = [
 const Topic = H1.extend`
   font-size: 3em;
 `
+const Detail = styled.div`
+  position: absolute;
+  width: 100vw;
+  left: 10%;
+  z-index:0;
+`
 
 const Index = () => (
   <Bg className="d-flex align-items-center">
+    {/* <Cloud src='/static/image/CloudSponser.svg'/> */}
     <div className="container d-flex justify-content-center">
       <div className="row">
         <div className="col-md-12 text-center">
