@@ -6,7 +6,8 @@ const Block = styled.div`
 	background: transparent;
   border: 4px solid #000;
   padding: 1em;
-  border-radius: 1em;
+	border-radius: 1em;
+	width: 90%;
 }
   :after, :before {
 	bottom: 100%;
