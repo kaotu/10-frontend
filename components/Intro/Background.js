@@ -103,13 +103,8 @@ const Monkey = styled.img`
   z-index: 4;
   bottom:0vh;
   height: 65vh;
-<<<<<<< HEAD
-  top:35vh;
-  left:5vw;
   cursor:pointer;
-=======
   left:10vw;
->>>>>>> 5377af81c6ab41876a35442e261c22872341fad9
   @media(max-width: 720px){
     height: 20vh;
   }
@@ -128,11 +123,8 @@ const Giant = styled.img`
   z-index: 4;
   bottom:0vh;
   height: 65vh;
-<<<<<<< HEAD
   cursor:pointer;
-=======
   right:10vw;
->>>>>>> 5377af81c6ab41876a35442e261c22872341fad9
   @media(max-width: 720px){
     height: 20vh;
   }
@@ -174,6 +166,7 @@ const Logo = styled.img`
     100% {
       opacity: 1;
     }
+  }
 `
 const Scrolldown = styled.img`
     position:absolute;
@@ -184,23 +177,6 @@ const Scrolldown = styled.img`
     cursor:pointer;  
 `
 const Background = () => (
-<<<<<<< HEAD
-  <div>
-    {/* <PositionStar src='/static/image/star.svg'/> */}
-    <PositionMountain1 src='/static/image/moutain.svg' />
-    {/* <PositionCloud1 src='/static/image/cloud-bottom.svg' /> */}
-    <PositionMountain2 src='/static/image/moutain.svg' />
-    
-    <PositionMonkey onClick={ () => check.setCheck(false)} src='/static/image/mongkey-Home.svg' />
-    <ScrollLing src='/static/image/double-arrow-down-128.png'/>
-    <PositionGiant onClick={ () => check.setCheck(true)} src='/static/image/giantwithcloud.svg' />
-    <ScrollYak src='/static/image/double-arrow-down-128.png'/>
-    {/* <PositionCloud2 src='/static/image/cloud-bottom-Front.svg'/> */}
-    
-    
-    <PositionScrolldown src="/static/image/icon-arrow-white-down.png"/>
-  </div>
-=======
     <div>
         <CloudBack src='/static/image/cloud-bottom.svg'/>
         <MountainLeft src='/static/image/Mongkey.svg'/>
@@ -214,7 +190,6 @@ const Background = () => (
         <Logo src="/static/image/WIPlogo.svg" />
         <Scrolldown src='/static/image/ScrollDown.png'/>
     </div>
->>>>>>> 5377af81c6ab41876a35442e261c22872341fad9
 )
 
 export default Background
