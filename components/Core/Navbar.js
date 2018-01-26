@@ -3,16 +3,13 @@ import styled from 'styled-components'
 import Router from 'next/router'
 import Burger from './Burger'
 import GameBut from './GameBut'
-const navLink = (id) => {
-  Router.push(`/#${id}`)
-}
 
 const LinkItem = styled.button`
-  color: #fff;
-  font-size : 1.4em;
-  width:8vw;
-  background-color:#154051;
-  border: 0vw;
+color: #fff;
+font-size : 1.4em;
+width:8vw;
+background-color:#154051;
+border: 0vw;
   cursor:pointer;
   transition:all 250ms ease-in-out;
   &:hover{
@@ -29,15 +26,15 @@ const LinkItem = styled.button`
     color: #fff;
     border-radius: 12px; 
   }
-`
+  `
 
 const NavItem = styled.nav`
   color: #fff;
   background-color:#154051;
   ${props => props.primaryNav && `
-    background-color:#24372f; 
+  background-color:#24372f; 
   `}   
-`
+  `
 const RegisterBtn = styled.img`
   height: 250%;
   position:absolute;
@@ -49,28 +46,33 @@ const RegisterBtn = styled.img`
   @media(max-width:720px) {            
     height:150%;           
   }
-`
+  `
 
 const nav = [
-  {to:'home',text:"Home"},
-  {to:'what',text:"What"},
-  {to:'who',text:"Who"},
-  {to:'where',text:"Where"},
-  {to:'when',text:"When"},
-  {to:'faqs',text:"FAQs"},
-  {to:'contact',text:"Contact"}]
+  { to: 'home', text: "Home" },
+  { to: 'what', text: "What" },
+  { to: 'who', text: "Who" },
+  { to: 'where', text: "Where" },
+  { to: 'when', text: "When" },
+  { to: 'faqs', text: "FAQs" },
+  { to: 'contact', text: "Contact" }]
+
+const navLink = (id) => {
+  Router.push(`/#${id}`)
+}
+
 const Navbar = () => (
   <NavItem className="sticky-top">
     <Burger />
     <div>
       <div className="navbar navbar-expand-lg">
-        <button className="navbar-toggler"  data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
           <div className="navbar-nav  justify-content-center ">
             {nav.map((nav, i) => (
-              <LinkItem key={i} onClick={()=>navLink(nav.to)} className="nav-item nav-link text-center"  >{nav.text}</LinkItem>
+              <LinkItem key={i} onClick={() => navLink(nav.to)} className="nav-item nav-link text-center"  >{nav.text}</LinkItem>
             ))}
             {/* <LinkItem className="nav-item nav-link text-center " href="#what">WHAT</LinkItem>
             <LinkItem className="nav-item nav-link text-center " href="#">WHO</LinkItem>
