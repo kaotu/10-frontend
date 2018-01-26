@@ -53,15 +53,15 @@ const Linerespon = styled.div`
 `
 
 const ContentBg = Bg.extend`
-  min-height: 90vh;
+  min-height: 89vh;
 `
 
 const FooterBg = Bg.extend`
-  min-height: 10vh;  
+  min-height: 11vh;  
 `
 
 const FrontFooter = styled.i`
-  padding-top:  2em;
+  padding-top:2em;
   padding-bottom: 2em;  
 `
 
