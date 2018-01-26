@@ -5,6 +5,7 @@ import Bg from '../Core/BgStory'
 import Cloud from './cloud'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 const Info = styled.div`
   margin-top: 5%;
@@ -44,7 +45,7 @@ const Padding = styled.div`
 
 
 const index = props => (
-  <Bg className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.what} className="d-flex align-items-center">
     <Padding className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6">
