@@ -14,8 +14,8 @@ const CloudBack = styled.img`
     position:absolute;
     z-index: 0;
     left:0vw;
-    bottom:0vh;
-    height:33vh;
+    bottom:-20vh;
+    width: 100vw;
     animation: MoveUp 1s linear;
     animation-delay: 0s;
     @keyframes MoveUp {
@@ -31,8 +31,8 @@ const MountainLeft = styled.img`
     position:absolute;
     z-index: 1;
     left:0vw;
-    bottom:0vh;
-    height: 35vw;
+    bottom:-5vh;
+    width:100vw;
     animation: MoveRight 1s linear;
     animation-delay: 0s;
     @keyframes MoveRight {
@@ -40,7 +40,7 @@ const MountainLeft = styled.img`
             left: -50vw;
         }
         100% {
-            left: 0vw;
+            left: -5vw;
         }
     }
 `
@@ -65,8 +65,8 @@ const MountainRight = styled.img`
     position:absolute;
     z-index: 3;
     right:0vw;
-    bottom:0vh;
-    height: 35vw;
+    bottom:-15vh;
+    width:100vw;
     animation: MoveLeft 1s linear;
     animation-delay: 0s;
     @keyframes MoveLeft {
@@ -74,7 +74,7 @@ const MountainRight = styled.img`
             right: -50vw;
         }
         100% {
-            right: 0vw;
+            right: -15vw;
         }
     }
 `
@@ -147,12 +147,33 @@ const CloudBottom = styled.img`
         }
     }
 `
-const Logo = styled.img`
+const LogoWip = styled.img`
   width: 50%;
   position: absolute;
   z-index: 6;
   left: 25vw;
   top:3vh;
+  animation-name: FadeOut;
+  animation-duration: 2s;
+  @media(max-width: 720px){
+    width: 90%;
+	  left: 5vw;
+  }
+  @keyframes FadeOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`
+const LogoSIT = styled.img`
+  width: 20%;
+  position: absolute;
+  z-index: 6;
+  left: 40vw;
+  top:40vh;
   animation-name: FadeOut;
   animation-duration: 2s;
   @media(max-width: 720px){
@@ -178,16 +199,17 @@ const Scrolldown = styled.img`
 `
 const Background = () => (
     <div>
-        <CloudBack src='/static/image/cloud-bottom.svg'/>
-        <MountainLeft src='/static/image/Mongkey.svg'/>
+        <CloudBack src='/static/image/CloudBack.svg'/>
+        <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/moutain.svg'/>
-        <MountainRight src='/static/image/Giant.svg'/>
+        <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
         <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
         <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
         <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
-        <Logo src="/static/image/WIPlogo.svg" />
+        <LogoWip src="/static/image/WIPlogo.svg" />
+        <LogoSIT src='/static/image/ตรามอ.png'/>
         <Scrolldown src='/static/image/ScrollDown.png'/>
     </div>
 )
