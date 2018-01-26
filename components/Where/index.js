@@ -25,6 +25,10 @@ const Mobile = styled.div`
   }
 `
 
+const H4 = styled.h4`
+  color: #082A3D;
+`
+
 const index = () => (
   <Bg bgColor={Color.mongkey.where} where className="d-flex align-items-center">
     <div className="container-fluid my-5">
@@ -39,10 +43,11 @@ const index = () => (
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local src="static/image/sit-kmutt.jpg" />
+              <Local className="mb-1" src="static/image/sit-kmutt.jpg" />
             </a>
             <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p>
-            <p>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+            <h3>คณะเทคโนโลยีสารสนเทศ</h3>
+            <H4>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</H4>
           </div>
         </div>
       </div>
