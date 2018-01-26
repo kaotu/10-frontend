@@ -21,11 +21,18 @@ const Content = [
   "โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง",
   "ตลอดระยะเวลา 5 วัน"
 ]
+const Image = styled.img`
+    width:7vw;
+  @media (max-width:720px) {
+    width: 50%;
+    padding: .2em;
+  }
+`
 const IconData = [
-  { id: 0, image: "/static/image/question.svg" },
-  { id: 1, image: "/static/image/question.svg" },
-  { id: 2, image: "/static/image/question.svg" },
-  { id: 3, image: "/static/image/question.svg" }
+  { id: 0, image: "/static/image/edu.png" },
+  { id: 1, image: "/static/image/computer.png" },
+  { id: 2, image: "/static/image/Mom.png" },
+  { id: 3, image: "/static/image/night.png" }
 ]
 
 const PositionTextBox =[
@@ -71,7 +78,7 @@ const index = props => (
               {
                 IconData.map((data, i) => (
                 <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <img src={data.image} />
+                  <Image src={data.image} />
                 </div>
               ))
               }

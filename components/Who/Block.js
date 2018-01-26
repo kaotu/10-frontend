@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Block = styled.div`
  {
-	position: relative;
+	position:absolute;
 	background: transparent;
   border: 4px solid #000;
   padding: 1em;
