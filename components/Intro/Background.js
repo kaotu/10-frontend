@@ -54,7 +54,7 @@ const MountainCenter = styled.img`
   animation-delay: 0s;
   @keyframes MoveUp {
     0% {
-      bottom: -100vh;
+      bottom: -35vh;
     }
     100% {
       bottom: 0vh;
