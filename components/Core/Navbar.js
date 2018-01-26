@@ -6,17 +6,15 @@ import GameBut from './GameBut'
 
 const LinkItem = styled.a`
   color: #fff;
-  margin-rigth:2vw;
-  margin-left:2vw;
   font-size : 1.4em;
+  width:8vw;
   &:hover{
     color: #fff;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.3);
     border: 2vw;
-    padding-rigth:2vw;
-    padding-left:2vw;
     border-radius: 12px;
+    width:8vw;
   }
   &:focus{
     background-color: rgba(0, 0, 0, 0.3);
@@ -24,14 +22,13 @@ const LinkItem = styled.a`
     border-radius: 12px; 
   }
 `
+
 const NavItem = styled.nav`
   color: #fff;
   background-color:#154051;
-  ${props => props.primaryNav &&`
+  ${props => props.primaryNav && `
     background-color:#24372f; 
-  `}
-
-    
+  `}   
 `
 const RegisterBtn = styled.img`
   height: 250%;
@@ -56,20 +53,20 @@ const Navbar = () => (
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
           <div className="navbar-nav  justify-content-center ">
-            <LinkItem className="nav-item nav-link " href="#home"> HOME </LinkItem>
-            <LinkItem className="nav-item nav-link " href="#what">WHAT</LinkItem>
-            <LinkItem className="nav-item nav-link" href="#who">WHO</LinkItem>
-            <LinkItem className="nav-item nav-link" href="#where">WHERE</LinkItem>
-            <LinkItem className="nav-item nav-link " href="#when">WHEN</LinkItem>
-            <LinkItem className="nav-item nav-link " href="#faqs">FAQs</LinkItem>
-            <LinkItem className="nav-item nav-link " href="#contact">CONTACT</LinkItem>
+            <LinkItem className="nav-item nav-link text-center" href="#home"> HOME </LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#what">WHAT</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#">WHO</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#where">WHERE</LinkItem>
+            <LinkItem className="nav-item nav-link text-center" href="#when">WHEN</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#faqs">FAQs</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#contact">CONTACT</LinkItem>
           </div>
         </div>
         <a href='https://itim.wip.camp' target="_blank">
-        <RegisterBtn src='/static/image/regisred.png' />
+          <RegisterBtn src='/static/image/regisred.png' />
         </a>
       </div>
-      <GameBut/>
+      <GameBut />
     </div>
   </NavItem>
 )
