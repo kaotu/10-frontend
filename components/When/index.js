@@ -3,6 +3,7 @@ import Bg from '../Core/BgStory'
 import styled from 'styled-components'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 const Img = styled.img`
     width:40vw;
@@ -34,7 +35,7 @@ const Front = styled.p`
 
 
 const index = () => (
-  <Bg bgColor="#d5eff2" className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.when} className="d-flex align-items-center">
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12 ">
