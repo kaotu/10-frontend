@@ -64,7 +64,7 @@ const Navbar = () => (
             <LinkItem className="nav-item nav-link " href="#contact">CONTACT</LinkItem>
           </div>
         </div>
-        <a href='https://itim.wip.camp'>
+        <a href='https://itim.wip.camp' target="_blank">
         <RegisterBtn src='/static/image/regisred.png' />
         </a>
       </div>
