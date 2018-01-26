@@ -8,6 +8,7 @@ const LinkItem = styled.a`
   color: #fff;
   margin-rigth:2vw;
   margin-left:2vw;
+  font-size : 1.4em;
   &:hover{
     color: #fff;
     text-decoration: none;
