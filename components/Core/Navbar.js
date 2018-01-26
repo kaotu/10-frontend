@@ -1,22 +1,28 @@
 import react from 'react'
 import styled from 'styled-components'
-
+import Router from 'next/router'
 import Burger from './Burger'
 import GameBut from './GameBut'
+const navLink = (id) => {
+  Router.push(`/#${id}`)
+}
 
-const LinkItem = styled.a`
+const LinkItem = styled.button`
   color: #fff;
-  margin-rigth:2vw;
-  margin-left:2vw;
   font-size : 1.4em;
+  width:8vw;
+  background-color:#154051;
+  border: 0vw;
+  cursor:pointer;
+  transition:all 250ms ease-in-out;
   &:hover{
     color: #fff;
     text-decoration: none;
+    transition:scale(1.1);
     background-color: rgba(0, 0, 0, 0.3);
     border: 2vw;
-    padding-rigth:2vw;
-    padding-left:2vw;
     border-radius: 12px;
+    width:8vw;
   }
   &:focus{
     background-color: rgba(0, 0, 0, 0.3);
@@ -24,14 +30,13 @@ const LinkItem = styled.a`
     border-radius: 12px; 
   }
 `
+
 const NavItem = styled.nav`
   color: #fff;
   background-color:#154051;
-  ${props => props.primaryNav &&`
+  ${props => props.primaryNav && `
     background-color:#24372f; 
-  `}
-
-    
+  `}   
 `
 const RegisterBtn = styled.img`
   height: 250%;
@@ -46,30 +51,40 @@ const RegisterBtn = styled.img`
   }
 `
 
+const nav = [
+  {to:'home',text:"Home"},
+  {to:'what',text:"What"},
+  {to:'who',text:"Who"},
+  {to:'where',text:"Where"},
+  {to:'when',text:"When"},
+  {to:'faqs',text:"FAQs"},
+  {to:'contact',text:"Contact"}]
 const Navbar = () => (
   <NavItem className="sticky-top">
     <Burger />
     <div>
       <div className="navbar navbar-expand-lg">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler"  data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
           <div className="navbar-nav  justify-content-center ">
-            <LinkItem className="nav-item nav-link " href="#home"> HOME </LinkItem>
-            <LinkItem className="nav-item nav-link " href="#what">WHAT</LinkItem>
-            <LinkItem className="nav-item nav-link" href="#who">WHO</LinkItem>
-            <LinkItem className="nav-item nav-link" href="#where">WHERE</LinkItem>
-            <LinkItem className="nav-item nav-link " href="#when">WHEN</LinkItem>
-            <LinkItem className="nav-item nav-link " href="#faqs">FAQs</LinkItem>
-            <LinkItem className="nav-item nav-link " href="#contact">CONTACT</LinkItem>
+            {nav.map((nav, i) => (
+              <LinkItem key={i} onClick={()=>navLink(nav.to)} className="nav-item nav-link text-center"  >{nav.text}</LinkItem>
+            ))}
+            {/* <LinkItem className="nav-item nav-link text-center " href="#what">WHAT</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#">WHO</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#where">WHERE</LinkItem>
+            <LinkItem className="nav-item nav-link text-center" href="#when">WHEN</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#faqs">FAQs</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#contact">CONTACT</LinkItem> */}
           </div>
         </div>
         <a href='https://itim.wip.camp' target="_blank">
-        <RegisterBtn src='/static/image/regisred.png' />
+          <RegisterBtn src='/static/image/regisred.png' />
         </a>
       </div>
-      <GameBut/>
+      <GameBut />
     </div>
   </NavItem>
 )

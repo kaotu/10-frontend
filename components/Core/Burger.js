@@ -1,16 +1,24 @@
 import react from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
+import Router from 'next/router'
 
-const Item = styled.a`
+const Item = styled.button`
+@media(max-width:720px) {    
   color: #fff;
   padding: 0.8em;
-  transition: .1s;
+  transition: .5s;
+  border: 0vw;
+  text-align: center;
+  background-color:#002D40;
   &:hover{
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: .3em; 
     text-decoration:none;
+    border: 0vw;
+    width: 55vw;
+    text-align: center;
   }
   &:focus {
     color: #FFF;
@@ -18,6 +26,11 @@ const Item = styled.a`
     font-weight: bold;
     padding: 0.5em;
     text-decoration:none;
+    background-color:rgba(0, 0, 0, 0.3);
+    border: 0vw;
+    text-align: center;
+    width: 36vw;
+}
 }
 `
 
@@ -58,20 +71,35 @@ var styles = {
     background: 'rgba(0, 0, 0, 0.3)'
   }
 }
+
+const burgerLink = (id) => {
+  Router.push(`/#${id}`)
+}
+const nav = [
+  {to:'home',text:"Home"},
+  {to:'what',text:"What"},
+  {to:'who',text:"Who"},
+  {to:'where',text:"Where"},
+  {to:'when',text:"When"},
+  {to:'faqs',text:"FAQs"},
+  {to:'contact',text:"Contact"}]
  
  class BurgerMenu extends React.Component {
    render() {
      return (
-      <div className="d-lg-none sticky">      
+      <div className="d-lg-none sticky text-center">      
         <Menu className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
           <BlankSpace/>
-          <Item className="menu-item" href="#home">HOME</Item>
+          {nav.map((nav, i) => (
+              <Item key={i} onClick={()=>burgerLink(nav.to)} className="menu-item text-center"  >{nav.text}</Item>
+            ))}
+          {/* <Item className="menu-item" href="#home">HOME</Item>
           <Item className="menu-item" href="#what">WHAT</Item>
           <Item className="menu-item" href="#who">WHO</Item>
           <Item className="menu-item" href="#where">WHERE</Item>
           <Item className="menu-item" href="#when">WHEN</Item>
           <Item className="menu-item" href="#faqs">FAQs</Item>
-          <Item className="menu-item" href="#contact">CONTACT</Item>
+          <Item className="menu-item" href="#contact">CONTACT</Item> */}
          </Menu>
       </div>
      )

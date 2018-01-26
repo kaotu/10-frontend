@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Bg = styled.section`
-  background-color: ${props => props.bgColor || '#96cbdb'};
+  background-color: ${props => props.bgColor || ''};
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
