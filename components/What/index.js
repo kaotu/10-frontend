@@ -27,7 +27,7 @@ const Mobile = styled.div`
 `
 
 const IconInfo = [
-  {icon : "/static/image/question.svg", text: "Java programming"},
+  {icon : "/static/image/question.svg", text: "Java Programming"},
   {icon : "/static/image/question.svg", text: "IT Fundamentals"},
   {icon : "/static/image/question.svg", text: "Network"},
   {icon : "/static/image/question.svg", text: "HTML5&CSS"}
