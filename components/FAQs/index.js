@@ -13,21 +13,21 @@ const DivWhere = styled.div`
 `
 
 const DisplayDesktop = styled.div`
-@media (max-width:720px){
+  @media (max-width:720px){
     display:none;
 }
 `
 const DisplayMoblie = styled.div`
-@media (min-width:720px){
+  @media (min-width:720px){
      display:none;
 }
 `
 const DisplayMoblie2 = styled.div`
-@media (max-width:720px){
+  @media (max-width:720px){
      margin-top : 20px;
 }`
 
-const index = () => (
+const index = (props) => (
     <DivWhere>
         <Bg bgColor="#d9f1f2" faqs className="d-flex align-items-center">
             <div className="container-fluid my-5">
@@ -38,11 +38,8 @@ const index = () => (
                         <DisplayMoblie2/>
                     </div>
                 </div>
-                <DisplayDesktop>
-                    <Content />
-                    <Content />
-                    <Content />
-                    <Content />
+                <DisplayDesktop>                  
+                  <Content />
                 </DisplayDesktop>
                 <DisplayMoblie>
                 <Respon/>
