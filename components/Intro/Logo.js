@@ -8,10 +8,19 @@ const Wip = styled.img`
   left: 25vw;
   top:-30vh;
   margin-top: 50vh;
+  animation-name: FadeOut;
+  animation-duration: 2s;
   @media(max-width: 720px){
     width: 90%;
 	  left: 5vw;
   }
+  @keyframes FadeOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 `
 const Logo = () => (
 	<Wip src="/static/image/WIPlogo.svg" />

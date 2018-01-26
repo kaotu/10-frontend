@@ -9,6 +9,13 @@ const PositionMountain1 = styled.img`
   bottom:-16vh;
   width: 40vw;
   left: 50vw;
+  @media(max-width: 720px){
+    width:auto;
+    z-index: 3;
+    left: -80vw;
+    height: 80vh;
+    bottom:-37vh;
+  }
 `
 const PositionMountain2 = styled.img`
   position:absolute;
@@ -17,6 +24,13 @@ const PositionMountain2 = styled.img`
   bottom:-16vh;
   width: 60vw;
   left: 15vw;
+  @media(max-width: 720px){
+    width:auto;
+    z-index: 1;
+    left: -45vw;
+    height: 70vh;
+    bottom:-37vh;
+  }
 `
 
 const PositionCloud1 = styled.img`
