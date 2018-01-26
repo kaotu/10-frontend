@@ -57,13 +57,14 @@ const ContentBg = Bg.extend`
 `
 
 const FooterBg = Bg.extend`
-  min-height: 10vh;
+  min-height: 10vh;  
 `
 
 const FrontFooter = styled.i`
-  padding-top:  1.6em;
-  padding-bottom: auto;  
+  padding-top:  2em;
+  padding-bottom: 2em;  
 `
+
 const index = () => (
   <DivWhere>
     <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
@@ -110,7 +111,8 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg className="">
+    
+    <FooterBg >    
     <FrontFooter className="fa fa-code" aria-hidden="true"/> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer
     </FooterBg>
   </DivWhere>
