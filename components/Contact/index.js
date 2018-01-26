@@ -60,11 +60,6 @@ const FooterBg = Bg.extend`
   min-height: 10vh;  
 `
 
-const FrontFooter = styled.i`
-  padding-top:  2em;
-  padding-bottom: 2em;  
-`
-
 const index = () => (
   <DivWhere>
     <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
@@ -112,8 +107,8 @@ const index = () => (
       </div>
     </ContentBg>
     
-    <FooterBg >    
-    <FrontFooter className="fa fa-code" aria-hidden="true"/> with <FrontFooter className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer
+    <FooterBg className="d-flex justify-content-center align-items-center">    
+    <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
     </FooterBg>
   </DivWhere>
 )
