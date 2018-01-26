@@ -9,12 +9,22 @@ const PositionMountain1 = styled.img`
   bottom:-16vh;
   width: 40vw;
   left: 50vw;
+  animation: MoveUp 1s linear;
+  animation-delay: 0s;
   @media(max-width: 720px){
     width:auto;
     z-index: 3;
     left: -80vw;
     height: 80vh;
     bottom:-37vh;
+  }
+  @keyframes MoveUp {
+    0% {
+      bottom: -100vh;
+    }
+    100% {
+      bottom: -16vh;
+    }
   }
 `
 const PositionMountain2 = styled.img`
@@ -30,6 +40,16 @@ const PositionMountain2 = styled.img`
     left: -45vw;
     height: 70vh;
     bottom:-37vh;
+  }
+  animation: MoveUp 1s linear;
+  animation-delay: 0s;
+  @keyframes MoveUp {
+    0% {
+      bottom: -100vh;
+    }
+    100% {
+      bottom: -16vh;
+    }
   }
 `
 
@@ -113,6 +133,7 @@ const ScrollYak = styled.img`
 `
 const PositionScrolldown = styled.img`
 position:absolute;
+z-index: 8;
 width:3vw;
 top:90vh;
 left:50vw;
@@ -121,16 +142,16 @@ cursor:pointer;
 
 const Background = () => (
   <div>
-    <PositionStar src='/static/image/star.svg'/>
+    {/* <PositionStar src='/static/image/star.svg'/> */}
     <PositionMountain1 src='/static/image/moutain.svg' />
-    <PositionCloud1 src='/static/image/cloud-bottom.svg' />
+    {/* <PositionCloud1 src='/static/image/cloud-bottom.svg' /> */}
     <PositionMountain2 src='/static/image/moutain.svg' />
     
     <PositionMonkey src='/static/image/mongkey-Home.svg' />
     <ScrollLing src='/static/image/double-arrow-down-128.png'/>
     <PositionGiant src='/static/image/giantwithcloud.svg' />
     <ScrollYak src='/static/image/double-arrow-down-128.png'/>
-    <PositionCloud2 src='/static/image/cloud-bottom-Front.svg'/>
+    {/* <PositionCloud2 src='/static/image/cloud-bottom-Front.svg'/> */}
     
     
     <PositionScrolldown src="/static/image/icon-arrow-white-down.png"/>
