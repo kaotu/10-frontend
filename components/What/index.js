@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import Navbar from '../Core/Navbar'
 import Bg from '../Core/BgStory'
 import Cloud from './cloud'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const Info = styled.div`
   margin-top: 5%;
@@ -28,17 +29,6 @@ const IconInfo = [
   {icon : "/static/image/question.svg", text: "HTML5&CSS"}
 ]
 
-const H1 = styled.div`
-  font-size: 65px;
-  margin-top:50px;
-  margin-bottom:-25px;
-  margin-left:px;
-`
-const H2 = styled.div`
-  font-size: 30px;
-  margin-top:0px;
-  margin-bottom:-10px;
-`
 const IMG = styled.img`
   margin-top:60px;
 `

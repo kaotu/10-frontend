@@ -5,6 +5,10 @@ import styled from 'styled-components'
 import Content from './ContentFAQs'
 import ContentRespon from './ContentRespon'
 
+const Bg = styled.div`
+margin-top:10vw;
+`
+
 export default class AdaptiveHeight extends Component {
   render() {
     var settings = {
@@ -16,7 +20,7 @@ export default class AdaptiveHeight extends Component {
       adaptiveHeight: true
     };
     return (
-      <div>
+      <Bg>
         
         <div className="row d-flex ">
           <div className="col img-responesive align-self-center">
@@ -41,7 +45,7 @@ export default class AdaptiveHeight extends Component {
           <div className="col">
           </div>
         </div>
-      </div>
+      </Bg>
     );
   }
 }

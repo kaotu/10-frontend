@@ -3,24 +3,13 @@ import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
 import Content from './ContentFAQs'
 import Respon from './ResponFAQs'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const DivWhere = styled.div`
   top:200px;
   text-align: center;    
   width: 100%;  
-`
-
-const FrontFQAS = styled.div`
-  color: #000000;
-  font-size: 65px;
-  margin-top:-25px;
-  margin-bottom:-25px;
-
-`
-
-const P = styled.div`
-  font-size: 25px;
-  margin-top: 0px;
 `
 
 const DisplayDesktop = styled.div`
@@ -33,14 +22,20 @@ const DisplayMoblie = styled.div`
      display:none;
 }
 `
+const DisplayMoblie2 = styled.div`
+@media (max-width:720px){
+     margin-top : 20px;
+}`
+
 const index = () => (
     <DivWhere>
         <Bg bgColor="#d9f1f2" faqs className="d-flex align-items-center">
             <div className="container-fluid my-5">
                 <div className="row">
                     <div className="col-md-12 mt-4">
-                        <FrontFQAS className="text-center font-weight-bold">FAQs</FrontFQAS>
-                        <P className="text-center font-weight-bold">คำถามที่พบบ่อย ?</P>
+                        <H1 className="text-center font-weight-bold">FAQs</H1>
+                        <H2 className="text-center font-weight-bold">คำถามที่พบบ่อย ?</H2>
+                        <DisplayMoblie2/>
                     </div>
                 </div>
                 <DisplayDesktop>
