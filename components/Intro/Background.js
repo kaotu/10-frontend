@@ -14,35 +14,35 @@ const CloudBack = styled.img`
     position:absolute;
     z-index: 0;
     left:0vw;
-    bottom:0vh;
-    height:33vh;
-    animation: MoveUp 1s linear;
-    animation-delay: 0s;
-    @keyframes MoveUp {
-        0% {
-            bottom: -100vh;
-        }
-        100% {
-            bottom: 0vh;
-        }
-    }
+    bottom:-20vh;
+    width: 100vw;
+    // animation: MoveUp 1s linear;
+    // animation-delay: 0s;
+    // @keyframes MoveUp {
+    //     0% {
+    //         bottom: -100vh;
+    //     }
+    //     100% {
+    //         bottom: 0vh;
+    //     }
+    // }
 `
 const MountainLeft = styled.img`
     position:absolute;
     z-index: 1;
     left:0vw;
-    bottom:0vh;
-    height: 35vw;
-    animation: MoveRight 1s linear;
-    animation-delay: 0s;
-    @keyframes MoveRight {
-        0% {
-            left: -50vw;
-        }
-        100% {
-            left: 0vw;
-        }
-    }
+    bottom:-5vh;
+    width:100vw;
+    // animation: MoveRight 1s linear;
+    // animation-delay: 0s;
+    // @keyframes MoveRight {
+    //     0% {
+    //         left: -50vw;
+    //     }
+    //     100% {
+    //         left: -5vw;
+    //     }
+    // }
 `
 const MountainCenter = styled.img`
   position:absolute;
@@ -65,18 +65,18 @@ const MountainRight = styled.img`
     position:absolute;
     z-index: 3;
     right:0vw;
-    bottom:0vh;
-    height: 35vw;
-    animation: MoveLeft 1s linear;
-    animation-delay: 0s;
-    @keyframes MoveLeft {
-        0% {
-            right: -50vw;
-        }
-        100% {
-            right: 0vw;
-        }
-    }
+    bottom:-15vh;
+    width:100vw;
+    // animation: MoveLeft 1s linear;
+    // animation-delay: 0s;
+    // @keyframes MoveLeft {
+    //     0% {
+    //         right: -50vw;
+    //     }
+    //     100% {
+    //         right: -15vw;
+    //     }
+    // }
 `
 const ChooseMonkey = styled.img`
   position: absolute;
@@ -135,19 +135,19 @@ const CloudBottom = styled.img`
     left:0vw;
     bottom:-24vh;
     width: 120vw;
-    animation: MoveUp 1s linear;
-    animation-delay: 0s;
-    @keyframes MoveUp {
-        0% {
-            bottom: -100vh;
+    // animation: MoveUp 1s linear;
+    // animation-delay: 0s;
+    // @keyframes MoveUp {
+    //     0% {
+    //         bottom: -100vh;
             
-        }
-        100% {
-            bottom: -24vh;
-        }
-    }
+    //     }
+    //     100% {
+    //         bottom: -24vh;
+    //     }
+    // }
 `
-const Logo = styled.img`
+const LogoWip = styled.img`
   width: 50%;
   position: absolute;
   z-index: 6;
@@ -168,26 +168,52 @@ const Logo = styled.img`
     }
   }
 `
+const LogoSIT = styled.img`
+  width: 20%;
+  position: absolute;
+  z-index: 6;
+  left: 40vw;
+  top:40vh;
+  animation-name: FadeOut;
+  animation-duration: 2s;
+  @media(max-width: 720px){
+    width: 90%;
+	  left: 5vw;
+  }
+`
 const Scrolldown = styled.img`
     position:absolute;
     z-index: 7;
     width:3vw;
     bottom:5vh;
-    left:50vw;
+    left:48vw;
+    animation: Dukdik 1s linear infinite;
     cursor:pointer;  
+    @keyframes Dukdik {
+      0% {
+        bottom:5vh;
+      }
+      50% {
+        bottom:7vh;
+      }
+      100% {
+        bottom:5vh;
+      }
+    }
 `
 const Background = () => (
     <div>
-        <CloudBack src='/static/image/cloud-bottom.svg'/>
-        <MountainLeft src='/static/image/Mongkey.svg'/>
+        <CloudBack src='/static/image/CloudBack.svg'/>
+        <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/moutain.svg'/>
-        <MountainRight src='/static/image/Giant.svg'/>
+        <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
         <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
         <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
         <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
-        <Logo src="/static/image/WIPlogo.svg" />
+        <LogoWip src="/static/image/WIPlogo.svg" />
+        <LogoSIT src='/static/image/ตรามอ.png'/>
         <Scrolldown src='/static/image/ScrollDown.png'/>
     </div>
 )
