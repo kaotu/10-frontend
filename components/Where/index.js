@@ -3,6 +3,7 @@ import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 
 const Story = styled.img`
@@ -25,7 +26,7 @@ const Mobile = styled.div`
 `
 
 const index = () => (
-  <Bg bgColor="#ade6df" where className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.where} where className="d-flex align-items-center">
     <div className="container-fluid my-5">
       <div className="row">
         <div className="col-md-6 text-center mt-4">

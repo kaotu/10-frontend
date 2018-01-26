@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Moblie from '../When/moblie'
+import Color from '../Core/Color'
 
 const Img = styled.img`
     width:40vw;
@@ -64,7 +65,8 @@ const HideDesktop = styled.div`
 `
 
 const index = () => (
-  <Bg bgColor="#d5eff2" className="d-flex align-items-center">
+
+  <Bg bgColor={Color.mongkey.when} className="d-flex align-items-center">
     <div className="container-fluid">
     <HideMobile>
       <div className="row">
