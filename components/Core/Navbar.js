@@ -14,9 +14,11 @@ const LinkItem = styled.button`
   background-color:#154051;
   border: 0vw;
   cursor:pointer;
+  transition:all 250ms ease-in-out;
   &:hover{
     color: #fff;
     text-decoration: none;
+    transition:scale(1.1);
     background-color: rgba(0, 0, 0, 0.3);
     border: 2vw;
     border-radius: 12px;
@@ -62,7 +64,7 @@ const Navbar = () => (
     <Burger />
     <div>
       <div className="navbar navbar-expand-lg">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler"  data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
