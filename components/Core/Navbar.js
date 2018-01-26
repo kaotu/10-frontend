@@ -1,13 +1,19 @@
 import react from 'react'
 import styled from 'styled-components'
-
+import Router from 'next/router'
 import Burger from './Burger'
 import GameBut from './GameBut'
+const navLink = (id) => {
+  Router.push(`/#${id}`)
+}
 
-const LinkItem = styled.a`
+const LinkItem = styled.button`
   color: #fff;
   font-size : 1.4em;
   width:8vw;
+  background-color:#154051;
+  border: 0vw;
+  cursor:pointer;
   &:hover{
     color: #fff;
     text-decoration: none;
@@ -43,6 +49,14 @@ const RegisterBtn = styled.img`
   }
 `
 
+const nav = [
+  {to:'home',text:"Home"},
+  {to:'what',text:"What"},
+  {to:'who',text:"Who"},
+  {to:'where',text:"Where"},
+  {to:'when',text:"When"},
+  {to:'faqs',text:"FAQs"},
+  {to:'contact',text:"Contact"}]
 const Navbar = () => (
   <NavItem className="sticky-top">
     <Burger />
@@ -53,13 +67,15 @@ const Navbar = () => (
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
           <div className="navbar-nav  justify-content-center ">
-            <LinkItem className="nav-item nav-link text-center" href="#home"> HOME </LinkItem>
-            <LinkItem className="nav-item nav-link text-center " href="#what">WHAT</LinkItem>
+            {nav.map((nav, i) => (
+              <LinkItem key={i} onClick={()=>navLink(nav.to)} className="nav-item nav-link text-center"  >{nav.text}</LinkItem>
+            ))}
+            {/* <LinkItem className="nav-item nav-link text-center " href="#what">WHAT</LinkItem>
             <LinkItem className="nav-item nav-link text-center " href="#">WHO</LinkItem>
             <LinkItem className="nav-item nav-link text-center " href="#where">WHERE</LinkItem>
             <LinkItem className="nav-item nav-link text-center" href="#when">WHEN</LinkItem>
             <LinkItem className="nav-item nav-link text-center " href="#faqs">FAQs</LinkItem>
-            <LinkItem className="nav-item nav-link text-center " href="#contact">CONTACT</LinkItem>
+            <LinkItem className="nav-item nav-link text-center " href="#contact">CONTACT</LinkItem> */}
           </div>
         </div>
         <a href='https://itim.wip.camp' target="_blank">
