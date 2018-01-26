@@ -6,6 +6,7 @@ import ResponWho from "./responWho"
 import Block from "./Block"
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 const state = withState("checkButton", "setCheck", 0)
 
@@ -65,7 +66,7 @@ const Mobile = styled.div`
 `
 
 const index = props => (
-  <Bg bgColor="#9addde" who className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.who} who className="d-flex align-items-center">
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
