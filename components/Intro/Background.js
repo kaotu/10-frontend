@@ -69,6 +69,26 @@ const MountainRight = styled.img`
         }
     }
 `
+const ChooseMonkey = styled.img`
+  position: absolute;
+  z-index: 4;
+  top: 30vh;
+  left: 13vw;
+  width:3vw;
+  animation: MoveUpDown 1s linear infinite;
+  cursor:pointer; 
+  @keyframes MoveUpDown {
+    0% {
+      top: 30vh;
+    }
+    50% {
+      top: 28vh;
+    }
+    100% {
+      top: 30vh;
+    }
+  }
+`
 const Monkey = styled.img`
   position:absolute;
   z-index: 4;
@@ -78,6 +98,15 @@ const Monkey = styled.img`
   @media(max-width: 720px){
     height: 20vh;
   }
+`
+const ChooseGiant = styled.img`
+  position: absolute;
+  z-index: 4;
+  top: 30vh;
+  right: 13vw;
+  width:3vw;
+  animation: MoveUpDown 1s linear infinite;
+  cursor:pointer; 
 `
 const Giant = styled.img`
   position:absolute;
@@ -100,6 +129,7 @@ const CloudBottom = styled.img`
     @keyframes MoveUp {
         0% {
             bottom: -100vh;
+            
         }
         100% {
             bottom: -24vh;
@@ -126,17 +156,27 @@ const Logo = styled.img`
       opacity: 1;
     }
 `
-
+const Scrolldown = styled.img`
+    position:absolute;
+    z-index: 7;
+    width:3vw;
+    bottom:5vh;
+    left:50vw;
+    cursor:pointer;  
+`
 const Background = () => (
     <div>
         <CloudBack src='/static/image/cloud-bottom.svg'/>
         <MountainLeft src='/static/image/Mongkey.svg'/>
         <MountainCenter src='/static/image/moutain.svg'/>
         <MountainRight src='/static/image/Giant.svg'/>
+        <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
         <Monkey src='/static/image/mongkey-Home.svg'/>
+        <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
         <Giant src='/static/image/giantwithcloud.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <Logo src="/static/image/WIPlogo.svg" />
+        <Scrolldown src='/static/image/ScrollDown.png'/>
     </div>
 )
 

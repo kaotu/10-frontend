@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Bg = styled.section`
-  background-color: #002D40;
+  background-color: #6791BC;
   background-image: url('../static/image/effect-BG.svg');
   background-position: center center;
   background-repeat: no-repeat;
