@@ -37,15 +37,17 @@ const IconData = [
 ]
 
 const PositionTextBox =[
-  "10%",
-  "36.7%",
-  "63.5%",
-  "90.5%"
+  "12.7%",
+  "39.4%",
+  "65.25%",
+  "91.7%"
 ]
 
 const Icon = styled.div`
   margin-top: 5%;
   cursor: pointer;
+  margin-left: 1%;
+  margin-right: 1%;
 `
 const HideMobile = styled.div`
   @media (max-width: 720px) {
