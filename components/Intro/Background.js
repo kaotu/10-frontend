@@ -1,7 +1,6 @@
 import react from 'react'
 import styled from 'styled-components'
 
-
 const PositionMountain1 = styled.img`
   position:absolute;
   z-index: 1;

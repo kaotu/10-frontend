@@ -4,8 +4,10 @@ import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
 const Bg = styled.div`
+    position: relative;
     background-color:#e1f6b3; 
     height:25vw;
+    z-index: 4;
 `
 const Index = () => (
   <Bg>
