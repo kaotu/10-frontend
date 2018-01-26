@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 const Bg = styled.section`
-  background-color: #6791BC;
-  background-image: url('../static/image/effect-BG.svg');
+  background: linear-gradient(#6791BC, #B7CFEB,#6791BC);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
