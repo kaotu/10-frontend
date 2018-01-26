@@ -1,6 +1,5 @@
 import react from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 
 const GameButton = styled.div`
   width: 60px;
@@ -35,16 +34,18 @@ const Rotate = styled.div`
     margin-top: 0px;
     margin-left: -38px;
 `
-const Font = styled.div`
+const Font = styled.h1`
   position: absolute;
   font-size: 1.4em;
-  font-weight: bold;  
+  font-weight: bold;
+  color: #fff;
   letter-spacing: 5px;
   -webkit-transform:rotate(270deg);
   @media(max-width:1200px) {
     font-size: 0em;            
   }
 `
+
 const IconGame = styled.img`
   width: 50%; 
   position: relative;
@@ -64,9 +65,9 @@ const IconGame = styled.img`
 
 const GameBut = () => (
   <GameButton className="justify-content-center align-items-center" data-toggle="" data-target="#">
-  <Link href="https://game.wip.camp">
+  <a href="https://game.wip.camp" target="_blank">
        <Rotate><Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/></Rotate>
-  </Link>
+  </a>
   </GameButton>
 )
 

@@ -1,6 +1,9 @@
 import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 
 const Story = styled.img`
@@ -21,20 +24,13 @@ const Mobile = styled.div`
     text-align:center;
   }
 `
-const H1 = styled.div`
-  font-size: 80px;
-  margin-top:20px;
-  margin-bottom:-25px;
-  
-`;
-const H2 = styled.div`
-font-size: 35px;
-margin-top:0px;
-margin-bottom:0px;
+
+const H4 = styled.h4`
+  color: #082A3D;
 `
 
 const index = () => (
-  <Bg bgColor="#ade6df" where className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.where} where className="d-flex align-items-center">
     <div className="container-fluid my-5">
       <div className="row">
         <div className="col-md-6 text-center mt-4">
@@ -42,15 +38,16 @@ const index = () => (
         </div>
         <div className="col-md-6">
           <Mobile className="text-center mt-4">
-            <H1 className="text-center font-weight-bold">WHERE</H1>
-            <H2 className="text-center font-weight-bold">ค่ายนี้จัดที่ไหน ?</H2>
+            <H1 className="font-weight-bold">WHERE</H1>
+            <H2 className="font-weight-bold">ค่ายนี้จัดที่ไหน ?</H2>
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local src="static/image/sit-kmutt.jpg" />
+              <Local className="mb-1" src="static/image/sit-kmutt.jpg" />
             </a>
             <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p>
-            <p>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+            <h3>คณะเทคโนโลยีสารสนเทศ</h3>
+            <H4>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</H4>
           </div>
         </div>
       </div>

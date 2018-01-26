@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components"
 import { compose, withState, lifecycle } from "recompose"
-
 import Bg from "../Core/BgStory"
 import ResponWho from "./responWho"
 import Block from "./Block"
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 const state = withState("checkButton", "setCheck", 0)
 
@@ -20,23 +22,32 @@ const Content = [
   "โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง",
   "ตลอดระยะเวลา 5 วัน"
 ]
+const Image = styled.img`
+    width:7vw;
+  @media (max-width:720px) {
+    width: 50%;
+    padding: .2em;
+  }
+`
 const IconData = [
-  { id: 0, image: "/static/image/question.svg" },
-  { id: 1, image: "/static/image/question.svg" },
-  { id: 2, image: "/static/image/question.svg" },
-  { id: 3, image: "/static/image/question.svg" }
+  { id: 0, image: "/static/image/edu.png" },
+  { id: 1, image: "/static/image/computer.png" },
+  { id: 2, image: "/static/image/Mom.png" },
+  { id: 3, image: "/static/image/night.png" }
 ]
 
 const PositionTextBox =[
-  "10%",
-  "36.7%",
-  "63.5%",
-  "90.5%"
+  "12.7%",
+  "39.4%",
+  "65.25%",
+  "91.7%"
 ]
 
 const Icon = styled.div`
   margin-top: 5%;
   cursor: pointer;
+  margin-left: 1%;
+  margin-right: 1%;
 `
 const HideMobile = styled.div`
   @media (max-width: 720px) {
@@ -54,33 +65,23 @@ const Mobile = styled.div`
     text-align: center;
     margin-bottom : 25px;
   }
-`;
-const Head = styled.div`
-  font-size: 65px;
-  margin-bottom:-25px;
-  margin-left:px;
-`
-const Subhead = styled.div`
-  font-size: 30px;
-  margin-top:0px;
-  margin-bottom:-10px;
 `
 
 const index = props => (
-  <Bg bgColor="#9addde" who className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.who} who className="d-flex align-items-center">
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <Head className="font-weight-bold">WHO</Head>
-            <Subhead className="font-weight-bold">ค่ายนี้เหมาะกับใคร</Subhead>
+            <H1 className="font-weight-bold">WHO</H1>
+            <H2 className="font-weight-bold">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">
               {
                 IconData.map((data, i) => (
                 <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <img src={data.image} />
+                  <Image src={data.image} />
                 </div>
               ))
               }

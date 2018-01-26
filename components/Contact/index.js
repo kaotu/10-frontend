@@ -2,6 +2,8 @@ import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
 import HeartBox from './HeartBox'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const DivWhere = styled.div`
   text-align: center;    
@@ -31,8 +33,8 @@ const ImgRight = styled.img`
   }
 `
 const Line = styled.div`
-  border-left: thick solid #fff;
-  border-right: thick solid #fff;
+  border-left: thick solid #000;
+  border-right: thick solid #000;
   @media(max-width:575px) {
     border-left: none;
     border-right: none;
@@ -41,38 +43,21 @@ const Line = styled.div`
 
 const Linerespon = styled.div`
     width : 50vw;
-    height : 5px;
+    height : 2px;
     margin-left : 20vw;
     margin-top : 5vw;
-    background-color: white;
+    background-color: #000;
   @media(min-width:576px){
     display : none;
   }
 `
 
 const ContentBg = Bg.extend`
-  min-height: 95vh;
+  min-height: 90vh;
 `
 
 const FooterBg = Bg.extend`
-  min-height: 5vh;
-  background-color: #FFFFFF;
-`
-
-const Head = styled.h1`
-  font-size : 5vw;
-  font-weight: bold;
-  margin-bottom : -1vw;
-  @media(max-width:576px){
-    font-size : 10vw;
-  }
-`
-
-const Subhead = styled.p`
-  font-size : 2vw;
-  @media(max-width:576px){
-    font-size : 4vw;
-  }
+  min-height: 10vh;  
 `
 
 const index = () => (
@@ -81,8 +66,8 @@ const index = () => (
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <Head>Contact</Head>
-            <Subhead className="font-weight-bold">ติดต่อเรา</Subhead>
+            <H1>Contact</H1>
+            <H2 className="font-weight-bold">ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
@@ -121,8 +106,9 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    <FooterBg className="float-left ">
-    <i className="fa fa-code" aria-hidden="true"> with <i className="fa fa-heart" aria-hidden="true"/> by 10 I'm Developer</i>
+    
+    <FooterBg className="d-flex justify-content-center align-items-center">    
+    <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
     </FooterBg>
   </DivWhere>
 )

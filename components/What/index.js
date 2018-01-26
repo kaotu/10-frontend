@@ -1,17 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import Navbar from '../Core/Navbar'
 import Bg from '../Core/BgStory'
 import Cloud from './cloud'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 const Info = styled.div`
   margin-top: 5%;
 `
+const Test = styled.div`
+  padding: 2px;
+`
 
 const Icon = styled.img`
+    width:7vw;
   @media (max-width:720px) {
     width: 50%;
+    padding: .2em;
   }
 `
 
@@ -22,23 +29,12 @@ const Mobile = styled.div`
 `
 
 const IconInfo = [
-  {icon : "/static/image/question.svg", text: "Java programming"},
-  {icon : "/static/image/question.svg", text: "IT Fundamentals"},
-  {icon : "/static/image/question.svg", text: "Network"},
-  {icon : "/static/image/question.svg", text: "HTML5&CSS"}
+  {icon : "/static/image/Java prog.png", text: "Java Programming"},
+  {icon : "/static/image/itfun.png", text: "IT Fundamentals"},
+  {icon : "/static/image/network.png", text: "Network"},
+  {icon : "/static/image/web.png", text: "HTML5&CSS"}
 ]
 
-const H1 = styled.div`
-  font-size: 65px;
-  margin-top:50px;
-  margin-bottom:-25px;
-  margin-left:px;
-`
-const H2 = styled.div`
-  font-size: 30px;
-  margin-top:0px;
-  margin-bottom:-10px;
-`
 const IMG = styled.img`
   margin-top:60px;
 `
@@ -50,7 +46,7 @@ const Padding = styled.div`
 
 
 const index = props => (
-  <Bg className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.what} className="d-flex align-items-center">
     <Padding className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6">
@@ -72,10 +68,10 @@ const index = props => (
           <Info className="row text-center">
           { 
             IconInfo.map((info, i) => (
-              <div key={i} className="col-6 col-md-3 img-responesive ">
+              <Test key={i} className="col-6 col-md-3 img-responesive ">
                 <Icon src={info.icon}/>
                 <p>{info.text}</p>
-              </div>
+              </Test>
             ))
           }
           </Info>
