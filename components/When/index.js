@@ -12,8 +12,8 @@ const Img = styled.img`
 `
 const Head = styled.div`
   position:absolute;
-  top:20vh;
-  left:15vw;
+  top:15vh;
+  left:22vw;
 `
 const Front = styled.p`
     padding-top:0vw;
@@ -27,30 +27,30 @@ const Box1 = styled.div`
     opecity:0.9;
     border-radius: 0.2em;
     margin-top:33vw;
-    margin-left:18vw;   
+    margin-left:30vw;   
 `
 const Box2 = styled.div`
   position:absolute;
-  background-color:red;
+  background-color:transparent;
   width:10vw;
-  top:10vh;
-  left:60vw;
+  top:5vh;
+  left:76vw;
   z-index:2;
 `
 const Box3 = styled.div`
   position:absolute;
-  background-color:green;
+  background-color:transparent;
   width:10vw;
-  top:25vh;
-  left:55vw;
+  top:18vh;
+  left:70vw;
   z-index:2;
 `
 const Box4 = styled.div`
   position:absolute;
-  background-color:blue;
+  background-color:transparent;
   width:10vw;
-  top:40vh;
-  left:50vw;
+  top:30vh;
+  left:65vw;
   z-index:2;
 `
 const HideMobile = styled.div`
@@ -65,40 +65,35 @@ const HideDesktop = styled.div`
 `
 
 const index = () => (
-
   <Bg bgColor={Color.mongkey.when} className="d-flex align-items-center">
     <div className="container-fluid">
-    <HideMobile>
-      <div className="row">
-        <div className="col-12 col-sm-12 col-md-6 ">
-          <Head>
-            <H1 className="text-center font-weight-bold">WHEN</H1>
-            <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
-          </Head>
+      <HideMobile>
+        <div className="row">
+          <div className="col-12 col-sm-12 col-md-6 ">
+            <Head>
+              <H1 className="text-center font-weight-bold">WHEN</H1>
+              <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
+            </Head>
+          </div>
+          <div className="col-12 col-sm-12 col-md-12  ">
+            <Img src="/static/image/Climing.svg" className="rounded float-right" />
+            <Box1 className="text-center">
+              <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
+            </Box1>
+            <Box2 className="text-center">
+              <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
+            </Box2>
+            <Box3 className="text-center">
+              <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
+            </Box3>
+            <Box4 className="text-center">
+              <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
+            </Box4>
+          </div>
         </div>
-        <div className="col-12 col-sm-12 col-md-12  ">
-          <Img src="/static/image/Climing.svg" className="rounded float-right" />
-          <Box1 className="text-center">
-            <p>31 มค 61</p>
-            <p>วันค่าย</p>
-          </Box1>
-          <Box2 className="text-center">
-            <p>31 มค 61</p>
-            <p>วันค่าย</p>
-          </Box2>
-          <Box3 className="text-center">
-            <p>31 มค 61</p>
-            <p>วันค่าย</p>
-          </Box3>
-          <Box4 className="text-center">
-            <p>31 มค 61</p>
-            <p>วันค่าย</p>
-          </Box4>
-        </div>
-      </div>
       </HideMobile>
       <HideDesktop>
-      <Moblie/>
+        <Moblie />
       </HideDesktop>
     </div>
   </Bg>
