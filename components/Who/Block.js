@@ -21,7 +21,7 @@ const Block = styled.div`
 
 :after {
 	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: #9addde; 
+	border-bottom-color: #87C3D5; 
 	border-width: 30px;
   margin-left: -30px;
 }

@@ -9,7 +9,7 @@ const Item = styled.button`
   padding: 0.8em;
   transition: .5s;
   border: 0vw;
-  text-align: center;
+  width:100%;
   background-color:#002D40;
   &:hover{
     color: #fff;
@@ -17,8 +17,6 @@ const Item = styled.button`
     border-radius: .3em; 
     text-decoration:none;
     border: 0vw;
-    width: 55vw;
-    text-align: center;
   }
   &:focus {
     color: #FFF;
@@ -28,8 +26,6 @@ const Item = styled.button`
     text-decoration:none;
     background-color:rgba(0, 0, 0, 0.3);
     border: 0vw;
-    text-align: center;
-    width: 36vw;
 }
 }
 `
@@ -91,7 +87,7 @@ const nav = [
         <Menu className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
           <BlankSpace/>
           {nav.map((nav, i) => (
-              <Item key={i} onClick={()=>burgerLink(nav.to)} className="menu-item text-center"  >{nav.text}</Item>
+              <Item key={i} onClick={()=>burgerLink(nav.to)} className="menu-item "  >{nav.text}</Item>
             ))}
           {/* <Item className="menu-item" href="#home">HOME</Item>
           <Item className="menu-item" href="#what">WHAT</Item>
