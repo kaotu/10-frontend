@@ -183,9 +183,9 @@ const Background = () => (
         <MountainCenter src='/static/image/moutain.svg'/>
         <MountainRight src='/static/image/Giant.svg'/>
         <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
-        <Monkey src='/static/image/mongkey-Home.svg'/>
+        <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
         <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
-        <Giant src='/static/image/giantwithcloud.svg'/>
+        <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <Logo src="/static/image/WIPlogo.svg" />
         <Scrolldown src='/static/image/ScrollDown.png'/>
