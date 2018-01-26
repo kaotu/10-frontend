@@ -21,7 +21,7 @@ const ImgRight = styled.img`
 
 const Box = styled.div`
   width: 46vw;
-  min-height: 20vw;    
+  min-height: 10vw;    
   padding: 1vw;
   background-color:#FBFBEF;
   opecity:0.8;
@@ -42,12 +42,12 @@ const ContentRespon = (props) => (
         </div>
       </div>
       <div className="col-9">
-        <Box>{props.Q}</Box>
+        <Box><div dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
       </div>
     </div>
     <div className="row">
       <div className="col-9">
-        <Box>{props.A}</Box>
+        <Box><div dangerouslySetInnerHTML={{__html: props.A}}/></Box>
       </div>
       <div className="col-3">
         <div className="col img-responesive align-self-center">
