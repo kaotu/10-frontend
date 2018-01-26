@@ -16,16 +16,16 @@ const CloudBack = styled.img`
     left:0vw;
     bottom:-20vh;
     width: 100vw;
-    animation: MoveUp 1s linear;
-    animation-delay: 0s;
-    @keyframes MoveUp {
-        0% {
-            bottom: -100vh;
-        }
-        100% {
-            bottom: 0vh;
-        }
-    }
+    // animation: MoveUp 1s linear;
+    // animation-delay: 0s;
+    // @keyframes MoveUp {
+    //     0% {
+    //         bottom: -100vh;
+    //     }
+    //     100% {
+    //         bottom: 0vh;
+    //     }
+    // }
 `
 const MountainLeft = styled.img`
     position:absolute;
@@ -33,16 +33,16 @@ const MountainLeft = styled.img`
     left:0vw;
     bottom:-5vh;
     width:100vw;
-    animation: MoveRight 1s linear;
-    animation-delay: 0s;
-    @keyframes MoveRight {
-        0% {
-            left: -50vw;
-        }
-        100% {
-            left: -5vw;
-        }
-    }
+    // animation: MoveRight 1s linear;
+    // animation-delay: 0s;
+    // @keyframes MoveRight {
+    //     0% {
+    //         left: -50vw;
+    //     }
+    //     100% {
+    //         left: -5vw;
+    //     }
+    // }
 `
 const MountainCenter = styled.img`
   position:absolute;
@@ -67,16 +67,16 @@ const MountainRight = styled.img`
     right:0vw;
     bottom:-15vh;
     width:100vw;
-    animation: MoveLeft 1s linear;
-    animation-delay: 0s;
-    @keyframes MoveLeft {
-        0% {
-            right: -50vw;
-        }
-        100% {
-            right: -15vw;
-        }
-    }
+    // animation: MoveLeft 1s linear;
+    // animation-delay: 0s;
+    // @keyframes MoveLeft {
+    //     0% {
+    //         right: -50vw;
+    //     }
+    //     100% {
+    //         right: -15vw;
+    //     }
+    // }
 `
 const ChooseMonkey = styled.img`
   position: absolute;
@@ -135,17 +135,17 @@ const CloudBottom = styled.img`
     left:0vw;
     bottom:-24vh;
     width: 120vw;
-    animation: MoveUp 1s linear;
-    animation-delay: 0s;
-    @keyframes MoveUp {
-        0% {
-            bottom: -100vh;
+    // animation: MoveUp 1s linear;
+    // animation-delay: 0s;
+    // @keyframes MoveUp {
+    //     0% {
+    //         bottom: -100vh;
             
-        }
-        100% {
-            bottom: -24vh;
-        }
-    }
+    //     }
+    //     100% {
+    //         bottom: -24vh;
+    //     }
+    // }
 `
 const LogoWip = styled.img`
   width: 50%;
@@ -180,22 +180,26 @@ const LogoSIT = styled.img`
     width: 90%;
 	  left: 5vw;
   }
-  @keyframes FadeOut {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 `
 const Scrolldown = styled.img`
     position:absolute;
     z-index: 7;
     width:3vw;
     bottom:5vh;
-    left:50vw;
+    left:48vw;
+    animation: Dukdik 1s linear infinite;
     cursor:pointer;  
+    @keyframes Dukdik {
+      0% {
+        bottom:5vh;
+      }
+      50% {
+        bottom:7vh;
+      }
+      100% {
+        bottom:5vh;
+      }
+    }
 `
 const Background = () => (
     <div>
