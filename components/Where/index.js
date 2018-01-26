@@ -1,6 +1,9 @@
 import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 
 const Story = styled.img`
@@ -22,24 +25,29 @@ const Mobile = styled.div`
   }
 `
 
+const H4 = styled.h4`
+  color: #082A3D;
+`
+
 const index = () => (
-  <Bg where className="d-flex align-items-center">
-    <div className="container-fluid">
+  <Bg bgColor={Color.mongkey.where} where className="d-flex align-items-center">
+    <div className="container-fluid my-5">
       <div className="row">
-        <div className="col-md-6 text-center">
+        <div className="col-md-6 text-center mt-4">
           <Story src="static/image/LookOver-01.svg" />
         </div>
         <div className="col-md-6">
-          <Mobile className="text-center">
-            <h1>WHERE</h1>
-            <span>ค่ายนี้จัดที่ไหน</span>
+          <Mobile className="text-center mt-4">
+            <H1 className="font-weight-bold">WHERE</H1>
+            <H2 className="font-weight-bold">ค่ายนี้จัดที่ไหน ?</H2>
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local src="static/image/sit-kmutt.jpg" />
+              <Local className="mb-1" src="static/image/sit-kmutt.jpg" />
             </a>
             <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p>
-            <p>คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+            <h3>คณะเทคโนโลยีสารสนเทศ</h3>
+            <H4>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</H4>
           </div>
         </div>
       </div>

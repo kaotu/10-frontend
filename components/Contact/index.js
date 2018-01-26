@@ -2,103 +2,115 @@ import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
 import HeartBox from './HeartBox'
-import Footer from '../Core/Footer'
+import H1 from '../Core/FontH1'
+import H2 from '../Core/FontH2'
 
 const DivWhere = styled.div`
-  top:200px;
   text-align: center;    
   width: 100%;  
 `
 const ImgLeft = styled.img`
-  // margin-left:8em;
-  padding-top:2em;
-  width:15vw;
+  width:5vw;
   @media(max-width:720px) {
-    margin-left:0em;
-    padding-top:2em;           
+    width : 13vw;
   }
 `
 const ImgCenter = styled.img`
-  width:10%;
-  margin-top:-21vw;
-  margin-right:1em;
+  width:5vw;
   cursor:pointer;
-  padding-top:3em;
+  margin-top : 17px;
+  margin-left : 1vw;
+  margin-right : 1vw;
   @media(max-width:720px) {
-    margin-right:1em;
-    padding-top:2em;           
+    width : 13vw;
   }
 `
 const ImgRight = styled.img`
-  right:0;
-  width : 15vw;
-  // margin-right:8em;
-  padding-top:2em;
-  // padding-top:5em;
+  width : 5vw;
   @media(max-width:720px) {
-    margin-right:0em;
-    padding-top:4em;           
+    margin-top : 7vw;
+    width : 13vw;
   }
 `
 const Line = styled.div`
-width:2px;
-height:16vw;
-background-color:white;
-margin-top:3vw
-@media(max-width:720px) {
-            
-}
+  border-left: thick solid #000;
+  border-right: thick solid #000;
+  @media(max-width:575px) {
+    border-left: none;
+    border-right: none;
+  }
 `
-const Line2 = styled.div`
-width:2px;
-height:16vw;
-background-color:white;
-margin-top:3vw
 
+const Linerespon = styled.div`
+    width : 50vw;
+    height : 2px;
+    margin-left : 20vw;
+    margin-top : 5vw;
+    background-color: #000;
+  @media(min-width:576px){
+    display : none;
+  }
+`
+
+const ContentBg = Bg.extend`
+  min-height: 90vh;
+`
+
+const FooterBg = Bg.extend`
+  min-height: 10vh;  
 `
 
 const index = () => (
   <DivWhere>
-    <Bg contact className="d-flex align-items-center">
+    <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <h1>Contact</h1>
-            <p>ติดต่อเรา</p>
+            <H1>Contact</H1>
+            <H2 className="font-weight-bold">ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
-                <p>088-8888-888</p>
-                
+                <p className="mt-3"><strong>พี่วิปโป้: 08-3082-2189</strong></p>
               </div>
-              <div className="col-sm-6 col-md-6">
-              <Line/>
-                <ImgCenter className="img-responsive" src="/static/image/Facebook.svg" />
-                <ImgCenter className="img-responsive" src="/static/image/Youtube.svg" />
-                <ImgCenter className="img-responsive" src="/static/image/Ig.svg" />
-                <ImgCenter className="img-responsive" src="/static/image/Lineicon.svg"/>
-                <ImgCenter className="img-responsive ml-auto" src="/static/image/Twitter.svg"/>
-              <Line2/>
-              </div>
+              <Line className="col-sm-6 col-md-6">
+                <Linerespon />
+                <a href="https://www.facebook.com/wipcamp/">
+                  <ImgCenter src="/static/image/Facebook.svg" />
+                </a>
+                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
+                  <ImgCenter src="/static/image/Lineicon.svg" />
+                </a>
+                <a href="https://twitter.com/WIPCamp">
+                  <ImgCenter src="/static/image/Twitter.svg" />
+                </a>
+                <a href="https://www.instagram.com/wipcamp/">
+                  <ImgCenter src="/static/image/Ig.svg" />
+                </a>
+                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
+                  <ImgCenter src="/static/image/Youtube.svg" />
+                </a>                
+                <Linerespon />
+              </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgRight src="/static/image/ContactMail.svg" />
-                <p>konlao@gmail.com</p>
+                <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col-md-12">
-            <HeartBox/>
+            <HeartBox />
           </div>
-          </div>
-          <div className="row">
-          <div className="col-md-12">
-            <Footer/>
-          </div>
-          </div>
+        </div>
       </div>
-    </Bg>
+    </ContentBg>
+    
+    <FooterBg className="d-flex justify-content-center align-items-center">    
+    <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
+    </FooterBg>
   </DivWhere>
 )
+
 export default index

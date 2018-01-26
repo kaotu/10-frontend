@@ -3,7 +3,7 @@ import React from 'react';
 var defaultProps = {
     className: '',
     accessibility: true,
-    adaptiveHeight: false,
+    
     arrows: true,
     autoplay: false,
     autoplaySpeed: 3000,
