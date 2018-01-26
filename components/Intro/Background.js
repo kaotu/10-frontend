@@ -16,16 +16,16 @@ const CloudBack = styled.img`
     left:0vw;
     bottom:-20vh;
     width: 100vw;
-    // animation: MoveUp 1s linear;
-    // animation-delay: 0s;
-    // @keyframes MoveUp {
-    //     0% {
-    //         bottom: -100vh;
-    //     }
-    //     100% {
-    //         bottom: 0vh;
-    //     }
-    // }
+    animation: MoveUp 30s linear;
+    animation-delay: 0s;
+    @keyframes MoveUp {
+        0% {
+            left: -100vw;
+        }
+        100% {
+            left: 0vh;
+        }
+    }
 `
 const MountainLeft = styled.img`
     position:absolute;
@@ -50,16 +50,16 @@ const MountainCenter = styled.img`
   left:23vw;
   bottom:0vh;
   height: 35vw;
-  animation: MoveUp 1s linear;
-  animation-delay: 0s;
-  @keyframes MoveUp {
-    0% {
-      bottom: -35vh;
-    }
-    100% {
-      bottom: 0vh;
-    }
-  }
+  // animation: MoveUp 1s linear;
+  // animation-delay: 0s;
+  // @keyframes MoveUp {
+  //   0% {
+  //     bottom: -35vh;
+  //   }
+  //   100% {
+  //     bottom: 0vh;
+  //   }
+  // }
 `
 const MountainRight = styled.img`
     position:absolute;
