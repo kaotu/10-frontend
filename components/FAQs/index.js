@@ -9,7 +9,6 @@ import Color from "../Core/Color";
 
 const DivWhere = styled.div`
   top: 200px;
-  text-align: center;
   width: 100%;
 `;
 
