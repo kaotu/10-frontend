@@ -33,8 +33,7 @@ const Box = styled.div`
   }
 `
 
-const ContentRespon = () => (
-
+const ContentRespon = (props) => (
   <div className="container-fluid">
     <div className="row">
       <div className="col-3">
@@ -43,12 +42,12 @@ const ContentRespon = () => (
         </div>
       </div>
       <div className="col-9">
-        <Box>Q : อยากเป็นส่วนนึงของค่ายนี้มากๆ ต้องทำอย่างไร ?</Box>
+        <Box>{props.Q}</Box>
       </div>
     </div>
     <div className="row">
       <div className="col-9">
-        <Box>A : น้องๆ เพียงแค่ตอบคำถามในการสมัครด้วยตนเองเพื่อแสดงถึงตัวตนของน้องๆ และมีความตั้งใจในการตอบคำถาม</Box>
+        <Box>{props.A}</Box>
       </div>
       <div className="col-3">
         <div className="col img-responesive align-self-center">
@@ -56,6 +55,7 @@ const ContentRespon = () => (
         </div>
       </div>
     </div>
+
   </div>
 
 )

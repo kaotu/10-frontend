@@ -1,124 +1,91 @@
 import react from 'react'
 import styled from 'styled-components'
+import {compose, withState} from 'recompose'
 
+import {yak,mongkey} from '../Core/Color'
 
-const PositionMountain1 = styled.img`
-  position:absolute;
-  z-index: 1;
-  left:0px;
-  bottom:-16vh;
-  width: 40vw;
-  left: 50vw;
-  animation: MoveUp 1s linear;
-  animation-delay: 0s;
-  @media(max-width: 720px){
-    width:auto;
-    z-index: 3;
-    left: -80vw;
-    height: 80vh;
-    bottom:-37vh;
-  }
-  @keyframes MoveUp {
-    0% {
-      bottom: -100vh;
+const state = withState('check','setCheck',false)
+
+const setCheck = (callback, data) =>(
+  callback(data ? yak : mongkey)
+)
+
+const CloudBack = styled.img`
+    position:absolute;
+    z-index: 0;
+    left:0vw;
+    bottom:0vh;
+    height:33vh;
+    animation: MoveUp 1s linear;
+    animation-delay: 0s;
+    @keyframes MoveUp {
+        0% {
+            bottom: -100vh;
+        }
+        100% {
+            bottom: 0vh;
+        }
     }
-    100% {
-      bottom: -16vh;
-    }
-  }
 `
-const PositionMountain2 = styled.img`
-  position:absolute;
-  z-index: 3;
-  left:0px;
-  bottom:-16vh;
-  width: 60vw;
-  left: 15vw;
-  @media(max-width: 720px){
-    width:auto;
+const MountainLeft = styled.img`
+    position:absolute;
     z-index: 1;
-    left: -45vw;
-    height: 70vh;
-    bottom:-37vh;
-  }
-  animation: MoveUp 1s linear;
-  animation-delay: 0s;
-  @keyframes MoveUp {
-    0% {
-      bottom: -100vh;
+    left:0vw;
+    bottom:0vh;
+    height: 35vw;
+    animation: MoveRight 1s linear;
+    animation-delay: 0s;
+    @keyframes MoveRight {
+        0% {
+            left: -50vw;
+        }
+        100% {
+            left: 0vw;
+        }
     }
-    100% {
-      bottom: -16vh;
-    }
-  }
 `
-
-const PositionCloud1 = styled.img`
+const MountainCenter = styled.img`
   position:absolute;
   z-index: 2;
-  left:0px;
-  bottom:-16vh;
-  width:100vw;
-`
-const PositionCloud2 = styled.img`
-  position:absolute;
-  z-index: 6;
-  left:0px;
-  bottom:-16vh;
-  width:100vw;
-`
-const PositionStar = styled.img`
-  position:absolute;
-  z-index: 0;
-  left:0px;
-  top:0vh;
-  width:100vw;
-`
-const PositionMonkey = styled.img`
-  position:absolute;
-  z-index: 5;
-  bottom:15vh;
-  width:auto;
-  height: 65vh;
-  top:35vh;
-  left:5vw;
-  @media(max-width: 720px){
-    width:auto;
-    height: 20vh;
-    bottom:5vh;
+  left:23vw;
+  bottom:0vh;
+  height: 35vw;
+  animation: MoveUp 1s linear;
+  animation-delay: 0s;
+  @keyframes MoveUp {
+    0% {
+      bottom: -35vh;
+    }
+    100% {
+      bottom: 0vh;
+    }
   }
 `
-const PositionGiant = styled.img`
-  position:absolute;
-  z-index: 7;
-  right:0vw;
-  top:35vh;
-  width:auto;
-  height: 65vh;
-  @media(max-width: 720px){
-    width:auto;
-    height: 20vh;
-    bottom:5vh;
-  }
+const MountainRight = styled.img`
+    position:absolute;
+    z-index: 3;
+    right:0vw;
+    bottom:0vh;
+    height: 35vw;
+    animation: MoveLeft 1s linear;
+    animation-delay: 0s;
+    @keyframes MoveLeft {
+        0% {
+            right: -50vw;
+        }
+        100% {
+            right: 0vw;
+        }
+    }
 `
-const ScrollLing = styled.img`
+const ChooseMonkey = styled.img`
   position: absolute;
-  z-index: 5;
+  z-index: 4;
   top: 30vh;
-  left: 8vw;
+  left: 13vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
-`
-const ScrollYak = styled.img`
-  position: absolute;
-  z-index: 5;
-  top: 30vh;
-  right: 11vw;
-  width:3vw;
-  animation: MoveUpDown 1s linear infinite;
-  cursor:pointer; 
-
   @keyframes MoveUpDown {
     0% {
       top: 30vh;
@@ -131,31 +98,98 @@ const ScrollYak = styled.img`
     }
   }
 `
-const PositionScrolldown = styled.img`
-position:absolute;
-z-index: 8;
-width:3vw;
-top:90vh;
-left:50vw;
-cursor:pointer;  
+const Monkey = styled.img`
+  position:absolute;
+  z-index: 4;
+  bottom:0vh;
+  height: 65vh;
+  cursor:pointer;
+  left:10vw;
+  @media(max-width: 720px){
+    height: 20vh;
+  }
 `
-
+const ChooseGiant = styled.img`
+  position: absolute;
+  z-index: 4;
+  top: 30vh;
+  right: 13vw;
+  width:3vw;
+  animation: MoveUpDown 1s linear infinite;
+  cursor:pointer; 
+`
+const Giant = styled.img`
+  position:absolute;
+  z-index: 4;
+  bottom:0vh;
+  height: 65vh;
+  cursor:pointer;
+  right:10vw;
+  @media(max-width: 720px){
+    height: 20vh;
+  }
+`
+const CloudBottom = styled.img`
+    position:absolute;
+    z-index: 5;
+    left:0vw;
+    bottom:-24vh;
+    width: 120vw;
+    animation: MoveUp 1s linear;
+    animation-delay: 0s;
+    @keyframes MoveUp {
+        0% {
+            bottom: -100vh;
+            
+        }
+        100% {
+            bottom: -24vh;
+        }
+    }
+`
+const Logo = styled.img`
+  width: 50%;
+  position: absolute;
+  z-index: 6;
+  left: 25vw;
+  top:3vh;
+  animation-name: FadeOut;
+  animation-duration: 2s;
+  @media(max-width: 720px){
+    width: 90%;
+	  left: 5vw;
+  }
+  @keyframes FadeOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`
+const Scrolldown = styled.img`
+    position:absolute;
+    z-index: 7;
+    width:3vw;
+    bottom:5vh;
+    left:50vw;
+    cursor:pointer;  
+`
 const Background = () => (
-  <div>
-    {/* <PositionStar src='/static/image/star.svg'/> */}
-    <PositionMountain1 src='/static/image/moutain.svg' />
-    {/* <PositionCloud1 src='/static/image/cloud-bottom.svg' /> */}
-    <PositionMountain2 src='/static/image/moutain.svg' />
-    
-    <PositionMonkey src='/static/image/mongkey-Home.svg' />
-    <ScrollLing src='/static/image/double-arrow-down-128.png'/>
-    <PositionGiant src='/static/image/giantwithcloud.svg' />
-    <ScrollYak src='/static/image/double-arrow-down-128.png'/>
-    {/* <PositionCloud2 src='/static/image/cloud-bottom-Front.svg'/> */}
-    
-    
-    <PositionScrolldown src="/static/image/icon-arrow-white-down.png"/>
-  </div>
+    <div>
+        <CloudBack src='/static/image/cloud-bottom.svg'/>
+        <MountainLeft src='/static/image/Mongkey.svg'/>
+        <MountainCenter src='/static/image/moutain.svg'/>
+        <MountainRight src='/static/image/Giant.svg'/>
+        <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
+        <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
+        <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
+        <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
+        <CloudBottom src='/static/image/CloudBottom.svg'/>
+        <Logo src="/static/image/WIPlogo.svg" />
+        <Scrolldown src='/static/image/ScrollDown.png'/>
+    </div>
 )
 
 export default Background

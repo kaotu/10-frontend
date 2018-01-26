@@ -9,10 +9,14 @@ import H2 from '../Core/FontH2'
 const Info = styled.div`
   margin-top: 5%;
 `
+const Test = styled.div`
+  padding: 2px;
+`
 
 const Icon = styled.img`
   @media (max-width:720px) {
     width: 50%;
+    padding: .2em;
   }
 `
 
@@ -23,7 +27,7 @@ const Mobile = styled.div`
 `
 
 const IconInfo = [
-  {icon : "/static/image/question.svg", text: "Java programming"},
+  {icon : "/static/image/question.svg", text: "Java Programming"},
   {icon : "/static/image/question.svg", text: "IT Fundamentals"},
   {icon : "/static/image/question.svg", text: "Network"},
   {icon : "/static/image/question.svg", text: "HTML5&CSS"}
@@ -62,10 +66,10 @@ const index = props => (
           <Info className="row text-center">
           { 
             IconInfo.map((info, i) => (
-              <div key={i} className="col-6 col-md-3 img-responesive ">
+              <Test key={i} className="col-6 col-md-3 img-responesive ">
                 <Icon src={info.icon}/>
                 <p>{info.text}</p>
-              </div>
+              </Test>
             ))
           }
           </Info>
