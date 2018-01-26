@@ -2,86 +2,112 @@ import react from 'react'
 import styled from 'styled-components'
 
 
-const PositionMountain = styled.img`
+const PositionMountain1 = styled.img`
   position:absolute;
+  z-index: 1;
   left:0px;
-  bottom:0vh;
-  height: 80vh;
-  left: 30vw;
-  top:23vh;
+  bottom:-16vh;
+  width: 40vw;
+  left: 50vw;
+  @media(max-width: 720px){
+    width:auto;
+    z-index: 3;
+    left: -80vw;
+    height: 80vh;
+    bottom:-37vh;
+  }
 `
-const PositionCloud = styled.img`
+const PositionMountain2 = styled.img`
   position:absolute;
+  z-index: 3;
   left:0px;
-  bottom:0vh;
-  width:95vw;
-  top:55vh;
+  bottom:-16vh;
+  width: 60vw;
+  left: 15vw;
+  @media(max-width: 720px){
+    width:auto;
+    z-index: 1;
+    left: -45vw;
+    height: 70vh;
+    bottom:-37vh;
+  }
+`
+
+const PositionCloud1 = styled.img`
+  position:absolute;
+  z-index: 2;
+  left:0px;
+  bottom:-16vh;
+  width:100vw;
+`
+const PositionCloud2 = styled.img`
+  position:absolute;
+  z-index: 6;
+  left:0px;
+  bottom:-16vh;
+  width:100vw;
 `
 const PositionStar = styled.img`
   position:absolute;
+  z-index: 0;
   left:0px;
   top:0vh;
   width:100vw;
 `
 const PositionMonkey = styled.img`
   position:absolute;
+  z-index: 5;
   bottom:15vh;
   width:auto;
-  height: 50vh;
-  top:50vh;
+  height: 65vh;
+  top:35vh;
   left:5vw;
   @media(max-width: 720px){
     width:auto;
-    right: 5vw;
     height: 20vh;
     bottom:5vh;
   }
 `
 const PositionGiant = styled.img`
   position:absolute;
-  right:5vh;
-  top:50vh;
+  z-index: 7;
+  right:0vw;
+  top:35vh;
   width:auto;
-  height: 50vh;
-  
+  height: 65vh;
+  @media(max-width: 720px){
+    width:auto;
+    height: 20vh;
+    bottom:5vh;
+  }
 `
-const PositionLing = styled.img`
+const ScrollLing = styled.img`
   position: absolute;
-  top: 42vh;
+  z-index: 5;
+  top: 30vh;
   left: 8vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
-
-  @keyframes MoveUpDown {
-    0% {
-      top: 42vh;
-    }
-    50% {
-      top: 40vh;
-    }
-    100% {
-      top: 42vh;
-    }
-  }
 `
-const PositionYak = styled.img`
+const ScrollYak = styled.img`
   position: absolute;
-  top: 42vh;
-  right: 10vw;
+  z-index: 5;
+  top: 30vh;
+  right: 11vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
 
   @keyframes MoveUpDown {
     0% {
-      top: 42vh;
+      top: 30vh;
     }
     50% {
-      top: 40vh;
+      top: 28vh;
     }
     100% {
-      top: 42vh;
+      top: 30vh;
     }
   }
 `
@@ -95,13 +121,18 @@ cursor:pointer;
 
 const Background = () => (
   <div>
-    <PositionLing src='/static/image/double-arrow-down-128.png'/>
-    <PositionYak src='/static/image/double-arrow-down-128.png'/>
-    {/* <PositionStar src='/static/image/star.svg'/> */}
-    {/* <PositionMountain src='/static/image/moutain.svg' /> */}
-    {/* <PositionCloud src='/static/image/cloud-bottom.svg' /> */}
+    <PositionStar src='/static/image/star.svg'/>
+    <PositionMountain1 src='/static/image/moutain.svg' />
+    <PositionCloud1 src='/static/image/cloud-bottom.svg' />
+    <PositionMountain2 src='/static/image/moutain.svg' />
+    
     <PositionMonkey src='/static/image/mongkey-Home.svg' />
+    <ScrollLing src='/static/image/double-arrow-down-128.png'/>
     <PositionGiant src='/static/image/giantwithcloud.svg' />
+    <ScrollYak src='/static/image/double-arrow-down-128.png'/>
+    <PositionCloud2 src='/static/image/cloud-bottom-Front.svg'/>
+    
+    
     <PositionScrolldown src="/static/image/icon-arrow-white-down.png"/>
   </div>
 )
