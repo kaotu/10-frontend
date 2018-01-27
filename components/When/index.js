@@ -71,8 +71,8 @@ const index = () => (
         <div className="row">
           <div className="col-12 col-sm-12 col-md-6 ">
             <Head>
-              <H1 className="text-center font-weight-bold">WHEN</H1>
-              <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
+              <H1 className="text-center">WHEN</H1>
+              <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
             </Head>
           </div>
           <div className="col-12 col-sm-12 col-md-12  ">

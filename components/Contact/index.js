@@ -67,7 +67,7 @@ const index = () => (
         <div className="row">
           <div className="col-md-12">
             <H1>Contact</H1>
-            <H2 className="font-weight-bold">ติดต่อเรา</H2>
+            <H2>ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />

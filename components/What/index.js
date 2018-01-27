@@ -55,8 +55,8 @@ const index = props => (
         </div>
         <div className="col-12 col-sm-12 col-md-6">
           <Mobile>
-            <H1 className="font-weight-bold">WHAT</H1>
-            <H2 className="font-weight-bold">ค่ายนี้คืออะไร ?</H2>
+            <H1>WHAT</H1>
+            <H2>ค่ายนี้คืออะไร ?</H2>
           </Mobile>
           <br />
           <p>

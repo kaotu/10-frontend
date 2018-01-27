@@ -34,8 +34,8 @@ const index = props => (
       <div className="container-fluid my-5">
         <div className="row">
           <div className="col-md-12 mt-4">
-            <H1 className="text-center font-weight-bold">FAQs</H1>
-            <H2 className="text-center font-weight-bold">คำถามที่พบบ่อย ?</H2>
+            <H1 className="text-center">FAQs</H1>
+            <H2 className="text-center">คำถามที่พบบ่อย ?</H2>
             <DisplayMoblie2 />
           </div>
         </div>
