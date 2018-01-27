@@ -33,6 +33,10 @@ const MountainLeft = styled.img`
     left:0vw;
     bottom:-5vh;
     width:100vw;
+    @media (max-width:720px) {
+      width:200vw;
+      z-index: 1;
+    }
     // animation: MoveRight 1s linear;
     // animation-delay: 0s;
     // @keyframes MoveRight {
@@ -50,6 +54,24 @@ const MountainCenter = styled.img`
   left:23vw;
   bottom:0vh;
   height: 35vw;
+  @media (max-width:720px) {
+    // width:250vw;
+    height:80vw;
+    margin-bottom: 0vw;
+    left:-14vw;
+  }
+  @media (max-width:560px) {
+    // width:250vw;
+    height:100vw;
+    margin-bottom: 0vw;
+    left:-30vw;
+  }
+  @media (max-width:420px) {
+    // width:250vw;
+    height:120vw;
+    margin-bottom: 0vw;
+    left:-45vw;
+  }
   // animation: MoveUp 1s linear;
   // animation-delay: 0s;
   // @keyframes MoveUp {
@@ -67,6 +89,10 @@ const MountainRight = styled.img`
     right:0vw;
     bottom:-15vh;
     width:100vw;
+    @media (max-width:720px) {
+      width:200vw;
+      z-index: 1;
+    }
     // animation: MoveLeft 1s linear;
     // animation-delay: 0s;
     // @keyframes MoveLeft {
@@ -106,7 +132,13 @@ const Monkey = styled.img`
   cursor:pointer;
   left:10vw;
   @media(max-width: 720px){
-    height: 20vh;
+    height: 40vh;
+  }
+  @media(max-width: 560px){
+    height: 35vh;
+  }
+  @media(max-width: 420px){
+    height: 30vh;
   }
 `
 const ChooseGiant = styled.img`
@@ -126,7 +158,13 @@ const Giant = styled.img`
   cursor:pointer;
   right:10vw;
   @media(max-width: 720px){
-    height: 20vh;
+    height: 42vh;
+  }
+  @media(max-width: 560px){
+    height: 36vh;
+  }
+  @media(max-width: 420px){
+    height: 30vh;
   }
 `
 const CloudBottom = styled.img`
