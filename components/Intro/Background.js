@@ -251,7 +251,7 @@ const Background = () => (
         <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
-        <LogoSIT src='/static/image/ตรามอ.png'/>
+        <LogoSIT src='/static/image/LogoSIT.png'/>
         <Scrolldown src='/static/image/ScrollDown.png'/>
     </div>
 )
