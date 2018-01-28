@@ -18,9 +18,10 @@ const Div = styled.div`
   height:10vh;
   padding:1em;
   top:10vw;
+  margin-bottom:10vh;
 `
 const Block = styled.div`
-  width:67vw;
+  width:70vw;
   height:15vh;
 `
 export default class AdaptiveHeight extends Component {
