@@ -51,26 +51,23 @@ const MountainLeft = styled.img`
 const MountainCenter = styled.img`
   position:absolute;
   z-index: 2;
-  left:23vw;
+  left:18vw;
   bottom:0vh;
   height: 35vw;
   @media (max-width:720px) {
-    // width:250vw;
     height:80vw;
     margin-bottom: 0vw;
-    left:-14vw;
+    left:-20vw;
   }
   @media (max-width:560px) {
-    // width:250vw;
     height:100vw;
     margin-bottom: 0vw;
-    left:-30vw;
+    left:-40vw;
   }
   @media (max-width:420px) {
-    // width:250vw;
     height:120vw;
     margin-bottom: 0vw;
-    left:-45vw;
+    left:-58vw;
   }
   // animation: MoveUp 1s linear;
   // animation-delay: 0s;
@@ -123,6 +120,9 @@ const ChooseMonkey = styled.img`
       top: 30vh;
     }
   }
+  @media(max-width: 720px){
+    margin-top : 55vw;
+  }
 `
 const Monkey = styled.img`
   position:absolute;
@@ -149,6 +149,9 @@ const ChooseGiant = styled.img`
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
+  @media(max-width: 720px){
+    margin-top : 55vw;
+  }
 `
 const Giant = styled.img`
   position:absolute;
@@ -216,7 +219,8 @@ const LogoSIT = styled.img`
   animation-duration: 2s;
   @media(max-width: 720px){
     width: 90%;
-	  left: 5vw;
+    left: 5vw;
+    top:23vh;
   }
 `
 const Scrolldown = styled.img`
@@ -243,7 +247,7 @@ const Background = () => (
     <div>
         <CloudBack src='/static/image/CloudBack.svg'/>
         <MountainLeft src='/static/image/MountainLeft.svg'/>
-        <MountainCenter src='/static/image/moutain.svg'/>
+        <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
         <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
