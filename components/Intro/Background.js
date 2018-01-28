@@ -10,21 +10,22 @@ const setCheck = (callback, data) =>(
   callback(data ? yak : mongkey)
 )
 
-const CloudBack = styled.img`
+const CloudBack = styled.div`
     position:absolute;
     z-index: 0;
-    left:0vw;
-    bottom:-20vh;
-    width: 100vw;
-    animation: MoveUp 30s linear;
-    animation-delay: 0s;
-    @keyframes MoveUp {
-        0% {
-            left: -100vw;
-        }
-        100% {
-            left: 0vh;
-        }
+    margin:0;
+    padding:0;
+    top: 30vh;
+    left: 0vw;
+    height:50vh;
+    width:100vw;
+    
+    background: url('/static/image/CloudBG.svg') repeat 0 0;
+    animation: 50s linear 0s normal none infinite animate;
+    background-repeat: repeat-x;
+    @keyframes animate {
+        from {background-position:0 0;}
+        to {background-position: 200vw 0;}
     }
 `
 const MountainLeft = styled.img`
@@ -127,10 +128,10 @@ const ChooseMonkey = styled.img`
 const Monkey = styled.img`
   position:absolute;
   z-index: 4;
-  bottom:0vh;
-  height: 65vh;
+  bottom:15vh;
+  height: 50vh;
   cursor:pointer;
-  left:10vw;
+  left:5vw;
   @media(max-width: 720px){
     height: 40vh;
   }
@@ -156,10 +157,10 @@ const ChooseGiant = styled.img`
 const Giant = styled.img`
   position:absolute;
   z-index: 4;
-  bottom:0vh;
-  height: 65vh;
+  bottom:8vh;
+  height: 60vh;
   cursor:pointer;
-  right:10vw;
+  right:5vw;
   @media(max-width: 720px){
     height: 42vh;
   }
@@ -245,14 +246,14 @@ const Scrolldown = styled.img`
 `
 const Background = (props) => (
     <div>
-        <CloudBack src='/static/image/CloudBack.svg'/>
+        <CloudBack/>
         <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
-        <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
+        <Monkey onClick={() => check.setCheck(false) } src='/static/image/Moling.svg'/>
         <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
-        <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
+        <Giant onClick={() => check.setCheck(true) }src='/static/image/Moyak.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>

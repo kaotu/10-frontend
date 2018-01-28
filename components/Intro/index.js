@@ -14,16 +14,16 @@ const Div = styled.div`
 
 const Index = (props) => (
   <div>
-  <BgIntro>
-    <div className="container-fluid">
-      <div className="row">
-        <Div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <Background/>
-        </Div>
-      </div>
-    </div>
-  </BgIntro>
-  <Sponsor/>
+      <BgIntro>
+        <div className="container-fluid">
+          <div className="row">
+            <Div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <Background/>
+            </Div>
+          </div>
+        </div>
+      </BgIntro>
+    <Sponsor/>
   </div>
 )
 
