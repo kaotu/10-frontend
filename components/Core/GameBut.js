@@ -14,7 +14,6 @@ const GameButton = styled.div`
   top:230px;          
   color: white;
   z-index: 2560;
-  
   @media(max-width:1200px) {
     width: 55px;            
     height: 65px;          
@@ -64,11 +63,11 @@ const IconGame = styled.img`
 
 
 const GameBut = () => (
-  <GameButton className="justify-content-center align-items-center" data-toggle="" data-target="#">
   <a href="https://game.wip.camp" target="_blank">
+  <GameButton className="justify-content-center align-items-center" data-toggle="" data-target="#">
        <Rotate><Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/></Rotate>
-  </a>
   </GameButton>
+  </a>
 )
 
 export default GameBut
