@@ -51,7 +51,7 @@ const index = props => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6">
           <Cloud />
-          <IMG src="/static/image/fullHill.svg" />
+          <IMG src="/static/image/Whatmoutain.svg" />
         </div>
         <div className="col-12 col-sm-12 col-md-6">
           <Mobile>

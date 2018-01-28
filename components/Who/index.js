@@ -100,7 +100,7 @@ const index = props => (
           </HideDesktop>
         </div>
         <div className="col-12 col-md-6 order-1 order-md-2">
-          <img src="/static/image/halfHill.svg" />
+          <img src="/static/image/Whomoutain.svg" />
         </div>
       </div>
     </div>

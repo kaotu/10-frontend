@@ -34,7 +34,7 @@ const index = () => (
     <div className="container-fluid my-5">
       <div className="row">
         <div className="col-md-6 text-center mt-4">
-          <Story src="static/image/LookOver-01.svg" />
+          <Story src="../../static/image/WhereStory.svg" />
         </div>
         <div className="col-md-6">
           <Mobile className="text-center mt-4">
