@@ -33,6 +33,10 @@ const MountainLeft = styled.img`
     left:0vw;
     bottom:-5vh;
     width:100vw;
+    @media (max-width:720px) {
+      width:200vw;
+      z-index: 1;
+    }
     // animation: MoveRight 1s linear;
     // animation-delay: 0s;
     // @keyframes MoveRight {
@@ -47,9 +51,24 @@ const MountainLeft = styled.img`
 const MountainCenter = styled.img`
   position:absolute;
   z-index: 2;
-  left:23vw;
+  left:18vw;
   bottom:0vh;
   height: 35vw;
+  @media (max-width:720px) {
+    height:80vw;
+    margin-bottom: 0vw;
+    left:-20vw;
+  }
+  @media (max-width:560px) {
+    height:100vw;
+    margin-bottom: 0vw;
+    left:-40vw;
+  }
+  @media (max-width:420px) {
+    height:120vw;
+    margin-bottom: 0vw;
+    left:-58vw;
+  }
   // animation: MoveUp 1s linear;
   // animation-delay: 0s;
   // @keyframes MoveUp {
@@ -67,6 +86,10 @@ const MountainRight = styled.img`
     right:0vw;
     bottom:-15vh;
     width:100vw;
+    @media (max-width:720px) {
+      width:200vw;
+      z-index: 1;
+    }
     // animation: MoveLeft 1s linear;
     // animation-delay: 0s;
     // @keyframes MoveLeft {
@@ -97,6 +120,9 @@ const ChooseMonkey = styled.img`
       top: 30vh;
     }
   }
+  @media(max-width: 720px){
+    margin-top : 55vw;
+  }
 `
 const Monkey = styled.img`
   position:absolute;
@@ -106,7 +132,13 @@ const Monkey = styled.img`
   cursor:pointer;
   left:10vw;
   @media(max-width: 720px){
-    height: 20vh;
+    height: 40vh;
+  }
+  @media(max-width: 560px){
+    height: 35vh;
+  }
+  @media(max-width: 420px){
+    height: 30vh;
   }
 `
 const ChooseGiant = styled.img`
@@ -117,6 +149,9 @@ const ChooseGiant = styled.img`
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
+  @media(max-width: 720px){
+    margin-top : 55vw;
+  }
 `
 const Giant = styled.img`
   position:absolute;
@@ -126,7 +161,13 @@ const Giant = styled.img`
   cursor:pointer;
   right:10vw;
   @media(max-width: 720px){
-    height: 20vh;
+    height: 42vh;
+  }
+  @media(max-width: 560px){
+    height: 36vh;
+  }
+  @media(max-width: 420px){
+    height: 30vh;
   }
 `
 const CloudBottom = styled.img`
@@ -178,7 +219,8 @@ const LogoSIT = styled.img`
   animation-duration: 2s;
   @media(max-width: 720px){
     width: 90%;
-	  left: 5vw;
+    left: 5vw;
+    top:23vh;
   }
 `
 const Scrolldown = styled.img`
@@ -201,11 +243,11 @@ const Scrolldown = styled.img`
       }
     }
 `
-const Background = () => (
+const Background = (props) => (
     <div>
         <CloudBack src='/static/image/CloudBack.svg'/>
         <MountainLeft src='/static/image/MountainLeft.svg'/>
-        <MountainCenter src='/static/image/moutain.svg'/>
+        <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
         <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
@@ -213,9 +255,11 @@ const Background = () => (
         <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
-        <LogoSIT src='/static/image/ตรามอ.png'/>
+        <LogoSIT src='/static/image/LogoSIT.png'/>
         <Scrolldown src='/static/image/ScrollDown.png'/>
     </div>
 )
 
-export default Background
+const BackgroundCompose = compose (state)(Background)
+
+export default BackgroundCompose

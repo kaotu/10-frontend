@@ -67,7 +67,7 @@ const index = () => (
         <div className="row">
           <div className="col-md-12">
             <H1>Contact</H1>
-            <H2 className="font-weight-bold">ติดต่อเรา</H2>
+            <H2>ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
@@ -76,19 +76,19 @@ const index = () => (
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
                 <a href="https://www.facebook.com/wipcamp/">
-                  <ImgCenter src="/static/image/Facebook.svg" />
+                  <ImgCenter src="/static/image/facebook ci logo.png" />
                 </a>
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
-                  <ImgCenter src="/static/image/Lineicon.svg" />
+                  <ImgCenter src="/static/image/LINEa ci logo.png" />
                 </a>
                 <a href="https://twitter.com/WIPCamp">
-                  <ImgCenter src="/static/image/Twitter.svg" />
+                  <ImgCenter src="/static/image/Twiiter ci logo.png" />
                 </a>
                 <a href="https://www.instagram.com/wipcamp/">
-                  <ImgCenter src="/static/image/Ig.svg" />
+                  <ImgCenter src="/static/image/ig ci logo.png" />
                 </a>
                 <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
-                  <ImgCenter src="/static/image/Youtube.svg" />
+                  <ImgCenter src="/static/image/Youtube ci logo.png" />
                 </a>                
                 <Linerespon />
               </Line>

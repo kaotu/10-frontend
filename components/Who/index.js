@@ -73,8 +73,8 @@ const index = props => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H1 className="font-weight-bold">WHO</H1>
-            <H2 className="font-weight-bold">ค่ายนี้เหมาะกับใคร</H2>
+            <H1 className="text-center">WHO</H1>
+            <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">
@@ -100,7 +100,7 @@ const index = props => (
           </HideDesktop>
         </div>
         <div className="col-12 col-md-6 order-1 order-md-2">
-          <img src="/static/image/halfHill.svg" />
+          <img src="/static/image/Whomoutain.svg" />
         </div>
       </div>
     </div>

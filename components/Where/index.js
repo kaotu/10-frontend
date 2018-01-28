@@ -34,12 +34,12 @@ const index = () => (
     <div className="container-fluid my-5">
       <div className="row">
         <div className="col-md-6 text-center mt-4">
-          <Story src="static/image/LookOver-01.svg" />
+          <Story src="../../static/image/WhereStory.svg" />
         </div>
         <div className="col-md-6">
           <Mobile className="text-center mt-4">
-            <H1 className="font-weight-bold">WHERE</H1>
-            <H2 className="font-weight-bold">ค่ายนี้จัดที่ไหน ?</H2>
+            <H1>WHERE</H1>
+            <H2>ค่ายนี้จัดที่ไหน ?</H2>
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >

@@ -46,12 +46,6 @@ const SmallSponsor = [
 const Topic = H1.extend`
   font-size: 3em;
 `
-const Detail = styled.div`
-  position: absolute;
-  width: 100vw;
-  left: 10%;
-  z-index:0;
-`
 
 const Index = () => (
   <Bg className="d-flex align-items-center">
