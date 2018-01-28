@@ -239,7 +239,7 @@ const Scrolldown = styled.img`
       }
     }
 `
-const Background = () => (
+const Background = (props) => (
     <div>
         <CloudBack src='/static/image/CloudBack.svg'/>
         <MountainLeft src='/static/image/MountainLeft.svg'/>
@@ -256,4 +256,6 @@ const Background = () => (
     </div>
 )
 
-export default Background
+const BackgroundCompose = compose (state)(Background)
+
+export default BackgroundCompose
