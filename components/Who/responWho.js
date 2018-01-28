@@ -17,6 +17,7 @@ const Div = styled.div`
   width:90vw;
   height:10vh;
   padding:1em;
+  top:10vw;
 `
 const Block = styled.div`
   width:67vw;

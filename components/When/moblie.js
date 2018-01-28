@@ -3,13 +3,18 @@ import Bg from '../Core/BgStory'
 import styled from 'styled-components'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
+import Color from '../Core/Color'
 
 const Img = styled.img`
+width:80vw;
+position:relative;
+top:0;
+right:0;
 @media (max-width: 720px) {
-    width:90vw;
-    right:-20vw;
-    position:absolute;
+    width:80vw;
+    position:relative;
     top:0;
+    right:0;
 }
 `
 const Front = styled.p`
@@ -17,48 +22,49 @@ const Front = styled.p`
   margin-left:40vw;   
 `
 const Box1 = styled.div`
+position:absolute;
+background-color:white;
+opacity:0.5;
+width:22vw;
+top:42vh;
+left:0vw;
+z-index:2;  
+text-align:center;
 @media (max-width: 720px) {
-    position:absolute;
-    background-color:white;
-    opacity:0.5;
-    width:22vw;
-    top:42vh;
-    left:5vw;
-    z-index:2;  
-    text-align:center;
+    
 } 
 `
 const Box2 = styled.div`
+position:absolute;
+background-color:transparent;
+width:20vw;
+top:1vh;
+right:30vw;
+z-index:2;
+text-align:center;
 @media (max-width: 720px) {
-  position:absolute;
-  background-color:transparent;
-  width:20vw;
-  top:1vh;
-  left:67vw;
-  z-index:2;
-  text-align:center;
 }
 `
 const Box3 = styled.div`
-@media (max-width: 720px) {
-  position:absolute;
-  background-color:transparent;
-  width:20vw;
-  top:10vh;
-  left:58vw;
-  z-index:2;
-  text-align:center;
+position:absolute;
+background-color:transparent;
+width:20vw;
+top:10vh;
+right:35vw;
+z-index:2;
+text-align:center;
+ @media (max-width: 720px) {
 }
 `
 const Box4 = styled.div`
-@media (max-width: 720px) {
-  position:absolute;
-  background-color:transparent;
-  width:20vw;
-  top:20vh;
-  left:48vw;
-  z-index:2;
-  text-align:center;
+position:absolute;
+background-color:transparent;
+width:20vw;
+top:20vh;
+right:45vw;
+z-index:2;
+text-align:center;
+ @media (max-width: 720px) {
 }
 `
 const Div = styled.div`{
@@ -67,7 +73,7 @@ const Div = styled.div`{
       }
 `
 const Moblie = () => (
-    <Bg bgColor="#d5eff2" className="d-flex">
+    <Bg bgColor={Color.mongkey.when}  className="d-flex">
         <div className="container-fluid">
             <div className="row">
                 <Div className="col-12 col-sm-12 col-md-12">
@@ -75,7 +81,7 @@ const Moblie = () => (
                     <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
                 </Div>
                 <div className="col-12 col-sm-12 col-md-12">
-                    <Img src="/static/image/Climing.svg" className="rounded float-right" alt="Responsive image" />
+                    <Img src="/static/image/Climming.svg" className="rounded float-right"  />
                         <Box1 className="text center">
                         <p>31 ม.ค. 61 <br /> วันค่าย</p>
                         </Box1>

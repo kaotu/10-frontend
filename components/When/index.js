@@ -34,7 +34,7 @@ const Box2 = styled.div`
   background-color:transparent;
   width:10vw;
   top:5vh;
-  left:76vw;
+  left:74vw;
   z-index:2;
 `
 const Box3 = styled.div`
@@ -76,7 +76,7 @@ const index = () => (
             </Head>
           </div>
           <div className="col-12 col-sm-12 col-md-12  ">
-            <Img src="/static/image/Climing.svg" className="rounded float-right" />
+            <Img src="/static/image/Climming.svg" className="rounded float-right" />
             <Box1 className="text-center">
               <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
             </Box1>
