@@ -76,19 +76,19 @@ const index = () => (
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
                 <a href="https://www.facebook.com/wipcamp/">
-                  <ImgCenter src="/static/image/Facebook.svg" />
+                  <ImgCenter src="/static/image/facebook ci logo.png" />
                 </a>
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
-                  <ImgCenter src="/static/image/Lineicon.svg" />
+                  <ImgCenter src="/static/image/LINEa ci logo.png" />
                 </a>
                 <a href="https://twitter.com/WIPCamp">
-                  <ImgCenter src="/static/image/Twitter.svg" />
+                  <ImgCenter src="/static/image/Twiiter ci logo.png" />
                 </a>
                 <a href="https://www.instagram.com/wipcamp/">
-                  <ImgCenter src="/static/image/Ig.svg" />
+                  <ImgCenter src="/static/image/ig ci logo.png" />
                 </a>
                 <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
-                  <ImgCenter src="/static/image/Youtube.svg" />
+                  <ImgCenter src="/static/image/Youtube ci logo.png" />
                 </a>                
                 <Linerespon />
               </Line>
