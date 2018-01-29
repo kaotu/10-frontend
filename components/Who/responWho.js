@@ -13,16 +13,12 @@ const Img = styled.img`
   width:15vw;
   
 `
-const Div = styled.div`
-  width:90vw;
-  height:10vh;
-  padding:1em;
-  top:10vw;
-  margin-bottom:10vh;
-`
 const Block = styled.div`
   width:70vw;
   height:15vh;
+`
+const Margin = styled.div`
+  margin-left : -40px;
 `
 export default class AdaptiveHeight extends Component {
   render() {
@@ -36,30 +32,28 @@ export default class AdaptiveHeight extends Component {
     };
     return (
       <div className="container">
-        <Div className="row">
-          <div className="col">
+          <div className=" col">
             <Slider {...settings}>
             {
               IconData.map((data, i)=> (
               <div key={i} className="container-fluid px-0">
-                <div className="row justify-content-center">
+                <Margin className="row justify-content-center">
                     <div className="col-3">
                       <Img src={data.image}/>
                     </div>
-                    <Block>
+                    <Block className="row">
                       <div className="col-9">
                       <strong>{data.topic}</strong>
                       <br/>
                       <span>{data.content}</span>
                       </div>
                     </Block>  
-                  </div>
+                  </Margin>
               </div>
               ))
             }
             </Slider>
           </div>
-          </Div>
       </div>
     );
   }

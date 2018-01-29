@@ -57,13 +57,14 @@ const ContentBg = Bg.extend`
 `
 
 const FooterBg = Bg.extend`
-  min-height: 10vh;  
+  min-height: 10vh;
+  background-color:#154051;  
 `
 
 const index = () => (
   <DivWhere>
     <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
             <H1>Contact</H1>
@@ -107,7 +108,7 @@ const index = () => (
       </div>
     </ContentBg>
     
-    <FooterBg className="d-flex justify-content-center align-items-center">    
+    <FooterBg className="d-flex justify-content-center align-items-center text-white">    
     <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
     </FooterBg>
   </DivWhere>
