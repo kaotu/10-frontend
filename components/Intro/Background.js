@@ -141,21 +141,23 @@ const ChooseMonkey = styled.img`
     }
   }
   @media(max-width: 720px){
-    margin-top : 55vw;
+    margin-top : 50vw;
+    left: 23vw;
+    width:5vw;
   }
 `
 const Monkey = styled.img`
   position:absolute;
   z-index: 4;
-  bottom:15vh;
+  bottom:8vh;
   height: 50vh;
   cursor:pointer;
   left:5vw;
   @media(max-width: 720px){
-    height: 40vh;
+    height: 42vh;
   }
   @media(max-width: 560px){
-    height: 35vh;
+    height: 36vh;
   }
   @media(max-width: 420px){
     height: 30vh;
@@ -170,7 +172,9 @@ const ChooseGiant = styled.img`
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
   @media(max-width: 720px){
-    margin-top : 55vw;
+    margin-top : 50vw;
+    right: 23vw;
+    width:5vw;
   }
 `
 const Giant = styled.img`

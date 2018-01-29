@@ -57,7 +57,8 @@ const ContentBg = Bg.extend`
 `
 
 const FooterBg = Bg.extend`
-  min-height: 10vh;  
+  min-height: 10vh;
+  background-color:#154051;  
 `
 
 const index = () => (
