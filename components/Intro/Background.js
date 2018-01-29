@@ -21,7 +21,26 @@ const CloudBack = styled.div`
     width:100vw;
     
     background: url('/static/image/CloudBG.svg') repeat 0 0;
-    animation: 50s linear 0s normal none infinite animate;
+    background-position: 20vw 0;
+    animation: 100s linear 0s normal none infinite animated;
+    background-repeat: repeat-x;
+    @keyframes animated {
+        from {background-position: 20vw 0;}
+        to {background-position: 220vw 0;}
+    }
+`
+const CloudBack1 = styled.div`
+    position:absolute;
+    z-index: 0;
+    margin:0;
+    padding:0;
+    top: 30vh;
+    left: 0vw;
+    height:50vh;
+    width:100vw;
+    
+    background: url('/static/image/CloudBG.svg') repeat 0 0;
+    animation: 80s linear 0s normal none infinite animate;
     background-repeat: repeat-x;
     @keyframes animate {
         from {background-position:0 0;}
@@ -251,6 +270,7 @@ const Scrolldown = styled.img`
 const Background = (props) => (
     <div>
         <CloudBack/>
+        <CloudBack1/>
         <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>

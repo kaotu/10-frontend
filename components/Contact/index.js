@@ -63,7 +63,7 @@ const FooterBg = Bg.extend`
 const index = () => (
   <DivWhere>
     <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
             <H1>Contact</H1>
