@@ -7,6 +7,7 @@ import Block from "./Block"
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
+import Router from 'next/router'
 
 const state = withState("checkButton", "setCheck", 0)
 
@@ -24,10 +25,12 @@ const Content = [
 ]
 const Image = styled.img`
     width:7vw;
+    transition:all 550ms ease-in-out;
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
   }
+    
 `
 const IconData = [
   { id: 0, image: "/static/image/edu.png" },
@@ -48,6 +51,7 @@ const Icon = styled.div`
   cursor: pointer;
   margin-left: 1%;
   margin-right: 1%;
+ 
 `
 const HideMobile = styled.div`
   @media (max-width: 720px) {
@@ -67,6 +71,7 @@ const Mobile = styled.div`
   }
 `
 
+
 const index = props => (
   <Bg bgColor={Color.mongkey.who} who className="d-flex align-items-center">
     <div className="container">
@@ -81,7 +86,7 @@ const index = props => (
               {
                 IconData.map((data, i) => (
                 <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <Image src={data.image} />
+                  <Image src={data.image}/>
                 </div>
               ))
               }
