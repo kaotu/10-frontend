@@ -149,7 +149,7 @@ const ChooseMonkey = styled.img`
 const Monkey = styled.img`
   position:absolute;
   z-index: 4;
-  bottom:8vh;
+  bottom:14vh;
   height: 50vh;
   cursor:pointer;
   left:5vw;
@@ -161,6 +161,7 @@ const Monkey = styled.img`
   }
   @media(max-width: 420px){
     height: 30vh;
+    bottom:12vh;
   }
 `
 const ChooseGiant = styled.img`
@@ -192,6 +193,7 @@ const Giant = styled.img`
   }
   @media(max-width: 420px){
     height: 30vh;
+    bottom:10vh;
   }
 `
 const CloudBottom = styled.img`
