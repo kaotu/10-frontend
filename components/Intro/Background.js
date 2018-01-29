@@ -274,9 +274,9 @@ const Background = (props) => (
         <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
-        <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
+        <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
         <Monkey onClick={() => check.setCheck(false) } src='/static/image/Moling.svg'/>
-        <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
+        <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
         <Giant onClick={() => check.setCheck(true) }src='/static/image/Moyak.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
