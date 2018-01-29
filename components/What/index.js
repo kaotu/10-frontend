@@ -63,9 +63,9 @@ const IMG = styled.img`
       }
   @media (min-width:1200px){
     position: absolute;
-    margin-top : -3vw;
-    height : 40vw;
-    margin-left : -30vw;
+    margin-top : -10vw;
+    height : 65vw;
+    margin-left : -40vw;
     border-top : -100px;
       }
 

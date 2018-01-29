@@ -27,7 +27,11 @@ const Box = styled.div`
   margin-bottom:1vw;
   border-radius: 10px; 
   @media (max-width:720px) {
+<<<<<<< HEAD
     width:45vw;
+=======
+    width:52vw;
+>>>>>>> ca3ad7990d888fe2df3ca2fee82ae6edc1bf7d26
   }
 `
 
