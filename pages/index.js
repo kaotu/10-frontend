@@ -18,7 +18,7 @@ const index = () => (
 		<section id="home">
 			<Intro />
 		</section>
-		<section>
+		<section id="sponsor">
 			<Sponsor />
 		</section>
 		<Navbar />
