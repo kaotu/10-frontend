@@ -108,7 +108,7 @@ const index = () => (
       </div>
     </ContentBg>
     
-    <FooterBg className="d-flex justify-content-center align-items-center">    
+    <FooterBg className="d-flex justify-content-center align-items-center text-white">    
     <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
     </FooterBg>
   </DivWhere>

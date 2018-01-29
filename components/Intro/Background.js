@@ -149,7 +149,7 @@ const ChooseMonkey = styled.img`
 const Monkey = styled.img`
   position:absolute;
   z-index: 4;
-  bottom:8vh;
+  bottom:14vh;
   height: 50vh;
   cursor:pointer;
   left:5vw;
@@ -161,6 +161,7 @@ const Monkey = styled.img`
   }
   @media(max-width: 420px){
     height: 30vh;
+    bottom:12vh;
   }
   
 `
@@ -193,6 +194,7 @@ const Giant = styled.img`
   }
   @media(max-width: 420px){
     height: 30vh;
+    bottom:10vh;
   }
 `
 const CloudBottom = styled.img`
@@ -275,14 +277,14 @@ const Background = (props) => (
         <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
-        <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
+        <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
         <Monkey onClick={() => check.setCheck(false) } src='/static/image/Moling.svg'/>
-        <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
+        <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
         <Giant onClick={() => check.setCheck(true) }src='/static/image/Moyak.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>
-        <Scrolldown src='/static/image/ScrollDown.png'/>
+        {/* <Scrolldown src='/static/image/ScrollDown.png'/> */}
     </div>
 )
 

@@ -25,6 +25,9 @@ const IconData = [
   { id: 3, image: '/static/image/night.png', topic: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้' , content: 'ตลอดระยะเวลา 5 วัน'},
 ]
 
+const Margin = styled.div`
+  margin-left : -40px;
+`
 export default class AdaptiveHeight extends Component {
   render() {
     var settings = {
@@ -37,30 +40,28 @@ export default class AdaptiveHeight extends Component {
     };
     return (
       <div className="container">
-        <Div className="row">
-          <div className="col">
+          <div className=" col">
             <Slider {...settings}>
             {
               IconData.map((data, i)=> (
               <div key={i} className="container-fluid px-0">
-                <div className="row justify-content-center">
+                <Margin className="row justify-content-center">
                     <div className="col-3">
                       <Img src={data.image} />
                     </div>
-                    <Block>
+                    <Block className="row">
                       <div className="col-9">
                       <strong>{data.topic}</strong>
                       <br/>
                       <span>{data.content}</span>
                       </div>
                     </Block>  
-                  </div>
+                  </Margin>
               </div>
               ))
             }
             </Slider>
           </div>
-          </Div>
       </div>
     );
   }
