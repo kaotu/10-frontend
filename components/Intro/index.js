@@ -3,10 +3,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-import BgIntro from '../BgIntro'
+import BgIntro from '../Intro/BgIntro'
 import LogoSIT from './LogoSIT'
 import Background from './Background'
-import Sponsor from '../Sponsor/index'
 
 const Div = styled.div`
   height: 100vh;
@@ -23,7 +22,6 @@ const Index = (props) => (
           </div>
         </div>
       </BgIntro>
-    <Sponsor/>
   </div>
 )
 
