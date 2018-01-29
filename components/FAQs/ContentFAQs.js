@@ -40,7 +40,7 @@ const Content = () => (
         <div key={i}>
           <div className="row d-flex">
             <div className="col img-responesive align-self-center">
-              <ImgLefe src="/static/image/question.svg" />
+              <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
             </div>
             <div className="col-6">
               <Box><div dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
@@ -55,7 +55,7 @@ const Content = () => (
               <Box><div dangerouslySetInnerHTML={{__html: data.A}} /></Box>
             </div>
             <div className="col img-responesive align-self-center">
-              <ImgRight src="/static/image/question.svg" />
+              <ImgRight src="/static/image/yakscore-new-01.svg" />
             </div>
           </div>
         </div>

@@ -66,14 +66,14 @@ const Navbar = () => (
   <NavItem className="sticky-top">
     <Burger />
     <div>
-      <div className="navbar navbar-expand-lg">
+      <div className="navbar navbar-expand-lg ">
         <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
           <div className="navbar-nav  justify-content-center ">
             {nav.map((nav, i) => (
-              <LinkItem key={i} onClick={() => navLink(nav.to)} className="nav-item nav-link text-center"  >{nav.text}</LinkItem>
+              <LinkItem key={i} onClick={() => navLink(nav.to)} className="nav-item nav-link text-center "  >{nav.text}</LinkItem>
             ))}
             {/* <LinkItem className="nav-item nav-link text-center " href="#what">WHAT</LinkItem>
             <LinkItem className="nav-item nav-link text-center " href="#">WHO</LinkItem>

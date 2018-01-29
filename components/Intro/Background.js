@@ -163,6 +163,7 @@ const Monkey = styled.img`
     height: 30vh;
     bottom:12vh;
   }
+  
 `
 const ChooseGiant = styled.img`
   position: absolute;
