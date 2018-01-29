@@ -37,10 +37,10 @@ const IconData = [
 ]
 
 const PositionTextBox =[
-  "12.7%",
-  "39.4%",
-  "65.25%",
-  "91.7%"
+  "12%",
+  "36.5%",
+  "60.5%",
+  "85.5%"
 ]
 
 const Icon = styled.div`
