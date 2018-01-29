@@ -74,12 +74,6 @@ const Navbar = () => (
             {nav.map((nav, i) => (
               <LinkItem key={i} onClick={() => navLink(nav.to)} className="nav-item nav-link text-center"  >{nav.text}</LinkItem>
             ))}
-            {/* <LinkItem className="nav-item nav-link text-center " href="#what">WHAT</LinkItem>
-            <LinkItem className="nav-item nav-link text-center " href="#">WHO</LinkItem>
-            <LinkItem className="nav-item nav-link text-center " href="#where">WHERE</LinkItem>
-            <LinkItem className="nav-item nav-link text-center" href="#when">WHEN</LinkItem>
-            <LinkItem className="nav-item nav-link text-center " href="#faqs">FAQs</LinkItem>
-            <LinkItem className="nav-item nav-link text-center " href="#contact">CONTACT</LinkItem> */}
           </div>
         </div>
         <a href='https://itim.wip.camp' target="_blank">
