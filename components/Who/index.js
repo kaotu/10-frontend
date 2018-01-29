@@ -66,10 +66,13 @@ const Mobile = styled.div`
     margin-bottom : 25px;
   }
 `
+const Padding = styled.div`
+  padding : 4vw;
+`
 
 const index = props => (
   <Bg bgColor={Color.mongkey.who} who className="d-flex align-items-center">
-    <div className="container">
+    <Padding className="container-fluid">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
@@ -103,7 +106,7 @@ const index = props => (
           <img src="/static/image/Whomoutain.svg" />
         </div>
       </div>
-    </div>
+    </Padding>
   </Bg>
 );
 export default compose(state)(index)
