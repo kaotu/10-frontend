@@ -3,24 +3,22 @@ import styled from 'styled-components'
 import Content from '../FAQs/ContentFAQs'
 
 const ImgLefe = styled.img`
-  width:5vw;
-  margin-left:8vw;
+  width:10vw;
   @media (max-width:720px) {
-    width:8vw;
+    width:17vw;
     margin: auto;
   }
 `
 const ImgRight = styled.img`
   width:5vw;
-  margin-left:1vw;
+  margin-left:0vw;
   @media (max-width:720px) {
-    width:8vw;
+    width:17vw;
     margin: auto;
   }  
 `
 
 const Box = styled.div`
-  width: 46vw;
   min-height: 10vw;    
   padding: 1vw;
   background-color:#FBFBEF;
@@ -29,29 +27,30 @@ const Box = styled.div`
   margin-bottom:1vw;
   border-radius: 10px; 
   @media (max-width:720px) {
-    width:42vw;
+    width:45vw;
   }
 `
+
 
 const ContentRespon = (props) => (
   <div className="container-fluid">
     <div className="row">
-      <div className="col-3">
+      <div className="col-4">
         <div className="img-responesive align-self-center">
-          <ImgLefe src="/static/image/question.svg" />
+          <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
         </div>
       </div>
-      <div className="col-9">
+      <div className="col-8">
         <Box><div dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
       </div>
     </div>
     <div className="row">
-      <div className="col-9">
+      <div className="col-8">
         <Box><div dangerouslySetInnerHTML={{__html: props.A}}/></Box>
       </div>
-      <div className="col-3">
-        <div className="col img-responesive align-self-center">
-          <ImgRight src="/static/image/question.svg" />
+      <div className="col-4">
+        <div className="col img-responesive  ">
+          <ImgRight src="/static/image/yakscore-new-01.svg" />
         </div>
       </div>
     </div>

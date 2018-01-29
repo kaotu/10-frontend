@@ -160,6 +160,7 @@ const Monkey = styled.img`
   @media(max-width: 420px){
     height: 30vh;
   }
+  
 `
 const ChooseGiant = styled.img`
   position: absolute;
