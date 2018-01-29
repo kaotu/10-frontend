@@ -5,11 +5,11 @@ import Burger from './Burger'
 import GameBut from './GameBut'
 
 const LinkItem = styled.button`
-color: #fff;
-font-size : 1.4em;
-width:8vw;
-background-color:#154051;
-border: 0vw;
+  color: #fff;
+  font-size : 1.4em;
+  width:8vw;
+  background-color:#154051;
+  border: 0vw;
   cursor:pointer;
   transition:all 250ms ease-in-out;
   &:hover{
@@ -25,6 +25,7 @@ border: 0vw;
     background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
     border-radius: 12px; 
+    outline: none;
   }
   `
 

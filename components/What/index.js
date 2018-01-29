@@ -36,11 +36,43 @@ const IconInfo = [
 ]
 
 const IMG = styled.img`
-  margin-top:60px;
+
+  @media (min-width:800px){
+    position: absolute;
+    margin-top : 5vw;
+    height : 55vw;
+    margin-left : -55vw;
+    }
+  @media (min-width:900px){
+    position: absolute;
+    margin-bottom : 5vw;
+    height : 40vw;
+    margin-left : -30vw;
+    }
+  @media (min-width:1000px){
+    position: absolute;
+    margin-bottom : 5vw;
+    height : 40vw;
+    margin-left : -30vw;
+    }
+  @media (min-width:1100px){
+    position: absolute;
+    margin-bottom : 5vw;
+    height : 40vw;
+    margin-left : -30vw;
+      }
+  @media (min-width:1200px){
+    position: absolute;
+    margin-top : -3vw;
+    height : 40vw;
+    margin-left : -30vw;
+    border-top : -100px;
+      }
+
 `
 const Padding = styled.div`
   @media (max-width:720px){
-  padding : 50px;
+    margin-top:60px;
   }
 `
 

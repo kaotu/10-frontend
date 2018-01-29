@@ -8,6 +8,9 @@ import ContentRespon from './ContentRespon'
 const Bg = styled.div`
 margin-top:10vw;
 `
+const Bgcolor = styled.div`
+background : #D3D3D3;
+`
 
 const FAQs = [
   { Q: "<strong>Q:</strong> <strong>อยากเป็นส่วนหนึ่งของค่ายนี้</strong>มาก ๆ ต้องทำอย่างไร ?", A: "<strong>A:</strong> น้อง ๆ เพียงแค่ตอบคำถามในการสมัครด้วยตัวเองเพื่่อ<strong>แสดงถึงตัวตนของน้อง</strong> และมีความตั้งใจในการตอบคำถาม เพียงแค่<strong>น้องมีความตั้งใจ</strong> พี่เชื่อว่าน้อง ๆ จะได้มีส่วนร่วมในค่ายนี้อย่างแน่นอนครับ รวมถึงสิ่งสำคัญ คือ อย่าลืมอัพโหลดเอกสารให้ครบถ้วนและถูกต้องตามที่กำหนดด้วยนะครับ" },
@@ -34,7 +37,7 @@ export default class AdaptiveHeight extends Component {
             <p></p>
           </div>
 
-          <div className="col-10">
+          <Bgcolor className="col-10">
             <Slider {...settings}>
               {
                 FAQs.map((data, i) => (
@@ -44,7 +47,7 @@ export default class AdaptiveHeight extends Component {
                 ))
               }
             </Slider>
-          </div>
+          </Bgcolor>
 
           <div className="col">
           </div>
