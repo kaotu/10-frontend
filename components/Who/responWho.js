@@ -28,6 +28,18 @@ const IconData = [
 const Margin = styled.div`
   margin-left : -40px;
 `
+const Topic = styled.strong`
+  
+  @media (min-width : 750px){
+    font-size :3.5vw;
+  }
+`
+const Content = styled.span`
+@media (min-width : 750px){
+  font-size :3.5vw;
+}
+`
+
 export default class AdaptiveHeight extends Component {
   render() {
     var settings = {
@@ -51,9 +63,9 @@ export default class AdaptiveHeight extends Component {
                     </div>
                     <Block className="row">
                       <div className="col-9">
-                      <strong>{data.topic}</strong>
+                      <Topic>{data.topic}</Topic>
                       <br/>
-                      <span>{data.content}</span>
+                      <Content>{data.content}</Content>
                       </div>
                     </Block>  
                   </Margin>
