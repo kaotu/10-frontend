@@ -13,7 +13,6 @@ const BoxHeart = () => (
   <div className="container-fluid">
     <div className="row">
       <div className="col-md-12 img-responsive">
-      <br/><br/><br/><br/><br/><br/><br/>
         <ImgHeart src="/static/image/BoxHeart.svg" className="img-responsive"/>
       </div>
     </div>
