@@ -7,6 +7,9 @@ import ContentRespon from './ContentRespon'
 
 const Bg = styled.div`
 margin-top:10vw;
+@media (max-width: 720px) {
+  width:100vw;
+}
 `
 const Bgcolor = styled.div`
 background : #D3D3D3;
@@ -31,13 +34,9 @@ export default class AdaptiveHeight extends Component {
       adaptiveHeight: true
     };
     return (
-      <Bg>
-        <div className="row d-flex ">
-          <div className="col img-responesive align-self-center">
-            <p></p>
-          </div>
-
-          <Bgcolor className="col-10">
+      <Bg className="container ">
+        <div className="justify-content-center ">
+          <Bgcolor className="col-11">
             <Slider {...settings}>
               {
                 FAQs.map((data, i) => (
@@ -48,9 +47,6 @@ export default class AdaptiveHeight extends Component {
               }
             </Slider>
           </Bgcolor>
-
-          <div className="col">
-          </div>
         </div>
       </Bg>
     );

@@ -1,20 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
+import Bg from '../Sponsor/BgSponsor'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
-const Bg = styled.div`
-  background-color:#DDFAFE; 
-  min-height:25vw;
+const Relative = styled.div`
   position: relative;
-  z-index: 4;
+  width: 100vw;
+  min-height:25vh;
 `
 const Cloud = styled.img`
-  position:absolute;
-  z-index:-1;
-  top:-50vh;
-  left:-25%;
-  width:150%;
+  position: absolute;
+  z-index: 0;
+  width: 150vw;
+  top: -50vh;
+  left: -25vw;
 `
 const BImg = styled.img`
   width: 30%; 
@@ -48,8 +48,9 @@ const Topic = H1.extend`
 `
 
 const Index = () => (
-  <Bg className="d-flex align-items-center">
-    {/* <Cloud src='/static/image/CloudSponser.svg'/> */}
+  <Bg>
+    <Relative>
+    <Cloud src='/static/image/CloudSponser.svg'/>
     <div className="container d-flex justify-content-center">
       <div className="row">
         <div className="col-md-12 text-center">
@@ -73,6 +74,7 @@ const Index = () => (
         </div>
       </div>
     </div>
+    </Relative>
   </Bg>
 )
 export default Index
