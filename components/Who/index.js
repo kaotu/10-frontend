@@ -75,12 +75,16 @@ const Mobile = styled.div`
   }
 `
 
+const Space = styled.div`
+  margin-top: 6%;
+  margin-bottom: 10%;
+`
 
 const index = props => (
   <Bg bgColor={Color.mongkey.who} who className="">
     <div className="container">
       <div className="row">
-        <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
+        <Space className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
             <H1 className="text-center">WHO</H1>
             <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
@@ -107,7 +111,7 @@ const index = props => (
           <HideDesktop>
             <ResponWho />
           </HideDesktop>
-        </div>
+        </Space>
         <div className="col-12 col-md-6 order-1 order-md-2">
           <img src="/static/image/Whomoutain.svg" />
         </div>
