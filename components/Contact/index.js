@@ -61,13 +61,17 @@ const FooterBg = Bg.extend`
   background-color:#154051;  
 `
 
+const Space = styled.div`
+  margin-top: 5%;
+  margin-bottom: 10%;
+`
 
 const index = () => (
   <DivContact>
     <ContentBg bgColor="#e7f6fa" className="">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12">
+          <Space className="col-md-12">
             <H1>Contact</H1>
             <H2>ติดต่อเรา</H2>
             <div className="row">
@@ -99,7 +103,7 @@ const index = () => (
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
-          </div>
+          </Space>
         </div>
         <div className="row">
           <div className="col-md-12">
