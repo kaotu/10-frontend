@@ -40,12 +40,12 @@ const ContentRespon = (props) => (
         </div>
       </div>
       <div className="col-8">
-        <Box><div dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
+        <Box><p dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
       </div>
     </div>
     <div className="row">
       <div className="col-8">
-        <Box><div dangerouslySetInnerHTML={{__html: props.A}}/></Box>
+        <Box><p dangerouslySetInnerHTML={{__html: props.A}}/></Box>
       </div>
       <div className="col-4">
           <ImgRight src="/static/image/yakscore-new-01.svg" />
