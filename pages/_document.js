@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
+          <link rel="icon" type="image/png" href="../static/image/favicon.png" />
           <title>WIP Camp #10 : Ways to IT Professionals Camp</title>
         <Head>
           <meta charset="utf-8" />
