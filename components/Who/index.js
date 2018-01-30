@@ -7,6 +7,7 @@ import Block from "./Block"
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
+import Router from 'next/router'
 
 const state = withState("checkButton", "setCheck", 0)
 
@@ -24,10 +25,23 @@ const Content = [
 ]
 const Image = styled.img`
     width:7vw;
+    transition:all 550ms ease-in-out;
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
   }
+  &:hover{
+    background-color: #FBFBEF;
+    border: solid 0.3vw #ffffff;
+    transition: scale(2.1);
+    margin-right: .3cm;
+  }
+  &:focus{
+    background-color: #FBFBEF;
+    border: solid 0.3vw #ffffff;
+    transition: scale(2.1);
+    margin-right: .3cm;
+  }  
 `
 const IconData = [
   { id: 0, image: "/static/image/edu.png" },
@@ -37,10 +51,10 @@ const IconData = [
 ]
 
 const PositionTextBox =[
-  "12%",
-  "36.5%",
-  "60.5%",
-  "85.5%"
+  "12.7%",
+  "39.4%",
+  "65.25%",
+  "91.7%"
 ]
 
 const Icon = styled.div`
@@ -48,6 +62,7 @@ const Icon = styled.div`
   cursor: pointer;
   margin-left: 1%;
   margin-right: 1%;
+ 
 `
 const HideMobile = styled.div`
   @media (max-width: 720px) {
@@ -66,13 +81,11 @@ const Mobile = styled.div`
     margin-bottom : 25px;
   }
 `
-const Padding = styled.div`
-  padding : 4vw;
-`
+
 
 const index = props => (
   <Bg bgColor={Color.mongkey.who} who className="d-flex align-items-center">
-    <Padding className="container-fluid">
+    <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
@@ -84,7 +97,7 @@ const index = props => (
               {
                 IconData.map((data, i) => (
                 <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <Image src={data.image} />
+                  <Image src={data.image}/>
                 </div>
               ))
               }
@@ -106,7 +119,7 @@ const index = props => (
           <img src="/static/image/Whomoutain.svg" />
         </div>
       </div>
-    </Padding>
+    </div>
   </Bg>
 );
 export default compose(state)(index)

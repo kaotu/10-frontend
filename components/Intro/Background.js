@@ -163,6 +163,7 @@ const Monkey = styled.img`
     height: 30vh;
     bottom:12vh;
   }
+  
 `
 const ChooseGiant = styled.img`
   position: absolute;
@@ -283,7 +284,7 @@ const Background = (props) => (
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>
-        <Scrolldown src='/static/image/ScrollDown.png'/>
+        {/* <Scrolldown src='/static/image/ScrollDown.png'/> */}
     </div>
 )
 

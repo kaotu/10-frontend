@@ -3,56 +3,52 @@ import styled from 'styled-components'
 import Content from '../FAQs/ContentFAQs'
 
 const ImgLefe = styled.img`
-  width:5vw;
-  margin-left:8vw;
+  width:10vw;
   @media (max-width:720px) {
-    width:8vw;
+    width:20vw;
     margin: auto;
   }
 `
 const ImgRight = styled.img`
   width:5vw;
-  margin-left:1vw;
   @media (max-width:720px) {
-    width:8vw;
-    margin: auto;
+    width:20vw;
+    right:0;
   }  
 `
 
 const Box = styled.div`
-  width: 46vw;
   min-height: 10vw;    
-  padding: 1vw;
   background-color:#FBFBEF;
   opecity:0.8;
   margin-top:1vw;
   margin-bottom:1vw;
   border-radius: 10px; 
+  padding:1vw;
   @media (max-width:720px) {
-    width:52vw;
+    width:45vw;
   }
 `
 
+
 const ContentRespon = (props) => (
-  <div className="container-fluid">
+  <div className="container ">
     <div className="row">
-      <div className="col-3">
-        <div className="img-responesive align-self-center">
-          <ImgLefe src="/static/image/question.svg" />
+      <div className="col-4">
+        <div className=" align-self-center">
+          <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
         </div>
       </div>
-      <div className="col-9">
+      <div className="col-8">
         <Box><div dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
       </div>
     </div>
     <div className="row">
-      <div className="col-9">
+      <div className="col-8">
         <Box><div dangerouslySetInnerHTML={{__html: props.A}}/></Box>
       </div>
-      <div className="col-3">
-        <div className="col img-responesive align-self-center">
-          <ImgRight src="/static/image/question.svg" />
-        </div>
+      <div className="col-4">
+          <ImgRight src="/static/image/yakscore-new-01.svg" />
       </div>
     </div>
   </div>
