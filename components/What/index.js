@@ -78,16 +78,23 @@ const Padding = styled.div`
   }
 `
 
+const Bgm = styled.img`
+  height : 100vw;
+  z-index : 10;
+`
 
 const index = props => (
   <Bg bgColor={Color.mongkey.what} className="d-flex align-items-center">
+  {/* <Bgm src = "../../static/ima
+
+ge/1.svg"/> */}
     <Padding className="container">
       <div className="row">
-        <div className="col-12 col-sm-12 col-md-6">
+        <div className="col-12 col-sm-12 col-md-12">
           <Cloud />
           
         </div>
-        <div className="col-12 col-sm-12 col-md-6">
+        <div className="col-12 col-sm-12 col-md-12">
           <Mobile>
             <H1>WHAT</H1>
             <H2>ค่ายนี้คืออะไร ?</H2>
@@ -110,7 +117,6 @@ const index = props => (
           }
           </Info>
         </div>
-        <img src="/static/image/Whatmoutain.svg" />
       </div>
     </Padding>
   </Bg>
