@@ -78,17 +78,21 @@ const Padding = styled.div`
   }
 `
 
+const Space = styled.div`
+  margin-top: 6%;
+  margin-bottom: 10%;
+`
 
 const index = props => (
-  <Bg bgColor={Color.mongkey.what} className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.what} className="">
     <Padding className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6">
           <Cloud />
           
         </div>
-        <div className="col-12 col-sm-12 col-md-6">
-          <Mobile>
+        <Space className="col-12 col-sm-12 col-md-6">
+          <Mobile className="text-center">
             <H1>WHAT</H1>
             <H2>ค่ายนี้คืออะไร ?</H2>
           </Mobile>
@@ -109,7 +113,7 @@ const index = props => (
             ))
           }
           </Info>
-        </div>
+        </Space>
         <img src="/static/image/Whatmoutain.svg" />
       </div>
     </Padding>
