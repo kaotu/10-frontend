@@ -30,8 +30,8 @@ const H4 = styled.h4`
 `
 
 const index = () => (
-  <Bg bgColor={Color.mongkey.where} where className="d-flex align-items-center">
-    <div className="container-fluid my-5">
+  <Bg bgColor={Color.mongkey.where} where className="">
+    <div className="container-fluid">
       <div className="row">
         <div className="col-md-6 text-center mt-4">
           <Story src="../../static/image/WhereStory.svg" />

@@ -30,8 +30,8 @@ const DisplayMoblie2 = styled.div`
 
 const index = props => (
   <DivWhere>
-    <Bg bgColor={Color.mongkey.faqs } className="d-flex align-items-center">
-      <div className="container-fluid my-5">
+    <Bg bgColor={Color.mongkey.faqs } className="">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-md-12 mt-4">
             <H1 className="text-center">FAQs</H1>
