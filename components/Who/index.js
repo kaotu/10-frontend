@@ -112,13 +112,8 @@ const index = props => (
           <HideDesktop>
             <ResponWho />
           </HideDesktop>
-<<<<<<< HEAD
-        </div>
-        <div className="col-12 col-md-12 col-lg-6 order-md-1 order-md-2">
-=======
         </Space>
-        <div className="col-12 col-md-6 order-1 order-md-2">
->>>>>>> 28da97f757a5b1f80942b6e3840d285d1bfe0bce
+        <div className="col-12 col-md-12 col-lg-6 order-1 order-md-2">
           <img src="/static/image/Whomoutain.svg" />
         </div>
       </div>
