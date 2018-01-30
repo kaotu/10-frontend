@@ -69,13 +69,13 @@ const index = () => (
     <div className="container-fluid">
       <HideMobile>
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-6 ">
+          <div className="col-12 col-sm-12 col-md-6">
             <Head>
               <H1 className="text-center">WHEN</H1>
               <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
             </Head>
           </div>
-          <div className="col-12 col-sm-12 col-md-12  ">
+          <div className="col-12 col-sm-12 col-md-12">
             <Img src="/static/image/Climming.svg" className="rounded float-right" />
             <Box1 className="text-center">
               <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
