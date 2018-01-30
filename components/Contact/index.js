@@ -61,9 +61,10 @@ const FooterBg = Bg.extend`
   background-color:#154051;  
 `
 
+
 const index = () => (
   <DivWhere>
-    <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
+    <ContentBg bgColor="#e7f6fa" className="">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
@@ -90,7 +91,7 @@ const index = () => (
                 </a>
                 <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
                   <ImgCenter src="/static/image/Youtube ci logo.png" />
-                </a>                
+                </a>
                 <Linerespon />
               </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
@@ -107,9 +108,9 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    
-    <FooterBg className="d-flex justify-content-center align-items-center text-white">    
-    <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
+
+    <FooterBg className="d-flex justify-content-center align-items-center text-white">
+      <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer
     </FooterBg>
   </DivWhere>
 )
