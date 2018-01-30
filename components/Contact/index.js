@@ -5,7 +5,7 @@ import HeartBox from './HeartBox'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
-const DivWhere = styled.div`
+const DivContact = styled.div`
   text-align: center;    
   width: 100%;  
 `
@@ -62,7 +62,7 @@ const FooterBg = Bg.extend`
 `
 
 const index = () => (
-  <DivWhere>
+  <DivContact>
     <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
       <div className="container-fluid">
         <div className="row">
@@ -111,7 +111,7 @@ const index = () => (
     <FooterBg className="d-flex justify-content-center align-items-center text-white">    
     <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
     </FooterBg>
-  </DivWhere>
+  </DivContact>
 )
 
 export default index
