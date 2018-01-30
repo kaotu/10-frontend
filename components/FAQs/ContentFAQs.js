@@ -2,13 +2,13 @@ import react from 'react'
 import styled from 'styled-components'
 
 const ImgLefe = styled.img`
-  width:20%;
+  width:30%;
   margin-left:15vw;
   right: 0;
 `
 
 const ImgRight = styled.img`
-  width:20%;
+  width:30%;
   margin-right:15vw;
   right: 0;
 `
@@ -22,6 +22,9 @@ const Box = styled.div`
   margin-top:1vw;
 	margin-bottom:1vw;
 	border-radius: 10px;
+  ${props=>props.primary && `
+    background-color:#FFFFFF;
+  `}
 `
 
 const FAQs = [
@@ -52,7 +55,7 @@ const Content = () => (
             <div className="col">
             </div>
             <div className="col-6">
-              <Box><p dangerouslySetInnerHTML={{__html: data.A}} /></Box>
+              <Box primary><p dangerouslySetInnerHTML={{__html: data.A}} /></Box>
             </div>
             <div className="col img-responesive align-self-center">
               <ImgRight src="/static/image/yakscore-new-01.svg" />

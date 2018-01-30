@@ -11,9 +11,6 @@ margin-top:10vw;
   width:100vw;
 }
 `
-const Bgcolor = styled.div`
-background : #D3D3D3;
-`
 
 const FAQs = [
   { Q: "<strong>Q:</strong> <strong>อยากเป็นส่วนหนึ่งของค่ายนี้</strong>มาก ๆ ต้องทำอย่างไร ?", A: "<strong>A:</strong> น้องเอ๋ย สิ่งที่เจ้าต้องทำมีเพียงตอบคำถามในการสมัครด้วยตัวเองเพื่อแสดงถึงตัวตนของเจ้า จงใช้ความตั้งใจในการตอบคำถาม และอีกสิ่งหนึ่งที่จะลืมไม่ได้ น้องเอ๋ย โปรดจงอัพโหลดเอกสารให้ครบถ้วนและถูกต้องตามที่กำหนดเสียด้วย" },
@@ -36,7 +33,7 @@ export default class AdaptiveHeight extends Component {
     return (
       <Bg className="container ">
         <div className="justify-content-center ">
-          <Bgcolor className="col-11">
+          <div className="col-11">
             <Slider {...settings}>
               {
                 FAQs.map((data, i) => (
@@ -46,7 +43,7 @@ export default class AdaptiveHeight extends Component {
                 ))
               }
             </Slider>
-          </Bgcolor>
+          </div>
         </div>
       </Bg>
     );
