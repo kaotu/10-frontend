@@ -25,6 +25,7 @@ const DivSponsor = styled.div`
 const BImg = styled.img`
   width: 30%; 
   height: 30%;
+  margin-top: 10%;
   margin-right: 1%;
   margin-left: 1%;
 `
@@ -60,7 +61,7 @@ const Index = () => (
     <DivSponsor className="container d-flex justify-content-center">
       <div className="row">
         <div className="col-md-12 text-center">
-          <Topic className="font-weight-bold">Sponsor</Topic>
+          {/* <Topic className="font-weight-bold">Sponsor</Topic> */}
           <div className="img-responsive">
             <div className="row d-flex justify-content-center">
               {

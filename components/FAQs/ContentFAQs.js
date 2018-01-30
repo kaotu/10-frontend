@@ -43,7 +43,7 @@ const Content = () => (
               <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
             </div>
             <div className="col-6">
-              <Box><div dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
+              <Box><p dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
             </div>
             <div className="col">
             </div>
@@ -52,7 +52,7 @@ const Content = () => (
             <div className="col">
             </div>
             <div className="col-6">
-              <Box><div dangerouslySetInnerHTML={{__html: data.A}} /></Box>
+              <Box><p dangerouslySetInnerHTML={{__html: data.A}} /></Box>
             </div>
             <div className="col img-responesive align-self-center">
               <ImgRight src="/static/image/yakscore-new-01.svg" />

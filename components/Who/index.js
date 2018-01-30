@@ -77,7 +77,7 @@ const Mobile = styled.div`
 
 
 const index = props => (
-  <Bg bgColor={Color.mongkey.who} who className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.who} who className="">
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
