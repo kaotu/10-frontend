@@ -78,6 +78,7 @@ const Padding = styled.div`
   }
 `
 
+<<<<<<< HEAD
 const Bgm = styled.img`
   height : 100vw;
   z-index : 10;
@@ -88,14 +89,28 @@ const index = props => (
   {/* <Bgm src = "../../static/ima
 
 ge/1.svg"/> */}
+=======
+const Space = styled.div`
+  margin-top: 6%;
+  margin-bottom: 10%;
+`
+
+const index = props => (
+  <Bg bgColor={Color.mongkey.what} className="">
+>>>>>>> 28da97f757a5b1f80942b6e3840d285d1bfe0bce
     <Padding className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12">
           <Cloud />
           
         </div>
+<<<<<<< HEAD
         <div className="col-12 col-sm-12 col-md-12">
           <Mobile>
+=======
+        <Space className="col-12 col-sm-12 col-md-6">
+          <Mobile className="text-center">
+>>>>>>> 28da97f757a5b1f80942b6e3840d285d1bfe0bce
             <H1>WHAT</H1>
             <H2>ค่ายนี้คืออะไร ?</H2>
           </Mobile>
@@ -116,7 +131,12 @@ ge/1.svg"/> */}
             ))
           }
           </Info>
+<<<<<<< HEAD
         </div>
+=======
+        </Space>
+        <img src="/static/image/Whatmoutain.svg" />
+>>>>>>> 28da97f757a5b1f80942b6e3840d285d1bfe0bce
       </div>
     </Padding>
   </Bg>
