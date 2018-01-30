@@ -33,10 +33,10 @@ const index = () => (
   <Bg bgColor={Color.mongkey.where} where className="">
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-6 text-center mt-4">
+        <div className="col-md-12 text-center mt-4">
           <Story src="../../static/image/WhereStory.svg" />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-12">
           <Mobile className="text-center mt-4">
             <H1>WHERE</H1>
             <H2>ค่ายนี้จัดที่ไหน ?</H2>
