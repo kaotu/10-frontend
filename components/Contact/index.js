@@ -5,7 +5,7 @@ import HeartBox from './HeartBox'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
-const DivWhere = styled.div`
+const DivContact = styled.div`
   text-align: center;    
   width: 100%;  
 `
@@ -63,7 +63,7 @@ const FooterBg = Bg.extend`
 
 
 const index = () => (
-  <DivWhere>
+  <DivContact>
     <ContentBg bgColor="#e7f6fa" className="">
       <div className="container-fluid">
         <div className="row">
@@ -77,19 +77,19 @@ const index = () => (
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
-                <a href="https://www.facebook.com/wipcamp/">
+                <a href="https://www.facebook.com/wipcamp/" target="_blank">
                   <ImgCenter src="/static/image/facebook ci logo.png" />
                 </a>
-                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
+                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
                   <ImgCenter src="/static/image/LINEa ci logo.png" />
                 </a>
-                <a href="https://twitter.com/WIPCamp">
+                <a href="https://twitter.com/WIPCamp" target="_blank">
                   <ImgCenter src="/static/image/Twiiter ci logo.png" />
                 </a>
-                <a href="https://www.instagram.com/wipcamp/">
+                <a href="https://www.instagram.com/wipcamp/" target="_blank">
                   <ImgCenter src="/static/image/ig ci logo.png" />
                 </a>
-                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
+                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
                   <ImgCenter src="/static/image/Youtube ci logo.png" />
                 </a>
                 <Linerespon />
@@ -112,7 +112,7 @@ const index = () => (
     <FooterBg className="d-flex justify-content-center align-items-center text-white">
       <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer
     </FooterBg>
-  </DivWhere>
+  </DivContact>
 )
 
 export default index

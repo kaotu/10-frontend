@@ -31,17 +31,10 @@ const Image = styled.img`
     padding: .2em;
   }
   &:hover{
-    background-color: #FBFBEF;
-    border: solid 0.3vw #ffffff;
-    transition: scale(2.1);
-    margin-right: .3cm;
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
-  &:focus{
-    background-color: #FBFBEF;
-    border: solid 0.3vw #ffffff;
-    transition: scale(2.1);
-    margin-right: .3cm;
-  }  
 `
 const IconData = [
   { id: 0, image: "/static/image/edu.png" },

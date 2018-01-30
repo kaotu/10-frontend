@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Bg = styled.section`
     background: #B7CFEB;
-    min-height: 25vh;
+    height: 65vh;
     overflow : hidden;
 `
 export default Bg

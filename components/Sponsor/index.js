@@ -16,6 +16,12 @@ const Cloud = styled.img`
   top: -50vh;
   left: -25vw;
 `
+const DivSponsor = styled.div`
+  position: relative;
+  // z-index: 1;
+  width: 100vw;
+  top: 15vh;
+`
 const BImg = styled.img`
   width: 30%; 
   height: 30%;
@@ -51,7 +57,7 @@ const Index = () => (
   <Bg>
     <Relative>
     <Cloud src='/static/image/CloudSponser.svg'/>
-    <div className="container d-flex justify-content-center">
+    <DivSponsor className="container d-flex justify-content-center">
       <div className="row">
         <div className="col-md-12 text-center">
           <Topic className="font-weight-bold">Sponsor</Topic>
@@ -73,7 +79,7 @@ const Index = () => (
           </div>
         </div>
       </div>
-    </div>
+    </DivSponsor>
     </Relative>
   </Bg>
 )
