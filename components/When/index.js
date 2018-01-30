@@ -65,7 +65,7 @@ const HideDesktop = styled.div`
 `
 
 const index = () => (
-  <Bg bgColor={Color.mongkey.when} className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.when} className="">
     <div className="container-fluid">
       <HideMobile>
         <div className="row">
