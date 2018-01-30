@@ -1,9 +1,7 @@
 import react from 'react'
 import styled from 'styled-components'
 import {compose, withState} from 'recompose'
-
 import {yak,mongkey} from '../Core/Color'
-
 const state = withState('check','setCheck',false)
 
 const setCheck = (callback, data) =>(
@@ -163,6 +161,7 @@ const Monkey = styled.img`
     height: 30vh;
     bottom:12vh;
   }
+  
 `
 const ChooseGiant = styled.img`
   position: absolute;

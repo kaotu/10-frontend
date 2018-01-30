@@ -8,5 +8,8 @@ export default injectGlobal`
   body {
     font-family: 'Pridi';
   }
+  p {
+    font-size:20px;
+  }
 
 `

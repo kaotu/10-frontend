@@ -9,6 +9,7 @@ import When from '../components/When/index'
 import Faqs from '../components/FAQs'
 import Contact from '../components/Contact'
 import Navbar from '../components/Core/Navbar'
+import Sponsor from '../components/Sponsor/index'
 
 injectGlobal
 
@@ -16,6 +17,9 @@ const index = () => (
 	<Scroll>		
 		<section id="home">
 			<Intro />
+		</section>
+		<section id="sponsor">
+			<Sponsor />
 		</section>
 		<Navbar />
 		<section id="what">

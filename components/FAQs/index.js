@@ -13,11 +13,13 @@ const DivWhere = styled.div`
 `;
 
 const DisplayDesktop = styled.div`
+    margin-bottom: 10%;
   @media (max-width: 720px) {
     display: none;
   }
 `;
 const DisplayMoblie = styled.div`
+  margin-bottom: 10%;
   @media (min-width: 720px) {
     display: none;
   }
@@ -26,18 +28,22 @@ const DisplayMoblie2 = styled.div`
   @media (max-width: 720px) {
     margin-top: 20px;
   }
-`;
+`
+
+const Space = styled.div`
+  margin-top: 5%;
+`
 
 const index = props => (
   <DivWhere>
-    <Bg bgColor={Color.mongkey.faqs } className="d-flex align-items-center">
-      <div className="container-fluid my-5">
+    <Bg bgColor={Color.mongkey.faqs } className="">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12 mt-4">
+          <Space className="col-md-12">
             <H1 className="text-center">FAQs</H1>
             <H2 className="text-center">คำถามที่พบบ่อย ?</H2>
             <DisplayMoblie2 />
-          </div>
+          </Space>
         </div>
         <DisplayDesktop>
           <Content />

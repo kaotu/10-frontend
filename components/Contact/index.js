@@ -5,7 +5,7 @@ import HeartBox from './HeartBox'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
-const DivWhere = styled.div`
+const DivContact = styled.div`
   text-align: center;    
   width: 100%;  
 `
@@ -61,12 +61,17 @@ const FooterBg = Bg.extend`
   background-color:#154051;  
 `
 
+const Space = styled.div`
+  margin-top: 5%;
+  margin-bottom: 10%;
+`
+
 const index = () => (
-  <DivWhere>
-    <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
+  <DivContact>
+    <ContentBg bgColor="#e7f6fa" className="">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12">
+          <Space className="col-md-12">
             <H1>Contact</H1>
             <H2>ติดต่อเรา</H2>
             <div className="row">
@@ -76,21 +81,21 @@ const index = () => (
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
-                <a href="https://www.facebook.com/wipcamp/">
+                <a href="https://www.facebook.com/wipcamp/" target="_blank">
                   <ImgCenter src="/static/image/facebook ci logo.png" />
                 </a>
-                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
+                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
                   <ImgCenter src="/static/image/LINEa ci logo.png" />
                 </a>
-                <a href="https://twitter.com/WIPCamp">
+                <a href="https://twitter.com/WIPCamp" target="_blank">
                   <ImgCenter src="/static/image/Twiiter ci logo.png" />
                 </a>
-                <a href="https://www.instagram.com/wipcamp/">
+                <a href="https://www.instagram.com/wipcamp/" target="_blank">
                   <ImgCenter src="/static/image/ig ci logo.png" />
                 </a>
-                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
+                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
                   <ImgCenter src="/static/image/Youtube ci logo.png" />
-                </a>                
+                </a>
                 <Linerespon />
               </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
@@ -98,7 +103,7 @@ const index = () => (
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
-          </div>
+          </Space>
         </div>
         <div className="row">
           <div className="col-md-12">
@@ -107,11 +112,11 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    
-    <FooterBg className="d-flex justify-content-center align-items-center text-white">    
-    <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
+
+    <FooterBg className="d-flex justify-content-center align-items-center text-white">
+      <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer
     </FooterBg>
-  </DivWhere>
+  </DivContact>
 )
 
 export default index

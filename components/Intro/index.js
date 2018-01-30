@@ -1,19 +1,11 @@
 // นี่คือหน้า Home นะ
 import React from 'react'
 import styled from 'styled-components'
-import {compose,withState} from 'recompose'
 
-import BgIntro from '../BgIntro'
+import BgIntro from '../Intro/BgIntro'
 import LogoSIT from './LogoSIT'
 import Background from './Background'
-import Sponsor from '../Sponsor/index'
 
-
-const state = withState('click','setClick',false)
-
-const setClick = (callback,data) => (
-	callback(!data)
-)
 
 const Div = styled.div`
   height: 100vh;
@@ -46,12 +38,13 @@ const Index = (props) => (
           <div className="row">
             <Div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <Background/>
-							<Scrolldown onClick={() => data ? href='#sponsor' :''} src='/static/image/ScrollDown.png'/>
+              <a href="#sponsor">
+							<Scrolldown src='/static/image/ScrollDown.png'/>
+              </a>
             </Div>
           </div>
         </div>
       </BgIntro>
-    <Sponsor/>
   </div>
 )
 
