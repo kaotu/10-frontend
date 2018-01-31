@@ -3,41 +3,14 @@ import styled from 'styled-components'
 import Router from 'next/router'
 import Burger from './Burger'
 import GameBut from './GameBut'
-
-
-
-
-const LinkItem = styled.button`
-  color: #fff;
-  font-size : 1.4em;
-  width:8vw;
-  background-color:#154051;
-  border: 0vw;
-  cursor:pointer;
-  transition:all 250ms ease-in-out;
-  ${props => console.log(props)}
-  &:hover{
-    color: #fff;
-    text-decoration: none;
-    transition:scale(1.1);
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 2vw;
-    border-radius: 12px;
-    width:8vw;
-  }
-  &:focus{
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    border-radius: 12px; 
-    outline: none;
-  }
-  `
+import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const NavItem = styled.nav`
   color: #ffff;
   background-color:#154051;
-  //opacity: ${props => props.active ? 1 : 0};
-  //visibility: ${props => props.active ? 'visible' : 'hidden'};
+  //position: ${props => props.onScrollDown ? 'relative':''};
+  transition: all .5s ease-in;
+  top: ${props => props.onScrollDown ? '-163px':'0px'};
 
   ${props => props.primaryNav && `
   background-color:#24372f; 
@@ -55,19 +28,39 @@ const RegisterBtn = styled.img`
     height:150%;           
   }
   `
+const NavLink = styled(Link)`
+  color: #fff;
+  font-size : 1.4em;
+  width:8vw;
+  background-color:#154051;
+  border: 0vw;
+  cursor:pointer;
+  transition:all 250ms ease-in-out;
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+    transition:scale(1.1);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2vw;
+    border-radius: 12px;
+    width:8vw;
+  }
+  &:focus{
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: #fff;
+    border-radius: 12px; 
+    outline: none;
+  }
+`;
 
 const nav = [
-  { to: 'home', text: "Home" },
-  { to: 'what', text: "What" },
-  { to: 'who', text: "Who" },
-  { to: 'where', text: "Where" },
-  { to: 'when', text: "When" },
-  { to: 'faqs', text: "FAQs" },
-  { to: 'contact', text: "Contact" }]
-
-const navLink = (id) => {
-  Router.push(`/#${id}`)
-}
+  { to: 'home', text: "Home"},
+  { to: 'what', text: "What"},
+  { to: 'who', text: "Who"},
+  { to: 'where', text: "Where"},
+  { to: 'when', text: "When"},
+  { to: 'faqs', text: "FAQs"},
+  { to: 'contact', text: "Contact"}]
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -81,28 +74,28 @@ class Navbar extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.onScroll.bind(this), true);
-  }
   
+    window.addEventListener("scroll", this.onScroll.bind(this), true);
+
+    scrollSpy.update();
+  }  
   onScroll(event) {
-    console.log(document.do)
-    if(this.state.lastScrollPos > event.currentTarget.scrollTop) {
-      console.log(this.state.direction)
+    
+    if(this.state.lastScrollPos > window.pageYOffset) {
       this.setState({
-        direction:'top',
-        lastScrollPos:event.currentTarget.scrollTop
+        direction:'up',
+        lastScrollPos:window.pageYOffset
       });
-    } else if(this.state.lastScrollPos < event.currentTarget.scrollTop) {
-      console.log(this.state.direction)
+    } else if(this.state.lastScrollPos < window.pageYOffset) {
       this.setState({
-        direction:'bottom',
-        lastScrollPos:event.currentTarget.scrollTop
+        direction:'down',
+        lastScrollPos:window.pageYOffset
       });
     }
   }
   render() {
     return (
-      <NavItem className="sticky-top" active={this.state.show}>
+      <NavItem className="sticky-top" onScrollDown={this.state.direction=='down'}>
         <Burger />
         <div>
           <div className="navbar navbar-expand-lg">
@@ -110,18 +103,29 @@ class Navbar extends React.Component {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-              <div className="navbar-nav  justify-content-center ">
+              <nav id="navbar-desktop" className="nav nav-pills navbar-nav  justify-content-center ">
                 {nav.map((nav, i) => (
-                  <LinkItem
+                  <NavLink
+                    spy={true}
                     key={i}
-                    onClick={() => navLink(nav.to)}
-                    onSetActive={to => this.onScroll(to)}
+                    to={nav.to}
+                    smooth={true}
                     className="nav-item nav-link text-center"
                   >
                     {nav.text}
-                  </LinkItem>
+                  </NavLink>
                 ))}
-              </div>
+                  {/* <div data-spy="scroll" data-target="#navbar-desktop" data-offset="0">
+                  {nav.map((i))} => (
+                    <div id="nav"
+                      key={i}
+                      onClick={() => navLink(nav.to)}
+                    >                      
+                      {nav.text}
+                    </div>
+                  )
+                  </div> */}
+              </nav>
             </div>
             <a href='https://itim.wip.camp' target="_blank">
               <RegisterBtn src='/static/image/regisred.png' />

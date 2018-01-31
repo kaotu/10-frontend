@@ -28,33 +28,33 @@ injectGlobal
 
 const index = () => (
 	<Scroll>
-		<Relative>		
-		<section id="home">
+		<Relative >		
+		<section id="home" name="home">
 			<Intro />
-		</section>
-		<section id="sponsor">
 			<Sponsor />
 		</section>
-		<Navbar />
-		<section id="what">
-			<What />
-		</section>
-		<section id="who">
-			<Who />
-		</section>
-		<section id="where">
-			<Where />
-		</section>
-		<section id="when">
-			<When />
-		</section>
-		<section id="faqs">
-			<Faqs />
-		</section>
-		<section id="contact">
-			<Contact />
-			<Bglight src = '/static/image/light.svg'/>
-		</section>
+		<Navbar id="navbar-desktop"/>
+		<div data-spy="scroll" data-target="#navbar-desktop" data-offset="0" id="containerElement">
+			<section id="what" name="what">
+				<What />
+			</section>
+			<section id="who" name="who">
+				<Who />
+			</section>
+			<section id="where" name="where">
+				<Where />
+			</section>
+			<section id="when" name="when">
+				<When />
+			</section>
+			<section id="faqs" name="faqs">
+				<Faqs />
+			</section>
+			<section id="contact" name="contact" className="element">
+				<Contact />
+				<Bglight src = '/static/image/light.svg'/>
+			</section>
+		</div>
 		</Relative>
 	</Scroll>
 )
