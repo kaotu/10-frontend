@@ -58,12 +58,12 @@ const Icon = styled.div`
  
 `
 const HideMobile = styled.div`
-  @media (max-width: 779px) {
+  @media (max-width: 720px) {
     display: none;
   }
 `
 const HideDesktop = styled.div`
-  @media (min-width: 780px) {
+  @media (min-width: 721px) {
     display: none;
   }
 `
@@ -75,27 +75,21 @@ const Mobile = styled.div`
   }
 `
 
-const Space = styled.div`
-  margin-top: 6%;
-  margin-bottom: 10%;
-`
-
 const index = props => (
   <Bg bgColor={Color.mongkey.who} who className="">
     <div className="container">
       <div className="row">
-        <Space className="col-12 col-sm-12 col-md-12 col-lg-6 order-2 order-md-1">
+        <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
             <H1 className="text-center">WHO</H1>
             <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
-          <br/>
           <HideMobile>
             <Icon className="row">
               {
                 IconData.map((data, i) => (
                 <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <Image src={data.image}/>
+                  <Image src={data.image} onClick={() => focus(IconData.image)}/>
                 </div>
               ))
               }
@@ -112,7 +106,7 @@ const index = props => (
           <HideDesktop>
             <ResponWho />
           </HideDesktop>
-        </Space>
+        </div>
         <div className="col-12 col-md-6 order-1 order-md-2">
           <img src="/static/image/Whomoutain.svg" />
         </div>
