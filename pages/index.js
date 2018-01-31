@@ -10,11 +10,25 @@ import Faqs from '../components/FAQs'
 import Contact from '../components/Contact'
 import Navbar from '../components/Core/Navbar'
 import Sponsor from '../components/Sponsor/index'
+import styled from 'styled-components'
+
+const Relative = styled.div`
+	position: relative;
+`
+
+const Bglight = styled.img`
+  position : absolute;
+  z-index : 0;
+  height: 315vh;
+  bottom : 3.5vh;
+  left:30vw;
+`
 
 injectGlobal
 
 const index = () => (
-	<Scroll>		
+	<Scroll>
+		<Relative>		
 		<section id="home">
 			<Intro />
 		</section>
@@ -39,8 +53,9 @@ const index = () => (
 		</section>
 		<section id="contact">
 			<Contact />
+			<Bglight src = '/static/image/light.svg'/>
 		</section>
-		
+		</Relative>
 	</Scroll>
 )
 

@@ -82,9 +82,25 @@ const Space = styled.div`
   margin-top: 6%;
   margin-bottom: 10%;
 `
+const Relative = styled.div`
+  position: relative;
+  height:100vh;
+`
+const Moutain = styled.img`
+  position: absolute;
+  z-index: 0;
+  bottom: 0vh;
+`
+
+const Bggueng = styled.div`
+  background: linear-gradient(to top, rgba(255,0,0,0), rgba(101, 182, 227, 1));
+`
 
 const index = props => (
-  <Bg bgColor={Color.mongkey.what} className="">
+  // <Bg bgColor={Color.mongkey.what} className="">
+  <Bggueng>
+  <Relative>
+    <Moutain src='/static/image/MoutainWho.svg'/>
     <Padding className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12">
@@ -117,6 +133,8 @@ const index = props => (
         <img src="/static/image/Whatmoutain.svg" />
       </div>
     </Padding>
-  </Bg>
+    </Relative>
+    </Bggueng>
+  // </Bg>
 )
 export default index
