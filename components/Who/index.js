@@ -125,7 +125,7 @@ const index = props => (
             <ResponWho />
           </HideDesktop>
         </Space>
-        <div className="col-12 col-md-12 col-lg-6 order-1 order-md-2">
+        <div className="col-12 col-md-6 order-1 order-md-2">
           <img src="/static/image/Whomoutain.svg" />
         </div>
       </div>
