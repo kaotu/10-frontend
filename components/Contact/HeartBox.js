@@ -13,12 +13,6 @@ const ImgHeart = styled.img`
     }
 `
 const BoxHeart = () => (
-  <div className="container-fluid">
-    <div className="row">
-      <div className="col-md-12 img-responsive">
-        <ImgHeart src="/static/image/BoxHeart.svg" className="img-responsive"/>
-      </div>
-    </div>
-  </div>
-)
+  <ImgHeart src="/static/image/BoxHeart.svg" className="img-responsive"/>
+) 
 export default BoxHeart
