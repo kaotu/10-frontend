@@ -6,6 +6,14 @@ import H2 from '../Core/FontH2'
 import Moblie from '../When/moblie'
 import Color from '../Core/Color'
 
+const Relative = styled.div`
+  position: relative;
+`
+const Moutain = styled.img`
+  position: absolute; 
+  z-index: 1;
+  top: 40vh;
+`
 const Img = styled.img`
   width:40vw;
   right:0px;
@@ -70,6 +78,8 @@ const Space = styled.div`
 
 const index = () => (
   <Bg bgColor={Color.mongkey.when} className="">
+  <Relative>
+    <Moutain src='/static/image/MoutainWhen.svg' className="img responsive"/>
     <div className="container-fluid">
       <HideMobile>
         <div className="row">
@@ -80,7 +90,7 @@ const index = () => (
             </Head>
           </Space>
           <div className="col-12 col-sm-12 col-md-12  ">
-            <Img src="/static/image/Climming.svg" className="rounded float-right" />
+            {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
             <Box1 className="text-center">
               <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
             </Box1>
@@ -100,6 +110,7 @@ const index = () => (
         <Moblie />
       </HideDesktop>
     </div>
+    </Relative>
   </Bg>
 )
 export default index

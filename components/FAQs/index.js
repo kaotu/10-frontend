@@ -34,8 +34,13 @@ const Space = styled.div`
   margin-top: 5%;
 `
 
+const Relative = styled.div`
+  position : relative;
+`
+
 const index = props => (
   <DivWhere>
+    <Relative>
     <Bg bgColor={Color.mongkey.faqs } className="">
       <div className="container-fluid">
         <div className="row">
@@ -54,6 +59,7 @@ const index = props => (
         <br />
       </div>
     </Bg>
+    </Relative>
   </DivWhere>
 );
 export default index;

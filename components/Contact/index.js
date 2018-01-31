@@ -8,6 +8,7 @@ import H2 from '../Core/FontH2'
 const DivContact = styled.div`
   text-align: center;    
   width: 100%;  
+  overflow: hidden;
 `
 const ImgLeft = styled.img`
   width:5vw;
@@ -54,6 +55,7 @@ const Linerespon = styled.div`
 
 const ContentBg = Bg.extend`
   min-height: 90vh;
+  z-index:1;
 `
 
 const FooterBg = Bg.extend`
@@ -66,9 +68,24 @@ const Space = styled.div`
   margin-bottom: 10%;
 `
 
+const Bgdin = styled.img`
+  position : absolute;
+  z-index : 1;
+  bottom : 0vh;
+  left : 0vw;
+  width : 100.5%;
+`
+
+const Relative = styled.div`
+  position : relative;
+`
+
+
 const index = () => (
   <DivContact>
-    <ContentBg bgColor="#e7f6fa" className="">
+    <Relative>
+      <Bgdin src = '/static/image/Din.svg'/>
+    <ContentBg bgColor="#444B52" className="">
       <div className="container-fluid">
         <div className="row">
           <Space className="col-md-12">
@@ -112,6 +129,7 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
+    </Relative>
 
     <FooterBg className="d-flex justify-content-center align-items-center text-white">
       <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer

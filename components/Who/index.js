@@ -75,8 +75,25 @@ const Mobile = styled.div`
   }
 `
 
+const Space = styled.div`
+  margin-top: 6%;
+  margin-bottom: 10%;
+`
+
+const Bgmountain = styled.img`
+  position : absolute;
+  z-index : 0;
+  top : 0vh;
+`
+
+const Relative = styled.div`
+  position : relative
+`
+
 const index = props => (
   <Bg bgColor={Color.mongkey.who} who className="">
+  <Relative>
+    <Bgmountain src = '/static/image/เขายาว.svg'/>
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
@@ -112,6 +129,7 @@ const index = props => (
         </div>
       </div>
     </div>
+    </Relative>
   </Bg>
 );
 export default compose(state)(index)
