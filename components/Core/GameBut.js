@@ -2,16 +2,17 @@ import react from 'react'
 import styled from 'styled-components'
 
 const GameButton = styled.div`
-  width: 60px;
-  height: 160px;    
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  background-color: #E23D37;
+  position: relative;
+  width: 100px;
+  height: 100px;    
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background-color: #0A3A4E;
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position: absolute;
-  right: 0;
-  top:230px;          
+  left: 5vw;
+  top:65px;          
   color: white;
   z-index: 2560;
   @media(max-width:1200px) {
@@ -26,31 +27,25 @@ const GameButton = styled.div`
   }
 
 `
-const Rotate = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 0px;
-    margin-left: -38px;
-`
 const Font = styled.h1`
   position: absolute;
   font-size: 1.4em;
   font-weight: bold;
+  top: 10%;
+  left:11%;
+  width: 80%;
   color: #fff;
   letter-spacing: 5px;
-  -webkit-transform:rotate(270deg);
   @media(max-width:1200px) {
     font-size: 0em;            
   }
 `
 
 const IconGame = styled.img`
-  width: 50%; 
-  position: relative;
-  top: -65px;
-  left: 23px;
-  -webkit-transform:rotate(0deg);
+  width: 40%; 
+  left: 30%;
+  top:40%;
+  position: absolute;
   @media(max-width:1200px) {
     width: 50%; 
     top: -18px;         
@@ -65,7 +60,7 @@ const IconGame = styled.img`
 const GameBut = () => (
   <a href="https://game.wip.camp" target="_blank">
   <GameButton className="justify-content-center align-items-center" data-toggle="" data-target="#">
-       <Rotate><Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/></Rotate>
+       <Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/>
   </GameButton>
   </a>
 )

@@ -66,6 +66,7 @@ const FooterBg = Bg.extend`
 const Space = styled.div`
   margin-top: 5%;
   margin-bottom: 10%;
+  z-index: 2;
 `
 
 const Bgdin = styled.img`

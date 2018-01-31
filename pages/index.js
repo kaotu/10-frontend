@@ -19,9 +19,9 @@ const Relative = styled.div`
 const Bglight = styled.img`
   position : absolute;
   z-index : 0;
-  height: 315vh;
+  height: 400vh;
   bottom : 3.5vh;
-  left:30vw;
+  left:24vw;
 `
 
 injectGlobal
