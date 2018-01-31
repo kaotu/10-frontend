@@ -1,30 +1,48 @@
 import react from 'react'
 import styled from 'styled-components'
 import {compose, withState} from 'recompose'
-
 import {yak,mongkey} from '../Core/Color'
-
 const state = withState('check','setCheck',false)
 
 const setCheck = (callback, data) =>(
   callback(data ? yak : mongkey)
 )
 
-const CloudBack = styled.img`
+const CloudBack = styled.div`
     position:absolute;
     z-index: 0;
-    left:0vw;
-    bottom:-20vh;
-    width: 100vw;
-    animation: MoveUp 30s linear;
-    animation-delay: 0s;
-    @keyframes MoveUp {
-        0% {
-            left: -100vw;
-        }
-        100% {
-            left: 0vh;
-        }
+    margin:0;
+    padding:0;
+    top: 30vh;
+    left: 0vw;
+    height:50vh;
+    width:100vw;
+    
+    background: url('/static/image/CloudBG.svg') repeat 0 0;
+    background-position: 20vw 0;
+    animation: 100s linear 0s normal none infinite animated;
+    background-repeat: repeat-x;
+    @keyframes animated {
+        from {background-position: 20vw 0;}
+        to {background-position: 220vw 0;}
+    }
+`
+const CloudBack1 = styled.div`
+    position:absolute;
+    z-index: 0;
+    margin:0;
+    padding:0;
+    top: 30vh;
+    left: 0vw;
+    height:50vh;
+    width:100vw;
+    
+    background: url('/static/image/CloudBG.svg') repeat 0 0;
+    animation: 80s linear 0s normal none infinite animate;
+    background-repeat: repeat-x;
+    @keyframes animate {
+        from {background-position:0 0;}
+        to {background-position: 200vw 0;}
     }
 `
 const MountainLeft = styled.img`
@@ -33,6 +51,10 @@ const MountainLeft = styled.img`
     left:0vw;
     bottom:-5vh;
     width:100vw;
+    @media (max-width:720px) {
+      width:200vw;
+      z-index: 1;
+    }
     // animation: MoveRight 1s linear;
     // animation-delay: 0s;
     // @keyframes MoveRight {
@@ -47,9 +69,24 @@ const MountainLeft = styled.img`
 const MountainCenter = styled.img`
   position:absolute;
   z-index: 2;
-  left:23vw;
+  left:18vw;
   bottom:0vh;
   height: 35vw;
+  @media (max-width:720px) {
+    height:80vw;
+    margin-bottom: 0vw;
+    left:-20vw;
+  }
+  @media (max-width:560px) {
+    height:100vw;
+    margin-bottom: 0vw;
+    left:-40vw;
+  }
+  @media (max-width:420px) {
+    height:120vw;
+    margin-bottom: 0vw;
+    left:-58vw;
+  }
   // animation: MoveUp 1s linear;
   // animation-delay: 0s;
   // @keyframes MoveUp {
@@ -67,6 +104,10 @@ const MountainRight = styled.img`
     right:0vw;
     bottom:-15vh;
     width:100vw;
+    @media (max-width:720px) {
+      width:200vw;
+      z-index: 1;
+    }
     // animation: MoveLeft 1s linear;
     // animation-delay: 0s;
     // @keyframes MoveLeft {
@@ -97,17 +138,30 @@ const ChooseMonkey = styled.img`
       top: 30vh;
     }
   }
+  @media(max-width: 720px){
+    margin-top : 50vw;
+    left: 23vw;
+    width:5vw;
+  }
 `
 const Monkey = styled.img`
   position:absolute;
   z-index: 4;
-  bottom:0vh;
-  height: 65vh;
+  bottom:14vh;
+  height: 50vh;
   cursor:pointer;
-  left:10vw;
+  left:5vw;
   @media(max-width: 720px){
-    height: 20vh;
+    height: 42vh;
   }
+  @media(max-width: 560px){
+    height: 36vh;
+  }
+  @media(max-width: 420px){
+    height: 30vh;
+    bottom:12vh;
+  }
+  
 `
 const ChooseGiant = styled.img`
   position: absolute;
@@ -117,16 +171,28 @@ const ChooseGiant = styled.img`
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
+  @media(max-width: 720px){
+    margin-top : 50vw;
+    right: 23vw;
+    width:5vw;
+  }
 `
 const Giant = styled.img`
   position:absolute;
   z-index: 4;
-  bottom:0vh;
-  height: 65vh;
+  bottom:8vh;
+  height: 60vh;
   cursor:pointer;
-  right:10vw;
+  right:5vw;
   @media(max-width: 720px){
-    height: 20vh;
+    height: 42vh;
+  }
+  @media(max-width: 560px){
+    height: 36vh;
+  }
+  @media(max-width: 420px){
+    height: 30vh;
+    bottom:10vh;
   }
 `
 const CloudBottom = styled.img`
@@ -178,7 +244,8 @@ const LogoSIT = styled.img`
   animation-duration: 2s;
   @media(max-width: 720px){
     width: 90%;
-	  left: 5vw;
+    left: 5vw;
+    top:23vh;
   }
 `
 const Scrolldown = styled.img`
@@ -201,21 +268,24 @@ const Scrolldown = styled.img`
       }
     }
 `
-const Background = () => (
+const Background = (props) => (
     <div>
-        <CloudBack src='/static/image/CloudBack.svg'/>
+        <CloudBack/>
+        <CloudBack1/>
         <MountainLeft src='/static/image/MountainLeft.svg'/>
-        <MountainCenter src='/static/image/moutain.svg'/>
+        <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
-        <ChooseMonkey src='/static/image/double-arrow-down-128.png'/>
-        <Monkey onClick={() => check.setCheck(false) } src='/static/image/mongkey-Home.svg'/>
-        <ChooseGiant src='/static/image/double-arrow-down-128.png'/>
-        <Giant onClick={() => check.setCheck(true) }src='/static/image/giantwithcloud.svg'/>
+        <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
+        <Monkey onClick={() => check.setCheck(false) } src='/static/image/Moling.svg'/>
+        <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
+        <Giant onClick={() => check.setCheck(true) }src='/static/image/Moyak.svg'/>
         <CloudBottom src='/static/image/CloudBottom.svg'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
-        <LogoSIT src='/static/image/ตรามอ.png'/>
-        <Scrolldown src='/static/image/ScrollDown.png'/>
+        <LogoSIT src='/static/image/LogoSIT.png'/>
+        {/* <Scrolldown src='/static/image/ScrollDown.png'/> */}
     </div>
 )
 
-export default Background
+const BackgroundCompose = compose (state)(Background)
+
+export default BackgroundCompose

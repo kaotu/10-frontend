@@ -29,17 +29,22 @@ const H4 = styled.h4`
   color: #082A3D;
 `
 
+const Space = styled.div`
+  margin-top: 5%;
+  margin-bottom: 10%;
+`
+
 const index = () => (
-  <Bg bgColor={Color.mongkey.where} where className="d-flex align-items-center">
-    <div className="container-fluid my-5">
+  <Bg bgColor={Color.mongkey.where} where className="">
+    <div className="container-fluid">
       <div className="row">
-        <div className="col-md-6 text-center mt-4">
-          <Story src="static/image/LookOver-01.svg" />
+        <div className="col-md-12 text-center mt-4">
+          <Story src="../../static/image/WhereStory.svg" />
         </div>
-        <div className="col-md-6">
-          <Mobile className="text-center mt-4">
-            <H1 className="font-weight-bold">WHERE</H1>
-            <H2 className="font-weight-bold">ค่ายนี้จัดที่ไหน ?</H2>
+        <Space className="col-md-12">
+          <Mobile className="text-center">
+            <H1>WHERE</H1>
+            <H2>ค่ายนี้จัดที่ไหน ?</H2>
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
@@ -49,7 +54,7 @@ const index = () => (
             <h3>คณะเทคโนโลยีสารสนเทศ</h3>
             <H4>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</H4>
           </div>
-        </div>
+        </Space>
       </div>
     </div>
   </Bg>

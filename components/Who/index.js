@@ -7,6 +7,7 @@ import Block from "./Block"
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
+import Router from 'next/router'
 
 const state = withState("checkButton", "setCheck", 0)
 
@@ -24,9 +25,15 @@ const Content = [
 ]
 const Image = styled.img`
     width:7vw;
+    transition:all 550ms ease-in-out;
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
+  }
+  &:hover{
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 `
 const IconData = [
@@ -48,14 +55,15 @@ const Icon = styled.div`
   cursor: pointer;
   margin-left: 1%;
   margin-right: 1%;
+ 
 `
 const HideMobile = styled.div`
-  @media (max-width: 720px) {
+  @media (max-width: 779px) {
     display: none;
   }
 `
 const HideDesktop = styled.div`
-  @media (min-width: 721px) {
+  @media (min-width: 780px) {
     display: none;
   }
 `
@@ -67,21 +75,39 @@ const Mobile = styled.div`
   }
 `
 
+const Space = styled.div`
+  margin-top: 6%;
+  margin-bottom: 10%;
+`
+
+const Bgmountain = styled.img`
+  position : absolute;
+  z-index : 0;
+  top : 0vh;
+`
+
+const Relative = styled.div`
+  position : relative
+`
+
 const index = props => (
-  <Bg bgColor={Color.mongkey.who} who className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.who} who className="">
+  <Relative>
+    <Bgmountain src = '/static/image/เขายาว.svg'/>
     <div className="container">
       <div className="row">
-        <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
+        <Space className="col-12 col-sm-12 col-md-12 col-lg-6 order-2 order-md-1">
           <Mobile>
-            <H1 className="font-weight-bold">WHO</H1>
-            <H2 className="font-weight-bold">ค่ายนี้เหมาะกับใคร</H2>
+            <H1 className="text-center">WHO</H1>
+            <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
+          <br/>
           <HideMobile>
             <Icon className="row">
               {
                 IconData.map((data, i) => (
                 <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <Image src={data.image} />
+                  <Image src={data.image}/>
                 </div>
               ))
               }
@@ -98,12 +124,13 @@ const index = props => (
           <HideDesktop>
             <ResponWho />
           </HideDesktop>
-        </div>
+        </Space>
         <div className="col-12 col-md-6 order-1 order-md-2">
-          <img src="/static/image/halfHill.svg" />
+          <img src="/static/image/Whomoutain.svg" />
         </div>
       </div>
     </div>
+    </Relative>
   </Bg>
 );
 export default compose(state)(index)

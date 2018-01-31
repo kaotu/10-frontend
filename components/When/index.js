@@ -6,35 +6,42 @@ import H2 from '../Core/FontH2'
 import Moblie from '../When/moblie'
 import Color from '../Core/Color'
 
+const Relative = styled.div`
+  position: relative;
+`
+const Moutain = styled.img`
+  position: absolute; 
+  z-index: 1;
+  top: 40vh;
+`
 const Img = styled.img`
-    width:40vw;
-    right:0px;
+  width:40vw;
+  right:0px;
 `
 const Head = styled.div`
   position:absolute;
-  top:15vh;
   left:22vw;
 `
 const Front = styled.p`
-    padding-top:0vw;
-    margin-left:40vw;   
+  padding-top:0vw;
+  margin-left:40vw;   
 `
 const Box1 = styled.div`
-    width: 20vw;
-    height: 55hw;    
-    padding: 1vw;
-    background-color:#FBFBEF;
-    opecity:0.9;
-    border-radius: 0.2em;
-    margin-top:33vw;
-    margin-left:30vw;   
+  width: 20vw;
+  height: 55hw;    
+  padding: 1vw;
+  background-color:#FBFBEF;
+  opecity:0.9;
+  border-radius: 0.2em;
+  margin-top:33vw;
+  margin-left:30vw;   
 `
 const Box2 = styled.div`
   position:absolute;
   background-color:transparent;
   width:10vw;
   top:5vh;
-  left:76vw;
+  left:74vw;
   z-index:2;
 `
 const Box3 = styled.div`
@@ -64,19 +71,26 @@ const HideDesktop = styled.div`
   }
 `
 
+const Space = styled.div`
+  margin-top: 5%;
+  margin-bottom: 10%;
+`
+
 const index = () => (
-  <Bg bgColor={Color.mongkey.when} className="d-flex align-items-center">
+  <Bg bgColor={Color.mongkey.when} className="">
+  <Relative>
+    <Moutain src='/static/image/MoutainWhen.svg' className="img responsive"/>
     <div className="container-fluid">
       <HideMobile>
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-6 ">
+          <Space className="col-12 col-sm-12 col-md-6 ">
             <Head>
-              <H1 className="text-center font-weight-bold">WHEN</H1>
-              <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
+              <H1 className="text-center">WHEN</H1>
+              <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
             </Head>
-          </div>
+          </Space>
           <div className="col-12 col-sm-12 col-md-12  ">
-            <Img src="/static/image/Climing.svg" className="rounded float-right" />
+            {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
             <Box1 className="text-center">
               <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
             </Box1>
@@ -96,6 +110,7 @@ const index = () => (
         <Moblie />
       </HideDesktop>
     </div>
+    </Relative>
   </Bg>
 )
 export default index

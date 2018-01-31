@@ -5,9 +5,10 @@ import HeartBox from './HeartBox'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
-const DivWhere = styled.div`
+const DivContact = styled.div`
   text-align: center;    
   width: 100%;  
+  overflow: hidden;
 `
 const ImgLeft = styled.img`
   width:5vw;
@@ -54,20 +55,42 @@ const Linerespon = styled.div`
 
 const ContentBg = Bg.extend`
   min-height: 90vh;
+  z-index:1;
 `
 
 const FooterBg = Bg.extend`
-  min-height: 10vh;  
+  min-height: 10vh;
+  background-color:#154051;  
 `
 
+const Space = styled.div`
+  margin-top: 5%;
+  margin-bottom: 10%;
+`
+
+const Bgdin = styled.img`
+  position : absolute;
+  z-index : 1;
+  bottom : 0vh;
+  left : 0vw;
+  width : 100.5%;
+`
+
+const Relative = styled.div`
+  position : relative;
+`
+
+
 const index = () => (
-  <DivWhere>
-    <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
+  <DivContact>
+    <Relative>
+      <Bgdin src = '/static/image/Din.svg'/>
+    <ContentBg bgColor="#444B52" className="">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12">
+          <Space className="col-md-12">
             <H1>Contact</H1>
-            <H2 className="font-weight-bold">ติดต่อเรา</H2>
+            <H2>ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3 img-responsive">
                 <ImgLeft src="/static/image/ContactPhone.svg" />
@@ -75,21 +98,21 @@ const index = () => (
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
-                <a href="https://www.facebook.com/wipcamp/">
-                  <ImgCenter src="/static/image/Facebook.svg" />
+                <a href="https://www.facebook.com/wipcamp/" target="_blank">
+                  <ImgCenter src="/static/image/facebook ci logo.png" />
                 </a>
-                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
-                  <ImgCenter src="/static/image/Lineicon.svg" />
+                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
+                  <ImgCenter src="/static/image/LINEa ci logo.png" />
                 </a>
-                <a href="https://twitter.com/WIPCamp">
-                  <ImgCenter src="/static/image/Twitter.svg" />
+                <a href="https://twitter.com/WIPCamp" target="_blank">
+                  <ImgCenter src="/static/image/Twiiter ci logo.png" />
                 </a>
-                <a href="https://www.instagram.com/wipcamp/">
-                  <ImgCenter src="/static/image/Ig.svg" />
+                <a href="https://www.instagram.com/wipcamp/" target="_blank">
+                  <ImgCenter src="/static/image/ig ci logo.png" />
                 </a>
-                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
-                  <ImgCenter src="/static/image/Youtube.svg" />
-                </a>                
+                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
+                  <ImgCenter src="/static/image/Youtube ci logo.png" />
+                </a>
                 <Linerespon />
               </Line>
               <div className="col-sm-3 col-md-3 img-responsive">
@@ -97,7 +120,7 @@ const index = () => (
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
-          </div>
+          </Space>
         </div>
         <div className="row">
           <div className="col-md-12">
@@ -106,11 +129,12 @@ const index = () => (
         </div>
       </div>
     </ContentBg>
-    
-    <FooterBg className="d-flex justify-content-center align-items-center">    
-    <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
+    </Relative>
+
+    <FooterBg className="d-flex justify-content-center align-items-center text-white">
+      <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer
     </FooterBg>
-  </DivWhere>
+  </DivContact>
 )
 
 export default index

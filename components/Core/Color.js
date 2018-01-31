@@ -13,10 +13,10 @@ const colors = {
   mongkey : {
     button: '#E23D37',
     what:'#69b4cb',
-    who:'#87C3D5',
-    where:'#A5D2E0',
+    who:'#5F6164',
+    where:'#5F6164',
     when:'#C3E1EA',
-    faqs:'#DAECF2',
+    faqs:'#444B52',
     contact:'#E8F4F7'
   }
 }
