@@ -4,10 +4,12 @@ import styled from 'styled-components'
 const GameButton = styled.div`
   position: relative;
   width: 100px;
-  height: 100px;    
+  height: 100px;
+  border: .2em solid #002d40;
+  border-top : transparent;    
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  background-color: #0A3A4E;
+  background-color: transparent;
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position: absolute;
@@ -25,19 +27,28 @@ const GameButton = styled.div`
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;         
   }
+  &:hover{
+    border: .2em solid #fff;
+    border-top : transparent;
+    background-color: #002d40; 
+  }
 
 `
 const Font = styled.h1`
+  transition:all 550ms ease-in-out;
   position: absolute;
   font-size: 1.4em;
   font-weight: bold;
   top: 10%;
   left:11%;
   width: 80%;
-  color: #fff;
+  color: #002d40;
   letter-spacing: 5px;
   @media(max-width:1200px) {
     font-size: 0em;            
+  }
+  &:hover{
+    color: #fff;
   }
 `
 
