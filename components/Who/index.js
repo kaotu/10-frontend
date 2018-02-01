@@ -31,9 +31,18 @@ const Image = styled.img`
     padding: .2em;
   }
   &:hover{
-    -moz-transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+    width:7vw;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  &.active{
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  }
+  &.nagative{
+    width:7vw;
   }
 `
 const IconData = [
@@ -98,21 +107,28 @@ const index = props => (
       <div className="row">
         <Space className="col-12 col-sm-12 col-md-12 col-lg-6 order-2 order-md-1">
           <Mobile>
-            <H1 className="text-center">WHO</H1>
-            <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
+            <H1 className="text-center ">WHO</H1>
+            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <br/>
           <HideMobile>
             <Icon className="row">
               {
                 IconData.map((data, i) => (
-                <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <Image src={data.image}/>
+                <div key={i} className="col-3" onClick={(e) => {
+                  const activeImg = document.getElementsByClassName("who-img active");
+                  if(activeImg.length) {
+                    activeImg[0].classList.remove("active");
+                  }
+                  props.setCheck(data.id)
+                  e.target.classList.add("active")
+                } }>
+                  <Image className="who-img" src={data.image}/>
                 </div>
               ))
               }
             </Icon>
-            <div className="mt-5">
+            <div className="mt-5 text-info">
               <Block left= {`${PositionTextBox[props.checkButton]}`}>
                 <h4>
                   <strong>{`${Topic[props.checkButton]}`}</strong>
