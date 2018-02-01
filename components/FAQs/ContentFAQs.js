@@ -18,13 +18,16 @@ const Box = styled.div`
   min-height: 35hw;    
   padding: 1vw;
   background-color:#FBFBEF;
-  opecity:0.8;
   margin-top:1vw;
 	margin-bottom:1vw;
 	border-radius: 10px;
   ${props=>props.primary && `
     background-color:#FFFFFF;
   `}
+`
+
+const Zindex = styled.div`
+  z-index : 10;
 `
 
 const FAQs = [
@@ -45,18 +48,18 @@ const Content = () => (
             <div className="col img-responesive align-self-center">
               <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
             </div>
-            <div className="col-6">
+            <Zindex className="col-6">
               <Box><p dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
-            </div>
+            </Zindex>
             <div className="col">
             </div>
           </div>
           <div className="row d-flex">
             <div className="col">
             </div>
-            <div className="col-6">
+            <Zindex className="col-6">
               <Box primary><p dangerouslySetInnerHTML={{__html: data.A}} /></Box>
-            </div>
+            </Zindex>
             <div className="col img-responesive align-self-center">
               <ImgRight src="/static/image/yakscore-new-01.svg" />
             </div>
