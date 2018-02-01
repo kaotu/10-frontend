@@ -5,6 +5,7 @@ import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Moblie from '../When/moblie'
 import Color from '../Core/Color'
+import {compose, lifecycle} from 'recompose'
 
 const Relative = styled.div`
   position: relative;
@@ -111,4 +112,16 @@ const index = () => (
     </Relative>
   </Bg>
 )
-export default index
+
+export default compose(
+  lifecycle({
+    componentDidMount() {
+      let date = new Date()
+      let timeline =new Intl.DateTimeFormat('th-th').format(date)
+      console.log(timeline)
+      if (timeline == "10/2/2561"){
+        
+      }
+    }
+  })
+)(index)
