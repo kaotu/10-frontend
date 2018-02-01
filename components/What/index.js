@@ -16,9 +16,8 @@ const Test = styled.div`
 `
 
 const Icon = styled.img`
-    width:7vw;
+    width:5em;
   @media (max-width:720px) {
-    width: 50%;
     padding: .2em;
   }
 `
@@ -36,43 +35,6 @@ const IconInfo = [
   {icon : "/static/image/web.png", text: "HTML5&CSS"}
 ]
 
-const IMG = styled.img`
-
-  @media (min-width:800px){
-    position: absolute;
-    margin-top : 5vw;
-    height : 55vw;
-    margin-left : -55vw;
-    }
-  @media (min-width:900px){
-    position: absolute;
-    margin-bottom : 5vw;
-    height : 40vw;
-    margin-left : -30vw;
-    }
-  @media (min-width:1000px){
-    position: absolute;
-    margin-bottom : 5vw;
-    height : 40vw;
-    margin-left : -30vw;
-    }
-  @media (min-width:1100px){
-    position: absolute;
-    // margin-bottom : 5vh;
-    margin-top: 0vh;
-    margin-bottom: 0vh;
-    height : 40vw;
-    margin-left : -30vw;
-      }
-  @media (min-width:1200px){
-    position: absolute;
-    margin-top : -10vw;
-    height : 45vw;
-    margin-left : -40vw;
-    border-top : -100px;
-      }
-
-`
 const Padding = styled.div`
   @media (max-width:720px){
     margin-top:60px;
@@ -97,18 +59,24 @@ const Bggueng = styled.div`
   background: linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1));
 `
 
+const Hidden = styled.div`
+  @media(max-width:720px) {
+    display: none;
+  }
+`
+
 const index = props => (
   // <Bg bgColor={Color.mongkey.what} className="">
   <Bggueng>
   <Relative>
     <Moutain src='/static/image/MoutainWho.svg'/>
-    <Padding className="container">
+    <Padding className="container px-5">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12">
           <Cloud />
-          
         </div>
-        <Space className="col-12 col-sm-12 col-md-12">
+        <Hidden className="col-lg-4"></Hidden>
+        <Space className="col-12 col-sm-12 col-md-12 col-lg-8">
           <Mobile className="text-center">
             <H1>WHAT</H1>
             <H2>ค่ายนี้คืออะไร ?</H2>
