@@ -291,9 +291,9 @@ const Background = (props) => (
 export default compose(
   withState('check','setCheck',true),
   lifecycle({
-  componentDidMount () {
-    let team = window.localStorage.getItem("team")
-    console.log(team === 'yak' ? 'true' : 'false')
-  }
+    componentDidMount () {
+      let team = window.localStorage.getItem("team")
+      team == 'yak' ? window.localStorage.setItem("color",yak) : window.localStorage.setItem("color",mongkey)
+    }
   })
 )(Background)
