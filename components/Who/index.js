@@ -117,8 +117,8 @@ const index = (props) => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H11 className="text-center">WHO</H11>
-            <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
+            <H11 className="text-center ">WHO</H11>
+            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">
