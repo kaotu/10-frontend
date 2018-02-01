@@ -32,12 +32,6 @@ const Image = styled.img`
     width: 50%;
     padding: .2em;
   }
-  &:hover{
-    width:7vw;
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
   &.active{
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -103,10 +97,10 @@ position : relative
 `
 
 const IconData = [
-  { id: 0, image: "/static/image/edu.png",valu:true},
-  { id: 1, image: "/static/image/computer.png" ,valu:true},
-  { id: 2, image: "/static/image/Mom.png" ,valu:true},
-  { id: 3, image: "/static/image/night.png" ,valu:true}
+  { id: 0, image: "/static/image/edu.png"},
+  { id: 1, image: "/static/image/computer.png"},
+  { id: 2, image: "/static/image/Mom.png" },
+  { id: 3, image: "/static/image/night.png"}
 ]
 
 const H11 = H1.extend`
@@ -123,19 +117,13 @@ const index = (props) => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-<<<<<<< HEAD
-            <H1 className="text-center ">WHO</H1>
-            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
-=======
             <H11 className="text-center">WHO</H11>
             <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
->>>>>>> bf28483ffc240131b05b8f8516fbe7ae11ec934d
           </Mobile>
           <HideMobile>
             <Icon className="row">
               {
                 IconData.map((data, i) => (
-<<<<<<< HEAD
                 <div key={i} className="col-3" onClick={(e) => {
                   const activeImg = document.getElementsByClassName("who-img active");
                   if(activeImg.length) {
@@ -145,13 +133,6 @@ const index = (props) => (
                   e.target.classList.add("active")
                 } }>
                   <Image className="who-img" src={data.image}/>
-=======
-                <div key={i} className="col-3" onClick={(e) =>{ 
-                  props.setCheck(data.id)
-                  e.target.classList.add("focus")                  
-                }}>
-                    <Image src={data.image}/>    
->>>>>>> bf28483ffc240131b05b8f8516fbe7ae11ec934d
                 </div>
               ))
               }
@@ -174,6 +155,4 @@ const index = (props) => (
     </Relative>
   </Bg>
 );
-export default compose(state, withState('clicker', 'setClicker', [
-  false, false, false, false
-]))(index)
+export default compose(state)(index)

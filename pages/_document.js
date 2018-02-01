@@ -26,7 +26,7 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="company"/>
           <meta property="og:url" content="http://wip.camp/"/>
           <meta property="og:image" content="/static/image/bg.png"/>
-          <meta property="og:site_name" content="WIP Camp #9 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที"/>
+          <meta property="og:site_name" content="WIP Camp #10 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที"/>
           <meta name="theme-color" content="#463b6b"/>
           <meta name="msapplication-TileImage" content="/static/image/Favicon.png"/>
           <style>{`body { margin: 0; } /* custom! */`}</style>
