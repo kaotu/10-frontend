@@ -131,7 +131,6 @@ const index = props => (
           }
           </Info>
         </Space>
-        <img src="/static/image/Whatmoutain.svg" />
       </div>
     </Padding>
     </Relative>
