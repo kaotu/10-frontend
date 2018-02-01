@@ -194,7 +194,7 @@ const CloudBottom = styled.img`
     position:absolute;
     z-index: 5;
     left:0vw;
-    bottom:-24vh;
+    bottom:0vh;
     width: 120vw;
     // animation: MoveUp 1s linear;
     // animation-delay: 0s;
@@ -279,7 +279,7 @@ const Background = (props) => (
         <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg'/>
         <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
         <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg'/>
-        <CloudBottom src='/static/image/CloudBottom.svg'/>
+        <CloudBottom src='/static/image/เมฆ-บน.png'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>
         {/* <Scrolldown src='/static/image/ScrollDown.png'/> */}
