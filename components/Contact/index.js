@@ -34,8 +34,8 @@ const ImgRight = styled.img`
   }
 `
 const Line = styled.div`
-  border-left: thick solid #000;
-  border-right: thick solid #000;
+  border-left: thick solid white;
+  border-right: thick solid white;
   @media(max-width:575px) {
     border-left: none;
     border-right: none;
@@ -47,7 +47,7 @@ const Linerespon = styled.div`
     height : 2px;
     margin-left : 20vw;
     margin-top : 5vw;
-    background-color: #000;
+    background-color: white;
   @media(min-width:576px){
     display : none;
   }
@@ -56,11 +56,6 @@ const Linerespon = styled.div`
 const ContentBg = Bg.extend`
   min-height: 90vh;
   z-index:1;
-`
-
-const FooterBg = Bg.extend`
-  min-height: 10vh;
-  background-color:#154051;  
 `
 
 const Space = styled.div`
@@ -79,6 +74,7 @@ const Bgdin = styled.img`
 
 const Relative = styled.div`
   position : relative;
+  color : white;
 `
 
 
@@ -131,10 +127,6 @@ const index = () => (
       </div>
     </ContentBg>
     </Relative>
-
-    <FooterBg className="d-flex justify-content-center align-items-center text-white">
-      <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer
-    </FooterBg>
   </DivContact>
 )
 

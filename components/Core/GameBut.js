@@ -9,7 +9,7 @@ const GameButton = styled.div`
   border-top : transparent;    
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.3);
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position: absolute;
@@ -18,14 +18,10 @@ const GameButton = styled.div`
   color: white;
   z-index: 2560;
   @media(max-width:1200px) {
-    width: 55px;            
-    height: 65px;          
+    display:none;   
   }
   @media(max-width:720px) {
-    width: 50px;            
-    height: 55px; 
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;         
+    display:none;     
   }
   &:hover{
     border: .2em solid #fff;

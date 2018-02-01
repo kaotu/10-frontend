@@ -23,6 +23,10 @@ const Bglight = styled.img`
   bottom : 3.5vh;
   left:24vw;
 `
+const FooterBg = styled.div`
+  min-height: 10vh;
+  background-color:#154051;  
+`
 
 injectGlobal
 
@@ -54,6 +58,9 @@ const index = () => (
 				<Contact />
 				<Bglight src = '/static/image/light.svg'/>
 			</section>
+			<FooterBg className="d-flex justify-content-center align-items-center text-white">
+      <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer
+    </FooterBg>
 		</div>
 		</Relative>
 	</Scroll>
