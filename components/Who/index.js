@@ -99,6 +99,13 @@ const IconData = [
   { id: 2, image: "/static/image/Mom.png" ,valu:true},
   { id: 3, image: "/static/image/night.png" ,valu:true}
 ]
+
+const H11 = H1.extend`
+  @media (max-width:720px) {
+    margin-top:3em;
+  }
+`
+
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who className="">
   <Relative>
@@ -107,7 +114,7 @@ const index = (props) => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H1 className="text-center">WHO</H1>
+            <H11 className="text-center">WHO</H11>
             <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
