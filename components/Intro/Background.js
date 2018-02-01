@@ -146,6 +146,7 @@ const Monkey = styled.img`
   height: 50vh;
   cursor:pointer;
   left:5vw;
+  width: ${props => props.active ? '50vw': '30vw'};
   @media(max-width: 720px){
     height: 42vh;
   }
