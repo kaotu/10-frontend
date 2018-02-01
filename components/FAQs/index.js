@@ -13,7 +13,7 @@ const DivWhere = styled.div`
 `;
 
 const DisplayDesktop = styled.div`
-    margin-bottom: 10%;
+    margin-bottom: 10%; 
   @media (max-width: 720px) {
     display: none;
   }
