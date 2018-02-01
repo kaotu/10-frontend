@@ -18,14 +18,10 @@ const GameButton = styled.div`
   color: white;
   z-index: 2560;
   @media(max-width:1200px) {
-    width: 55px;            
-    height: 65px;          
+    display:none;   
   }
   @media(max-width:720px) {
-    width: 50px;            
-    height: 55px; 
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;         
+    display:none;     
   }
   &:hover{
     border: .2em solid #fff;
