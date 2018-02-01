@@ -1,7 +1,7 @@
 import react from 'react'
 import styled from 'styled-components'
 import {compose, withState , lifecycle} from 'recompose'
-import {yak,mongkey} from '../Core/Color'
+import Color from '../Core/Color'
 
 const CloudBack = styled.div`
     position:absolute;
@@ -291,9 +291,13 @@ const Background = (props) => (
 export default compose(
   withState('check','setCheck',true),
   lifecycle({
-  componentDidMount () {
-    let team = window.localStorage.getItem("team")
-    console.log(team === 'yak' ? 'true' : 'false')
-  }
+    componentDidMount () {
+      let team = window.localStorage.getItem("team")
+      team == 'yak' ? window.localStorage.setItem("color",JSON.stringify('{"what":"#000"}')) : window.localStorage.setItem("color",JSON.stringify( '{"what": "linear-gradient(to top, rgba(255,0,0,0), rgba(101, 182, 227, 1))"}'))
+      console.log(window.localStorage.getItem("color"))
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      let themeColor = JSON.parse(theme)
+      console.log(themeColor)
+    }
   })
 )(Background)
