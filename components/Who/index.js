@@ -96,6 +96,7 @@ const index = props => (
     <Bgmountain src = '/static/image/เขายาว.svg'/>
     <div className="container">
       <div className="row">
+        {/* <div className="col-12 col-lg-3"></div> */}
         <Space className="col-12 col-sm-12 col-md-12 col-lg-6 order-2 order-md-1">
           <Mobile>
             <H1 className="text-center">WHO</H1>
@@ -106,7 +107,7 @@ const index = props => (
             <Icon className="row">
               {
                 IconData.map((data, i) => (
-                <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
+                <div key={i} className="col-3 px-5" onClick={() => props.setCheck(data.id)}>
                   <Image src={data.image}/>
                 </div>
               ))
