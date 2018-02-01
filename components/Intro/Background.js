@@ -151,6 +151,7 @@ const Monkey = styled.img`
   height: 50vh;
   cursor:pointer;
   left:5vw;
+  width: ${props => props.active ? '50vw': '30vw'};
   @media(max-width: 720px){
     height: 42vh;
   }
@@ -268,6 +269,11 @@ const Scrolldown = styled.img`
       }
     }
 `
+const Img = styled.img`
+transition: .5s;
+width: ${props => props.active ? '50vw': '30vw'};
+`
+
 const Background = (props) => (
     <div>
         <CloudBack/>

@@ -9,7 +9,7 @@ import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
 import Router from 'next/router'
 
-const state = withState("checkButton", "setCheck", 0)
+const state = withState("checkButton", "setCheck", 0) 
 
 const Topic = [
   "น้อง ๆ มัธยมศึกษาตอนปลาย",
@@ -26,6 +26,8 @@ const Content = [
 const Image = styled.img`
     width:7vw;
     transition:all 550ms ease-in-out;
+    transition: .5s;
+    width: ${props => props.active ? '7vw': '8vw'};
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
@@ -35,13 +37,14 @@ const Image = styled.img`
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
   }
+  &.focus{
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  
+  
 `
-const IconData = [
-  { id: 0, image: "/static/image/edu.png" },
-  { id: 1, image: "/static/image/computer.png" },
-  { id: 2, image: "/static/image/Mom.png" },
-  { id: 3, image: "/static/image/night.png" }
-]
 
 const PositionTextBox =[
   "12.7%",
@@ -51,46 +54,52 @@ const PositionTextBox =[
 ]
 
 const Icon = styled.div`
-  margin-top: 5%;
-  cursor: pointer;
-  margin-left: 1%;
-  margin-right: 1%;
- 
+margin-top: 5%;
+cursor: pointer;
+margin-left: 1%;
+margin-right: 1%;
+
 `
 const HideMobile = styled.div`
-  @media (max-width: 720px) {
-    display: none;
-  }
+@media (max-width: 720px) {
+  display: none;
+}
 `
 const HideDesktop = styled.div`
-  @media (min-width: 721px) {
-    display: none;
-  }
+@media (min-width: 721px) {
+  display: none;
+}
 `
 const Mobile = styled.div`
-  text-align: right;
-  @media (max-width: 720px) {
-    text-align: center;
-    margin-bottom : 25px;
-  }
+text-align: right;
+@media (max-width: 720px) {
+  text-align: center;
+  margin-bottom : 25px;
+}
 `
 
 const Space = styled.div`
-  margin-top: 6%;
-  margin-bottom: 10%;
+margin-top: 6%;
+margin-bottom: 10%;
 `
 
 const Bgmountain = styled.img`
-  position : absolute;
-  z-index : 0;
-  top : 0vh;
+position : absolute;
+z-index : 0;
+top : 0vh;
 `
 
 const Relative = styled.div`
-  position : relative
+position : relative
 `
 
-const index = props => (
+const IconData = [
+  { id: 0, image: "/static/image/edu.png",valu:true},
+  { id: 1, image: "/static/image/computer.png" ,valu:true},
+  { id: 2, image: "/static/image/Mom.png" ,valu:true},
+  { id: 3, image: "/static/image/night.png" ,valu:true}
+]
+const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who className="">
   <Relative>
     <Bgmountain src = '/static/image/เขายาว.svg'/>
@@ -105,8 +114,11 @@ const index = props => (
             <Icon className="row">
               {
                 IconData.map((data, i) => (
-                <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <Image src={data.image} onClick={() => focus(IconData.image)}/>
+                <div key={i} className="col-3" onClick={(e) =>{ 
+                  props.setCheck(data.id)
+                  e.target.classList.add("focus")                  
+                }}>
+                    <Image src={data.image}/>    
                 </div>
               ))
               }
@@ -132,4 +144,6 @@ const index = props => (
     </Relative>
   </Bg>
 );
-export default compose(state)(index)
+export default compose(state, withState('clicker', 'setClicker', [
+  false, false, false, false
+]))(index)
