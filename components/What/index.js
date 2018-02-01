@@ -6,6 +6,7 @@ import Cloud from './cloud'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
+import theme from '../Intro/Background'
 
 const Info = styled.div`
   margin-top: 5%;
@@ -93,7 +94,7 @@ const Moutain = styled.img`
 `
 
 const Bggueng = styled.div`
-  background: linear-gradient(to top, rgba(255,0,0,0), rgba(101, 182, 227, 1));
+  background: linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1));
 `
 
 const index = props => (

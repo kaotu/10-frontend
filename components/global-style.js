@@ -7,6 +7,7 @@ export default injectGlobal`
   }
   body {
     font-family: 'Pridi';
+    overflow-x:hidden;
   }
   p {
     font-size:20px;

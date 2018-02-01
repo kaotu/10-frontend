@@ -34,8 +34,8 @@ const ImgRight = styled.img`
   }
 `
 const Line = styled.div`
-  border-left: thick solid #000;
-  border-right: thick solid #000;
+  border-left: thick solid white;
+  border-right: thick solid white;
   @media(max-width:575px) {
     border-left: none;
     border-right: none;
@@ -47,7 +47,7 @@ const Linerespon = styled.div`
     height : 2px;
     margin-left : 20vw;
     margin-top : 5vw;
-    background-color: #000;
+    background-color: white;
   @media(min-width:576px){
     display : none;
   }
@@ -66,6 +66,7 @@ const FooterBg = Bg.extend`
 const Space = styled.div`
   margin-top: 5%;
   margin-bottom: 10%;
+  z-index: 2;
 `
 
 const Bgdin = styled.img`
@@ -78,6 +79,7 @@ const Bgdin = styled.img`
 
 const Relative = styled.div`
   position : relative;
+  color : white;
 `
 
 

@@ -1,12 +1,7 @@
 import react from 'react'
 import styled from 'styled-components'
-import {compose, withState} from 'recompose'
-import {yak,mongkey} from '../Core/Color'
-const state = withState('check','setCheck',false)
-
-const setCheck = (callback, data) =>(
-  callback(data ? yak : mongkey)
-)
+import {compose, withState , lifecycle} from 'recompose'
+import Color from '../Core/Color'
 
 const CloudBack = styled.div`
     position:absolute;
@@ -200,7 +195,7 @@ const CloudBottom = styled.img`
     position:absolute;
     z-index: 5;
     left:0vw;
-    bottom:-24vh;
+    bottom:0vh;
     width: 120vw;
     // animation: MoveUp 1s linear;
     // animation-delay: 0s;
@@ -269,11 +264,11 @@ const Scrolldown = styled.img`
       }
     }
 `
-const Img = styled.img`
-transition: .5s;
-width: ${props => props.active ? '50vw': '30vw'};
-`
 
+const setTeam = (team) => {
+  window.localStorage.setItem('team',team )
+  window.location.reload()
+}
 const Background = (props) => (
     <div>
         <CloudBack/>
@@ -282,16 +277,28 @@ const Background = (props) => (
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
-        <Monkey onClick={() => check.setCheck(false) } src='/static/image/Moling.svg'/>
+        <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg'/>
         <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
-        <Giant onClick={() => check.setCheck(true) }src='/static/image/Moyak.svg'/>
-        <CloudBottom src='/static/image/CloudBottom.svg'/>
+        <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg'/>
+        <CloudBottom src='/static/image/เมฆ-บน.png'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>
         {/* <Scrolldown src='/static/image/ScrollDown.png'/> */}
     </div>
 )
 
-const BackgroundCompose = compose (state)(Background)
+// const BackgroundCompose = compose (state)(Background)
 
-export default BackgroundCompose
+export default compose(
+  withState('check','setCheck',true),
+  lifecycle({
+    componentDidMount () {
+      let team = window.localStorage.getItem("team")
+      team == 'yak' ? window.localStorage.setItem("color",JSON.stringify('{"what":"#000"}')) : window.localStorage.setItem("color",JSON.stringify( '{"what": "linear-gradient(to top, rgba(255,0,0,0), rgba(101, 182, 227, 1))"}'))
+      console.log(window.localStorage.getItem("color"))
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      let themeColor = JSON.parse(theme)
+      console.log(themeColor)
+    }
+  })
+)(Background)
