@@ -9,7 +9,7 @@ const GameButton = styled.div`
   border-top : transparent;    
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.3);
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position: absolute;
