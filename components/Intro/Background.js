@@ -231,10 +231,10 @@ const LogoWip = styled.img`
   }
 `
 const LogoSIT = styled.img`
-  width: 20%;
+  width: 30%;
   position: absolute;
   z-index: 6;
-  left: 40vw;
+  left: 35vw;
   top:40vh;
   animation-name: FadeOut;
   animation-duration: 2s;
@@ -281,7 +281,7 @@ const Background = (props) => (
         <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
         <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg'/>
         <CloudBottom src='/static/image/เมฆ-บน.png'/>
-        <LogoWip src="/static/image/WIPlogo.svg" />
+        <LogoWip src="/static/image/logofinals.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>
         {/* <Scrolldown src='/static/image/ScrollDown.png'/> */}
     </div>
