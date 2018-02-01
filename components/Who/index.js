@@ -123,19 +123,13 @@ const index = (props) => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-<<<<<<< HEAD
-            <H1 className="text-center ">WHO</H1>
+            <H11 className="text-center ">WHO</H11>
             <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
-=======
-            <H11 className="text-center">WHO</H11>
-            <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
->>>>>>> bf28483ffc240131b05b8f8516fbe7ae11ec934d
           </Mobile>
           <HideMobile>
             <Icon className="row">
               {
                 IconData.map((data, i) => (
-<<<<<<< HEAD
                 <div key={i} className="col-3" onClick={(e) => {
                   const activeImg = document.getElementsByClassName("who-img active");
                   if(activeImg.length) {
@@ -145,13 +139,6 @@ const index = (props) => (
                   e.target.classList.add("active")
                 } }>
                   <Image className="who-img" src={data.image}/>
-=======
-                <div key={i} className="col-3" onClick={(e) =>{ 
-                  props.setCheck(data.id)
-                  e.target.classList.add("focus")                  
-                }}>
-                    <Image src={data.image}/>    
->>>>>>> bf28483ffc240131b05b8f8516fbe7ae11ec934d
                 </div>
               ))
               }
