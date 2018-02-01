@@ -8,9 +8,8 @@ import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy,
 const NavItem = styled.nav`
   color: #ffff;
   background-color:#154051;
-  //position: ${props => props.onScrollDown ? 'relative':''};
-  transition: all .5s ease-in;
-  top: ${props => props.onScrollDown ? '-163px':'0px'};
+  transition: all .2s ease-in-out;
+  top: ${props => props.onScrollDown ? '-170px':'0px'};
 
   ${props => props.primaryNav && `
   background-color:#24372f; 
@@ -115,16 +114,6 @@ class Navbar extends React.Component {
                     {nav.text}
                   </NavLink>
                 ))}
-                  {/* <div data-spy="scroll" data-target="#navbar-desktop" data-offset="0">
-                  {nav.map((i))} => (
-                    <div id="nav"
-                      key={i}
-                      onClick={() => navLink(nav.to)}
-                    >                      
-                      {nav.text}
-                    </div>
-                  )
-                  </div> */}
               </nav>
             </div>
             <a href='https://itim.wip.camp' target="_blank">
