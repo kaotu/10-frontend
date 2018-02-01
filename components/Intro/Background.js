@@ -1,12 +1,7 @@
 import react from 'react'
 import styled from 'styled-components'
-import {compose, withState} from 'recompose'
+import {compose, withState , lifecycle} from 'recompose'
 import {yak,mongkey} from '../Core/Color'
-const state = withState('check','setCheck',false)
-
-const setCheck = (callback, data) =>(
-  callback(data ? yak : mongkey)
-)
 
 const CloudBack = styled.div`
     position:absolute;
@@ -268,6 +263,11 @@ const Scrolldown = styled.img`
       }
     }
 `
+
+const setTeam = (team) => {
+  window.localStorage.setItem('team',team )
+  window.location.reload()
+}
 const Background = (props) => (
     <div>
         <CloudBack/>
@@ -276,9 +276,9 @@ const Background = (props) => (
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
-        <Monkey onClick={() => check.setCheck(false) } src='/static/image/Moling.svg'/>
+        <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg'/>
         <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
-        <Giant onClick={() => check.setCheck(true) }src='/static/image/Moyak.svg'/>
+        <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg'/>
         <CloudBottom src='/static/image/เมฆ-บน.png'/>
         <LogoWip src="/static/image/WIPlogo.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>
@@ -286,6 +286,14 @@ const Background = (props) => (
     </div>
 )
 
-const BackgroundCompose = compose (state)(Background)
+// const BackgroundCompose = compose (state)(Background)
 
-export default BackgroundCompose
+export default compose(
+  withState('check','setCheck',true),
+  lifecycle({
+  componentDidMount () {
+    let team = window.localStorage.getItem("team")
+    console.log(team === 'yak' ? 'true' : 'false')
+  }
+  })
+)(Background)

@@ -13,7 +13,7 @@ const DivWhere = styled.div`
 `;
 
 const DisplayDesktop = styled.div`
-    margin-bottom: 10%;
+    margin-bottom: 10%; 
   @media (max-width: 720px) {
     display: none;
   }
@@ -32,6 +32,7 @@ const DisplayMoblie2 = styled.div`
 
 const Space = styled.div`
   margin-top: 5%;
+  z-index : 3;
 `
 
 const Relative = styled.div`
