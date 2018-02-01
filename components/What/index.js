@@ -59,6 +59,12 @@ const Bggueng = styled.div`
   background: linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1));
 `
 
+const Hidden = styled.div`
+  @media(max-width:720px) {
+    display: none;
+  }
+`
+
 const index = props => (
   // <Bg bgColor={Color.mongkey.what} className="">
   <Bggueng>
@@ -68,9 +74,9 @@ const index = props => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12">
           <Cloud />
-          
         </div>
-        <Space className="col-12 col-sm-12 col-md-12">
+        <Hidden className="col-lg-4"></Hidden>
+        <Space className="col-12 col-sm-12 col-md-12 col-lg-8">
           <Mobile className="text-center">
             <H1>WHAT</H1>
             <H2>ค่ายนี้คืออะไร ?</H2>
