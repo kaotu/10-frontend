@@ -294,16 +294,18 @@ export default compose(
   lifecycle({
     componentDidMount () {
       let team = window.localStorage.getItem("team")
-      const temp = {
-        what: '#000'
+      const teamyak = {
+        what: 'red',
+        when: '#002d40'
+      }
+      const teammongkey = {
+        what : 'linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1))' ,
+        when : 'blue'
       }
       team == 'yak' ? 
-        window.localStorage.setItem("color",JSON.stringify(temp)) : 
-        window.localStorage.setItem("color",JSON.stringify({what: "linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1))"}))
-      // console.log(window.localStorage.getItem("color"))
+        window.localStorage.setItem("color",JSON.stringify(teamyak)) : 
+        window.localStorage.setItem("color",JSON.stringify(teammongkey))
       let theme = JSON.parse(window.localStorage.getItem("color"))
-      // let themeColor = JSON.parse(theme)
-      // console.log(themeColor)
       console.log(theme)
     }
   })
