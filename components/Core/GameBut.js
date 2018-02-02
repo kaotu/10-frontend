@@ -23,6 +23,9 @@ const GameButton = styled.div`
   @media(max-width:720px) {
     display:none;     
   }
+  &:hover{
+    height:120px;
+  }
 `
 const Font = styled.h1`
   transition:all 550ms ease-in-out;
@@ -37,9 +40,13 @@ const Font = styled.h1`
   @media(max-width:1200px) {
     font-size: 0em;            
   }
+  &:hover{
+    top:20%;
+  }
 `
 
 const IconGame = styled.img`
+  transition:all 550ms ease-in-out;
   width: 40%; 
   left: 30%;
   top:40%;
@@ -51,6 +58,9 @@ const IconGame = styled.img`
   @media(max-width:720px) {
     width: 50%; 
     top: -16px;         
+  }
+  &:hover{
+    top:50%;
   }
 `
 
