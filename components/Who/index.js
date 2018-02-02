@@ -110,9 +110,18 @@ const IconData = [
 ]
 
 const H11 = H1.extend`
+  color : #C3E1EA;
   @media (max-width:720px) {
     margin-top:3em;
   }
+`
+
+const H22 = H2.extend`
+  color : #C3E1EA;  
+`
+
+const H6 = styled.div`
+  color : #C3E1EA;  
 `
 
 const index = (props) => (
@@ -124,7 +133,7 @@ const index = (props) => (
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
             <H11 className="text-center ">WHO</H11>
-            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
+            <H22 className="text-center ">ค่ายนี้เหมาะกับใคร</H22>
           </Mobile>
           <HideMobile>
             <Icon className="row">
@@ -143,14 +152,14 @@ const index = (props) => (
               ))
               }
             </Icon>
-            <div className="mt-5 text-info">
+            <H6 className="mt-5">
               <Block left= {`${PositionTextBox[props.checkButton]}`}>
                 <h4>
                   <strong>{`${Topic[props.checkButton]}`}</strong>
                 </h4>
                 <p>{`${Content[props.checkButton]}`}</p>
               </Block>
-            </div>
+            </H6>
           </HideMobile>
           <HideDesktop>
             <ResponWho />
