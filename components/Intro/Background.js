@@ -21,6 +21,10 @@ const CloudBack = styled.div`
         from {background-position: 20vw 0;}
         to {background-position: 220vw 0;}
     }
+    @media(max-width:720px){
+        top:20em;
+        width:200%;
+    }
 `
 const CloudBack1 = styled.div`
     position:absolute;
@@ -38,6 +42,9 @@ const CloudBack1 = styled.div`
     @keyframes animate {
         from {background-position:0 0;}
         to {background-position: 200vw 0;}
+    }
+    @media(max-width:720px){
+      top:27em;
     }
 `
 const MountainLeft = styled.img`
@@ -146,9 +153,12 @@ const Monkey = styled.img`
   height: 50vh;
   cursor:pointer;
   left:5vw;
+  transition:all 550ms ease-in-out;
   width: ${props => props.active ? '50vw': '30vw'};
   @media(max-width: 720px){
-    height: 42vh;
+    width:45%;
+    bottom:1em;
+    left:1em;
   }
   @media(max-width: 560px){
     height: 36vh;
@@ -156,6 +166,11 @@ const Monkey = styled.img`
   @media(max-width: 420px){
     height: 30vh;
     bottom:12vh;
+  }
+  &:hover{
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
   
 `
@@ -180,8 +195,11 @@ const Giant = styled.img`
   height: 60vh;
   cursor:pointer;
   right:5vw;
+  transition:all 550ms ease-in-out;
   @media(max-width: 720px){
-    height: 42vh;
+    width:50%;
+    bottom:-2em;
+    right:1em;
   }
   @media(max-width: 560px){
     height: 36vh;
@@ -189,6 +207,11 @@ const Giant = styled.img`
   @media(max-width: 420px){
     height: 30vh;
     bottom:10vh;
+  }
+  &:hover{
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
   }
 `
 const CloudBottom = styled.img`
@@ -208,6 +231,9 @@ const CloudBottom = styled.img`
     //         bottom: -24vh;
     //     }
     // }
+    @media(max-width:720px){
+      width:200%;
+    }
 `
 const LogoWip = styled.img`
   width: 50%;
@@ -219,7 +245,8 @@ const LogoWip = styled.img`
   animation-duration: 2s;
   @media(max-width: 720px){
     width: 90%;
-	  left: 5vw;
+    left: 5vw;
+    top:6em;
   }
   @keyframes FadeOut {
     0% {
@@ -241,7 +268,7 @@ const LogoSIT = styled.img`
   @media(max-width: 720px){
     width: 90%;
     left: 5vw;
-    top:23vh;
+    top:16em;
   }
 `
 const Scrolldown = styled.img`
@@ -278,12 +305,11 @@ const Background = (props) => (
         <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
         <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg'/>
-        <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
+        <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>        
         <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg'/>
         <CloudBottom src='/static/image/เมฆ-บน.png'/>
         <LogoWip src="/static/image/logofinals.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>
-        {/* <Scrolldown src='/static/image/ScrollDown.png'/> */}
     </div>
 )
 

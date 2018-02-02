@@ -15,6 +15,9 @@ const Cloud = styled.img`
   width: 100vw;
   top: 0vh;
   left: 0vw;
+  @media(max-width:720px){
+
+  }
 `
 const DivSponsor = styled.div`
   position: relative;
