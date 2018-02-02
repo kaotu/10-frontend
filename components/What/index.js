@@ -40,8 +40,9 @@ const IconInfo = [
 const Space = styled.div`
   margin-top: 6%;
   margin-bottom: 10%;
-  border:  solid rgba(57, 63, 102, 0.2);
+  border: .2em solid rgba(57, 63, 102, 0.2);
   background-color: rgba(57, 63, 102, 0.2);
+  border-radius: 2em;
   padding:2em;
 `
 const Relative = styled.div`
@@ -76,7 +77,7 @@ const index = props => (
     <div className="container px-5">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12">
-          <Cloud />
+          {/* <Cloud /> */}
         </div>
         <Hidden className="col-lg-4"></Hidden>
        
