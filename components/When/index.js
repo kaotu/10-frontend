@@ -91,16 +91,16 @@ const index = props => (
           <div className="col-12 col-sm-12 col-md-12  ">
             {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
             <Box1 className="text-center">
-              <h3>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</h3>
+              <p>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</p>
             </Box1>
             <Box2 className="text-center">
-              <h3>11 มี.ค 61 <br /> วันปิดรับสมัคร</h3>
+              <p>11 มี.ค 61 <br /> วันปิดรับสมัคร</p>
             </Box2>
             <Box3 className="text-center">
-              <h3>31 มี.ค 61 <br /> วันประกาศผล</h3>
+              <p>31 มี.ค 61 <br /> วันประกาศผล</p>
             </Box3>
             <Box4 className="text-center">
-              <h3>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</h3>
+              <p>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</p>
             </Box4>
           </div>
         </div>

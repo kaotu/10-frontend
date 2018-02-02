@@ -11,6 +11,10 @@ export default injectGlobal`
   }
   p {
     font-size:20px;
+    color : white;
+  }
+  .nav-pills .nav-link.active {
+    background-color: red;
   }
 
 `

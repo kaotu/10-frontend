@@ -39,6 +39,10 @@ const FAQs = [
 
 ]
 
+const Black = styled.p`
+  color: #000000;
+`
+
 const Content = () => (
   <div className="container-fluid">
     {
@@ -49,7 +53,7 @@ const Content = () => (
               <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
             </div>
             <Zindex className="col-6">
-              <Box><p dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
+              <Box><Black dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
             </Zindex>
             <div className="col">
             </div>
@@ -58,7 +62,7 @@ const Content = () => (
             <div className="col">
             </div>
             <Zindex className="col-6">
-              <Box primary><p dangerouslySetInnerHTML={{__html: data.A}} /></Box>
+              <Box primary><Black dangerouslySetInnerHTML={{__html: data.A}} /></Box>
             </Zindex>
             <div className="col img-responesive align-self-center">
               <ImgRight src="/static/image/yakscore-new-01.svg" />

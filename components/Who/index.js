@@ -46,7 +46,6 @@ const Image = styled.img`
     transform: scale(1.3);
   }
   
-  
 `
 
 const PositionTextBox =[
@@ -57,10 +56,10 @@ const PositionTextBox =[
 ]
 
 const Icon = styled.div`
-margin-top: 5%;
-cursor: pointer;
-margin-left: 1%;
-margin-right: 1%;
+  margin-top: 5%;
+  cursor: pointer;
+  margin-left: 1%;
+  margin-right: 1%;
 
 `
 const HideMobile = styled.div`
@@ -86,6 +85,10 @@ margin-top: 6%;
 margin-bottom: 10%;
 `
 
+const H6 = styled.div`
+  color: #FFFFFF;
+`
+
 const Bgmountain = styled.img`
 position : absolute;
 z-index : 0;
@@ -104,18 +107,9 @@ const IconData = [
 ]
 
 const H11 = H1.extend`
-  color : #C3E1EA;
   @media (max-width:720px) {
     margin-top:3em;
   }
-`
-
-const H22 = H2.extend`
-  color : #C3E1EA;  
-`
-
-const H6 = styled.div`
-  color : #C3E1EA;  
 `
 
 const index = (props) => (
@@ -126,8 +120,8 @@ const index = (props) => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H11 className="text-center ">WHO</H11>
-            <H22 className="text-center ">ค่ายนี้เหมาะกับใคร</H22>
+            <H1 className="text-center ">WHO</H1>
+            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">
