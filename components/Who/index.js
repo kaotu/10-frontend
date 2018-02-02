@@ -32,6 +32,11 @@ const Image = styled.img`
     width: 50%;
     padding: .2em;
   }
+  &:hover{
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
   &.active{
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -104,6 +109,7 @@ const IconData = [
 
 const H11 = H1.extend`
   color : #C3E1EA;
+  margin-top:1em;
   @media (max-width:720px) {
     margin-top:3em;
   }
