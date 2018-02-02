@@ -5,11 +5,11 @@ const GameButton = styled.div`
   position: relative;
   width: 100px;
   height: 100px;
-  border: .2em solid #002d40;
+  border: .2em solid #fff;
   border-top : transparent;    
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #002d40;
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position: absolute;
@@ -23,12 +23,6 @@ const GameButton = styled.div`
   @media(max-width:720px) {
     display:none;     
   }
-  &:hover{
-    border: .2em solid #fff;
-    border-top : transparent;
-    background-color: #002d40; 
-  }
-
 `
 const Font = styled.h1`
   transition:all 550ms ease-in-out;
@@ -38,13 +32,10 @@ const Font = styled.h1`
   top: 10%;
   left:11%;
   width: 80%;
-  color: #002d40;
+  color: #fff;
   letter-spacing: 5px;
   @media(max-width:1200px) {
     font-size: 0em;            
-  }
-  &:hover{
-    color: #fff;
   }
 `
 

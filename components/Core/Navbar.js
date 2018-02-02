@@ -7,7 +7,7 @@ import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy,
 
 const NavItem = styled.nav`
   color: #ffff;
-  background-color:#154051;
+  background-color:#002d40;
   transition: all .02s ease-in-out;
   top: ${props => props.onScrollDown ? '-170px':'0px'};
 
@@ -31,7 +31,7 @@ const NavLink = styled(Link)`
   color: #fff;
   font-size : 1.4em;
   width:8vw;
-  background-color:#154051;
+  background-color:#002d40;
   border: 0vw;
   cursor:pointer;
   transition:all 250ms ease-in-out;
