@@ -14,6 +14,7 @@ const Moutain = styled.img`
   position: absolute; 
   z-index: 1;
   top: 40vh;
+  margin-bottom: 10%;
 `
 const Img = styled.img`
   width:40vw;
@@ -78,7 +79,7 @@ const Space = styled.div`
 const index = () => (
   <Bg bgColor={Color.mongkey.when} className="">
   <Relative>
-    <Moutain src='/static/image/MoutainWhen.svg' className="img responsive"/>
+    <Moutain src='/static/image/MoutainWhen.svg'/>
     <div className="container-fluid">
       <HideMobile>
         <div className="row">

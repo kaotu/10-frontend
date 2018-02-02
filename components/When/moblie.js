@@ -78,7 +78,6 @@ const Moblie = () => (
           <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
         </Div>
         <div className="col-12 col-sm-12 col-md-12">
-          <Img src="/static/image/Climming.svg" className="rounded float-right" />
           <Box1 className="text-center">
             <h3>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</h3>
           </Box1>
