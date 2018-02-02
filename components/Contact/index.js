@@ -74,7 +74,6 @@ const Bgdin = styled.img`
 
 const Relative = styled.div`
   position : relative;
-  color : white;
 `
 
 

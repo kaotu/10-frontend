@@ -61,10 +61,10 @@ const PositionTextBox =[
 ]
 
 const Icon = styled.div`
-margin-top: 5%;
-cursor: pointer;
-margin-left: 1%;
-margin-right: 1%;
+  margin-top: 5%;
+  cursor: pointer;
+  margin-left: 1%;
+  margin-right: 1%;
 
 `
 const HideMobile = styled.div`
@@ -79,6 +79,7 @@ const HideDesktop = styled.div`
 `
 const Mobile = styled.div`
 text-align: right;
+margin-top: 15%;
 @media (max-width: 720px) {
   text-align: center;
   margin-bottom : 25px;
@@ -86,8 +87,12 @@ text-align: right;
 `
 
 const Space = styled.div`
-margin-top: 6%;
+margin-top: 10%;
 margin-bottom: 10%;
+`
+
+const H6 = styled.div`
+  color: #FFFFFF;
 `
 
 const Bgmountain = styled.img`
@@ -115,14 +120,6 @@ const H11 = H1.extend`
   }
 `
 
-const H22 = H2.extend`
-  color : #C3E1EA;  
-`
-
-const H6 = styled.div`
-  color : #C3E1EA;  
-`
-
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who className="">
   <Relative>
@@ -131,8 +128,8 @@ const index = (props) => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H11 className="text-center ">WHO</H11>
-            <H22 className="text-center ">ค่ายนี้เหมาะกับใคร</H22>
+            <H1 className="text-center ">WHO</H1>
+            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">

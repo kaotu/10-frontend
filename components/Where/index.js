@@ -30,7 +30,7 @@ const H4 = styled.h4`
 `
 
 const Space = styled.div`
-  margin-top: 0%;
+  margin-top: 6%;
   margin-bottom: 10%;
   top:0vw;
 `

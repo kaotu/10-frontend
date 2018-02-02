@@ -34,6 +34,10 @@ const Box = styled.div`
 
 `
 
+const Black = styled.p`
+  color: #000000;
+`
+
 
 const ContentRespon = (props) => (
   <div className="container ">
@@ -44,12 +48,12 @@ const ContentRespon = (props) => (
         </div>
       </div>
       <div className="col-8">
-        <Box><p dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
+        <Box><Black dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
       </div>
     </div>
     <div className="row">
       <div className="col-8">
-        <Box primary><p dangerouslySetInnerHTML={{__html: props.A}}/></Box>
+        <Box primary><Black dangerouslySetInnerHTML={{__html: props.A}}/></Box>
       </div>
       <div className="col-4">
           <ImgRight src="/static/image/yakscore-new-01.svg" />
