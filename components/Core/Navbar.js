@@ -8,6 +8,7 @@ import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy,
 const NavItem = styled.nav`
   color: #ffff;
   background-color:#002d40;
+  border-bottom:.2em  solid #fff;
   transition: all .02s ease-in-out;
   top: ${props => props.onScrollDown ? '-170px':'0px'};
 
