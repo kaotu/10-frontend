@@ -37,11 +37,6 @@ const IconInfo = [
   {icon : "/static/image/web.png", text: "HTML5&CSS"}
 ]
 
-const Padding = styled.div`
-  @media (max-width:720px){
-    margin-top:60px;
-  }
-`
 
 const Space = styled.div`
   margin-top: 6%;
@@ -72,7 +67,7 @@ const index = props => (
   <Bggueng themeColor={props.bgColor.what}>
   <Relative>
     <Moutain src='/static/image/MoutainWho.svg'/>
-    <Padding className="container px-5">
+    <div className="container px-5">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12">
           <Cloud />
@@ -102,7 +97,7 @@ const index = props => (
           </Info>
         </Space>
       </div>
-    </Padding>
+    </div>
     </Relative>
     </Bggueng>
   // </Bg>
