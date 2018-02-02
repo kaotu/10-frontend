@@ -32,12 +32,6 @@ const Image = styled.img`
     width: 50%;
     padding: .2em;
   }
-  &:hover{
-    width:7vw;
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
   &.active{
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -103,10 +97,10 @@ position : relative
 `
 
 const IconData = [
-  { id: 0, image: "/static/image/edu.png",valu:true},
-  { id: 1, image: "/static/image/computer.png" ,valu:true},
-  { id: 2, image: "/static/image/Mom.png" ,valu:true},
-  { id: 3, image: "/static/image/night.png" ,valu:true}
+  { id: 0, image: "/static/image/edu.png"},
+  { id: 1, image: "/static/image/computer.png"},
+  { id: 2, image: "/static/image/Mom.png" },
+  { id: 3, image: "/static/image/night.png"}
 ]
 
 const H11 = H1.extend`
@@ -170,6 +164,4 @@ const index = (props) => (
     </Relative>
   </Bg>
 );
-export default compose(state, withState('clicker', 'setClicker', [
-  false, false, false, false
-]))(index)
+export default compose(state)(index)

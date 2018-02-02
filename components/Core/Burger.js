@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Router from 'next/router'
 
 const Item = styled.button`
-@media(max-width:720px) {    
+  
   color: #fff;
   padding: 0.8em;
   transition: .5s;
@@ -20,14 +20,12 @@ const Item = styled.button`
   }
   &:focus {
     color: #FFF;
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 0.5em;
+    font-weight: bold;  
     text-decoration:none;
     background-color:rgba(0, 0, 0, 0.3);
     border: 0vw;
 }
-}
+
 `
 
 const BlankSpace = styled.a`
