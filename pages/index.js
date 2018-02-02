@@ -16,12 +16,9 @@ const Relative = styled.div`
 	position: relative;
 `
 
-const Bglight = styled.img`
-  position : absolute;
-  z-index : 0;
-  height: 400vh;
-  bottom : 3.5vh;
-  left:24vw;
+const FooterBg = styled.div`
+  min-height: 10vh;
+  background-color:#154051;  
 `
 
 injectGlobal
@@ -54,8 +51,10 @@ const index = () => (
 			</section>
 			<section id="contact" name="contact" className="element">
 				<Contact />
-				<Bglight src = '/static/image/light.svg'/>
 			</section>
+			<FooterBg className="d-flex justify-content-center align-items-center text-white">
+      <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer
+    </FooterBg>
 		</div>
 		</Relative>
 	</Scroll>

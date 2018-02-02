@@ -32,17 +32,19 @@ const Image = styled.img`
     width: 50%;
     padding: .2em;
   }
-  &:hover{
-    -moz-transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+  &.active{
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  }
+  &.nagative{
+    width:7vw;
   }
   &.focus{
     -moz-transform: scale(1.3);
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
   }
-  
   
 `
 
@@ -54,10 +56,10 @@ const PositionTextBox =[
 ]
 
 const Icon = styled.div`
-margin-top: 5%;
-cursor: pointer;
-margin-left: 1%;
-margin-right: 1%;
+  margin-top: 5%;
+  cursor: pointer;
+  margin-left: 1%;
+  margin-right: 1%;
 
 `
 const HideMobile = styled.div`
@@ -83,6 +85,10 @@ margin-top: 6%;
 margin-bottom: 10%;
 `
 
+const H6 = styled.div`
+  color: #FFFFFF;
+`
+
 const Bgmountain = styled.img`
 position : absolute;
 z-index : 0;
@@ -94,11 +100,18 @@ position : relative
 `
 
 const IconData = [
-  { id: 0, image: "/static/image/edu.png",valu:true},
-  { id: 1, image: "/static/image/computer.png" ,valu:true},
-  { id: 2, image: "/static/image/Mom.png" ,valu:true},
-  { id: 3, image: "/static/image/night.png" ,valu:true}
+  { id: 0, image: "/static/image/edu.png"},
+  { id: 1, image: "/static/image/computer.png"},
+  { id: 2, image: "/static/image/Mom.png" },
+  { id: 3, image: "/static/image/night.png"}
 ]
+
+const H11 = H1.extend`
+  @media (max-width:720px) {
+    margin-top:3em;
+  }
+`
+
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who className="">
   <Relative>
@@ -107,43 +120,42 @@ const index = (props) => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H1 className="text-center">WHO</H1>
-            <H2 className="text-center">ค่ายนี้เหมาะกับใคร</H2>
+            <H1 className="text-center ">WHO</H1>
+            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row">
               {
                 IconData.map((data, i) => (
-                <div key={i} className="col-3" onClick={(e) =>{ 
+                <div key={i} className="col-3" onClick={(e) => {
+                  const activeImg = document.getElementsByClassName("who-img active");
+                  if(activeImg.length) {
+                    activeImg[0].classList.remove("active");
+                  }
                   props.setCheck(data.id)
-                  e.target.classList.add("focus")                  
-                }}>
-                    <Image src={data.image}/>    
+                  e.target.classList.add("active")
+                } }>
+                  <Image className="who-img" src={data.image}/>
                 </div>
               ))
               }
             </Icon>
-            <div className="mt-5">
+            <H6 className="mt-5">
               <Block left= {`${PositionTextBox[props.checkButton]}`}>
                 <h4>
                   <strong>{`${Topic[props.checkButton]}`}</strong>
                 </h4>
                 <p>{`${Content[props.checkButton]}`}</p>
               </Block>
-            </div>
+            </H6>
           </HideMobile>
           <HideDesktop>
             <ResponWho />
           </HideDesktop>
-        </div>
-        <div className="col-12 col-md-6 order-1 order-md-2">
-          <img src="/static/image/Whomoutain.svg" />
         </div>
       </div>
     </div>
     </Relative>
   </Bg>
 );
-export default compose(state, withState('clicker', 'setClicker', [
-  false, false, false, false
-]))(index)
+export default compose(state)(index)
