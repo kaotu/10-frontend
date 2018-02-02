@@ -37,7 +37,7 @@ const Box = styled.div`
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #FBFBEF;
+    border-right-color: #fff;
     border-width: 1vw;
     margin-top: -1vw;
   }
