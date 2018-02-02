@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import {compose , lifecycle , withState} from 'recompose'
+
 import Navbar from '../Core/Navbar'
 import Bg from '../Core/BgStory'
 import Cloud from './cloud'
@@ -56,7 +58,7 @@ const Moutain = styled.img`
 `
 
 const Bggueng = styled.div`
-  background: linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1));
+  background: ${props => props.themeColor || ''};
 `
 
 const Hidden = styled.div`
@@ -67,7 +69,7 @@ const Hidden = styled.div`
 
 const index = props => (
   // <Bg bgColor={Color.mongkey.what} className="">
-  <Bggueng>
+  <Bggueng themeColor={props.bgColor.what}>
   <Relative>
     <Moutain src='/static/image/MoutainWho.svg'/>
     <Padding className="container px-5">
@@ -105,4 +107,15 @@ const index = props => (
     </Bggueng>
   // </Bg>
 )
-export default index
+export default compose (
+  withState('bgColor','setBgColor',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = window.localStorage.getItem("color")
+      const themeColor = JSON.parse(theme)
+      this.props.setBgColor(themeColor)
+      console.log(themeColor)
+    }
+    
+  })
+)(index)
