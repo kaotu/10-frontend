@@ -294,11 +294,17 @@ export default compose(
   lifecycle({
     componentDidMount () {
       let team = window.localStorage.getItem("team")
-      team == 'yak' ? window.localStorage.setItem("color",JSON.stringify('{"what":"#000"}')) : window.localStorage.setItem("color",JSON.stringify( '{"what": "linear-gradient(to top, rgba(255,0,0,0), rgba(101, 182, 227, 1))"}'))
-      console.log(window.localStorage.getItem("color"))
+      const temp = {
+        what: '#000'
+      }
+      team == 'yak' ? 
+        window.localStorage.setItem("color",JSON.stringify(temp)) : 
+        window.localStorage.setItem("color",JSON.stringify({what: "linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1))"}))
+      // console.log(window.localStorage.getItem("color"))
       let theme = JSON.parse(window.localStorage.getItem("color"))
-      let themeColor = JSON.parse(theme)
-      console.log(themeColor)
+      // let themeColor = JSON.parse(theme)
+      // console.log(themeColor)
+      console.log(theme)
     }
   })
 )(Background)
