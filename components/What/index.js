@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {compose , lifecycle , withState} from 'recompose'
-
 import Navbar from '../Core/Navbar'
 import Bg from '../Core/BgStory'
 import Cloud from './cloud'
@@ -61,9 +60,13 @@ const Hidden = styled.div`
     display: none;
   }
 `
+const BoxContent = styled.div`
+border:  solid white;
+`
 
 const index = props => (
   // <Bg bgColor={Color.mongkey.what} className="">
+  
   <Bggueng themeColor={props.bgColor.what}>
   <Relative>
     <Moutain src='/static/image/MoutainWho.svg'/>
@@ -72,6 +75,7 @@ const index = props => (
         <div className="col-12 col-sm-12 col-md-12">
           <Cloud />
         </div>
+        <BoxContent>
         <Hidden className="col-lg-4"></Hidden>
         <Space className="col-12 col-sm-12 col-md-12 col-lg-8">
           <div className="row">
@@ -100,6 +104,7 @@ const index = props => (
           }
           </Info>
         </Space>
+          </BoxContent>
       </div>
     </div>
     </Relative>
