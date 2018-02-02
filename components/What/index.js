@@ -114,8 +114,6 @@ export default compose (
       let theme = window.localStorage.getItem("color")
       const themeColor = JSON.parse(theme)
       this.props.setBgColor(themeColor)
-      console.log(themeColor)
     }
-    
   })
 )(index)

@@ -5,7 +5,7 @@ import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Moblie from '../When/moblie'
 import Color from '../Core/Color'
-import {compose, lifecycle} from 'recompose'
+import {compose, lifecycle, withState} from 'recompose'
 
 const Relative = styled.div`
   position: relative;
@@ -75,8 +75,8 @@ const Space = styled.div`
   margin-bottom: 10%;
 `
 
-const index = () => (
-  <Bg bgColor={Color.mongkey.when} className="">
+const index = props => (
+  <Bg bgColor={props.bg.when} className="">
   <Relative>
     <Moutain src='/static/image/MoutainWhen.svg' className="img responsive"/>
     <div className="container-fluid">
@@ -114,14 +114,22 @@ const index = () => (
 )
 
 export default compose(
+  withState('bg','setBg',''),
   lifecycle({
     componentDidMount() {
       let date = new Date()
       let timeline =new Intl.DateTimeFormat('th-th').format(date)
       console.log(timeline)
-      if (timeline == "10/2/2561"){
-        
+      switch(timeline){
+        case '10/2/2561': 
+        case '11/3/2561': 
+        case '31/3/2561': 
+        case '30/5/2561': 
       }
+
+      let theme = window.localStorage.getItem("color")
+      const whenColor = JSON.parse(theme)
+      this.props.setBg(whenColor)
     }
   })
 )(index)
