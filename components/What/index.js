@@ -40,6 +40,9 @@ const IconInfo = [
 const Space = styled.div`
   margin-top: 6%;
   margin-bottom: 10%;
+  border:  solid rgba(57, 63, 102, 0.2);
+  background-color: rgba(57, 63, 102, 0.2);
+  padding:2em;
 `
 const Relative = styled.div`
   position: relative;
@@ -75,8 +78,8 @@ const index = props => (
         <div className="col-12 col-sm-12 col-md-12">
           <Cloud />
         </div>
-        <BoxContent>
         <Hidden className="col-lg-4"></Hidden>
+       
         <Space className="col-12 col-sm-12 col-md-12 col-lg-8">
           <div className="row">
               <Mobile className="text-center col-12">
@@ -104,7 +107,7 @@ const index = props => (
           }
           </Info>
         </Space>
-          </BoxContent>
+         
       </div>
     </div>
     </Relative>
