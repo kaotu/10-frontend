@@ -8,7 +8,7 @@ import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy,
 const NavItem = styled.nav`
   color: #ffff;
   background-color:#154051;
-  transition: all .2s ease-in-out;
+  transition: all .02s ease-in-out;
   top: ${props => props.onScrollDown ? '-170px':'0px'};
 
   ${props => props.primaryNav && `
@@ -45,7 +45,7 @@ const NavLink = styled(Link)`
     width:8vw;
   }
   &:focus{
-    background-color: rgba(0, 0, 0, 0.3) !important;
+    // background-color: rgba(0, 0, 0, 0.3) !important;
     color: #fff;
     border-radius: 12px; 
     outline: none;
@@ -79,18 +79,21 @@ class Navbar extends React.Component {
     scrollSpy.update();
   }  
   onScroll(event) {
+    console.log(navigator.userAgent)
+    if(!/Android|webOS|iPhone|iPad|iPod|Mozilla|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      if(this.state.lastScrollPos > window.pageYOffset) {
+        this.setState({
+          direction:'up',
+          lastScrollPos:window.pageYOffset
+        });
+      } else if(this.state.lastScrollPos < window.pageYOffset) {
+        this.setState({
+          direction:'down',
+          lastScrollPos:window.pageYOffset
+        });
+      }
+     }
     
-    if(this.state.lastScrollPos > window.pageYOffset) {
-      this.setState({
-        direction:'up',
-        lastScrollPos:window.pageYOffset
-      });
-    } else if(this.state.lastScrollPos < window.pageYOffset) {
-      this.setState({
-        direction:'down',
-        lastScrollPos:window.pageYOffset
-      });
-    }
   }
   render() {
     return (
