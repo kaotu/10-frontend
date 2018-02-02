@@ -28,6 +28,8 @@ const index = () => (
 		<Relative >		
 		<section id="home" name="home">
 			<Intro />
+		</section>
+		<section id="sponsor" name="sponsor">
 			<Sponsor />
 		</section>
 		<Navbar id="navbar-desktop"/>
