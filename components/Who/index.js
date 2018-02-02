@@ -46,7 +46,6 @@ const Image = styled.img`
     transform: scale(1.3);
   }
   
-  
 `
 
 const PositionTextBox =[
