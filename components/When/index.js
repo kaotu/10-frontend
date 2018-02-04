@@ -13,7 +13,7 @@ const Relative = styled.div`
 const Moutain = styled.img`
   position: absolute; 
   z-index: 1;
-  top: 40vh;
+  top: 15em;
   margin-bottom: 10%;
 `
 const Img = styled.img`
@@ -31,7 +31,7 @@ const Front = styled.p`
 const Box1 = styled.div`
   width: 20vw;
   position:absolute;
-  top: 4em;
+  top: 14em;
   left: 25em;   
   z-index:2;
   background-color:${props => props.box1 || 'transparent'};
@@ -41,7 +41,7 @@ const Box1 = styled.div`
 const Box2 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 10em;
+  top: 20em;
   left: 35em;   
   z-index:2;
   background-color:${props => props.box2 || 'transparent'};
@@ -52,7 +52,7 @@ const Box2 = styled.div`
 const Box3 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 15em;
+  top: 25em;
   left:45em;   
   z-index:2;
   background-color:${props => props.box3 || 'transparent'};
@@ -63,7 +63,7 @@ const Box3 = styled.div`
 const Box4 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 20em;
+  top: 30em;
   left: 60em;   
   z-index:2;
   background-color:${props => props.box4 || 'transparent'};
@@ -86,6 +86,9 @@ const Space = styled.div`
   margin-top: 5%;
   margin-bottom: 10%;
 `
+const Space2 = styled.div`
+  position: absolute;
+`
 const Time = styled.p`
   display:block;
   color:#fff;
@@ -104,7 +107,7 @@ const index = props => (
               <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
             </Head>
           </Space>
-          <div className="col-12 col-sm-12 col-md-12  ">
+          <Space2 className="col-12 col-sm-12 col-md-12  ">
             {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
             <Box1 box1={props.box1} className="text-center">
               <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
@@ -118,7 +121,7 @@ const index = props => (
             <Box4 box4={props.box4} className="text-center">
               <Time>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</Time>
             </Box4>
-          </div>
+          </Space2>
         </div>
     </div>
       </HideMobile>
