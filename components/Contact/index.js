@@ -54,33 +54,37 @@ const Linerespon = styled.div`
 `
 
 const ContentBg = Bg.extend`
-  min-height: 90vh;
-  z-index:1;
+  min-height: 100vh;
 `
 
 const Space = styled.div`
   margin-top: 5%;
-  margin-bottom: 10%;
-  z-index: 2;
-`
-
-const Bgdin = styled.img`
-  position : absolute;
-  z-index : 1;
-  bottom : 0vh;
-  left : 0vw;
-  width : 100.5%;
+  margin-bottom: 0%;
 `
 
 const Relative = styled.div`
   position : relative;
 `
 
+const Bgheartbox = styled.img`
+  width : 105%;
+  margin-left : -2%;
+  margin-top : -20%;
+`
+const Bgright = styled.img`
+  width : 10%;
+  margin-top : -10%;
+`
+const Bgleft = styled.img`
+  width : 10%;
+  margin-top : -10%;
+`
+
 
 const index = () => (
+<div>
   <DivContact>
     <Relative>
-      <Bgdin src = '/static/image/Din.svg'/>
     <ContentBg bgColor="#444B52" className="">
       <div className="container-fluid">
         <div className="row">
@@ -116,17 +120,17 @@ const index = () => (
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
+            <Bgleft src = '/static/image/BgleftFAQs.png'/>
+  <Bgright src = '/static/image/BgrightFAQs.png'/>
+  <Bgheartbox src = '/static/image/Bgheartbox.png'/>
           </Space>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <HeartBox />
-          </div>
         </div>
       </div>
     </ContentBg>
     </Relative>
   </DivContact>
+  
+</div>
 )
 
 export default index
