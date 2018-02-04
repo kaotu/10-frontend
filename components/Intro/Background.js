@@ -125,7 +125,7 @@ const ChooseMonkey = styled.img`
   position: absolute;
   z-index: 4;
   top: 30vh;
-  left: 13vw;
+  left: 18vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
@@ -178,7 +178,7 @@ const ChooseGiant = styled.img`
   position: absolute;
   z-index: 4;
   top: 30vh;
-  right: 13vw;
+  right: 15vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 

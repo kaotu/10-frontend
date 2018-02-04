@@ -53,10 +53,10 @@ const Image = styled.img`
 `
 
 const PositionTextBox =[
-  "12.7%",
-  "39.4%",
-  "65.25%",
-  "91.7%"
+  "11.5%",
+  "36.7%",
+  "61.4%",
+  "86%"
 ]
 
 const Icon = styled.div`
