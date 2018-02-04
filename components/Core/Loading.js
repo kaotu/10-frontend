@@ -10,8 +10,8 @@ const Bg = styled.section`
 `
 const index = () => (
   <Bg>
+    
   </Bg>
-
 )
 
 export default index
