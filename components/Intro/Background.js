@@ -321,12 +321,16 @@ export default compose(
     componentDidMount () {
       let team = window.localStorage.getItem("team")
       const teamyak = {
-        what: 'red',
-        when: '#002d40'
+        what: 'linear-gradient(to top , rgba(255,0,0,0),rgba(255, 51, 0,1))',
+        when: 'red',
+        nav: '#384742',
+        navhov: '#002d40'
       }
       const teammongkey = {
         what : 'linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1))' ,
-        when : 'blue'
+        when : 'skyblue',
+        nav : '#002d40',
+        navhov : '#e53c35', 
       }
       team == 'yak' ? 
         window.localStorage.setItem("color",JSON.stringify(teamyak)) : 
