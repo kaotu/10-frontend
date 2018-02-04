@@ -47,16 +47,20 @@ const Space = styled.div`
 `
 const Relative = styled.div`
   position: relative;
-  height:100vh;
+  min-height:100vh;
+
 `
 const Moutain = styled.img`
   position: absolute;
   z-index: 0;
   bottom:-1vh;
+  width:100%;
+  height: 100%;
 `
 
 const BgColor = styled.div`
   background: ${props => props.themeColor || ''};
+  
 `
 
 const Hidden = styled.div`
