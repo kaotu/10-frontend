@@ -33,14 +33,18 @@ const Image = styled.img`
     padding: .2em;
   }
   &:hover{
+    background: #fff;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+    border-radius: 1em;
   }
   &.active{
+  background: #fff;
   -moz-transform: scale(1.3);
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
+  border-radius: 1em;
   }  
 `
 
@@ -52,7 +56,7 @@ const PositionTextBox =[
 ]
 
 const Icon = styled.div`
-  margin-top: 5%;
+  margin-top: 10%;
   cursor: pointer;
   margin-left: 1%;
   margin-right: 1%;
@@ -83,7 +87,7 @@ margin-bottom: 10%;
 `
 
 const H6 = styled.div`
-  color: #000;
+  color: #fff;
 `
 
 const Bgmountain = styled.img`
@@ -137,10 +141,10 @@ const index = (props) => (
             </Icon>
             <H6 className="mt-5">
               <Block left= {`${PositionTextBox[props.checkButton]}`}>
-                <H4>
+                <h4>
                   <strong>{`${Topic[props.checkButton]}`}</strong>
-                </H4>
-                <H4>{`${Content[props.checkButton]}`}</H4>
+                </h4>
+                <p>{`${Content[props.checkButton]}`}</p>
               </Block>
             </H6>
           </HideMobile>
