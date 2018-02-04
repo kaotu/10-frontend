@@ -17,28 +17,26 @@ const NavItem = styled.nav`
   `}   
   `
 const Regis = styled.button`
-position:relative;
-width: 8vw;
-display:inline-block;
-color:#ecf0f1;
-font-size:1.4em;
-text-decoration:none;
-border-radius:5px;
-border:solid 1px #e53c35;
-background:#e53c35;
-text-align:center;
-padding:.5em;
-transition: all 0.1s;
-margin-bottom:5%;
-box-shadow: 0px 6px 0px #871612;
-cursor:pointer;
-&:hover{
-  box-shadow: 0px 2px 0px #871612;
+  position:relative;
+  width: 8vw;
+  display:inline-block;
+  color:#ecf0f1;
+  font-size:1.4em;
+  text-decoration:none;
+  border-radius:5px;
+  border:solid 1px #e53c35;
+  background:#e53c35;
+  text-align:center;
+  padding:.5em;
+  transition: all 0.1s;
+  margin-bottom:5%;
+  box-shadow: 0px 6px 0px #871612;
+  cursor:pointer;
+  &:hover{
+    box-shadow: 0px 2px 0px #871612;
     position:relative;
     top:4px;
-
-}
-
+  }
 `
 
 const NavLink = styled(Link)`
@@ -94,7 +92,7 @@ class Navbar extends React.Component {
     this.setState({
       color
     })
-    scrollSpy.update();
+    scrollSpy.update()
   }  
   onScroll(event) {
     console.log(navigator.userAgent)
@@ -103,12 +101,12 @@ class Navbar extends React.Component {
         this.setState({
           direction:'up',
           lastScrollPos:window.pageYOffset
-        });
+        })
       } else if(this.state.lastScrollPos < window.pageYOffset) {
         this.setState({
           direction:'down',
           lastScrollPos:window.pageYOffset
-        });
+        })
       }
      }
     
@@ -145,7 +143,7 @@ class Navbar extends React.Component {
           <GameBut />
         </div>
       </NavItem>
-    );
+    )
   }
 }
 
