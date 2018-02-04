@@ -15,9 +15,6 @@ const Moutain = styled.img`
   z-index: 1;
   top: 15em;
   margin-bottom: 10%;
-  @media (max-width: 720px) {
-    
-  }
 `
 const Img = styled.img`
   width:40vw;
