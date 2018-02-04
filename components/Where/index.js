@@ -14,9 +14,10 @@ const Story = styled.img`
 `
 
 const Local = styled.img`
-  width:70%;
-  margin-top : 5%;
+  width:60%;
+  margin-top : 3%;
   margin-bottom: 5%; 
+  box-shadow: 1vw 1vw 2vw #000;
 `
 
 const Mobile = styled.div`
@@ -51,7 +52,7 @@ const index = () => (
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local className="mb-1" src="static/image/sit-kmutt.jpg" />
+              <Local className="mb-1" src="/static/image/Sit.jpg" />
             </a>
             {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
             <H3>คณะเทคโนโลยีสารสนเทศ</H3>
