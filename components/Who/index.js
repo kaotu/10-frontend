@@ -78,15 +78,10 @@ const HideDesktop = styled.div`
 `
 const Mobile = styled.div`
 text-align: right;
-margin-top: 15%;
+margin-top: 16%;
 text-align: center;
 @media (max-width: 720px) {
 }
-`
-
-const Space = styled.div`
-margin-top: 10%;
-margin-bottom: 10%;
 `
 
 const H6 = styled.div`
@@ -107,6 +102,7 @@ const IconData = [
 const H4 = styled.p`
 color: #000;
 `
+
 
 
 const index = (props) => (
