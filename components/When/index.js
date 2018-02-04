@@ -93,42 +93,62 @@ const Time = styled.p`
   display:block;
   color:#fff;
 `
+const Bgtop = styled.img`
+margin-left : -1vw;
+margin-top : -16vw;
+width : 105%;
+@media (max-width:768px) {
+  margin-top : 0;
+}
+`
+const Bgbottom = styled.img`
+margin-left : -1vw;
+margin-bottom : -%;
+width : 100%;
+@media (max-width:768px) {
+  margin-top : 2%;
+}
+`
+const Zindex = styled.div`
+  z-index : 1;
+`
 
 const index = props => (
   <Bg bgColor={props.bg.when} className="">
-  <Relative>
+    <Relative>
       <HideMobile>
-    <Moutain src='/static/image/MoutainWhen.svg'/>
-    <div className="container-fluid">
-        <div className="row">
-          <Space className="col-12 col-sm-12 col-md-6 ">
-            <Head>
-              <H1 className="text-center">WHEN</H1>
-              <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
-            </Head>
-          </Space>
-          <Space2 className="col-12 col-sm-12 col-md-12  ">
-            {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
-            <Box1 box1={props.box1} className="text-center">
-              <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
+        <Zindex className="container-fluid">
+          <div className="row">
+            <Space className="col-12 col-sm-12 col-md-6 ">
+              <Head>
+                <H1 className="text-center">WHEN</H1>
+                <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
+              </Head>
+            </Space>
+            <Space2 className="col-12 col-sm-12 col-md-12  ">
+              {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
+              <Box1 box1={props.box1} className="text-center">
+                <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
             </Box1>
-            <Box2 box2={props.box2} className="text-center">
-              <Time>11 มี.ค 61 <br /> วันปิดรับสมัคร</Time>
-            </Box2>
-            <Box3 box3={props.box3} className="text-center">
-              <Time>31 มี.ค 61 <br /> วันประกาศผล</Time>
-            </Box3>
-            <Box4 box4={props.box4} className="text-center">
-              <Time>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</Time>
-            </Box4>
-          </Space2>
-        </div>
-    </div>
+              <Box2 box2={props.box2} className="text-center">
+                <Time>11 มี.ค 61 <br /> วันปิดรับสมัคร</Time>
+              </Box2>
+              <Box3 box3={props.box3} className="text-center">
+                <Time>31 มี.ค 61 <br /> วันประกาศผล</Time>
+              </Box3>
+              <Box4 box4={props.box4} className="text-center">
+                <Time>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</Time>
+              </Box4>
+            </Space2>
+          </div>
+        </Zindex>
       </HideMobile>
-      <HideDesktop>
-        <Moblie />
-      </HideDesktop>
+          <HideDesktop>
+          <Moblie />
+        </HideDesktop>
     </Relative>
+    <Bgtop src = '/static/image/topwhen.png'/>
+    <Bgbottom src = '/static/image/bottomwhen.png'/>
   </Bg>
 )
 
