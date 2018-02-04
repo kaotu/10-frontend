@@ -93,12 +93,6 @@ const H6 = styled.div`
   color: #fff;
 `
 
-const Bgmountain = styled.img`
-position : absolute;
-z-index : 0;
-top : 0vh;
-`
-
 const Relative = styled.div`
 position : relative
 `
