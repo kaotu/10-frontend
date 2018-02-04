@@ -103,6 +103,9 @@ const IconData = [
   { id: 3, image: "/static/image/night.png"}
 ]
 
+const H4 = styled.p`
+color: #000;
+`
 
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who >
@@ -134,10 +137,10 @@ const index = (props) => (
             </Icon>
             <H6 className="mt-5">
               <Block left= {`${PositionTextBox[props.checkButton]}`}>
-                <h4>
+                <H4>
                   <strong>{`${Topic[props.checkButton]}`}</strong>
-                </h4>
-                <p>{`${Content[props.checkButton]}`}</p>
+                </H4>
+                <H4>{`${Content[props.checkButton]}`}</H4>
               </Block>
             </H6>
           </HideMobile>
