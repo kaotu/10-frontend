@@ -26,30 +26,24 @@ const GameButton = styled.div`
 `
 const Font = styled.h1`
   transition:all 550ms ease-in-out;
-  position: absolute;
   font-size: 1.4em;
   font-weight: bold;
-  top: 10%;
-  left:10%;
-  width: 80%;
   color: #fff;
   letter-spacing: 5px;
+  margin-top:10px;
 `
 
 const IconGame = styled.img`
   transition:all 550ms ease-in-out;
-  position: absolute;
   width: 40%; 
-  left: 30%;
-  top:40%;
-  
 `
 const DivGame = styled.div`
-  position relative;
-  height:100px;
+  position :absolute;
+  height:100%;
   transition:all 550ms ease-in-out;
+  width:100%;
+  text-align:center;
   &:hover{
-    height:120px;
     margin-top:10px;
   }
 `
