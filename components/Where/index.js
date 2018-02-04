@@ -26,7 +26,12 @@ const Mobile = styled.div`
 `
 
 const H4 = styled.h4`
-  color: #082A3D;
+  color: #fff;
+`
+
+const H3 = styled.h3`
+  margin-top:2%;
+  color:#fff;
 `
 
 const Space = styled.div`
@@ -48,8 +53,8 @@ const index = () => (
             <a href="https://goo.gl/fC42M6" target="_blank" >
               <Local className="mb-1" src="static/image/sit-kmutt.jpg" />
             </a>
-            <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p>
-            <h3>คณะเทคโนโลยีสารสนเทศ</h3>
+            {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
+            <H3>คณะเทคโนโลยีสารสนเทศ</H3>
             <H4>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</H4>
           </div>
         </Space>
