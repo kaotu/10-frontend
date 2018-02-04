@@ -30,10 +30,10 @@ const Mobile = styled.div`
 `
 
 const IconInfo = [
-  {icon : "/static/image/Java prog.png", text: "Java Programming"},
-  {icon : "/static/image/itfun.png", text: "IT Fundamentals"},
-  {icon : "/static/image/network.png", text: "Network"},
-  {icon : "/static/image/web.png", text: "HTML5&CSS"}
+  {icon : "/static/image/Java prog.png", text: "Java Programming",t:"Java Programming"},
+  {icon : "/static/image/itfun.png", text: "IT Fundamentals",t:"IT Fundamentals"},
+  {icon : "/static/image/network.png", text: "Network",t:"Network"},
+  {icon : "/static/image/web.png", text: "HTML5&CSS",t:"HTML5&CSS"}
 ]
 
 
@@ -113,7 +113,7 @@ const index = props => (
           { 
             IconInfo.map((info, i) => (
               <Test key={i} className="col-6 col-md-3 img-responesive ">
-                <Icon src={info.icon}/>
+                <Icon src={info.icon} alt={info.t}/>
                 <p>{info.text}</p>
               </Test>
             ))
