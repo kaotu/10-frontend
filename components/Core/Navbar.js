@@ -16,18 +16,31 @@ const NavItem = styled.nav`
   background-color:#24372f; 
   `}   
   `
-const RegisterBtn = styled.img`
-  height: 250%;
-  position:absolute;
-  top: 0%;
-  right: 2%;
-  z-index:2;
-  cursor:pointer;
-  transition:all 550ms ease-in-out;
-  @media(max-width:720px) {            
-    height:150%;           
-  }
-  `
+const Regis = styled.button`
+position:relative;
+width: 8vw;
+display:inline-block;
+color:#ecf0f1;
+font-size:1.4em;
+text-decoration:none;
+border-radius:5px;
+border:solid 1px #e53c35;
+background:#e53c35;
+text-align:center;
+padding:.5em;
+transition: all 0.1s;
+margin-bottom:5%;
+box-shadow: 0px 6px 0px #871612;
+cursor:pointer;
+&:hover{
+  box-shadow: 0px 2px 0px #871612;
+    position:relative;
+    top:4px;
+
+}
+
+`
+
 const NavLink = styled(Link)`
   color: #fff;
   font-size : 1.4em;
@@ -126,7 +139,7 @@ class Navbar extends React.Component {
               </nav>
             </div>
             <a href='https://itim.wip.camp' target="_blank">
-              <RegisterBtn src='/static/image/regisred.png' />
+              <Regis>สมัครเลย</Regis>
             </a>
           </div>
           <GameBut />
