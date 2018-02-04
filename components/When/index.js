@@ -137,7 +137,7 @@ export default compose(
   withState('box4','setBox4',''),
   lifecycle({
     componentDidMount() {
-      let date = new Date('3/31/2018')
+      let date = new Date()
       let timeline =new Intl.DateTimeFormat('th-th').format(date)
       console.log(timeline)
       switch(timeline){

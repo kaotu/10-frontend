@@ -37,11 +37,7 @@ const CloudBack1 = styled.div`
     width:100vw;
     
     background: url('/static/image/CloudBG.svg') repeat 0 0;
-<<<<<<< HEAD
     animation: 240s linear 0s normal none infinite animate;
-=======
-    animation: 150s linear 0s normal none infinite animate;
->>>>>>> 7730e28285a70bd4e9bbeebd95180e6a89e4222e
     background-repeat: repeat-x;
     @keyframes animate {
         from {background-position:0 0;}
