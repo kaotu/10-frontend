@@ -14,7 +14,7 @@ const Story = styled.img`
 `
 
 const Local = styled.img`
-  width:60%;
+  width:40%;
   margin-top : 3%;
   margin-bottom: 5%; 
   box-shadow: 1vw 1vw 2vw #000;
