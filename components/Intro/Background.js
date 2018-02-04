@@ -157,10 +157,9 @@ const ChooseMonkey = styled.img`
     left: 21vw;
     width:5vw;
   }
-  @media(max-width: 420px){
-    margin-top : 50vw;
-    left: 23vw;
-    width:5vw;
+  @media(max-width:560px){
+    margin-top:19vh;
+    margin-left:5vw;
   }
 `
 const Monkey = styled.img`
@@ -205,10 +204,8 @@ const ChooseGiant = styled.img`
     right: 25vw;
     width:5vw;
   }
-  @media(max-width: 420px){
-    margin-top : 47vw;
-    right: 25vw;
-    width:5vw;
+  @media(max-width:560px){
+    margin-top:19vh;
   }
 `
 const Giant = styled.img`
