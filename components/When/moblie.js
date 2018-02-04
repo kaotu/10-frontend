@@ -5,98 +5,86 @@ import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
 
-const Img = styled.img`
-width:80vw;
-position:relative;
-top:0;
-right:0;
-@media (max-width: 720px) {
-    width:80vw;
-    position:relative;
-    top:0;
-    right:0;
-}
-`
-const Front = styled.p`
-  padding-top:0vw;
-  margin-left:40vw;   
-`
 const Box1 = styled.div`
-position:absolute;
-background-color:white;
-opacity:0.5;
-width:22vw;
-top:42vh;
-left:0vw;
-z-index:2;  
-text-align:center;
-@media (max-width: 720px) {
-    
+  @media (max-width: 720px) {
+    width:30vw;
+    top: 14em;
+    left: 5em; 
+    z-index:2;  
+    text-align:center;
 } 
 `
 const Box2 = styled.div`
-position:absolute;
-background-color:transparent;
-width:20vw;
-top:1vh;
-right:30vw;
-z-index:2;
-text-align:center;
 @media (max-width: 720px) {
+  background-color:transparent;
+  width:30vw;
+  top: 16em;
+  margin-left: 5em; 
+  z-index:2;  
+  text-align:center;
 }
 `
 const Box3 = styled.div`
-position:absolute;
-background-color:transparent;
-width:20vw;
-top:10vh;
-right:35vw;
-z-index:2;
-text-align:center;
- @media (max-width: 720px) {
+@media (max-width: 720px) {
+  background-color:transparent;
+  width:30vw;
+    top: 19em;
+    margin-left: 10em; 
+    z-index:2;  
+    text-align:center;
 }
 `
 const Box4 = styled.div`
-position:absolute;
-background-color:transparent;
-width:20vw;
-top:20vh;
-right:45vw;
-z-index:2;
-text-align:center;
- @media (max-width: 720px) {
+@media (max-width: 720px) {
+  background-color:transparent;
+  width:35vw;
+    top: 30em;
+    margin-left: 13em; 
+    z-index:2;  
+    text-align:center;
 }
 `
 const Div = styled.div`{
-    @media (max-width: 720px) {
-       margin-top:5vw;
-      }
+  @media (max-width: 720px) {
+    margin-top:5vw;
+  }
+`
+const Moutain = styled.img`
+@media (max-width: 720px) {
+  letf:0;
+  width:100vw;
+}
+`
+const P = styled.p`
+@media (max-width: 720px) {
+  font-size:1em
+}
 `
 const Moblie = () => (
-    <Bg bgColor={Color.mongkey.when}  className="d-flex">
-        <div className="container-fluid">
-            <div className="row">
-                <Div className="col-12 col-sm-12 col-md-12">
-                    <H1 className="text-center font-weight-bold">WHEN</H1>
-                    <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
-                </Div>
-                <div className="col-12 col-sm-12 col-md-12">
-                    <Img src="/static/image/Climming.svg" className="rounded float-right"  />
-                        <Box1 className="text center">
-                        <p>31 ม.ค. 61 <br /> วันค่าย</p>
-                        </Box1>
-                        <Box2 className="text center">
-                        <p>31 ม.ค. 61 <br /> วันค่าย</p>
-                        </Box2 >
-                        <Box3 className="text center">
-                        <p>31 ม.ค. 61 <br /> วันค่าย</p>
-                        </Box3>
-                        <Box4 className="text center">
-                        <p>31 ม.ค. 61 <br /> วันค่าย</p>
-                        </Box4>
-                </div>
-            </div>
+  <Bg bgColor={Color.mongkey.when} >
+    <div className="container">
+      <div className="row">
+        <Div className="col-12">
+          <H1 className="text-center font-weight-bold">WHEN</H1>
+          <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
+        </Div>
+        <div className="col-12">
+          <Box1 className="text-center">
+            <P>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</P>
+          </Box1>
+          <Box2 className="text-center">
+            <P>11 มี.ค 61 <br /> วันปิดรับสมัคร</P>
+          </Box2>
+          <Box3 className="text-center">
+            <P>31 มี.ค 61 <br /> วันประกาศผล</P>
+          </Box3>
+          <Box4 className="text-center">
+            <P>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</P>
+          </Box4>
         </div>
-    </Bg>
+      </div>
+    </div>
+    <Moutain src='/static/image/MoutainWhenMoblie.png' />
+  </Bg>
 )
 export default Moblie

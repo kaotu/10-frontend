@@ -15,16 +15,62 @@ const ImgRight = styled.img`
 
 const Box = styled.div`
   width: 46vw;
-  min-height: 35hw;    
+  min-height: 30hw;    
   padding: 1vw;
   background-color:#FBFBEF;
-  opecity:0.8;
   margin-top:1vw;
 	margin-bottom:1vw;
 	border-radius: 10px;
   ${props=>props.primary && `
     background-color:#FFFFFF;
   `}
+  &.arrow_box {
+    position: relative;
+    background: #ffffff;
+  }
+  &.arrow_box:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #fff;
+    border-width: 1vw;
+    margin-top: -1vw;
+  }
+`
+const Box1 = styled.div`
+width: 46vw;
+min-height: 30hw;    
+padding: 1vw;
+background-color:#FBFBEF;
+margin-top:1vw;
+margin-bottom:1vw;
+border-radius: 10px;
+${props=>props.primary && `
+  background-color:#FFFFFF;
+`}
+&.arrow_box {
+  position: relative;
+  background: #FBFBEF;
+}
+&.arrow_box:after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	position: absolute;
+	pointer-events: none;
+	border-left-color: #FBFBEF;
+	border-width: 1vw;
+	margin-top: -1vw;
+}
+`
+const Zindex = styled.div`
+  z-index : 10;
 `
 
 const FAQs = [
@@ -36,6 +82,10 @@ const FAQs = [
 
 ]
 
+const Black = styled.p`
+  color: #000000;
+`
+
 const Content = () => (
   <div className="container-fluid">
     {
@@ -45,18 +95,18 @@ const Content = () => (
             <div className="col img-responesive align-self-center">
               <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
             </div>
-            <div className="col-6">
-              <Box><p dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
-            </div>
+            <Zindex className="col-6">
+              <Box className=" arrow_box" ><Black dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
+            </Zindex>
             <div className="col">
             </div>
           </div>
           <div className="row d-flex">
             <div className="col">
             </div>
-            <div className="col-6">
-              <Box primary><p dangerouslySetInnerHTML={{__html: data.A}} /></Box>
-            </div>
+            <Zindex className="col-6">
+              <Box1 className="arrow_box" primary><Black dangerouslySetInnerHTML={{__html: data.A}} /></Box1>
+            </Zindex>
             <div className="col img-responesive align-self-center">
               <ImgRight src="/static/image/yakscore-new-01.svg" />
             </div>

@@ -1,11 +1,12 @@
 import react from "react";
 import Bg from "../Core/BgStory.js";
-import styled from "styled-components";
+import styled from "styled-components"
 import Content from "./ContentFAQs";
 import Respon from "./ResponFAQs";
 import H1 from "../Core/FontH1";
 import H2 from "../Core/FontH2";
 import Color from "../Core/Color";
+import Fireflyy from "./Firefly";
 
 const DivWhere = styled.div`
   top: 200px;
@@ -13,7 +14,7 @@ const DivWhere = styled.div`
 `;
 
 const DisplayDesktop = styled.div`
-    margin-bottom: 10%;
+    margin-bottom: 10%; 
   @media (max-width: 720px) {
     display: none;
   }
@@ -32,6 +33,7 @@ const DisplayMoblie2 = styled.div`
 
 const Space = styled.div`
   margin-top: 5%;
+  z-index : 3;
 `
 
 const Relative = styled.div`
@@ -47,6 +49,7 @@ const index = props => (
           <Space className="col-md-12">
             <H1 className="text-center">FAQs</H1>
             <H2 className="text-center">คำถามที่พบบ่อย ?</H2>
+            <Fireflyy/>
             <DisplayMoblie2 />
           </Space>
         </div>

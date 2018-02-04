@@ -34,8 +34,8 @@ const ImgRight = styled.img`
   }
 `
 const Line = styled.div`
-  border-left: thick solid #000;
-  border-right: thick solid #000;
+  border-left: thick solid white;
+  border-right: thick solid white;
   @media(max-width:575px) {
     border-left: none;
     border-right: none;
@@ -47,7 +47,7 @@ const Linerespon = styled.div`
     height : 2px;
     margin-left : 20vw;
     margin-top : 5vw;
-    background-color: #000;
+    background-color: white;
   @media(min-width:576px){
     display : none;
   }
@@ -58,14 +58,10 @@ const ContentBg = Bg.extend`
   z-index:1;
 `
 
-const FooterBg = Bg.extend`
-  min-height: 10vh;
-  background-color:#154051;  
-`
-
 const Space = styled.div`
   margin-top: 5%;
   margin-bottom: 10%;
+  z-index: 2;
 `
 
 const Bgdin = styled.img`
@@ -92,8 +88,8 @@ const index = () => (
             <H1>Contact</H1>
             <H2>ติดต่อเรา</H2>
             <div className="row">
-              <div className="col-sm-3 col-md-3 img-responsive">
-                <ImgLeft src="/static/image/ContactPhone.svg" />
+              <div className="col-sm-3 col-md-3">
+              <a href="tel://083-082-2189"><ImgLeft src="/static/image/ContactPhone.png" /></a>
                 <p className="mt-3"><strong>พี่วิปโป้: 08-3082-2189</strong></p>
               </div>
               <Line className="col-sm-6 col-md-6">
@@ -115,8 +111,8 @@ const index = () => (
                 </a>
                 <Linerespon />
               </Line>
-              <div className="col-sm-3 col-md-3 img-responsive">
-                <ImgRight src="/static/image/ContactMail.svg" />
+              <div className="col-sm-3 col-md-3">
+                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" /></a>
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
@@ -130,10 +126,6 @@ const index = () => (
       </div>
     </ContentBg>
     </Relative>
-
-    <FooterBg className="d-flex justify-content-center align-items-center text-white">
-      <div className="fa fa-code" aria-hidden="true" />&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true" />&nbsp;by 10 I'm Developer
-    </FooterBg>
   </DivContact>
 )
 

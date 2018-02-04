@@ -1,30 +1,28 @@
 import react from 'react'
 import styled from 'styled-components'
-import {compose, withState} from 'recompose'
-import {yak,mongkey} from '../Core/Color'
-const state = withState('check','setCheck',false)
-
-const setCheck = (callback, data) =>(
-  callback(data ? yak : mongkey)
-)
+import {compose, withState , lifecycle} from 'recompose'
+import Color from '../Core/Color'
 
 const CloudBack = styled.div`
     position:absolute;
     z-index: 0;
     margin:0;
     padding:0;
-    top: 30vh;
+    top:35vh;
     left: 0vw;
-    height:50vh;
+    height:10vh;
     width:100vw;
-    
+
     background: url('/static/image/CloudBG.svg') repeat 0 0;
     background-position: 20vw 0;
-    animation: 100s linear 0s normal none infinite animated;
+    animation: 300s linear 0s normal none infinite animated;
     background-repeat: repeat-x;
     @keyframes animated {
         from {background-position: 20vw 0;}
         to {background-position: 220vw 0;}
+    }
+    @media(max-width:720px){
+        top:12em;
     }
 `
 const CloudBack1 = styled.div`
@@ -32,17 +30,21 @@ const CloudBack1 = styled.div`
     z-index: 0;
     margin:0;
     padding:0;
-    top: 30vh;
-    left: 0vw;
-    height:50vh;
+    top: 42vh;
+    left: 20vw;
+    height:20vh;
     width:100vw;
     
     background: url('/static/image/CloudBG.svg') repeat 0 0;
-    animation: 80s linear 0s normal none infinite animate;
+    animation: 240s linear 0s normal none infinite animate;
     background-repeat: repeat-x;
     @keyframes animate {
         from {background-position:0 0;}
         to {background-position: 200vw 0;}
+    }
+    @media(max-width:720px){
+      top:23em;
+      left:0vw;
     }
 `
 const MountainLeft = styled.img`
@@ -123,7 +125,7 @@ const ChooseMonkey = styled.img`
   position: absolute;
   z-index: 4;
   top: 30vh;
-  left: 13vw;
+  left: 18vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
@@ -151,8 +153,12 @@ const Monkey = styled.img`
   height: 50vh;
   cursor:pointer;
   left:5vw;
+  transition:all 550ms ease-in-out;
+  width: ${props => props.active ? '50vw': '30vw'};
   @media(max-width: 720px){
-    height: 42vh;
+    width:45%;
+    bottom:1em;
+    left:1em;
   }
   @media(max-width: 560px){
     height: 36vh;
@@ -161,13 +167,18 @@ const Monkey = styled.img`
     height: 30vh;
     bottom:12vh;
   }
+  &:hover{
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
   
 `
 const ChooseGiant = styled.img`
   position: absolute;
   z-index: 4;
   top: 30vh;
-  right: 13vw;
+  right: 15vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
@@ -184,8 +195,11 @@ const Giant = styled.img`
   height: 60vh;
   cursor:pointer;
   right:5vw;
+  transition:all 550ms ease-in-out;
   @media(max-width: 720px){
-    height: 42vh;
+    width:50%;
+    bottom:-2em;
+    right:1em;
   }
   @media(max-width: 560px){
     height: 36vh;
@@ -194,12 +208,17 @@ const Giant = styled.img`
     height: 30vh;
     bottom:10vh;
   }
+  &:hover{
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
 `
 const CloudBottom = styled.img`
     position:absolute;
     z-index: 5;
     left:0vw;
-    bottom:-24vh;
+    bottom:0vh;
     width: 120vw;
     // animation: MoveUp 1s linear;
     // animation-delay: 0s;
@@ -212,6 +231,9 @@ const CloudBottom = styled.img`
     //         bottom: -24vh;
     //     }
     // }
+    @media(max-width:720px){
+      width:200%;
+    }
 `
 const LogoWip = styled.img`
   width: 50%;
@@ -223,7 +245,8 @@ const LogoWip = styled.img`
   animation-duration: 2s;
   @media(max-width: 720px){
     width: 90%;
-	  left: 5vw;
+    left: 5vw;
+    top:6em;
   }
   @keyframes FadeOut {
     0% {
@@ -235,17 +258,17 @@ const LogoWip = styled.img`
   }
 `
 const LogoSIT = styled.img`
-  width: 20%;
+  width: 30%;
   position: absolute;
   z-index: 6;
-  left: 40vw;
+  left: 35vw;
   top:40vh;
   animation-name: FadeOut;
   animation-duration: 2s;
   @media(max-width: 720px){
     width: 90%;
     left: 5vw;
-    top:23vh;
+    top:16em;
   }
 `
 const Scrolldown = styled.img`
@@ -268,6 +291,11 @@ const Scrolldown = styled.img`
       }
     }
 `
+
+const setTeam = (team) => {
+  window.localStorage.setItem('team',team )
+  window.location.reload()
+}
 const Background = (props) => (
     <div>
         <CloudBack/>
@@ -276,16 +304,39 @@ const Background = (props) => (
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
-        <Monkey onClick={() => check.setCheck(false) } src='/static/image/Moling.svg'/>
-        <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>
-        <Giant onClick={() => check.setCheck(true) }src='/static/image/Moyak.svg'/>
-        <CloudBottom src='/static/image/CloudBottom.svg'/>
-        <LogoWip src="/static/image/WIPlogo.svg" />
+        <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg'/>
+        <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>        
+        <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg'/>
+        <CloudBottom src='/static/image/เมฆ-บน.png'/>
+        <LogoWip src="/static/image/logofinals.svg" />
         <LogoSIT src='/static/image/LogoSIT.png'/>
-        {/* <Scrolldown src='/static/image/ScrollDown.png'/> */}
     </div>
 )
 
-const BackgroundCompose = compose (state)(Background)
+// const BackgroundCompose = compose (state)(Background)
 
-export default BackgroundCompose
+export default compose(
+  withState('check','setCheck',true),
+  lifecycle({
+    componentDidMount () {
+      let team = window.localStorage.getItem("team")
+      const teamyak = {
+        what: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
+        when: 'red',
+        nav: '#384742',
+        navhov: '#002d40'
+      }
+      const teammongkey = {
+        what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
+        when : 'skyblue',
+        nav : '#002d40',
+        navhov : '#e53c35', 
+      }
+      team == 'yak' ? 
+        window.localStorage.setItem("color",JSON.stringify(teamyak)) : 
+        window.localStorage.setItem("color",JSON.stringify(teammongkey))
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      console.log(theme)
+    }
+  })
+)(Background)

@@ -5,14 +5,14 @@ import Animate, { Shake } from 'animate-css-styled-components';
 const Position1 = styled.div`
   width: 40%;
   position: absolute;
-  z-index: 2;
+  z-index: 0;
   left: 20%;
   top: 30%;
 `
 const Position2 = styled.div`
   width:35%;
   position: absolute;
-  z-index: 2;
+  z-index: 0;
   left: 60%;
   top: 5%;
 `

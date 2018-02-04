@@ -14,9 +14,10 @@ const Story = styled.img`
 `
 
 const Local = styled.img`
-  width:70%;
-  margin-top : 5%;
+  width:40%;
+  margin-top : 3%;
   margin-bottom: 5%; 
+  box-shadow: 1vw 1vw 2vw #000;
 `
 
 const Mobile = styled.div`
@@ -26,21 +27,34 @@ const Mobile = styled.div`
 `
 
 const H4 = styled.h4`
-  color: #082A3D;
+  color: #fff;
+`
+
+const H3 = styled.h3`
+  margin-top:2%;
+  color:#fff;
 `
 
 const Space = styled.div`
-  margin-top: 5%;
+  margin-top: 6%;
   margin-bottom: 10%;
+  top:0vw;
+`
+
+const Bgmountain = styled.img`
+bottom : 0%;
+width : 100%;
+margin-top : -95%;
+`
+
+const Zindex = styled.div`
+  z-index : 1;
 `
 
 const index = () => (
   <Bg bgColor={Color.mongkey.where} where className="">
-    <div className="container-fluid">
+    <Zindex className="container-fluid">
       <div className="row">
-        <div className="col-md-12 text-center mt-4">
-          <Story src="../../static/image/WhereStory.svg" />
-        </div>
         <Space className="col-md-12">
           <Mobile className="text-center">
             <H1>WHERE</H1>
@@ -48,15 +62,16 @@ const index = () => (
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local className="mb-1" src="static/image/sit-kmutt.jpg" />
+              <Local className="mb-1" src="/static/image/Sit.jpg" />
             </a>
-            <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p>
-            <h3>คณะเทคโนโลยีสารสนเทศ</h3>
+            {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
+            <H3>คณะเทคโนโลยีสารสนเทศ</H3>
             <H4>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</H4>
           </div>
         </Space>
       </div>
-    </div>
+    </Zindex>
+    <Bgmountain src = '/static/image/2.png'/>
   </Bg>
 )
 export default index

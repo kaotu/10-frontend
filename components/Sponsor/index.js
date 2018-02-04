@@ -7,25 +7,26 @@ import H2 from '../Core/FontH2'
 const Relative = styled.div`
   position: relative;
   width: 100vw;
-  min-height:25vh;
+  height:100vh;
 `
 const Cloud = styled.img`
   position: absolute;
   z-index: 0;
-  width: 150vw;
-  top: -50vh;
-  left: -25vw;
+  width: 100vw;
+  top: 0vh;
+  left: 0vw;
+  @media(max-width:720px){
+
+  }
 `
 const DivSponsor = styled.div`
   position: relative;
-  // z-index: 1;
   width: 100vw;
   top: 15vh;
 `
 const BImg = styled.img`
   width: 30%; 
   height: 30%;
-  margin-top: 10%;
   margin-right: 1%;
   margin-left: 1%;
 `
@@ -57,11 +58,10 @@ const Topic = H1.extend`
 const Index = () => (
   <Bg>
     <Relative>
-    <Cloud src='/static/image/CloudSponser.svg'/>
+    <Cloud src='/static/image/เมฆ-ล่าง.png'/>
     <DivSponsor className="container d-flex justify-content-center">
       <div className="row">
         <div className="col-md-12 text-center">
-          {/* <Topic className="font-weight-bold">Sponsor</Topic> */}
           <div className="img-responsive">
             <div className="row d-flex justify-content-center">
               {

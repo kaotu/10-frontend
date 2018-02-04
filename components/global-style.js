@@ -7,9 +7,15 @@ export default injectGlobal`
   }
   body {
     font-family: 'Pridi';
+    overflow-x:hidden;
   }
   p {
     font-size:20px;
+    color : white;
+  }
+  .nav-pills .nav-link.active {
+    background-color:rgba(0,0,0,.3);
+    border-radius: 12px;
   }
 
 `
