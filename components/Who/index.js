@@ -38,9 +38,9 @@ const Image = styled.img`
     transform: scale(1.2);
   }
   &.active{
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
   }  
 `
 
