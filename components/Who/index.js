@@ -112,6 +112,7 @@ const H4 = styled.p`
 `
 
 
+
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who >
   <Relative>
@@ -157,5 +158,4 @@ const index = (props) => (
     </Relative>
   </Bg>
 );
-//sxdasdasdasd
 export default compose(state)(index)
