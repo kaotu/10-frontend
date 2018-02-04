@@ -52,10 +52,10 @@ const Relative = styled.div`
 const Moutain = styled.img`
   position: absolute;
   z-index: 0;
-  bottom: 0vh;
+  bottom:-1vh;
 `
 
-const Bggueng = styled.div`
+const BgColor = styled.div`
   background: ${props => props.themeColor || ''};
 `
 
@@ -71,7 +71,7 @@ border:  solid white;
 const index = props => (
   // <Bg bgColor={Color.mongkey.what} className="">
   
-  <Bggueng themeColor={props.bgColor.what}>
+  <BgColor themeColor={props.bgColor.what}>
   <Relative>
     <Moutain src='/static/image/MoutainWho.svg'/>
     <div className="container px-5">
@@ -112,7 +112,7 @@ const index = props => (
       </div>
     </div>
     </Relative>
-    </Bggueng>
+    </BgColor>
   // </Bg>
 )
 export default compose (
