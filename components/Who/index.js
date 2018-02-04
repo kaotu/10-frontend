@@ -37,7 +37,9 @@ const Image = styled.img`
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
-    border-radius: 1em;
+    border-radius: 0.5em;
+    border: 4px solid #fff;
+    
   }
   &.active{
   background: #fff;
@@ -45,6 +47,8 @@ const Image = styled.img`
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
   border-radius: 1em;
+  border-radius: 0.5em;
+  border: 4px solid #fff;
   }  
 `
 
@@ -75,9 +79,8 @@ const HideDesktop = styled.div`
 const Mobile = styled.div`
 text-align: right;
 margin-top: 15%;
+text-align: center;
 @media (max-width: 720px) {
-  text-align: center;
-  margin-bottom : 25px;
 }
 `
 
@@ -110,6 +113,7 @@ const IconData = [
 const H4 = styled.p`
 color: #000;
 `
+
 
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who >
