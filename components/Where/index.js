@@ -42,15 +42,18 @@ const Space = styled.div`
 `
 
 const Bgmountain = styled.img`
-position : absolute;
-z-index : 0;
 bottom : 0%;
 width : 100%;
+margin-top : -95%;
+`
+
+const Zindex = styled.div`
+  z-index : 1;
 `
 
 const index = () => (
   <Bg bgColor={Color.mongkey.where} where className="">
-    <div className="container-fluid">
+    <Zindex className="container-fluid">
       <div className="row">
         <Space className="col-md-12">
           <Mobile className="text-center">
@@ -67,7 +70,7 @@ const index = () => (
           </div>
         </Space>
       </div>
-    </div>
+    </Zindex>
     <Bgmountain src = '/static/image/2.png'/>
   </Bg>
 )
