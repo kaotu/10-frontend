@@ -14,7 +14,7 @@ const GameButton = styled.div`
   cursor: pointer;
   position: absolute;
   left: 5vw;
-  top:101%;          
+  top:100%;          
   color: white;
   z-index: 2560;
   @media(max-width:1200px) {
