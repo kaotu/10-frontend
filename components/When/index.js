@@ -32,7 +32,7 @@ const Box1 = styled.div`
   min-width: 10vw;
   position:absolute;
   top: 14em;
-  left: 25em;   
+  left: 37em;   
   z-index:2;
   background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine1 || ''};
@@ -43,7 +43,7 @@ const Box2 = styled.div`
   position:absolute;
   min-width:10vw;
   top: 20em;
-  left: 35em;   
+  left: 47em;   
   z-index:2;
   background-color:${props => props.box2 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine2 || ''};
@@ -53,8 +53,8 @@ const Box2 = styled.div`
 const Box3 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 25em;
-  left:45em;   
+  top: 26em;
+  left:57em;   
   z-index:2;
   background-color:${props => props.box3 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine3 || ''};
@@ -64,8 +64,8 @@ const Box3 = styled.div`
 const Box4 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 30em;
-  left: 60em;   
+  top: 32em;
+  left: 67em;   
   z-index:2;
   background-color:${props => props.box4 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine4 || ''};
@@ -94,12 +94,30 @@ const Time = styled.p`
   display:block;
   color:#fff;
 `
+const Bgtop = styled.img`
+margin-left : -1vw;
+margin-top : -17vw;
+width : 105%;
+@media (max-width:768px) {
+  margin-top : 0;
+}
+`
+const Bgbottom = styled.img`
+margin-left : -1vw;
+margin-bottom : -%;
+width : 100%;
+@media (max-width:768px) {
+  margin-top : 2%;
+}
+`
+const Zindex = styled.div`
+  z-index : 1;
+`
 
 const index = props => (
   <Bg bgColor={props.bg.when} className="">
-  <Relative>
+    <Relative>
       <HideMobile>
-    <Moutain src='/static/image/MoutainWhen.svg'/>
     <div className="container-fluid">
         <div className="row">
           <Space className="col-12 col-sm-12 col-md-6 ">
@@ -126,10 +144,12 @@ const index = props => (
         </div>
     </div>
       </HideMobile>
-      <HideDesktop>
-        <Moblie />
-      </HideDesktop>
+          <HideDesktop>
+          <Moblie />
+        </HideDesktop>
     </Relative>
+    <Bgtop src = '/static/image/topwhen.png'/>
+    <Bgbottom src = '/static/image/bottomwhen.png'/>
   </Bg>
 )
 
