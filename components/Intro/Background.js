@@ -232,7 +232,7 @@ const CloudBottom = styled.img`
     //     }
     // }
     @media(max-width:720px){
-      width:200%;
+      width:100%;
     }
 `
 const LogoWip = styled.img`

@@ -40,9 +40,9 @@ const Box3 = styled.div`
 const Box4 = styled.div`
 @media (max-width: 720px) {
   background-color:transparent;
-  width:35vw;
+  width:39vw;
     top: 8em;
-    margin-left: 16em; 
+    margin-left: 15em; 
     z-index:2;  
     text-align:center;
     position: absolute;
@@ -58,7 +58,7 @@ const Moutain = styled.img`
   letf:0;
   width:100vw;
   z-index:0; 
-  margin-top:8em;
+  margin-top:7em;
   position: absolute;
   margin-bottom:0em;
   

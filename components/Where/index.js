@@ -18,6 +18,9 @@ const Local = styled.img`
   margin-top : 3%;
   margin-bottom: 5%; 
   box-shadow: 1vw 1vw 2vw #000;
+  @media (max-width:720px) {
+    margin-top : 30%;
+  }
 `
 
 const Mobile = styled.div`
@@ -45,6 +48,9 @@ const Bgmountain = styled.img`
 bottom : 0%;
 width : 100%;
 margin-top : -95%;
+@media (max-width:720px) {
+  margin-top : -90%;
+}
 `
 
 const Zindex = styled.div`
