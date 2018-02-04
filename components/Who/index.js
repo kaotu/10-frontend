@@ -154,4 +154,5 @@ const index = (props) => (
     </Relative>
   </Bg>
 );
+//sxdasdasdasd
 export default compose(state)(index)
