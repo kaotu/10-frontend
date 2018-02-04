@@ -88,8 +88,8 @@ const index = () => (
             <H1>Contact</H1>
             <H2>ติดต่อเรา</H2>
             <div className="row">
-              <div className="col-sm-3 col-md-3 img-responsive">
-                <ImgLeft src="/static/image/ContactPhone.svg" />
+              <div className="col-sm-3 col-md-3">
+              <a href="tel://083-082-2189"><ImgLeft src="/static/image/ContactPhone.png" /></a>
                 <p className="mt-3"><strong>พี่วิปโป้: 08-3082-2189</strong></p>
               </div>
               <Line className="col-sm-6 col-md-6">
@@ -111,8 +111,8 @@ const index = () => (
                 </a>
                 <Linerespon />
               </Line>
-              <div className="col-sm-3 col-md-3 img-responsive">
-                <ImgRight src="/static/image/ContactMail.svg" />
+              <div className="col-sm-3 col-md-3">
+                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" /></a>
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
