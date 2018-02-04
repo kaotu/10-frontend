@@ -44,6 +44,9 @@ const Space = styled.div`
   background-color: rgba(57, 63, 102, 0.2);
   border-radius: 2em;
   padding:2em;
+  @media (max-width: 720px) {
+    front-size:0.1em;
+  }
 `
 const Relative = styled.div`
   position: relative;
@@ -55,7 +58,13 @@ const Moutain = styled.img`
   z-index: 0;
   bottom:-1vh;
   width:100%;
-  height: 100%;
+  @media (max-width: 720px) {
+    z-index: 0;
+    top:28em;
+    width:100%;
+    height: 100%;
+
+  }
 `
 
 const BgColor = styled.div`
