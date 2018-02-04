@@ -92,7 +92,7 @@ margin-bottom: 10%;
 `
 
 const H6 = styled.div`
-  color: #FFFFFF;
+  color: #000;
 `
 
 const Bgmountain = styled.img`
@@ -112,13 +112,6 @@ const IconData = [
   { id: 3, image: "/static/image/night.png"}
 ]
 
-const H11 = H1.extend`
-  color : #C3E1EA;
-  margin-top:1em;
-  @media (max-width:720px) {
-    margin-top:3em;
-  }
-`
 
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who className="">
