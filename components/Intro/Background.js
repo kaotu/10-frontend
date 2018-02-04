@@ -12,7 +12,6 @@ const CloudBack = styled.div`
     left: 0vw;
     height:10vh;
     width:100vw;
-
     background: url('/static/image/CloudBG.svg') repeat 0 0;
     background-position: 20vw 0;
     animation: 300s linear 0s normal none infinite animated;
@@ -24,6 +23,12 @@ const CloudBack = styled.div`
     @media(max-width:720px){
         top:12em;
     }
+    @media(max-width:420px){
+      width:100vw;
+      right:0vw;
+      top:25vh;
+    }
+    
 `
 const CloudBack1 = styled.div`
     position:absolute;
@@ -34,7 +39,6 @@ const CloudBack1 = styled.div`
     left: 20vw;
     height:20vh;
     width:100vw;
-    
     background: url('/static/image/CloudBG.svg') repeat 0 0;
     animation: 240s linear 0s normal none infinite animate;
     background-repeat: repeat-x;
@@ -43,8 +47,13 @@ const CloudBack1 = styled.div`
         to {background-position: 200vw 0;}
     }
     @media(max-width:720px){
-      top:16em;
+      top:23em;
       left:0vw;
+    }
+    @media(max-width:420px){
+      width:200vw;
+      right:0vw;
+      top:35vh;
     }
 `
 const MountainLeft = styled.img`
@@ -56,6 +65,9 @@ const MountainLeft = styled.img`
     @media (max-width:720px) {
       width:200vw;
       z-index: 1;
+    }
+    @media(max-width:420px){
+      width:180vw;
     }
     // animation: MoveRight 1s linear;
     // animation-delay: 0s;
@@ -235,6 +247,9 @@ const CloudBottom = styled.img`
     @media(max-width:560px){
       width:200%;
     }
+    @media(max-width: 420px){
+      width:200%;
+    }
 `
 const LogoWip = styled.img`
   width: 50%;
@@ -248,6 +263,11 @@ const LogoWip = styled.img`
     width: 90%;
     left: 5vw;
     top:2em;
+  }
+  @media(max-width: 420px){
+    width: 100%;
+    left: 0vw;
+    top:3em;
   }
   @keyframes FadeOut {
     0% {
@@ -270,6 +290,11 @@ const LogoSIT = styled.img`
     width: 50%;
     left: 26vw;
     top:12em;
+  }
+  @media(max-width: 420px){
+    width: 60%;
+    left: 22vw;
+    top:20em;
   }
 `
 const Scrolldown = styled.img`
@@ -305,12 +330,12 @@ const Background = (props) => (
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
         <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
-        <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg'/>
+        <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg' alt="พี่ลิง"/>
         <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>        
-        <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg'/>
+        <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg' alt="พี่ยักษ์"/>
         <CloudBottom src='/static/image/เมฆ-บน.png'/>
-        <LogoWip src="/static/image/logofinals.svg" />
-        <LogoSIT src='/static/image/LogoSIT.png'/>
+        <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
+        <LogoSIT src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
     </div>
 )
 

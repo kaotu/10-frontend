@@ -11,8 +11,13 @@ const Bg = styled.section`
   position: relative;
   overflow: hidden;
   @media (max-width:720px) {
+    min-height: 100vh;
+  }
+  @media (max-width:420px) {
     min-height: 70vh;
   }
-  
+  @media (max-width:768px) {
+    min-height: 70vh;
+  }
 `
 export default Bg

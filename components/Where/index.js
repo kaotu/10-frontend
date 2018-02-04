@@ -68,7 +68,7 @@ const index = () => (
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local className="mb-1" src="/static/image/Sit.jpg" />
+              <Local className="mb-1" src="/static/image/Sit.jpg" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
             {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
             <H3>คณะเทคโนโลยีสารสนเทศ</H3>
