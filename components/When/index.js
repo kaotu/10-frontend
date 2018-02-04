@@ -97,15 +97,14 @@ const Time = styled.p`
 const Bgtop = styled.img`
 margin-left : -1vw;
 margin-top : -17vw;
-width : 105%;
+width : 102%;
 @media (max-width:768px) {
   margin-top : 0;
 }
 `
 const Bgbottom = styled.img`
 margin-left : -1vw;
-margin-bottom : -%;
-width : 100%;
+width : 101%;
 @media (max-width:768px) {
   margin-top : 2%;
 }
