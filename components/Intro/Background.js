@@ -8,14 +8,14 @@ const CloudBack = styled.div`
     z-index: 0;
     margin:0;
     padding:0;
-    top: 30vh;
+    top:38vh;
     left: 0vw;
-    height:50vh;
+    height:20vh;
     width:100vw;
-    
+
     background: url('/static/image/CloudBG.svg') repeat 0 0;
     background-position: 20vw 0;
-    animation: 100s linear 0s normal none infinite animated;
+    animation: 300s linear 0s normal none infinite animated;
     background-repeat: repeat-x;
     @keyframes animated {
         from {background-position: 20vw 0;}
@@ -31,13 +31,13 @@ const CloudBack1 = styled.div`
     z-index: 0;
     margin:0;
     padding:0;
-    top: 30vh;
-    left: 0vw;
-    height:50vh;
+    top: 37vh;
+    left: 20vw;
+    height:30vh;
     width:100vw;
     
     background: url('/static/image/CloudBG.svg') repeat 0 0;
-    animation: 80s linear 0s normal none infinite animate;
+    animation: 240s linear 0s normal none infinite animate;
     background-repeat: repeat-x;
     @keyframes animate {
         from {background-position:0 0;}
