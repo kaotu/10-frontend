@@ -43,7 +43,7 @@ const CloudBack1 = styled.div`
         to {background-position: 200vw 0;}
     }
     @media(max-width:720px){
-      top:23em;
+      top:16em;
       left:0vw;
     }
 `
@@ -141,9 +141,13 @@ const ChooseMonkey = styled.img`
     }
   }
   @media(max-width: 720px){
-    margin-top : 50vw;
-    left: 23vw;
+    margin-top : 13vw;
+    left: 21vw;
     width:5vw;
+  }
+  @media(max-width:560px){
+    margin-top:19vh;
+    margin-left:5vw;
   }
 `
 const Monkey = styled.img`
@@ -156,17 +160,18 @@ const Monkey = styled.img`
   transition:all 550ms ease-in-out;
   width: ${props => props.active ? '50vw': '30vw'};
   @media(max-width: 720px){
-    width:45%;
-    bottom:1em;
-    left:1em;
+    width:30%;
+    bottom:2.5em;
+    left:4em;
   }
   @media(max-width: 560px){
-    height: 36vh;
+    margin-bottom:-3vh;
+    width: 35%;
   }
-  @media(max-width: 420px){
-    height: 30vh;
-    bottom:12vh;
-  }
+  // @media(max-width: 420px){
+  //   height: 30vh;
+  //   bottom:12vh;
+  // }
   &:hover{
     -moz-transform: scale(1.3);
     -webkit-transform: scale(1.3);
@@ -183,9 +188,12 @@ const ChooseGiant = styled.img`
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
   @media(max-width: 720px){
-    margin-top : 50vw;
-    right: 23vw;
+    margin-top : 13vw;
+    right: 25vw;
     width:5vw;
+  }
+  @media(max-width:560px){
+    margin-top:19vh;
   }
 `
 const Giant = styled.img`
@@ -197,9 +205,9 @@ const Giant = styled.img`
   right:5vw;
   transition:all 550ms ease-in-out;
   @media(max-width: 720px){
-    width:50%;
-    bottom:-1em;
-    right:-0.5em;
+    width:35%;
+    bottom:-0.5em;
+    right:3.5em;
   }
   // @media(max-width: 560px){
   //   height: 36vh;
@@ -220,19 +228,12 @@ const CloudBottom = styled.img`
     left:0vw;
     bottom:0vh;
     width: 120vw;
-    // animation: MoveUp 1s linear;
-    // animation-delay: 0s;
-    // @keyframes MoveUp {
-    //     0% {
-    //         bottom: -100vh;
-            
-    //     }
-    //     100% {
-    //         bottom: -24vh;
-    //     }
-    // }
+
     @media(max-width:720px){
-      width:100%;
+      width:150%;
+    }
+    @media(max-width:560px){
+      width:200%;
     }
 `
 const LogoWip = styled.img`
@@ -246,7 +247,7 @@ const LogoWip = styled.img`
   @media(max-width: 720px){
     width: 90%;
     left: 5vw;
-    top:6em;
+    top:2em;
   }
   @keyframes FadeOut {
     0% {
@@ -266,9 +267,9 @@ const LogoSIT = styled.img`
   animation-name: FadeOut;
   animation-duration: 2s;
   @media(max-width: 720px){
-    width: 90%;
-    left: 5vw;
-    top:16em;
+    width: 50%;
+    left: 26vw;
+    top:12em;
   }
 `
 const Scrolldown = styled.img`
@@ -324,13 +325,17 @@ export default compose(
         what: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
         when: 'red',
         nav: '#384742',
-        navhov: '#002d40'
+        navhov: '#002d40',
+        iconl: '../../static/image/yakscore-new-01.svg',
+        iconr: '../../static/image/hanumanscore-new-01.svg' 
       }
       const teammongkey = {
         what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
         when : 'skyblue',
         nav : '#002d40',
-        navhov : '#e53c35', 
+        navhov : '#e53c35',
+        iconl: '../../static/image/hanumanscore-new-01.svg' ,
+        iconr: '../../static/image/yakscore-new-01.svg'
       }
       team == 'yak' ? 
         window.localStorage.setItem("color",JSON.stringify(teamyak)) : 

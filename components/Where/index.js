@@ -80,4 +80,5 @@ const index = () => (
     <Bgmountain src = '/static/image/2.png'/>
   </Bg>
 )
+//asdasdasdasdasdadadasdasd
 export default index
