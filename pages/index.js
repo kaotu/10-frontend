@@ -18,7 +18,8 @@ const Relative = styled.div`
 
 const FooterBg = styled.div`
   min-height: 10vh;
-  background-color:#002d40;  
+	background-color:#002d40;  
+	border-top: .2em solid #fff;
 `
 
 injectGlobal
