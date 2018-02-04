@@ -8,9 +8,9 @@ const CloudBack = styled.div`
     z-index: 0;
     margin:0;
     padding:0;
-    top:38vh;
+    top:35vh;
     left: 0vw;
-    height:20vh;
+    height:10vh;
     width:100vw;
 
     background: url('/static/image/CloudBG.svg') repeat 0 0;
@@ -22,8 +22,7 @@ const CloudBack = styled.div`
         to {background-position: 220vw 0;}
     }
     @media(max-width:720px){
-        top:20em;
-        width:200%;
+        top:12em;
     }
 `
 const CloudBack1 = styled.div`
@@ -31,24 +30,21 @@ const CloudBack1 = styled.div`
     z-index: 0;
     margin:0;
     padding:0;
-    top: 37vh;
+    top: 42vh;
     left: 20vw;
-    height:30vh;
+    height:20vh;
     width:100vw;
     
     background: url('/static/image/CloudBG.svg') repeat 0 0;
-<<<<<<< HEAD
     animation: 240s linear 0s normal none infinite animate;
-=======
-    animation: 150s linear 0s normal none infinite animate;
->>>>>>> 7730e28285a70bd4e9bbeebd95180e6a89e4222e
     background-repeat: repeat-x;
     @keyframes animate {
         from {background-position:0 0;}
         to {background-position: 200vw 0;}
     }
     @media(max-width:720px){
-      top:27em;
+      top:23em;
+      left:0vw;
     }
 `
 const MountainLeft = styled.img`
