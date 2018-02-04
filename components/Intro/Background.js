@@ -198,16 +198,16 @@ const Giant = styled.img`
   transition:all 550ms ease-in-out;
   @media(max-width: 720px){
     width:50%;
-    bottom:-2em;
-    right:1em;
+    bottom:-1em;
+    right:-0.5em;
   }
-  @media(max-width: 560px){
-    height: 36vh;
-  }
-  @media(max-width: 420px){
-    height: 30vh;
-    bottom:10vh;
-  }
+  // @media(max-width: 560px){
+  //   height: 36vh;
+  // }
+  // @media(max-width: 420px){
+  //   height: 30vh;
+  //   bottom:10vh;
+  // }
   &:hover{
     -moz-transform: scale(1.3);
     -webkit-transform: scale(1.3);
@@ -232,7 +232,7 @@ const CloudBottom = styled.img`
     //     }
     // }
     @media(max-width:720px){
-      width:200%;
+      width:100%;
     }
 `
 const LogoWip = styled.img`
