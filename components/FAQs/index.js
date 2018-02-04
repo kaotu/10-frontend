@@ -32,7 +32,7 @@ const DisplayMoblie2 = styled.div`
 `
 
 const Space = styled.div`
-  margin-top: 5%;
+  margin-top: 6%;
   z-index : 3;
 `
 

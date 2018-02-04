@@ -14,10 +14,11 @@ const Info = styled.div`
 `
 const Test = styled.div`
   padding: 2px;
+
 `
 
 const Icon = styled.img`
-    width:5em;
+  width:5em;
   @media (max-width:720px) {
     padding: .2em;
   }
@@ -38,37 +39,25 @@ const IconInfo = [
 
 
 const Space = styled.div`
-  margin-top: 6%;
+  margin-top: 4.5%;
   margin-bottom: 10%;
   border: .2em solid rgba(57, 63, 102, 0.2);
   background-color: rgba(57, 63, 102, 0.2);
   border-radius: 2em;
   padding:2em;
-  @media (max-width: 720px) {
-    front-size:0.1em;
-  }
 `
 const Relative = styled.div`
   position: relative;
-  min-height:100vh;
+  height:100vh;
 `
 const Moutain = styled.img`
   position: absolute;
   z-index: 0;
-  bottom:-1vh;
-  width:100%;
-  @media (max-width: 720px) {
-    z-index: 0;
-    top:28em;
-    width:100%;
-    height: 100%;
-
-  }
+  bottom: 0vh;
 `
 
-const BgColor = styled.div`
+const Bggueng = styled.div`
   background: ${props => props.themeColor || ''};
-  
 `
 
 const Hidden = styled.div`
@@ -83,7 +72,7 @@ border:  solid white;
 const index = props => (
   // <Bg bgColor={Color.mongkey.what} className="">
   
-  <BgColor themeColor={props.bgColor.what}>
+  <Bggueng themeColor={props.bgColor.what}>
   <Relative>
     <Moutain src='/static/image/MoutainWho.svg'/>
     <div className="container px-5">
@@ -124,7 +113,7 @@ const index = props => (
       </div>
     </div>
     </Relative>
-    </BgColor>
+    </Bggueng>
   // </Bg>
 )
 export default compose (
