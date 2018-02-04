@@ -8,5 +8,7 @@ const Bg = styled.section`
   background-size: cover;
   min-height: 100vh;
   letter-spacing: 0.01357em;
+  position: relative;
+  
 `
 export default Bg
