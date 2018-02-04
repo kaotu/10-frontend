@@ -153,8 +153,8 @@ const ChooseMonkey = styled.img`
     }
   }
   @media(max-width: 720px){
-    margin-top : 50vw;
-    left: 23vw;
+    margin-top : 13vw;
+    left: 21vw;
     width:5vw;
   }
   @media(max-width: 420px){
@@ -173,17 +173,18 @@ const Monkey = styled.img`
   transition:all 550ms ease-in-out;
   width: ${props => props.active ? '50vw': '30vw'};
   @media(max-width: 720px){
-    width:45%;
-    bottom:1em;
-    left:1em;
+    width:30%;
+    bottom:2.5em;
+    left:4em;
   }
   @media(max-width: 560px){
-    height: 36vh;
+    margin-bottom:-3vh;
+    width: 35%;
   }
-  @media(max-width: 420px){
-    width:30%;
-    left:3em;
-  }
+  // @media(max-width: 420px){
+  //   height: 30vh;
+  //   bottom:12vh;
+  // }
   &:hover{
     -moz-transform: scale(1.3);
     -webkit-transform: scale(1.3);
@@ -200,8 +201,8 @@ const ChooseGiant = styled.img`
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
   @media(max-width: 720px){
-    margin-top : 50vw;
-    right: 23vw;
+    margin-top : 13vw;
+    right: 25vw;
     width:5vw;
   }
   @media(max-width: 420px){
@@ -219,18 +220,17 @@ const Giant = styled.img`
   right:5vw;
   transition:all 550ms ease-in-out;
   @media(max-width: 720px){
-    width:50%;
-    bottom:-2em;
-    right:1em;
+    width:35%;
+    bottom:-0.5em;
+    right:3.5em;
   }
-  @media(max-width: 560px){
-    height: 36vh;
-  }
-  @media(max-width: 420px){
-    width:30%;
-    bottom:3vh;
-    right: 13vw;
-  }
+  // @media(max-width: 560px){
+  //   height: 36vh;
+  // }
+  // @media(max-width: 420px){
+  //   height: 30vh;
+  //   bottom:10vh;
+  // }
   &:hover{
     -moz-transform: scale(1.3);
     -webkit-transform: scale(1.3);
@@ -243,19 +243,12 @@ const CloudBottom = styled.img`
     left:0vw;
     bottom:0vh;
     width: 120vw;
-    // animation: MoveUp 1s linear;
-    // animation-delay: 0s;
-    // @keyframes MoveUp {
-    //     0% {
-    //         bottom: -100vh;
-            
-    //     }
-    //     100% {
-    //         bottom: -24vh;
-    //     }
-    // }
+
     @media(max-width:720px){
-      width:100%;
+      width:150%;
+    }
+    @media(max-width:560px){
+      width:200%;
     }
     @media(max-width: 420px){
       width:200%;
@@ -272,7 +265,7 @@ const LogoWip = styled.img`
   @media(max-width: 720px){
     width: 90%;
     left: 5vw;
-    top:6em;
+    top:2em;
   }
   @media(max-width: 420px){
     width: 100%;
@@ -297,9 +290,9 @@ const LogoSIT = styled.img`
   animation-name: FadeOut;
   animation-duration: 2s;
   @media(max-width: 720px){
-    width: 90%;
-    left: 5vw;
-    top:16em;
+    width: 50%;
+    left: 26vw;
+    top:12em;
   }
   @media(max-width: 420px){
     width: 60%;

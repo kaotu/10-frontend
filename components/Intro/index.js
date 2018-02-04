@@ -39,7 +39,7 @@ const Scroll = styled.h4`
   bottom:0vh;
   text-align:center;
   @media (max-width: 720px) {
-    margin-left:30%;
+    margin-left:38%;
   }
 `
 const Index = (props) => (
