@@ -321,7 +321,7 @@ export default compose(
     componentDidMount () {
       let team = window.localStorage.getItem("team")
       const teamyak = {
-        what: 'linear-gradient(to top , rgba(255,0,0,0),rgba(255, 51, 0,1))',
+        what: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
         when: 'red',
         nav: '#384742',
         navhov: '#002d40'
