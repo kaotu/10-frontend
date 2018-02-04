@@ -15,6 +15,9 @@ const Moutain = styled.img`
   z-index: 1;
   top: 40vh;
   margin-bottom: 10%;
+  @media (max-width: 720px) {
+    
+  }
 `
 const Img = styled.img`
   width:40vw;
@@ -94,9 +97,9 @@ const Time = styled.p`
 const index = props => (
   <Bg bgColor={props.bg.when} className="">
   <Relative>
+      <HideMobile>
     <Moutain src='/static/image/MoutainWhen.svg'/>
     <div className="container-fluid">
-      <HideMobile>
         <div className="row">
           <Space className="col-12 col-sm-12 col-md-6 ">
             <Head>
@@ -120,11 +123,11 @@ const index = props => (
             </Box4>
           </div>
         </div>
+    </div>
       </HideMobile>
       <HideDesktop>
         <Moblie />
       </HideDesktop>
-    </div>
     </Relative>
   </Bg>
 )
