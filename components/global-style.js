@@ -14,7 +14,7 @@ export default injectGlobal`
     color : white;
   }
   .nav-pills .nav-link.active {
-    background-color:#e53c35;
+    background-color:rgba(0,0,0,.3);
     border-radius: 12px;
   }
 

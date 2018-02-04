@@ -8,9 +8,9 @@ const CloudBack = styled.div`
     z-index: 0;
     margin:0;
     padding:0;
-    top:38vh;
+    top:35vh;
     left: 0vw;
-    height:20vh;
+    height:10vh;
     width:100vw;
 
     background: url('/static/image/CloudBG.svg') repeat 0 0;
@@ -22,8 +22,7 @@ const CloudBack = styled.div`
         to {background-position: 220vw 0;}
     }
     @media(max-width:720px){
-        top:20em;
-        width:200%;
+        top:12em;
     }
 `
 const CloudBack1 = styled.div`
@@ -31,9 +30,9 @@ const CloudBack1 = styled.div`
     z-index: 0;
     margin:0;
     padding:0;
-    top: 37vh;
+    top: 42vh;
     left: 20vw;
-    height:30vh;
+    height:20vh;
     width:100vw;
     
     background: url('/static/image/CloudBG.svg') repeat 0 0;
@@ -44,7 +43,8 @@ const CloudBack1 = styled.div`
         to {background-position: 200vw 0;}
     }
     @media(max-width:720px){
-      top:27em;
+      top:23em;
+      left:0vw;
     }
 `
 const MountainLeft = styled.img`
@@ -125,7 +125,7 @@ const ChooseMonkey = styled.img`
   position: absolute;
   z-index: 4;
   top: 30vh;
-  left: 13vw;
+  left: 18vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
@@ -178,7 +178,7 @@ const ChooseGiant = styled.img`
   position: absolute;
   z-index: 4;
   top: 30vh;
-  right: 13vw;
+  right: 15vw;
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 

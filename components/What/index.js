@@ -51,7 +51,6 @@ const Space = styled.div`
 const Relative = styled.div`
   position: relative;
   min-height:100vh;
-
 `
 const Moutain = styled.img`
   position: absolute;

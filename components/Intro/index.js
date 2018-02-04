@@ -18,7 +18,6 @@ const Scrolldown = styled.img`
     bottom:5vh;
     left:48vw;
     animation: Dukdik 1s linear infinite;
-    cursor:pointer;  
     @keyframes Dukdik {
       0% {
         bottom:5vh;
@@ -31,6 +30,14 @@ const Scrolldown = styled.img`
       }
     }
 `
+const Scroll = styled.h4`
+  position:absolute;
+  margin-top:40%;
+  margin-left:43.5%;
+  z-index:2561;
+  color:#000;
+  bottom:0vh;
+`
 const Index = (props) => (
   <div>
       <BgIntro>
@@ -38,9 +45,8 @@ const Index = (props) => (
           <div className="row">
             <Div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <Background/>
-              <a href="#sponsor">
+              <Scroll>เลื่อนลงข้างล่าง</Scroll>
 							<Scrolldown src='/static/image/ScrollDown.png'/>
-              </a>
             </Div>
           </div>
         </div>

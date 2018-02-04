@@ -17,7 +17,7 @@ const NavItem = styled.nav`
   `}   
   `
 const Regis = styled.button`
-  width: 8vw;
+  width: 6em;
   display:inline-block;
   color:#ecf0f1;
   font-size:1.4em;
