@@ -13,11 +13,8 @@ const Relative = styled.div`
 const Moutain = styled.img`
   position: absolute; 
   z-index: 1;
-  top: 40vh;
+  top: 15em;
   margin-bottom: 10%;
-  @media (max-width: 720px) {
-    
-  }
 `
 const Img = styled.img`
   width:40vw;
@@ -34,8 +31,8 @@ const Front = styled.p`
 const Box1 = styled.div`
   min-width: 10vw;
   position:absolute;
-  top: 2em;
-  left: 32em;   
+  top: 14em;
+  left: 25em;   
   z-index:2;
   background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine1 || ''};
@@ -45,8 +42,8 @@ const Box1 = styled.div`
 const Box2 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 9em;
-  left: 42em;   
+  top: 20em;
+  left: 35em;   
   z-index:2;
   background-color:${props => props.box2 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine2 || ''};
@@ -56,8 +53,8 @@ const Box2 = styled.div`
 const Box3 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 16em;
-  left:52em;   
+  top: 25em;
+  left:45em;   
   z-index:2;
   background-color:${props => props.box3 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine3 || ''};
@@ -67,8 +64,8 @@ const Box3 = styled.div`
 const Box4 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 23em;
-  left: 66em;   
+  top: 30em;
+  left: 60em;   
   z-index:2;
   background-color:${props => props.box4 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine4 || ''};
@@ -90,6 +87,9 @@ const Space = styled.div`
   margin-top: 6%;
   margin-bottom: 10%;
 `
+const Space2 = styled.div`
+  position: absolute;
+`
 const Time = styled.p`
   display:block;
   color:#fff;
@@ -108,7 +108,7 @@ const index = props => (
               <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
             </Head>
           </Space>
-          <div className="col-12 col-sm-12 col-md-12  ">
+          <Space2 className="col-12 col-sm-12 col-md-12  ">
             {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
             <Box1 box1={props.box1} borderLine1={props.border1} className="text-center">
               <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
@@ -122,7 +122,7 @@ const index = props => (
             <Box4 box4={props.box4} borderLine4={props.border4} className="text-center">
               <Time>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</Time>
             </Box4>
-          </div>
+          </Space2>
         </div>
     </div>
       </HideMobile>

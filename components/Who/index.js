@@ -24,10 +24,10 @@ const Content = [
   "ตลอดระยะเวลา 5 วัน"
 ]
 const Image = styled.img`
-    width:7vw;
-    transition:all 550ms ease-in-out;
-    transition: .5s;
-    width: ${props => props.active ? '7vw': '6.5vw'};
+  width:7vw;
+  transition:all 550ms ease-in-out;
+  transition: .5s;
+  width: ${props => props.active ? '7vw': '6.5vw'};
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
@@ -64,7 +64,6 @@ const Icon = styled.div`
   cursor: pointer;
   margin-left: 1%;
   margin-right: 1%;
-
 `
 const HideMobile = styled.div`
 @media (max-width: 720px) {
@@ -77,11 +76,16 @@ const HideDesktop = styled.div`
 }
 `
 const Mobile = styled.div`
-text-align: right;
-margin-top: 16%;
-text-align: center;
-@media (max-width: 720px) {
+  text-align: right;
+  margin-top: 15%;
+  text-align: center;
+  @media (max-width: 720px) {
 }
+`
+
+const Space = styled.div`
+  margin-top: 10%;
+  margin-bottom: 10%;
 `
 
 const H6 = styled.div`
@@ -89,7 +93,11 @@ const H6 = styled.div`
 `
 
 const Relative = styled.div`
-position : relative
+  position : relative;
+  z-index:100;
+`
+const Zindex = styled.div`
+  width:100vw;
 `
 
 const IconData = [
@@ -100,7 +108,7 @@ const IconData = [
 ]
 
 const H4 = styled.p`
-color: #000;
+  color: #000;
 `
 
 
@@ -150,5 +158,4 @@ const index = (props) => (
     </Relative>
   </Bg>
 );
-
 export default compose(state)(index)
