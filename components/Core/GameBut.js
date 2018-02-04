@@ -1,5 +1,6 @@
 import react from 'react'
 import styled from 'styled-components'
+import {compose ,lifecycle,withState} from 'recompose'
 
 const GameButton = styled.div`
   position: relative;
@@ -9,7 +10,7 @@ const GameButton = styled.div`
   border-top : transparent;    
   border-bottom-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  background-color: #002d40;
+  background-color: ${props => props.color || ''};
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position: absolute;
@@ -65,12 +66,21 @@ const IconGame = styled.img`
 `
 
 
-const GameBut = () => (
+const GameBut = props => (
   <a href="https://game.wip.camp" target="_blank">
-  <GameButton className="justify-content-center align-items-center" data-toggle="" data-target="#">
+  <GameButton color={props.bgColor.nav} className="justify-content-center align-items-center" data-toggle="" data-target="#">
        <Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/>
   </GameButton>
   </a>
 )
 
-export default GameBut
+export default compose(
+  withState('bgColor','setBgColor',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = window.localStorage.getItem("color")
+      const themeColor = JSON.parse(theme)
+      this.props.setBgColor(themeColor)
+    }
+  })
+)(GameBut)
