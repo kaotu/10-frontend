@@ -41,6 +41,13 @@ const Space = styled.div`
   top:0vw;
 `
 
+const Bgmountain = styled.img`
+position : absolute;
+z-index : 0;
+bottom : 0%;
+width : 100%;
+`
+
 const index = () => (
   <Bg bgColor={Color.mongkey.where} where className="">
     <div className="container-fluid">
@@ -61,6 +68,7 @@ const index = () => (
         </Space>
       </div>
     </div>
+    <Bgmountain src = '/static/image/2.png'/>
   </Bg>
 )
 export default index
