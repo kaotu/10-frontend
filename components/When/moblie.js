@@ -8,40 +8,44 @@ import Color from '../Core/Color'
 const Box1 = styled.div`
   @media (max-width: 720px) {
     width:30vw;
-    top: 14em;
-    left: 5em; 
+    top: 0em;
+    left: 0em; 
     z-index:2;  
     text-align:center;
+    position: absolute;
 } 
 `
 const Box2 = styled.div`
 @media (max-width: 720px) {
   background-color:transparent;
   width:30vw;
-  top: 16em;
+  top: 2em;
   margin-left: 5em; 
   z-index:2;  
   text-align:center;
+  position: absolute;
 }
 `
 const Box3 = styled.div`
 @media (max-width: 720px) {
   background-color:transparent;
   width:30vw;
-    top: 19em;
+    top: 5em;
     margin-left: 10em; 
     z-index:2;  
     text-align:center;
+    position: absolute;
 }
 `
 const Box4 = styled.div`
 @media (max-width: 720px) {
   background-color:transparent;
   width:35vw;
-    top: 30em;
-    margin-left: 13em; 
+    top: 8em;
+    margin-left: 16em; 
     z-index:2;  
     text-align:center;
+    position: absolute;
 }
 `
 const Div = styled.div`{
@@ -53,7 +57,17 @@ const Moutain = styled.img`
 @media (max-width: 720px) {
   letf:0;
   width:100vw;
+  z-index:0; 
+  margin-top:8em;
+  position: absolute;
+  margin-bottom:0em;
+  
 }
+`
+const Div1 = styled.div`{
+  @media (max-width: 720px) {
+    margin-top:5%;
+  }
 `
 const P = styled.p`
 @media (max-width: 720px) {
@@ -68,7 +82,7 @@ const Moblie = () => (
           <H1 className="text-center font-weight-bold">WHEN</H1>
           <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
         </Div>
-        <div className="col-12">
+        <Div1 className="col-12">
           <Box1 className="text-center">
             <P>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</P>
           </Box1>
@@ -81,10 +95,10 @@ const Moblie = () => (
           <Box4 className="text-center">
             <P>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</P>
           </Box4>
-        </div>
+        </Div1>
       </div>
     </div>
-    <Moutain src='/static/image/MoutainWhenMoblie.png' />
+    <Moutain src='/static/image/MoutainWhenMoblie.svg'/>
   </Bg>
 )
 export default Moblie
