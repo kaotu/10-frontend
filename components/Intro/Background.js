@@ -327,7 +327,7 @@ export default compose(
         navhov: '#002d40'
       }
       const teammongkey = {
-        what : 'linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1))' ,
+        what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
         when : 'skyblue',
         nav : '#002d40',
         navhov : '#e53c35', 

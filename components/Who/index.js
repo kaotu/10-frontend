@@ -27,7 +27,7 @@ const Image = styled.img`
     width:7vw;
     transition:all 550ms ease-in-out;
     transition: .5s;
-    width: ${props => props.active ? '7vw': '8vw'};
+    width: ${props => props.active ? '7vw': '6.5vw'};
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
@@ -38,19 +38,10 @@ const Image = styled.img`
     transform: scale(1.2);
   }
   &.active{
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  }
-  &.nagative{
-    width:7vw;
-  }
-  &.focus{
-    -moz-transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-  
+  -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  }  
 `
 
 const PositionTextBox =[
@@ -114,7 +105,7 @@ const IconData = [
 
 
 const index = (props) => (
-  <Bg bgColor={Color.mongkey.who} who className="">
+  <Bg bgColor={Color.mongkey.who} who >
   <Relative>
     <Bgmountain src = '/static/image/เขายาว.svg'/>
     <div className="container">
@@ -125,9 +116,9 @@ const index = (props) => (
             <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
-            <Icon className="row">
+            <Icon className="row focus">
               {
-                IconData.map((data, i) => (
+                IconData.map((data, i) => ( 
                 <div key={i} className="col-3" onClick={(e) => {
                   const activeImg = document.getElementsByClassName("who-img active");
                   if(activeImg.length) {
@@ -136,7 +127,7 @@ const index = (props) => (
                   props.setCheck(data.id)
                   e.target.classList.add("active")
                 } }>
-                  <Image className="who-img" src={data.image}/>
+                  <Image className={`who-img ${data.id === 0 ? 'active' : ''}`} src={data.image}/>
                 </div>
               ))
               }
