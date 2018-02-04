@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import {compose ,lifecycle,withState} from 'recompose'
 
 const GameButton = styled.div`
-  position: relative;
   width: 100px;
   height: 100px;
   border: .2em solid #fff;
@@ -15,14 +14,11 @@ const GameButton = styled.div`
   cursor: pointer;
   position: absolute;
   left: 5vw;
-  top:65px;          
+  top:101%;          
   color: white;
   z-index: 2560;
   @media(max-width:1200px) {
     display:none;   
-  }
-  @media(max-width:720px) {
-    display:none;     
   }
   &:hover{
     height:120px;
@@ -30,38 +26,25 @@ const GameButton = styled.div`
 `
 const Font = styled.h1`
   transition:all 550ms ease-in-out;
-  position: absolute;
   font-size: 1.4em;
   font-weight: bold;
-  top: 10%;
-  left:11%;
-  width: 80%;
   color: #fff;
   letter-spacing: 5px;
-  @media(max-width:1200px) {
-    font-size: 0em;            
-  }
-  &:hover{
-    top:20%;
-  }
+  margin-top:10px;
 `
 
 const IconGame = styled.img`
   transition:all 550ms ease-in-out;
   width: 40%; 
-  left: 30%;
-  top:40%;
-  position: absolute;
-  @media(max-width:1200px) {
-    width: 50%; 
-    top: -18px;         
-  }
-  @media(max-width:720px) {
-    width: 50%; 
-    top: -16px;         
-  }
+`
+const DivGame = styled.div`
+  position :absolute;
+  height:100%;
+  transition:all 550ms ease-in-out;
+  width:100%;
+  text-align:center;
   &:hover{
-    top:50%;
+    margin-top:10px;
   }
 `
 
@@ -69,7 +52,7 @@ const IconGame = styled.img`
 const GameBut = props => (
   <a href="https://game.wip.camp" target="_blank">
   <GameButton color={props.bgColor.nav} className="justify-content-center align-items-center" data-toggle="" data-target="#">
-       <Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/>
+      <DivGame><Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/></DivGame>
   </GameButton>
   </a>
 )

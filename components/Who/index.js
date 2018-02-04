@@ -27,30 +27,25 @@ const Image = styled.img`
     width:7vw;
     transition:all 550ms ease-in-out;
     transition: .5s;
-    width: ${props => props.active ? '7vw': '8vw'};
+    width: ${props => props.active ? '7vw': '6.5vw'};
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
   }
   &:hover{
+    background: #fff;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+    border-radius: 1em;
   }
   &.active{
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  }
-  &.nagative{
-    width:7vw;
-  }
-  &.focus{
-    -moz-transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-  
+  background: #fff;
+  -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  border-radius: 1em;
+  }  
 `
 
 const PositionTextBox =[
@@ -61,7 +56,7 @@ const PositionTextBox =[
 ]
 
 const Icon = styled.div`
-  margin-top: 5%;
+  margin-top: 10%;
   cursor: pointer;
   margin-left: 1%;
   margin-right: 1%;
@@ -92,7 +87,7 @@ margin-bottom: 10%;
 `
 
 const H6 = styled.div`
-  color: #FFFFFF;
+  color: #fff;
 `
 
 const Bgmountain = styled.img`
@@ -112,16 +107,12 @@ const IconData = [
   { id: 3, image: "/static/image/night.png"}
 ]
 
-const H11 = H1.extend`
-  color : #C3E1EA;
-  margin-top:1em;
-  @media (max-width:720px) {
-    margin-top:3em;
-  }
+const H4 = styled.p`
+color: #000;
 `
 
 const index = (props) => (
-  <Bg bgColor={Color.mongkey.who} who className="">
+  <Bg bgColor={Color.mongkey.who} who >
   <Relative>
     <Bgmountain src = '/static/image/เขายาว.svg'/>
     <div className="container">
@@ -132,9 +123,9 @@ const index = (props) => (
             <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
-            <Icon className="row">
+            <Icon className="row focus">
               {
-                IconData.map((data, i) => (
+                IconData.map((data, i) => ( 
                 <div key={i} className="col-3" onClick={(e) => {
                   const activeImg = document.getElementsByClassName("who-img active");
                   if(activeImg.length) {
@@ -143,7 +134,7 @@ const index = (props) => (
                   props.setCheck(data.id)
                   e.target.classList.add("active")
                 } }>
-                  <Image className="who-img" src={data.image}/>
+                  <Image className={`who-img ${data.id === 0 ? 'active' : ''}`} src={data.image}/>
                 </div>
               ))
               }

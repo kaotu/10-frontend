@@ -31,34 +31,45 @@ const Front = styled.p`
 const Box1 = styled.div`
   width: 20vw;
   position:absolute;
-  background-color:transparent;
   top: 4em;
   left: 25em;   
   z-index:2;
+  background-color:${props => props.box1 || 'transparent'};
+  border: 0vw;
+  border-radius:1em;
 `
 const Box2 = styled.div`
   position:absolute;
-  background-color:transparent;
   min-width:10vw;
   top: 10em;
   left: 35em;   
   z-index:2;
+  background-color:${props => props.box2 || 'transparent'};
+  border: 0vw;
+  border-radius:1em;
+  padding:.5em 5em;
 `
 const Box3 = styled.div`
   position:absolute;
-  background-color:transparent;
   min-width:10vw;
   top: 15em;
   left:45em;   
   z-index:2;
+  background-color:${props => props.box3 || 'transparent'};
+  border: 0vw;
+  border-radius:1em;
+  padding:.5em 5em;
 `
 const Box4 = styled.div`
   position:absolute;
-  background-color:transparent;
   min-width:10vw;
   top: 20em;
   left: 60em;   
   z-index:2;
+  background-color:${props => props.box4 || 'transparent'};
+  border: 0vw;
+  border-radius:1em;
+  padding:.5em 5em;
 `
 const HideMobile = styled.div`
   @media (max-width: 720px) {
@@ -74,6 +85,10 @@ const HideDesktop = styled.div`
 const Space = styled.div`
   margin-top: 5%;
   margin-bottom: 10%;
+`
+const Time = styled.p`
+  display:block;
+  color:#fff;
 `
 
 const index = props => (
@@ -91,17 +106,17 @@ const index = props => (
           </Space>
           <div className="col-12 col-sm-12 col-md-12  ">
             {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
-            <Box1 className="text-center">
-              <p>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</p>
+            <Box1 box1={props.box1} className="text-center">
+              <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
             </Box1>
-            <Box2 className="text-center">
-              <p>11 มี.ค 61 <br /> วันปิดรับสมัคร</p>
+            <Box2 box2={props.box2} className="text-center">
+              <Time>11 มี.ค 61 <br /> วันปิดรับสมัคร</Time>
             </Box2>
-            <Box3 className="text-center">
-              <p>31 มี.ค 61 <br /> วันประกาศผล</p>
+            <Box3 box3={props.box3} className="text-center">
+              <Time>31 มี.ค 61 <br /> วันประกาศผล</Time>
             </Box3>
-            <Box4 className="text-center">
-              <p>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</p>
+            <Box4 box4={props.box4} className="text-center">
+              <Time>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</Time>
             </Box4>
           </div>
         </div>
@@ -116,16 +131,20 @@ const index = props => (
 
 export default compose(
   withState('bg','setBg',''),
+  withState('box1','setBox1',''),
+  withState('box2','setBox2',''),
+  withState('box3','setBox3',''),
+  withState('box4','setBox4',''),
   lifecycle({
     componentDidMount() {
-      let date = new Date()
+      let date = new Date('3/31/2018')
       let timeline =new Intl.DateTimeFormat('th-th').format(date)
       console.log(timeline)
       switch(timeline){
-        case '10/2/2561': 
-        case '11/3/2561': 
-        case '31/3/2561': 
-        case '30/5/2561': 
+        case '30/5/2561': this.props.setBox4('rgba(0,0,0,.5)'); 
+        case '31/3/2561': this.props.setBox3('rgba(0,0,0,.5)');
+        case '11/3/2561': this.props.setBox2('rgba(0,0,0,.5)');
+        case '10/2/2561': this.props.setBox1('rgba(0,0,0,.5)'); 
       }
 
       let theme = window.localStorage.getItem("color")

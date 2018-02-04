@@ -15,7 +15,7 @@ const CloudBack = styled.div`
     
     background: url('/static/image/CloudBG.svg') repeat 0 0;
     background-position: 20vw 0;
-    animation: 100s linear 0s normal none infinite animated;
+    animation: 300s linear 0s normal none infinite animated;
     background-repeat: repeat-x;
     @keyframes animated {
         from {background-position: 20vw 0;}
@@ -37,7 +37,7 @@ const CloudBack1 = styled.div`
     width:100vw;
     
     background: url('/static/image/CloudBG.svg') repeat 0 0;
-    animation: 80s linear 0s normal none infinite animate;
+    animation: 150s linear 0s normal none infinite animate;
     background-repeat: repeat-x;
     @keyframes animate {
         from {background-position:0 0;}
@@ -327,7 +327,7 @@ export default compose(
         navhov: '#002d40'
       }
       const teammongkey = {
-        what : 'linear-gradient(to top, rgba(255,0,0,0), rgba(119, 169, 220, 1))' ,
+        what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
         when : 'skyblue',
         nav : '#002d40',
         navhov : '#e53c35', 
