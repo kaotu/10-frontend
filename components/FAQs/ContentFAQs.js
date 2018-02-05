@@ -18,13 +18,13 @@ const Box1 = styled.div`
   width: 46vw;
   min-height: 30hw;    
   padding: 1vw;
-  background-color:#FBFBEF;
+  background-color:#778899;
   margin-top:1vw;
 	margin-bottom:1vw;
 	border-radius: 10px;
   &.arrow_box {
     position: relative;
-    background: #FBFBEF;
+    background: #778899;
   }
   &.arrow_box:after {
     right: 100%;
@@ -35,7 +35,7 @@ const Box1 = styled.div`
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #FBFBEF;
+    border-right-color: #778899;
     border-width: 1vw;
     margin-top: -1vw;
   }
@@ -44,13 +44,13 @@ const Box = styled.div`
 width: 46vw;
 min-height: 30hw;    
 padding: 1vw;
-background-color:#fff;
+background-color:#5F9EA0;
 margin-top:1vw;
 margin-bottom:1vw;
 border-radius: 10px;
 &.arrow_box {
   position: relative;
-  background: #fff;
+  background: #5F9EA0;
 }
 &.arrow_box:after {
 	left: 100%;
@@ -59,7 +59,7 @@ border-radius: 10px;
 	content: " ";
 	position: absolute;
 	pointer-events: none;
-	border-left-color: #fff;
+	border-left-color:#5F9EA0;
 	border-width: 1vw;
 	margin-top: -1vw;
 }
@@ -78,7 +78,7 @@ const FAQs = [
 ]
 
 const Black = styled.p`
-  color: #000000;
+  color: #fff;
 `
 
 const Content = props => (
