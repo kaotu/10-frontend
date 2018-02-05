@@ -54,30 +54,40 @@ const Linerespon = styled.div`
 `
 
 const ContentBg = Bg.extend`
-  min-height: 100vh;
+  height: 100vh;
 `
 
 const Space = styled.div`
-  margin-top: 5%;
+  z-index:3;
+  margin-top: 0%;
   margin-bottom: 0%;
 `
 
 const Relative = styled.div`
   position : relative;
+  height: 100vh;
 `
 
 const Bgheartbox = styled.img`
-  width : 105%;
-  margin-left : -2%;
-  margin-top : -20%;
+  position : absolute;
+  z-index: 1;
+  width : 140%;
+  left : -20%;
+  bottom: 0vh;
 `
 const Bgright = styled.img`
-  width : 10%;
-  margin-top : -10%;
+  position : absolute;
+  z-index:0;
+  height: 250vh;
+  right: 0vw;
+  top : 0vh;
 `
 const Bgleft = styled.img`
-  width : 10%;
-  margin-top : -10%;
+  position : absolute;
+  z-index:0;
+  height: 250vh;
+  left: 0vw;
+  top : 0vh;
 `
 
 
@@ -85,6 +95,7 @@ const index = () => (
 <div>
   <DivContact>
     <Relative>
+    <Bgheartbox src = '/static/image/Bgheartbox.png'/>
     <ContentBg bgColor="#444B52" className="">
       <div className="container-fluid">
         <div className="row">
@@ -99,10 +110,10 @@ const index = () => (
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
                 <a href="https://www.facebook.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/facebook ci logo.png" />
+                  <ImgCenter src="/static/image/facebook ci logo.png" className='img responsive'/>
                 </a>
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
-                  <ImgCenter src="/static/image/LINEa ci logo.png" />
+                  <ImgCenter src="/static/image/LINEa ci logo.png" className='img-responsive'/>
                 </a>
                 <a href="https://twitter.com/WIPCamp" target="_blank">
                   <ImgCenter src="/static/image/Twiiter ci logo.png" />
@@ -120,13 +131,13 @@ const index = () => (
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
-            <Bgleft src = '/static/image/BgleftFAQs.png'/>
-  <Bgright src = '/static/image/BgrightFAQs.png'/>
-  <Bgheartbox src = '/static/image/Bgheartbox.png'/>
+
           </Space>
         </div>
       </div>
     </ContentBg>
+    <Bgleft src = '/static/image/BgleftFAQs.png'/>
+    <Bgright src = '/static/image/BgrightFAQs.png'/>
     </Relative>
   </DivContact>
   
