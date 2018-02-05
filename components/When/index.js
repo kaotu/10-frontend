@@ -9,6 +9,7 @@ import {compose, lifecycle, withState} from 'recompose'
 
 const Relative = styled.div`
   position: relative;
+  height : 100vh;
 `
 const Moutain = styled.img`
   position: absolute; 
@@ -95,8 +96,8 @@ const Time = styled.p`
   color:#fff;
 `
 const Bgtop = styled.img`
-margin-left : -1vw;
-margin-top : -17vw;
+position: absolute;
+top: 0vh;
 width : 102%;
 @media (max-width:768px) {
   margin-top : 0;
@@ -122,6 +123,8 @@ background: ${props => props.themeColor || ''};
 const index = props => (
   <Bggradient themeColor={props.bg.when} className="">
     <Relative>
+    <Bgtop src = '/static/image/topwhen.png'/>
+    <Bgbottom src = '/static/image/bottomwhen.png'/>
       <HideMobile>
     <div className="container-fluid">
         <div className="row">
@@ -153,8 +156,6 @@ const index = props => (
           <Moblie />
         </HideDesktop>
     </Relative>
-    <Bgtop src = '/static/image/topwhen.png'/>
-    <Bgbottom src = '/static/image/bottomwhen.png'/>
   </Bggradient>
 )
 
