@@ -104,8 +104,8 @@ const index = () => (
             <H2>ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3">
-              <a href="tel://083-082-2189"><ImgLeft src="/static/image/ContactPhone.png" /></a>
-                <p className="mt-3"><strong>พี่วิปโป้: 08-3082-2189</strong></p>
+              <a href="tel://02-107-3576"><ImgLeft src="/static/image/ContactPhone.png" /></a>
+                <p className="mt-3"><strong>พี่วิปโป้: 02-107-3576</strong></p>
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
