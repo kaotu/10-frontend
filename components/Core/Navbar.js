@@ -38,6 +38,12 @@ const Regis = styled.button`
     position:relative;
     top:4px;
   }
+  @media(max-width:1200px){
+    font-size:1.2em;
+  }
+  @media(max-width:990px){
+    font-size:1em;
+  }
   @media(max-width:720px){
     font-size:0.9em;
   }
