@@ -26,7 +26,7 @@ const Regis = styled.button`
   border:solid 1px #e53c35;
   background:#e53c35;
   text-align:center;
-  padding:.5em;
+  padding:.3em .2em;
   transition: all 0.1s;
   margin-bottom:5%;
   margin-right:1.5vw;
