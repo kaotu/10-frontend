@@ -18,7 +18,7 @@ const Test = styled.div`
 `
 
 const Icon = styled.img`
-  width:5em;
+  width:7em;
   @media (max-width:720px) {
     padding: .2em;
   }
@@ -31,10 +31,10 @@ const Mobile = styled.div`
 `
 
 const IconInfo = [
-  {icon : "/static/image/Java prog.png", text: "Java Programming",t:"Java Programming"},
-  {icon : "/static/image/itfun.png", text: "IT Fundamentals",t:"IT Fundamentals"},
-  {icon : "/static/image/network.png", text: "Network",t:"Network"},
-  {icon : "/static/image/web.png", text: "HTML5&CSS",t:"HTML5&CSS"}
+  {icon : "/static/image/icon-what/java (2).png", text: "Java Programming",t:"Java Programming"},
+  {icon : "/static/image/icon-what/IT fun (1).png", text: "IT Fundamentals",t:"IT Fundamentals"},
+  {icon : "/static/image/icon-what/network (2).png", text: "Network",t:"Network"},
+  {icon : "/static/image/icon-what/web (2).png", text: "HTML5&CSS",t:"HTML5&CSS"}
 ]
 
 
