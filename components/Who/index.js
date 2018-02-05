@@ -33,22 +33,22 @@ const Image = styled.img`
     padding: .2em;
   }
   &:hover{
-    background: #fff;
+    background: transparent;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     border-radius: 0.5em;
-    border: 4px solid #fff;
+    border: 4px solid transparent;
     
   }
   &.active{
-  background: #fff;
+  background: transparent;
   -moz-transform: scale(1.3);
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
   border-radius: 1em;
   border-radius: 0.5em;
-  border: 4px solid #fff;
+  border: 4px solid transparent;
   }  
 `
 
@@ -101,10 +101,10 @@ const Zindex = styled.div`
 `
 
 const IconData = [
-  { id: 0, image: "/static/image/edu.png"},
+  { id: 0, image: "/static/image/graduate.png"},
   { id: 1, image: "/static/image/computer.png"},
-  { id: 2, image: "/static/image/Mom.png" },
-  { id: 3, image: "/static/image/night.png"}
+  { id: 2, image: "/static/image/person.png" },
+  { id: 3, image: "/static/image/moon.png"}
 ]
 
 const H4 = styled.p`

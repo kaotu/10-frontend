@@ -103,8 +103,10 @@ width : 102%;
 }
 `
 const Bgbottom = styled.img`
-margin-left : -1vw;
-width : 101%;
+position : absolute;
+margin-left : 0vw;
+width : 100%;
+bottom: 0vh;
 @media (max-width:768px) {
   margin-top : 2%;
 }

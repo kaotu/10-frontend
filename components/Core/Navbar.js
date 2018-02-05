@@ -17,10 +17,10 @@ const NavItem = styled.nav`
   `}   
   `
 const Regis = styled.button`
-  width: 6em;
+  width: 7em;
   display:inline-block;
   color:#ecf0f1;
-  font-size:1.4em;
+  font-size:1.5em;
   text-decoration:none;
   border-radius:5px;
   border:solid 1px #e53c35;
@@ -37,6 +37,9 @@ const Regis = styled.button`
     box-shadow: 0px 2px 0px #871612;
     position:relative;
     top:4px;
+  }
+  @media(max-width:720px){
+    font-size:0.9em;
   }
 `
 
