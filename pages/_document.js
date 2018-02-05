@@ -1,6 +1,7 @@
 // ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import styled, { ServerStyleSheet } from 'styled-components'
+
 
 
 export default class MyDocument extends Document {
@@ -21,11 +22,24 @@ export default class MyDocument extends Document {
           <meta name="description" content="WIP Camp #10 : Ways to IT Professionals Camp ค่ายเส้นทางสู่ฝันนักไอที : ค่าย สำหรับน้องๆ มัธยม ปลาย ที่จะพาน้องๆมาทำความรู้จักกับ ไอที อย่างเต็มตัว ตลอดทั้ง ค่าย น้องๆจะได้รับ ความรู้ ความสนุกสนาน จากพี่ๆ ไอที บางมด แล้วเจอกันนะครับ"/>
           <meta name="keywords" content="wipcamp,itcamp,ค่ายไอที,ค่ายคอม"/>
           <meta property="og:title" content="WIP Camp #10 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที "/>
+          <meta property="og:type" content="company"/>
+          <meta property="og:url" content="https://wip.camp/"/>
+          <meta property="og:image" content="https://frontend.freezer.wip.camp/static/image/bg.jpg"/>
+          <meta property="og:site_name" content="WIP Camp #10 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที"/>
           <style>{`body { margin: 0; } /* custom! */`}</style>
           <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
           <link rel="stylesheet" href="/static/css/fontawesome-all.min.css"/>
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
           <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" /> 
+          <link rel="shortcut icon" href="/static/image/favicon.ico" type="image/x-icon"/>
+          <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png"/>
+          <link rel="icon" href="/static/image/favicon.ico" type="/image/x-icon"/>
+          <link rel="icon" type="image/png" sizes="32x32" href="/static/image/favicon/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="/static/image/favicon/favicon-16x16.png"/>
+          <link rel="manifest" href="/static/image/favicon/site.webmanifest"/>
+          <link rel="mask-icon" href="/static/image/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
+          <meta name="msapplication-TileColor" content=" #002D40"/> 
+          <meta name="theme-color" content=" #002D40"/>
           {this.props.styleTags}
         </Head>
         <body>

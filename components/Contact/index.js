@@ -5,9 +5,10 @@ import HeartBox from './HeartBox'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
-const DivWhere = styled.div`
+const DivContact = styled.div`
   text-align: center;    
   width: 100%;  
+  overflow: hidden;
 `
 const ImgLeft = styled.img`
   width:5vw;
@@ -33,8 +34,8 @@ const ImgRight = styled.img`
   }
 `
 const Line = styled.div`
-  border-left: thick solid #000;
-  border-right: thick solid #000;
+  border-left: thick solid white;
+  border-right: thick solid white;
   @media(max-width:575px) {
     border-left: none;
     border-right: none;
@@ -46,71 +47,101 @@ const Linerespon = styled.div`
     height : 2px;
     margin-left : 20vw;
     margin-top : 5vw;
-    background-color: #000;
+    background-color: white;
   @media(min-width:576px){
     display : none;
   }
 `
 
 const ContentBg = Bg.extend`
-  min-height: 90vh;
+  height: 100vh;
 `
 
-const FooterBg = Bg.extend`
-  min-height: 10vh;  
+const Space = styled.div`
+  z-index:3;
+  margin-top: 0%;
+  margin-bottom: 0%;
 `
+
+const Relative = styled.div`
+  position : relative;
+  height: 100vh;
+`
+
+const Bgheartbox = styled.img`
+  position : absolute;
+  z-index: 1;
+  width : 140%;
+  left : -20%;
+  bottom: 0vh;
+`
+const Bgright = styled.img`
+  position : absolute;
+  z-index:0;
+  height: 250vh;
+  right: 0vw;
+  top : 0vh;
+`
+const Bgleft = styled.img`
+  position : absolute;
+  z-index:0;
+  height: 250vh;
+  left: 0vw;
+  top : 0vh;
+`
+
 
 const index = () => (
-  <DivWhere>
-    <ContentBg bgColor="#e7f6fa" className="d-flex align-items-center">
+<div>
+  <DivContact>
+    <Relative>
+    <Bgheartbox src = '/static/image/Bgheartbox.png'/>
+    <ContentBg bgColor="#444B52" className="">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12">
+          <Space className="col-md-12">
             <H1>Contact</H1>
-            <H2 className="font-weight-bold">ติดต่อเรา</H2>
+            <H2>ติดต่อเรา</H2>
             <div className="row">
-              <div className="col-sm-3 col-md-3 img-responsive">
-                <ImgLeft src="/static/image/ContactPhone.svg" />
+              <div className="col-sm-3 col-md-3">
+              <a href="tel://083-082-2189"><ImgLeft src="/static/image/ContactPhone.png" /></a>
                 <p className="mt-3"><strong>พี่วิปโป้: 08-3082-2189</strong></p>
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
-                <a href="https://www.facebook.com/wipcamp/">
-                  <ImgCenter src="/static/image/Facebook.svg" />
+                <a href="https://www.facebook.com/wipcamp/" target="_blank">
+                  <ImgCenter src="/static/image/facebook ci logo.png" className='img responsive'/>
                 </a>
-                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~">
-                  <ImgCenter src="/static/image/Lineicon.svg" />
+                <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
+                  <ImgCenter src="/static/image/LINEa ci logo.png" className='img-responsive'/>
                 </a>
-                <a href="https://twitter.com/WIPCamp">
-                  <ImgCenter src="/static/image/Twitter.svg" />
+                <a href="https://twitter.com/WIPCamp" target="_blank">
+                  <ImgCenter src="/static/image/Twiiter ci logo.png" />
                 </a>
-                <a href="https://www.instagram.com/wipcamp/">
-                  <ImgCenter src="/static/image/Ig.svg" />
+                <a href="https://www.instagram.com/wipcamp/" target="_blank">
+                  <ImgCenter src="/static/image/ig ci logo.png" />
                 </a>
-                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA">
-                  <ImgCenter src="/static/image/Youtube.svg" />
-                </a>                
+                <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
+                  <ImgCenter src="/static/image/Youtube ci logo.png" />
+                </a>
                 <Linerespon />
               </Line>
-              <div className="col-sm-3 col-md-3 img-responsive">
-                <ImgRight src="/static/image/ContactMail.svg" />
+              <div className="col-sm-3 col-md-3">
+                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" /></a>
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <HeartBox />
-          </div>
+
+          </Space>
         </div>
       </div>
     </ContentBg>
-    
-    <FooterBg className="d-flex justify-content-center align-items-center">    
-    <div className="fa fa-code" aria-hidden="true"/>&nbsp;with&nbsp;<div className="fa fa-heart" aria-hidden="true"/>&nbsp;by 10 I'm Developer 
-    </FooterBg>
-  </DivWhere>
+    <Bgleft src = '/static/image/BgleftFAQs.png'/>
+    <Bgright src = '/static/image/BgrightFAQs.png'/>
+    </Relative>
+  </DivContact>
+  
+</div>
 )
 
 export default index

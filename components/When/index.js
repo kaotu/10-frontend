@@ -5,53 +5,73 @@ import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Moblie from '../When/moblie'
 import Color from '../Core/Color'
+import {compose, lifecycle, withState} from 'recompose'
 
+const Relative = styled.div`
+  position: relative;
+  height : 100vh;
+`
+const Moutain = styled.img`
+  position: absolute; 
+  z-index: 1;
+  top: 15em;
+  margin-bottom: 10%;
+`
 const Img = styled.img`
-    width:40vw;
-    right:0px;
+  width:40vw;
+  right:0px;
 `
 const Head = styled.div`
   position:absolute;
-  top:15vh;
   left:22vw;
 `
 const Front = styled.p`
-    padding-top:0vw;
-    margin-left:40vw;   
+  padding-top:0vw;
+  margin-left:40vw;   
 `
 const Box1 = styled.div`
-    width: 20vw;
-    height: 55hw;    
-    padding: 1vw;
-    background-color:#FBFBEF;
-    opecity:0.9;
-    border-radius: 0.2em;
-    margin-top:33vw;
-    margin-left:30vw;   
+  min-width: 10vw;
+  position:absolute;
+  top: 14em;
+  left: 37em;   
+  z-index:2;
+  background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
+  border: ${props => props.borderLine1 || ''};
+  border-radius:1em;
+  padding:.5em 5em;
 `
 const Box2 = styled.div`
   position:absolute;
-  background-color:transparent;
-  width:10vw;
-  top:5vh;
-  left:76vw;
+  min-width:10vw;
+  top: 20em;
+  left: 47em;   
   z-index:2;
+  background-color:${props => props.box2 || 'rgba(0,0,0,.5)'};
+  border: ${props => props.borderLine2 || ''};
+  border-radius:1em;
+  padding:.5em 5em;
 `
 const Box3 = styled.div`
   position:absolute;
-  background-color:transparent;
-  width:10vw;
-  top:18vh;
-  left:70vw;
+  min-width:10vw;
+  top: 26em;
+  left:57em;   
   z-index:2;
+  background-color:${props => props.box3 || 'rgba(0,0,0,.5)'};
+  border: ${props => props.borderLine3 || ''};
+  border-radius:1em;
+  padding:.5em 5em;
 `
 const Box4 = styled.div`
   position:absolute;
-  background-color:transparent;
-  width:10vw;
-  top:30vh;
-  left:65vw;
+  min-width:10vw;
+  top: 32em;
+  left: 67em;   
   z-index:2;
+  background-color:${props => props.box4 || 'rgba(0,0,0,.5)'};
+  border: ${props => props.borderLine4 || ''};
+  border-radius:1em;
+  padding:.3em 3em;
 `
 const HideMobile = styled.div`
   @media (max-width: 720px) {
@@ -64,38 +84,111 @@ const HideDesktop = styled.div`
   }
 `
 
-const index = () => (
-  <Bg bgColor={Color.mongkey.when} className="d-flex align-items-center">
-    <div className="container-fluid">
+const Space = styled.div`
+  margin-top: 6%;
+  margin-bottom: 10%;
+`
+const Space2 = styled.div`
+  position: absolute;
+`
+const Time = styled.p`
+  display:block;
+  color:#fff;
+`
+const Bgtop = styled.img`
+position: absolute;
+top: 0vh;
+width : 102%;
+@media (max-width:768px) {
+  margin-top : 0;
+}
+`
+const Bgbottom = styled.img`
+position : absolute;
+margin-left : 0vw;
+width : 100%;
+bottom: 0vh;
+@media (max-width:768px) {
+  margin-top : 2%;
+}
+`
+const Zindex = styled.div`
+  z-index : 1;
+`
+
+const Bggradient = styled.div`
+background: ${props => props.themeColor || ''};
+`
+
+const index = props => (
+  <Bggradient themeColor={props.bg.when} className="">
+    <Relative>
+    <Bgtop src = '/static/image/topwhen.png'/>
+    <Bgbottom src = '/static/image/bottomwhen.png'/>
       <HideMobile>
+    <div className="container-fluid">
         <div className="row">
-          <div className="col-12 col-sm-12 col-md-6 ">
+          <Space className="col-12 col-sm-12 col-md-6 ">
             <Head>
-              <H1 className="text-center font-weight-bold">WHEN</H1>
-              <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
+              <H1 className="text-center">WHEN</H1>
+              <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
             </Head>
-          </div>
-          <div className="col-12 col-sm-12 col-md-12  ">
-            <Img src="/static/image/Climing.svg" className="rounded float-right" />
-            <Box1 className="text-center">
-              <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
+          </Space>
+          <Space2 className="col-12 col-sm-12 col-md-12  ">
+            {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
+            <Box1 box1={props.box1} borderLine1={props.border1} className="text-center">
+              <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
             </Box1>
-            <Box2 className="text-center">
-              <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
+            <Box2 box2={props.box2} borderLine2={props.border2} className="text-center">
+              <Time>11 มี.ค 61 <br /> วันปิดรับสมัคร</Time>
             </Box2>
-            <Box3 className="text-center">
-              <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
+            <Box3 box3={props.box3} borderLine3={props.border3} className="text-center">
+              <Time>31 มี.ค 61 <br /> วันประกาศผล</Time>
             </Box3>
-            <Box4 className="text-center">
-              <h3>31 ม.ค. 61 <br /> วันค่าย</h3>
+            <Box4 box4={props.box4} borderLine4={props.border4} className="text-center">
+              <Time>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</Time>
             </Box4>
-          </div>
+          </Space2>
         </div>
-      </HideMobile>
-      <HideDesktop>
-        <Moblie />
-      </HideDesktop>
     </div>
-  </Bg>
+      </HideMobile>
+          <HideDesktop>
+          <Moblie />
+        </HideDesktop>
+    </Relative>
+  </Bggradient>
 )
-export default index
+
+export default compose(
+  withState('bg','setBg',''),
+  withState('box1','setBox1',''),
+  withState('box2','setBox2',''),
+  withState('box3','setBox3',''),
+  withState('box4','setBox4',''),
+  withState('border1','setBorder1',''),
+  withState('border2','setBorder2',''),
+  withState('border3','setBorder3',''),
+  withState('border4','setBorder4',''),
+  lifecycle({
+    componentDidMount() {
+      let date = new Date()
+      let timeline =new Intl.DateTimeFormat('th-th').format(date)
+      console.log(timeline)
+      switch(timeline){
+        case '30/5/2561': this.props.setBox4('rgba(229, 60, 53,1)'); 
+        case '31/3/2561': this.props.setBox3('rgba(229, 60, 53,1)');
+        case '11/3/2561': this.props.setBox2('rgba(229, 60, 53,1)');
+        case '10/2/2561': this.props.setBox1('rgba(229, 60, 53,1)'); 
+      }
+      switch(timeline){
+        case '10/2/2561': this.props.setBorder1('.275em solid #fff'); break;
+        case '11/3/2561': this.props.setBorder2('.275em solid #fff'); break;
+        case '31/3/2561': this.props.setBorder3('.275em solid #fff'); break;
+        case '30/5/2561': this.props.setBorder4('.275em solid #fff'); break;
+      }
+      let theme = window.localStorage.getItem("color")
+      const whenColor = JSON.parse(theme)
+      this.props.setBg(whenColor)
+    }
+  })
+)(index)

@@ -2,21 +2,21 @@ import react from 'react'
 import styled from 'styled-components'
 
 const ImgHeart = styled.img`
+    position: absolute;
+    z-index: 2;
     width:20vw;
+    left: 39vw;
+    @media(max-width:1500px) {
+      bottom:-3em;
+    }
+    @media(max-width:1025px) {
+      margin-bottom:-5em;
+    }
     @media(max-width:720px) {
-      width: 30%;
-      height: auto;
-      margin-bottom:5vh;
+      bottom:-1em;
     }
 `
 const BoxHeart = () => (
-  <div className="container-fluid">
-    <div className="row">
-      <div className="col-md-12 img-responsive">
-      <br/><br/><br/><br/><br/><br/><br/>
-        <ImgHeart src="/static/image/BoxHeart.svg" className="img-responsive"/>
-      </div>
-    </div>
-  </div>
-)
+  <ImgHeart src="/static/image/BoxHeart.svg"/>
+) 
 export default BoxHeart

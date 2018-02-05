@@ -1,11 +1,12 @@
 import react from "react";
 import Bg from "../Core/BgStory.js";
-import styled from "styled-components";
+import styled from "styled-components"
 import Content from "./ContentFAQs";
 import Respon from "./ResponFAQs";
 import H1 from "../Core/FontH1";
 import H2 from "../Core/FontH2";
 import Color from "../Core/Color";
+import Fireflyy from "./Firefly";
 
 const DivWhere = styled.div`
   top: 200px;
@@ -13,11 +14,13 @@ const DivWhere = styled.div`
 `;
 
 const DisplayDesktop = styled.div`
+    margin-bottom: 10%; 
   @media (max-width: 720px) {
     display: none;
   }
 `;
 const DisplayMoblie = styled.div`
+  margin-bottom: 10%;
   @media (min-width: 720px) {
     display: none;
   }
@@ -26,18 +29,29 @@ const DisplayMoblie2 = styled.div`
   @media (max-width: 720px) {
     margin-top: 20px;
   }
-`;
+`
+
+const Space = styled.div`
+  margin-top: 6%;
+  z-index : 3;
+`
+
+const Relative = styled.div`
+  position : relative;
+`
 
 const index = props => (
   <DivWhere>
-    <Bg bgColor={Color.mongkey.faqs } className="d-flex align-items-center">
-      <div className="container-fluid my-5">
+    <Relative>
+    <Bg bgColor={Color.mongkey.faqs } className="">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12 mt-4">
-            <H1 className="text-center font-weight-bold">FAQs</H1>
-            <H2 className="text-center font-weight-bold">คำถามที่พบบ่อย ?</H2>
+          <Space className="col-md-12">
+            <H1 className="text-center">FAQs</H1>
+            <H2 className="text-center">คำถามที่พบบ่อย ?</H2>
+            <Fireflyy/>
             <DisplayMoblie2 />
-          </div>
+          </Space>
         </div>
         <DisplayDesktop>
           <Content />
@@ -48,6 +62,7 @@ const index = props => (
         <br />
       </div>
     </Bg>
+    </Relative>
   </DivWhere>
 );
 export default index;

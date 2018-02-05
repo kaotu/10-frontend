@@ -7,8 +7,9 @@ import Block from "./Block"
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
+import Router from 'next/router'
 
-const state = withState("checkButton", "setCheck", 0)
+const state = withState("checkButton", "setCheck", 0) 
 
 const Topic = [
   "น้อง ๆ มัธยมศึกษาตอนปลาย",
@@ -23,87 +24,138 @@ const Content = [
   "ตลอดระยะเวลา 5 วัน"
 ]
 const Image = styled.img`
-    width:7vw;
+  width:7vw;
+  transition:all 550ms ease-in-out;
+  transition: .5s;
+  width: ${props => props.active ? '7vw': '6.5vw'};
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
   }
+  &:hover{
+    background: transparent;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    border-radius: 0.5em;
+    border: 4px solid transparent;
+    
+  }
+  &.active{
+  background: transparent;
+  -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  border-radius: 1em;
+  border-radius: 0.5em;
+  border: 4px solid transparent;
+  }  
 `
-const IconData = [
-  { id: 0, image: "/static/image/edu.png" },
-  { id: 1, image: "/static/image/computer.png" },
-  { id: 2, image: "/static/image/Mom.png" },
-  { id: 3, image: "/static/image/night.png" }
-]
 
 const PositionTextBox =[
-  "12.7%",
-  "39.4%",
-  "65.25%",
-  "91.7%"
+  "11.5%",
+  "36.7%",
+  "61.4%",
+  "86%"
 ]
 
 const Icon = styled.div`
-  margin-top: 5%;
+  margin-top: 10%;
   cursor: pointer;
   margin-left: 1%;
   margin-right: 1%;
 `
 const HideMobile = styled.div`
-  @media (max-width: 720px) {
-    display: none;
-  }
+@media (max-width: 720px) {
+  display: none;
+}
 `
 const HideDesktop = styled.div`
-  @media (min-width: 721px) {
-    display: none;
-  }
+@media (min-width: 721px) {
+  display: none;
+}
 `
 const Mobile = styled.div`
   text-align: right;
+  margin-top: 15%;
+  text-align: center;
   @media (max-width: 720px) {
-    text-align: center;
-    margin-bottom : 25px;
-  }
+}
 `
 
-const index = props => (
-  <Bg bgColor={Color.mongkey.who} who className="d-flex align-items-center">
+const Space = styled.div`
+  margin-top: 10%;
+  margin-bottom: 10%;
+`
+
+const H6 = styled.div`
+  color: #fff;
+`
+
+const Relative = styled.div`
+  position : relative;
+  z-index:100;
+`
+const Zindex = styled.div`
+  width:100vw;
+`
+
+const IconData = [
+  { id: 0, image: "/static/image/graduate.png"},
+  { id: 1, image: "/static/image/computer.png"},
+  { id: 2, image: "/static/image/person.png" },
+  { id: 3, image: "/static/image/moon.png"}
+]
+
+const H4 = styled.p`
+  color: #000;
+`
+
+
+
+const index = (props) => (
+  <Bg bgColor={Color.mongkey.who} who >
+  <Relative>
     <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H1 className="font-weight-bold">WHO</H1>
-            <H2 className="font-weight-bold">ค่ายนี้เหมาะกับใคร</H2>
+            <H1 className="text-center ">WHO</H1>
+            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>
-            <Icon className="row">
+            <Icon className="row focus">
               {
-                IconData.map((data, i) => (
-                <div key={i} className="col-3" onClick={() => props.setCheck(data.id)}>
-                  <Image src={data.image} />
+                IconData.map((data, i) => ( 
+                <div key={i} className="col-3" onClick={(e) => {
+                  const activeImg = document.getElementsByClassName("who-img active");
+                  if(activeImg.length) {
+                    activeImg[0].classList.remove("active");
+                  }
+                  props.setCheck(data.id)
+                  e.target.classList.add("active")
+                } }>
+                  <Image className={`who-img ${data.id === 0 ? 'active' : ''}`} src={data.image}/>
                 </div>
               ))
               }
             </Icon>
-            <div className="mt-5">
+            <H6 className="mt-5">
               <Block left= {`${PositionTextBox[props.checkButton]}`}>
                 <h4>
                   <strong>{`${Topic[props.checkButton]}`}</strong>
                 </h4>
                 <p>{`${Content[props.checkButton]}`}</p>
               </Block>
-            </div>
+            </H6>
           </HideMobile>
           <HideDesktop>
             <ResponWho />
           </HideDesktop>
         </div>
-        <div className="col-12 col-md-6 order-1 order-md-2">
-          <img src="/static/image/halfHill.svg" />
-        </div>
       </div>
     </div>
+    </Relative>
   </Bg>
 );
 export default compose(state)(index)

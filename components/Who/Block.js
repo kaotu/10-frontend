@@ -7,7 +7,8 @@ const Block = styled.div`
   border: 4px solid #000;
   padding: 1em;
 	border-radius: 1em;
-	width: 90%;
+	width: 95%;
+	margin-left : 0.1vw;
 }
   :after, :before {
 	bottom: 100%;
@@ -22,7 +23,7 @@ const Block = styled.div`
 
 :after {
 	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: #87C3D5; 
+	border-bottom-color: #5F6164; 
 	border-width: 30px;
   margin-left: -30px;
 }

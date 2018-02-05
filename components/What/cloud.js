@@ -3,18 +3,18 @@ import styled from 'styled-components'
 import Animate, { Shake } from 'animate-css-styled-components';
 
 const Position1 = styled.div`
-  width: 20%;
+  width: 40%;
   position: absolute;
-  z-index: 2;
-  left: 30%;
+  z-index: 0;
+  left: 20%;
   top: 30%;
 `
 const Position2 = styled.div`
-  width: 20%;
+  width:35%;
   position: absolute;
-  z-index: 2;
-  left: 55%;
-  top: 20%;
+  z-index: 0;
+  left: 60%;
+  top: 5%;
 `
 const Clound = () => (
   <div>

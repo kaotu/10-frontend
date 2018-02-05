@@ -10,17 +10,16 @@ const IconData = [
 ]
 
 const Img = styled.img`
-  width:15vw;
-  
+  width: 15vw;
+  margin-right: 0px;
 `
-const Div = styled.div`
-  width:90vw;
-  height:10vh;
-  padding:1em;
+
+const Strong = styled.strong`
+  color:#fff;
 `
-const Block = styled.div`
-  width:67vw;
-  height:15vh;
+
+const Span = styled.span`
+  color:#fff;
 `
 export default class AdaptiveHeight extends Component {
   render() {
@@ -34,30 +33,28 @@ export default class AdaptiveHeight extends Component {
     };
     return (
       <div className="container">
-        <Div className="row">
+        <div className="row">
           <div className="col">
             <Slider {...settings}>
             {
-              IconData.map((data, i)=> (
+              IconData.map((data,i)=>
               <div key={i} className="container-fluid px-0">
-                <div className="row justify-content-center">
-                    <div className="col-3">
+                <div className="row float-left">
+                    <div className="col-3 px-0">
                       <Img src={data.image}/>
                     </div>
-                    <Block>
-                      <div className="col-9">
-                      <strong>{data.topic}</strong>
+                    <div className="col-9 px-0">
+                      <Strong>{data.topic}</Strong>
                       <br/>
-                      <span>{data.content}</span>
+                      <Span>{data.content}</Span>
                       </div>
-                    </Block>  
                   </div>
               </div>
-              ))
+              )
             }
             </Slider>
           </div>
-          </Div>
+          </div>
       </div>
     );
   }

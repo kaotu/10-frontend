@@ -1,74 +1,69 @@
 import react from 'react'
 import styled from 'styled-components'
+import {compose ,lifecycle,withState} from 'recompose'
 
 const GameButton = styled.div`
-  width: 60px;
-  height: 160px;    
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  background-color: #E23D37;
+  width: 100px;
+  height: 100px;
+  border: .2em solid #fff;
+  border-top : transparent;    
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background-color: ${props => props.color || ''};
   transition:all 550ms ease-in-out;
   cursor: pointer;
   position: absolute;
-  right: 0;
-  top:230px;          
+  left: 5vw;
+  top:100%;          
   color: white;
   z-index: 2560;
-  
   @media(max-width:1200px) {
-    width: 55px;            
-    height: 65px;          
+    display:none;   
   }
-  @media(max-width:720px) {
-    width: 50px;            
-    height: 55px; 
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;         
+  &:hover{
+    height:120px;
   }
-
-`
-const Rotate = styled.div`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 0px;
-    margin-left: -38px;
 `
 const Font = styled.h1`
-  position: absolute;
+  transition:all 550ms ease-in-out;
   font-size: 1.4em;
   font-weight: bold;
   color: #fff;
   letter-spacing: 5px;
-  -webkit-transform:rotate(270deg);
-  @media(max-width:1200px) {
-    font-size: 0em;            
-  }
+  margin-top:10px;
 `
 
 const IconGame = styled.img`
-  width: 50%; 
-  position: relative;
-  top: -65px;
-  left: 23px;
-  -webkit-transform:rotate(0deg);
-  @media(max-width:1200px) {
-    width: 50%; 
-    top: -18px;         
-  }
-  @media(max-width:720px) {
-    width: 50%; 
-    top: -16px;         
+  transition:all 550ms ease-in-out;
+  width: 40%; 
+`
+const DivGame = styled.div`
+  position :absolute;
+  height:100%;
+  transition:all 550ms ease-in-out;
+  width:100%;
+  text-align:center;
+  &:hover{
+    margin-top:10px;
   }
 `
 
 
-const GameBut = () => (
-  <GameButton className="justify-content-center align-items-center" data-toggle="" data-target="#">
+const GameBut = props => (
   <a href="https://game.wip.camp" target="_blank">
-       <Rotate><Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/></Rotate>
-  </a>
+  <GameButton color={props.bgColor.nav} className="justify-content-center align-items-center" data-toggle="" data-target="#">
+      <DivGame><Font>GAME</Font><IconGame src="/static/image/icongame-monkey.png"/></DivGame>
   </GameButton>
+  </a>
 )
 
-export default GameBut
+export default compose(
+  withState('bgColor','setBgColor',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = window.localStorage.getItem("color")
+      const themeColor = JSON.parse(theme)
+      this.props.setBgColor(themeColor)
+    }
+  })
+)(GameBut)
