@@ -14,10 +14,11 @@ const Info = styled.div`
 `
 const Test = styled.div`
   padding: 2px;
+
 `
 
 const Icon = styled.img`
-    width:5em;
+  width:7em;
   @media (max-width:720px) {
     padding: .2em;
   }
@@ -30,45 +31,32 @@ const Mobile = styled.div`
 `
 
 const IconInfo = [
-  {icon : "/static/image/Java prog.png", text: "Java Programming"},
-  {icon : "/static/image/itfun.png", text: "IT Fundamentals"},
-  {icon : "/static/image/network.png", text: "Network"},
-  {icon : "/static/image/web.png", text: "HTML5&CSS"}
+  {icon : "/static/image/icon-what/java (2).png", text: "Java Programming",t:"Java Programming"},
+  {icon : "/static/image/icon-what/IT fun (1).png", text: "IT Fundamentals",t:"IT Fundamentals"},
+  {icon : "/static/image/icon-what/network (2).png", text: "Network",t:"Network"},
+  {icon : "/static/image/icon-what/web (2).png", text: "HTML5&CSS",t:"HTML5&CSS"}
 ]
 
 
 const Space = styled.div`
-  margin-top: 6%;
+  margin-top: 4.5%;
   margin-bottom: 10%;
-  border: .2em solid rgba(57, 63, 102, 0.2);
-  background-color: rgba(57, 63, 102, 0.2);
+  border: .2em solid transparent;
   border-radius: 2em;
   padding:2em;
-  @media (max-width: 720px) {
-    front-size:0.1em;
-  }
 `
 const Relative = styled.div`
   position: relative;
-  min-height:100vh;
+  height:100vh;
 `
 const Moutain = styled.img`
   position: absolute;
   z-index: 0;
-  bottom:-1vh;
-  width:100%;
-  @media (max-width: 720px) {
-    z-index: 0;
-    top:28em;
-    width:100%;
-    height: 100%;
-
-  }
+  bottom: 0vh;
 `
 
-const BgColor = styled.div`
+const Bggueng = styled.div`
   background: ${props => props.themeColor || ''};
-  
 `
 
 const Hidden = styled.div`
@@ -83,7 +71,7 @@ border:  solid white;
 const index = props => (
   // <Bg bgColor={Color.mongkey.what} className="">
   
-  <BgColor themeColor={props.bgColor.what}>
+  <Bggueng themeColor={props.bgColor.what}>
   <Relative>
     <Moutain src='/static/image/MoutainWho.svg'/>
     <div className="container px-5">
@@ -113,7 +101,7 @@ const index = props => (
           { 
             IconInfo.map((info, i) => (
               <Test key={i} className="col-6 col-md-3 img-responesive ">
-                <Icon src={info.icon}/>
+                <Icon src={info.icon} alt={info.t}/>
                 <p>{info.text}</p>
               </Test>
             ))
@@ -124,7 +112,7 @@ const index = props => (
       </div>
     </div>
     </Relative>
-    </BgColor>
+    </Bggueng>
   // </Bg>
 )
 export default compose (

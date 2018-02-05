@@ -17,16 +17,16 @@ const NavItem = styled.nav`
   `}   
   `
 const Regis = styled.button`
-  width: 6em;
+  width: 7em;
   display:inline-block;
   color:#ecf0f1;
-  font-size:1.4em;
+  font-size:1.5em;
   text-decoration:none;
   border-radius:5px;
   border:solid 1px #e53c35;
   background:#e53c35;
   text-align:center;
-  padding:.5em;
+  padding:.3em .2em;
   transition: all 0.1s;
   margin-bottom:5%;
   margin-right:1.5vw;
@@ -37,6 +37,15 @@ const Regis = styled.button`
     box-shadow: 0px 2px 0px #871612;
     position:relative;
     top:4px;
+  }
+  @media(max-width:1200px){
+    font-size:1.2em;
+  }
+  @media(max-width:990px){
+    font-size:1em;
+  }
+  @media(max-width:720px){
+    font-size:0.9em;
   }
 `
 

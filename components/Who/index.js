@@ -24,31 +24,31 @@ const Content = [
   "ตลอดระยะเวลา 5 วัน"
 ]
 const Image = styled.img`
-    width:7vw;
-    transition:all 550ms ease-in-out;
-    transition: .5s;
-    width: ${props => props.active ? '7vw': '6.5vw'};
+  width:7vw;
+  transition:all 550ms ease-in-out;
+  transition: .5s;
+  width: ${props => props.active ? '7vw': '6.5vw'};
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
   }
   &:hover{
-    background: #fff;
+    background: transparent;
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     border-radius: 0.5em;
-    border: 4px solid #fff;
+    border: 4px solid transparent;
     
   }
   &.active{
-  background: #fff;
+  background: transparent;
   -moz-transform: scale(1.3);
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
   border-radius: 1em;
   border-radius: 0.5em;
-  border: 4px solid #fff;
+  border: 4px solid transparent;
   }  
 `
 
@@ -64,7 +64,6 @@ const Icon = styled.div`
   cursor: pointer;
   margin-left: 1%;
   margin-right: 1%;
-
 `
 const HideMobile = styled.div`
 @media (max-width: 720px) {
@@ -77,16 +76,16 @@ const HideDesktop = styled.div`
 }
 `
 const Mobile = styled.div`
-text-align: right;
-margin-top: 15%;
-text-align: center;
-@media (max-width: 720px) {
+  text-align: right;
+  margin-top: 15%;
+  text-align: center;
+  @media (max-width: 720px) {
 }
 `
 
 const Space = styled.div`
-margin-top: 10%;
-margin-bottom: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 `
 
 const H6 = styled.div`
@@ -94,19 +93,24 @@ const H6 = styled.div`
 `
 
 const Relative = styled.div`
-position : relative
+  position : relative;
+  z-index:100;
+`
+const Zindex = styled.div`
+  width:100vw;
 `
 
 const IconData = [
-  { id: 0, image: "/static/image/edu.png"},
+  { id: 0, image: "/static/image/graduate.png"},
   { id: 1, image: "/static/image/computer.png"},
-  { id: 2, image: "/static/image/Mom.png" },
-  { id: 3, image: "/static/image/night.png"}
+  { id: 2, image: "/static/image/person.png" },
+  { id: 3, image: "/static/image/moon.png"}
 ]
 
 const H4 = styled.p`
-color: #000;
+  color: #000;
 `
+
 
 
 const index = (props) => (

@@ -1,6 +1,7 @@
 // นี่คือหน้า Home นะ
 import React from 'react'
 import styled from 'styled-components'
+import {compose,lifecycle,withState} from 'recompose'
 
 import BgIntro from '../Intro/BgIntro'
 import LogoSIT from './LogoSIT'
@@ -37,6 +38,10 @@ const Scroll = styled.h4`
   z-index:2561;
   color:#000;
   bottom:0vh;
+  text-align:center;
+  @media (max-width: 720px) {
+    margin-left:38%;
+  }
 `
 const Index = (props) => (
   <div>
@@ -46,7 +51,7 @@ const Index = (props) => (
             <Div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <Background/>
               <Scroll>เลื่อนลงข้างล่าง</Scroll>
-							<Scrolldown src='/static/image/ScrollDown.png'/>
+							<Scrolldown src={props.scrolld.scroll}/>
             </Div>
           </div>
         </div>
@@ -55,4 +60,13 @@ const Index = (props) => (
 )
 
 
-export default Index
+export default compose(
+  withState('scrolld','setScrolld',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setScrolld(theme)
+    }
+    
+  })
+)(Index)

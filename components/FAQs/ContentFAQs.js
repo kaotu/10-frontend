@@ -1,5 +1,6 @@
 import react from 'react'
 import styled from 'styled-components'
+import {compose, lifecycle, withState} from 'recompose'
 
 const ImgLefe = styled.img`
   width:30%;
@@ -13,20 +14,17 @@ const ImgRight = styled.img`
   right: 0;
 `
 
-const Box = styled.div`
+const Box1 = styled.div`
   width: 46vw;
   min-height: 30hw;    
   padding: 1vw;
-  background-color:#FBFBEF;
+  background-color:#CCFFFF;
   margin-top:1vw;
 	margin-bottom:1vw;
 	border-radius: 10px;
-  ${props=>props.primary && `
-    background-color:#FFFFFF;
-  `}
   &.arrow_box {
     position: relative;
-    background: #ffffff;
+    background: #CCFFFF;
   }
   &.arrow_box:after {
     right: 100%;
@@ -37,25 +35,22 @@ const Box = styled.div`
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: #fff;
+    border-right-color:#CCFFFF;
     border-width: 1vw;
     margin-top: -1vw;
   }
 `
-const Box1 = styled.div`
+const Box = styled.div`
 width: 46vw;
 min-height: 30hw;    
 padding: 1vw;
-background-color:#FBFBEF;
+background-color:#FFFF66;
 margin-top:1vw;
 margin-bottom:1vw;
 border-radius: 10px;
-${props=>props.primary && `
-  background-color:#FFFFFF;
-`}
 &.arrow_box {
   position: relative;
-  background: #FBFBEF;
+  background: #FFFF66;
 }
 &.arrow_box:after {
 	left: 100%;
@@ -64,7 +59,7 @@ ${props=>props.primary && `
 	content: " ";
 	position: absolute;
 	pointer-events: none;
-	border-left-color: #FBFBEF;
+	border-left-color:#FFFF66;
 	border-width: 1vw;
 	margin-top: -1vw;
 }
@@ -83,20 +78,20 @@ const FAQs = [
 ]
 
 const Black = styled.p`
-  color: #000000;
+  color: #000;
 `
 
-const Content = () => (
+const Content = props => (
   <div className="container-fluid">
     {
       FAQs.map((data, i) => (
         <div key={i}>
           <div className="row d-flex">
             <div className="col img-responesive align-self-center">
-              <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
+              <ImgLefe src={props.iconleft.iconl} />
             </div>
             <Zindex className="col-6">
-              <Box className=" arrow_box" ><Black dangerouslySetInnerHTML={{__html: data.Q}} /></Box>
+              <Box1 className=" arrow_box" ><Black dangerouslySetInnerHTML={{__html: data.Q}} /></Box1>
             </Zindex>
             <div className="col">
             </div>
@@ -105,10 +100,10 @@ const Content = () => (
             <div className="col">
             </div>
             <Zindex className="col-6">
-              <Box1 className="arrow_box" primary><Black dangerouslySetInnerHTML={{__html: data.A}} /></Box1>
+              <Box className="arrow_box" primary><Black dangerouslySetInnerHTML={{__html: data.A}} /></Box>
             </Zindex>
             <div className="col img-responesive align-self-center">
-              <ImgRight src="/static/image/yakscore-new-01.svg" />
+              <ImgRight src={props.iconright.iconr} />
             </div>
           </div>
         </div>
@@ -116,4 +111,15 @@ const Content = () => (
     }
   </div>
 )
-export default Content
+export default compose(
+  withState('iconleft','setIconleft',''),
+  withState('iconright','setIconright',''),
+  lifecycle({
+    componentDidMount() {
+      let iconl = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setIconleft(iconl)
+      let iconr = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setIconright(iconr)
+    }
+  })
+)(Content)

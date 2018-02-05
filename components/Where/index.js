@@ -8,7 +8,7 @@ import Color from '../Core/Color'
 
 const Story = styled.img`
   width:40%;
-  @media (max-width:720px) {
+  @media (max-width:768px) {
     width: 40%;
   }
 `
@@ -18,6 +18,9 @@ const Local = styled.img`
   margin-top : 3%;
   margin-bottom: 5%; 
   box-shadow: 1vw 1vw 2vw #000;
+  @media (max-width:768px) {
+    margin-top : 30%;
+  }
 `
 
 const Mobile = styled.div`
@@ -45,6 +48,9 @@ const Bgmountain = styled.img`
 bottom : 0%;
 width : 100%;
 margin-top : -95%;
+@media (max-width:768px) {
+  margin-top : -90%;
+}
 `
 
 const Zindex = styled.div`
@@ -62,7 +68,7 @@ const index = () => (
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local className="mb-1" src="/static/image/Sit.jpg" />
+              <Local className="mb-1" src="/static/image/Sit.jpg" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
             {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
             <H3>คณะเทคโนโลยีสารสนเทศ</H3>
@@ -74,4 +80,5 @@ const index = () => (
     <Bgmountain src = '/static/image/2.png'/>
   </Bg>
 )
+//asdasdasdasdasdadadasdasd
 export default index
