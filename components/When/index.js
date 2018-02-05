@@ -113,8 +113,12 @@ const Zindex = styled.div`
   z-index : 1;
 `
 
+const Bggradient = styled.div`
+background: ${props => props.themeColor || ''};
+`
+
 const index = props => (
-  <Bg bgColor={props.bg.when} className="">
+  <Bggradient themeColor={props.bg.when} className="">
     <Relative>
       <HideMobile>
     <div className="container-fluid">
@@ -149,7 +153,7 @@ const index = props => (
     </Relative>
     <Bgtop src = '/static/image/topwhen.png'/>
     <Bgbottom src = '/static/image/bottomwhen.png'/>
-  </Bg>
+  </Bggradient>
 )
 
 export default compose(
