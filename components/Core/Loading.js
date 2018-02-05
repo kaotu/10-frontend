@@ -8,9 +8,20 @@ const Bg = styled.section`
   z-index:9999999999999999999;
   position:absolute;
 `
+const IconYak = styled.img`
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width:20%;
+  margin-top:33vh;
+`
+
+
+
+
 const index = () => (
   <Bg>
-    
+    <IconYak src="../../static/image/yakscore-new-01.svg"/>
   </Bg>
 )
 
