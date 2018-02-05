@@ -57,6 +57,9 @@ const Firefly = Fire.extend`
                     transform: translate3d(13.29154vh, 16.03967vh, 0);
         box-shadow: 5px 10px 100px white;          }
         }
+        @media(max-width: 767px){
+            display : none;
+          }
 `
 const Firefly2 = Fire.extend`
     position: absolute;
@@ -69,6 +72,9 @@ const Firefly2 = Fire.extend`
     box-shadow: 0 0 10vh rgba(172, 235, 14, 0.8);
     
     animation: firefly 20s linear infinite;
+    @media(max-width: 767px){
+        display : none;
+      }
 `
 const Firefly3 = Fire.extend`
     position: absolute;
@@ -82,6 +88,9 @@ const Firefly3 = Fire.extend`
     
     animation: firefly 30s linear infinite;
     animation-delay: 2s;
+    @media(max-width: 767px){
+        display : none;
+      }
     
 `
 const Firefly4 = Fire.extend`
@@ -95,6 +104,9 @@ const Firefly4 = Fire.extend`
     box-shadow: 0 0 50vh rgba(172, 235, 14, 0.8);
     
     animation: firefly 25s linear infinite;
+    @media(max-width: 767px){
+        display : none;
+      }
     
 `
 const Firefly5 = Fire.extend`
@@ -109,6 +121,9 @@ const Firefly5 = Fire.extend`
     
     animation: firefly 25s linear infinite;
     animation-delay: 1s;
+    @media(max-width: 767px){
+        display : none;
+      }
     
 `
 const Firefly6 = Fire.extend`
@@ -122,6 +137,9 @@ const Firefly6 = Fire.extend`
     box-shadow: 0 0 10vh rgba(172, 235, 14, 0.8);
     
     animation: firefly 37s linear infinite;
+    @media(max-width: 767px){
+        display : none;
+      }
 `
 const Firefly7 = Fire.extend`
     position: absolute;
@@ -135,6 +153,9 @@ const Firefly7 = Fire.extend`
     
     animation: firefly 29s linear infinite;
     animation-delay: 1s;
+    @media(max-width: 767px){
+        display : none;
+      }
 `
 const Firefly8 = Fire.extend`
     position: absolute;
@@ -147,6 +168,9 @@ const Firefly8 = Fire.extend`
     box-shadow: 0 0 10vh rgba(172, 235, 14, 0.8);
     
     animation: firefly 41s linear infinite;
+    @media(max-width: 767px){
+        display : none;
+      }
 `
 const Firefly9 = Fire.extend`
     position: absolute;
@@ -160,6 +184,9 @@ const Firefly9 = Fire.extend`
     
     animation: firefly 30s linear infinite;
     animation-delay: 1s;
+    @media(max-width: 767px){
+        display : none;
+      }
 `
 const Firefly10 = Fire.extend`
     position: absolute;
@@ -173,6 +200,9 @@ const Firefly10 = Fire.extend`
     
     animation: firefly 22s linear infinite;
     animation-delay: 2s;
+    @media(max-width: 767px){
+        display : none;
+      }
 `
 const Firefly11 = Fire.extend`
     position: absolute;
@@ -186,6 +216,9 @@ const Firefly11 = Fire.extend`
     
     animation: firefly 22s linear infinite;
     animation-delay: 2s;
+    @media(max-width: 767px){
+        display : none;
+      }
 `
 const Firefly12 = Fire.extend`
     position: absolute;
@@ -199,6 +232,9 @@ const Firefly12 = Fire.extend`
     
     animation: firefly 22s linear infinite;
     animation-delay: 2s;
+    @media(max-width: 767px){
+        display : none;
+      }
 `
 const Div = styled.div`
     position : absolute;
