@@ -12,7 +12,7 @@ const CloudBack = styled.div`
     left: 0vw;
     height:10vh;
     width:100vw;
-    background: url('/static/image/CloudBG.svg') repeat 0 0;
+    background: url(${props => props.cloud || ''}) repeat 0 0;
     background-position: 20vw 0;
     animation: 300s linear 0s normal none infinite animated;
     background-repeat: repeat-x;
@@ -39,7 +39,7 @@ const CloudBack1 = styled.div`
     left: 20vw;
     height:20vh;
     width:100vw;
-    background: url('/static/image/CloudBG.svg') repeat 0 0;
+    background: url(${props => props.cloud1 || ''}) repeat 0 0;
     animation: 240s linear 0s normal none infinite animate;
     background-repeat: repeat-x;
     @keyframes animate {
@@ -324,8 +324,8 @@ const setTeam = (team) => {
 }
 const Background = (props) => (
     <div>
-        <CloudBack/>
-        <CloudBack1/>
+        <CloudBack cloud={props.team.cloud}/>
+        <CloudBack1 cloud1={props.team.cloud}/>
         <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
@@ -343,6 +343,7 @@ const Background = (props) => (
 
 export default compose(
   withState('check','setCheck',true),
+  withState('team','setTeam',''),
   lifecycle({
     componentDidMount () {
       let team = window.localStorage.getItem("team")
@@ -353,7 +354,8 @@ export default compose(
         navhov: '#002d40',
         iconl: '../../static/image/yakscore-new-01.svg',
         iconr: '../../static/image/hanumanscore-new-01.svg',
-        scroll: '../../static/image/ScrollYak.png' 
+        scroll: '../../static/image/ScrollYak.png' ,
+        cloud: '../../static/image/hanumanscore-new-01.svg'
       }
       const teammongkey = {
         what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
@@ -362,13 +364,14 @@ export default compose(
         navhov : '#e53c35',
         iconl: '../../static/image/hanumanscore-new-01.svg' ,
         iconr: '../../static/image/yakscore-new-01.svg',
-        scroll: '../../static/image/ScrollMongkey.png' 
+        scroll: '../../static/image/ScrollMongkey.png' ,
+        cloud: '../../static/image/CloudBack.svg'
       }
       team == 'yak' ? 
         window.localStorage.setItem("color",JSON.stringify(teamyak)) : 
         window.localStorage.setItem("color",JSON.stringify(teammongkey))
       let theme = JSON.parse(window.localStorage.getItem("color"))
-      console.log(theme)
+      this.props.setTeam(theme)
     }
   })
 )(Background)
