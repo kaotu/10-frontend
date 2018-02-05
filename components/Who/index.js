@@ -101,10 +101,10 @@ const Zindex = styled.div`
 `
 
 const IconData = [
-  { id: 0, image: "/static/image/edu.png"},
+  { id: 0, image: "/static/image/graduate.png"},
   { id: 1, image: "/static/image/computer.png"},
-  { id: 2, image: "/static/image/Mom.png" },
-  { id: 3, image: "/static/image/night.png"}
+  { id: 2, image: "/static/image/person.png" },
+  { id: 3, image: "/static/image/moon.png"}
 ]
 
 const H4 = styled.p`

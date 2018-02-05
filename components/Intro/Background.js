@@ -352,7 +352,8 @@ export default compose(
         nav: '#384742',
         navhov: '#002d40',
         iconl: '../../static/image/yakscore-new-01.svg',
-        iconr: '../../static/image/hanumanscore-new-01.svg' 
+        iconr: '../../static/image/hanumanscore-new-01.svg',
+        scroll: '../../static/image/ScrollYak.png' 
       }
       const teammongkey = {
         what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
@@ -360,7 +361,8 @@ export default compose(
         nav : '#002d40',
         navhov : '#e53c35',
         iconl: '../../static/image/hanumanscore-new-01.svg' ,
-        iconr: '../../static/image/yakscore-new-01.svg'
+        iconr: '../../static/image/yakscore-new-01.svg',
+        scroll: '../../static/image/ScrollMongkey.png' 
       }
       team == 'yak' ? 
         window.localStorage.setItem("color",JSON.stringify(teamyak)) : 
