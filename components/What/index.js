@@ -41,8 +41,7 @@ const IconInfo = [
 const Space = styled.div`
   margin-top: 4.5%;
   margin-bottom: 10%;
-  border: .2em solid rgba(57, 63, 102, 0.2);
-  background-color: rgba(57, 63, 102, 0.2);
+  border: .2em solid transparent;
   border-radius: 2em;
   padding:2em;
 `
