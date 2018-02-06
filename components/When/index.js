@@ -122,12 +122,12 @@ const Box4 = styled.div`
   }
 `
 const HideMobile = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 720px) {
     display: none;
   }
 `
 const HideDesktop = styled.div`
-  @media (min-width: 721px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `
@@ -156,7 +156,7 @@ position : absolute;
 left : 0vw;
 width : 100%;
 bottom: 0vh;
-margin-left:-0.3em;
+margin-left:0em;
 @media (min-width:768px) {
   margin-top : 2%;
 }
@@ -202,7 +202,7 @@ const index = props => (
     </div>
       </HideMobile>
           <HideDesktop>
-          <Bgbottom src="/static/image/whenMoblie1.svg"/>
+          <Bgbottom src="/static/image/when.png"/>
           <Moblie />
         </HideDesktop>
     </Relative>
