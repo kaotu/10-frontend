@@ -13,34 +13,51 @@ const Info = styled.div`
   margin-top: 2%;
 `
 const Test = styled.div`
-  padding: 2px;
+  padding: 1px;
 
 `
 
 const Icon = styled.img`
   width:7em;
-  @media (max-width:320px) {
-    margin-top: 2%;
-    width:2em;
+  @media (min-width:320px) {
+    width:4em;
   }
-  @media (max-width:420px) {
-    margin-top: 2%;
-    width:5em;
-  }
-  @media (max-width:576px) {
+  @media (min-width:420px) {
     margin-top: 2%;
     width:5em;
   }
-  @media (max-width:768px) {
+  @media (min-width:576px) {
+    margin-top: 2%;
+    width:5em;
+  }
+  @media (min-width:768px) {
     margin-top: 5%;
     width:7em;
   }
-  @media (max-width:1024px) {
+  @media (min-width:1024px) {
     margin-top: 5%;
+    padding: .2em;
     width:7em;
   }
 `
-
+const P = styled.p`
+font-size:1.2em;
+@media (min-width:320px) {
+  font-size:0.7em;
+}
+@media (min-width:420px) {
+  font-size:1em;
+}
+@media (min-width:576px) {
+  font-size:1em;
+}
+@media (min-width:768px) {
+  font-size:1em;
+}
+@media (min-width:1024px) {
+  font-size:1.2em;
+}
+`
 const Mobile = styled.div`
   @media (max-width:720px) {
     text-align:center;
@@ -132,7 +149,7 @@ const index = props => (
                 IconInfo.map((info, i) => (
                   <Test key={i} className="col-6 col-md-3 ">
                     <Icon src={info.icon} alt={info.t} />
-                    <p>{info.text}</p>
+                    <P>{info.text}</P>
                   </Test>
                 ))
               }
