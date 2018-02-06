@@ -17,7 +17,6 @@ const Local = styled.img`
   width:55%;
   margin-top : 3%;
   margin-bottom: 5%; 
-  box-shadow: 1vw 1vw 2vw rgba(0,0,0,.2);
 `
 
 const Mobile = styled.div`
