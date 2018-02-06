@@ -5,18 +5,19 @@ const H1 = styled.h1`
   font-size: 5em;
   font-weight: bold;
   color : white;
-  @media (max-width:320px) {
+  @media (min-width:320px) {
     font-size: 3em;
   }
-  @media (max-width:420px) {
-    font-size: 2em;
+  @media (min-width:420px) {
+    font-size: 3.5em;
   }
-@media (max-width:768px) {
-  font-size: 3em;
-}
-@media (max-width:1024px) {
-  font-size: 3em;
-}
+  @media (min-width:576px) {
+    font-size: 4em;
+  }
+  @media (min-width:1024px) {
+    font-size: 4.5em;
+  }
+
 `
 
 export default H1
