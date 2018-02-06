@@ -2,7 +2,7 @@ import react from 'react'
 import styled from 'styled-components'
 
 const Bg = styled.section`
-    background: #B7CFEB;
+    background: ${props => props.bg || ''} ;
     height: 55vh;
     overflow : hidden;
     z-index:2;

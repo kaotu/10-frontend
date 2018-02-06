@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Bg from '../Sponsor/BgSponsor'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
+import {compose,lifecycle,withState} from 'recompose'
 
 const Relative = styled.div`
   position: relative;
@@ -51,8 +52,8 @@ const Topic = H1.extend`
   font-size: 3em;
 `
 
-const Index = () => (
-  <Bg className="d-flex">
+const Index = props => (
+  <Bg bg={props.check.sponsor} className="d-flex">
     <Relative className="d-flex align-items-center">
       <Cloud src='/static/image/เมฆ-ล่าง.png' />
       <DivSponsor className="container">
@@ -84,4 +85,13 @@ const Index = () => (
     </Relative>
   </Bg>
 )
-export default Index
+export default compose(
+  withState('check','setCheck',''),
+  lifecycle({
+    componentDidMount() {
+      let color = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setCheck(color)
+    }
+    
+  })
+)(Index)
