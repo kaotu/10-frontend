@@ -29,13 +29,61 @@ const Mobile = styled.div`
   }
 `
 
-const H4 = styled.h4`
-  color: #fff;
+const Font1 = styled.p`
+  font-size : 1em;
+  @media (min-width:320px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:420px) {
+    font-size: 1.2em;
+  }
+  @media (min-width:576px) {
+    font-size: 1.3em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.4em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.6em;
+  }
 `
 
-const H3 = styled.h3`
-  margin-top:2%;
-  color:#fff;
+const Font2 = styled.p`
+  font-size : 0.9em;
+  @media (min-width:320px) {
+    font-size: 1em;
+  }
+  @media (min-width:420px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:576px) {
+    font-size: 1.2em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.3em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.5em;
+  }
+`
+
+const Font3 = styled.p`
+  font-size : 0.7em;
+  @media (min-width:320px) {
+    font-size: 0.8em;
+  }
+  @media (min-width:420px) {
+    font-size: 0.9em;
+  }
+  @media (min-width:576px) {
+    font-size: 1em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.3em;
+  }
 `
 
 const Space = styled.div`
@@ -71,8 +119,9 @@ const index = () => (
               <Local className="mb-1" src="/static/image/Sit.jpg" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
             {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
-            <H3>คณะเทคโนโลยีสารสนเทศ</H3>
-            <H4>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</H4>
+            <Font3>คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
+            <Font1>คณะเทคโนโลยีสารสนเทศ</Font1>
+            <Font2>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font2>
           </div>
         </Space>
       </div>
