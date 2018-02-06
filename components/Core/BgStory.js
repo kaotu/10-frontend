@@ -9,7 +9,6 @@ const Bg = styled.section`
   min-height: 100vh;
   letter-spacing: 0.01357em;
   position: relative;
-  overflow: hidden;
   @media (max-width:720px) {
     min-height: 100vh;
   }

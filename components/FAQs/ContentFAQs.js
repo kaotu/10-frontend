@@ -78,7 +78,7 @@ const FAQs = [
 ]
 
 const Black = styled.p`
-  color: #000;
+  color: #000000;
 `
 
 const Content = props => (
