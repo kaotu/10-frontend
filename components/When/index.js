@@ -146,7 +146,8 @@ const Time = styled.p`
 const Bgtop = styled.img`
 position: absolute;
 top: 0vh;
-width : 100%;
+width : 100.6%;
+margin-top : -1
 @media (min-width:768px) {
   margin-top : 0;
 }
@@ -154,7 +155,7 @@ width : 100%;
 const Bgbottom = styled.img`
 position : absolute;
 left : 0vw;
-width : 105%;
+width : 100.5%;
 bottom: 0vh;
 margin-left:-0.3em;
 @media (min-width:768px) {

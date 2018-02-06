@@ -14,10 +14,10 @@ const Story = styled.img`
 `
 
 const Local = styled.img`
-  width:70%;
+  width:55%;
   margin-top : 3%;
   margin-bottom: 5%; 
-  box-shadow: 1vw 1vw 2vw #000;
+  box-shadow: 1vw 1vw 2vw rgba(0,0,0,.2);
 `
 
 const Mobile = styled.div`
@@ -112,15 +112,15 @@ const index = () => (
   <Bg bgColor={Color.mongkey.where} where className="">
     <Zindex className="container-fluid">
       <div className="row">
-        <Hidden className="col-5"></Hidden>
-        <Space className="col-md-7">
+        <Hidden className="col-4"></Hidden>
+        <Space className="col-md-8">
           <Mobile className="text-center">
               <H1>WHERE</H1>
               <H2>ค่ายนี้จัดที่ไหน ?</H2>
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local className="mb-1" src="/static/image/Sit.jpg" alt="คณะเทคโนโลยีสารสนเทศ"/>
+              <Local className="mb-1" src="/static/image/Map2.png" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
             {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
             <Font3>คลิกที่รูปภาพเพื่อดูแผนที่</Font3>

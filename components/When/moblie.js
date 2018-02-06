@@ -90,7 +90,7 @@ border-radius:1em;
 @media (min-width: 320px) {
   width:30vw;
   top: 15em;
-  left: 20em; 
+  left: 19em; 
   font-size:0.7em;
 }
 @media (min-width: 412px) {

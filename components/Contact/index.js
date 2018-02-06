@@ -1,7 +1,6 @@
 import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
-import HeartBox from './HeartBox'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
