@@ -25,7 +25,10 @@ const Content = [
 ]
 
 const Bg = BgStory.extend`
-  min-height: 50vh;
+  min-height: 100vh;
+  @media(max-width:720px) {
+    min-width:50vh;
+  }
 `
 
 const Image = styled.img`
