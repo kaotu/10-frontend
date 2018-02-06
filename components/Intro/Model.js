@@ -25,6 +25,10 @@ const Monkey = styled.img`
     bottom: 0vh;
     height : 40vh;
     cursor: pointer;
+    transition: all 550ms ease-in-out;
+    &:hover{
+      transform: scale(1.5);
+    }
     @media (min-width: 576px) {
       height : 50vh;
     }
@@ -42,6 +46,10 @@ const Giant = styled.img`
     bottom: 0vh;
     height : 40vh;
     cursor: pointer;
+    transition: all 550ms ease-in-out;
+    &:hover{
+      transform: scale(1.7);
+    }
     @media (min-width: 576px) {
       height : 50vh;
       right: 0vw;
@@ -111,7 +119,8 @@ export default compose(
           scroll: '../../static/image/ScrollYak.png' ,
           cloud: '../../static/image/เมฆแดง.png',
           faqs: '#FFFF66',
-          index: 'linear-gradient(#eaac35, #f3a8a5,#e53c35)'
+          index: 'linear-gradient(#eaac35, #f3a8a5,#e53c35)',
+          sponsor:'#d53c35'
         }
         const teammongkey = {
           what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
@@ -123,7 +132,8 @@ export default compose(
           scroll: '../../static/image/ScrollMongkey.png' ,
           cloud: '../../static/image/CloudBack.svg',
           faqs : '#CCFFFF',
-          index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)'
+          index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
+          sponsor:'#B7CFEB'
         }
         team == 'yak' ? 
           window.localStorage.setItem("color",JSON.stringify(teamyak)) : 
