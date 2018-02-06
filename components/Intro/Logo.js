@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { Link } from "react-scroll"
+import {compose,lifecycle,withState} from 'recompose'
 
 const FadeOut = keyframes`
   0% {
@@ -96,15 +97,24 @@ const Scroll = styled.img`
   cursor: pointer;
 `
 
-const Logo = () => (
+const Logo = props => (
   <Bg>
     <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
     <LogoSIT src="/static/image/LogoSIT.png" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
     <Link to="sponsor" smooth={true}>
-      <Scroll src="/static/image/ScrollMongkey.png" />
+      <Scroll src={props.check.scroll} />
     </Link>
     <Font>เลื่อนลงข้างล่าง</Font>
   </Bg>
 )
 
-export default Logo
+export default compose(
+  withState('check','setCheck',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setCheck(theme)
+    }
+    
+  })
+)(Logo)
