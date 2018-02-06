@@ -2,6 +2,7 @@ import react from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
 import Router from 'next/router'
+import {compose,lifecycle,withState} from 'recompose'
 
 const CustomMenu = styled(Menu)`
   // display: ${props => props.show ? 'block' : 'none'};
@@ -16,7 +17,7 @@ const Item = styled.button`
   transition: .5s;
   border: 0vw;
   width:100%;
-  background-color:#002D40;
+  background-color:${props => props.burger || ''};
   &:hover{
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
@@ -56,7 +57,7 @@ var styles = {
     height: '4vh',
   },
   bmMenu: {
-    background: '#002D40',
+    background: '${this.props.check.nav}',
     padding: '0em',
     fontSize: '1.5em',
     width:'200px'
@@ -108,7 +109,7 @@ const nav = [
           className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} >
           <BlankSpace  className="page-wrap"/>
           {nav.map((nav, i) => (
-              <Item smooth={true} key={i} onClick={()=>this.onClick(nav.to)} className="menu-item ">{nav.text}</Item>
+              <Item burger={this.props.check.nav} smooth={true} key={i} onClick={()=>this.onClick(nav.to)} className="menu-item ">{nav.text}</Item>
             ))}
           
         </CustomMenu>
@@ -117,4 +118,12 @@ const nav = [
    }
 } 
 
-export default BurgerMenu
+export default compose(
+  withState('check','setCheck',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setCheck(theme)
+    }
+  })
+)(BurgerMenu)
