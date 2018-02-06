@@ -22,17 +22,16 @@ const Cloud = styled.img`
 const DivSponsor = styled.div`
   position: relative;
   width: 100vw;
-  top: 15vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
 `
 const BImg = styled.img`
-  width: 30%; 
-  height: 30%;
+  width: 90%;
   margin-right: 1%;
   margin-left: 1%;
 `
 const SImg = styled.img`
-  width: 25%; 
-  height: 25%;
+  width: 70%;
   margin-right: 1%;
   margin-left: 1%;
 `
@@ -66,14 +65,18 @@ const Index = () => (
             <div className="row d-flex justify-content-center">
               {
                 BigSponsor.map((spon, i) => (
-                  <BImg key={i} src={spon.img} />
+                  <div className="col-6 col-md-4 col-lg-4">
+                    <BImg key={i} src={spon.img} className="pb-2"/>
+                  </div>
                 ))
               }
             </div>
             <div className="row d-flex justify-content-center my-4 mx-1">
               {
                 SmallSponsor.map((spon, i) => (
-                  <SImg key={i} src={spon.img} />
+                  <div className="col-6 col-md-4 col-lg-4">
+                    <SImg key={i} src={spon.img} className="pb-2"/>
+                  </div>
                 ))
               }
             </div>
