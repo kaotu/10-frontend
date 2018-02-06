@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components"
 import { compose, withState, lifecycle } from "recompose"
-import Bg from "../Core/BgStory"
+import BgStory from "../Core/BgStory"
 import ResponWho from "./responWho"
 import Block from "./Block"
 import H1 from '../Core/FontH1'
@@ -23,6 +23,11 @@ const Content = [
   "โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง",
   "ตลอดระยะเวลา 5 วัน"
 ]
+
+const Bg = BgStory.extend`
+  min-height: 50vh;
+`
+
 const Image = styled.img`
   width:7vw;
   transition:all 550ms ease-in-out;
