@@ -9,14 +9,6 @@ const Bg = styled.section`
   min-height: 100vh;
   letter-spacing: 0.01357em;
   position: relative;
-  @media (max-width:720px) {
-    min-height: 100vh;
-  }
-  @media (max-width:420px) {
-    min-height: 70vh;
-  }
-  @media (max-width:768px) {
-    min-height: 70vh;
-  }
+  
 `
 export default Bg

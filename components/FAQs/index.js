@@ -23,6 +23,7 @@ const DisplayMoblie = styled.div`
   margin-bottom: 10%;
   @media (min-width: 720px) {
     display: none;
+    
   }
 `;
 const DisplayMoblie2 = styled.div`
@@ -34,10 +35,15 @@ const DisplayMoblie2 = styled.div`
 const Space = styled.div`
   margin-top: 6%;
   z-index : 3;
+  @media (max-width: 320px) {
+    margin-top: 15%;
+  }
+  
 `
 
 const Relative = styled.div`
   position : relative;
+
 `
 
 const index = props => (

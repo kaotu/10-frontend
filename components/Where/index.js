@@ -5,21 +5,19 @@ import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
 
-
-const Story = styled.img`
-  width:40%;
-  @media (max-width:768px) {
-    width: 40%;
-  }
-`
-
 const Local = styled.img`
   width:55%;
   margin-top : 3%;
   margin-bottom: 5%; 
+  @media (max-width:320px) {
+    width:95%;
+  }
 `
 
 const Mobile = styled.div`
+@media (max-width:320px) {
+  margin-top : 12%;
+}
   @media (max-width:720px) {
     text-align:center;
   }
@@ -92,7 +90,11 @@ const Bgmountain = styled.img`
   bottom : 0vh;
   width : 100%;
   margin-top : -95%;
-  @media (max-width:768px) {
+  @media (min-width:320px) {
+    margin-top : -90%;
+    bottom : 0vh;
+}
+  @media (min-width:768px) {
     margin-top : -90%;
 }
 `

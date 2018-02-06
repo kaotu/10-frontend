@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal } from 'styled-components'
 
 export default injectGlobal`
   @font-face {
@@ -7,7 +7,6 @@ export default injectGlobal`
   }
   body,html  {
     font-family: 'Pridi';
-    overflow-x : hidden;
   }
   p {
     font-size:20px;
@@ -21,5 +20,7 @@ export default injectGlobal`
   .slick-next {
     top : 50px !important;
   }
-
+  .bm-menu {
+    background-color: #002d40;
+  }
 `

@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {compose,lifecycle,withState} from 'recompose'
-import link from 'react-scroll/modules/components/Link'
+import link from 'react-scroll/modules/components/Link';
 
 import BgIntro from '../Intro/BgIntro'
 import Logo from './Logo'
@@ -13,7 +13,7 @@ import Model from './Model'
 const Index = (props) => (
   <div className="row">
     <div className="col-12">
-      <BgIntro>
+      <BgIntro theme={props.scrolld.index}>
           <Logo/>
           <Mountain/>
           <Cloud/>

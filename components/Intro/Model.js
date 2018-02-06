@@ -110,7 +110,8 @@ export default compose(
           iconr: '../../static/image/hanumanscore-new-01.svg',
           scroll: '../../static/image/ScrollYak.png' ,
           cloud: '../../static/image/เมฆแดง.png',
-          faqs: '#FFFF66'
+          faqs: '#FFFF66',
+          index: 'linear-gradient(#eaac35, #f3a8a5,#e53c35)'
         }
         const teammongkey = {
           what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
@@ -121,7 +122,8 @@ export default compose(
           iconr: '../../static/image/yakscore-new-01.svg',
           scroll: '../../static/image/ScrollMongkey.png' ,
           cloud: '../../static/image/CloudBack.svg',
-          faqs : '#CCFFFF'
+          faqs : '#CCFFFF',
+          index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)'
         }
         team == 'yak' ? 
           window.localStorage.setItem("color",JSON.stringify(teamyak)) : 

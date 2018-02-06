@@ -8,20 +8,28 @@ const Bg = styled.section`
   z-index:9999999999999999999;
   position:absolute;
 `
-const IconYak = styled.img`
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
+const Icon = styled.img`
   width:20%;
-  margin-top:33vh;
+  position: absolute;
+  @media (max-width:720px) {
+    width: 50%;
+  }
 `
 
-
-
+const H1 = styled.h1`
+  margin-top:30%;
+  color:#fff;
+  @media (max-width:720px) {
+    font-size: 2em;
+    margin-top:60%;
+  }
+`
 
 const index = () => (
-  <Bg>
-    <IconYak src="../../static/image/yakscore-new-01.svg"/>
+  <Bg className="d-flex justify-content-center align-items-center">
+    <Icon src="../../static/image/yakscore-new-01.svg" className="d-flex "/>
+    <Icon src="../../static/image/hanumanscore-new-01.svg" className="d-flex "/>
+    <H1>กรุณาเลือกตัวละคร</H1>
   </Bg>
 )
 

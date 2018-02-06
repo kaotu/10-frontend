@@ -79,7 +79,8 @@ const Mobile = styled.div`
   text-align: right;
   margin-top: 15%;
   text-align: center;
-  @media (max-width: 720px) {
+  @media (max-width: 320px) {
+    margin-top: 55%;
 }
 `
 

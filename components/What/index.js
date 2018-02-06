@@ -2,50 +2,61 @@ import React from 'react'
 import styled from 'styled-components'
 import { compose, lifecycle, withState } from 'recompose'
 import Navbar from '../Core/Navbar'
-import Bg from '../Core/BgStory'
 import Cloud from './cloud'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
-import theme from '../Intro/Background'
+
 
 const Info = styled.div`
-  margin-top: 5%;
+  margin-top: 2%;
 `
 const Test = styled.div`
-  padding: 2px;
+  padding: 1px;
 
 `
 
 const Icon = styled.img`
   width:7em;
-  @media (max-width:320px) {
-    margin-top: 2%;
-    padding: .2em;
-    width:3em;
+  @media (min-width:320px) {
+    width:4em;
   }
-  @media (max-width:420px) {
+  @media (min-width:420px) {
     margin-top: 2%;
-    padding: .2em;
     width:5em;
   }
-  @media (max-width:576px) {
+  @media (min-width:576px) {
     margin-top: 2%;
-    padding: .2em;
     width:5em;
   }
-  @media (max-width:768px) {
+  @media (min-width:768px) {
     margin-top: 5%;
-    padding: .2em;
     width:7em;
   }
-  @media (max-width:1024px) {
+  @media (min-width:1024px) {
     margin-top: 5%;
     padding: .2em;
     width:7em;
   }
 `
-
+const P = styled.p`
+font-size:1.2em;
+@media (min-width:320px) {
+  font-size:0.7em;
+}
+@media (min-width:420px) {
+  font-size:1em;
+}
+@media (min-width:576px) {
+  font-size:1em;
+}
+@media (min-width:768px) {
+  font-size:1em;
+}
+@media (min-width:1024px) {
+  font-size:1.2em;
+}
+`
 const Mobile = styled.div`
   @media (max-width:720px) {
     text-align:center;
@@ -86,9 +97,6 @@ const Hidden = styled.div`
     display: none;
   }
 `
-const BoxContent = styled.div`
-border:  solid white;
-`
 const Font = styled.p`
 @media (min-width:320px) {
   font-size: 0.9em;
@@ -107,7 +115,6 @@ const Font = styled.p`
 }
 `
 const index = props => (
-  // <Bg bgColor={Color.mongkey.what} className="">
 
   <Bggueng themeColor={props.bgColor.what}>
     <Relative>
@@ -138,9 +145,9 @@ const index = props => (
             <Info className="row text-center">
               {
                 IconInfo.map((info, i) => (
-                  <Test key={i} className="col-6 col-md-3 img-responesive ">
+                  <Test key={i} className="col-6 col-md-3 ">
                     <Icon src={info.icon} alt={info.t} />
-                    <p>{info.text}</p>
+                    <P>{info.text}</P>
                   </Test>
                 ))
               }
@@ -151,7 +158,7 @@ const index = props => (
       </div>
     </Relative>
   </Bggueng>
-  // </Bg>
+  
 )
 export default compose(
   withState('bgColor', 'setBgColor', ''),

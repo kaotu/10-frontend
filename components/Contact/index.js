@@ -60,6 +60,9 @@ const Space = styled.div`
   z-index:3;
   margin-top: 0%;
   margin-bottom: 0%;
+  @media (min-width: 320px) {
+    margin-top: 20%;
+}
 `
 
 const Relative = styled.div`
@@ -88,7 +91,17 @@ const Bgleft = styled.img`
   left: 0vw;
   top : 0vh;
 `
-
+const Contact = styled.div`
+  cursor:pointer;
+  &:hover{
+    text-decolation:none;
+  }
+`
+const Deco = styled.a`
+  &:hover{
+    text-decoration:none;
+  }
+`
 
 const index = () => (
 <div>
@@ -102,33 +115,35 @@ const index = () => (
             <H1>Contact</H1>
             <H2>ติดต่อเรา</H2>
             <div className="row">
-              <div className="col-sm-3 col-md-3">
-              <a href="tel://02-107-3576"><ImgLeft src="/static/image/ContactPhone.png" /></a>
+              <Contact className="col-sm-3 col-md-3">
+              <Deco href="tel://02-107-3576"><ImgLeft src="/static/image/ContactPhone.png" />
                 <p className="mt-3"><strong>พี่วิปโป้: 02-107-3576</strong></p>
-              </div>
+              </Deco>
+              </Contact>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
                 <a href="https://www.facebook.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/facebook ci logo.png" className='img responsive'/>
+                  <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
                 </a>
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
-                  <ImgCenter src="/static/image/LINEa ci logo.png" className='img-responsive'/>
+                  <ImgCenter src="/static/image/line.svg" className='img-responsive'/>
                 </a>
                 <a href="https://twitter.com/WIPCamp" target="_blank">
-                  <ImgCenter src="/static/image/Twiiter ci logo.png" />
+                  <ImgCenter src="/static/image/twitter.svg" />
                 </a>
                 <a href="https://www.instagram.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/ig ci logo.png" />
+                  <ImgCenter src="/static/image/instagram.svg" />
                 </a>
                 <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                  <ImgCenter src="/static/image/Youtube ci logo.png" />
+                  <ImgCenter src="/static/image/youtube.svg" />
                 </a>
                 <Linerespon />
               </Line>
-              <div className="col-sm-3 col-md-3">
-                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" /></a>
-                <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
-              </div>
+              <Contact className="col-sm-3 col-md-3">
+                <Deco href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" />
+                  <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
+                </Deco>
+              </Contact>
             </div>
 
           </Space>

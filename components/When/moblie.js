@@ -105,8 +105,8 @@ border-radius:1em;
 } 
 `
 const Div = styled.div`{
-  @media (max-width: 768px) {
-    margin-top:5vw;
+  @media (max-width: 320px) {
+    margin-top:15%;
   }
 `
 const Moutain = styled.img`
@@ -121,8 +121,8 @@ const Moutain = styled.img`
 }
 `
 const Div1 = styled.div`{
-  @media (max-width: 768px) {
-    margin-top:5%;
+  @media (max-width: 320px) {
+    margin-top:0%;
   }
 `
 const P = styled.p`
