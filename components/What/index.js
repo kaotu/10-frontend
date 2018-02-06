@@ -2,12 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { compose, lifecycle, withState } from 'recompose'
 import Navbar from '../Core/Navbar'
-import Bg from '../Core/BgStory'
 import Cloud from './cloud'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
-import theme from '../Intro/Background'
+
 
 const Info = styled.div`
   margin-top: 2%;
@@ -116,7 +115,6 @@ const Font = styled.p`
 }
 `
 const index = props => (
-  // <Bg bgColor={Color.mongkey.what} className="">
 
   <Bggueng themeColor={props.bgColor.what}>
     <Relative>
@@ -160,7 +158,7 @@ const index = props => (
       </div>
     </Relative>
   </Bggueng>
-  // </Bg>
+  
 )
 export default compose(
   withState('bgColor', 'setBgColor', ''),
