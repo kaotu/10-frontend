@@ -93,7 +93,7 @@ const Font = styled.p`
 @media (min-width:320px) {
   font-size: 0.9em;
 }
-@media (min-width:420px) {
+@media (min-width:412px) {
   font-size: 1em;
 }
 @media (min-width:576px) {
