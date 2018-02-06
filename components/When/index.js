@@ -32,49 +32,97 @@ const Front = styled.p`
 const Box1 = styled.div`
   min-width: 10vw;
   position:absolute;
-  top: 14em;
-  left: 37em;   
+  top: 18em;
+  left: 10em;   
   z-index:2;
   background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine1 || ''};
   border-radius:1em;
   padding:.5em 5em;
+  @media (min-width: 768px) {
+    position:absolute;
+    min-width:10vw;
+    top: 10em;
+    left: 2em;
+    padding:.5em 1.5em;
+  }
+  @media (min-width: 1024px) {
+    top: 18em;
+    left: 10em; 
+    padding:.5em 3em;
+  }
 `
 const Box2 = styled.div`
   position:absolute;
   min-width:10vw;
   top: 20em;
-  left: 47em;   
+  left: 25em;    
   z-index:2;
   background-color:${props => props.box2 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine2 || ''};
   border-radius:1em;
   padding:.5em 5em;
+  @media (min-width: 768px) {
+    position:absolute;
+    min-width:10vw;
+    top: 13em;
+    left: 14em;
+    padding:.5em 1.5em;
+  }
+  @media (min-width: 1024px) {
+    top: 20em;
+    left: 25em; 
+    padding:.5em 3em;
+  }
 `
 const Box3 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 26em;
-  left:57em;   
+  top: 22em;
+  left:40em;  
   z-index:2;
   background-color:${props => props.box3 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine3 || ''};
   border-radius:1em;
   padding:.5em 5em;
+  @media (min-width: 768px) {
+    position:absolute;
+    min-width:10vw;
+    top: 18em;
+    left: 26em;
+    padding:.5em 1.5em;
+  }
+  @media (min-width: 1024px) {
+    top: 22em;
+    left:40em;  
+    padding:.5em 3em;
+  }
 `
 const Box4 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 32em;
-  left: 67em;   
+  top: 25em;
+  left:55em;   
   z-index:2;
   background-color:${props => props.box4 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine4 || ''};
   border-radius:1em;
   padding:.3em 3em;
+  @media (min-width: 768px) {
+    position:absolute;
+    min-width:10vw;
+    top: 25em;
+    left: 33em;
+    padding:.5em 1.5em;
+  }
+  @media (min-width: 1024px) {
+    top: 25em;
+    left:55em;  
+    padding:.5em 3em;
+  }
 `
 const HideMobile = styled.div`
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `
@@ -98,17 +146,18 @@ const Time = styled.p`
 const Bgtop = styled.img`
 position: absolute;
 top: 0vh;
-width : 102%;
-@media (max-width:768px) {
+width : 100%;
+@media (min-width:768px) {
   margin-top : 0;
 }
 `
 const Bgbottom = styled.img`
 position : absolute;
-margin-left : 0vw;
+left : 0vw;
 width : 100%;
 bottom: 0vh;
-@media (max-width:768px) {
+margin-left:-0.3em;
+@media (min-width:768px) {
   margin-top : 2%;
 }
 `
@@ -153,6 +202,7 @@ const index = props => (
     </div>
       </HideMobile>
           <HideDesktop>
+          <Bgbottom src="/static/image/whenMoblie1.svg"/>
           <Moblie />
         </HideDesktop>
     </Relative>

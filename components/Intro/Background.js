@@ -299,12 +299,11 @@ const Background = (props) => (
         <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
-        
-        {/* <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
+        {/* <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/> */}
         <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg' alt="พี่ลิง"/>
-        <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>        
+        {/* <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>         */}
         <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg' alt="พี่ยักษ์"/>
-        <CloudBottom src='/static/image/เมฆ-บน.png'/> */}
+        {/* <CloudBottom src='/static/image/เมฆ-บน.png'/> */}
     </div>
 )
 
@@ -324,7 +323,8 @@ export default compose(
         iconl: '../../static/image/yakscore-new-01.svg',
         iconr: '../../static/image/hanumanscore-new-01.svg',
         scroll: '../../static/image/ScrollYak.png' ,
-        cloud: '../../static/image/เมฆแดง.png'
+        cloud: '../../static/image/เมฆแดง.png',
+        faqs: '#FFFF66'
       }
       const teammongkey = {
         what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
@@ -334,7 +334,8 @@ export default compose(
         iconl: '../../static/image/hanumanscore-new-01.svg' ,
         iconr: '../../static/image/yakscore-new-01.svg',
         scroll: '../../static/image/ScrollMongkey.png' ,
-        cloud: '../../static/image/CloudBack.svg'
+        cloud: '../../static/image/CloudBack.svg',
+        faqs : '#CCFFFF'
       }
       team == 'yak' ? 
         window.localStorage.setItem("color",JSON.stringify(teamyak)) : 

@@ -4,7 +4,7 @@ const Block = styled.div`
  {
 	position:absolute;
 	background: transparent;
-  border: 4px solid #000;
+  border: .1em solid #fff;
   padding: 1em;
 	border-radius: 1em;
 	width: 95%;
@@ -13,7 +13,7 @@ const Block = styled.div`
   :after, :before {
 	bottom: 100%;
 	left: ${props => props.left || '40%' };
-  border: solid transparent;
+  border: .1em solid #fff;
 	content: " ";
 	height: 0;
 	width: 0;
@@ -24,14 +24,14 @@ const Block = styled.div`
 :after {
 	border-color: rgba(136, 183, 213, 0);
 	border-bottom-color: #5F6164; 
-	border-width: 30px;
-  margin-left: -30px;
+	border-width: 1.8em;
+  margin-left: -1.8em;
 }
  :before {
 	border-color: rgba(194, 225, 245, 0);
-	border-bottom-color: #000;
-	border-width: 36px;
-  margin-left: -36px;
+	border-bottom-color: #fff;
+	border-width: 2em;
+  margin-left: -2em;
 }
 `
 

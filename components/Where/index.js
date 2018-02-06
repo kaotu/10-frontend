@@ -14,13 +14,10 @@ const Story = styled.img`
 `
 
 const Local = styled.img`
-  width:40%;
+  width:55%;
   margin-top : 3%;
   margin-bottom: 5%; 
-  box-shadow: 1vw 1vw 2vw #000;
-  @media (max-width:768px) {
-    margin-top : 30%;
-  }
+  box-shadow: 1vw 1vw 2vw rgba(0,0,0,.2);
 `
 
 const Mobile = styled.div`
@@ -29,13 +26,61 @@ const Mobile = styled.div`
   }
 `
 
-const H4 = styled.h4`
-  color: #fff;
+const Font1 = styled.p`
+  font-size : 1em;
+  @media (min-width:320px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:412px) {
+    font-size: 1.2em;
+  }
+  @media (min-width:576px) {
+    font-size: 1.3em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.4em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.6em;
+  }
 `
 
-const H3 = styled.h3`
-  margin-top:2%;
-  color:#fff;
+const Font2 = styled.p`
+  font-size : 0.9em;
+  @media (min-width:320px) {
+    font-size: 1em;
+  }
+  @media (min-width:412px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:576px) {
+    font-size: 1.2em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.3em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.5em;
+  }
+`
+
+const Font3 = styled.p`
+  font-size : 0.7em;
+  @media (min-width:320px) {
+    font-size: 0.8em;
+  }
+  @media (min-width:412px) {
+    font-size: 0.9em;
+  }
+  @media (min-width:576px) {
+    font-size: 1em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.1em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.3em;
+  }
 `
 
 const Space = styled.div`
@@ -45,11 +90,11 @@ const Space = styled.div`
 `
 
 const Bgmountain = styled.img`
-bottom : 0%;
-width : 100%;
-margin-top : -95%;
-@media (max-width:768px) {
-  margin-top : -90%;
+  bottom : 0vh;
+  width : 100%;
+  margin-top : -95%;
+  @media (max-width:768px) {
+    margin-top : -90%;
 }
 `
 
@@ -57,22 +102,30 @@ const Zindex = styled.div`
   z-index : 1;
 `
 
+const Hidden = styled.div`
+  @media(max-width:720px) {
+    display: none;
+  }
+`
+
 const index = () => (
   <Bg bgColor={Color.mongkey.where} where className="">
     <Zindex className="container-fluid">
       <div className="row">
-        <Space className="col-md-12">
+        <Hidden className="col-4"></Hidden>
+        <Space className="col-md-8">
           <Mobile className="text-center">
-            <H1>WHERE</H1>
-            <H2>ค่ายนี้จัดที่ไหน ?</H2>
+              <H1>WHERE</H1>
+              <H2>ค่ายนี้จัดที่ไหน ?</H2>
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/fC42M6" target="_blank" >
-              <Local className="mb-1" src="/static/image/Sit.jpg" alt="คณะเทคโนโลยีสารสนเทศ"/>
+              <Local className="mb-1" src="/static/image/Map2.png" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
             {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
-            <H3>คณะเทคโนโลยีสารสนเทศ</H3>
-            <H4>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</H4>
+            <Font3>คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
+            <Font1>คณะเทคโนโลยีสารสนเทศ</Font1>
+            <Font2>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font2>
           </div>
         </Space>
       </div>

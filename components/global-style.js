@@ -17,5 +17,9 @@ export default injectGlobal`
     background-color:rgba(0,0,0,.3);
     border-radius: 12px;
   }
+  .slick-prev,
+  .slick-next {
+    top : 50px !important;
+  }
 
 `
