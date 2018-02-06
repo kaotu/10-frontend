@@ -57,7 +57,7 @@ const CloudBack1 = styled.div`
     }
 `
 const MountainLeft = styled.img`
-    position:absolute;
+    // position:absolute;
     z-index: 1;
     left:0vw;
     bottom:-5vh;
@@ -81,7 +81,7 @@ const MountainLeft = styled.img`
     // }
 `
 const MountainCenter = styled.img`
-  position:absolute;
+  // position:absolute;
   z-index: 2;
   left:18vw;
   bottom:0vh;
@@ -113,7 +113,7 @@ const MountainCenter = styled.img`
   // }
 `
 const MountainRight = styled.img`
-    position:absolute;
+    // position:absolute;
     z-index: 3;
     right:0vw;
     bottom:-15vh;
@@ -324,18 +324,16 @@ const setTeam = (team) => {
 }
 const Background = (props) => (
     <div>
-        <CloudBack cloud={props.team.cloud}/>
-        <CloudBack1 cloud1={props.team.cloud}/>
+        {/* <CloudBack cloud={props.team.cloud}/>
+        <CloudBack1 cloud1={props.team.cloud}/> */}
         <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
-        <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
+        {/* <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
         <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg' alt="พี่ลิง"/>
         <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>        
         <Giant onClick={() => setTeam('yak')}src='/static/image/Moyak.svg' alt="พี่ยักษ์"/>
-        <CloudBottom src='/static/image/เมฆ-บน.png'/>
-        <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
-        <LogoSIT src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
+        <CloudBottom src='/static/image/เมฆ-บน.png'/> */}
     </div>
 )
 
@@ -355,7 +353,7 @@ export default compose(
         iconl: '../../static/image/yakscore-new-01.svg',
         iconr: '../../static/image/hanumanscore-new-01.svg',
         scroll: '../../static/image/ScrollYak.png' ,
-        cloud: '../../static/image/hanumanscore-new-01.svg'
+        cloud: '../../static/image/เมฆแดง.png'
       }
       const teammongkey = {
         what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,

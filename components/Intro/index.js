@@ -48,12 +48,17 @@ const Index = (props) => (
       <BgIntro>
         <div className="container-fluid">
           <div className="row">
-            <Div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <Background/>
-              <Scroll>เลื่อนลงข้างล่าง</Scroll>
-							<Scrolldown src={props.scrolld.scroll}/>
+            <Div className="col-12 text-center">
+              <img style={{width: '40%', marginTop: '5em'}} src="/static/image/logofinals.svg" alt="WIP Camp #10" />
+              <br />
+              <img style={{width: '20%'}} src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
+              <br />
+							<img  style={{ width: '3%' ,marginTop : '20em'}} src={props.scrolld.scroll}/>
+              <h4>เลื่อนลงข้างล่าง</h4>
             </Div>
           </div>
+          
+          <Background/>
         </div>
       </BgIntro>
   </div>
