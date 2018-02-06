@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import {compose,lifecycle,withState} from 'recompose'
+import { compose, lifecycle, withState } from 'recompose'
 
 const Bg = styled.div`
     position: relative;
@@ -27,7 +27,7 @@ const Monkey = styled.img`
     cursor: pointer;
     transition: all 550ms ease-in-out;
     &:hover{
-      transform: scale(1.5);
+      transform: scale(1.2);
     }
     @media (min-width: 576px) {
       height : 50vh;
@@ -48,7 +48,7 @@ const Giant = styled.img`
     cursor: pointer;
     transition: all 550ms ease-in-out;
     &:hover{
-      transform: scale(1.7);
+      transform: scale(1.4);
     }
     @media (min-width: 576px) {
       height : 50vh;
@@ -73,74 +73,74 @@ const Div = styled.div`
 `
 
 const setTeam = (team) => {
-    window.localStorage.setItem('team',team )
-    window.location.reload()
-  }
-  
+  window.localStorage.setItem('team', team)
+  window.location.reload()
+}
+
 const ModelIndex = props => (
-    <Bg className = "">
+  <Bg className="">
     <Div>
-      <div className = "col-12">
-      <div className ="row ">
-        <div className = "col-6 mt-auto text-center">
-          <ScrollMonkey src='/static/image/right-thin-arrowheads (1).png'/>
-        </div>
-        <div className = "col-6 mt-auto text-center">
-        <ScrollGiant src='/static/image/right-thin-arrowheads.png'/>
-        </div>
-      </div>
-      </div>
-      <div className = "col-12">
-      <div className ="row ">
-        <div className = "col-6 mt-auto text-center">
-          <Monkey onClick={() => setTeam('ling')} src='/static/image/Moling.svg'/>
-        </div>
-        <div className = "col-6 mt-auto text-center">
-          <Giant onClick={() => setTeam('yak')} src='/static/image/Moyak.svg'/>
+      <div className="col-12">
+        <div className="row ">
+          <div className="col-6 mt-auto text-center">
+            <ScrollMonkey src='/static/image/right-thin-arrowheads (1).png' />
+          </div>
+          <div className="col-6 mt-auto text-center">
+            <ScrollGiant src='/static/image/right-thin-arrowheads.png' />
+          </div>
         </div>
       </div>
+      <div className="col-12">
+        <div className="row ">
+          <div className="col-6 mt-auto text-center">
+            <Monkey onClick={() => setTeam('ling')} src='/static/image/Moling.svg' />
+          </div>
+          <div className="col-6 mt-auto text-center">
+            <Giant onClick={() => setTeam('yak')} src='/static/image/Moyak.svg' />
+          </div>
+        </div>
       </div>
     </Div>
-    </Bg>
+  </Bg>
 )
 export default compose(
-    withState('check','setCheck',true),
-    withState('team','setTeam',''),
-    lifecycle({
-      componentDidMount () {
-        let team = window.localStorage.getItem("team")
-        const teamyak = {
-          what: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
-          when: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1),rgba(0,0,0,.65))',
-          nav: '#384742',
-          navhov: '#002d40',
-          iconl: '../../static/image/yakscore-new-01.svg',
-          iconr: '../../static/image/hanumanscore-new-01.svg',
-          scroll: '../../static/image/ScrollYak.png' ,
-          cloud: '../../static/image/เมฆแดง.png',
-          faqs: '#FFFF66',
-          index: 'linear-gradient(#eaac35, #f3a8a5,#e53c35)',
-          sponsor:'#d53c35'
-        }
-        const teammongkey = {
-          what : 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))' ,
-          when : 'linear-gradient(to top, rgba(0,0,0,.65),rgba(119, 169, 220, 1),rgba(0,0,0,.65))',
-          nav : '#002d40',
-          navhov : '#e53c35',
-          iconl: '../../static/image/hanumanscore-new-01.svg' ,
-          iconr: '../../static/image/yakscore-new-01.svg',
-          scroll: '../../static/image/ScrollMongkey.png' ,
-          cloud: '../../static/image/CloudBack.svg',
-          faqs : '#CCFFFF',
-          index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
-          sponsor:'#B7CFEB'
-        }
-        team == 'yak' ? 
-          window.localStorage.setItem("color",JSON.stringify(teamyak)) : 
-          window.localStorage.setItem("color",JSON.stringify(teammongkey))
-        let theme = JSON.parse(window.localStorage.getItem("color"))
-        this.props.setTeam(theme)
+  withState('check', 'setCheck', true),
+  withState('team', 'setTeam', ''),
+  lifecycle({
+    componentDidMount() {
+      let team = window.localStorage.getItem("team")
+      const teamyak = {
+        what: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
+        when: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1),rgba(0,0,0,.65))',
+        nav: '#384742',
+        navhov: '#002d40',
+        iconl: '../../static/image/yakscore-new-01.svg',
+        iconr: '../../static/image/hanumanscore-new-01.svg',
+        scroll: '../../static/image/ScrollYak.png',
+        cloud: '../../static/image/เมฆแดง.png',
+        faqs: '#FFFF66',
+        index: 'linear-gradient(#eaac35, #f3a8a5,#e53c35)',
+        sponsor: '#d53c35'
       }
-    })
-  )(ModelIndex)
-  
+      const teammongkey = {
+        what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',
+        when: 'linear-gradient(to top, rgba(0,0,0,.65),rgba(119, 169, 220, 1),rgba(0,0,0,.65))',
+        nav: '#002d40',
+        navhov: '#e53c35',
+        iconl: '../../static/image/hanumanscore-new-01.svg',
+        iconr: '../../static/image/yakscore-new-01.svg',
+        scroll: '../../static/image/ScrollMongkey.png',
+        cloud: '../../static/image/CloudBack.svg',
+        faqs: '#CCFFFF',
+        index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
+        sponsor: '#B7CFEB'
+      }
+      team == 'yak' ?
+        window.localStorage.setItem("color", JSON.stringify(teamyak)) :
+        window.localStorage.setItem("color", JSON.stringify(teammongkey))
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setTeam(theme)
+    }
+  })
+)(ModelIndex)
+
