@@ -6,6 +6,7 @@ import {compose,lifecycle,withState} from 'recompose'
 import BgIntro from '../Intro/BgIntro'
 import LogoSIT from './LogoSIT'
 import Background from './Background'
+import Link from 'react-scroll/modules/components/Link';
 
 
 const Div = styled.div`
@@ -48,8 +49,10 @@ const Index = (props) => (
               <br />
               <img style={{width: '20%'}} src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
               <br />
+              <Link to="sponsor" smooth={true}>
 							<img  style={{ width: '3%' ,marginTop : '20em'}} src={props.scrolld.scroll}/>
               <h4>เลื่อนลงข้างล่าง</h4>
+              </Link>
             </Div>
           </div>
           
