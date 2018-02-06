@@ -152,7 +152,7 @@ const Div = styled.div`
 
 
 const index = props => (
-    <Div>
+    <Div className="clearfix">
       <Firefly/>
       <Firefly2/>
       <Firefly3/>

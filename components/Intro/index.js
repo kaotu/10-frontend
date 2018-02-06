@@ -1,7 +1,7 @@
 // นี่คือหน้า Home นะ
 import React from 'react'
 import styled from 'styled-components'
-import {compose,lifecycle,withState} from 'recompose'
+import { compose, lifecycle, withState } from 'recompose'
 import link from 'react-scroll/modules/components/Link';
 
 import BgIntro from '../Intro/BgIntro'
@@ -14,10 +14,10 @@ const Index = (props) => (
   <div className="row">
     <div className="col-12">
       <BgIntro theme={props.scrolld.index}>
-          <Logo/>
-          <Mountain/>
-          <Cloud/>
-          <Model/>
+        <Logo />
+        <Mountain />
+        <Cloud />
+        <Model />
       </BgIntro>
     </div>
   </div>
@@ -25,12 +25,12 @@ const Index = (props) => (
 
 
 export default compose(
-  withState('scrolld','setScrolld',''),
+  withState('scrolld', 'setScrolld', ''),
   lifecycle({
     componentDidMount() {
       let theme = JSON.parse(window.localStorage.getItem("color"))
       this.props.setScrolld(theme)
     }
-    
+
   })
 )(Index)

@@ -43,12 +43,12 @@ const MountainRight = styled.img`
     }
 `
 const MountainIndex = () => (
-    <Bg>
-            <MountainLeft src='/static/image/MountainLeft.svg'/>
-        <div class="text-align:center">
-            <MountainCenter src='/static/image/ภูเขา (1).svg'/>
-        </div>
-            <MountainRight src='/static/image/MountainRight.svg'/>
-    </Bg>
+  <Bg>
+    <MountainLeft src='/static/image/MountainLeft.svg' />
+    <div class="text-align:center">
+      <MountainCenter src='/static/image/ภูเขา (1).svg' />
+    </div>
+    <MountainRight src='/static/image/MountainRight.svg' />
+  </Bg>
 )
 export default MountainIndex

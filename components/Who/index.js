@@ -125,7 +125,7 @@ const H4 = styled.p`
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who >
   <Relative>
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>

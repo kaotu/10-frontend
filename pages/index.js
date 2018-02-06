@@ -16,6 +16,7 @@ import Loading from "../components/Core/Loading";
 
 const Relative = styled.div`
   position: relative;
+  /* overflow-x:hidden; */
 `;
 
 const FooterBg = styled.div`
@@ -23,15 +24,19 @@ const FooterBg = styled.div`
   background-color: ${props => props.bgColor || ""};
 `;
 
+const Overflow = styled.section`
+  overflow-x:hidden;
+`
+
 injectGlobal;
 
 const index = props => (
   //  <Loading>
     <Scroll>
       <Relative>
-        <section id="home" name="home">
+        <Overflow id="home" name="home">
           <Intro />
-        </section>
+        </Overflow>
         <section id="sponsor">
           <Sponsor />
         </section>
@@ -48,18 +53,18 @@ const index = props => (
           <section id="who" name="who">
             <Who />
           </section>
-          <section id="where" name="where">
+          <Overflow id="where" name="where">
             <Where />
-          </section>
-          <section id="when" name="when">
+          </Overflow>
+          <Overflow id="when" name="when">
             <When />
-          </section>
-          <section id="faqs" name="faqs">
+          </Overflow>
+          <Overflow id="faqs" name="faqs">
             <Faqs />
-          </section>
-          <section id="contact" name="contact" className="element">
+          </Overflow>
+          <Overflow id="contact" name="contact" className="element">
             <Contact />
-          </section>
+          </Overflow>
           <FooterBg
             bgColor={props.color.nav}
             className="d-flex justify-content-center align-items-center text-white"
