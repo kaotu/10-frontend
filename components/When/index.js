@@ -158,7 +158,6 @@ left : 0vw;
 width : 100%;
 bottom: 0vh;
 margin-left:0em;
-z-index:2;
 @media (min-width:768px) {
   margin-top : 2%;
 }
@@ -187,6 +186,7 @@ const index = props => (
           </Space>
           <Space2 className="col-12 col-sm-12 col-md-12  ">
             {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
+            
             <Box1 box1={props.box1} borderLine1={props.border1} className="text-center">
               <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
             </Box1>

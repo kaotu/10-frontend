@@ -60,6 +60,9 @@ const Space = styled.div`
   z-index:3;
   margin-top: 0%;
   margin-bottom: 0%;
+  @media (min-width: 320px) {
+    margin-top: 20%;
+}
 `
 
 const Relative = styled.div`

@@ -140,7 +140,7 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <NavItem color={this.state.color.nav} className="sticky-top" onScrollDown={this.state.direction=='down'}>
+      <NavItem color={this.state.color.nav} className="sticky-top" >
         <Burger />
         <div>
           <div className="navbar navbar-expand-lg">
