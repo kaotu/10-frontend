@@ -18,6 +18,7 @@ const Icon = styled.img`
 
 const H1 = styled.h1`
   margin-top:30%;
+  color:#fff;
   @media (max-width:720px) {
     font-size: 2em;
     margin-top:60%;
