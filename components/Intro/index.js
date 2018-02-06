@@ -8,6 +8,7 @@ import BgIntro from '../Intro/BgIntro'
 import Logo from './Logo'
 import Mountain from './Mountain'
 import Cloud from './Cloud'
+import Model from './Model'
 
 const Div = styled.div`
   height: 100vh;
@@ -52,6 +53,7 @@ const Index = (props) => (
           <Logo/>
           <Mountain/>
           <Cloud/>
+          <Model/>
       </BgIntro>
     </div>
   </div>
