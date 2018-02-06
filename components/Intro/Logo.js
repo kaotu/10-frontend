@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { Link } from "react-scroll"
+import {compose,lifecycle,withState} from 'recompose'
 
 const FadeOut = keyframes`
   0% {
@@ -27,10 +28,10 @@ const Bg = styled.div`
   width: 100vw;
 `
 const LogoWip = styled.img`
-  position: absolute;
+  position: relative;
   z-index: 6;
   width: 120%;
-  margin-top: 10vh;
+  margin-top: 8vh;
   margin-left: -10vw;
   animation-name: ${FadeOut};
   animation-duration: 2s;
@@ -39,13 +40,14 @@ const LogoWip = styled.img`
     margin-left: 0;
   }
   @media (min-width: 576px) {
-    width: 100%;
-    margin-top: 5vh;
-  }
-  @media (min-width: 768px) {
     width: 80%;
     margin-top: 5vh;
     margin-left: 10vw;
+  }
+  @media (min-width: 768px) {
+    width: 70%;
+    margin-top: 5vh;
+    margin-left: 15vw;
   }
   @media (min-width: 1024px) {
     width: 50%;
@@ -54,16 +56,20 @@ const LogoWip = styled.img`
   }
 `
 const LogoSIT = styled.img`
-  position: absolute;
+  position: relative;
   z-index: 6;
   width: 70%;
-  margin-top: 30vh;
+  margin-top: 0vh;
   margin-left: 15vw;
   animation-name: ${FadeOut};
   animation-duration: 2s;
   @media (min-width: 412px) {
     width: 50%;
     margin-left: 25vw;
+  }
+  @media (min-width: 576px) {
+    width: 40%;
+    margin-left: 30vw;
   }
   @media (min-width: 768px) {
     width: 30%;
@@ -91,15 +97,24 @@ const Scroll = styled.img`
   cursor: pointer;
 `
 
-const Logo = () => (
+const Logo = props => (
   <Bg>
     <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
     <LogoSIT src="/static/image/LogoSIT.png" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
     <Link to="sponsor" smooth={true}>
-      <Scroll src="/static/image/ScrollMongkey.png" />
+      <Scroll src={props.check.scroll} />
     </Link>
     <Font>เลื่อนลงข้างล่าง</Font>
   </Bg>
 )
 
-export default Logo
+export default compose(
+  withState('check','setCheck',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setCheck(theme)
+    }
+    
+  })
+)(Logo)
