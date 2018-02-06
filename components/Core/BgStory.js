@@ -9,6 +9,7 @@ const Bg = styled.section`
   min-height: 100vh;
   letter-spacing: 0.01357em;
   position: relative;
+  overflow: hidden;
   
 `
 export default Bg
