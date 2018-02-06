@@ -1,6 +1,7 @@
 import react from 'react'
 import styled from 'styled-components'
 import Content from '../FAQs/ContentFAQs'
+import {compose,lifecycle,withState} from 'recompose'
 
 const ImgLefe = styled.img`
   width:20vw;
@@ -45,7 +46,7 @@ const ContentRespon = (props) => (
     <div className="row">
       <div className="col-4">
         <div className=" align-self-center">
-          <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
+          <ImgLefe src={props.iconl.iconl} />
         </div>
       </div>
       <div className="col-8">
@@ -57,10 +58,21 @@ const ContentRespon = (props) => (
         <Box primary><Black dangerouslySetInnerHTML={{__html: props.A}}/></Box>
       </div>
       <div className="col-4">
-          <ImgRight src="/static/image/yakscore-new-01.svg" />
+          <ImgRight src={props.iconr.iconr} />
       </div>
     </div>
   </div>
 
 )
-export default ContentRespon
+export default compose(
+  withState('iconl','setIconl',''),
+  withState('iconr','setIconr',''),
+  lifecycle({
+    componentDidMount() {
+      let iconr = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setIconr(iconr)
+      let iconl = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setIconl(iconl)
+    }
+  })
+)(ContentRespon)
