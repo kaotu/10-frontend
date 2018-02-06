@@ -6,6 +6,7 @@ import {compose,lifecycle,withState} from 'recompose'
 import BgIntro from '../Intro/BgIntro'
 import LogoSIT from './LogoSIT'
 import Background from './Background'
+import Link from 'react-scroll/modules/components/Link';
 
 
 const Div = styled.div`
@@ -13,35 +14,35 @@ const Div = styled.div`
 `
 
 const Scrolldown = styled.img`
-    position:absolute;
-    z-index: 7;
-    width:3vw;
-    bottom:5vh;
-    left:48vw;
-    animation: Dukdik 1s linear infinite;
-    @keyframes Dukdik {
-      0% {
-        bottom:5vh;
-      }
-      50% {
-        bottom:7vh;
-      }
-      100% {
-        bottom:5vh;
-      }
+  position:absolute;
+  z-index: 7;
+  width:3vw;
+  bottom:5vh;
+  left:48vw;
+  animation: Dukdik 1s linear infinite;
+  @keyframes Dukdik {
+    0% {
+      bottom:5vh;
     }
+    50% {
+      bottom:7vh;
+    }
+    100% {
+      bottom:5vh;
+    }
+}
 `
 const Scroll = styled.h4`
   position:absolute;
   margin-top:40%;
-  margin-left:43.5%;
-  z-index:2561;
+  z-index:10;
   color:#000;
   bottom:0vh;
-  text-align:center;
-  @media (max-width: 720px) {
-    margin-left:38%;
-  }
+`
+const Scrollpic = styled.img`
+  cursor:pointer;
+  width:3%;
+  margin-top:25em;
 `
 const Index = (props) => (
   <div>
@@ -53,8 +54,10 @@ const Index = (props) => (
               <br />
               <img style={{width: '20%'}} src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
               <br />
-							<img  style={{ width: '3%' ,marginTop : '20em'}} src={props.scrolld.scroll}/>
+              <Link to="sponsor" smooth={true}>
+							<Scrollpic src={props.scrolld.scroll}/>
               <h4>เลื่อนลงข้างล่าง</h4>
+              </Link>
             </Div>
           </div>
           
