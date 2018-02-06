@@ -39,6 +39,11 @@ const Scroll = styled.h4`
   color:#000;
   bottom:0vh;
 `
+const Scrollpic = styled.img`
+  cursor:pointer;
+  width:3%;
+  margin-top:25em;
+`
 const Index = (props) => (
   <div>
       <BgIntro>
@@ -50,7 +55,7 @@ const Index = (props) => (
               <img style={{width: '20%'}} src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
               <br />
               <Link to="sponsor" smooth={true}>
-							<img  style={{ width: '3%' ,marginTop : '20em'}} src={props.scrolld.scroll}/>
+							<Scrollpic src={props.scrolld.scroll}/>
               <h4>เลื่อนลงข้างล่าง</h4>
               </Link>
             </Div>
