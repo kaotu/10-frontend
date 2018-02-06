@@ -36,7 +36,7 @@ const Box = styled.div`
 
 const Black = styled.p`
   color: #000000;
-  font-size:1em;
+  font-size:1em
 `
 
 
