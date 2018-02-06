@@ -40,7 +40,7 @@ var styles = {
     top:'11px'
   },
   bmBurgerBars: {
-    background: '#fff'
+    background: '#fff',
   },
   bmCrossButton: {
     marginRight: '15em'
@@ -52,7 +52,8 @@ var styles = {
   bmMenu: {
     background: '#002D40',
     padding: '0em',
-    fontSize: '1.75em'
+    fontSize: '1.5em',
+    width:'200px'
   },
   bmMorphShape: {
     fill: '#373a47'
@@ -83,7 +84,7 @@ const nav = [
      return (
       <div className="d-lg-none sticky text-center">      
         <Menu className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
-          <BlankSpace/>
+          <BlankSpace className="page-wrap"/>
           {nav.map((nav, i) => (
               <Item key={i} onClick={()=>burgerLink(nav.to)} className="menu-item "  >{nav.text}</Item>
             ))}
