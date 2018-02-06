@@ -26,7 +26,7 @@ const Box = styled.div`
   border-radius: 10px; 
   padding:1vw;
   @media (max-width:720px) {
-    width:45vw;
+    width:42.5vw;
   }
   ${props=>props.primary && `
     background-color:#FFFFFF;
