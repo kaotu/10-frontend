@@ -4,12 +4,13 @@ import styled from 'styled-components'
 import {compose,lifecycle,withState} from 'recompose'
 
 import BgIntro from '../Intro/BgIntro'
-import LogoSIT from './LogoSIT'
-import Background from './Background'
-
+import Logo from './Logo'
+import Mountain from './Mountain'
+import Cloud from './Cloud'
 
 const Div = styled.div`
   height: 100vh;
+  width : 100vw;
 `
 
 const Scrolldown = styled.img`
@@ -20,15 +21,7 @@ const Scrolldown = styled.img`
     left:48vw;
     animation: Dukdik 1s linear infinite;
     @keyframes Dukdik {
-      0% {
-        bottom:5vh;
-      }
-      50% {
-        bottom:7vh;
-      }
-      100% {
-        bottom:5vh;
-      }
+      
     }
 `
 const Scroll = styled.h4`
@@ -44,23 +37,14 @@ const Scroll = styled.h4`
   }
 `
 const Index = (props) => (
-  <div>
+  <div className="row">
+    <div className="col-12">
       <BgIntro>
-        <div className="container-fluid">
-          <div className="row">
-            <Div className="col-12 text-center">
-              <img style={{width: '40%', marginTop: '5em'}} src="/static/image/logofinals.svg" alt="WIP Camp #10" />
-              <br />
-              <img style={{width: '20%'}} src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
-              <br />
-							<img  style={{ width: '3%' ,marginTop : '20em'}} src={props.scrolld.scroll}/>
-              <h4>เลื่อนลงข้างล่าง</h4>
-            </Div>
-          </div>
-          
-          <Background/>
-        </div>
+          <Logo/>
+          <Mountain/>
+          <Cloud/>
       </BgIntro>
+    </div>
   </div>
 )
 

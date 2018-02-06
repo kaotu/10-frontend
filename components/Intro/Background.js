@@ -1,5 +1,5 @@
 import react from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import {compose, withState , lifecycle} from 'recompose'
 import Color from '../Core/Color'
 
@@ -267,51 +267,6 @@ const CloudBottom = styled.img`
       width:200%;
     }
 `
-const LogoWip = styled.img`
-  width: 50%;
-  position: absolute;
-  z-index: 6;
-  left: 25vw;
-  top:3vh;
-  animation-name: FadeOut;
-  animation-duration: 2s;
-  @media(max-width: 720px){
-    width: 90%;
-    left: 5vw;
-    top:2em;
-  }
-  @media(max-width: 420px){
-    width: 100%;
-    left: 0vw;
-    top:3em;
-  }
-  @keyframes FadeOut {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`
-const LogoSIT = styled.img`
-  width: 30%;
-  position: absolute;
-  z-index: 6;
-  left: 35vw;
-  top:40vh;
-  animation-name: FadeOut;
-  animation-duration: 2s;
-  @media(max-width: 720px){
-    width: 50%;
-    left: 26vw;
-    top:12em;
-  }
-  @media(max-width: 420px){
-    width: 60%;
-    left: 22vw;
-  }
-`
 const Scrolldown = styled.img`
     position:absolute;
     z-index: 7;
@@ -344,6 +299,7 @@ const Background = (props) => (
         <MountainLeft src='/static/image/MountainLeft.svg'/>
         <MountainCenter src='/static/image/mountaincenter.svg'/>
         <MountainRight src='/static/image/MountainRight.svg'/>
+        
         {/* <ChooseMonkey src='/static/image/right-thin-arrowheads (1).png'/>
         <Monkey onClick={() => setTeam('ling') } src='/static/image/Moling.svg' alt="พี่ลิง"/>
         <ChooseGiant src='/static/image/right-thin-arrowheads.png'/>        
