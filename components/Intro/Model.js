@@ -25,6 +25,10 @@ const Monkey = styled.img`
     bottom: 0vh;
     height : 40vh;
     cursor: pointer;
+    transition: all 550ms ease-in-out;
+    &:hover{
+      transform: scale(1.5);
+    }
     @media (min-width: 576px) {
       height : 50vh;
     }
@@ -42,6 +46,10 @@ const Giant = styled.img`
     bottom: 0vh;
     height : 40vh;
     cursor: pointer;
+    transition: all 550ms ease-in-out;
+    &:hover{
+      transform: scale(1.7);
+    }
     @media (min-width: 576px) {
       height : 50vh;
       right: 0vw;
