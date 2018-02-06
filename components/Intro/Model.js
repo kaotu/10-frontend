@@ -8,29 +8,91 @@ const Bg = styled.div`
     width: 100vw;
     top: -300vh;
 `
+const MoveUpDown = keyframes`
+  0% {
+    top:0vh;
+  }
+  50% {
+    top:2vh;
+  }
+  100% {
+    top:0vh;
+  }
+`
 const Monkey = styled.img`
-    position : absolute;
-    z-index:9;
-    left: 5vw;
+    position : relative;
+    left: 0vw;
     bottom: 0vh;
-    height : 60vh;
+    height : 40vh;
+    cursor: pointer;
+    @media (min-width: 576px) {
+      height : 50vh;
+    }
+`
+const ScrollMonkey = styled.img`
+    position: relative;
+    width:5vw;
+    animation: ${MoveUpDown} 1s linear infinite;
+    cursor:pointer; 
+    top:0;
 `
 const Giant = styled.img`
-    position : absolute;
-    z-index:9;
-    right: 5vw;
+    position : relative;
+    right: 0vw;
     bottom: 0vh;
-    height : 60vh;
+    height : 40vh;
+    cursor: pointer;
+    @media (min-width: 576px) {
+      height : 50vh;
+      right: 0vw;
+    }
 `
+const ScrollGiant = styled.img`
+    position: relative;
+    width:5vw;
+    animation: ${MoveUpDown} 1s linear infinite;
+    cursor:pointer; 
+    top:0;
+`
+const Div = styled.div`
+    position : absolute;
+    width: 100vw;
+    z-index:5;
+    bottom: 10vh;
+    @media (min-width: 576px) {
+      bottom: 5vh;
+    }
+`
+
 const setTeam = (team) => {
     window.localStorage.setItem('team',team )
     window.location.reload()
   }
   
 const ModelIndex = props => (
-    <Bg>
-        <Monkey onClick={() => setTeam('ling')} src='/static/image/Moling.svg'/>
-        <Giant onClick={() => setTeam('yak')} src='/static/image/Moyak.svg'/>
+    <Bg className = "">
+    <Div>
+      <div className = "col-12">
+      <div className ="row ">
+        <div className = "col-6 mt-auto text-center">
+          <ScrollMonkey src='/static/image/right-thin-arrowheads (1).png'/>
+        </div>
+        <div className = "col-6 mt-auto text-center">
+        <ScrollGiant src='/static/image/right-thin-arrowheads.png'/>
+        </div>
+      </div>
+      </div>
+      <div className = "col-12">
+      <div className ="row ">
+        <div className = "col-6 mt-auto text-center">
+          <Monkey onClick={() => setTeam('ling')} src='/static/image/Moling.svg'/>
+        </div>
+        <div className = "col-6 mt-auto text-center">
+          <Giant onClick={() => setTeam('yak')} src='/static/image/Moyak.svg'/>
+        </div>
+      </div>
+      </div>
+    </Div>
     </Bg>
 )
 export default compose(

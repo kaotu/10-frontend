@@ -27,10 +27,10 @@ const Bg = styled.div`
   width: 100vw;
 `
 const LogoWip = styled.img`
-  position: absolute;
+  position: relative;
   z-index: 6;
   width: 120%;
-  margin-top: 10vh;
+  margin-top: 8vh;
   margin-left: -10vw;
   animation-name: ${FadeOut};
   animation-duration: 2s;
@@ -39,13 +39,14 @@ const LogoWip = styled.img`
     margin-left: 0;
   }
   @media (min-width: 576px) {
-    width: 100%;
-    margin-top: 5vh;
-  }
-  @media (min-width: 768px) {
     width: 80%;
     margin-top: 5vh;
     margin-left: 10vw;
+  }
+  @media (min-width: 768px) {
+    width: 70%;
+    margin-top: 5vh;
+    margin-left: 15vw;
   }
   @media (min-width: 1024px) {
     width: 50%;
@@ -54,16 +55,20 @@ const LogoWip = styled.img`
   }
 `
 const LogoSIT = styled.img`
-  position: absolute;
+  position: relative;
   z-index: 6;
   width: 70%;
-  margin-top: 30vh;
+  margin-top: 0vh;
   margin-left: 15vw;
   animation-name: ${FadeOut};
   animation-duration: 2s;
   @media (min-width: 412px) {
     width: 50%;
     margin-left: 25vw;
+  }
+  @media (min-width: 576px) {
+    width: 40%;
+    margin-left: 30vw;
   }
   @media (min-width: 768px) {
     width: 30%;
