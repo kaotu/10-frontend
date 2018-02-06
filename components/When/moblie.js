@@ -6,150 +6,102 @@ import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
 
 const Box1 = styled.div`
+text-align:center;
+position: absolute;
+background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
+border: ${props => props.borderLine1 || ''};
+border-radius:1em;
+z-index:2;
 @media (min-width: 320px) {
   width:25vw;
   top: 0em;
-  left: 1em; 
-  z-index:2;  
-  text-align:center;
-  position: absolute;
-  background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-  border: ${props => props.borderLine1 || ''};
-  border-radius:1em;
+  left: 2em; 
   font-size:0.7em;
 } 
-  @media (min-width: 420px) {
+  @media (min-width: 412px) {
     width:25vw;
     top: 0em;
-    left: 0em; 
-    z-index:2;  
-    text-align:center;
-    position: absolute;
-    background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-    border: ${props => props.borderLine1 || ''};
-    border-radius:1em;
+    left: 2em;  
+    font-size:0.7em;
+     
   } 
   @media (min-width: 576px) {
     width:30vw;
     top: 0em;
-    left: 0em; 
-    z-index:2;  
-    text-align:center;
-    position: absolute;
-    background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-    border: ${props => props.borderLine1 || ''};
-    border-radius:1em;
+    left: 0em;  
   } 
 `
 const Box2 = styled.div`
+text-align:center;
+position: absolute;
+background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
+border: ${props => props.borderLine1 || ''};
+border-radius:1em;
+z-index:2;
   @media (min-width: 320px) {
-    background-color:transparent;
     width:25vw;
-    top: 2em;
+    top: 5em;
     left: 9em; 
-    z-index:2;  
-    text-align:center;
-    position: absolute;
-    background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-    border: ${props => props.borderLine1 || ''};
-    border-radius:1em;
     font-size:0.7em;
   }
-  @media (min-width: 420px) {
-    width:30vw;
-    top: 0em;
-    left: 0em; 
-    z-index:2;  
-    text-align:center;
-    position: absolute;
-    background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-    border: ${props => props.borderLine1 || ''};
-    border-radius:1em;
+  @media (min-width: 412px) {
+    width:25vw;
+    top: 7em;
+    left: 10em; 
+    font-size:0.7em;
   } 
   @media (min-width: 576px) {
     width:30vw;
     top: 0em;
     left: 0em; 
-    z-index:2;  
-    text-align:center;
-    position: absolute;
-    background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-    border: ${props => props.borderLine1 || ''};
-    border-radius:1em;
   } 
 `
 const Box3 = styled.div`
+z-index:2;  
+text-align:center;
+position: absolute;
+background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
+border: ${props => props.borderLine1 || ''};
+border-radius:1em;
 @media (min-width: 320px) {
-  background-color:transparent;
   width:25vw;
-  top: 4em;
-  left: 17em; 
-  z-index:2;  
-  text-align:center;
-  position: absolute;
-  background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-  border: ${props => props.borderLine1 || ''};
-  border-radius:1em;
+  top: 10em;
+  left: 15em; 
   font-size:0.7em;
 }
-@media (min-width: 420px) {
-  width:30vw;
-  top: 0em;
-  left: 0em; 
-  z-index:2;  
-  text-align:center;
-  position: absolute;
-  background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-  border: ${props => props.borderLine1 || ''};
-  border-radius:1em;
+@media (min-width: 412px) {
+  width:25vw;
+  top: 13em;
+  left: 18em; 
 } 
 @media (min-width: 576px) {
   width:30vw;
   top: 0em;
   left: 0em; 
-  z-index:2;  
-  text-align:center;
-  position: absolute;
-  background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-  border: ${props => props.borderLine1 || ''};
-  border-radius:1em;
 } 
 `
 const Box4 = styled.div`
+z-index:2;  
+text-align:center;
+position: absolute;
+background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
+border: ${props => props.borderLine1 || ''};
+border-radius:1em;
 @media (min-width: 320px) {
-  background-color:transparent;
   width:30vw;
-  top: 9em;
+  top: 15em;
   left: 20em; 
-  z-index:2;  
-  text-align:center;
-  position: absolute;
-  background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-  border: ${props => props.borderLine1 || ''};
-  border-radius:1em;
   font-size:0.7em;
 }
-@media (min-width: 420px) {
-  width:30vw;
-  top: 0em;
-  left: 0em; 
-  z-index:2;  
-  text-align:center;
-  position: absolute;
-  background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-  border: ${props => props.borderLine1 || ''};
-  border-radius:1em;
+@media (min-width: 412px) {
+  width:25vw;
+  top: 20em;
+  left: 25em; 
 } 
 @media (min-width: 576px) {
   width:30vw;
   top: 0em;
   left: 0em; 
-  z-index:2;  
-  text-align:center;
-  position: absolute;
-  background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-  border: ${props => props.borderLine1 || ''};
-  border-radius:1em;
 } 
 `
 const Div = styled.div`{
@@ -178,12 +130,8 @@ const P = styled.p`
   font-size:1em
 }
 `
-const Bggradient = styled.div`
-background: ${props => props.themeColor || ''};
-`
-
 const Moblie = () => (
-  <Bggradient themeColor={props.bg.when} className="" >
+  <Bg >
     <div className="container">
       <div className="row">
         <Div className="col-12">
@@ -206,7 +154,6 @@ const Moblie = () => (
         </Div1>
       </div>
     </div>
-    <Moutain src='/static/image/MoutainWhenMoblie.svg'/>
-  </Bggradient>
+  </Bg>
 )
 export default Moblie

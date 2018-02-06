@@ -32,23 +32,13 @@ const Front = styled.p`
 const Box1 = styled.div`
   min-width: 10vw;
   position:absolute;
-  margin-top:2em;
-  top: 14em;
+  top: 18em;
   left: 10em;   
   z-index:2;
   background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine1 || ''};
   border-radius:1em;
   padding:.5em 5em;
-  @media (min-width: 320px) {
-    min-width: 5vw;
-    top: 0em;
-    left: 1em; 
-    z-index:2;  
-    border-radius:1em;
-    font-size:0.5em;
-    padding:.5em 1em;
-  } 
   @media (min-width: 768px) {
     position:absolute;
     min-width:10vw;
@@ -57,10 +47,8 @@ const Box1 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    position:absolute;
-    min-width:10vw;
     top: 18em;
-    left: 5em;
+    left: 10em; 
     padding:.5em 3em;
   }
 `
@@ -68,7 +56,7 @@ const Box2 = styled.div`
   position:absolute;
   min-width:10vw;
   top: 20em;
-  left: 28em;   
+  left: 25em;    
   z-index:2;
   background-color:${props => props.box2 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine2 || ''};
@@ -82,18 +70,16 @@ const Box2 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    position:absolute;
-    min-width:10vw;
-    top: 26em;
-    left: 22em;
+    top: 20em;
+    left: 25em; 
     padding:.5em 3em;
   }
 `
 const Box3 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 24em;
-  left:46em;   
+  top: 22em;
+  left:40em;  
   z-index:2;
   background-color:${props => props.box3 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine3 || ''};
@@ -107,18 +93,16 @@ const Box3 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    position:absolute;
-    min-width:10vw;
-    top: 33em;
-    left: 36em; 
+    top: 22em;
+    left:40em;  
     padding:.5em 3em;
   }
 `
 const Box4 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 27em;
-  left: 64em;   
+  top: 25em;
+  left:55em;   
   z-index:2;
   background-color:${props => props.box4 || 'rgba(0,0,0,.5)'};
   border: ${props => props.borderLine4 || ''};
@@ -132,14 +116,22 @@ const Box4 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    position:absolute;
-    min-width:10vw;
-    top: 40em;
-    left: 50em;   
-    z-index:2;
+    top: 25em;
+    left:55em;  
     padding:.5em 3em;
   }
 `
+const HideMobile = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+const HideDesktop = styled.div`
+  @media (min-width: 721px) {
+    display: none;
+  }
+`
+
 const Space = styled.div`
   margin-top: 6%;
   margin-bottom: 10%;
@@ -155,15 +147,33 @@ const Bgtop = styled.img`
 position: absolute;
 top: 0vh;
 width : 100%;
+@media (min-width: 320px) {
+  margin-top : 0;
+}
+@media (min-width: 412px) {
+  margin-top : 0; 
+} 
+@media (min-width: 576px) {
+  margin-top : 0;
+}
 @media (min-width:768px) {
   margin-top : 0;
 }
 `
 const Bgbottom = styled.img`
 position : absolute;
-margin-left : 0vw;
+left : 0vw;
 width : 100%;
 bottom: 0vh;
+@media (min-width: 320px) {
+  margin-top :2%;
+}
+@media (min-width: 412px) {
+  margin-top :2%; 
+} 
+@media (min-width: 576px) {
+  margin-top : 2%;
+}
 @media (min-width:768px) {
   margin-top : 2%;
 }
@@ -181,6 +191,7 @@ const index = props => (
     <Relative>
     <Bgtop src = '/static/image/topwhen.png'/>
     <Bgbottom src = '/static/image/bottomwhen.png'/>
+      <HideMobile>
     <div className="container-fluid">
         <div className="row">
           <Space className="col-12 col-sm-12 col-md-6 ">
@@ -206,6 +217,11 @@ const index = props => (
           </Space2>
         </div>
     </div>
+      </HideMobile>
+          <HideDesktop>
+          <Bgbottom src="/static/image/whenMobile.svg"/>
+          <Moblie />
+        </HideDesktop>
     </Relative>
   </Bggradient>
 )
