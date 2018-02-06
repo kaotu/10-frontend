@@ -7,6 +7,5 @@ const Bg = styled.section`
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
-  overflow: hidden;
 `
 export default Bg
