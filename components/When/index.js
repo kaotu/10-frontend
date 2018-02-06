@@ -147,15 +147,6 @@ const Bgtop = styled.img`
 position: absolute;
 top: 0vh;
 width : 100%;
-@media (min-width: 320px) {
-  margin-top : 0;
-}
-@media (min-width: 412px) {
-  margin-top : 0; 
-} 
-@media (min-width: 576px) {
-  margin-top : 0;
-}
 @media (min-width:768px) {
   margin-top : 0;
 }
@@ -163,17 +154,9 @@ width : 100%;
 const Bgbottom = styled.img`
 position : absolute;
 left : 0vw;
-width : 100%;
+width : 105%;
 bottom: 0vh;
-@media (min-width: 320px) {
-  margin-top :2%;
-}
-@media (min-width: 412px) {
-  margin-top :2%; 
-} 
-@media (min-width: 576px) {
-  margin-top : 2%;
-}
+margin-left:-0.3em;
 @media (min-width:768px) {
   margin-top : 2%;
 }
@@ -219,7 +202,7 @@ const index = props => (
     </div>
       </HideMobile>
           <HideDesktop>
-          <Bgbottom src="/static/image/whenMobile.svg"/>
+          <Bgbottom src="/static/image/whenMoblie1.svg"/>
           <Moblie />
         </HideDesktop>
     </Relative>
