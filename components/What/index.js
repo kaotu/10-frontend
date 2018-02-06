@@ -10,7 +10,7 @@ import Color from '../Core/Color'
 import theme from '../Intro/Background'
 
 const Info = styled.div`
-  margin-top: 5%;
+  margin-top: 2%;
 `
 const Test = styled.div`
   padding: 2px;
@@ -21,27 +21,22 @@ const Icon = styled.img`
   width:7em;
   @media (max-width:320px) {
     margin-top: 2%;
-    padding: .2em;
-    width:3em;
+    width:2em;
   }
   @media (max-width:420px) {
     margin-top: 2%;
-    padding: .2em;
     width:5em;
   }
   @media (max-width:576px) {
     margin-top: 2%;
-    padding: .2em;
     width:5em;
   }
   @media (max-width:768px) {
     margin-top: 5%;
-    padding: .2em;
     width:7em;
   }
   @media (max-width:1024px) {
     margin-top: 5%;
-    padding: .2em;
     width:7em;
   }
 `
@@ -85,9 +80,6 @@ const Hidden = styled.div`
   @media(max-width:720px) {
     display: none;
   }
-`
-const BoxContent = styled.div`
-border:  solid white;
 `
 const Font = styled.p`
 @media (min-width:320px) {
@@ -138,7 +130,7 @@ const index = props => (
             <Info className="row text-center">
               {
                 IconInfo.map((info, i) => (
-                  <Test key={i} className="col-6 col-md-3 img-responesive ">
+                  <Test key={i} className="col-6 col-md-3 ">
                     <Icon src={info.icon} alt={info.t} />
                     <p>{info.text}</p>
                   </Test>

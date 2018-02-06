@@ -158,7 +158,6 @@ left : 0vw;
 width : 100%;
 bottom: 0vh;
 margin-left:0em;
-z-index:2;
 @media (min-width:768px) {
   margin-top : 2%;
 }
