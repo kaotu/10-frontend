@@ -141,21 +141,24 @@ const Firefly6 = Fire.extend`
       }
 `
 const Div = styled.div`
-    position : absolute;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
+  position : absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  @media(max-width: 767px){
+        display : none;
+  }  
 `
 
 
 const index = props => (
     <Div>
-    <Firefly/>
-    <Firefly2/>
-    <Firefly3/>
-    <Firefly4/>
-    <Firefly5/>
-    <Firefly6/>
+      <Firefly/>
+      <Firefly2/>
+      <Firefly3/>
+      <Firefly4/>
+      <Firefly5/>
+      <Firefly6/>
     </Div>
 );
 
