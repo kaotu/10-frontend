@@ -49,7 +49,7 @@ const Scrollpic = styled.img`
 const Index = (props) => (
   <div className="row">
     <div className="col-12">
-      <BgIntro>
+      <BgIntro theme={props.scrolld.index}>
           <Logo/>
           <Mountain/>
           <Cloud/>
