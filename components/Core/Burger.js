@@ -4,12 +4,6 @@ import styled from 'styled-components'
 import Router from 'next/router'
 import {compose,lifecycle,withState} from 'recompose'
 
-const CustomMenu = styled(Menu)`
-  // display: ${props => props.show ? 'block' : 'none'};
-  // display: block};
-  // left: ${props => props.show ? '-200px':''};
-`
-
 const Item = styled.button`
   
   color: #fff;
@@ -38,7 +32,7 @@ const Item = styled.button`
 const BlankSpace = styled.a`
   padding: .7em;
 `
-var styles = {
+const styles = {
   bmBurgerButton: {
     position: 'absolute',
     width: '36px',
@@ -103,7 +97,7 @@ const nav = [
   render() {
     return (
       <div className="d-lg-none sticky text-center">   
-        <CustomMenu 
+        <Menu 
           onClick={this.onClick}
           isOpen={this.state.menuOpen}
           className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} >
@@ -112,7 +106,7 @@ const nav = [
               <Item burger={this.props.check.nav} smooth={true} key={i} onClick={()=>this.onClick(nav.to)} className="menu-item ">{nav.text}</Item>
             ))}
           
-        </CustomMenu>
+        </Menu>
       </div>
      )
    }
