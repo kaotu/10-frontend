@@ -1,5 +1,6 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import React from "react"
+import styled, { keyframes } from "styled-components"
+import { Link } from "react-scroll"
 
 const FadeOut = keyframes`
   0% {
@@ -11,20 +12,22 @@ const FadeOut = keyframes`
 `
 const Dukdik = keyframes`
   0% {
-    margin-top: 45vh;
+    bottom: 10vh;
   }
   50% {
-    margin-top: 43vh;
+    bottom: 12vh;
   }
   100% {
-    margin-top: 45vh;
+    bottom: 10vh;
   }
 `
 const Bg = styled.div`
-  height : 100vh;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 `
 const LogoWip = styled.img`
-  position : relative;
+  position: absolute;
   z-index: 6;
   width: 120%;
   margin-top: 10vh;
@@ -39,56 +42,63 @@ const LogoWip = styled.img`
     width: 100%;
     margin-top: 5vh;
   }
+  @media (min-width: 768px) {
+    width: 80%;
+    margin-top: 5vh;
+    margin-left: 10vw;
+  }
   @media (min-width: 1024px) {
     width: 50%;
     margin-top: 5vh;
+    margin-left: 25vw;
   }
 `
 const LogoSIT = styled.img`
-  position : relative;
+  position: absolute;
   z-index: 6;
   width: 70%;
-  margin-top: 3vh;
+  margin-top: 30vh;
+  margin-left: 15vw;
   animation-name: ${FadeOut};
   animation-duration: 2s;
   @media (min-width: 412px) {
     width: 50%;
-    margin-left: 0;
+    margin-left: 25vw;
   }
-  @media (min-width: 576px) {
-    width: 50%;
-    margin-top: 0;
+  @media (min-width: 768px) {
+    width: 30%;
+    margin-left: 35vw;
   }
   @media (min-width: 1024px) {
     width: 20%;
-    margin-top: 5vh;
+    margin-left: 40vw;
   }
 `
 const Font = styled.h4`
-  position : relative;
-  z-index: 6;
-  margin-top: 1vh;
+  position: absolute;
+  z-index: 8;
+  bottom: 2vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
 `
 const Scroll = styled.img`
-  position : relative;
-  z-index: 6;
-  width : 10vw;
-  margin-top: 45vh;
+  position: absolute;
+  z-index: 8;
+  width: 4vw;
+  left: 48vw;
+  bottom: 10vh;
   animation: ${Dukdik} 1s linear infinite;
+  cursor: pointer;
 `
 
 const Logo = () => (
-  <Bg className="container-fluid">
-    <div className="row">
-      <div className="col-12 text-center">
-        <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
-      </div>
-      <div className="col-12 text-center">
-        <LogoSIT src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
-    {/* <Scroll src='/static/image/ScrollMongkey.png'/>
-    <Font>เลื่อนลงข้างล่าง</Font> */}
-      </div>
-    </div>
+  <Bg>
+    <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
+    <LogoSIT src="/static/image/LogoSIT.png" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
+    <Link to="sponsor" smooth={true}>
+      <Scroll src="/static/image/ScrollMongkey.png" />
+    </Link>
+    <Font>เลื่อนลงข้างล่าง</Font>
   </Bg>
 )
 

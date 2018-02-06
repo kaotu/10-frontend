@@ -2,11 +2,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import {compose,lifecycle,withState} from 'recompose'
+import link from 'react-scroll/modules/components/Link'
 
 import BgIntro from '../Intro/BgIntro'
 import Logo from './Logo'
 import Mountain from './Mountain'
 import Cloud from './Cloud'
+import Model from './Model'
 
 const Div = styled.div`
   height: 100vh;
@@ -51,6 +53,7 @@ const Index = (props) => (
           <Logo/>
           <Mountain/>
           <Cloud/>
+          <Model/>
       </BgIntro>
     </div>
   </div>

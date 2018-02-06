@@ -9,7 +9,7 @@ const Bg = styled.div`
 `
 const Cloud = styled.img`
     position : absolute;
-    z-index:8;
+    z-index:7;
     height : 20vh;
     bottom : 0vh;
     transform: translate(-50%, 0%);

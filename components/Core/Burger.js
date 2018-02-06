@@ -2,6 +2,13 @@ import react from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
 import Router from 'next/router'
+import {compose,lifecycle,withState} from 'recompose'
+
+const CustomMenu = styled(Menu)`
+  // display: ${props => props.show ? 'block' : 'none'};
+  // display: block};
+  // left: ${props => props.show ? '-200px':''};
+`
 
 const Item = styled.button`
   
@@ -10,7 +17,7 @@ const Item = styled.button`
   transition: .5s;
   border: 0vw;
   width:100%;
-  background-color:#002D40;
+  background-color:${props => props.burger || ''};
   &:hover{
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
@@ -50,7 +57,7 @@ var styles = {
     height: '4vh',
   },
   bmMenu: {
-    background: '#002D40',
+    background: '${this.props.check.nav}',
     padding: '0em',
     fontSize: '1.5em',
     width:'200px'
@@ -80,25 +87,43 @@ const nav = [
   {to:'contact',text:"Contact"}]
  
  class BurgerMenu extends React.Component {
-   render() {
-     return (
-      <div className="d-lg-none sticky text-center">      
-        <Menu className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
-          <BlankSpace className="page-wrap"/>
+  state = {
+    menuOpen: false
+  }
+
+  onClick = to => {
+    this.setState({
+      menuOpen: false
+    })
+    burgerLink(to) 
+  }
+
+  handleStateChange = (state) => console.log(state)
+
+  render() {
+    return (
+      <div className="d-lg-none sticky text-center">   
+        <CustomMenu
+          onClick={this.onClick}
+          isOpen={this.state.menuOpen}
+          className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} >
+          <BlankSpace  className="page-wrap"/>
           {nav.map((nav, i) => (
-              <Item key={i} onClick={()=>burgerLink(nav.to)} className="menu-item "  >{nav.text}</Item>
+              <Item burger={this.props.check.nav} smooth={true} key={i} onClick={()=>this.onClick(nav.to)} className="menu-item ">{nav.text}</Item>
             ))}
-          {/* <Item className="menu-item" href="#home">HOME</Item>
-          <Item className="menu-item" href="#what">WHAT</Item>
-          <Item className="menu-item" href="#who">WHO</Item>
-          <Item className="menu-item" href="#where">WHERE</Item>
-          <Item className="menu-item" href="#when">WHEN</Item>
-          <Item className="menu-item" href="#faqs">FAQs</Item>
-          <Item className="menu-item" href="#contact">CONTACT</Item> */}
-         </Menu>
+          
+        </CustomMenu>
       </div>
      )
    }
 } 
 
-export default BurgerMenu
+export default compose(
+  withState('check','setCheck',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setCheck(theme)
+    }
+  })
+)(BurgerMenu)
