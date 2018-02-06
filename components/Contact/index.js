@@ -109,19 +109,19 @@ const index = () => (
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
                 <a href="https://www.facebook.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/facebook ci logo.png" className='img responsive'/>
+                  <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
                 </a>
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
-                  <ImgCenter src="/static/image/LINEa ci logo.png" className='img-responsive'/>
+                  <ImgCenter src="/static/image/line.svg" className='img-responsive'/>
                 </a>
                 <a href="https://twitter.com/WIPCamp" target="_blank">
-                  <ImgCenter src="/static/image/Twiiter ci logo.png" />
+                  <ImgCenter src="/static/image/twitter.svg" />
                 </a>
                 <a href="https://www.instagram.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/ig ci logo.png" />
+                  <ImgCenter src="/static/image/instagram.svg" />
                 </a>
                 <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                  <ImgCenter src="/static/image/Youtube ci logo.png" />
+                  <ImgCenter src="/static/image/youtube.svg" />
                 </a>
                 <Linerespon />
               </Line>
