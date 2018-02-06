@@ -3,6 +3,12 @@ import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
 import Router from 'next/router'
 
+const CustomMenu = styled(Menu)`
+  // display: ${props => props.show ? 'block' : 'none'};
+  // display: block};
+  // left: ${props => props.show ? '-200px':''};
+`
+
 const Item = styled.button`
   
   color: #fff;
@@ -80,22 +86,32 @@ const nav = [
   {to:'contact',text:"Contact"}]
  
  class BurgerMenu extends React.Component {
-   render() {
-     return (
-      <div className="d-lg-none sticky text-center">      
-        <Menu className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}>
-          <BlankSpace className="page-wrap"/>
+  state = {
+    menuOpen: false
+  }
+
+  onClick = to => {
+    this.setState({
+      menuOpen: false
+    })
+    burgerLink(to) 
+  }
+
+  handleStateChange = (state) => console.log(state)
+
+  render() {
+    return (
+      <div className="d-lg-none sticky text-center">   
+        <CustomMenu
+          onClick={this.onClick}
+          isOpen={this.state.menuOpen}
+          className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} >
+          <BlankSpace  className="page-wrap"/>
           {nav.map((nav, i) => (
-              <Item key={i} onClick={()=>burgerLink(nav.to)} className="menu-item "  >{nav.text}</Item>
+              <Item smooth={true} key={i} onClick={()=>this.onClick(nav.to)} className="menu-item ">{nav.text}</Item>
             ))}
-          {/* <Item className="menu-item" href="#home">HOME</Item>
-          <Item className="menu-item" href="#what">WHAT</Item>
-          <Item className="menu-item" href="#who">WHO</Item>
-          <Item className="menu-item" href="#where">WHERE</Item>
-          <Item className="menu-item" href="#when">WHEN</Item>
-          <Item className="menu-item" href="#faqs">FAQs</Item>
-          <Item className="menu-item" href="#contact">CONTACT</Item> */}
-         </Menu>
+          
+        </CustomMenu>
       </div>
      )
    }

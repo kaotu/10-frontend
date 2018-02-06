@@ -1,5 +1,6 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import React from "react"
+import styled, { keyframes } from "styled-components"
+import { Link } from "react-scroll"
 
 const FadeOut = keyframes`
   0% {
@@ -22,11 +23,11 @@ const Dukdik = keyframes`
 `
 const Bg = styled.div`
   position: relative;
-  height : 100vh;
+  height: 100vh;
   width: 100vw;
 `
 const LogoWip = styled.img`
-  position : absolute;
+  position: absolute;
   z-index: 6;
   width: 120%;
   margin-top: 10vh;
@@ -53,7 +54,7 @@ const LogoWip = styled.img`
   }
 `
 const LogoSIT = styled.img`
-  position : absolute;
+  position: absolute;
   z-index: 6;
   width: 70%;
   margin-top: 30vh;
@@ -74,27 +75,30 @@ const LogoSIT = styled.img`
   }
 `
 const Font = styled.h4`
-  position : absolute;
+  position: absolute;
   z-index: 8;
   bottom: 2vh;
   left: 50%;
   transform: translate(-50%, 0%);
 `
 const Scroll = styled.img`
-  position : absolute;
+  position: absolute;
   z-index: 8;
-  width : 4vw;
+  width: 4vw;
   left: 48vw;
   bottom: 10vh;
   animation: ${Dukdik} 1s linear infinite;
+  cursor: pointer;
 `
 
 const Logo = () => (
   <Bg>
-        <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
-        <LogoSIT src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
-        <Scroll src='/static/image/ScrollMongkey.png'/>
-        <Font>เลื่อนลงข้างล่าง</Font>
+    <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
+    <LogoSIT src="/static/image/LogoSIT.png" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
+    <Link to="sponsor" smooth={true}>
+      <Scroll src="/static/image/ScrollMongkey.png" />
+    </Link>
+    <Font>เลื่อนลงข้างล่าง</Font>
   </Bg>
 )
 

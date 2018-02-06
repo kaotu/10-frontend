@@ -122,12 +122,12 @@ const Box4 = styled.div`
   }
 `
 const HideMobile = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 720px) {
     display: none;
   }
 `
 const HideDesktop = styled.div`
-  @media (min-width: 721px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `
@@ -155,9 +155,10 @@ margin-top : -1
 const Bgbottom = styled.img`
 position : absolute;
 left : 0vw;
-width : 100.5%;
+width : 100%;
 bottom: 0vh;
-margin-left:-0.3em;
+margin-left:0em;
+z-index:2;
 @media (min-width:768px) {
   margin-top : 2%;
 }
@@ -174,7 +175,7 @@ const index = props => (
   <Bggradient themeColor={props.bg.when} className="">
     <Relative>
     <Bgtop src = '/static/image/topwhen.png'/>
-    <Bgbottom src = '/static/image/bottomwhen.png'/>
+    <HideMobile><Bgbottom src = '/static/image/bottomwhen.png'/></HideMobile>
       <HideMobile>
     <div className="container-fluid">
         <div className="row">
@@ -203,7 +204,7 @@ const index = props => (
     </div>
       </HideMobile>
           <HideDesktop>
-          <Bgbottom src="/static/image/whenMoblie1.svg"/>
+          <Bgbottom src="/static/image/when.png"/>
           <Moblie />
         </HideDesktop>
     </Relative>
