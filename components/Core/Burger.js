@@ -57,7 +57,7 @@ var styles = {
     height: '4vh',
   },
   bmMenu: {
-    background: '${this.props.check.nav}',
+    background: '',
     padding: '0em',
     fontSize: '1.5em',
     width:'200px'
@@ -103,7 +103,7 @@ const nav = [
   render() {
     return (
       <div className="d-lg-none sticky text-center">   
-        <CustomMenu
+        <CustomMenu 
           onClick={this.onClick}
           isOpen={this.state.menuOpen}
           className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} >
