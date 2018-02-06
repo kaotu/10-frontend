@@ -161,6 +161,9 @@ const ChooseMonkey = styled.img`
     margin-top:19vh;
     margin-left:5vw;
   }
+  @media(max-width: 420px){
+    left: 25vw;
+  }
 `
 const Monkey = styled.img`
   position:absolute;
@@ -199,6 +202,12 @@ const ChooseGiant = styled.img`
   width:3vw;
   animation: MoveUpDown 1s linear infinite;
   cursor:pointer; 
+  @media(max-width: 1024px){
+    right : 18vw;
+  }
+  @media(max-width: 768px){
+    right : 25vw;
+  }
   @media(max-width: 720px){
     margin-top : 13vw;
     right: 25vw;
@@ -206,6 +215,9 @@ const ChooseGiant = styled.img`
   }
   @media(max-width:560px){
     margin-top:19vh;
+  }
+  @media(max-width: 420px){
+    right: 28vw;
   }
 `
 const Giant = styled.img`
@@ -216,6 +228,10 @@ const Giant = styled.img`
   cursor:pointer;
   right:5vw;
   transition:all 550ms ease-in-out;
+  @media(max-width: 768px){
+    width:35%;
+    right:3.5em;
+  }
   @media(max-width: 720px){
     width:35%;
     bottom:-0.5em;
@@ -294,7 +310,6 @@ const LogoSIT = styled.img`
   @media(max-width: 420px){
     width: 60%;
     left: 22vw;
-    top:20em;
   }
 `
 const Scrolldown = styled.img`
