@@ -4,7 +4,7 @@ const Block = styled.div`
  {
 	position:absolute;
 	background: transparent;
-  border: 4px solid #000;
+  border: 4px solid #fff;
   padding: 1em;
 	border-radius: 1em;
 	width: 95%;
@@ -29,7 +29,7 @@ const Block = styled.div`
 }
  :before {
 	border-color: rgba(194, 225, 245, 0);
-	border-bottom-color: #000;
+	border-bottom-color: #fff;
 	border-width: 36px;
   margin-left: -36px;
 }
