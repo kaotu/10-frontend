@@ -8,7 +8,7 @@ const H1 = styled.h1`
   @media (min-width:320px) {
     font-size: 3em;
   }
-  @media (min-width:420px) {
+  @media (min-width:412px) {
     font-size: 3.5em;
   }
   @media (min-width:576px) {
