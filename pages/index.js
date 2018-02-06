@@ -26,7 +26,7 @@ const FooterBg = styled.div`
 injectGlobal;
 
 const index = props => (
-   <Loading>
+  //  <Loading>
     <Scroll>
       <Relative>
         <section id="home" name="home">
@@ -72,7 +72,7 @@ const index = props => (
         </div>
       </Relative>
     </Scroll>
-  </Loading> 
+  // </Loading> 
 );
 
 export default compose(

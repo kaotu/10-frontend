@@ -37,8 +37,6 @@ const Black = styled.p`
   color: #000000;
   font-size:1em
 `
-
-
 const ContentRespon = (props) => (
   <div className="container">
     <div className="row d-flex">
