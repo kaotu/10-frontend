@@ -154,7 +154,7 @@ width : 100%;
 const Bgbottom = styled.img`
 position : absolute;
 left : 0vw;
-width : 105%;
+width : 100%;
 bottom: 0vh;
 margin-left:-0.3em;
 @media (min-width:768px) {
