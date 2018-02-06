@@ -7,7 +7,6 @@ import H2 from '../Core/FontH2'
 const Relative = styled.div`
   position: relative;
   width: 100vw;
-  height:100vh;
 `
 const Cloud = styled.img`
   position: absolute;
@@ -22,8 +21,6 @@ const Cloud = styled.img`
 const DivSponsor = styled.div`
   position: relative;
   width: 100vw;
-  padding-top: 5%;
-  padding-bottom: 5%;
 `
 const BImg = styled.img`
   width: 90%;
@@ -55,35 +52,35 @@ const Topic = H1.extend`
 `
 
 const Index = () => (
-  <Bg>
-    <Relative>
-    <Cloud src='/static/image/เมฆ-ล่าง.png'/>
-    <DivSponsor className="container d-flex justify-content-center">
-      <div className="row">
-        <div className="col-md-12 text-center">
-          <div className="img-responsive">
-            <div className="row d-flex justify-content-center">
-              {
-                BigSponsor.map((spon, i) => (
-                  <div className="col-6 col-md-4 col-lg-4">
-                    <BImg key={i} src={spon.img} className="pb-2"/>
-                  </div>
-                ))
-              }
-            </div>
-            <div className="row d-flex justify-content-center my-4 mx-1">
-              {
-                SmallSponsor.map((spon, i) => (
-                  <div className="col-6 col-md-4 col-lg-4">
-                    <SImg key={i} src={spon.img} className="pb-2"/>
-                  </div>
-                ))
-              }
+  <Bg className="d-flex">
+    <Relative className="d-flex align-items-center">
+      <Cloud src='/static/image/เมฆ-ล่าง.png' />
+      <DivSponsor className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="img-responsive">
+              <div className="row d-flex justify-content-center">
+                {
+                  BigSponsor.map((spon, i) => (
+                    <div className="col-6 col-md-4 col-lg-4">
+                      <BImg key={i} src={spon.img} className="pb-2" />
+                    </div>
+                  ))
+                }
+              </div>
+              <div className="row d-flex justify-content-center">
+                {
+                  SmallSponsor.map((spon, i) => (
+                    <div className="col-6 col-md-4 col-lg-4">
+                      <SImg key={i} src={spon.img} className="pb-2" />
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </DivSponsor>
+      </DivSponsor>
     </Relative>
   </Bg>
 )
