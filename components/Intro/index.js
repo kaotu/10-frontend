@@ -4,13 +4,13 @@ import styled from 'styled-components'
 import {compose,lifecycle,withState} from 'recompose'
 
 import BgIntro from '../Intro/BgIntro'
-import LogoSIT from './LogoSIT'
-import Background from './Background'
-import Link from 'react-scroll/modules/components/Link';
-
+import Logo from './Logo'
+import Mountain from './Mountain'
+import Cloud from './Cloud'
 
 const Div = styled.div`
   height: 100vh;
+  width : 100vw;
 `
 
 const Scrolldown = styled.img`
@@ -45,25 +45,14 @@ const Scrollpic = styled.img`
   margin-top:25em;
 `
 const Index = (props) => (
-  <div>
+  <div className="row">
+    <div className="col-12">
       <BgIntro>
-        <div className="container-fluid">
-          <div className="row">
-            <Div className="col-12 text-center">
-              <img style={{width: '40%', marginTop: '5em'}} src="/static/image/logofinals.svg" alt="WIP Camp #10" />
-              <br />
-              <img style={{width: '20%'}} src='/static/image/LogoSIT.png'alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี" />
-              <br />
-              <Link to="sponsor" smooth={true}>
-							<Scrollpic src={props.scrolld.scroll}/>
-              <h4>เลื่อนลงข้างล่าง</h4>
-              </Link>
-            </Div>
-          </div>
-          
-          <Background/>
-        </div>
+          <Logo/>
+          <Mountain/>
+          <Cloud/>
       </BgIntro>
+    </div>
   </div>
 )
 

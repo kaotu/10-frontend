@@ -5,9 +5,9 @@ export default injectGlobal`
     font-family: 'Pridi';
     src: url('/static/font/Pridi-Light.ttf');
   }
-  body {
+  body,html  {
     font-family: 'Pridi';
-    overflow-x:hidden;
+    overflow-x : hidden;
   }
   p {
     font-size:20px;
