@@ -50,8 +50,8 @@ const Box1 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    top: 18em;
-    left: 10em; 
+    top: 20em;
+    left: 9em; 
     padding:.5em 3em;
   }
 `
@@ -150,7 +150,7 @@ const Bgtop = styled.img`
 position: absolute;
 top: 0vh;
 width : 100.6%;
-margin-top : -1
+margin-top : -1;
 @media (min-width:768px) {
   margin-top : 0;
 }
@@ -211,8 +211,7 @@ const index = props => (
             </Head>
           </Space>
           <Space2 className="col-12 col-sm-12 col-md-12  ">
-            {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
-            
+              
             <Box1  className="text-center">
               <IconTimeline1 src={props.box1|| props.bg.icontran}/>
               <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
