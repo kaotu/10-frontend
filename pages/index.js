@@ -25,7 +25,7 @@ const FooterBg = styled.div`
 `;
 
 const Overflow = styled.section`
-  overflow-x:hidden;
+  overflow:hidden;
 `
 const MiniSize = styled.div`
   @media(orientation:landscape)
@@ -39,6 +39,7 @@ const index = props => (
   <MiniSize>
     {/* <Loading> */}
     <Scroll>
+      <Loading />
       <Relative>
         <Overflow id="home" name="home">
           <Intro />

@@ -115,18 +115,18 @@ const index = () => (
                   <ImgCenter src="/static/image/line.svg" className='img-responsive'/>
                 </a>
                 <a href="https://twitter.com/WIPCamp" target="_blank">
-                  <ImgCenter src="/static/image/twitter.svg" />
+                  <ImgCenter src="/static/image/twitter.svg" className='img responsive'/>
                 </a>
                 <a href="https://www.instagram.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/instagram.svg" />
+                  <ImgCenter src="/static/image/instagram.svg" className='img responsive'/>
                 </a>
                 <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                  <ImgCenter src="/static/image/youtube.svg" />
+                  <ImgCenter src="/static/image/youtube.svg" className='img responsive'/>
                 </a>
                 <Linerespon />
               </Line>
               <div className="col-sm-3 col-md-3">
-                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" /></a>
+                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" className='img responsive' /></a>
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>
