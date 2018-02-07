@@ -13,6 +13,7 @@ import Sponsor from "../components/Sponsor/index";
 import styled from "styled-components";
 import { compose, lifecycle, withState } from "recompose";
 import Loading from "../components/Core/Loading";
+import Minicontent from "./minisize"
 
 const Relative = styled.div`
   position: relative;
@@ -29,13 +30,15 @@ const Overflow = styled.section`
 `
 const MiniSize = styled.div`
   @media(orientation:landscape)
-  and (max-width:800px){
+  and (max-width:1024px){
     display:none;
+    background-color: black;!important
   }
 `
 
 const index = props => (
  <div>
+  <Minicontent/>
   <MiniSize>
     {/* <Loading> */}
     <Scroll>

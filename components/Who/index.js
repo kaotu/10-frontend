@@ -88,7 +88,7 @@ const Mobile = styled.div`
 `
 
 const Space = styled.div`
-  margin-top: 10%;
+  margin-top: 20%;
   margin-bottom: 10%;
 `
 
@@ -116,7 +116,10 @@ const H4 = styled.p`
 `
 
 const H7 = H1.extend`
-  margin-top : 10vw;
+  margin-top : 16vh;
+  @media (min-width: 1024px) {
+    margin-top: 20vh;
+  }
 `
 
 
