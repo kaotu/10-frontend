@@ -16,10 +16,10 @@ const SwapIcon = keyframes`
     opacity:1;
   }
   25%{
-    opacity:0;
+    opacity:1;
   }
   50%{
-    opacity:1;
+    opacity:0;
   }
   75%{
     opacity:0;
@@ -27,6 +27,23 @@ const SwapIcon = keyframes`
   100%{
     opacity:1;
   }
+`
+const LoadText = keyframes`
+  0%{
+    font-size:2em;
+  }
+  25%{
+    font-size:2.2em;
+  }
+  50%{
+    font-size:2.3em;
+  }
+  75%{
+    font-size:2.2em;
+  }
+  100%{
+    font-size:2em;
+  }      
 `
 
 const Icon = styled.img`
@@ -48,17 +65,17 @@ const Icon2 = styled.img`
 const H1 = styled.h1`
   margin-top:30%;
   color:#fff;
-  animation: ${SwapIcon} 1.5s linear infinite;
+  animation: ${LoadText} 1.5s linear infinite;
   @media (max-width:720px) {
     font-size: 2em;
-    margin-top:60%;
+    margin-top:75%;
   }
 `
 
 const index = ({show}) => (
   <Bg show={show} className="d-flex justify-content-center align-items-center">
-    <Icon src="../../static/image/yakscore-new-01.svg" className="d-flex "/>
-    <Icon2 src="../../static/image/hanumanscore-new-01.svg" className="d-flex "/>
+    <Icon src="../../static/image/hanumanscore-new-01.svg" className="d-flex "/>
+    <Icon2 src="../../static/image/yakscore-new-01.svg" className="d-flex "/>
     <H1>กรุณาเลือกตัวละคร</H1>
   </Bg>
 )
