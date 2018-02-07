@@ -58,7 +58,7 @@ const ContentBg = Bg.extend`
 
 const Space = styled.div`
   z-index:3;
-  margin-top: 20%;
+  margin-top: 18%;
   margin-bottom: 10%;
   @media(max-width:575px) {
     margin-top: 6%;
@@ -67,7 +67,7 @@ const Space = styled.div`
     margin-top: 15%;
   }
   @media (min-width: 1024px) {
-    margin-top: 8vh;
+    margin-top: 15vh;
   }
 `
 
