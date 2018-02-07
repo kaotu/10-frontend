@@ -130,8 +130,11 @@ const HideDesktop = styled.div`
 `
 
 const Space = styled.div`
-  margin-top: 6%;
+  margin-top: 15%;
   margin-bottom: 10%;
+  @media (min-width:768px) {
+    margin-top: 15%;
+  }
 `
 const Space2 = styled.div`
   position: absolute;
