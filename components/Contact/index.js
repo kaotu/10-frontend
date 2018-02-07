@@ -7,6 +7,7 @@ import H2 from '../Core/FontH2'
 const DivContact = styled.div`
   text-align: center;    
   width: 100%;  
+  height: 200%;  
   overflow: hidden;
 `
 const ImgLeft = styled.img`
@@ -106,7 +107,6 @@ const Space = styled.div`
 
 
 const index = () => (
-<div>
   <DivContact>
     <Relative>
     <Bgheartbox src = '/static/image/Bgheartbox.png'/>
@@ -161,7 +161,6 @@ const index = () => (
     </Relative>
   </DivContact>
   
-</div>
 )
 
 export default index

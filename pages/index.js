@@ -75,7 +75,7 @@ const index = props => (
           <Overflow id="contact" name="contact" className="element">
             <Contact />
           </Overflow>
-          <FooterBg
+          <FooterBg 
             bgColor={props.color.nav}
             className="d-flex justify-content-center align-items-center text-white"
           >
