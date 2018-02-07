@@ -96,7 +96,7 @@ const index = () => (
     <Relative>
     <Bgheartbox src = '/static/image/Bgheartbox.png'/>
     <ContentBg bgColor="#444B52" className="">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <Space className="col-md-12">
             <H1>Contact</H1>
