@@ -140,7 +140,11 @@ export default compose(
         index: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
         sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))',
         icontran: '../../static/image/when/yakscore.png',
-        bgwhere: '../../static/image/8.png'
+        bgwhere: '../../static/image/8.png',
+        model1: '../../static/image/storygiant/first.png',
+        model2: '../../static/image/storygiant/second.png',
+        model3: '../../static/image/storygiant/third.png',
+        model4: '../../static/image/storygiant/fourth.png'
       }
       const teammongkey = {
         what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',
@@ -155,7 +159,11 @@ export default compose(
         index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
         sponsor: 'linear-gradient(to top,rgba(0,0,0,.3),#B7CFEB,#B7CFEB,#B7CFEB)',
         icontran: '../../static/image/when/hanumanscore.png',
-        bgwhere: '../../static/image/2.png'
+        bgwhere: '../../static/image/2.png',
+        model1: '../../static/image/storymonkey/first.png',
+        model2: '../../static/image/storymonkey/second.png',
+        model3: '../../static/image/storymonkey/third.png',
+        model4: '../../static/image/storymonkey/fourth.png'
       }
       team == 'yak' ?
         window.localStorage.setItem("color", JSON.stringify(teamyak)) :

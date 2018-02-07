@@ -7,6 +7,7 @@ import H2 from '../Core/FontH2'
 const DivContact = styled.div`
   text-align: center;    
   width: 100%;  
+  height: 200%;  
   overflow: hidden;
 `
 const ImgLeft = styled.img`
@@ -106,7 +107,6 @@ const Space = styled.div`
 
 
 const index = () => (
-<div>
   <DivContact>
     <Relative>
     <Bgheartbox src = '/static/image/Bgheartbox.png'/>
@@ -125,23 +125,23 @@ const index = () => (
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
                 <FaceMobile href="fb://page/250617067968">
-                  <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
+                  <ImgCenter src="/static/image/facebook.png" className='img responsive'/>
                 </FaceMobile>
                 <FaceDestop href="https://www.facebook.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
+                  <ImgCenter src="/static/image/facebook.png" className='img responsive'/>
                 </FaceDestop>
                 
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
-                  <ImgCenter src="/static/image/line.svg" className='img-responsive'/>
+                  <ImgCenter src="/static/image/line.png" className='img-responsive'/>
                 </a>
                 <a href="https://twitter.com/WIPCamp" target="_blank">
-                  <ImgCenter src="/static/image/twitter.svg" className='img responsive'/>
+                  <ImgCenter src="/static/image/twitter.png" className='img responsive'/>
                 </a>
                 <a href="https://www.instagram.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/instagram.svg" className='img responsive'/>
+                  <ImgCenter src="/static/image/instagram.png" className='img responsive'/>
                 </a>
                 <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                  <ImgCenter src="/static/image/youtube.svg" className='img responsive'/>
+                  <ImgCenter src="/static/image/youtube.png" className='img responsive'/>
                 </a>
                 <Linerespon />
               </Line>
@@ -161,7 +161,6 @@ const index = () => (
     </Relative>
   </DivContact>
   
-</div>
 )
 
 export default index

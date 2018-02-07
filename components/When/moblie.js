@@ -7,13 +7,13 @@ import Color from '../Core/Color'
 
 const Box1 = styled.div`
 text-align:center;
-background-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
-border: ${props => props.borderLine1 || ''};
+backgrou.nd-color:${props => props.box1 || 'rgba(0,0,0,.5)'};
+der: ${props => props.borderLine1 || ''};
 border-radius:1em;
 z-index:2;
 padding:0.5em 0.5em 0em;
-margin-bottom: 5%;
-width:10em;
+margin-.bottom: 5.%;
+width:10เปิด
   @media (min-width: 320px) {
     margin-bottom: 5%;
     padding:0.5em 0.5em 0em;
@@ -59,29 +59,29 @@ const Moblie = () => (
       </div>
     </div>
     <div className="container">
-    <div className="row justify-content-center">
+      <div className="row justify-content-center">
         <div className="row col-12 justify-content-center">
           <Box1>
-            <P>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</P>
+            <P>10 ก.พ. 61 <br /> เปิดรับสมัคร</P>
           </Box1>
-          </div>
-          <div className="row col-12 justify-content-center">
+        </div>
+        <div className="row col-12 justify-content-center">
           <Box1>
-            <P>11 มี.ค 61 <br /> วันปิดรับสมัค</P>
+            <P>11 มี.ค. 61 <br /> ปิดรับสมัคร</P>
           </Box1>
-          </div>  
-          <div className="row col-12 justify-content-center">
+        </div>
+        <div className="row col-12 justify-content-center">
           <Box1>
-            <P>31 มี.ค 61 <br /> วันประกาศผล</P>
+            <P>31 มี.ค. 61 <br /> ประกาศผล</P>
           </Box1>
-          </div>  
-          <div className="row col-12 justify-content-center">
+        </div>
+        <div className="row col-12 justify-content-center">
           <Box1>
-            <P>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</P>
+            <P>30 พ.ค. - 3 มิ.ย. 61 <br /> เปิดค่าย</P>
           </Box1>
-          </div>  
-          </div>
-          </div>
+        </div>
+      </div>
+    </div>
   </Bg>
 )
 export default Moblie
