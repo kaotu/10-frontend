@@ -29,8 +29,9 @@ const Font = styled.h1`
   font-size: 1.4em;
   font-weight: bold;
   color: #fff;
-  letter-spacing: 5px;
-  margin-top:10px;
+  letter-spacing: 2px;
+  margin-top:10%;
+  padding: 0 .2em 0 .27em;
 `
 
 const IconGame = styled.img`
@@ -44,7 +45,7 @@ const DivGame = styled.div`
   width:100%;
   text-align:center;
   &:hover{
-    margin-top:10px;
+    margin-top:15%;
   }
 `
 

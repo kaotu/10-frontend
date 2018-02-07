@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import Bg from '../Sponsor/BgSponsor'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
+import {compose,lifecycle,withState} from 'recompose'
 
 const Relative = styled.div`
   position: relative;
   width: 100vw;
-  height:100vh;
 `
 const Cloud = styled.img`
   position: absolute;
@@ -22,17 +22,14 @@ const Cloud = styled.img`
 const DivSponsor = styled.div`
   position: relative;
   width: 100vw;
-  top: 15vh;
 `
 const BImg = styled.img`
-  width: 30%; 
-  height: 30%;
+  width: 90%;
   margin-right: 1%;
   margin-left: 1%;
 `
 const SImg = styled.img`
-  width: 25%; 
-  height: 25%;
+  width: 70%;
   margin-right: 1%;
   margin-left: 1%;
 `
@@ -55,33 +52,46 @@ const Topic = H1.extend`
   font-size: 3em;
 `
 
-const Index = () => (
-  <Bg>
-    <Relative>
-    <Cloud src='/static/image/เมฆ-ล่าง.png'/>
-    <DivSponsor className="container d-flex justify-content-center">
-      <div className="row">
-        <div className="col-md-12 text-center">
-          <div className="img-responsive">
-            <div className="row d-flex justify-content-center">
-              {
-                BigSponsor.map((spon, i) => (
-                  <BImg key={i} src={spon.img} />
-                ))
-              }
-            </div>
-            <div className="row d-flex justify-content-center my-4 mx-1">
-              {
-                SmallSponsor.map((spon, i) => (
-                  <SImg key={i} src={spon.img} />
-                ))
-              }
+const Index = props => (
+  <Bg bg={props.check.sponsor} className="d-flex">
+    <Relative className="d-flex align-items-center">
+      <Cloud src='/static/image/เมฆ-ล่าง.png' />
+      <DivSponsor className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="img-responsive">
+              <div className="row d-flex justify-content-center">
+                {
+                  BigSponsor.map((spon, i) => (
+                    <div className="col-6 col-md-4 col-lg-4">
+                      <BImg key={i} src={spon.img} className="pb-2" />
+                    </div>
+                  ))
+                }
+              </div>
+              <div className="row d-flex justify-content-center">
+                {
+                  SmallSponsor.map((spon, i) => (
+                    <div className="col-6 col-md-4 col-lg-4">
+                      <SImg key={i} src={spon.img} className="pb-2" />
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </DivSponsor>
+      </DivSponsor>
     </Relative>
   </Bg>
 )
-export default Index
+export default compose(
+  withState('check','setCheck',''),
+  lifecycle({
+    componentDidMount() {
+      let color = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setCheck(color)
+    }
+    
+  })
+)(Index)
