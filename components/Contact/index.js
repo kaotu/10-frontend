@@ -100,6 +100,7 @@ const FaceDestop = styled.a`
 
 const Space = styled.div`
   z-index:3;
+  top: 10vh;
   flex-direction: column;
 `
 
