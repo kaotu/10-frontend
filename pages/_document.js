@@ -67,14 +67,14 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileColor" content=" #002D40"/> 
           <meta name="theme-color" content=" #002D40"/>
           {this.props.styleTags}
-          <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
+          <div dangerouslySetInnerHTML={{__html: googleTagManager}} />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script
+          <div
           dangerouslySetInnerHTML={{
-            __html: hotjar + googleTagManager
+            __html: hotjar
           }} />
         </body>
       </html>
