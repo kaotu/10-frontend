@@ -68,7 +68,7 @@ const H1 = styled.h1`
   animation: ${LoadText} 1.5s linear infinite;
   @media (max-width:720px) {
     font-size: 2em;
-    margin-top:75%;
+    margin-top:60%;
   }
 `
 
