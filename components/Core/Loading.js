@@ -29,38 +29,38 @@ const SwapIcon = keyframes`
   }
 `
 const LoadText = keyframes`
-@media (max-width:768px) {
   0%{
-    font-size:1.5em;
+    font-size:1em;
   }
   25%{
-    font-size:1.7em;
+    font-size:1.2em;
   }
   50%{
-    font-size:1.8em;
+    font-size:1.3em;
   }
   75%{
-    font-size:1.7em;
+    font-size:1.2em;
   }
   100%{
-    font-size:1.5em;
+    font-size:1em;
   }      
-}
-0%{
-  font-size:2em;
-}
-25%{
-  font-size:1.5em;
-}
-50%{
-  font-size:1.4em;
-}
-75%{
-  font-size:1.5em;
-}
-100%{
-  font-size:2em;
-} 
+`
+const LoadTextDestop = keyframes`
+  0%{
+    font-size:2em;
+  }
+  25%{
+    font-size:1.5em;
+  }
+  50%{
+    font-size:1.4em;
+  }
+  75%{
+    font-size:1.5em;
+  }
+  100%{
+    font-size:2em;
+  } 
 `
 
 const Icon = styled.img`
@@ -82,10 +82,11 @@ const Icon2 = styled.img`
 const H1 = styled.h1`
   margin-top:30%;
   color:#fff;
-  animation: ${LoadText} 1.5s linear infinite;
+  animation: ${LoadTextDestop} 1.5s linear infinite;
   @media (max-width:720px) {
     margin-top:60%;
     padding-top : 10vw;
+    animation: ${LoadText} 1.5s linear infinite;
   }
 `
 

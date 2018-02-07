@@ -129,7 +129,7 @@ const index = () => (
                 <FaceDestop href="https://www.facebook.com/wipcamp/" target="_blank">
                   <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
                 </FaceDestop>
-               
+                
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
                   <ImgCenter src="/static/image/line.svg" className='img-responsive'/>
                 </a>
