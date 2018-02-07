@@ -99,7 +99,8 @@ export default compose(
     
     componentWillMount() {
       
-      console.log("%c 10 I'm Developer.",'background:red; color:#000; display:block; font-size:3em; font-family:Pridi;')
+      console.log("%c We Are 10 Developer. ",'background:red; color:#000; display:block; font-size:3em; font-family:Pridi;')
+      console.log('If you interest our code :) Join WIP Camp #10.')
     },
     
     componentDidMount() {
