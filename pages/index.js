@@ -27,9 +27,17 @@ const FooterBg = styled.div`
 const Overflow = styled.section`
   overflow:hidden;
 `
+const MiniSize = styled.div`
+  @media(orientation:landscape)
+  and (max-width:800px){
+    display:none;
+  }
+`
 
 const index = props => (
-  //  <Loading>
+ <div>
+  <MiniSize>
+    {/* <Loading> */}
     <Scroll>
       <Loading />
       <Relative>
@@ -76,7 +84,10 @@ const index = props => (
         </div>
       </Relative>
     </Scroll>
-  // </Loading> 
+   {/* </Loading> */}
+   </MiniSize>  
+   </div>
+
 );
 
 export default compose(
