@@ -29,6 +29,7 @@ const SwapIcon = keyframes`
   }
 `
 const LoadText = keyframes`
+@media (max-width:768px) {
   0%{
     font-size:1.5em;
   }
@@ -44,6 +45,22 @@ const LoadText = keyframes`
   100%{
     font-size:1.5em;
   }      
+}
+0%{
+  font-size:2em;
+}
+25%{
+  font-size:1.5em;
+}
+50%{
+  font-size:1.4em;
+}
+75%{
+  font-size:1.5em;
+}
+100%{
+  font-size:2em;
+} 
 `
 
 const Icon = styled.img`
@@ -76,7 +93,7 @@ const index = ({show}) => (
   <Bg show={show} className="d-flex justify-content-center align-items-center">
     <Icon src="../../static/image/hanumanscore-new-01.svg" className="d-flex "/>
     <Icon2 src="../../static/image/yakscore-new-01.svg" className="d-flex "/>
-    <H1>กรุณารอเลือกตัวละคร</H1>
+    <H1>กรุณารอ...เลือกตัวละคร</H1>
   </Bg>
 )
 
