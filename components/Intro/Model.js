@@ -34,7 +34,7 @@ const Monkey = styled.img`
     }
     @media (max-width: 450px) {
       left: 50%;
-      transform: translate(-50%, 0%);
+      // transform: translate(-50%, 0%);
     }
 `
 const ScrollMonkey = styled.img`
@@ -58,7 +58,7 @@ const Giant = styled.img`
     }
     @media (max-width: 450px) {
       left: 50%;
-      transform: translate(-50%, 0%);
+      // transform: translate(-50%, 0%);
     }
 `
 const ScrollGiant = styled.img`
@@ -102,7 +102,7 @@ const ModelIndex = props => (
             <Monkey onClick={() => setTeam('ling')} src='/static/image/Moling.svg' />
           </div>
           <div className="col-6 mt-auto text-center">
-            <Giant onClick={() => setTeam('yak')} src='/static/image/Moyak.svg' />
+            <Giant onClick={() => setTeam('yak')} src='/static/image/tossakan.png' />
           </div>
         </div>
       </div>
