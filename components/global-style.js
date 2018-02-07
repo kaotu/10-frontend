@@ -1,13 +1,16 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal } from 'styled-components'
 
-export default injectGlobal`
+export default (colors) => injectGlobal`
   @font-face {
     font-family: 'Pridi';
     src: url('/static/font/Pridi-Light.ttf');
   }
-  body {
+  html {
+    
+    overflow-x: hidden;
+  }
+  body,html  {
     font-family: 'Pridi';
-    overflow-x:hidden;
   }
   p {
     font-size:20px;
@@ -17,5 +20,11 @@ export default injectGlobal`
     background-color:rgba(0,0,0,.3);
     border-radius: 12px;
   }
-
+  .slick-prev,
+  .slick-next {
+    top : 50px !important;
+  }
+  .bm-menu {
+    background-color: ${ colors };
+  }
 `

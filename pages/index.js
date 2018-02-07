@@ -16,6 +16,7 @@ import Loading from "../components/Core/Loading";
 
 const Relative = styled.div`
   position: relative;
+  /* overflow-x:hidden; */
 `;
 
 const FooterBg = styled.div`
@@ -23,18 +24,29 @@ const FooterBg = styled.div`
   background-color: ${props => props.bgColor || ""};
 `;
 
-injectGlobal;
+const Overflow = styled.section`
+  overflow:hidden;
+`
+const MiniSize = styled.div`
+  @media(orientation:landscape)
+  and (max-width:800px){
+    display:none;
+  }
+`
 
 const index = props => (
-  // <Loading>
+ <div>
+  <MiniSize>
+    {/* <Loading> */}
     <Scroll>
+      <Loading />
       <Relative>
-        <section id="home" name="home">
+        <Overflow id="home" name="home">
           <Intro />
-        </section>
-        <section id="sponsor">
+        </Overflow>
+        {/* <section id="sponsor">
           <Sponsor />
-        </section>
+        </section> */}
         <Navbar id="navbar-desktop" />
         <div
           data-spy="scroll"
@@ -51,15 +63,15 @@ const index = props => (
           <section id="where" name="where">
             <Where />
           </section>
-          <section id="when" name="when">
+          <Overflow id="when" name="when">
             <When />
-          </section>
-          <section id="faqs" name="faqs">
+          </Overflow>
+          <Overflow id="faqs" name="faqs">
             <Faqs />
-          </section>
-          <section id="contact" name="contact" className="element">
+          </Overflow>
+          <Overflow id="contact" name="contact" className="element">
             <Contact />
-          </section>
+          </Overflow>
           <FooterBg
             bgColor={props.color.nav}
             className="d-flex justify-content-center align-items-center text-white"
@@ -72,15 +84,19 @@ const index = props => (
         </div>
       </Relative>
     </Scroll>
-  // </Loading>
+   {/* </Loading> */}
+   </MiniSize>  
+   </div>
+
 );
 
 export default compose(
   withState("color", "setColor", ""),
   lifecycle({
     componentDidMount() {
-      let theme = JSON.parse(window.localStorage.getItem("color"));
-      this.props.setColor(theme);
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setColor(theme)
+      injectGlobal(theme.nav)
     }
   })
 )(index);

@@ -1,7 +1,6 @@
 import react from 'react'
 import Bg from '../Core/BgStory.js'
 import styled from 'styled-components'
-import HeartBox from './HeartBox'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 
@@ -59,8 +58,8 @@ const ContentBg = Bg.extend`
 
 const Space = styled.div`
   z-index:3;
-  margin-top: 0%;
-  margin-bottom: 0%;
+  margin-top: 6%;
+  margin-bottom: 10%;
 `
 
 const Relative = styled.div`
@@ -71,8 +70,8 @@ const Relative = styled.div`
 const Bgheartbox = styled.img`
   position : absolute;
   z-index: 1;
-  width : 140%;
-  left : -20%;
+  width : 120%;
+  left : -10%;
   bottom: 0vh;
 `
 const Bgright = styled.img`
@@ -104,30 +103,30 @@ const index = () => (
             <H2>ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3">
-              <a href="tel://083-082-2189"><ImgLeft src="/static/image/ContactPhone.png" /></a>
-                <p className="mt-3"><strong>พี่วิปโป้: 08-3082-2189</strong></p>
+              <a href="tel://02-107-3576"><ImgLeft src="/static/image/ContactPhone.png" /></a>
+                <p className="mt-3"><strong>พี่วิปโป้: 02-107-3576</strong></p>
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
                 <a href="https://www.facebook.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/facebook ci logo.png" className='img responsive'/>
+                  <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
                 </a>
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
-                  <ImgCenter src="/static/image/LINEa ci logo.png" className='img-responsive'/>
+                  <ImgCenter src="/static/image/line.svg" className='img-responsive'/>
                 </a>
                 <a href="https://twitter.com/WIPCamp" target="_blank">
-                  <ImgCenter src="/static/image/Twiiter ci logo.png" />
+                  <ImgCenter src="/static/image/twitter.svg" className='img responsive'/>
                 </a>
                 <a href="https://www.instagram.com/wipcamp/" target="_blank">
-                  <ImgCenter src="/static/image/ig ci logo.png" />
+                  <ImgCenter src="/static/image/instagram.svg" className='img responsive'/>
                 </a>
                 <a href="https://www.youtube.com/channel/UC_Lhso9PxSlxNuw2wG9zYIA" target="_blank">
-                  <ImgCenter src="/static/image/Youtube ci logo.png" />
+                  <ImgCenter src="/static/image/youtube.svg" className='img responsive'/>
                 </a>
                 <Linerespon />
               </Line>
               <div className="col-sm-3 col-md-3">
-                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" /></a>
+                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" className='img responsive' /></a>
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>

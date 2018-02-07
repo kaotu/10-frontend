@@ -18,13 +18,13 @@ const Box1 = styled.div`
   width: 46vw;
   min-height: 30hw;    
   padding: 1vw;
-  background-color:#CCFFFF;
+  background-color:${props => props.color || ''};
   margin-top:1vw;
 	margin-bottom:1vw;
 	border-radius: 10px;
   &.arrow_box {
     position: relative;
-    background: #CCFFFF;
+    background: ${props => props.color || ''};
   }
   &.arrow_box:after {
     right: 100%;
@@ -35,7 +35,7 @@ const Box1 = styled.div`
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color:#CCFFFF;
+    border-right-color:${props => props.color || ''};
     border-width: 1vw;
     margin-top: -1vw;
   }
@@ -44,13 +44,13 @@ const Box = styled.div`
 width: 46vw;
 min-height: 30hw;    
 padding: 1vw;
-background-color:#FFFF66;
+background-color:#fff;
 margin-top:1vw;
 margin-bottom:1vw;
 border-radius: 10px;
 &.arrow_box {
   position: relative;
-  background: #FFFF66;
+  background: #FFf;
 }
 &.arrow_box:after {
 	left: 100%;
@@ -59,7 +59,7 @@ border-radius: 10px;
 	content: " ";
 	position: absolute;
 	pointer-events: none;
-	border-left-color:#FFFF66;
+	border-left-color:#FFF;
 	border-width: 1vw;
 	margin-top: -1vw;
 }
@@ -78,7 +78,7 @@ const FAQs = [
 ]
 
 const Black = styled.p`
-  color: #000;
+  color: #000000;
 `
 
 const Content = props => (
@@ -91,7 +91,7 @@ const Content = props => (
               <ImgLefe src={props.iconleft.iconl} />
             </div>
             <Zindex className="col-6">
-              <Box1 className=" arrow_box" ><Black dangerouslySetInnerHTML={{__html: data.Q}} /></Box1>
+              <Box1 color={props.team.faqs} className=" arrow_box" ><Black dangerouslySetInnerHTML={{__html: data.Q}} /></Box1>
             </Zindex>
             <div className="col">
             </div>
@@ -114,12 +114,15 @@ const Content = props => (
 export default compose(
   withState('iconleft','setIconleft',''),
   withState('iconright','setIconright',''),
+  withState('team','setTeam',''),
   lifecycle({
     componentDidMount() {
       let iconl = JSON.parse(window.localStorage.getItem("color"))
       this.props.setIconleft(iconl)
       let iconr = JSON.parse(window.localStorage.getItem("color"))
       this.props.setIconright(iconr)
+      let team = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setTeam(team)
     }
   })
 )(Content)

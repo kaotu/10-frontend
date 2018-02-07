@@ -1,19 +1,18 @@
 import react from 'react'
 import styled from 'styled-components'
 import Content from '../FAQs/ContentFAQs'
+import {compose,lifecycle,withState} from 'recompose'
 
 const ImgLefe = styled.img`
   width:20vw;
   @media (max-width:720px) {
-    width:20vw;
-    margin: auto;
+    width:55%;
   }
 `
 const ImgRight = styled.img`
   width:10vw;
   @media (max-width:720px) {
-    width:20vw;
-    right:0;
+    width:55%;
   }  
 `
 
@@ -26,7 +25,7 @@ const Box = styled.div`
   border-radius: 10px; 
   padding:1vw;
   @media (max-width:720px) {
-    width:45vw;
+    width:100%;
   }
   ${props=>props.primary && `
     background-color:#FFFFFF;
@@ -36,30 +35,40 @@ const Box = styled.div`
 
 const Black = styled.p`
   color: #000000;
+  font-size:1em
 `
-
-
 const ContentRespon = (props) => (
-  <div className="container ">
-    <div className="row">
-      <div className="col-4">
-        <div className=" align-self-center">
-          <ImgLefe src="/static/image/hanumanscore-new-01.svg" />
-        </div>
+  <div className="container">
+    <div className="row d-flex">
+      <div className="col-6 pb-1">
+        <ImgLefe src={props.iconl.iconl} className="ml-auto"/>
       </div>
-      <div className="col-8">
-        <Box><Black dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
+      <div className="col-6 pb-1"> 
+        <ImgRight src={props.iconr.iconr}/>
+      </div>   
+    </div>
+        <div className="row">
+      <div className="col-12">
+        <Box className="px-3"><Black dangerouslySetInnerHTML={{__html: props.Q}}/></Box>
       </div>
     </div>
     <div className="row">
-      <div className="col-8">
-        <Box primary><Black dangerouslySetInnerHTML={{__html: props.A}}/></Box>
-      </div>
-      <div className="col-4">
-          <ImgRight src="/static/image/yakscore-new-01.svg" />
+      <div className="col-12">
+        <Box primary className="px-3"><Black dangerouslySetInnerHTML={{__html: props.A}}/></Box>
       </div>
     </div>
   </div>
 
 )
-export default ContentRespon
+export default compose(
+  withState('iconl','setIconl',''),
+  withState('iconr','setIconr',''),
+  lifecycle({
+    componentDidMount() {
+      let iconr = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setIconr(iconr)
+      let iconl = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setIconl(iconl)
+    }
+  })
+)(ContentRespon)

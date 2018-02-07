@@ -23,6 +23,7 @@ const DisplayMoblie = styled.div`
   margin-bottom: 10%;
   @media (min-width: 720px) {
     display: none;
+    
   }
 `;
 const DisplayMoblie2 = styled.div`
@@ -34,10 +35,19 @@ const DisplayMoblie2 = styled.div`
 const Space = styled.div`
   margin-top: 6%;
   z-index : 3;
+  @media (max-width: 320px) {
+    margin-top: 15%;
+  }
+  
 `
 
 const Relative = styled.div`
   position : relative;
+
+`
+
+const H7 = H1.extend`
+  margin-top : 4vw;
 `
 
 const index = props => (
@@ -47,7 +57,7 @@ const index = props => (
       <div className="container-fluid">
         <div className="row">
           <Space className="col-md-12">
-            <H1 className="text-center">FAQs</H1>
+            <H7 className="text-center">FAQs</H7>
             <H2 className="text-center">คำถามที่พบบ่อย ?</H2>
             <Fireflyy/>
             <DisplayMoblie2 />
