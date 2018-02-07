@@ -172,8 +172,8 @@ export default compose(
   state,
   lifecycle({
     componentDidMount() {
-      let count = 0
-      setInterval( () => { this.props.setCheck(count) ; count++ ; count > 3 ? count = 0 : null}, 2000);
+      // let count = 0
+      // setInterval( () => { this.props.setCheck(count) ; count++ ; count > 3 ? count = 0 : null}, 2000);
     }
   })
 )(index)
