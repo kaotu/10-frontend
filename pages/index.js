@@ -51,9 +51,9 @@ const index = props => (
           <section id="who" name="who">
             <Who />
           </section>
-          <Overflow id="where" name="where">
+          <section id="where" name="where">
             <Where />
-          </Overflow>
+          </section>
           <Overflow id="when" name="when">
             <When />
           </Overflow>
