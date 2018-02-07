@@ -11,6 +11,24 @@ const Bg = styled.section`
   display: ${props => props.show ? 'block' : 'none !important'};
   transition: .4s;
 `
+const SwapIcon = keyframes`
+  0%{
+    opacity:1;
+  }
+  25%{
+    opacity:0;
+  }
+  50%{
+    opacity:1;
+  }
+  75%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+`
+
 const Icon = styled.img`
   width:20%;
   position: absolute;
@@ -22,6 +40,7 @@ const Icon = styled.img`
 const Icon2 = styled.img`
   width:20%;
   position: absolute;
+  animation: ${SwapIcon} 3s linear infinite;
   @media (max-width:720px) {
     width: 50%;
   }
@@ -29,6 +48,7 @@ const Icon2 = styled.img`
 const H1 = styled.h1`
   margin-top:30%;
   color:#fff;
+  animation: ${SwapIcon} 1.5s linear infinite;
   @media (max-width:720px) {
     font-size: 2em;
     margin-top:60%;
