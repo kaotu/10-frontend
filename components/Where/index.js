@@ -6,18 +6,26 @@ import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
 
 const Local = styled.img`
-  width:55%;
+  width:75%;
   margin-top : 3%;
   margin-bottom: 5%; 
-  @media (max-width:320px) {
-    width:95%;
+  @media (min-width:320px) {
+    width:100%;
+  }
+  @media (min-width:412px) {
+    width:100%;
+    margin-top : 6%;
+    margin-bottom: 0%; 
   }
 `
 
 const Mobile = styled.div`
-@media (max-width:320px) {
-  margin-top : 12%;
-}
+  @media (min-width:320px) {
+    margin-top : 12%;
+  }
+  @media (min-width:412px) {
+    margin-top : 5%;
+  }
   @media (max-width:720px) {
     text-align:center;
   }
@@ -84,6 +92,14 @@ const Space = styled.div`
   margin-top: 6%;
   margin-bottom: 10%;
   top:0vw;
+  @media (min-width:320px) {
+    margin-top: 0%;
+    margin-bottom: 17%;
+  }
+  @media (min-width:412px) {
+    margin-top: 6%;
+    margin-bottom: 10%;
+  }
 `
 
 const Bgmountain = styled.img`
@@ -92,11 +108,16 @@ const Bgmountain = styled.img`
   margin-top : -95%;
   @media (min-width:320px) {
     margin-top : -90%;
-    bottom : 0vh;
-}
+  }
+  @media (min-width:375px) {
+    margin-top : -68%;
+  }
+  @media (min-width:412px) {
+    margin-top : -80%;
+  }
   @media (min-width:768px) {
     margin-top : -90%;
-}
+  }
 `
 
 const Zindex = styled.div`
@@ -123,8 +144,8 @@ const index = () => (
             <a href="https://goo.gl/fC42M6" target="_blank" >
               <Local className="mb-1" src="/static/image/Map2.png" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
-            {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
-            <Font3>คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
+            {/* <p className="">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
+            <Font3 className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
             <Font1>คณะเทคโนโลยีสารสนเทศ</Font1>
             <Font2>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font2>
           </div>

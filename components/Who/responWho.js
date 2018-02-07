@@ -31,21 +31,11 @@ const WhoWrapper = styled.div`
   min-height: 100px
 `
 
-export default class AdaptiveHeight extends Component {
-  render() {
-    var settings = {
-      className: '',
-      dots: true,
-      infinite: true,
-      slidesToShow: 0.9,
-      slidesToScroll: 1,
-      adaptiveHeight: true
-    };
-    return (
-      <div className="container">
+const index = () => (
+
+     <div className="container">
         <div className="row">
           <div className="col">
-            <Slider {...settings}>
             {
               IconData.map((data,i)=>
               <div key={i} className="container-fluid">
@@ -63,10 +53,9 @@ export default class AdaptiveHeight extends Component {
               </div>
               )
             }
-            </Slider>
-          </div>
+            </div>
           </div>
       </div>
-    );
-  }
-}
+)
+
+export default index
