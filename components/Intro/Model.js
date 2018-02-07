@@ -20,6 +20,24 @@ const MoveUpDown = keyframes`
   }
 `
 const Monkey = styled.img`
+<<<<<<< HEAD
+    position : relative;
+    left: 0vw;
+    bottom: 0vh;
+    height : 40vh;
+    cursor: pointer;
+    transition: all 550ms ease-in-out;
+    &:hover{
+      transform: scale(1.2);
+    }
+    @media (min-width: 576px) {
+      height : 50vh;
+    }
+    @media (max-width: 450px) {
+      left: 50%;
+      // transform: translate(-50%, 0%);
+    }
+=======
   position : relative;
   left: 0vw;
   bottom: 0vh;
@@ -36,6 +54,7 @@ const Monkey = styled.img`
     left: 50%;
     transform: translate(-50%, 0%);
   }
+>>>>>>> 77536f1301faafd46d1dd22a312ab49247b8fbf8
 `
 const ScrollMonkey = styled.img`
   position: relative;
@@ -45,6 +64,23 @@ const ScrollMonkey = styled.img`
   top:0;
 `
 const Giant = styled.img`
+<<<<<<< HEAD
+    position : relative;
+    bottom: 0vh;
+    height : 40vh;
+    cursor: pointer;
+    transition: all 550ms ease-in-out;
+    &:hover{
+      transform: scale(1.2);
+    }
+    @media (min-width: 576px) {
+      height : 50vh;
+    }
+    @media (max-width: 450px) {
+      left: 50%;
+      // transform: translate(-50%, 0%);
+    }
+=======
   position : relative;
   bottom: 0vh;
   height : 40vh;
@@ -60,6 +96,7 @@ const Giant = styled.img`
     left: 50%;
     transform: translate(-50%, 0%);
   }
+>>>>>>> 77536f1301faafd46d1dd22a312ab49247b8fbf8
 `
 const ScrollGiant = styled.img`
     position: relative;
@@ -102,7 +139,7 @@ const ModelIndex = props => (
             <Monkey onClick={() => setTeam('ling')} src='/static/image/Moling.svg' />
           </div>
           <div className="col-6 mt-auto text-center">
-            <Giant onClick={() => setTeam('yak')} src='/static/image/Moyak.svg' />
+            <Giant onClick={() => setTeam('yak')} src='/static/image/tossakan.png' />
           </div>
         </div>
       </div>

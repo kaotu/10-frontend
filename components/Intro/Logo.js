@@ -101,7 +101,7 @@ const Scroll = styled.img`
 const Logo = props => (
   <Bg>
     <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
-    <LogoSIT src="/static/image/LogoSIT.png" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
+    <LogoSIT src="/static/image/LogoCana.png" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
     <Link to="sponsor" smooth={true}>
       <Scroll src={props.check.scroll} />
     </Link>
