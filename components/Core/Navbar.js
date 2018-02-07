@@ -28,7 +28,7 @@ const Regis = styled.button`
   text-align:center;
   padding:.3em .2em;
   transition: all 0.1s;
-  margin-bottom:5%;
+  margin-bottom:1%;
   margin-right:1.5vw;
   z-index:1000;
   box-shadow: 0px 6px 0px #871612;
@@ -163,9 +163,9 @@ class Navbar extends React.Component {
                 ))}
               </nav>
             </div>
-            <a href='https://itim.wip.camp' target="_blank">
+            {/* <a href='https://itim.wip.camp' target="_blank"> */}
               <Regis>สมัครเลย</Regis>
-            </a>
+            {/* </a> */}
           </div>
           {/* <GameBut /> */}
         </div>
