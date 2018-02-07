@@ -6,7 +6,7 @@ import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
 
 const Local = styled.img`
-  width:75%;
+  width:55%;
   margin-top : 3%;
   margin-bottom: 5%; 
   @media (min-width:320px) {
