@@ -28,8 +28,6 @@ const Overflow = styled.section`
   overflow-x:hidden;
 `
 
-injectGlobal;
-
 const index = props => (
   //  <Loading>
     <Scroll>
@@ -84,8 +82,9 @@ export default compose(
   withState("color", "setColor", ""),
   lifecycle({
     componentDidMount() {
-      let theme = JSON.parse(window.localStorage.getItem("color"));
-      this.props.setColor(theme);
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setColor(theme)
+      injectGlobal(theme.nav)
     }
   })
 )(index);
