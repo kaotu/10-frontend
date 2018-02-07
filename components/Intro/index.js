@@ -8,16 +8,18 @@ import BgIntro from '../Intro/BgIntro'
 import Logo from './Logo'
 import Mountain from './Mountain'
 import Cloud from './Cloud'
+import CloudBack from './CloudBack'
 import Model from './Model'
 
 const Index = (props) => (
   <div className="row">
     <div className="col-12">
       <BgIntro theme={props.scrolld.index}>
-        <Logo />
+        <CloudBack/>
         <Mountain />
-        <Cloud />
         <Model />
+        <Cloud />
+        <Logo />
       </BgIntro>
     </div>
   </div>

@@ -9,8 +9,8 @@ const Bg = styled.div`
 `
 const MountainLeft = styled.img`
     position : absolute;
-    z-index:0;
-    height : 70vh;
+    z-index:2;
+    height : 100vh;
     bottom: 0vh;
     left : 0vw;
     @media (min-width: 1024px) {
@@ -20,23 +20,23 @@ const MountainLeft = styled.img`
 `
 const MountainCenter = styled.img`
     position : absolute;
-    z-index:2;
+    z-index:4;
     height : 80vh;
     bottom:0vh;
     left: 50%;
     transform: translate(-50%, 0%);
     @media (min-width: 768px) {
-        z-index:1; 
+        z-index:3; 
     }
 `
 const MountainRight = styled.img`
     position : absolute;
-    z-index:1;
-    height : 50vh;
+    z-index:3;
+    height : 100vh;
     bottom: 0vh;
     right: 0vw;
     @media (min-width: 768px) {
-        z-index:2; 
+        z-index:4; 
     }
     @media (min-width: 1024px) {
         height : 80vh;

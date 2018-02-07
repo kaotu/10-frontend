@@ -6,7 +6,7 @@ const Bg = styled.div`
     position: relative;
     height: 100vh;
     width: 100vw;
-    top: -300vh;
+    top: -200vh;
 `
 const MoveUpDown = keyframes`
   0% {
