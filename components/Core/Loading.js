@@ -1,7 +1,66 @@
 import react from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes} from 'styled-components'
 import {compose, withState, lifecycle} from 'recompose'
 
+const FadeBG = keyframes`
+70%{
+  opacity:1;
+}
+100%{
+  opacity:0;
+}
+`
+const SwapIcon = keyframes`
+0%{
+  opacity:1;
+}
+25%{
+  opacity:1;
+}
+50%{
+  opacity:0;
+}
+75%{
+  opacity:0;
+}
+100%{
+  opacity:1;
+}
+`
+const LoadText = keyframes`
+0%{
+  font-size:1em;
+}
+25%{
+  font-size:1.2em;
+}
+50%{
+  font-size:1.3em;
+}
+75%{
+  font-size:1.2em;
+}
+100%{
+  font-size:1em;
+}      
+`
+const LoadTextDestop = keyframes`
+0%{
+  font-size:2em;
+}
+25%{
+  font-size:1.5em;
+}
+50%{
+  font-size:1.4em;
+}
+75%{
+  font-size:1.5em;
+}
+100%{
+  font-size:2em;
+} 
+`
 const Bg = styled.section`
   height:100%;
   width:100%;
@@ -9,58 +68,8 @@ const Bg = styled.section`
   z-index: 99999;
   position: fixed;
   display: ${props => props.show ? 'block' : 'none !important'};
-  transition: .4s;
-`
-const SwapIcon = keyframes`
-  0%{
-    opacity:1;
-  }
-  25%{
-    opacity:1;
-  }
-  50%{
-    opacity:0;
-  }
-  75%{
-    opacity:0;
-  }
-  100%{
-    opacity:1;
-  }
-`
-const LoadText = keyframes`
-  0%{
-    font-size:1em;
-  }
-  25%{
-    font-size:1.2em;
-  }
-  50%{
-    font-size:1.3em;
-  }
-  75%{
-    font-size:1.2em;
-  }
-  100%{
-    font-size:1em;
-  }      
-`
-const LoadTextDestop = keyframes`
-  0%{
-    font-size:2em;
-  }
-  25%{
-    font-size:1.5em;
-  }
-  50%{
-    font-size:1.4em;
-  }
-  75%{
-    font-size:1.5em;
-  }
-  100%{
-    font-size:2em;
-  } 
+  transition: all 1s ease-in-out ;
+  animation: ${FadeBG} 2.5s ;
 `
 
 const Icon = styled.img`
@@ -90,8 +99,8 @@ const H1 = styled.h1`
   }
 `
 
-const index = ({show}) => (
-  <Bg show={show} className="d-flex justify-content-center align-items-center">
+const index = ({show ,delay }) => (
+  <Bg show={show} className=" d-flex justify-content-center align-items-center">
     <Icon src="../../static/image/hanumanscore-new-01.svg" className="d-flex "/>
     <Icon2 src="../../static/image/yakscore-new-01.svg" className="d-flex "/>
     <H1>กรุณารอ...เลือกตัวละคร</H1>
