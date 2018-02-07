@@ -8,6 +8,14 @@ const Block = styled.div`
   padding: 1em;
 	border-radius: 1em;
 	margin-left : 0.1vw;
+	width:40%;
+
+	@media (min-width: 1024px) {
+		width:34%;
+	}
+	@media (min-width: 1440px) {
+		width:33%;
+	}
 }
   :after, :before {
 	bottom: 100%;

@@ -103,7 +103,7 @@ export default compose(
     componentDidMount() {
       setTimeout(() => {
         this.props.setShow(false)
-      }, 3000);
+      }, 2000);
     }
   })
 )(index)
