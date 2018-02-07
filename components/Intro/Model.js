@@ -126,7 +126,8 @@ export default compose(
         cloud: '../../static/image/เมฆแดง.png',
         faqs: '#FBFFC9',
         index: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
-        sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))'
+        sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))',
+        icontran: '../../static/image/when/yakscore.png'
       }
       const teammongkey = {
         what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',
@@ -139,7 +140,8 @@ export default compose(
         cloud: '../../static/image/CloudBack.svg',
         faqs: '#CCFFFF',
         index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
-        sponsor: '#B7CFEB'
+        sponsor: 'linear-gradient(to top,rgba(0,0,0,.3),#B7CFEB,#B7CFEB,#B7CFEB)',
+        icontran: '../../static/image/when/hanumanscore.png'
       }
       team == 'yak' ?
         window.localStorage.setItem("color", JSON.stringify(teamyak)) :

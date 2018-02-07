@@ -52,7 +52,7 @@ const Firefly = Fire.extend`
     height: 2vh;
     left: 30%;
     top: 20vh;
-    background-color: #aceb0e;
+    background-color: #FFFF00;
     border-radius: 50%;
     box-shadow: 0 0 10vh yellow;
     
@@ -68,9 +68,9 @@ const Firefly2 = Fire.extend`
     height: 2vh;
     right: 25%;
     top: 7vh;
-    background-color: #aceb0e;
+    background-color: #FFFF00;
     border-radius: 50%;
-    box-shadow: 0 0 10vh rgba(172, 235, 14, 0.8);
+    box-shadow: 0 0 10vh yellow;
     
     animation: ${firefly} 20s linear infinite;
     @media(max-width: 767px){
@@ -83,9 +83,9 @@ const Firefly3 = Fire.extend`
     height: 2vh;
     top: 1vh;
     left: 15vw;
-    background-color: #aceb0e;
+    background-color: #FFFF00;
     border-radius: 50%;
-    box-shadow: 0 0 10vh rgba(172, 235, 14, 0.8);
+    box-shadow: 0 0 10vh yellow;
     
     animation: ${firefly} 30s linear infinite;
     @media(max-width: 767px){
@@ -99,9 +99,9 @@ const Firefly4 = Fire.extend`
     height: 2vh;
     top: 100vh;
     right: 45vw;
-    background-color: #aceb0e;
+    background-color: #FFFF00;
     border-radius: 50%;
-    box-shadow: 0 0 50vh rgba(172, 235, 14, 0.8);
+    box-shadow: 0 0 50vh yellow;
     
     animation: ${firefly} 25s linear infinite;
     @media(max-width: 767px){
@@ -115,9 +115,9 @@ const Firefly5 = Fire.extend`
     height: 2vh;
     top: 24vh;
     right: 50vw;
-    background-color: #aceb0e;
+    background-color: #FFFF00;
     border-radius: 50%;
-    box-shadow: 0 0 10vh rgba(172, 235, 14, 0.8);
+    box-shadow: 0 0 10vh yellow;
     
     animation: ${firefly} 25s linear infinite;
     @media(max-width: 767px){
@@ -131,9 +131,9 @@ const Firefly6 = Fire.extend`
     height: 2vh;
     right: 5%;
     top: 10vh;
-    background-color: #aceb0e;
+    background-color: #FFFF00;
     border-radius: 50%;
-    box-shadow: 0 0 10vh rgba(172, 235, 14, 0.8);
+    box-shadow: 0 0 10vh yellow;
     
     animation: ${firefly} 37s linear infinite;
     @media(max-width: 767px){
