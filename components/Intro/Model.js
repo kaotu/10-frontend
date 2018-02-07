@@ -118,7 +118,7 @@ export default compose(
         iconr: '../../static/image/hanumanscore-new-01.svg',
         scroll: '../../static/image/ScrollYak.png',
         cloud: '../../static/image/เมฆแดง.png',
-        faqs: '#FFFF66',
+        faqs: '#FBFFC9',
         index: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
         sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))'
       }
