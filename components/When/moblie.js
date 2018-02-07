@@ -59,7 +59,7 @@ const P = styled.p`
 const Moblie = () => (
   <Bg >
     <div className="container">
-      <div className="row">
+      <div className="row justify-content-center">
         <Div className="col-12">
           <H1 className="text-center font-weight-bold">WHEN</H1>
           <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
@@ -67,6 +67,7 @@ const Moblie = () => (
       </div>
     </div>
     <div className="container">
+    <div className="row justify-content-center">
         <div className="row col-12 justify-content-center">
           <Box1>
             <P>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</P>
@@ -87,6 +88,7 @@ const Moblie = () => (
             <P>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</P>
           </Box1>
           </div>  
+          </div>
           </div>
   </Bg>
 )
