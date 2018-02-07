@@ -20,9 +20,10 @@ width:10em;
   } 
 `
 const Div = styled.div`
-  @media (min-width: 320px) {
-    margin-top:10%;
+    margin-top:25%;
     margin-bottom: 5%;
+  @media (min-width: 412px) {
+    margin-top:15%;
   }
 `
 const Moutain = styled.img`

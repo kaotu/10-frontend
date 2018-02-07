@@ -50,8 +50,8 @@ const Box1 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    top: 18em;
-    left: 10em; 
+    top: 20em;
+    left: 9em; 
     padding:.5em 3em;
   }
 `
@@ -132,6 +132,9 @@ const HideDesktop = styled.div`
 const Space = styled.div`
   margin-top: 15%;
   margin-bottom: 10%;
+  @media (min-width:412px) {
+    margin-top: 15%;
+  }
   @media (min-width:768px) {
     margin-top: 15%;
   }
@@ -147,7 +150,7 @@ const Bgtop = styled.img`
 position: absolute;
 top: 0vh;
 width : 100.6%;
-margin-top : -1
+margin-top : -1;
 @media (min-width:768px) {
   margin-top : 0;
 }
@@ -192,9 +195,6 @@ const IconTimeline4 = styled.img`
 const Bggradient = styled.div`
 background: ${props => props.themeColor || ''};
 `
-const H7 = H1.extend`
-  margin-top : 2vw;
-`
 
 const index = props => (
   <Bggradient themeColor={props.bg.when} className="">
@@ -206,13 +206,12 @@ const index = props => (
         <div className="row">
           <Space className="col-12 col-sm-12 col-md-6 ">
             <Head>
-              <H7 className="text-center">WHEN</H7>
+              <H1 className="text-center">WHEN</H1>
               <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
             </Head>
           </Space>
           <Space2 className="col-12 col-sm-12 col-md-12  ">
-            {/* <Img src="/static/image/Climming.svg" className="rounded float-right" /> */}
-            
+              
             <Box1  className="text-center">
               <IconTimeline1 src={props.box1|| props.bg.icontran}/>
               <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>

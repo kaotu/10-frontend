@@ -116,7 +116,7 @@ const H4 = styled.p`
 `
 
 const H7 = H1.extend`
-  margin-top : 16vh;
+  margin-top : 10vh;
   @media (min-width: 1024px) {
     margin-top: 20vh;
   }

@@ -96,6 +96,12 @@ const index = props => (
 export default compose(
   withState("color", "setColor", ""),
   lifecycle({
+    
+    componentWillMount() {
+      
+      console.log("%c 10 I'm Developer.",'background:red; color:#000; display:block; font-size:3em; font-family:Pridi;')
+    },
+    
     componentDidMount() {
       let theme = JSON.parse(window.localStorage.getItem("color"))
       this.props.setColor(theme)

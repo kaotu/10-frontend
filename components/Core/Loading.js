@@ -31,19 +31,19 @@ const SwapIcon = keyframes`
 const LoadText = keyframes`
 @media (max-width:768px) {
   0%{
-    font-size:0.8em;
+    font-size:1.5em;
   }
   25%{
-    font-size:0.5em;
+    font-size:1.7em;
   }
   50%{
-    font-size:0.9em;
+    font-size:1.8em;
   }
   75%{
-    font-size:0.7em;
+    font-size:1.7em;
   }
   100%{
-    font-size:0.8em;
+    font-size:1.5em;
   }      
 }
 0%{
@@ -84,8 +84,8 @@ const H1 = styled.h1`
   color:#fff;
   animation: ${LoadText} 1.5s linear infinite;
   @media (max-width:720px) {
-    font-size: 2em;
     margin-top:60%;
+    padding-top : 10vw;
   }
 `
 
