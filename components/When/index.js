@@ -214,19 +214,19 @@ const index = props => (
               
             <Box1  className="text-center">
               <IconTimeline1 src={props.box1|| props.bg.icontran}/>
-              <Time>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</Time>
+              <Time>10 ก.พ. 61 <br /> เปิดรับสมัคร</Time>
             </Box1>
             <Box2  className="text-center">
             <IconTimeline2 src={props.box2|| props.bg.icontran}/>
-              <Time>11 มี.ค 61 <br /> วันปิดรับสมัคร</Time>
+              <Time>11 มี.ค 61 <br /> ปิดรับสมัคร</Time>
             </Box2>
             <Box3  className="text-center">
             <IconTimeline3 src={props.box3|| props.bg.icontran}/>
-              <Time>31 มี.ค 61 <br /> วันประกาศผล</Time>
+              <Time>31 มี.ค 61 <br /> ประกาศผล</Time>
             </Box3>
             <Box4 className="text-center">
             <IconTimeline4 src={props.box4|| props.bg.icontran}/>
-              <Time>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</Time>
+              <Time>30 พ.ค - 3 มิ.ย 61 <br /> เปิดค่าย</Time>
             </Box4>
           </Space2>
         </div>
