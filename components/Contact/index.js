@@ -58,16 +58,16 @@ const ContentBg = Bg.extend`
 
 const Space = styled.div`
   z-index:3;
-  margin-top: 20%;
+  margin-top: 18%;
   margin-bottom: 10%;
-  @media(max-width:575px) {
+  @media(min-width:575px) {
     margin-top: 6%;
   margin-bottom: 10%;
   @media (min-width: 412px) {
     margin-top: 15%;
   }
   @media (min-width: 1024px) {
-    margin-top: 8vh;
+    margin-top: 10%;
   }
 `
 
@@ -102,6 +102,16 @@ const TextDeco = styled.a`
     text-decoration:none;
   }
 `
+const FaceMobile = styled.a`
+@media (min-height : 416px){
+  display : none;
+}
+`
+const FaceDestop = styled.a`
+@media (max-height : 415px){
+  display : none;
+}
+`
 
 const index = () => (
 <div>
@@ -122,9 +132,13 @@ const index = () => (
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
-                <a href="fb://wipcamp/" target="_blank">
+                <FaceMobile href="fb://page/250617067968">
                   <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
-                </a>
+                </FaceMobile>
+                <FaceDestop href="https://www.facebook.com/wipcamp/" target="_blank">
+                  <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
+                </FaceDestop>
+               
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
                   <ImgCenter src="/static/image/line.svg" className='img-responsive'/>
                 </a>

@@ -36,50 +36,22 @@ const LogoWip = styled.img`
   /* margin-left: -10vw; */
   animation-name: ${FadeOut};
   animation-duration: 2s;
-  @media (min-width: 412px) {
-    width: 100%;
-    /* margin-left: 0; */
-  }
-  @media (min-width: 576px) {
-    width: 80%;
-    /* margin-top: 5vh; */
-    /* margin-left: 10vw; */
-  }
-  @media (min-width: 768px) {
-    width: 70%;
-    /* margin-top: 5vh;
-    margin-left: 15vw; */
-  }
-  @media (min-width: 1024px) {
-    width: 50%;
-    /* margin-top: 5vh;
-    margin-left: 25vw; */
+  @media (min-width:1024px) {
+    width: 48%;
   }
 `
 const LogoSIT = styled.img`
   position: relative;
   z-index: 8;
-  width: 70%;
+  width: 50%;
   margin-top: 0vh;
+  filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
   /* margin-left: 15vw; */
   animation-name: ${FadeOut};
   animation-duration: 2s;
-  @media (min-width: 412px) {
-    width: 50%;
-    /* margin-left: 25vw; */
+  @media (min-width:1024px) {
+    width: 20%;
   }
-  @media (min-width: 576px) {
-    width: 40%;
-    /* margin-left: 30vw; */
-  }
-  @media (min-width: 768px) {
-    width: 30%;
-    /* margin-left: 35vw; */
-  }
-  @media (min-width: 1024px) {
-    width: 50%;
-    /* margin-left: 40vw; */
-  } 
 `
 const Font = styled.h4`
   position: absolute;
@@ -100,8 +72,14 @@ const Scroll = styled.img`
 
 const Logo = props => (
   <Bg className="text-center">
-    <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
-    <LogoSIT src="/static/image/LogoCana.svg" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
+    <div className="row">
+      <div className="col-12">
+        <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
+      </div>
+      <div className="col-12 img-responsive">
+        <LogoSIT src="/static/image/LogoCana.svg" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
+      </div>
+    </div>
     <Link to="what" smooth={true}>
       <Scroll src={props.check.scroll} />
     </Link>
