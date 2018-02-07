@@ -7,7 +7,7 @@ const Bg = styled.div`
 `
 const SlideCloud = keyframes`
     0% {
-        left: 0%
+        left: -100%
     }
 
     100% {
@@ -16,11 +16,11 @@ const SlideCloud = keyframes`
 `
 const SlideCloud2 = keyframes`
     0% {
-        left: -102%
+        left: -100%
     }
 
     100% {
-        left: 98%
+        left: 100%
     }
 `
 const CloudBack = styled.div`
@@ -31,7 +31,7 @@ const CloudBack = styled.div`
     width:100vw;
     background: url('/static/image/CloudBG.svg');
     // background: url(${props => props.cloud || ''}) repeat 0 0;
-    animation: ${SlideCloud} 175s linear normal none infinite ;
+    animation: ${SlideCloud} 60s linear normal none infinite ;
     background-repeat: repeat-x;
       @media (min-width: 768px) {
         height:70vh;
@@ -48,7 +48,7 @@ const CloudBack2 = styled.div`
     width:100vw;
     background: url('/static/image/CloudBG.svg');
     // background: url(${props => props.cloud || ''}) repeat 0 0;
-    animation: ${SlideCloud2} 135s linear normal none infinite ;
+    animation: ${SlideCloud2} 40s linear normal none infinite ;
     background-repeat: repeat-x;
       @media (min-width: 768px) {
         height:70vh;
