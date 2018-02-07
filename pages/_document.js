@@ -22,10 +22,10 @@ const googleTagManager = `
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WH22LQX');</script>
+  })(window,document,'script','dataLayer','GTM-NFZH4C8');</script>
   <!-- End Google Tag Manager -->
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH22LQX"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFZH4C8"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 `
@@ -74,7 +74,7 @@ export default class MyDocument extends Document {
           <NextScript />
           <script
           dangerouslySetInnerHTML={{
-            __html: hotjar
+            __html: hotjar + googleTagManager
           }} />
         </body>
       </html>
