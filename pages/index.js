@@ -25,7 +25,7 @@ const FooterBg = styled.div`
 `;
 
 const Overflow = styled.section`
-  overflow-x:hidden;
+  overflow:hidden;
 `
 
 const index = props => (
