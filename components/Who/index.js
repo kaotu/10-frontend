@@ -133,7 +133,7 @@ const index = (props) => (
         <div className="">
           <Mobile>
             <H7 className="text-center ">WHO</H7>
-            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
+            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร ?</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row focus">
