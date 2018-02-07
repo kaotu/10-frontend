@@ -13,6 +13,7 @@ import Sponsor from "../components/Sponsor/index";
 import styled from "styled-components";
 import { compose, lifecycle, withState } from "recompose";
 import Loading from "../components/Core/Loading";
+import Minicontent from "./minisize"
 
 const Relative = styled.div`
   position: relative;
@@ -31,11 +32,13 @@ const MiniSize = styled.div`
   @media(orientation:landscape)
   and (max-width:800px){
     display:none;
+    background-color: black;!important
   }
 `
 
 const index = props => (
  <div>
+  <Minicontent/>
   <MiniSize>
     {/* <Loading> */}
     <Scroll>
