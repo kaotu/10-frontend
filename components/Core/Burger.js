@@ -3,6 +3,7 @@ import { slide as Menu } from 'react-burger-menu'
 import styled from 'styled-components'
 import Router from 'next/router'
 import {compose,lifecycle,withState} from 'recompose'
+import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const Item = styled.button`
   
@@ -103,7 +104,7 @@ const nav = [
           className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} >
           <BlankSpace  className="page-wrap"/>
           {nav.map((nav, i) => (
-              <Item burger={this.props.check.nav} smooth={true} key={i} onClick={()=>this.onClick(nav.to)} className="menu-item ">{nav.text}</Item>
+              <Item burger={this.props.check.nav}  key={i} onClick={()=>this.onClick(nav.to)} className="menu-item "><Link smooth={true} to={nav.to}>{nav.text}</Link></Item>
             ))}
           
         </Menu>
