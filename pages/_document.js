@@ -24,13 +24,13 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="WIP Camp #10 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที "/>
           <meta property="og:type" content="company"/>
           <meta property="og:url" content="https://wip.camp/"/>
-          <meta property="og:image" content="https://frontend.freezer.wip.camp/static/image/bg.jpg"/>
+          <meta property="og:image" content="https://wip.camp/static/image/bg.jpg"/>
           <meta property="og:site_name" content="WIP Camp #10 : Ways to IT Professionals Camp : ค่ายเส้นทางสู่ฝันนักไอที"/>
           <style>{`body { margin: 0; } /* custom! */`}</style>
           <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
           <link rel="stylesheet" href="/static/css/fontawesome-all.min.css"/>
-          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" /> 
+          <link rel="stylesheet" type="text/css" href="/static/css/slick.min.css" />
+          {<link rel="stylesheet" type="text/css" href="/static/css/slick-theme.min.css" /> }
           <link rel="shortcut icon" href="/static/image/favicon.ico" type="image/x-icon"/>
           <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png"/>
           <link rel="icon" href="/static/image/favicon.ico" type="/image/x-icon"/>
