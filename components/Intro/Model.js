@@ -23,17 +23,17 @@ const Monkey = styled.img`
   position : relative;
   left: 0vw;
   bottom: 0vh;
-  height : 40vh;
+  height : 35vh;
   cursor: pointer;
   transition: all 550ms ease-in-out;
   &:hover{
-    height : 45vh;
+    height : 40vh;
     @media (min-width: 576px) {
-      height : 55vh;
+      height : 50vh;
     }
   }
   @media (min-width: 576px) {
-    height : 50vh;
+    height : 45vh;
   }
   @media (max-width: 450px) {
     left: 50%;
@@ -111,10 +111,10 @@ const ModelIndex = props => (
       <div className="col-12">
         <div className="row ">
           <div className="col-6 mt-auto text-center">
-            <Monkey onClick={() => setTeam('ling')} src='/static/image/Moling.svg' />
+            <Monkey onClick={() => setTeam('ling')} src='/static/image/hanuman.svg' />
           </div>
           <div className="col-6 mt-auto text-center">
-            <Giant onClick={() => setTeam('yak')} src='/static/image/tossakan.svg' />
+            <Giant onClick={() => setTeam('yak')} src='/static/image/tossakan (1).svg' />
           </div>
         </div>
       </div>
