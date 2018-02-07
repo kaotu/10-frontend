@@ -9,16 +9,25 @@ const Minicon = styled.div`
   @media(orientation:landscape)
   and (max-width:1024px){
     display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items:center;
   }
 `
+const Miniimg = styled.img`
+  justify-content:center;
+  width : 10vw;
+`
+
+const Link = styled.a`
+  color: red;
+`
 
 const index =()=> (
     <Minicon>
-        {/* <img className="img-fluid" src="../static/image/mini.png"/> */}
-        <p className="text-center">จอเจ้าเล็กไปน้องเอ๋ย เจ้าจงหมุนหน้าจอเป็นแนวตรง ปรับขนาดหน้าต่างเบราเซอร์ <br />
-        หรือใช้ <a href='https://goo.gl/sSUKGW'>เครื่องคณิตกรณ์</a> ที่ขนาดมโหฬารกว่านี้</p>
+        <Miniimg className="img-fluid" src="../static/image/Newmini.png"/>
+        <p className="text-center mt-3">จอเจ้าเล็กไปน้องเอ๋ย เจ้าจงหมุนหน้าจอเป็นแนวตรง ปรับขนาดหน้าต่างเบราเซอร์ <br />
+        หรือใช้ <Link href='https://goo.gl/sSUKGW'>เครื่องคณิตกรณ์</Link> ที่ขนาดมโหฬารกว่านี้</p>
     </Minicon>
 )
 export default index
