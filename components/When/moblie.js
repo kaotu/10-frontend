@@ -13,7 +13,6 @@ border-radius:1em;
 z-index:2;
 padding:0.5em 0.5em 0em;
 margin-bottom: 10%;
-margin-left:1em;
 width:10em;
   @media (min-width: 412px) {
     margin-bottom: 10%;
@@ -68,22 +67,22 @@ const Moblie = () => (
       </div>
     </div>
     <div className="container">
-        <div className="row col-8 justify-content-center">
+        <div className="row col-12 justify-content-center">
           <Box1>
             <P>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</P>
           </Box1>
           </div>
-          <div className="row col-8 justify-content-center">
+          <div className="row col-12 justify-content-center">
           <Box1>
             <P>11 มี.ค 61 <br /> วันปิดรับสมัค</P>
           </Box1>
           </div>  
-          <div className="row col-8 justify-content-center">
+          <div className="row col-12 justify-content-center">
           <Box1>
             <P>31 มี.ค 61 <br /> วันประกาศผล</P>
           </Box1>
           </div>  
-          <div className="row col-8 justify-content-center">
+          <div className="row col-12 justify-content-center">
           <Box1>
             <P>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</P>
           </Box1>
