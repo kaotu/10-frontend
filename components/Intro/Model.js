@@ -46,6 +46,9 @@ const ScrollMonkey = styled.img`
   animation: ${MoveUpDown} 1s linear infinite;
   cursor:pointer; 
   top:0;
+  @media (min-width: 1024px) {
+    width: 3vw;
+  }
 `
 const Giant = styled.img`
   position : relative;
@@ -73,6 +76,9 @@ const ScrollGiant = styled.img`
     animation: ${MoveUpDown} 1s linear infinite;
     cursor:pointer; 
     top:0;
+    @media (min-width: 1024px) {
+      width: 3vw;
+    }
 `
 const Div = styled.div`
     position : absolute;

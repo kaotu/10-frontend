@@ -6,10 +6,12 @@ import Content from './ContentFAQs'
 import ContentRespon from './ContentRespon'
 
 const Bg = styled.div`
-margin-top:10vw;
-@media (max-width: 720px) {
-  width:100vw;
-}
+  margin-top:10vw;
+  height : 400px;
+  @media (max-width: 720px) {
+    width:100vw;
+    
+  }
 `
 
 const FAQs = [
