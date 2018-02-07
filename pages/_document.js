@@ -25,7 +25,7 @@ const googleNoScript = `
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
   `
 
-  export default class MyDocument extends Document {
+export default class MyDocument extends Document {
     static getInitialProps ({ renderPage }) {
       const sheet = new ServerStyleSheet()
       const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
@@ -65,6 +65,8 @@ const googleNoScript = `
           <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
 
           {this.props.styleTags}
+          <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
+          <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
         </Head>
         <body>
           <Main />
