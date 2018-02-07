@@ -100,7 +100,7 @@ const Box3 = styled.div`
 const Box4 = styled.div`
   position:absolute;
   min-width:10vw;
-  top: 25em;
+  top: 20em;
   left:55em;   
   z-index:2;
   background-color:tranparent;
@@ -195,6 +195,11 @@ const IconTimeline4 = styled.img`
 const Bggradient = styled.div`
 background: ${props => props.themeColor || ''};
 `
+const IMGmonkey = styled.img`
+  width:15%;
+  margin-left:6vw;
+  margin-top:17vh;
+`
 
 const index = props => (
   <Bggradient themeColor={props.bg.when} className="">
@@ -229,6 +234,12 @@ const index = props => (
               <Time>30 พ.ค - 3 มิ.ย 61 <br /> เปิดค่าย</Time>
             </Box4>
           </Space2>
+          <div className ="col-12 col-sm-12 col-md-12">
+            <IMGmonkey src ="../../static/image/storymonkey/first.png"></IMGmonkey>
+            <IMGmonkey src ="../../static/image/storymonkey/second.png"></IMGmonkey>
+            <IMGmonkey src ="../../static/image/storymonkey/third.png"></IMGmonkey>
+            <IMGmonkey src ="../../static/image/storymonkey/fourth.png"></IMGmonkey>
+          </div>
         </div>
     </div>
       </HideMobile>
