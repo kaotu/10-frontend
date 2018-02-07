@@ -60,14 +60,14 @@ const Space = styled.div`
   z-index:3;
   margin-top: 18%;
   margin-bottom: 10%;
-  @media(max-width:575px) {
+  @media(min-width:575px) {
     margin-top: 6%;
   margin-bottom: 10%;
   @media (min-width: 412px) {
     margin-top: 15%;
   }
   @media (min-width: 1024px) {
-    margin-top: 15vh;
+    margin-top: 10%;
   }
 `
 
