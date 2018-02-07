@@ -141,10 +141,10 @@ export default compose(
         sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))',
         icontran: '../../static/image/when/yakscore.png',
         bgwhere: '../../static/image/8.png',
-        model1: '../../static/image/storymonkey/first.png',
-        model2: '../../static/image/storymonkey/first.png',
-        model3: '../../static/image/storymonkey/first.png',
-        model4: '../../static/image/storymonkey/first.png'
+        model1: '../../static/image/storygiant/first.png',
+        model2: '../../static/image/storygiant/second.png',
+        model3: '../../static/image/storygiant/third.png',
+        model4: '../../static/image/storygiant/fourth.png'
       }
       const teammongkey = {
         what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',

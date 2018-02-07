@@ -237,9 +237,9 @@ const index = props => (
           </Space2>
           <div className ="col-12 col-sm-12 col-md-12">
             <IMGmonkey hide={'visibility'} src ={props.bg.model1}></IMGmonkey>
-            <IMGmonkey hide={props.hide1} src ={props.bg.model1}></IMGmonkey>
-            <IMGmonkey hide={props.hide2} src ={props.bg.model1}></IMGmonkey>
-            <IMGmonkey hide={props.hide3} src ={props.bg.model1}></IMGmonkey>
+            <IMGmonkey hide={props.hide1} src ={props.bg.model2}></IMGmonkey>
+            <IMGmonkey hide={props.hide2} src ={props.bg.model3}></IMGmonkey>
+            <IMGmonkey hide={props.hide3} src ={props.bg.model4}></IMGmonkey>
           </div>
         </div>
     </div>
