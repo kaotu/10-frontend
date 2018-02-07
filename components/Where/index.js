@@ -105,9 +105,11 @@ const Space = styled.div`
 `
 
 const Bgmountain = styled.img`
+  position: absolute;
+  z-index: 1;
   bottom : 0vh;
   width : 100%;
-  margin-top : -95%;
+  bottom: 0;
   @media (min-width:320px) {
     margin-top : -90%;
   }
@@ -123,12 +125,33 @@ const Bgmountain = styled.img`
 `
 
 const Zindex = styled.div`
-  z-index : 1;
+  position: relative;
+  z-index : 2;
 `
 
 const Hidden = styled.div`
   @media(max-width:720px) {
     display: none;
+  }
+`
+const Mountain = styled.img`
+  position: absolute;
+  z-index: 0;
+  height: 200vh;
+  bottom: 0vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  @media(min-width:412px) {
+    height: 230vh;
+  }
+  @media(min-width:576px) {
+    height: 180vh;
+  }
+  @media(min-width:576px) {
+    height: 180vh;
+  }
+  @media(min-width:1024px) {
+    height: 280vh;
   }
 `
 
@@ -154,6 +177,7 @@ const index = props => (
         </Space>
       </div>
     </Zindex>
+    <Mountain src='/static/image/Who.png'/>
     <Bgmountain src ={props.check.bgwhere}/>
   </Bg>
 )
