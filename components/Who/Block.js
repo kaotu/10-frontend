@@ -9,12 +9,12 @@ const Block = styled.div`
 	border-radius: 1em;
 	margin-left : 0.1vw;
 	width:40%;
-
 	@media (min-width: 1024px) {
-		width:34%;
+		width:40%;
 	}
-	@media (min-width: 1440px) {
-		width:33%;
+	@media (width: 1024px) and
+	(height:1366px) {
+		width:37%;
 	}
 }
   :after, :before {
@@ -32,13 +32,21 @@ const Block = styled.div`
 	border-color: rgba(136, 183, 213, 0);
 	border-bottom-color: #5F6164; 
 	border-width: 1.8em;
-  margin-left: -1.8em;
+	margin-left: -1.8em;
+	@media (min-width: 1024px) {
+		border-width: 1.8em;
+		margin-left: -1.8em;
+	}
 }
  :before {
 	border-color: rgba(194, 225, 245, 0);
 	border-bottom-color: #fff;
 	border-width: 2em;
-  margin-left: -2em;
+	margin-left: -2em;
+	@media (min-width: 1024px) {
+		border-width: 2em;
+		margin-left: -2em;
+	}
 }
 `
 

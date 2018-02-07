@@ -39,7 +39,7 @@ const MountainIndex = () => (
   <Bg>
     <MountainLeft src='/static/image/MountainLeft.svg' />
     <div className="text-align:center">
-      <MountainCenter src='/static/image/ภูเขา (1).svg' />
+      <MountainCenter src='/static/image/mountaincenter.svg' />
     </div>
     <MountainRight src='/static/image/MountainRight.svg' />
   </Bg>

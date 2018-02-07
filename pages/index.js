@@ -30,7 +30,7 @@ const Overflow = styled.section`
 `
 const MiniSize = styled.div`
   @media(orientation:landscape)
-  and (max-width:1024px){
+  and (max-width:800px){
     display:none;
     background-color: black;!important
   }
@@ -75,7 +75,7 @@ const index = props => (
           <Overflow id="contact" name="contact" className="element">
             <Contact />
           </Overflow>
-          <FooterBg
+          <FooterBg 
             bgColor={props.color.nav}
             className="d-flex justify-content-center align-items-center text-white"
           >

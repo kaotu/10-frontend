@@ -18,14 +18,15 @@ const Topic = [
   "น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้"
 ]
 const Content = [
-  "แผกการเรียนวิทย์-คณิต, ศิลป์-คำนวณ หรือสาขาใกล้เคียง",
+  "แผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ หรือสาขาใกล้เคียง",
   "หรือต้องการค้นหาตนเองเพื่อศึกษาต่อในระดับมหาวิทยาลัย",
   "โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง",
-  "ตลอดระยะเวลา 5 วัน"
+  "ตลอดระยะเวลา 5 วัน 4 คืน"
 ]
 
 const Bg = BgStory.extend`
   min-height: 100vh;
+  overflow-x: hidden;
   @media(max-width:720px) {
     min-width:50vh;
   }
@@ -133,7 +134,7 @@ const index = (props) => (
         <div className="">
           <Mobile>
             <H7 className="text-center ">WHO</H7>
-            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
+            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร ?</H2>
           </Mobile>
           <HideMobile>
             <Icon className="row focus">
