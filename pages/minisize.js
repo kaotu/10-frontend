@@ -8,7 +8,7 @@ const Minicon = styled.div`
   left:26vw;
   width:50%;
   @media(orientation:landscape)
-  and (max-width:800px){
+  and (max-width:1024px){
     display:block;
   }
 `

@@ -21,9 +21,7 @@ const Local = styled.img`
 `
 
 const Mobile = styled.div`
-  @media (min-width:320px) {
-    margin-top : 12%;
-  }
+    margin-top : 15%;
   @media (min-width:412px) {
     margin-top : 5%;
   }
@@ -102,7 +100,7 @@ const Space = styled.div`
     margin-bottom: 10%;
   }
   @media (min-width: 1024px) {
-    margin-top: 5vh;;
+    margin-top: 5%;
   }
 `
 
