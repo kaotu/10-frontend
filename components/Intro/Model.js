@@ -120,7 +120,7 @@ export default compose(
         cloud: '../../static/image/เมฆแดง.png',
         faqs: '#FFFF66',
         index: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
-        sponsor: '#d53c35'
+        sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))'
       }
       const teammongkey = {
         what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',
