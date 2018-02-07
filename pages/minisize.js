@@ -3,10 +3,7 @@ import styled from 'styled-components'
 
 const Minicon = styled.div`
   display:none;
-  position:absolute;
-  top:10vh;
-  left:26vw;
-  width:50%;
+  width:100%;
   @media(orientation:landscape)
   and (max-width:1024px){
     display:block;
@@ -15,7 +12,7 @@ const Minicon = styled.div`
 
 const index =()=> (
     <Minicon>
-        <img className="img-fluid" src="../static/image/bg_404.png"/>
+        <img className="img-fluid" src="../static/image/mini.png"/>
     </Minicon>
 )
 export default index
