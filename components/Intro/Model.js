@@ -133,7 +133,7 @@ export default compose(
         cloud: '../../static/image/CloudBack.svg',
         faqs: '#CCFFFF',
         index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
-        sponsor: '#B7CFEB'
+        sponsor: 'linear-gradient(to top,rgba(0,0,0,.3),#B7CFEB,#B7CFEB,#B7CFEB)'
       }
       team == 'yak' ?
         window.localStorage.setItem("color", JSON.stringify(teamyak)) :
