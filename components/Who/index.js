@@ -126,8 +126,8 @@ const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who >
   <Relative>
     <div className="container">
-      <div className="row">
-        <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
+      <div className="row d-flex justify-content-center">
+        <div className="">
           <Mobile>
             <H7 className="text-center ">WHO</H7>
             <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
@@ -172,8 +172,8 @@ export default compose(
   state,
   lifecycle({
     componentDidMount() {
-      let count = 0
-      setInterval( () => { this.props.setCheck(count) ; count++ ; count > 3 ? count = 0 : null}, 2000);
+      // let count = 0
+      // setInterval( () => { this.props.setCheck(count) ; count++ ; count > 3 ? count = 0 : null}, 2000);
     }
   })
 )(index)

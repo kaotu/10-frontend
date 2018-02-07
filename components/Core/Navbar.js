@@ -2,7 +2,7 @@ import react from 'react'
 import styled from 'styled-components'
 import Router from 'next/router'
 import Burger from './Burger'
-import GameBut from './GameBut'
+// import GameBut from './GameBut'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 const NavItem = styled.nav`
@@ -167,7 +167,7 @@ class Navbar extends React.Component {
               <Regis>สมัครเลย</Regis>
             </a>
           </div>
-          <GameBut />
+          {/* <GameBut /> */}
         </div>
       </NavItem>
     )

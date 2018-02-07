@@ -7,7 +7,6 @@ const Block = styled.div`
   border: .1em solid #fff;
   padding: 1em;
 	border-radius: 1em;
-	width: 95%;
 	margin-left : 0.1vw;
 }
   :after, :before {
