@@ -12,27 +12,17 @@ border: ${props => props.borderLine1 || ''};
 border-radius:1em;
 z-index:2;
 padding:0.5em 0.5em 0em;
-margin-bottom: 10%;
-margin-left:1em;
+margin-bottom: 5%;
 width:10em;
-  @media (min-width: 412px) {
-    margin-bottom: 10%;
-     
-  } 
-  @media (min-width: 375px) {
-    margin-bottom: 15%;
-     
-  } 
-  @media (min-width: 576px) {
-    margin-bottom: 10%;
-  } 
-  @media (min-width: 576px) {
-    margin-bottom: 15%;
+  @media (min-width: 320px) {
+    margin-bottom: 5%;
+    padding:0.5em 0.5em 0em;
   } 
 `
 const Div = styled.div`
-  @media (max-width: 320px) {
-    margin-top:15%;
+  @media (min-width: 320px) {
+    margin-top:10%;
+    margin-bottom: 5%;
   }
 `
 const Moutain = styled.img`
@@ -54,13 +44,13 @@ padding:0.5em;
 `
 const P = styled.p`
 @media (max-width: 768px) {
-  font-size:0.7em
+  font-size:1em
 }
 `
 const Moblie = () => (
   <Bg >
     <div className="container">
-      <div className="row">
+      <div className="row justify-content-center">
         <Div className="col-12">
           <H1 className="text-center font-weight-bold">WHEN</H1>
           <H2 className="text-center font-weight-bold">ค่ายนี้จัดเมื่อไหร่ ?</H2>
@@ -68,26 +58,28 @@ const Moblie = () => (
       </div>
     </div>
     <div className="container">
-        <div className="row col-8 justify-content-center">
+    <div className="row justify-content-center">
+        <div className="row col-12 justify-content-center">
           <Box1>
             <P>10 ก.พ. 61 <br /> วันเปิดรับสมัคร</P>
           </Box1>
           </div>
-          <div className="row col-8 justify-content-center">
+          <div className="row col-12 justify-content-center">
           <Box1>
             <P>11 มี.ค 61 <br /> วันปิดรับสมัค</P>
           </Box1>
           </div>  
-          <div className="row col-8 justify-content-center">
+          <div className="row col-12 justify-content-center">
           <Box1>
             <P>31 มี.ค 61 <br /> วันประกาศผล</P>
           </Box1>
           </div>  
-          <div className="row col-8 justify-content-center">
+          <div className="row col-12 justify-content-center">
           <Box1>
             <P>30 พ.ค - 3 มิ.ย 61 <br /> วันค่าย</P>
           </Box1>
           </div>  
+          </div>
           </div>
   </Bg>
 )
