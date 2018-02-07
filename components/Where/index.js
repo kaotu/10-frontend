@@ -177,7 +177,7 @@ const index = props => (
         </Space>
       </div>
     </Zindex>
-    <Mountain src='/static/image/Who.png'/>
+    {/* <Mountain src='/static/image/Who.png'/> */}
     <Bgmountain src ={props.check.bgwhere}/>
   </Bg>
 )

@@ -26,6 +26,7 @@ const Content = [
 
 const Bg = BgStory.extend`
   min-height: 100vh;
+  overflow-x: hidden;
   @media(max-width:720px) {
     min-width:50vh;
   }
