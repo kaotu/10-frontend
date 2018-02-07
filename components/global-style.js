@@ -1,6 +1,6 @@
 import { injectGlobal } from 'styled-components'
 
-export default injectGlobal`
+export default (colors) => injectGlobal`
   @font-face {
     font-family: 'Pridi';
     src: url('/static/font/Pridi-Light.ttf');
@@ -21,6 +21,6 @@ export default injectGlobal`
     top : 50px !important;
   }
   .bm-menu {
-    background-color: #002d40;
+    background-color: ${ colors };
   }
 `
