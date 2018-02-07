@@ -123,8 +123,8 @@ const index = () => (
             <a href="https://goo.gl/fC42M6" target="_blank" >
               <Local className="mb-1" src="/static/image/Map2.png" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
-            {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
-            <Font3>คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
+            {/* <p className="">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
+            <Font3 className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
             <Font1>คณะเทคโนโลยีสารสนเทศ</Font1>
             <Font2>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font2>
           </div>
