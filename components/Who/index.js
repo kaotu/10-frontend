@@ -84,12 +84,7 @@ const HideDesktop = styled.div`
 }
 `
 const Mobile = styled.div`
-  text-align: right;
-  margin-top: 15%;
   text-align: center;
-  @media (max-width: 320px) {
-    margin-top: 55%;
-}
 `
 
 const Space = styled.div`
@@ -120,6 +115,11 @@ const H4 = styled.p`
   color: #000;
 `
 
+const H7 = H1.extend`
+  margin-top : 10vw;
+`
+
+
 
 
 const index = (props) => (
@@ -129,7 +129,7 @@ const index = (props) => (
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
-            <H1 className="text-center ">WHO</H1>
+            <H7 className="text-center ">WHO</H7>
             <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
           </Mobile>
           <HideMobile>

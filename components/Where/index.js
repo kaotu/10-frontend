@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
+import {compose,lifecycle,withState} from 'recompose'
 
 const Local = styled.img`
   width:55%;
@@ -130,7 +131,7 @@ const Hidden = styled.div`
   }
 `
 
-const index = () => (
+const index = props => (
   <Bg bgColor={Color.mongkey.where} where className="">
     <Zindex className="container">
       <div className="row">
@@ -144,16 +145,24 @@ const index = () => (
             <a href="https://goo.gl/fC42M6" target="_blank" >
               <Local className="mb-1" src="/static/image/Map2.png" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
-            {/* <p className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
-            <Font3>คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
+            {/* <p className="">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
+            <Font3 className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
             <Font1>คณะเทคโนโลยีสารสนเทศ</Font1>
             <Font2>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</Font2>
           </div>
         </Space>
       </div>
     </Zindex>
-    <Bgmountain src = '/static/image/2.png'/>
+    <Bgmountain src ={props.check.bgwhere}/>
   </Bg>
 )
-//asdasdasdasdasdadadasdasd
-export default index
+
+export default compose(
+  withState('check','setCheck',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setCheck(theme)
+    }
+  })
+)(index)

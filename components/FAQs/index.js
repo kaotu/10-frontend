@@ -46,6 +46,10 @@ const Relative = styled.div`
 
 `
 
+const H7 = H1.extend`
+  margin-top : 4vw;
+`
+
 const index = props => (
   <DivWhere>
     <Relative>
@@ -53,7 +57,7 @@ const index = props => (
       <div className="container-fluid">
         <div className="row">
           <Space className="col-md-12">
-            <H1 className="text-center">FAQs</H1>
+            <H7 className="text-center">FAQs</H7>
             <H2 className="text-center">คำถามที่พบบ่อย ?</H2>
             <Fireflyy/>
             <DisplayMoblie2 />

@@ -26,10 +26,11 @@ const Bg = styled.div`
   position: relative;
   height: 100vh;
   width: 100vw;
+  top: -400vh;
 `
 const LogoWip = styled.img`
   position: relative;
-  z-index: 6;
+  z-index: 8;
   width: 120%;
   margin-top: 8vh;
   margin-left: -10vw;
@@ -57,7 +58,7 @@ const LogoWip = styled.img`
 `
 const LogoSIT = styled.img`
   position: relative;
-  z-index: 6;
+  z-index: 8;
   width: 70%;
   margin-top: 0vh;
   margin-left: 15vw;

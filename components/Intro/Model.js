@@ -6,7 +6,7 @@ const Bg = styled.div`
     position: relative;
     height: 100vh;
     width: 100vw;
-    top: -300vh;
+    top: -200vh;
 `
 const MoveUpDown = keyframes`
   0% {
@@ -32,6 +32,10 @@ const Monkey = styled.img`
     @media (min-width: 576px) {
       height : 50vh;
     }
+    @media (max-width: 450px) {
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
 `
 const ScrollMonkey = styled.img`
     position: relative;
@@ -42,17 +46,19 @@ const ScrollMonkey = styled.img`
 `
 const Giant = styled.img`
     position : relative;
-    right: 0vw;
     bottom: 0vh;
     height : 40vh;
     cursor: pointer;
     transition: all 550ms ease-in-out;
     &:hover{
-      transform: scale(1.4);
+      transform: scale(1.2);
     }
     @media (min-width: 576px) {
       height : 50vh;
-      right: 0vw;
+    }
+    @media (max-width: 450px) {
+      left: 50%;
+      transform: translate(-50%, 0%);
     }
 `
 const ScrollGiant = styled.img`
@@ -83,10 +89,10 @@ const ModelIndex = props => (
       <div className="col-12">
         <div className="row ">
           <div className="col-6 mt-auto text-center">
-            <ScrollMonkey src='/static/image/right-thin-arrowheads (1).png' />
+            <ScrollMonkey src='/static/image/right-thin-arrowheads.png' />
           </div>
           <div className="col-6 mt-auto text-center">
-            <ScrollGiant src='/static/image/right-thin-arrowheads.png' />
+            <ScrollGiant src='/static/image/right-thin-arrowheads (1).png' />
           </div>
         </div>
       </div>
@@ -120,7 +126,9 @@ export default compose(
         cloud: '../../static/image/เมฆแดง.png',
         faqs: '#FBFFC9',
         index: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
-        sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))'
+        sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))',
+        icontran: '../../static/image/when/yakscore.png',
+        bgwhere: '../../static/image/8.png'
       }
       const teammongkey = {
         what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',
@@ -133,7 +141,9 @@ export default compose(
         cloud: '../../static/image/CloudBack.svg',
         faqs: '#CCFFFF',
         index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
-        sponsor: '#B7CFEB'
+        sponsor: 'linear-gradient(to top,rgba(0,0,0,.3),#B7CFEB,#B7CFEB,#B7CFEB)',
+        icontran: '../../static/image/when/hanumanscore.png',
+        bgwhere: '../../static/image/2.png'
       }
       team == 'yak' ?
         window.localStorage.setItem("color", JSON.stringify(teamyak)) :
