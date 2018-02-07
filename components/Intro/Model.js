@@ -89,10 +89,10 @@ const ModelIndex = props => (
       <div className="col-12">
         <div className="row ">
           <div className="col-6 mt-auto text-center">
-            <ScrollMonkey src='/static/image/right-thin-arrowheads (1).png' />
+            <ScrollMonkey src='/static/image/right-thin-arrowheads.png' />
           </div>
           <div className="col-6 mt-auto text-center">
-            <ScrollGiant src='/static/image/right-thin-arrowheads.png' />
+            <ScrollGiant src='/static/image/right-thin-arrowheads (1).png' />
           </div>
         </div>
       </div>
