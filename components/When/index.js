@@ -176,7 +176,7 @@ const index = props => (
     <Bgtop src = '/static/image/topwhen.png'/>
     <HideMobile><Bgbottom src = '/static/image/bottomwhen.png'/></HideMobile>
       <HideMobile>
-    <div className="container-fluid">
+    <div className="container">
         <div className="row">
           <Space className="col-12 col-sm-12 col-md-6 ">
             <Head>

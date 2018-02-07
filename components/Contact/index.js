@@ -58,11 +58,8 @@ const ContentBg = Bg.extend`
 
 const Space = styled.div`
   z-index:3;
-  margin-top: 0%;
-  margin-bottom: 0%;
-  @media (man-width: 320px) {
-    margin-top: 20%;
-}
+  margin-top: 6%;
+  margin-bottom: 10%;
 `
 
 const Relative = styled.div`
@@ -73,8 +70,8 @@ const Relative = styled.div`
 const Bgheartbox = styled.img`
   position : absolute;
   z-index: 1;
-  width : 140%;
-  left : -20%;
+  width : 120%;
+  left : -10%;
   bottom: 0vh;
 `
 const Bgright = styled.img`
@@ -99,7 +96,7 @@ const index = () => (
     <Relative>
     <Bgheartbox src = '/static/image/Bgheartbox.png'/>
     <ContentBg bgColor="#444B52" className="">
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <Space className="col-md-12">
             <H1>Contact</H1>
