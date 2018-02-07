@@ -31,14 +31,8 @@ const LoadText = keyframes`
 0%{
   font-size:1em;
 }
-25%{
-  font-size:1.2em;
-}
 50%{
-  font-size:1.3em;
-}
-75%{
-  font-size:1.2em;
+  font-size:1.1em;
 }
 100%{
   font-size:1em;
@@ -48,15 +42,8 @@ const LoadTextDestop = keyframes`
 0%{
   font-size:2em;
 }
-25%{
-  font-size:1.5em;
-}
 50%{
-  font-size:1.4em;
-}
-75%{
-  font-size:1.5em;
-}
+  font-size:2.2em;
 100%{
   font-size:2em;
 } 
@@ -67,9 +54,13 @@ const Bg = styled.section`
   background: #002d40;
   z-index: 99999;
   position: fixed;
-  display: ${props => props.show ? 'block' : 'none !important'};
-  transition: all 1s ease-in-out ;
-  animation: ${FadeBG} 2.5s ;
+  display: block;
+  transition: all 1.5s ease-in-out;
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
 `
 
 const Icon = styled.img`
@@ -92,6 +83,7 @@ const H1 = styled.h1`
   margin-top:30%;
   color:#fff;
   animation: ${LoadTextDestop} 1.5s linear infinite;
+  font-size: 2em;
   @media (max-width:720px) {
     margin-top:60%;
     padding-top : 10vw;
@@ -100,7 +92,7 @@ const H1 = styled.h1`
 `
 
 const index = ({show ,delay }) => (
-  <Bg show={show} className=" d-flex justify-content-center align-items-center">
+  <Bg className={`d-flex justify-content-center align-items-center ${ !show ? 'hide' : ''}`}>
     <Icon src="../../static/image/hanumanscore-new-01.svg" className="d-flex "/>
     <Icon2 src="../../static/image/yakscore-new-01.svg" className="d-flex "/>
     <H1>กรุณารอ...เลือกตัวละคร</H1>
