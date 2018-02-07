@@ -119,7 +119,7 @@ const index = () => (
             <div className="row">
               <div className="col-sm-3 col-md-3">
               <TextDeco href="tel://02-107-3576"><ImgLeft src="/static/image/ContactPhone.png" />
-                <p className="mt-3"><strong>call center: 02-107-3576</strong></p>
+                <p className="mt-3"><strong>Call Center: 02-107-3576</strong></p>
               </TextDeco>
               </div>
               <Line className="col-sm-6 col-md-6">
