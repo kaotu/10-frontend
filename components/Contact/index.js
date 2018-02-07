@@ -52,27 +52,12 @@ const Linerespon = styled.div`
   }
 `
 
-const ContentBg = Bg.extend`
+const Relative = styled.div`
+  position : relative;
   height: 100vh;
 `
 
-const Space = styled.div`
-  z-index:3;
-  margin-top: 18%;
-  margin-bottom: 10%;
-  @media(min-width:575px) {
-    margin-top: 6%;
-  margin-bottom: 10%;
-  @media (min-width: 412px) {
-    margin-top: 15%;
-  }
-  @media (min-width: 1024px) {
-    margin-top: 10%;
-  }
-`
-
-const Relative = styled.div`
-  position : relative;
+const ContentBg = Bg.extend`
   height: 100vh;
 `
 
@@ -113,15 +98,21 @@ const FaceDestop = styled.a`
 }
 `
 
+const Space = styled.div`
+  z-index:3;
+  flex-direction: column;
+`
+
+
 const index = () => (
 <div>
   <DivContact>
     <Relative>
     <Bgheartbox src = '/static/image/Bgheartbox.png'/>
-    <ContentBg bgColor="#444B52" className="">
+    <ContentBg bgColor="#444B52" className="d-flex">
       <div className="container-fluid">
         <div className="row">
-          <Space className="col-md-12">
+          <Space className="col-md-12 align-items-center">
             <H1>Contact</H1>
             <H2>ติดต่อเรา</H2>
             <div className="row">
