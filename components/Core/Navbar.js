@@ -23,22 +23,25 @@ const Regis = styled.button`
   font-size:1.4em;
   text-decoration:none;
   border-radius:5px;
-  border:solid 1px #e53c35;
-  background:#e53c35;
+  border: solid 1px grey;
+  background:grey;
+  // border:solid 1px #e53c35;
+  // background:#e53c35;
   text-align:center;
   padding:.3em .2em;
   transition: all 0.1s;
   margin-bottom:1%;
   margin-right:1.5vw;
   z-index:1000;
-  box-shadow: 0px 6px 0px #871612;
-  cursor:pointer;
+  // box-shadow: 0px 6px 0px #871612;
+  // cursor:pointer;
+  cursor:no-drop;
   transition:all 200ms ease-in-out;
-  &:hover{
-    box-shadow: 0px 2px 0px #871612;
-    position:relative;
-    top:4px;
-  }
+  // &:hover{
+  //   box-shadow: 0px 2px 0px #871612;
+  //   position:relative;
+  //   top:4px;
+  // }
   @media(max-width:1024px){
     font-size:1.3em;
   }
