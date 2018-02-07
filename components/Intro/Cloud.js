@@ -25,7 +25,7 @@ const Cloud = styled.img`
 `
 const CloudIndex = () => (
     <Bg>
-        <div class="text-align:center">
+        <div className="text-align:center">
             <Cloud src='/static/image/เมฆ-บน.png'/>
         </div>
     </Bg>

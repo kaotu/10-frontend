@@ -31,29 +31,29 @@ const Bg = styled.div`
 const LogoWip = styled.img`
   position: relative;
   z-index: 8;
-  width: 120%;
+  width: 100%;
   margin-top: 8vh;
-  margin-left: -10vw;
+  /* margin-left: -10vw; */
   animation-name: ${FadeOut};
   animation-duration: 2s;
   @media (min-width: 412px) {
     width: 100%;
-    margin-left: 0;
+    /* margin-left: 0; */
   }
   @media (min-width: 576px) {
     width: 80%;
-    margin-top: 5vh;
-    margin-left: 10vw;
+    /* margin-top: 5vh; */
+    /* margin-left: 10vw; */
   }
   @media (min-width: 768px) {
     width: 70%;
-    margin-top: 5vh;
-    margin-left: 15vw;
+    /* margin-top: 5vh;
+    margin-left: 15vw; */
   }
   @media (min-width: 1024px) {
     width: 50%;
-    margin-top: 5vh;
-    margin-left: 25vw;
+    /* margin-top: 5vh;
+    margin-left: 25vw; */
   }
 `
 const LogoSIT = styled.img`
@@ -61,25 +61,25 @@ const LogoSIT = styled.img`
   z-index: 8;
   width: 70%;
   margin-top: 0vh;
-  margin-left: 15vw;
+  /* margin-left: 15vw; */
   animation-name: ${FadeOut};
   animation-duration: 2s;
   @media (min-width: 412px) {
     width: 50%;
-    margin-left: 25vw;
+    /* margin-left: 25vw; */
   }
   @media (min-width: 576px) {
     width: 40%;
-    margin-left: 30vw;
+    /* margin-left: 30vw; */
   }
   @media (min-width: 768px) {
     width: 30%;
-    margin-left: 35vw;
+    /* margin-left: 35vw; */
   }
   @media (min-width: 1024px) {
-    width: 20%;
-    margin-left: 40vw;
-  }
+    width: 50%;
+    /* margin-left: 40vw; */
+  } 
 `
 const Font = styled.h4`
   position: absolute;
@@ -99,9 +99,9 @@ const Scroll = styled.img`
 `
 
 const Logo = props => (
-  <Bg>
+  <Bg className="text-center">
     <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
-    <LogoSIT src="/static/image/LogoCana.png" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
+    <LogoSIT src="/static/image/LogoCana.svg" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
     <Link to="what" smooth={true}>
       <Scroll src={props.check.scroll} />
     </Link>

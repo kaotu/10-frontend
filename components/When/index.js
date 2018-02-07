@@ -12,7 +12,7 @@ const Relative = styled.div`
   position: relative;
   height : 110vh;
   @media (max-width : 768px)
-  and (max-height : 1024px) {
+  and (min-height : 1024px) {
     height : 55vh;
   }
 `

@@ -76,7 +76,7 @@ const index = ({show}) => (
   <Bg show={show} className="d-flex justify-content-center align-items-center">
     <Icon src="../../static/image/hanumanscore-new-01.svg" className="d-flex "/>
     <Icon2 src="../../static/image/yakscore-new-01.svg" className="d-flex "/>
-    <H1>กรุณาเลือกตัวละคร</H1>
+    <H1>กรุณารอเลือกตัวละคร</H1>
   </Bg>
 )
 

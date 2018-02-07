@@ -27,9 +27,9 @@ const Monkey = styled.img`
   cursor: pointer;
   transition: all 550ms ease-in-out;
   &:hover{
-    height : 42vh;
+    height : 45vh;
     @media (min-width: 576px) {
-      height : 52vh;
+      height : 55vh;
     }
   }
   @media (min-width: 576px) {
@@ -46,6 +46,9 @@ const ScrollMonkey = styled.img`
   animation: ${MoveUpDown} 1s linear infinite;
   cursor:pointer; 
   top:0;
+  @media (min-width: 1024px) {
+    width: 3vw;
+  }
 `
 const Giant = styled.img`
   position : relative;
@@ -54,9 +57,9 @@ const Giant = styled.img`
   cursor: pointer;
   transition: all 550ms ease-in-out;
   &:hover{
-    height : 42vh;
+    height : 45vh;
     @media (min-width: 576px) {
-      height : 52vh;
+      height : 55vh;
     }
   }
   @media (min-width: 576px) {
@@ -73,6 +76,9 @@ const ScrollGiant = styled.img`
     animation: ${MoveUpDown} 1s linear infinite;
     cursor:pointer; 
     top:0;
+    @media (min-width: 1024px) {
+      width: 3vw;
+    }
 `
 const Div = styled.div`
     position : absolute;

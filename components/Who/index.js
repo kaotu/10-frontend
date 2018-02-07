@@ -127,7 +127,7 @@ const index = (props) => (
   <Relative>
     <div className="container">
       <div className="row d-flex justify-content-center">
-        <div className="col-6">
+        <div className="">
           <Mobile>
             <H7 className="text-center ">WHO</H7>
             <H2 className="text-center ">ค่ายนี้เหมาะกับใคร</H2>
