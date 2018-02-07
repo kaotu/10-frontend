@@ -32,6 +32,10 @@ const Monkey = styled.img`
     @media (min-width: 576px) {
       height : 50vh;
     }
+    @media (max-width: 450px) {
+      left: 50%;
+      transform: translate(-50%, 0%);
+    }
 `
 const ScrollMonkey = styled.img`
     position: relative;
@@ -42,17 +46,19 @@ const ScrollMonkey = styled.img`
 `
 const Giant = styled.img`
     position : relative;
-    right: 0vw;
     bottom: 0vh;
     height : 40vh;
     cursor: pointer;
     transition: all 550ms ease-in-out;
     &:hover{
-      transform: scale(1.4);
+      transform: scale(1.2);
     }
     @media (min-width: 576px) {
       height : 50vh;
-      right: 0vw;
+    }
+    @media (max-width: 450px) {
+      left: 50%;
+      transform: translate(-50%, 0%);
     }
 `
 const ScrollGiant = styled.img`
@@ -118,7 +124,7 @@ export default compose(
         iconr: '../../static/image/hanumanscore-new-01.svg',
         scroll: '../../static/image/ScrollYak.png',
         cloud: '../../static/image/เมฆแดง.png',
-        faqs: '#FFFF66',
+        faqs: '#FBFFC9',
         index: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
         sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))'
       }

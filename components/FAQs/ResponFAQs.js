@@ -26,6 +26,8 @@ export default class AdaptiveHeight extends Component {
       className: '',
       dots: true,
       infinite: true,
+      autoplay: true,
+      autoplaySpeed:2000,
       slidesToShow: 1,
       slidesToScroll: 1,
       adaptiveHeight: true
