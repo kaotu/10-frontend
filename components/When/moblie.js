@@ -59,29 +59,29 @@ const Moblie = () => (
       </div>
     </div>
     <div className="container">
-    <div className="row justify-content-center">
+      <div className="row justify-content-center">
         <div className="row col-12 justify-content-center">
           <Box1>
             <P>10 ก.พ. 61 <br /> เปิดรับสมัคร</P>
           </Box1>
-          </div>
-          <div className="row col-12 justify-content-center">
+        </div>
+        <div className="row col-12 justify-content-center">
           <Box1>
             <P>11 มี.ค. 61 <br /> ปิดรับสมัค</P>
           </Box1>
-          </div>  
-          <div className="row col-12 justify-content-center">
+        </div>
+        <div className="row col-12 justify-content-center">
           <Box1>
             <P>31 มี.ค. 61 <br /> ประกาศผล</P>
           </Box1>
-          </div>  
-          <div className="row col-12 justify-content-center">
+        </div>
+        <div className="row col-12 justify-content-center">
           <Box1>
             <P>30 พ.ค. - 3 มิ.ย. 61 <br /> เปิดค่าย</P>
           </Box1>
-          </div>  
-          </div>
-          </div>
+        </div>
+      </div>
+    </div>
   </Bg>
 )
 export default Moblie

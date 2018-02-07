@@ -1,6 +1,5 @@
-// ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
-import styled, { ServerStyleSheet } from 'styled-components'
+import { ServerStyleSheet } from 'styled-components'
 
 const hotjar = `
   (function(h,o,t,j,a,r){
@@ -27,13 +26,12 @@ const googleNoScript = `
   `
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
-  }
-
+    static getInitialProps ({ renderPage }) {
+      const sheet = new ServerStyleSheet()
+      const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
+      const styleTags = sheet.getStyleElement()
+      return { ...page, styleTags }
+    }
   render() {
     return (
       <html>
@@ -62,6 +60,10 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/static/image/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
           <meta name="msapplication-TileColor" content=" #002D40"/> 
           <meta name="theme-color" content=" #002D40"/>
+          
+          <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
+          <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
+
           {this.props.styleTags}
           <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
           <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
