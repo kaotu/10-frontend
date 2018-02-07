@@ -111,7 +111,7 @@ const Hidden = styled.div`
 
 const index = () => (
   <Bg bgColor={Color.mongkey.where} where className="">
-    <Zindex className="container-fluid">
+    <Zindex className="container">
       <div className="row">
         <Hidden className="col-4"></Hidden>
         <Space className="col-md-8">

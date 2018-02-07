@@ -125,7 +125,7 @@ const H4 = styled.p`
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who >
   <Relative>
-    <div className="container-fluid">
+    <div className="container">
       <div className="row">
         <div className="col-12 col-sm-12 col-md-6 order-2 order-md-1">
           <Mobile>
@@ -166,5 +166,14 @@ const index = (props) => (
     </div>
     </Relative>
   </Bg>
-);
-export default compose(state)(index)
+)
+
+export default compose(
+  state,
+  lifecycle({
+    componentDidMount() {
+      let count = 0
+      setInterval( () => { this.props.setCheck(count) ; count++ ; count > 3 ? count = 0 : null}, 2000);
+    }
+  })
+)(index)
