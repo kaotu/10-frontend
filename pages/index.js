@@ -13,6 +13,7 @@ import Sponsor from "../components/Sponsor/index";
 import styled from "styled-components";
 import { compose, lifecycle, withState } from "recompose";
 import Loading from "../components/Core/Loading";
+import Minicontent from "./minisize"
 
 const Relative = styled.div`
   position: relative;
@@ -29,13 +30,15 @@ const Overflow = styled.section`
 `
 const MiniSize = styled.div`
   @media(orientation:landscape)
-  and (max-width:800px){
+  and (max-width:1024px){
     display:none;
+    background-color: black;!important
   }
 `
 
 const index = props => (
  <div>
+  <Minicontent/>
   <MiniSize>
     {/* <Loading> */}
     <Scroll>
@@ -93,6 +96,12 @@ const index = props => (
 export default compose(
   withState("color", "setColor", ""),
   lifecycle({
+    
+    componentWillMount() {
+      
+      console.log("%c 10 I'm Developer.",'background:red; color:#000; display:block; font-size:3em; font-family:Pridi;')
+    },
+    
     componentDidMount() {
       let theme = JSON.parse(window.localStorage.getItem("color"))
       this.props.setColor(theme)

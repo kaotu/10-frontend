@@ -33,10 +33,13 @@ const DisplayMoblie2 = styled.div`
 `
 
 const Space = styled.div`
-  margin-top: 6%;
+  margin-top: 15%;
   z-index : 3;
-  @media (max-width: 320px) {
-    margin-top: 15%;
+  @media (min-width: 412px) {
+    margin-top: 10%;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 3vh;
   }
   
 `
@@ -47,7 +50,7 @@ const Relative = styled.div`
 `
 
 const H7 = H1.extend`
-  margin-top : 4vw;
+  margin-top : 5vw;
 `
 
 const index = props => (
