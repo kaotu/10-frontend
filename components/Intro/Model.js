@@ -111,16 +111,16 @@ export default compose(
       let team = window.localStorage.getItem("team")
       const teamyak = {
         what: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
-        when: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1),rgba(0,0,0,.65))',
+        when: 'linear-gradient(to top , rgba(0,0,0,1),rgba(255, 51, 0,1),rgba(0,0,0,1))',
         nav: '#384742',
         navhov: '#002d40',
         iconl: '../../static/image/yakscore-new-01.svg',
         iconr: '../../static/image/hanumanscore-new-01.svg',
         scroll: '../../static/image/ScrollYak.png',
         cloud: '../../static/image/เมฆแดง.png',
-        faqs: '#FFFF66',
-        index: 'linear-gradient(#eaac35, #f3a8a5,#e53c35)',
-        sponsor: '#d53c35'
+        faqs: '#FBFFC9',
+        index: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
+        sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))'
       }
       const teammongkey = {
         what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',
