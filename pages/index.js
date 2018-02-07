@@ -31,6 +31,7 @@ const Overflow = styled.section`
 const index = props => (
   //  <Loading>
     <Scroll>
+      <Loading />
       <Relative>
         <Overflow id="home" name="home">
           <Intro />

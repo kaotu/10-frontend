@@ -12,26 +12,17 @@ border: ${props => props.borderLine1 || ''};
 border-radius:1em;
 z-index:2;
 padding:0.5em 0.5em 0em;
-margin-bottom: 10%;
+margin-bottom: 5%;
 width:10em;
-  @media (min-width: 412px) {
-    margin-bottom: 10%;
-     
-  } 
-  @media (min-width: 375px) {
-    margin-bottom: 15%;
-     
-  } 
-  @media (min-width: 576px) {
-    margin-bottom: 10%;
-  } 
-  @media (min-width: 576px) {
-    margin-bottom: 15%;
+  @media (min-width: 320px) {
+    margin-bottom: 5%;
+    padding:0.5em 0.5em 0em;
   } 
 `
 const Div = styled.div`
-  @media (max-width: 320px) {
-    margin-top:15%;
+  @media (min-width: 320px) {
+    margin-top:10%;
+    margin-bottom: 5%;
   }
 `
 const Moutain = styled.img`
@@ -53,7 +44,7 @@ padding:0.5em;
 `
 const P = styled.p`
 @media (max-width: 768px) {
-  font-size:0.7em
+  font-size:1em
 }
 `
 const Moblie = () => (

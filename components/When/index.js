@@ -6,6 +6,7 @@ import H2 from '../Core/FontH2'
 import Moblie from '../When/moblie'
 import Color from '../Core/Color'
 import {compose, lifecycle, withState} from 'recompose'
+import moment from 'moment'
 
 const Relative = styled.div`
   position: relative;
@@ -245,17 +246,20 @@ export default compose(
   withState('border4','setBorder4',''),
   lifecycle({
     componentDidMount() {
-      let date = new Date()
-      let timeline =new Intl.DateTimeFormat('th-th').format(date)
-      console.log(timeline)
       let theme = window.localStorage.getItem("color")
       const whenColor = JSON.parse(theme)
       this.props.setBg(whenColor)
-      switch(timeline){
-        case '30/5/2561': this.props.setBox4(whenColor.iconl); 
-        case '31/3/2561': this.props.setBox3(whenColor.iconl);
-        case '11/3/2561': this.props.setBox2(whenColor.iconl);
-        case '10/2/2561': this.props.setBox1(whenColor.iconl); 
+      if(moment().isAfter('2018-02-10')){
+        this.props.setBox1(whenColor.iconl)
+      }
+      if(moment().isAfter('2018-03-11')){
+        this.props.setBox2(whenColor.iconl)
+      }
+      if(moment().isAfter('2018-03-31')){
+        this.props.setBox3(whenColor.iconl)
+      }
+      if(moment().isAfter('2018-05-30')){
+        this.props.setBox4(whenColor.iconl)
       }
     }
   })
