@@ -3,32 +3,28 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import styled, { ServerStyleSheet } from 'styled-components'
 
 const hotjar = `
-  <!-- Hotjar Tracking Code for wip.camp -->
-  <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:769162,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:769162,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 `
 
 const googleTagManager = `
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NFZH4C8');</script>
-  <!-- End Google Tag Manager -->
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFZH4C8"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  })(window,document,'script','dataLayer','GTM-NFZH4C8');
 `
+
+const googleNoScript = `
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFZH4C8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  `
 
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
@@ -68,13 +64,14 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content=" #002D40"/>
           {this.props.styleTags}
           <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
+          <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
         </Head>
         <body>
           <Main />
           <NextScript />
           <script
           dangerouslySetInnerHTML={{
-            __html: hotjar + googleTagManager
+            __html: hotjar
           }} />
         </body>
       </html>
