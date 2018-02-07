@@ -50,7 +50,7 @@ const index = props => (
   <DivWhere>
     <Relative>
     <Bg bgColor={Color.mongkey.faqs } className="">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <Space className="col-md-12">
             <H1 className="text-center">FAQs</H1>
