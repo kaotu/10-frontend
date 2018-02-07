@@ -201,6 +201,10 @@ const IMGmonkey = styled.img`
   margin-top:17vh;
   visibility: ${props => props.hide || 'hidden'}
 `
+const SPACE3 = styled.div`
+  position:absolute;
+  bottom:3em;
+`
 
 const index = props => (
   <Bggradient themeColor={props.bg.when} className="">
@@ -235,12 +239,12 @@ const index = props => (
               <Time>30 พ.ค. - 3 มิ.ย. 61 <br /> เปิดค่าย</Time>
             </Box4>
           </Space2>
-          <div className ="col-12 col-sm-12 col-md-12">
+          <SPACE3 className ="col-12 col-sm-12 col-md-12">
             <IMGmonkey hide={'visibility'} src ={props.bg.model1}></IMGmonkey>
-            <IMGmonkey hide={props.hide1} src ={props.bg.model1}></IMGmonkey>
-            <IMGmonkey hide={props.hide2} src ={props.bg.model1}></IMGmonkey>
-            <IMGmonkey hide={props.hide3} src ={props.bg.model1}></IMGmonkey>
-          </div>
+            <IMGmonkey hide={props.hide1} src ={props.bg.model2}></IMGmonkey>
+            <IMGmonkey hide={props.hide2} src ={props.bg.model3}></IMGmonkey>
+            <IMGmonkey hide={props.hide3} src ={props.bg.model4}></IMGmonkey>
+          </SPACE3>
         </div>
     </div>
       </HideMobile>
