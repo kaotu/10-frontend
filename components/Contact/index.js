@@ -108,7 +108,7 @@ const index = () => (
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
-                <a href="https://www.facebook.com/wipcamp/" target="_blank">
+                <a href="fb://wipcamp/" target="_blank">
                   <ImgCenter src="/static/image/facebook.svg" className='img responsive'/>
                 </a>
                 <a href="http://line.naver.jp/ti/p/Z_Qg6KlFnU#~" target="_blank">
