@@ -9,7 +9,7 @@ import {compose, lifecycle, withState} from 'recompose'
 
 const Relative = styled.div`
   position: relative;
-  height : 100vh;
+  height : 125vh;
 `
 const Moutain = styled.img`
   position: absolute; 
@@ -184,6 +184,9 @@ const IconTimeline4 = styled.img`
 const Bggradient = styled.div`
 background: ${props => props.themeColor || ''};
 `
+const H7 = H1.extend`
+  margin-top : 2vw;
+`
 
 const index = props => (
   <Bggradient themeColor={props.bg.when} className="">
@@ -195,7 +198,7 @@ const index = props => (
         <div className="row">
           <Space className="col-12 col-sm-12 col-md-6 ">
             <Head>
-              <H1 className="text-center">WHEN</H1>
+              <H7 className="text-center">WHEN</H7>
               <H2 className="text-center">ค่ายนี้จัดเมื่อไหร่ ?</H2>
             </Head>
           </Space>

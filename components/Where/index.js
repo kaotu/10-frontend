@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
+import {compose,lifecycle,withState} from 'recompose'
 
 const Local = styled.img`
-  width:75%;
+  width:55%;
   margin-top : 3%;
   margin-bottom: 5%; 
   @media (min-width:320px) {
@@ -130,7 +131,7 @@ const Hidden = styled.div`
   }
 `
 
-const index = () => (
+const index = props => (
   <Bg bgColor={Color.mongkey.where} where className="">
     <Zindex className="container">
       <div className="row">
@@ -152,8 +153,16 @@ const index = () => (
         </Space>
       </div>
     </Zindex>
-    <Bgmountain src = '/static/image/2.png'/>
+    <Bgmountain src ={props.check.bgwhere}/>
   </Bg>
 )
-//asdasdasdasdasdadadasdasd
-export default index
+
+export default compose(
+  withState('check','setCheck',''),
+  lifecycle({
+    componentDidMount() {
+      let theme = JSON.parse(window.localStorage.getItem("color"))
+      this.props.setCheck(theme)
+    }
+  })
+)(index)
