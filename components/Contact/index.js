@@ -60,6 +60,10 @@ const Space = styled.div`
   z-index:3;
   margin-top: 6%;
   margin-bottom: 10%;
+  @media(max-width:575px) {
+    margin-top: 6%;
+  margin-bottom: 10%;
+  }
 `
 
 const Relative = styled.div`
@@ -126,7 +130,7 @@ const index = () => (
                 <Linerespon />
               </Line>
               <div className="col-sm-3 col-md-3">
-                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" className='img responsive' /></a>
+                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png"  /></a>
                 <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
               </div>
             </div>

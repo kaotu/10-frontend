@@ -30,19 +30,19 @@ const SwapIcon = keyframes`
 `
 const LoadText = keyframes`
   0%{
-    font-size:2em;
+    font-size:1.5em;
   }
   25%{
-    font-size:2.2em;
+    font-size:1.3em;
   }
   50%{
-    font-size:2.3em;
+    font-size:1.4em;
   }
   75%{
-    font-size:2.2em;
+    font-size:1.3em;
   }
   100%{
-    font-size:2em;
+    font-size:1.5em;
   }      
 `
 
