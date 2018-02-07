@@ -27,9 +27,9 @@ const Monkey = styled.img`
   cursor: pointer;
   transition: all 550ms ease-in-out;
   &:hover{
-    height : 42vh;
+    height : 45vh;
     @media (min-width: 576px) {
-      height : 52vh;
+      height : 55vh;
     }
   }
   @media (min-width: 576px) {
@@ -54,9 +54,9 @@ const Giant = styled.img`
   cursor: pointer;
   transition: all 550ms ease-in-out;
   &:hover{
-    height : 42vh;
+    height : 45vh;
     @media (min-width: 576px) {
-      height : 52vh;
+      height : 55vh;
     }
   }
   @media (min-width: 576px) {
