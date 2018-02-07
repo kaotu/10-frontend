@@ -10,7 +10,7 @@ import moment from 'moment'
 
 const Relative = styled.div`
   position: relative;
-  height : 100vh;
+  height : 125vh;
 `
 const Moutain = styled.img`
   position: absolute; 

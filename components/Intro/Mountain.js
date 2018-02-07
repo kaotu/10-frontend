@@ -10,13 +10,9 @@ const Bg = styled.div`
 const MountainLeft = styled.img`
     position : absolute;
     z-index:2;
-    height : 100vh;
+    height : 50vh;
     bottom: 0vh;
     left : 0vw;
-    @media (min-width: 1024px) {
-        height : 100vh;
-        top : 0vh;
-    }
 `
 const MountainCenter = styled.img`
     position : absolute;
@@ -32,19 +28,16 @@ const MountainCenter = styled.img`
 const MountainRight = styled.img`
     position : absolute;
     z-index:3;
-    height : 100vh;
+    height : 50vh;
     bottom: 0vh;
     right: 0vw;
     @media (min-width: 768px) {
         z-index:4; 
     }
-    @media (min-width: 1024px) {
-        height : 80vh;
-    }
 `
 const MountainIndex = () => (
   <Bg>
-    <MountainLeft src='/static/image/MountainLeft.svg' />
+    <MountainLeft src='/static/image/Left.png' />
     <div class="text-align:center">
       <MountainCenter src='/static/image/ภูเขา (1).svg' />
     </div>
