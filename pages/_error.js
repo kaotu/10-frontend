@@ -62,7 +62,7 @@ const Error = ({statusCode}) => (
     <Container className="d-flex justify-content-center align-items-center flex-column">
       <div className="row">
         <div className="col-12 text-center">
-          <TextError>น้องเอ๋ย เจ้ามาผิดทาง</TextError>
+          <TextError>น้องเอ๋ย! เจ้ามาผิดทาง</TextError>
           <Link href="/">
             <Button1>กลับไปทางสว่าง</Button1>
           </Link>
