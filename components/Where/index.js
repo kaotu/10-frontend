@@ -94,12 +94,15 @@ const Space = styled.div`
   margin-bottom: 10%;
   top:0vw;
   @media (min-width:320px) {
-    margin-top: 0%;
+    margin-top: 5%;
     margin-bottom: 17%;
   }
   @media (min-width:412px) {
-    margin-top: 6%;
+    margin-top: 10%;
     margin-bottom: 10%;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 5vh;;
   }
 `
 
