@@ -167,7 +167,7 @@ class Navbar extends React.Component {
               </nav>
             </div>
             {/* <a href='https://itim.wip.camp' target="_blank"> */}
-              <Regis>สมัครเลย</Regis>
+              {/* <Regis>สมัครเลย</Regis> */}
             {/* </a> */}
           </div>
           {/* <GameBut /> */}
