@@ -199,6 +199,7 @@ const IMGmonkey = styled.img`
   width:15%;
   margin-left:6vw;
   margin-top:17vh;
+  visibility: ${props => props.hide || 'hidden'}
 `
 
 const index = props => (
@@ -218,27 +219,27 @@ const index = props => (
           <Space2 className="col-12 col-sm-12 col-md-12  ">
               
             <Box1  className="text-center">
-              <IconTimeline1 src={props.box1|| props.bg.icontran}/>
+              <IconTimeline1 src={props.box1.iconl|| props.bg.icontran}/>
               <Time>10 ก.พ. 61 <br /> เปิดรับสมัคร</Time>
             </Box1>
             <Box2  className="text-center">
-            <IconTimeline2 src={props.box2|| props.bg.icontran}/>
+            <IconTimeline2 src={props.box2.iconl|| props.bg.icontran}/>
               <Time>11 มี.ค. 61 <br /> ปิดรับสมัคร</Time>
             </Box2>
             <Box3  className="text-center">
-            <IconTimeline3 src={props.box3|| props.bg.icontran}/>
+            <IconTimeline3 src={props.box3.iconl|| props.bg.icontran}/>
               <Time>31 มี.ค. 61 <br /> ประกาศผล</Time>
             </Box3>
             <Box4 className="text-center">
-            <IconTimeline4 src={props.box4|| props.bg.icontran}/>
+            <IconTimeline4 src={props.box4.iconl|| props.bg.icontran}/>
               <Time>30 พ.ค. - 3 มิ.ย. 61 <br /> เปิดค่าย</Time>
             </Box4>
           </Space2>
           <div className ="col-12 col-sm-12 col-md-12">
-            <IMGmonkey src ="../../static/image/storymonkey/first.png"></IMGmonkey>
-            <IMGmonkey src ="../../static/image/storymonkey/second.png"></IMGmonkey>
-            <IMGmonkey src ="../../static/image/storymonkey/third.png"></IMGmonkey>
-            <IMGmonkey src ="../../static/image/storymonkey/fourth.png"></IMGmonkey>
+            <IMGmonkey hide={'visibility'} src ={props.bg.model1}></IMGmonkey>
+            <IMGmonkey hide={props.hide1} src ={props.bg.model1}></IMGmonkey>
+            <IMGmonkey hide={props.hide2} src ={props.bg.model1}></IMGmonkey>
+            <IMGmonkey hide={props.hide3} src ={props.bg.model1}></IMGmonkey>
           </div>
         </div>
     </div>
@@ -261,22 +262,28 @@ export default compose(
   withState('border2','setBorder2',''),
   withState('border3','setBorder3',''),
   withState('border4','setBorder4',''),
+  withState('hide1','setHide1','hidden'),
+  withState('hide2','setHide2','hidden'),
+  withState('hide3','setHide3','hidden'),
   lifecycle({
     componentDidMount() {
       let theme = window.localStorage.getItem("color")
       const whenColor = JSON.parse(theme)
       this.props.setBg(whenColor)
       if(moment().isAfter('2018-02-10')){
-        this.props.setBox1(whenColor.iconl)
+        this.props.setBox1(whenColor)
       }
       if(moment().isAfter('2018-03-11')){
-        this.props.setBox2(whenColor.iconl)
+        this.props.setBox2(whenColor)
+        this.props.setHide1('visibility')
       }
       if(moment().isAfter('2018-03-31')){
-        this.props.setBox3(whenColor.iconl)
+        this.props.setBox3(whenColor)
+        this.props.setHide2('visibility')
       }
       if(moment().isAfter('2018-05-30')){
-        this.props.setBox4(whenColor.iconl)
+        this.props.setBox4(whenColor)
+        this.props.setHide3('visibility')
       }
     }
   })
