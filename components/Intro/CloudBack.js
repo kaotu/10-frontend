@@ -31,7 +31,7 @@ const CloudBack = styled.div`
     width:100vw;
     background: url('/static/image/CloudBG.svg');
     // background: url(${props => props.cloud || ''}) repeat 0 0;
-    animation: ${SlideCloud} 50s linear normal none infinite ;
+    animation: ${SlideCloud} 175s linear normal none infinite ;
     background-repeat: repeat-x;
       @media (min-width: 768px) {
         height:70vh;
@@ -48,7 +48,7 @@ const CloudBack2 = styled.div`
     width:100vw;
     background: url('/static/image/CloudBG.svg');
     // background: url(${props => props.cloud || ''}) repeat 0 0;
-    animation: ${SlideCloud2} 50s linear normal none infinite ;
+    animation: ${SlideCloud2} 135s linear normal none infinite ;
     background-repeat: repeat-x;
       @media (min-width: 768px) {
         height:70vh;

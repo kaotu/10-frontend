@@ -18,7 +18,7 @@ const Topic = [
   "น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้"
 ]
 const Content = [
-  "แผนกการเรียนวิทย์-คณิต, ศิลป์-คำนวณ หรือสาขาใกล้เคียง",
+  "แผกการเรียนวิทย์-คณิต, ศิลป์-คำนวณ หรือสาขาใกล้เคียง",
   "หรือต้องการค้นหาตนเองเพื่อศึกษาต่อในระดับมหาวิทยาลัย",
   "โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง",
   "ตลอดระยะเวลา 5 วัน"
@@ -61,10 +61,10 @@ const Image = styled.img`
 `
 
 const PositionTextBox =[
-  "11.5%",
-  "36.7%",
-  "61.4%",
-  "86%"
+  "14.5%",
+  "39.5%",
+  "65%",
+  "91%"
 ]
 
 const Icon = styled.div`
@@ -88,7 +88,7 @@ const Mobile = styled.div`
 `
 
 const Space = styled.div`
-  margin-top: 10%;
+  margin-top: 20%;
   margin-bottom: 10%;
 `
 
@@ -116,7 +116,10 @@ const H4 = styled.p`
 `
 
 const H7 = H1.extend`
-  margin-top : 10vw;
+  margin-top : 10vh;
+  @media (min-width: 1024px) {
+    margin-top: 20vh;
+  }
 `
 
 

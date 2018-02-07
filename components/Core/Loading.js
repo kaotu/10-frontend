@@ -30,20 +30,37 @@ const SwapIcon = keyframes`
 `
 const LoadText = keyframes`
   0%{
+    font-size:1em;
+  }
+  25%{
+    font-size:1.2em;
+  }
+  50%{
+    font-size:1.3em;
+  }
+  75%{
+    font-size:1.2em;
+  }
+  100%{
+    font-size:1em;
+  }      
+`
+const LoadTextDestop = keyframes`
+  0%{
     font-size:2em;
   }
   25%{
-    font-size:2.2em;
+    font-size:1.5em;
   }
   50%{
-    font-size:2.3em;
+    font-size:1.4em;
   }
   75%{
-    font-size:2.2em;
+    font-size:1.5em;
   }
   100%{
     font-size:2em;
-  }      
+  } 
 `
 
 const Icon = styled.img`
@@ -65,10 +82,11 @@ const Icon2 = styled.img`
 const H1 = styled.h1`
   margin-top:30%;
   color:#fff;
-  animation: ${LoadText} 1.5s linear infinite;
+  animation: ${LoadTextDestop} 1.5s linear infinite;
   @media (max-width:720px) {
-    font-size: 2em;
     margin-top:60%;
+    padding-top : 10vw;
+    animation: ${LoadText} 1.5s linear infinite;
   }
 `
 
@@ -76,7 +94,7 @@ const index = ({show}) => (
   <Bg show={show} className="d-flex justify-content-center align-items-center">
     <Icon src="../../static/image/hanumanscore-new-01.svg" className="d-flex "/>
     <Icon2 src="../../static/image/yakscore-new-01.svg" className="d-flex "/>
-    <H1>กรุณาเลือกตัวละคร</H1>
+    <H1>กรุณารอ...เลือกตัวละคร</H1>
   </Bg>
 )
 
@@ -86,7 +104,7 @@ export default compose(
     componentDidMount() {
       setTimeout(() => {
         this.props.setShow(false)
-      }, 3000);
+      }, 2000);
     }
   })
 )(index)
