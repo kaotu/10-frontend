@@ -35,9 +35,9 @@ const index = props => (
         <Overflow id="home" name="home">
           <Intro />
         </Overflow>
-        <section id="sponsor">
+        {/* <section id="sponsor">
           <Sponsor />
-        </section>
+        </section> */}
         <Navbar id="navbar-desktop" />
         <div
           data-spy="scroll"
