@@ -60,6 +60,9 @@ const Space = styled.div`
   z-index:3;
   margin-top: 18%;
   margin-bottom: 10%;
+  @media(max-width:575px) {
+    margin-top: 6%;
+  margin-bottom: 10%;
   @media (min-width: 412px) {
     margin-top: 15%;
   }
@@ -94,7 +97,11 @@ const Bgleft = styled.img`
   left: 0vw;
   top : 0vh;
 `
-
+const TextDeco = styled.a`
+  &:hover{
+    text-decoration:none;
+  }
+`
 
 const index = () => (
 <div>
@@ -109,8 +116,9 @@ const index = () => (
             <H2>ติดต่อเรา</H2>
             <div className="row">
               <div className="col-sm-3 col-md-3">
-              <a href="tel://02-107-3576"><ImgLeft src="/static/image/ContactPhone.png" /></a>
-                <p className="mt-3"><strong>พี่วิปโป้: 02-107-3576</strong></p>
+              <TextDeco href="tel://02-107-3576"><ImgLeft src="/static/image/ContactPhone.png" />
+                <p className="mt-3"><strong>call center: 02-107-3576</strong></p>
+              </TextDeco>
               </div>
               <Line className="col-sm-6 col-md-6">
                 <Linerespon />
@@ -132,8 +140,9 @@ const index = () => (
                 <Linerespon />
               </Line>
               <div className="col-sm-3 col-md-3">
-                <a href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" className='img responsive' /></a>
-                <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
+                <TextDeco href="mailto:wippo@wipcamp.com"><ImgRight src="/static/image/ContactMail.png" className='img responsive' />
+                  <p className="mt-3"><strong>wippo@wipcamp.com</strong></p>
+                </TextDeco>
               </div>
             </div>
 

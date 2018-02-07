@@ -30,7 +30,7 @@ const Overflow = styled.section`
 `
 const MiniSize = styled.div`
   @media(orientation:landscape)
-  and (max-width:800px){
+  and (max-width:1024px){
     display:none;
     background-color: black;!important
   }
