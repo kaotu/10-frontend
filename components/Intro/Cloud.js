@@ -5,7 +5,7 @@ const Bg = styled.div`
     position: relative;
     height: 100vh;
     width: 100vw;
-    top: -200vh;
+    top: -300vh;
 `
 const Cloud = styled.img`
     position : absolute;
