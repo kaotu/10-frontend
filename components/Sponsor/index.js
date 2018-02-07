@@ -56,7 +56,7 @@ const Index = props => (
   <Bg bg={props.check.sponsor} className="d-flex">
     <Relative className="d-flex align-items-center">
       <Cloud src='/static/image/เมฆ-ล่าง.png' />
-      <DivSponsor className="container-fluid">
+      <DivSponsor className="container">
         <div className="row">
           <div className="col-md-12">
             <div className="img-responsive">

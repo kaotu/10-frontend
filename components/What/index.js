@@ -119,7 +119,7 @@ const index = props => (
   <Bggueng themeColor={props.bgColor.what}>
     <Relative>
       <Moutain src='/static/image/MoutainWho.svg' />
-      <div className="container-fluid px-3">
+      <div className="container px-3">
         <div className="row">
           <div className="col-12 col-sm-12 col-md-12">
             {/* <Cloud /> */}
