@@ -38,7 +38,7 @@ const MountainRight = styled.img`
 const MountainIndex = () => (
   <Bg>
     <MountainLeft src='/static/image/Left.png' />
-    <div class="text-align:center">
+    <div className="text-align:center">
       <MountainCenter src='/static/image/ภูเขา (1).svg' />
     </div>
     <MountainRight src='/static/image/MountainRight.svg' />
