@@ -15,6 +15,7 @@ export default (colors) => injectGlobal`
   p {
     font-size:20px;
     color : white;
+    letter-spacing: 0.03579em;
   }
   .nav-pills .nav-link.active {
     background-color:rgba(0,0,0,.3);
@@ -26,5 +27,8 @@ export default (colors) => injectGlobal`
   }
   .bm-menu {
     background-color: ${ colors };
+  }
+  span {
+    color: white;
   }
 `
