@@ -106,10 +106,10 @@ const Zindex = styled.div`
 `
 
 const IconData = [
-  { id: 0, image: "/static/image/moon.png", topic: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้', content: 'ตลอดระยะเวลา 5 วัน 4 คืน' },
-  { id: 1, image: "/static/image/graduate.png", topic: 'น้อง ๆ มัธยมศึกษาตอนปลาย', content: 'แผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ' },
-  { id: 2, image: "/static/image/person.png", topic: 'น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง', content: 'โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง' },
-  { id: 3, image: "/static/image/computer.png", topic: 'น้อง ๆ ที่มีความสนใจด้านไอที', content: 'หรือต้องการค้นหาตนเองเพื่อศึกษาต่อ' },
+  { id: 0, image: "/static/image/moon.png", topic: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้', content: 'ตลอดระยะเวลา 5 วัน 4 คืน' , class: 'container-fluid d-flex justify-content-end px-0' },
+  { id: 1, image: "/static/image/graduate.png", topic: 'น้อง ๆ มัธยมศึกษาตอนปลาย', content: 'แผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ' , class: 'container-fluid d-flex justify-content-start px-0' },
+  { id: 2, image: "/static/image/person.png", topic: 'น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง', content: 'โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง', class: 'container-fluid d-flex justify-content-end px-0'  },
+  { id: 3, image: "/static/image/computer.png", topic: 'น้อง ๆ ที่มีความสนใจด้านไอที', content: 'หรือต้องการค้นหาตนเองเพื่อศึกษาต่อ', class: 'container-fluid d-flex justify-content-start px-0' },
 ]
 
 const H4 = styled.p`
@@ -123,7 +123,15 @@ const H7 = H1.extend`
   }
 `
 
+const Border = styled.div`
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+`
 
+const Div = styled.div`
+  /* margin-left: 13%;
+  margin-right: 13%; */
+`
 
 
 const index = (props) => (
@@ -131,7 +139,7 @@ const index = (props) => (
     <Relative>
       <div className="container">
         <div className="row d-flex justify-content-center">
-          <div className="">
+          <Div>
             <Mobile>
               <H7 className="text-center ">WHO</H7>
               <H2 className="text-center pb-5">ค่ายนี้เหมาะกับใคร ?</H2>
@@ -165,32 +173,32 @@ const index = (props) => (
             <HideMobile>
               <div className="container">
                 <div className="row">
-                    {
-                      IconData.map((data, i) =>
-                            <div key={i} className="col-6">
-                        <div  className="container-fluid d-flex justify-content-center">
+                  {
+                    IconData.map((data, i) =>
+                    <div key={i} className="col-6 py-5 px-5">
+                        <div className={data.class}>
                           <br />
-                              <div className="row ">
-                                <div className="col-12 px-0 text-center">
-                                  <Image src={data.image} />
-                                </div>
-                                <div className="col-12 px-0 text-center">
-                                  <span><strong>{data.topic}</strong></span>
-                                  <br />
-                                  <span>{data.content}</span>
-                                </div>
-                              </div>
+                          <Border className="row px-2 py-3">
+                            <div className="col-12 px-0 text-center">
+                              <Image src={data.image} />
                             </div>
-                                                 </div>
-                      )
-                    }
+                            <div className="col-12 px-0 text-center">
+                              <span><strong>{data.topic}</strong></span>
+                              <br />
+                              <span>{data.content}</span>
+                            </div>
+                          </Border>
+                        </div>
+                      </div>
+                    )
+                  }
                 </div>
               </div>
             </HideMobile>
             <HideDesktop>
               <ResponWho />
             </HideDesktop>
-          </div>
+          </Div>
         </div>
       </div>
     </Relative>
