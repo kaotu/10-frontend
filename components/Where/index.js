@@ -167,7 +167,7 @@ const index = props => (
           </Mobile>
           <div className="text-center">
             <a href="https://goo.gl/j6GJ21" target="_blank" >
-              <Local className="mb-1" src="/static/image/Map2.png" alt="คณะเทคโนโลยีสารสนเทศ"/>
+              <Local className="mb-1" src="/static/image/Map22.png" alt="คณะเทคโนโลยีสารสนเทศ"/>
             </a>
             {/* <p className="">คลิกที่รูปภาพเพื่อดูแผนที่</p> */}
             <Font3 className="text-muted">คลิกที่รูปภาพเพื่อดูแผนที่</Font3>
