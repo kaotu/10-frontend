@@ -167,9 +167,9 @@ const index = (props) => (
                 <div className="row">
                     {
                       IconData.map((data, i) =>
-                        <div key={i} className="container-fluid d-flex justify-content-center">
+                            <div key={i} className="col-6">
+                        <div  className="container-fluid d-flex justify-content-center">
                           <br />
-                            <div className="col-6">
                               <div className="row ">
                                 <div className="col-12 px-0 text-center">
                                   <Image src={data.image} />
