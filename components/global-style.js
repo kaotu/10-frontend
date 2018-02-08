@@ -28,4 +28,7 @@ export default (colors) => injectGlobal`
   .bm-menu {
     background-color: ${ colors };
   }
+  span {
+    color: white;
+  }
 `
