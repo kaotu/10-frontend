@@ -274,18 +274,18 @@ export default compose(
       let theme = window.localStorage.getItem("color")
       const whenColor = JSON.parse(theme)
       this.props.setBg(whenColor)
-      if(moment().isAfter('2018-02-10')){
+      if(moment('2018-02-10').isAfter('2018-02-09')){
         this.props.setBox1(whenColor)
       }
-      if(moment().isAfter('2018-03-11')){
+      if(moment().isAfter('2018-03-10')){
         this.props.setBox2(whenColor)
         this.props.setHide1('visibility')
       }
-      if(moment().isAfter('2018-03-31')){
+      if(moment().isAfter('2018-03-30')){
         this.props.setBox3(whenColor)
         this.props.setHide2('visibility')
       }
-      if(moment().isAfter('2018-05-30')){
+      if(moment().isAfter('2018-05-29')){
         this.props.setBox4(whenColor)
         this.props.setHide3('visibility')
       }
