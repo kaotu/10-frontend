@@ -1,17 +1,37 @@
-// ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
-import styled, { ServerStyleSheet } from 'styled-components'
+import { ServerStyleSheet } from 'styled-components'
 
+const hotjar = `
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:769162,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+`
 
+const googleTagManager = `
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NFZH4C8');
+`
+
+const googleNoScript = `
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFZH4C8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  `
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
-  }
-
+    static getInitialProps ({ renderPage }) {
+      const sheet = new ServerStyleSheet()
+      const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
+      const styleTags = sheet.getStyleElement()
+      return { ...page, styleTags }
+    }
   render() {
     return (
       <html>
@@ -40,30 +60,22 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/static/image/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
           <meta name="msapplication-TileColor" content=" #002D40"/> 
           <meta name="theme-color" content=" #002D40"/>
+          
+          <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
+          <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
+
           {this.props.styleTags}
+          <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
+          <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <div dangerouslySetInnerHTML={{__html: 
-          `
-          <!-- Hotjar Tracking Code for https://frontend.kati.wip.camp/ -->
-          <script>
-              (function(h,o,t,j,a,r){
-                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                  h._hjSettings={hjid:770336,hjsv:6};
-                  a=o.getElementsByTagName('head')[0];
-                  r=o.createElement('script');r.async=1;
-                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                  a.appendChild(r);
-              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          </script>
-          `
+          <script
+          dangerouslySetInnerHTML={{
+            __html: hotjar
           }} />
         </body>
-        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> */}
-        
       </html>
     )
   }

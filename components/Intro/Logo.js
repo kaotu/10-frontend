@@ -74,7 +74,7 @@ const Logo = props => (
   <Bg className="text-center">
     <div className="row">
       <div className="col-12">
-        <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
+        <LogoWip src="/static/image/logofinals.png" alt="WIP Camp #10" />
       </div>
       <div className="col-12 img-responsive">
         <LogoSIT src="/static/image/LogoCana.svg" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
