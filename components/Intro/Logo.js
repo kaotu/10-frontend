@@ -36,7 +36,7 @@ const LogoWip = styled.img`
   /* margin-left: -10vw; */
   animation-name: ${FadeOut};
   animation-duration: 2s;
-  @media (min-width:1024px) {
+  @media (min-width:801px) {
     width: 48%;
   }
 `
@@ -49,11 +49,14 @@ const LogoSIT = styled.img`
   /* margin-left: 15vw; */
   animation-name: ${FadeOut};
   animation-duration: 2s;
+  @media (min-width:801px) {
+    width: 30%;
+  }
   @media (min-width:1024px) {
     width: 20%;
   }
 `
-const Font = styled.h4`
+const Font = styled.h6`
   position: absolute;
   z-index: 8;
   bottom: 2vh;
@@ -74,7 +77,7 @@ const Logo = props => (
   <Bg className="text-center">
     <div className="row">
       <div className="col-12">
-        <LogoWip src="/static/image/logofinals.svg" alt="WIP Camp #10" />
+        <LogoWip src="/static/image/logofinals.png" alt="WIP Camp #10" />
       </div>
       <div className="col-12 img-responsive">
         <LogoSIT src="/static/image/LogoCana.svg" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>

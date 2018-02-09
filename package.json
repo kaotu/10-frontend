@@ -1,21 +1,23 @@
 {
-  "name": "create-next-example-app",
+  "name": "10-frontend",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "node server.js"
   },
   "dependencies": {
     "animate-css-styled-components": "0.0.20",
+    "babel-plugin-styled-components": "^1.5.0",
     "bootstrap": "^4.0.0-beta.2",
     "can-use-dom": "^0.1.0",
     "enquire.js": "^2.1.6",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-config-standard-react": "^5.0.0",
+    "express": "^4.16.2",
     "install": "^0.10.2",
     "json2mq": "^0.2.0",
     "moment": "^2.20.1",
-    "next": "^4.2.3",
+    "next": "^5.0.0",
     "next.js": "^1.0.3",
     "npm": "^5.6.0",
     "react": "^16.2.0",

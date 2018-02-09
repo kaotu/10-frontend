@@ -9,7 +9,7 @@ import H2 from '../Core/FontH2'
 import Color from '../Core/Color'
 import Router from 'next/router'
 
-const state = withState("checkButton", "setCheck", 0) 
+const state = withState("checkButton", "setCheck", 0)
 
 const Topic = [
   "น้อง ๆ มัธยมศึกษาตอนปลาย",
@@ -36,7 +36,7 @@ const Image = styled.img`
   width:7vw;
   transition:all 550ms ease-in-out;
   transition: .5s;
-  width: ${props => props.active ? '7vw': '6.5vw'};
+  width: ${props => props.active ? '7vw' : '6.5vw'};
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
@@ -61,7 +61,7 @@ const Image = styled.img`
   }  
 `
 
-const PositionTextBox =[
+const PositionTextBox = [
   "14.5%",
   "39.5%",
   "65%",
@@ -106,10 +106,10 @@ const Zindex = styled.div`
 `
 
 const IconData = [
-  { id: 0, image: "/static/image/graduate.png"},
-  { id: 1, image: "/static/image/computer.png"},
-  { id: 2, image: "/static/image/person.png" },
-  { id: 3, image: "/static/image/moon.png"}
+  { id: 0, image: "/static/image/moon.png", topic: 'น้อง ๆ ที่สามารถอยู่ร่วมค่ายค้างคืนได้', content: 'ตลอดระยะเวลา 5 วัน 4 คืน' , class: 'container-fluid d-flex justify-content-end px-0' },
+  { id: 1, image: "/static/image/graduate.png", topic: 'น้อง ๆ มัธยมศึกษาตอนปลาย', content: 'แผนการเรียนวิทย์-คณิต ศิลป์-คำนวณ' , class: 'container-fluid d-flex justify-content-start px-0' },
+  { id: 2, image: "/static/image/person.png", topic: 'น้อง ๆ ที่ได้รับอนุญาตจากผู้ปกครอง', content: 'โดยมีเอกสารเป็นลายลักษณ์อักษรถูกต้อง', class: 'container-fluid d-flex justify-content-end px-0'  },
+  { id: 3, image: "/static/image/computer.png", topic: 'น้อง ๆ ที่มีความสนใจด้านไอที', content: 'หรือต้องการค้นหาตนเองเพื่อศึกษาต่อ', class: 'container-fluid d-flex justify-content-start px-0' },
 ]
 
 const H4 = styled.p`
@@ -119,24 +119,33 @@ const H4 = styled.p`
 const H7 = H1.extend`
   margin-top : 10vh;
   @media (min-width: 1024px) {
-    margin-top: 20vh;
+    margin-top: 10vh;
   }
 `
 
+const Border = styled.div`
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  width: 330px;
+`
 
+const Div = styled.div`
+  /* margin-left: 13%;
+  margin-right: 13%; */
+`
 
 
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who >
-  <Relative>
-    <div className="container">
-      <div className="row d-flex justify-content-center">
-        <div className="">
-          <Mobile>
-            <H7 className="text-center ">WHO</H7>
-            <H2 className="text-center ">ค่ายนี้เหมาะกับใคร ?</H2>
-          </Mobile>
-          <HideMobile>
+    <Relative>
+      <div className="container">
+        <div className="row d-flex justify-content-center">
+          <div>
+            <Mobile>
+              <H7 className="text-center ">WHO</H7>
+              <H2 className="text-center pb-5">ค่ายนี้เหมาะกับใคร ?</H2>
+            </Mobile>
+            {/* <HideMobile>
             <Icon className="row focus">
               {
                 IconData.map((data, i) => ( 
@@ -161,13 +170,38 @@ const index = (props) => (
                 <p>{`${Content[props.checkButton]}`}</p>
               </Block>
             </H6>
-          </HideMobile>
-          <HideDesktop>
-            <ResponWho />
-          </HideDesktop>
+          </HideMobile> */}
+            <HideMobile>
+              <div className="container">
+                <div className="row">
+                  {
+                    IconData.map((data, i) =>
+                    <div key={i} className="col-6 py-4 px-5">
+                        <div className={data.class}>
+                          <br />
+                          <Border className="row px-2 py-3">
+                            <div className="col-12 px-0 text-center">
+                              <Image src={data.image} />
+                            </div>
+                            <div className="col-12 px-0 text-center">
+                              <span><strong>{data.topic}</strong></span>
+                              <br />
+                              <span>{data.content}</span>
+                            </div>
+                          </Border>
+                        </div>
+                      </div>
+                    )
+                  }
+                </div>
+              </div>
+            </HideMobile>
+            <HideDesktop>
+              <ResponWho />
+            </HideDesktop>
+          </div>
         </div>
       </div>
-    </div>
     </Relative>
   </Bg>
 )

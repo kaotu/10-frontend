@@ -114,7 +114,7 @@ const ModelIndex = props => (
             <Monkey onClick={() => setTeam('ling')} src='/static/image/hanuman.svg' />
           </div>
           <div className="col-6 mt-auto text-center">
-            <Giant onClick={() => setTeam('yak')} src='/static/image/tossakan (1).svg' />
+            <Giant onClick={() => setTeam('yak')} src='/static/image/tossakan.svg' />
           </div>
         </div>
       </div>
