@@ -22,8 +22,12 @@ const ImgCenter = styled.img`
   margin-top : 17px;
   margin-left : 1vw;
   margin-right : 1vw;
+  transition: all 550ms ease-in-out;
   @media(max-width:720px) {
     width : 13vw;
+  }
+  &:hover{
+    width:6vw;
   }
 `
 const ImgRight = styled.img`
