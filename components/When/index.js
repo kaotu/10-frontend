@@ -35,7 +35,7 @@ const Front = styled.p`
   margin-left:40vw;   
 `
 const Box1 = styled.div`
-  min-width: 10vw;
+  width: 100vw;
   position:absolute;
   top: 18em;
   left: 10em;   
@@ -57,7 +57,7 @@ const Box1 = styled.div`
 `
 const Box2 = styled.div`
   position:absolute;
-  min-width:10vw;
+  width: 100vw;
   top: 20em;
   left: 25em;    
   z-index:2;
@@ -78,7 +78,7 @@ const Box2 = styled.div`
 `
 const Box3 = styled.div`
   position:absolute;
-  min-width:10vw;
+  width: 100vw;
   top: 22em;
   left:40em;  
   z-index:2;
@@ -99,7 +99,7 @@ const Box3 = styled.div`
 `
 const Box4 = styled.div`
   position:absolute;
-  min-width:10vw;
+  width: 100vw;
   top: 20em;
   left:55em;   
   z-index:2;
@@ -171,25 +171,25 @@ const Zindex = styled.div`
 `
 const IconTimeline1 = styled.img`
   position:absolute;
-  width:35%;
+  width:5vw;
   left:-2vw;
   top:0vw;
 `
 const IconTimeline2 = styled.img`
   position:absolute;
-  width:35%;
+  width:5vw;
   left:-2vw;
   top:0vw;
 `
 const IconTimeline3 = styled.img`
   position:absolute;
-  width:35%;
+  width:5vw;
   left:-2vw;
   top:0vw;
 `
 const IconTimeline4 = styled.img`
   position:absolute;
-  width:30%;
+  width:5vw;
   left:-2vw;
   top:0vw;
 `
