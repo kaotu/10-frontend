@@ -13,7 +13,7 @@ border-radius:1em;
 z-index:2;
 padding:0.5em 0.5em 0em;
 margin-.bottom: 5.%;
-width:10เปิด
+width:10;
   @media (min-width: 320px) {
     margin-bottom: 5%;
     padding:0.5em 0.5em 0em;

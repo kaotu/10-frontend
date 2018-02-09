@@ -13,7 +13,7 @@ export default (colors) => injectGlobal`
     font-family: 'Pridi';
   }
   p {
-    font-size:20px;
+    font-size:15px;
     color : white;
     letter-spacing: 0.03579em;
   }

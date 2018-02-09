@@ -51,14 +51,14 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/css/fontawesome-all.min.css"/>
           <link rel="stylesheet" type="text/css" href="/static/css/slick.min.css" />
           <link rel="stylesheet" type="text/css" href="/static/css/slick-theme.min.css" />
-          <link rel="shortcut icon" href="/static/image/favicon.ico" type="image/x-icon"/>
+          <link rel="shortcut icon" href="/static/image/favicon/favicon.ico" type="image/x-icon"/>
           <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png"/>
           <link rel="icon" href="/static/image/favicon.ico" type="/image/x-icon"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/static/image/favicon/favicon-32x32.png"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/static/image/favicon/favicon-16x16.png"/>
           <link rel="manifest" href="/static/image/favicon/site.webmanifest"/>
           <link rel="mask-icon" href="/static/image/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
-          <meta name="msapplication-TileColor" content=" #002D40"/> 
+          <meta name="msapplication-TileColor" content=" #002D40"/>
           <meta name="theme-color" content=" #002D40"/>
           
           <script dangerouslySetInnerHTML={{__html: googleTagManager}} />

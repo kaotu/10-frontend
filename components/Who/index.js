@@ -119,13 +119,14 @@ const H4 = styled.p`
 const H7 = H1.extend`
   margin-top : 10vh;
   @media (min-width: 1024px) {
-    margin-top: 20vh;
+    margin-top: 10vh;
   }
 `
 
 const Border = styled.div`
   border: 1px solid #ffffff;
   border-radius: 8px;
+  width: 330px;
 `
 
 const Div = styled.div`
@@ -147,7 +148,7 @@ const index = (props) => (
     <Relative>
       <div className="container">
         <div className="row d-flex justify-content-center">
-          <Div>
+          <div>
             <Mobile>
               <H7 className="text-center ">WHO</H7>
               <H2 className="text-center pb-5">ค่ายนี้เหมาะกับใคร ?</H2>
@@ -211,7 +212,7 @@ const index = (props) => (
                 <div className="row">
                   {
                     IconData.map((data, i) =>
-                    <div key={i} className="col-6 py-5 px-5">
+                    <div key={i} className="col-6 py-4 px-5">
                         <div className={data.class}>
                           <br />
                           <Border className="row px-2 py-3">
@@ -234,7 +235,7 @@ const index = (props) => (
             <HideDesktop>
               <ResponWho />
             </HideDesktop>
-          </Div>
+          </div>
         </div>
       </div>
     </Relative>
