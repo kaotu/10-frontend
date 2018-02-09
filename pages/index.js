@@ -40,9 +40,8 @@ const index = props => (
  <div>
   <Minicontent/>
   <MiniSize>
-    {/* <Loading> */}
     <Scroll>
-      <Loading />
+      {/* <Loading /> */}
       <Relative>
         <Overflow id="home" name="home">
           <Intro />
@@ -87,7 +86,6 @@ const index = props => (
         </div>
       </Relative>
     </Scroll>
-   {/* </Loading> */}
    </MiniSize>  
    </div>
 
