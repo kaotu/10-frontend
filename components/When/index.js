@@ -50,7 +50,7 @@ const Box1 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    top: 20em;
+    top: 22em;
     left: 9em; 
     padding:.5em 3em;
   }
@@ -71,7 +71,7 @@ const Box2 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    top: 20em;
+    top: 22em;
     left: 25em; 
     padding:.5em 3em;
   }
@@ -113,7 +113,7 @@ const Box4 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    top: 25em;
+    top: 22em;
     left:55em;  
     padding:.5em 3em;
   }
@@ -145,6 +145,7 @@ const Space2 = styled.div`
 const Time = styled.p`
   display:block;
   color:#fff;
+  text-align: left;
 `
 const Bgtop = styled.img`
 position: absolute;
@@ -197,7 +198,7 @@ background: ${props => props.themeColor || ''};
 `
 const IMGmonkey = styled.img`
   width:15%;
-  margin-left:6vw;
+  margin-left:2vw;
   margin-top:17vh;
   visibility: ${props => props.hide || 'hidden'}
 `
