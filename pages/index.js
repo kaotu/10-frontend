@@ -35,7 +35,30 @@ const MiniSize = styled.div`
     background-color: black;!important
   }
 `
-
+const WhoWhere = styled.div`
+  position: relative;
+  overflow-x: hidden;
+`
+const Mountain = styled.img`
+  position: absolute;
+  z-index: 0;
+  height: 200vh;
+  top: 0vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  @media(min-width:412px) {
+    height: 230vh;
+  }
+  @media(min-width:576px) {
+    height: 180vh;
+  }
+  @media(min-width:576px) {
+    height: 180vh;
+  }
+  @media(min-width:1024px) {
+    height: 280vh;
+  }
+`
 const index = props => (
  <div>
   <Minicontent/>
@@ -59,12 +82,15 @@ const index = props => (
           <section id="what" name="what">
             <What />
           </section>
+          <WhoWhere>
           <section id="who" name="who">
             <Who />
           </section>
           <section id="where" name="where">
             <Where />
           </section>
+          <Mountain src='/static/image/Who.png'/>
+          </WhoWhere>
           <Overflow id="when" name="when">
             <When />
           </Overflow>
