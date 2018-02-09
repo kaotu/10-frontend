@@ -80,10 +80,10 @@ const Logo = props => (
         <LogoSIT src="/static/image/LogoCana.svg" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
       </div>
     </div>
-    <Link to="what" smooth={true}>
+    {/* <Link to="what" smooth={true}>
       <Scroll src={props.check.scroll} />
     </Link>
-    <Font>เลื่อนลงข้างล่าง</Font>
+    <Font>เลื่อนลงข้างล่าง</Font> */}
   </Bg>
 )
 
