@@ -132,7 +132,15 @@ const Div = styled.div`
   /* margin-left: 13%;
   margin-right: 13%; */
 `
+const Img = styled.img`
+  width:40%;
+`
 
+const Box = styled.div`
+  border: 2px solid black;
+  border-radius: 6px;
+  margin-top :-3px;
+`
 
 const index = (props) => (
   <Bg bgColor={Color.mongkey.who} who >
@@ -171,7 +179,35 @@ const index = (props) => (
             </H6>
           </HideMobile> */}
             <HideMobile>
-              <div className="container">
+              <div className = "container-fluid">
+                <div className = "col-12">
+                  <div className = "row text-center">
+                    <div className = "col-3">
+                      <Img src = "/static/image/moon.png"/>
+                    </div>
+                    <div className = "col-3">
+                      <Img src = "/static/image/moon.png"/>
+                    </div>
+                    <div className = "col-3">
+                      <Img src = "/static/image/moon.png"/>
+                    </div>
+                    <div className = "col-3">
+                      <Img src = "/static/image/moon.png"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br/>
+              <div className = "container-fluid">
+                <div className = "col-12">
+                  <Box>
+                    <p>
+                      asfseghaezrherhsfgh
+                    </p>
+                  </Box>
+                </div>
+              </div>
+              {/* <div className="container">
                 <div className="row">
                   {
                     IconData.map((data, i) =>
@@ -193,7 +229,7 @@ const index = (props) => (
                     )
                   }
                 </div>
-              </div>
+              </div> */}
             </HideMobile>
             <HideDesktop>
               <ResponWho />
