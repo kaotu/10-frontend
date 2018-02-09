@@ -37,7 +37,7 @@ const MiniSize = styled.div`
 `
 const WhoWhere = styled.div`
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 `
 const Mountain = styled.img`
   position: absolute;
