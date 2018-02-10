@@ -10,6 +10,7 @@ const Local = styled.img`
   width:55%;
   margin-top : 3%;
   margin-bottom: 5%; 
+  filter: drop-shadow( 2px 3px 3px rgba(0,0,0,0.75) );
   @media (min-width:320px) {
     width:100%;
   }

@@ -35,7 +35,7 @@ const Front = styled.p`
   margin-left:40vw;   
 `
 const Box1 = styled.div`
-  min-width: 10vw;
+  width: 100vw;
   position:absolute;
   top: 18em;
   left: 10em;   
@@ -50,14 +50,14 @@ const Box1 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    top: 20em;
+    top: 22em;
     left: 9em; 
     padding:.5em 3em;
   }
 `
 const Box2 = styled.div`
   position:absolute;
-  min-width:10vw;
+  width: 100vw;
   top: 20em;
   left: 25em;    
   z-index:2;
@@ -71,14 +71,14 @@ const Box2 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    top: 20em;
+    top: 22em;
     left: 25em; 
     padding:.5em 3em;
   }
 `
 const Box3 = styled.div`
   position:absolute;
-  min-width:10vw;
+  width: 100vw;
   top: 22em;
   left:40em;  
   z-index:2;
@@ -99,7 +99,7 @@ const Box3 = styled.div`
 `
 const Box4 = styled.div`
   position:absolute;
-  min-width:10vw;
+  width: 100vw;
   top: 20em;
   left:55em;   
   z-index:2;
@@ -113,7 +113,7 @@ const Box4 = styled.div`
     padding:.5em 1.5em;
   }
   @media (min-width: 1024px) {
-    top: 25em;
+    top: 22em;
     left:55em;  
     padding:.5em 3em;
   }
@@ -145,6 +145,7 @@ const Space2 = styled.div`
 const Time = styled.p`
   display:block;
   color:#fff;
+  text-align: left;
 `
 const Bgtop = styled.img`
 position: absolute;
@@ -170,25 +171,25 @@ const Zindex = styled.div`
 `
 const IconTimeline1 = styled.img`
   position:absolute;
-  width:35%;
+  width:5vw;
   left:-2vw;
   top:0vw;
 `
 const IconTimeline2 = styled.img`
   position:absolute;
-  width:35%;
+  width:5vw;
   left:-2vw;
   top:0vw;
 `
 const IconTimeline3 = styled.img`
   position:absolute;
-  width:35%;
+  width:5vw;
   left:-2vw;
   top:0vw;
 `
 const IconTimeline4 = styled.img`
   position:absolute;
-  width:30%;
+  width:5vw;
   left:-2vw;
   top:0vw;
 `
@@ -197,7 +198,7 @@ background: ${props => props.themeColor || ''};
 `
 const IMGmonkey = styled.img`
   width:15%;
-  margin-left:6vw;
+  margin-left:2vw;
   margin-top:17vh;
   visibility: ${props => props.hide || 'hidden'}
 `
@@ -274,18 +275,18 @@ export default compose(
       let theme = window.localStorage.getItem("color")
       const whenColor = JSON.parse(theme)
       this.props.setBg(whenColor)
-      if(moment().isAfter('2018-02-09')){
+      if(moment().isAfter('2018-02-10')){
         this.props.setBox1(whenColor)
       }
-      if(moment().isAfter('2018-03-10')){
+      if(moment().isAfter('2018-03-11')){
         this.props.setBox2(whenColor)
         this.props.setHide1('visibility')
       }
-      if(moment().isAfter('2018-03-30')){
+      if(moment().isAfter('2018-03-31')){
         this.props.setBox3(whenColor)
         this.props.setHide2('visibility')
       }
-      if(moment().isAfter('2018-05-29')){
+      if(moment().isAfter('2018-05-30')){
         this.props.setBox4(whenColor)
         this.props.setHide3('visibility')
       }
