@@ -9,7 +9,7 @@ const Bg = styled.div`
 
 const SlideCloud = keyframes`
     0% {
-        left: -100%
+        left: -70%
     }
 
     100% {
@@ -17,54 +17,38 @@ const SlideCloud = keyframes`
     }
 `
 
-const SlideCloud2 = keyframes`
-    0% {
-        left: -100%
-    }
-
-    100% {
-        left: 100%
+const CloudBack = styled.img`
+    position:absolute;
+    top : 40vh;
+    z-index: 0;
+    width:70vw;
+    animation: ${SlideCloud} 40s linear normal none infinite ;
+    //   @media (min-width: 768px) {
+    //     height:70vh;
+    //   }
+      @media (min-width: 1024px) {
+        animation: ${SlideCloud} 60s linear normal none infinite ;      
     }
 `
 
-const CloudBack = styled.div`
+const CloudBack2 = styled.img`
     position:absolute;
-    bottom : 0vh;
+    top : 43vh;
     z-index: 0;
-    height:55vh;
-    width:100vw;
-    background: url('/static/image/CloudBG.svg');
-    animation: ${SlideCloud} 60s linear normal none infinite ;
-    background-repeat: repeat-x;
-      @media (min-width: 768px) {
-        height:70vh;
-      }
-      @media (min-width: 1024px) {
-        height:80vh;
-      }
-`
-
-const CloudBack2 = styled.div`
-    position:absolute;
-    bottom : 0vh;
-    z-index: 0;
-    height:60vh;
-    width:100vw;
-    background: url('/static/image/CloudBG.svg');
-    animation: ${SlideCloud2} 40s linear normal none infinite ;
-    background-repeat: repeat-x;
-      @media (min-width: 768px) {
-        height:70vh;
-      }
-      @media (min-width: 1024px) {
-        height:80vh;
-      }
+    width:70vw;
+    animation: ${SlideCloud} 30s linear normal none infinite ;
+    //   @media (min-width: 768px) {
+    //     height:70vh;
+    //   }
+    @media (min-width: 1024px) {
+        animation: ${SlideCloud} 70s linear normal none infinite ;      
+    }
 `
 
 const CloudIndex = () => (
   <Bg>
-    <CloudBack />
-    <CloudBack2 />
+    <CloudBack src='/static/image/CloudbackIntro1.png'/>
+    <CloudBack2 src='/static/image/CloudbackIntro2.png'/>
   </Bg>
 )
 export default CloudIndex

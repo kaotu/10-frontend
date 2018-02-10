@@ -36,7 +36,7 @@ const LogoWip = styled.img`
   /* margin-left: -10vw; */
   animation-name: ${FadeOut};
   animation-duration: 2s;
-  @media (min-width:1024px) {
+  @media (min-width:801px) {
     width: 48%;
   }
 `
@@ -49,11 +49,14 @@ const LogoSIT = styled.img`
   /* margin-left: 15vw; */
   animation-name: ${FadeOut};
   animation-duration: 2s;
+  @media (min-width:801px) {
+    width: 30%;
+  }
   @media (min-width:1024px) {
     width: 20%;
   }
 `
-const Font = styled.h4`
+const Font = styled.h6`
   position: absolute;
   z-index: 8;
   bottom: 2vh;
@@ -66,7 +69,6 @@ const Scroll = styled.img`
   width: 4vw;
   left: 48vw;
   bottom: 10vh;
-  animation: ${Dukdik} 1s linear infinite;
   cursor: pointer;
 `
 
