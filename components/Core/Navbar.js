@@ -17,7 +17,7 @@ const NavItem = styled.nav`
   `}   
   `
 const Regis = styled.button`
-  width: 7em;
+  width: 6em;
   display:inline-block;
   color:#ecf0f1;
   font-size:1.4em;
@@ -31,11 +31,12 @@ const Regis = styled.button`
   margin-bottom:1%;
   margin-right:1.5vw;
   z-index:1000;
-  box-shadow: 0px 6px 0px #871612;
+  box-shadow: 0px 5px 0px #871612;
   cursor:pointer;
   transition:all 200ms ease-in-out;
+  margin:.2em;
   &:hover{
-    box-shadow: 0px 2px 0px #871612;
+    box-shadow: 0px 3px 0px #871612;
     position:relative;
     top:4px;
   }
