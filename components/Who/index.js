@@ -180,7 +180,7 @@ const index = (props) => (
             </H6>
           </HideMobile> */}
             <HideMobile>
-              <div className = "container-fluid">
+              {/* <div className = "container-fluid">
                 <div className = "col-12">
                   <div className = "row text-center">
                     <div className = "col-3">
@@ -197,9 +197,9 @@ const index = (props) => (
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <br/>
-              <div className = "container-fluid">
+              {/* <div className = "container-fluid">
                 <div className = "col-12">
                   <Box>
                     <p>
@@ -207,8 +207,8 @@ const index = (props) => (
                     </p>
                   </Box>
                 </div>
-              </div>
-              {/* <div className="container">
+              </div> */}
+              <div className="container">
                 <div className="row">
                   {
                     IconData.map((data, i) =>
@@ -230,7 +230,7 @@ const index = (props) => (
                     )
                   }
                 </div>
-              </div> */}
+              </div>
             </HideMobile>
             <HideDesktop>
               <ResponWho />
