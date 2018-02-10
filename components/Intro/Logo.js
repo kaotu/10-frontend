@@ -69,7 +69,6 @@ const Scroll = styled.img`
   width: 4vw;
   left: 48vw;
   bottom: 10vh;
-  animation: ${Dukdik} 1s linear infinite;
   cursor: pointer;
 `
 
@@ -83,10 +82,10 @@ const Logo = props => (
         <LogoSIT src="/static/image/LogoCana.svg" alt="WIP Camp #10,คณะเทคโนโลยีสารสนเทศ,มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี"/>
       </div>
     </div>
-    {/* <Link to="what" smooth={true}>
+    <Link to="what" smooth={true}>
       <Scroll src={props.check.scroll} />
     </Link>
-    <Font>เลื่อนลงข้างล่าง</Font> */}
+    <Font>เลื่อนลงข้างล่าง</Font>
   </Bg>
 )
 
