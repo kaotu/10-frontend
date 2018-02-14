@@ -102,7 +102,7 @@ export default class App extends React.Component {
               {/* <section id="sponsor">
          <Sponsor />
        </section> */}
-              <Navbar id="navbar-desktop"/>
+              <Navbar id="navbar-desktop" color={this.state.color}/>
               <div
                 data-spy="scroll"
                 data-target="#navbar-desktop"
