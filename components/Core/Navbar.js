@@ -36,9 +36,8 @@ const Regis = styled.button`
   transition:all 200ms ease-in-out;
   margin:.2em;
   &:hover{
-    box-shadow: 0px 3px 0px #871612;
-    position:relative;
-    top:4px;
+    box-shadow: 0px 2px 0px #871612;
+    transform: translateY(3px);
   }
   @media(max-width:1024px){
     font-size:1.3em;
