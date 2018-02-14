@@ -17,7 +17,7 @@ const Index = (props) => (
       <BgIntro theme={props.color.index}>
         <CloudBack/>
         <Mountain />
-        <Model setColor={props.setColor} />
+        <Model color={props.color} setColor={props.setColor} />
         <Cloud />
         <Logo />
       </BgIntro>
