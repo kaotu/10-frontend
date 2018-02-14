@@ -208,7 +208,7 @@ const SPACE3 = styled.div`
 `
 
 const index = props => (
-  <Bggradient themeColor={props.bg.when} className="">
+  <Bggradient themeColor={props.color.when} className="">
     <Relative>
     <Bgtop src = '/static/image/topwhen.png'/>
     <HideMobile><Bgbottom src = '/static/image/bottomwhen.png'/></HideMobile>
@@ -224,27 +224,27 @@ const index = props => (
           <Space2 className="col-12 col-sm-12 col-md-12  ">
               
             <Box1  className="text-center">
-              <IconTimeline1 src={props.box1.iconl|| props.bg.icontran}/>
+              <IconTimeline1 src={props.box1.iconl|| props.color.icontran}/>
               <Time>10 ก.พ. 61 <br /> เปิดรับสมัคร</Time>
             </Box1>
             <Box2  className="text-center">
-            <IconTimeline2 src={props.box2.iconl|| props.bg.icontran}/>
+            <IconTimeline2 src={props.box2.iconl|| props.color.icontran}/>
               <Time>11 มี.ค. 61 <br /> ปิดรับสมัคร</Time>
             </Box2>
             <Box3  className="text-center">
-            <IconTimeline3 src={props.box3.iconl|| props.bg.icontran}/>
+            <IconTimeline3 src={props.box3.iconl|| props.color.icontran}/>
               <Time>31 มี.ค. 61 <br /> ประกาศผล</Time>
             </Box3>
             <Box4 className="text-center">
-            <IconTimeline4 src={props.box4.iconl|| props.bg.icontran}/>
+            <IconTimeline4 src={props.box4.iconl|| props.color.icontran}/>
               <Time>30 พ.ค. - 3 มิ.ย. 61 <br /> เปิดค่าย</Time>
             </Box4>
           </Space2>
           <SPACE3 className ="col-12 col-sm-12 col-md-12">
-            <IMGmonkey hide={'visibility'} src ={props.bg.model1}></IMGmonkey>
-            <IMGmonkey hide={props.hide1} src ={props.bg.model2}></IMGmonkey>
-            <IMGmonkey hide={props.hide2} src ={props.bg.model3}></IMGmonkey>
-            <IMGmonkey hide={props.hide3} src ={props.bg.model4}></IMGmonkey>
+            <IMGmonkey hide={'visibility'} src ={props.color.model1}></IMGmonkey>
+            <IMGmonkey hide={props.hide1} src ={props.color.model2}></IMGmonkey>
+            <IMGmonkey hide={props.hide2} src ={props.color.model3}></IMGmonkey>
+            <IMGmonkey hide={props.hide3} src ={props.color.model4}></IMGmonkey>
           </SPACE3>
         </div>
     </div>
@@ -263,18 +263,17 @@ export default compose(
   withState('box2','setBox2',''),
   withState('box3','setBox3',''),
   withState('box4','setBox4',''),
-  withState('border1','setBorder1',''),
-  withState('border2','setBorder2',''),
-  withState('border3','setBorder3',''),
-  withState('border4','setBorder4',''),
   withState('hide1','setHide1','hidden'),
   withState('hide2','setHide2','hidden'),
   withState('hide3','setHide3','hidden'),
   lifecycle({
-    componentDidMount() {
+    async componentDidMount() {
       let theme = window.localStorage.getItem("color")
-      const whenColor = JSON.parse(theme)
-      this.props.setBg(whenColor)
+      await setTimeout(() => {
+        const whenColor = this.props.color
+
+        console.log(whenColor)
+      }, 100);
       if(moment().isAfter('2018-02-10')){
         this.props.setBox1(whenColor)
       }
@@ -290,6 +289,7 @@ export default compose(
         this.props.setBox4(whenColor)
         this.props.setHide3('visibility')
       }
+      console.log(this.props.color)
     }
   })
 )(index)
