@@ -67,7 +67,7 @@ const index = props => (
           </Space>
         </div>
         <DisplayDesktop>
-          <Content />
+          <Content color={props.color}/>
         </DisplayDesktop>
         <DisplayMoblie>
           <Respon />

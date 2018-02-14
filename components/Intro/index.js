@@ -14,10 +14,10 @@ import Model from './Model'
 const Index = (props) => (
   <div className="row">
     <div className="col-12">
-      <BgIntro theme={props.scrolld.index}>
+      <BgIntro theme={props.color.index}>
         <CloudBack/>
         <Mountain />
-        <Model />
+        <Model color={props.color} setColor={props.setColor} />
         <Cloud />
         <Logo />
       </BgIntro>

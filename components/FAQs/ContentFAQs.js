@@ -88,7 +88,7 @@ const Content = props => (
         <div key={i}>
           <div className="row d-flex">
             <div className="col img-responesive align-self-center">
-              <ImgLefe src={props.iconleft.iconl} />
+              <ImgLefe src={props.color.iconl} />
             </div>
             <Zindex className="col-6">
               <Box1 color={props.team.faqs} className=" arrow_box" ><Black dangerouslySetInnerHTML={{__html: data.Q}} /></Box1>
@@ -103,7 +103,7 @@ const Content = props => (
               <Box className="arrow_box" primary><Black dangerouslySetInnerHTML={{__html: data.A}} /></Box>
             </Zindex>
             <div className="col img-responesive align-self-center">
-              <ImgRight src={props.iconright.iconr} />
+              <ImgRight src={props.color.iconr} />
             </div>
           </div>
         </div>

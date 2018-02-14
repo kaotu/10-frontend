@@ -37,6 +37,7 @@ const Image = styled.img`
   transition:all 550ms ease-in-out;
   transition: .5s;
   width: ${props => props.active ? '7vw' : '6.5vw'};
+  cursor:pointer;
   @media (max-width:720px) {
     width: 50%;
     padding: .2em;
@@ -50,7 +51,7 @@ const Image = styled.img`
     border: 4px solid transparent;
     
   }
-  &.active{
+  &:active{
   background: transparent;
   -moz-transform: scale(1.3);
   -webkit-transform: scale(1.3);
