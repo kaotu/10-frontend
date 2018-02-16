@@ -8,6 +8,7 @@ const BackgroundContainer = styled.div`
   min-height: 100vh;
   background-size: cover;
   background-position: 50% 100%;
+  background-attachment: fixed;
 `
 
 const StyledContent = styled.div`
