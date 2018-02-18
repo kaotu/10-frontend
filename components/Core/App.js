@@ -85,7 +85,6 @@ export default class App extends React.Component {
   async componentDidMount() {
     let theme = JSON.parse(window.localStorage.getItem("color"))
     this.setColor(theme)
-    injectGlobal(theme.nav)
   }
 
   render() {
@@ -98,6 +97,7 @@ export default class App extends React.Component {
             <Relative>
               <Overflow id="home" name="home">
                 <Intro color={this.state.color} setColor={this.setColor} />
+                {injectGlobal(this.state.color.nav)}  
               </Overflow>
               {/* <section id="sponsor">
          <Sponsor />

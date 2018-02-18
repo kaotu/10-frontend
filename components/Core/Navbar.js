@@ -36,9 +36,8 @@ const Regis = styled.button`
   transition:all 200ms ease-in-out;
   margin:.2em;
   &:hover{
-    box-shadow: 0px 3px 0px #871612;
-    position:relative;
-    top:4px;
+    box-shadow: 0px 2px 0px #871612;
+    transform: translateY(3px);
   }
   @media(max-width:1024px){
     font-size:1.3em;
@@ -142,7 +141,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <NavItem color={this.props.color.nav} className="sticky-top" >
-        <Burger />
+        <Burger color={this.props.color}/>
         <div>
           <div className="navbar navbar-expand-lg">
             <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
