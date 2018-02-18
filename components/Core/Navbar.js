@@ -141,7 +141,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <NavItem color={this.props.color.nav} className="sticky-top" >
-        <Burger />
+        <Burger color={this.props.color}/>
         <div>
           <div className="navbar navbar-expand-lg">
             <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
