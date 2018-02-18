@@ -16,6 +16,7 @@ const StyledContent = styled.div`
   background: #fff;
   margin-bottom: 5em;
   border-radius: 10px;
+  letter-spacing: 0.03579em;
 `
 
 const Header = styled.h3`
