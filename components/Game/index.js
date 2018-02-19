@@ -7,8 +7,9 @@ const Relative = styled.div`
 const Img = styled.img`
   width: 70%;
   height: 90%;
-  @media(max-width:720px){
-    display: hidden;
+  @media(max-width: 720px){
+    width: 100%;
+    height: auto%;   
   }
 `
 const Bg = styled.div`
@@ -19,7 +20,7 @@ const Button = styled.img`
   width: 40%;
   height: 20%; 
   @media(max-width:800px){
-    width: 70%;
+    width: 80%;
     height: 50%; 
   }
 `
@@ -27,17 +28,17 @@ const Button = styled.img`
 const A = styled.a`
   position: absolute;
   z-index: 1; 
-  @media(max-width:800px){
-    position: static;
-    z-index:0;
-  } 
+  // @media(max-width:800px){
+  //   position: static;
+  //   z-index:0;
+  // } 
 `
 
 const index =()=> (
   <Relative>
     <Bg className="row">
       <div className="col-12 d-flex justify-content-center align-items-center">
-        {/* <Img src="/static/image/gameStone.png" className="d-flex"/> */}
+        <Img src="/static/image/gameStone.png"/>
         <A href="/faqs" className="d-flex justify-content-center">
           <Button src="/static/image/gameButton.png"/>
         </A>
