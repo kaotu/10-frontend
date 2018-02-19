@@ -88,6 +88,7 @@ const nav = [
   { to: 'where', text: "Where"},
   { to: 'when', text: "When"},
   { to: 'faqs', text: "FAQs"},
+  { to: 'game', text: "Game"},
   { to: 'contact', text: "Contact"}]
 
 class Navbar extends React.Component {
