@@ -128,7 +128,7 @@ export default class App extends React.Component {
                 <Overflow id="faqs" name="faqs">
                   <Faqs color={this.state.color}/>
                 </Overflow>
-                <Overflow>
+                <Overflow id="game" name="game">
                     <Game/>
                 </Overflow>              
                 <Overflow id="contact" name="contact" className="element">
