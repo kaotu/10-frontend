@@ -15,6 +15,7 @@ import Navbar from "../Core/Navbar";
 import Sponsor from "../Sponsor/index";
 import Loading from "../Core/Loading";
 import Minicontent from "./minisize"
+import Game from "../Game/index"
 
 
 
@@ -127,6 +128,9 @@ export default class App extends React.Component {
                 <Overflow id="faqs" name="faqs">
                   <Faqs color={this.state.color}/>
                 </Overflow>
+                <Overflow>
+                    <Game/>
+                </Overflow>              
                 <Overflow id="contact" name="contact" className="element">
                   <Contact />
                 </Overflow>
