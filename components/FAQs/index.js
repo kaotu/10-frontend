@@ -1,5 +1,5 @@
 import react from "react";
-import Bg from "../Core/BgStory.js";
+import Bg from "../Core/BgStory.js"
 import styled from "styled-components"
 import Content from "./ContentFAQs";
 import Respon from "./ResponFAQs";
@@ -20,7 +20,7 @@ const DisplayDesktop = styled.div`
   }
 `;
 const DisplayMoblie = styled.div`
-  margin-bottom: 10%;
+  // margin-bottom: 2%;
   @media (min-width: 720px) {
     display: none;
     
@@ -67,7 +67,7 @@ const index = props => (
           </Space>
         </div>
         <DisplayDesktop>
-          <Content />
+          <Content color={props.color}/>
         </DisplayDesktop>
         <DisplayMoblie>
           <Respon />

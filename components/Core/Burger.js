@@ -79,6 +79,7 @@ const nav = [
   {to:'where',text:"Where"},
   {to:'when',text:"When"},
   {to:'faqs',text:"FAQs"},
+  {to:'game',text:"Game"},
   {to:'contact',text:"Contact"}]
  
  class BurgerMenu extends React.Component {
@@ -104,7 +105,7 @@ const nav = [
           className="d-lg-none fixed-top" styles={styles} pageWrapId={'page-wrap'} outerContainerId={'outer-container'} >
           <BlankSpace  className="page-wrap"/>
           {nav.map((nav, i) => (
-              <Item burger={this.props.check.nav}  key={i} onClick={()=>this.onClick(nav.to)} className="menu-item "><Link smooth={true} to={nav.to}>{nav.text}</Link></Item>
+              <Item burger={this.props.color.nav}  key={i} onClick={()=>this.onClick(nav.to)} className="menu-item "><Link smooth={true} to={nav.to}>{nav.text}</Link></Item>
             ))}
           
         </Menu>

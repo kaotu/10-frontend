@@ -2,6 +2,8 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { compose, lifecycle, withState } from 'recompose'
 
+import { teamyak, teammongkey } from '../Core/Color'
+
 const Bg = styled.div`
   position: relative;
   height: 100vh;
@@ -111,10 +113,10 @@ const ModelIndex = props => (
       <div className="col-12">
         <div className="row ">
           <div className="col-6 mt-auto text-center">
-            <Monkey onClick={() => setTeam('ling')} src='/static/image/hanuman.svg' />
+            <Monkey onClick={() => props.setColor(teammongkey)} src='/static/image/hanuman.svg' />
           </div>
           <div className="col-6 mt-auto text-center">
-            <Giant onClick={() => setTeam('yak')} src='/static/image/tossakan.svg' />
+            <Giant onClick={() => props.setColor(teamyak)} src='/static/image/tossakan.svg' />
           </div>
         </div>
       </div>
@@ -127,44 +129,7 @@ export default compose(
   lifecycle({
     componentDidMount() {
       let team = window.localStorage.getItem("team")
-      const teamyak = {
-        what: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
-        when: 'linear-gradient(to top , rgba(0,0,0,1),rgba(255, 51, 0,1),rgba(0,0,0,1))',
-        nav: '#384742',
-        navhov: '#002d40',
-        iconl: '../../static/image/yakscore-new-01.svg',
-        iconr: '../../static/image/hanumanscore-new-01.svg',
-        scroll: '../../static/image/ScrollYak.png',
-        cloud: '../../static/image/เมฆแดง.png',
-        faqs: '#FBFFC9',
-        index: 'linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1))',
-        sponsor: 'linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65),rgba(200,51,55,1))',
-        icontran: '../../static/image/when/yakscore.png',
-        bgwhere: '../../static/image/8.png',
-        model1: '../../static/image/storygiant/first.png',
-        model2: '../../static/image/storygiant/second.png',
-        model3: '../../static/image/storygiant/third.png',
-        model4: '../../static/image/storygiant/fourth.png'
-      }
-      const teammongkey = {
-        what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',
-        when: 'linear-gradient(to top, rgba(0,0,0,.65),rgba(119, 169, 220, 1),rgba(0,0,0,.65))',
-        nav: '#002d40',
-        navhov: '#e53c35',
-        iconl: '../../static/image/hanumanscore-new-01.svg',
-        iconr: '../../static/image/yakscore-new-01.svg',
-        scroll: '../../static/image/ScrollMongkey.png',
-        cloud: '../../static/image/CloudBack.svg',
-        faqs: '#CCFFFF',
-        index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
-        sponsor: 'linear-gradient(to top,rgba(0,0,0,.3),#B7CFEB,#B7CFEB,#B7CFEB)',
-        icontran: '../../static/image/when/hanumanscore.png',
-        bgwhere: '../../static/image/2.png',
-        model1: '../../static/image/storymonkey/first.png',
-        model2: '../../static/image/storymonkey/second.png',
-        model3: '../../static/image/storymonkey/third.png',
-        model4: '../../static/image/storymonkey/fourth.png'
-      }
+
       team == 'yak' ?
         window.localStorage.setItem("color", JSON.stringify(teamyak)) :
         window.localStorage.setItem("color", JSON.stringify(teammongkey))

@@ -36,9 +36,8 @@ const Regis = styled.button`
   transition:all 200ms ease-in-out;
   margin:.2em;
   &:hover{
-    box-shadow: 0px 3px 0px #871612;
-    position:relative;
-    top:4px;
+    box-shadow: 0px 2px 0px #871612;
+    transform: translateY(3px);
   }
   @media(max-width:1024px){
     font-size:1.3em;
@@ -89,6 +88,7 @@ const nav = [
   { to: 'where', text: "Where"},
   { to: 'when', text: "When"},
   { to: 'faqs', text: "FAQs"},
+  { to: 'game', text: "Game"},
   { to: 'contact', text: "Contact"}]
 
 class Navbar extends React.Component {
@@ -141,8 +141,8 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <NavItem color={this.state.color.nav} className="sticky-top" >
-        <Burger />
+      <NavItem color={this.props.color.nav} className="sticky-top" >
+        <Burger color={this.props.color}/>
         <div>
           <div className="navbar navbar-expand-lg">
             <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -152,7 +152,7 @@ class Navbar extends React.Component {
               <nav id="navbar-desktop" className="nav nav-pills navbar-nav  justify-content-center ">
                 {nav.map((nav, i) => (
                   <NavLink
-                    color={this.state.color.nav}
+                    color={this.props.color.nav}
                     spy={true}
                     key={i}
                     to={nav.to}
