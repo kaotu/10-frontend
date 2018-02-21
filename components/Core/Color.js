@@ -41,8 +41,8 @@ export const teamyak = {
   model4: '../../static/image/storygiant/fourth.png'
 }
 export const teammongkey = {
-  what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),rgba(119, 169, 220, 1))',
-  when: 'linear-gradient(to top, rgba(0,0,0,.65),rgba(119, 169, 220, 1),rgba(0,0,0,.65))',
+  what: 'linear-gradient(to top, rgba(0,0,0,.65), rgba(119, 169, 220, 1),#148fcf)',
+  when: 'linear-gradient(to top, rgba(0,0,0,.65),#148fcf,rgba(0,0,0,.65))',
   nav: '#002d40',
   navhov: '#e53c35',
   iconl: '../../static/image/hanumanscore-new-01.svg',
@@ -50,7 +50,7 @@ export const teammongkey = {
   scroll: '../../static/image/ScrollMongkey.png',
   cloud: '../../static/image/CloudBack.svg',
   faqs: '#CCFFFF',
-  index: 'linear-gradient(#6791BC, #B7CFEB,#6791BC)',
+  index: 'linear-gradient(#148fcf,#c2dcf2)',
   sponsor: 'linear-gradient(to top,rgba(0,0,0,.3),#B7CFEB,#B7CFEB,#B7CFEB)',
   icontran: '../../static/image/when/hanumanscore.png',
   bgwhere: '../../static/image/2.png',
