@@ -10,7 +10,7 @@ app.prepare()
   .then(() => {
     const server = express()
 
-    server.get('/robot.txt', (req, res) => {
+    server.get('/robots.txt', (req, res) => {
       return res.sendFile(path.join(__dirname, './static', 'robots.txt'))
     })
 
