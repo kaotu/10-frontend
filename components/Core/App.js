@@ -13,7 +13,7 @@ import Faqs from "../FAQs";
 import Contact from "../Contact";
 import Navbar from "../Core/Navbar";
 import Sponsor from "../Sponsor/index";
-import Loading from "../Core/Loading";
+import Loading from "./Loading";
 import Minicontent from "./minisize"
 import Game from "../Game/index"
 
@@ -94,7 +94,7 @@ export default class App extends React.Component {
         <Minicontent />
         <MiniSize>
           <Scroll>
-            {/* <Loading /> */}
+            <Loading />
             <Relative>
               <Overflow id="home" name="home">
                 <Intro color={this.state.color} setColor={this.setColor} />

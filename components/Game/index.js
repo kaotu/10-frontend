@@ -19,9 +19,13 @@ const Bg = styled.div`
 const Button = styled.img`
   width: 40%;
   height: 20%; 
+  transition:all 550ms ease-in-out;
   @media(max-width:800px){
     width: 80%;
     height: 50%; 
+  }
+  &:hover{
+    width:45%;
   }
 `
 
@@ -39,7 +43,7 @@ const index =()=> (
     <Bg className="row">
       <div className="col-12 d-flex justify-content-center align-items-center">
         <Img src="/static/image/gameStone.png"/>
-        <A href="/faqs" className="d-flex justify-content-center">
+        <A href="http://game.wip.camp" target="_blank" className="d-flex justify-content-center">
           <Button src="/static/image/gameButton.png"/>
         </A>
       </div>
