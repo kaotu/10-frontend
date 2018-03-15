@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Bg from '../Sponsor/BgSponsor'
 import H1 from '../Core/FontH1'
 import H2 from '../Core/FontH2'
 import {compose,lifecycle,withState} from 'recompose'
@@ -16,7 +15,6 @@ const Cloud = styled.img`
   top: 0vh;
   left: 0vw;
   @media(max-width:720px){
-
   }
 `
 const DivSponsor = styled.div`
@@ -24,10 +22,33 @@ const DivSponsor = styled.div`
   width: 100vw;
 `
 const BImg = styled.img`
-  width: 90%;
+  width: auto;
+  height: 15vh; 
   margin-right: 1%;
   margin-left: 1%;
+  @media (max-width: 1365px){
+    height: 7vh;
+  }
 `
+const CamphubImg = styled.img`
+  width: auto;
+  height: 15vh; 
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 1365px){
+    height: 7vh;
+  }
+`
+const ThaibevImg = styled.img`
+  width: auto;
+  height: 20vh; 
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 1365px){
+    height: 10vh;
+  }
+`
+
 const SImg = styled.img`
   width: 70%;
   margin-right: 1%;
@@ -35,9 +56,9 @@ const SImg = styled.img`
 `
 
 const BigSponsor = [
-  { img: "/static/image/sponsor.png" },
-  { img: "/static/image/sponsor.png" },
-  { img: "/static/image/sponsor.png" }
+  { img: "" },
+  { img: "" },
+  { img: "" }
 ]
 
 const SmallSponsor = [
@@ -52,24 +73,32 @@ const Topic = H1.extend`
   font-size: 3em;
 `
 
+const Bg = styled.div `
+  background-color: white;
+  min-height: 50vh;
+  @media (max-width: 1365px){
+    min-height: 20vh;
+  }
+`
+const Row = styled.div`
+  margin-top: 10%;
+`
+
 const Index = props => (
-  <Bg bg={props.check.sponsor} className="d-flex">
+  <Bg className="d-flex">
     <Relative className="d-flex align-items-center">
       <Cloud src='/static/image/เมฆ-ล่าง.png' />
       <DivSponsor className="container">
         <div className="row">
           <div className="col-md-12">
             <div className="img-responsive">
-              <div className="row d-flex justify-content-center">
-                {
-                  BigSponsor.map((spon, i) => (
-                    <div className="col-6 col-md-4 col-lg-4">
-                      <BImg key={i} src={spon.img} className="pb-2" />
-                    </div>
-                  ))
-                }
-              </div>
-              <div className="row d-flex justify-content-center">
+              <Row className="row d-flex justify-content-center align-items-center">
+                  <BImg src="/static/image/sponsor/bangmod.png" className="pb-2 d-flex justify-content-center"  />
+                  <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-2 d-flex justify-content-center"  />
+                  <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
+                
+              </Row>
+              {/* <div className="row d-flex justify-content-center">
                 {
                   SmallSponsor.map((spon, i) => (
                     <div className="col-6 col-md-4 col-lg-4">
@@ -77,7 +106,7 @@ const Index = props => (
                     </div>
                   ))
                 }
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
