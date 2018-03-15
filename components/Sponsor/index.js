@@ -23,29 +23,29 @@ const DivSponsor = styled.div`
 `
 const BImg = styled.img`
   width: auto;
-  height: 15vh; 
+  height: 9vh; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 1365px){
-    height: 7vh;
+    height: 6vh;
   }
 `
 const CamphubImg = styled.img`
   width: auto;
-  height: 15vh; 
+  height: 6vh; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 1365px){
-    height: 7vh;
+    height: 4vh;
   }
 `
 const ThaibevImg = styled.img`
   width: auto;
-  height: 20vh; 
+  height: 8vh; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 1365px){
-    height: 10vh;
+    height: 5vh;
   }
 `
 
