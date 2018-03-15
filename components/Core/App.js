@@ -100,9 +100,9 @@ export default class App extends React.Component {
                 <Intro color={this.state.color} setColor={this.setColor} />
                 {injectGlobal(this.state.color.nav)}  
               </Overflow>
-              {/* <section id="sponsor">
-         <Sponsor />
-       </section> */}
+              <section id="sponsor">
+                  <Sponsor />
+              </section>
               <Navbar id="navbar-desktop" color={this.state.color}/>
               <div
                 data-spy="scroll"
