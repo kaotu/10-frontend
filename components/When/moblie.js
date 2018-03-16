@@ -67,7 +67,7 @@ const Moblie = () => (
         </div>
         <div className="row col-12 justify-content-center">
           <Box1>
-            <P>11 มี.ค. 61 <br /> ปิดรับสมัคร</P>
+            <P>18 มี.ค. 61 <br /> ปิดรับสมัคร</P>
           </Box1>
         </div>
         <div className="row col-12 justify-content-center">
