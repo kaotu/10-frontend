@@ -26,7 +26,7 @@ const BImg = styled.img`
   height: 9vh; 
   margin-right: 1%;
   margin-left: 1%;
-  @media (max-width: 1365px){
+  @media (max-width: 720px){
     height: 6vh;
   }
 `
@@ -35,7 +35,7 @@ const CamphubImg = styled.img`
   height: 8vh; 
   margin-right: 1%;
   margin-left: 1%;
-  @media (max-width: 1365px){
+  @media (max-width: 720px){
     height: 4vh;
   }
 `
@@ -44,7 +44,7 @@ const ThaibevImg = styled.img`
   height: 10vh; 
   margin-right: 1%;
   margin-left: 1%;
-  @media (max-width: 1365px){
+  @media (max-width: 720px){
     height: 5vh;
   }
 `
