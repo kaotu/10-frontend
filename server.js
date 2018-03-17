@@ -15,7 +15,7 @@ app.prepare()
     })
 
     server.get('/api/v1/time', (req, res) => {
-      return new Date()
+      res.send(new Date().toString())
     })
 
     server.get('*', (req, res) => {
