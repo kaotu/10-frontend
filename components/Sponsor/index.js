@@ -36,7 +36,7 @@ const CamphubImg = styled.img`
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 4vh;
+    height: 5vh;
   }
 `
 const ThaibevImg = styled.img`
@@ -45,7 +45,16 @@ const ThaibevImg = styled.img`
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 5vh;
+    height: 8vh;
+  }
+`
+const Gable = styled.img`
+  width: auto;
+  height: 5vh; 
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
+    height: 4vh;
   }
 `
 
@@ -82,7 +91,10 @@ const Bg = styled.div `
 `
 const Row = styled.div`
   margin-top: 10%;
+  padding: 5vh;
 `
+
+
 
 const Index = props => (
   <Bg className="d-flex">
@@ -96,7 +108,7 @@ const Index = props => (
                   <BImg src="/static/image/sponsor/bangmod.png" className="pb-2 d-flex justify-content-center"  />
                   <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-2 d-flex justify-content-center"  />
                   <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
-                
+                  <Gable src="/static/image/sponsor/gable.png" className="pb-2 d-flex justify-content-center"  />
               </Row>
               {/* <div className="row d-flex justify-content-center">
                 {
