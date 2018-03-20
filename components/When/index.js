@@ -230,7 +230,7 @@ const index = props => (
             </Box1>
             <Box2  className="text-center">
             <IconTimeline2 src={checkTime('2018-03-11') ? props.color.iconl : props.color.icontran}/>
-              <Time>11 มี.ค. 61 <br /> ปิดรับสมัคร</Time>
+              <Time>18 มี.ค. 61 <br /> ปิดรับสมัคร</Time>
             </Box2>
             <Box3  className="text-center">
             <IconTimeline3 src={checkTime('2018-03-31') ? props.color.iconl : props.color.icontran}/>

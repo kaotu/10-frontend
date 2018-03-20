@@ -14,6 +14,10 @@ app.prepare()
       return res.sendFile(path.join(__dirname, './static', 'robots.txt'))
     })
 
+    server.get('/api/v1/time', (req, res) => {
+      res.send(new Date().toString())
+    })
+
     server.get('*', (req, res) => {
       return handle(req, res)
     })
