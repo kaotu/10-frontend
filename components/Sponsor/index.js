@@ -36,7 +36,7 @@ const CamphubImg = styled.img`
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 5vh;
+    height: 5.5vh;
   }
 `
 const ThaibevImg = styled.img`
@@ -45,7 +45,7 @@ const ThaibevImg = styled.img`
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 8vh;
+    height: 10vh;
   }
 `
 const Gable = styled.img`
@@ -54,7 +54,7 @@ const Gable = styled.img`
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 4vh;
+    height: 5vh;
   }
 `
 
