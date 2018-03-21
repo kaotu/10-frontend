@@ -22,39 +22,48 @@ const DivSponsor = styled.div`
   width: 100vw;
 `
 const BImg = styled.img`
-  width: auto;
-  height: 9vh; 
+height: auto;
+  width: 35%; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 8vh;
+    width: 70%;
   }
 `
 const CamphubImg = styled.img`
-  width: auto;
-  height: 8vh; 
+height: auto;
+  width: 15%; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 7.5vh;
+    width: 40%;
   }
 `
 const ThaibevImg = styled.img`
-  width: auto;
-  height: 10vh; 
+height: auto;
+  width: 13%; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 10vh;
+    width: 35%;
   }
 `
 const Gable = styled.img`
-  width: auto;
-  height: 5vh; 
+  height: auto;
+  width: 13%; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    height: 6.5vh;
+    width: 35%;
+  }
+`
+const Lactasoy = styled.img`
+  height:auto;
+  width: 13%;
+  margin-right; 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
+    width:35%;
   }
 `
 
@@ -109,6 +118,7 @@ const Index = props => (
                   <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-2 d-flex justify-content-center"  />
                   <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
                   <Gable src="/static/image/sponsor/gable.png" className="pb-2 d-flex justify-content-center"  />
+                  <Lactasoy src="/static/image/sponsor/lactasoy.png" className="pb-2 d-flex justify-content-center" />
               </Row>
               {/* <div className="row d-flex justify-content-center">
                 {
