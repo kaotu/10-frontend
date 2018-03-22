@@ -54,6 +54,17 @@ pipeline {
         sh 'sudo docker image rm registry.wip.camp/10-frontend'
       }
     }
+    stage('deploy-development') {
+      when {
+        expression {
+          branch = sh(returnStdout: true, script: 'echo $GIT_BRANCH').trim()
+          return branch == 'develop'
+        }
+      }
+      steps {
+        sh 'sudo kubectl rolling-update 10-frontend -n development --image registry.wip.camp/10-frontend:$GIT_BRANCH --image-pull-policy Always'
+      }
+    }
   }
   post {
     success {
