@@ -116,8 +116,8 @@ const Index = props => (
               <Row className="row d-flex justify-content-center align-items-center">
                   <BImg src="/static/image/sponsor/bangmod.png" className="pb-2 d-flex justify-content-center"  />
                   <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-2 d-flex justify-content-center"  />
-                  <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
                   <Gable src="/static/image/sponsor/gable.png" className="pb-2 d-flex justify-content-center"  />
+                  <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
                   <Lactasoy src="/static/image/sponsor/lactasoy.png" className="pb-2 d-flex justify-content-center" />
               </Row>
               {/* <div className="row d-flex justify-content-center">
