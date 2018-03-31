@@ -8,22 +8,21 @@ const Layout = styled.div`
   background-size: cover;
 `
 
-const Container = styled.div`
+const Background = styled.div`
   background-color: #fff;
   padding-top: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
 `
 
-
 const Announce = () => (
   <Layout>
     <div className="container">
       <div className="row">
-        <Container className="col-12 mt-3 text-center">
-          <h1>ประกาศผลรายชื่อผู้มีสิทธิเข้าค่าย WIP Camp #10</h1>
-        </Container>
-        <Container className="col-12 mb-3">
+        <Background className="col-12 mt-3 text-center rounded-top">
+          <h1 className='mt-4'>ประกาศผลรายชื่อผู้มีสิทธิเข้าค่าย WIP Camp #10</h1>
+        </Background>
+        <Background className="col-12 mb-5 rounded-bottom">
         <table class="table">
           <thead>
             <tr>
@@ -51,7 +50,7 @@ const Announce = () => (
             }
           </tbody>
         </table>
-        </Container>
+        </Background>
       </div>
     </div>
   </Layout>
