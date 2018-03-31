@@ -26,6 +26,15 @@ const Background = styled.div`
   .card-header {
     background-color: #002D40;
   }
+  .card {
+    margin: 0 -2em;
+  }
+
+  @media (min-width: 1024px) {
+    .card {
+      margin: 0;
+    }
+  }
   img {
     max-width: 130px;
   }
@@ -58,19 +67,21 @@ const Announce = () => (
                     <li>บอกขนาดเสื้อที่พวกสามารถใส่ได้</li>
                     <li>
                       อัพโหลดหลักฐานการโอนเงินที่สามารถดูข้อมูลได้อย่างชัดเจน เป็นจำนวนเงิน <b>450 บาท</b><br />
-                      <div className='text-center my-2'>
-                        < div className="card">
-                          <div className="card-body">
-                            <img src="/static/image/scb.jpg" alt="scb" /> <br />
-                            <b>ธนาคารไทยพาณิชย์</b> เลชที่บัญชี <b>237-222168-5</b> <br />
-                            <b>ชื่อบัญชี นาย ฉันทวัฒน์ ประดิษฐ และ/หรือ นางสาว ณัฏฐณัฐ วิเมลืองตระกูล</b> <br />
-                            <b>สาขามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</b>
-                          </div>
-                        </div>
-                      </div>
                     </li>
+                  </ul>
+                  <div style={{overflow: 'hidden'}} className='text-center my-2'>
+                    < div className="card">
+                      <div style={{fontSize: '0.8em'}} className="card-body">
+                        <img src="/static/image/scb.jpg" alt="scb" /> <br />
+                        <b>ธนาคารไทยพาณิชย์</b> <br/>เลขที่บัญชี <b>237-222168-5</b> <br />
+                        <b>ชื่อบัญชี นาย ฉันทวัฒน์ ประดิษฐ <br/>และ/หรือ นางสาว ณัฏฐณัฐ วิเมลืองตระกูล</b> <br />
+                        <b>สาขามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</b>
+                      </div>
+                    </div>
+                  </div>
+                  <ul>
                     <li>หลังจากนั้นให้พวกเจ้าเข้ากลุ่ม Facebook WIP Camp #10 และรอคอยวันที่พวกเจ้าจะได้พบกับพี่ ๆ นะน้องเอ๋ย</li>    
-                  </ul>  
+                  </ul>
                 </div>
                 <h5>
                   สามารถยืนยันสิทธิ์ ได้ที่ <a href="https://itim.wip.camp"><b>ลิงค์นี้</b></a> <br />
