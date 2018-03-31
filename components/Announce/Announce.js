@@ -26,15 +26,6 @@ const Background = styled.div`
   .card-header {
     background-color: #002D40;
   }
-  .card {
-    margin: 0 -2em;
-  }
-
-  @media (min-width: 1024px) {
-    .card {
-      margin: 0;
-    }
-  }
   img {
     max-width: 130px;
   }
