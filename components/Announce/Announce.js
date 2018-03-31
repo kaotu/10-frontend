@@ -70,17 +70,17 @@ const Announce = () => (
                     </li>
                   </ul>
                   <div style={{overflow: 'hidden'}} className='text-center my-2'>
-                    < div className='card'>
+                    <div className='card'>
                       <div style={{fontSize: '0.8em'}} className='card-body'>
                         <img src='/static/image/scb.jpg' alt='scb' /> <br />
-                        <b>ธนาคารไทยพาณิชย์</b> <br/>เลขที่บัญชี <b>237-222168-5</b> <br />
-                        <b>ชื่อบัญชี นาย ฉันทวัฒน์ ประดิษฐ <br/>และ/หรือ นางสาว ณัฏฐณัฐ วิเมลืองตระกูล</b> <br />
+                        <b>ธนาคารไทยพาณิชย์</b> <br/> เลขที่บัญชี <b>237-222168-5</b> <br />
+                        <b>ชื่อบัญชี นาย ฉันทวัฒน์ ประดิษฐ <br/> และ/หรือ นางสาว ณัฏฐณัฐ วิเมลืองตระกูล</b> <br />
                         <b>สาขามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</b>
                       </div>
                     </div>
                   </div>
                   <ul>
-                    <li>หลังจากนั้นให้พวกเจ้าเข้ากลุ่ม Facebook WIP Camp #10 และรอคอยวันที่พวกเจ้าจะได้พบกับพี่ ๆ นะน้องเอ๋ย</li>    
+                    <li>หลังจากนั้นให้พวกเจ้าเข้ากลุ่ม Facebook WIP Camp #10 และรอคอยวันที่พวกเจ้าจะได้พบกับพี่ ๆ นะน้องเอ๋ย</li>
                   </ul>
                 </div>
                 <h5>
@@ -105,13 +105,13 @@ const Announce = () => (
             </thead>
             <tbody>
               {
-                campers.map(({ no, wip_id, full_name, nickname, school }) => {
+                campers.map(({ no, wipId, fullName, nickname, school }) => {
                   let ascii = school.charCodeAt(0)
                   return (
                     <tr key={no}>
                       <th>{no}</th>
-                      <td>{wip_id}</td>
-                      <td>{full_name}</td>
+                      <td>{wipId}</td>
+                      <td>{fullName}</td>
                       <td>{nickname}</td>
                       <td>{ascii > 64 && ascii < 123 ? school : `โรงเรียน${school}`}</td>
                     </tr>
