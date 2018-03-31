@@ -30,7 +30,7 @@ const Announce = () => (
   <Layout>
     <div className="container">
       <div className="row">
-        <img src="/static/image/logofinals.png" alt="wipcamp10"/>
+        <img className='mx-auto mt-4 mb-1' src="/static/image/logofinals.png" alt="wipcamp10"/>
         <Background className="col-12 mt-3 text-center rounded-top">
           <h1 className='mt-4'>ประกาศผลรายชื่อผู้มีสิทธิ์เข้าค่าย</h1>
         </Background>
