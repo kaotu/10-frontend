@@ -45,19 +45,19 @@ const Background = styled.div`
 
 const Announce = () => (
   <Layout>
-    <div className="container">
-      <div className="row">
-        <img className='mx-auto mt-4 mb-1' src="/static/image/logofinals.png" alt="wipcamp10" />
-        <Background className="col-12 mt-3 text-center rounded-top">
+    <div className='container'>
+      <div className='row'>
+        <img className='mx-auto mt-4 mb-1' src='/static/image/logofinals.png' alt='wipcamp10' />
+        <Background className='col-12 mt-3 text-center rounded-top'>
           <h2 className='mt-4'>ประกาศผลรายชื่อผู้มีสิทธิ์เข้าค่าย</h2>
         </Background>
-        <Background className="col-12">
-          <div className="card">
-            <div className="card-header text-white">
+        <Background className='col-12'>
+          <div className='card'>
+            <div className='card-header text-white'>
               ภารกิจแรกของพวกเจ้า!
                   </div>
-            <div className="card-body">
-              <blockquote className="blockquote mb-0">
+            <div className='card-body'>
+              <blockquote className='blockquote mb-0'>
                 <div>
                   ขอแสดงความยินดีกับพวกเจ้านะน้องเอ๋ย ที่ได้เข้ามาเป็นส่วนหนึ่งกับกองทัพทั้งฝ่ายวานรและยักษา <br />
                   สิ่งที่พวกเจ้าต้องทำต่อไปคือ <b>ยืนยันสิทธิ์การเป็นส่วนหนึ่งกับกองทัพ</b> <br />
@@ -70,9 +70,9 @@ const Announce = () => (
                     </li>
                   </ul>
                   <div style={{overflow: 'hidden'}} className='text-center my-2'>
-                    < div className="card">
-                      <div style={{fontSize: '0.8em'}} className="card-body">
-                        <img src="/static/image/scb.jpg" alt="scb" /> <br />
+                    < div className='card'>
+                      <div style={{fontSize: '0.8em'}} className='card-body'>
+                        <img src='/static/image/scb.jpg' alt='scb' /> <br />
                         <b>ธนาคารไทยพาณิชย์</b> <br/>เลขที่บัญชี <b>237-222168-5</b> <br />
                         <b>ชื่อบัญชี นาย ฉันทวัฒน์ ประดิษฐ <br/>และ/หรือ นางสาว ณัฏฐณัฐ วิเมลืองตระกูล</b> <br />
                         <b>สาขามหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</b>
@@ -84,7 +84,7 @@ const Announce = () => (
                   </ul>
                 </div>
                 <h5>
-                  สามารถยืนยันสิทธิ์ ได้ที่ <a href="https://itim.wip.camp"><b>ลิงค์นี้</b></a> <br />
+                  สามารถยืนยันสิทธิ์ ได้ที่ <a href='https://itim.wip.camp'><b>ลิงค์นี้</b></a> <br />
                   พวกเจ้ามีเวลารายงานตัวได้วันที่ <b>2 เมษายน 2561</b> ถึง <b>11 เมษายน 2561</b>
                 </h5>
                 <p>พวกพี่ ๆ จะรอคอยการมาถึงของพวกเจ้านะน้องเอ๋ย !</p>
@@ -92,15 +92,15 @@ const Announce = () => (
             </div>
           </div>
         </Background>
-        <Background className="col-12 mb-5 rounded-bottom table-responsive">
-          <table className="table mt-3">
+        <Background className='col-12 mb-5 rounded-bottom table-responsive'>
+          <table className='table mt-3'>
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">WIP ID</th>
-                <th scope="col">ชื่อ - นามสกุล</th>
-                <th scope="col">ชื่อเล่น</th>
-                <th scope="col">โรงเรียน</th>
+                <th scope='col'>#</th>
+                <th scope='col'>WIP ID</th>
+                <th scope='col'>ชื่อ - นามสกุล</th>
+                <th scope='col'>ชื่อเล่น</th>
+                <th scope='col'>โรงเรียน</th>
               </tr>
             </thead>
             <tbody>
@@ -120,9 +120,9 @@ const Announce = () => (
               }
             </tbody>
           </table>
-          <div className="col-12 text-center">
+          <div className='col-12 text-center'>
             <button className='mt-3 mb-4 mx-auto btn btn-primary'>
-              <a className='text-white mx-auto' href="https://wip.camp">กลับไปหน้าแรก</a>
+              <a className='text-white mx-auto' href='https://wip.camp'>กลับไปหน้าแรก</a>
             </button>
           </div>
         </Background>
