@@ -23,8 +23,8 @@ const Regis = styled.button`
   font-size:1.4em;
   text-decoration:none;
   border-radius:5px;
-  border:solid 1px #ea6662;
-  background:#ea6662;
+  border:solid 1px #e53c35;
+  background:#e53c35;
   text-align:center;
   padding:.3em .2em;
   transition: all 0.1s;
