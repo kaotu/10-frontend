@@ -22,12 +22,12 @@ const DivSponsor = styled.div`
   width: 100vw;
 `
 const BImg = styled.img`
-height: auto;
+  height: auto;
   width: 35%; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    width: 70%;
+    width: 50%;
   }
 `
 const CamphubImg = styled.img`
@@ -63,7 +63,7 @@ const Lactasoy = styled.img`
   margin-right; 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    width:35%;
+    width:33%;
   }
 `
 const Dsc = styled.img`
@@ -92,7 +92,7 @@ const Aware = styled.img`
   margin-right; 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    width:35%;
+    width:33%;
   }
 `
 
@@ -132,7 +132,7 @@ const Row = styled.div`
   padding: 3vh;
 `
 const Row2 = styled.div`
-  padding: 3vh;
+  padding: 0vh;
 `
 
 
@@ -146,19 +146,21 @@ const Index = props => (
             <div className="img-responsive col-12">
               <Row className="row d-flex justify-content-center align-items-center">
                   <BImg src="/static/image/sponsor/bangmod.png" className="pb-2 d-flex justify-content-center"  />
-              </Row>
-            </div>
-            <div className="img-responsive">
-            <Row2 className="row d-flex justify-content-center align-items-center">
                   <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-2 d-flex justify-content-center"  />
                   <Gable src="/static/image/sponsor/gable.png" className="pb-2 d-flex justify-content-center"  />
                   <Dsc src="/static/image/sponsor/DSC-LOGO.png" className="pb-2 d-flex justify-content-center" />
+              </Row>
+              <Row2 className="row d-flex justify-content-center align-items-center">
                   <Aware src="/static/image/sponsor/aware_logotagline_rgb.png" className="pb-2 d-flex justify-content-center"/>
                   <Lactasoy src="/static/image/sponsor/lactasoy.png" className="pb-2 d-flex justify-content-center" />
                   <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
                   <Masita src="/static/image/sponsor/Masita.png" className="pb-2 d-flex justify-content-center" />
               </Row2>
             </div>
+            {/* <div className="img-responsive">
+            <Row2 className="row d-flex justify-content-center align-items-center">
+              </Row2>
+            </div> */}
           </div>
         </div>
       </DivSponsor>
