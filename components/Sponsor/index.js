@@ -22,12 +22,12 @@ const DivSponsor = styled.div`
   width: 100vw;
 `
 const BImg = styled.img`
-height: auto;
+  height: auto;
   width: 35%; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    width: 70%;
+    width: 50%;
   }
 `
 const CamphubImg = styled.img`
@@ -63,7 +63,36 @@ const Lactasoy = styled.img`
   margin-right; 1%;
   margin-left: 1%;
   @media (max-width: 720px){
+    width:33%;
+  }
+`
+const Dsc = styled.img`
+  height:auto;
+  width: 13%;
+  margin-right; 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
     width:35%;
+  }
+`
+
+const Masita = styled.img`
+  height:auto;
+  width: 13%;
+  margin-right; 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
+    width:35%;
+  }
+`
+
+const Aware = styled.img`
+  height:auto;
+  width: 13%;
+  margin-right; 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
+    width:33%;
   }
 `
 
@@ -100,9 +129,11 @@ const Bg = styled.div `
 `
 const Row = styled.div`
   margin-top: 10%;
-  padding: 5vh;
+  padding: 3vh;
 `
-
+const Row2 = styled.div`
+  padding: 0vh;
+`
 
 
 const Index = props => (
@@ -112,24 +143,24 @@ const Index = props => (
       <DivSponsor className="container">
         <div className="row">
           <div className="col-md-12">
-            <div className="img-responsive">
+            <div className="img-responsive col-12">
               <Row className="row d-flex justify-content-center align-items-center">
                   <BImg src="/static/image/sponsor/bangmod.png" className="pb-2 d-flex justify-content-center"  />
                   <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-2 d-flex justify-content-center"  />
                   <Gable src="/static/image/sponsor/gable.png" className="pb-2 d-flex justify-content-center"  />
-                  <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
-                  <Lactasoy src="/static/image/sponsor/lactasoy.png" className="pb-2 d-flex justify-content-center" />
+                  <Dsc src="/static/image/sponsor/DSC-LOGO.png" className="pb-2 d-flex justify-content-center" />
               </Row>
-              {/* <div className="row d-flex justify-content-center">
-                {
-                  SmallSponsor.map((spon, i) => (
-                    <div className="col-6 col-md-4 col-lg-4">
-                      <SImg key={i} src={spon.img} className="pb-2" />
-                    </div>
-                  ))
-                }
-              </div> */}
+              <Row2 className="row d-flex justify-content-center align-items-center">
+                  <Aware src="/static/image/sponsor/aware_logotagline_rgb.png" className="pb-2 d-flex justify-content-center"/>
+                  <Lactasoy src="/static/image/sponsor/lactasoy.png" className="pb-2 d-flex justify-content-center" />
+                  <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
+                  <Masita src="/static/image/sponsor/Masita.png" className="pb-2 d-flex justify-content-center" />
+              </Row2>
             </div>
+            {/* <div className="img-responsive">
+            <Row2 className="row d-flex justify-content-center align-items-center">
+              </Row2>
+            </div> */}
           </div>
         </div>
       </DivSponsor>
