@@ -23,20 +23,20 @@ const DivSponsor = styled.div`
 `
 const BImg = styled.img`
   height: auto;
-  width: 35%; 
+  width: 37%; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    width: 50%;
+    width: 52%;
   }
 `
 const CamphubImg = styled.img`
-height: auto;
-  width: 15%; 
+  height: auto;
+  width: 20%; 
   margin-right: 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    width: 40%;
+    width: 45%;
   }
 `
 const ThaibevImg = styled.img`
@@ -95,6 +95,15 @@ const Aware = styled.img`
     width:33%;
   }
 `
+const Yipinsoi = styled.img`
+  height:auto;
+  width: 27%;
+  margin-right; 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
+    width:45%;
+  }
+`
 
 const SImg = styled.img`
   width: 70%;
@@ -147,11 +156,13 @@ const Index = props => (
               <Row className="row d-flex justify-content-center align-items-center">
                   <BImg src="/static/image/sponsor/bangmod.png" className="pb-2 d-flex justify-content-center"  />
                   <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-2 d-flex justify-content-center"  />
+                  <Yipinsoi src="/static/image/sponsor/yipinsoi.png" className="pb-2 d-flex justify-content-center"  />
+                  <Gable src="/static/image/sponsor/stream_it_logo.png" className="pb-2 d-flex justify-content-center"  />
                   <Gable src="/static/image/sponsor/gable.png" className="pb-2 d-flex justify-content-center"  />
                   <Dsc src="/static/image/sponsor/DSC-LOGO.png" className="pb-2 d-flex justify-content-center" />
+                  <Aware src="/static/image/sponsor/aware_logotagline_rgb.png" className="pb-2 d-flex justify-content-center"/>
               </Row>
               <Row2 className="row d-flex justify-content-center align-items-center">
-                  <Aware src="/static/image/sponsor/aware_logotagline_rgb.png" className="pb-2 d-flex justify-content-center"/>
                   <Lactasoy src="/static/image/sponsor/lactasoy.png" className="pb-2 d-flex justify-content-center" />
                   <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
                   <Masita src="/static/image/sponsor/Masita.png" className="pb-2 d-flex justify-content-center" />
