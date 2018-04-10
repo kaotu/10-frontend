@@ -97,11 +97,11 @@ const Aware = styled.img`
 `
 const Yipinsoi = styled.img`
   height:auto;
-  width: 27%;
+  width: 20%;
   margin-right; 1%;
   margin-left: 1%;
   @media (max-width: 720px){
-    width:45%;
+    width:35%;
   }
 `
 
@@ -142,6 +142,7 @@ const Row = styled.div`
 `
 const Row2 = styled.div`
   padding: 0vh;
+  margin-bottom:2%;
 `
 
 
@@ -154,14 +155,16 @@ const Index = props => (
           <div className="col-md-12">
             <div className="img-responsive col-12">
               <Row className="row d-flex justify-content-center align-items-center">
-                  <BImg src="/static/image/sponsor/bangmod.png" className="pb-2 d-flex justify-content-center"  />
-                  <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-2 d-flex justify-content-center"  />
-                  <Yipinsoi src="/static/image/sponsor/yipinsoi.png" className="pb-2 d-flex justify-content-center"  />
+                  <BImg src="/static/image/sponsor/bangmod.png" className="pb-4 d-flex justify-content-center"  />
+                  <CamphubImg src="/static/image/sponsor/Camphub.png" className="pb-4 d-flex justify-content-center"  />
+                  <Yipinsoi src="/static/image/sponsor/yipinsoi.png" className="pb-4 d-flex justify-content-center"  />
+              </Row>
+              <Row2 className="row d-flex justify-content-center align-items-center">
                   <Gable src="/static/image/sponsor/stream_it_logo.png" className="pb-2 d-flex justify-content-center"  />
                   <Gable src="/static/image/sponsor/gable.png" className="pb-2 d-flex justify-content-center"  />
                   <Dsc src="/static/image/sponsor/DSC-LOGO.png" className="pb-2 d-flex justify-content-center" />
                   <Aware src="/static/image/sponsor/aware_logotagline_rgb.png" className="pb-2 d-flex justify-content-center"/>
-              </Row>
+              </Row2>
               <Row2 className="row d-flex justify-content-center align-items-center">
                   <Lactasoy src="/static/image/sponsor/lactasoy.png" className="pb-2 d-flex justify-content-center" />
                   <ThaibevImg src="/static/image/sponsor/ThaiBev.png" className="pb-2 d-flex justify-content-center"  />
