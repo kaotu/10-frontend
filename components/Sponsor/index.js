@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import H1 from "../Core/FontH1"
-import H2 from "../Core/FontH2"
 import { compose, lifecycle, withState } from "recompose"
 
 const Relative = styled.div`
@@ -112,15 +111,13 @@ const SImg = styled.img`
   margin-left: 1%;
 `
 
-const BigSponsor = [{ img: "" }, { img: "" }, { img: "" }]
-
-const SmallSponsor = [
-  { img: "/static/image/sponsor.png" },
-  { img: "/static/image/sponsor.png" },
-  { img: "/static/image/sponsor.png" },
-  { img: "/static/image/sponsor.png" },
-  { img: "/static/image/sponsor.png" }
-]
+// const SmallSponsor = [
+//   { img: "/static/image/sponsor.png" },
+//   { img: "/static/image/sponsor.png" },
+//   { img: "/static/image/sponsor.png" },
+//   { img: "/static/image/sponsor.png" },
+//   { img: "/static/image/sponsor.png" }
+// ]
 
 const Topic = H1.extend`
   font-size: 3em;
