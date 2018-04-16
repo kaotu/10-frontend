@@ -20,6 +20,7 @@ const Cloud = styled.img`
 const DivSponsor = styled.div`
   position: relative;
   width: 100vw;
+  padding: 2em 0 2.8em;
 `
 const BImg = styled.img`
   height: auto;
@@ -163,7 +164,7 @@ const Index = props => (
                   <Gable src="/static/image/sponsor/stream_it_logo.png" className="pb-2 d-flex justify-content-center"  />
                   <Gable src="/static/image/sponsor/gable.png" className="pb-2 d-flex justify-content-center"  />
                   <Dsc src="/static/image/sponsor/dcs.png" className="pb-2 d-flex justify-content-center" />
-                  <Aware src="/static/image/sponsor/aware_logotagline_rgb.png" className="pb-2 d-flex justify-content-center"/>
+                  <Aware src="/static/image/sponsor/aware_logotagline_rgb.png" className="ml-4 pb-2 d-flex justify-content-center"/>
               </Row2>
               <Row2 className="row d-flex justify-content-center align-items-center">
                   <Lactasoy src="/static/image/sponsor/lactasoy.png" className="pb-2 d-flex justify-content-center" />
