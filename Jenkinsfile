@@ -4,61 +4,53 @@ pipeline {
     GIT_BRANCH = "${BRANCH_NAME}"
   }
   stages {
-    stage('initial') {
+    stage('install-dependencies') {
       steps {
-        sh 'yarn install'
+        sh 'sudo docker container run --rm -v $(pwd):/app node:8 sh -c "cd /app && yarn install"'
       }
     }
-    stage('test') {
+    stage('build-application') {
       steps {
-        sh 'echo no test now test trigger'
+        sh 'sudo rm -rf .next'
+        sh 'sudo docker container run --rm -v $(pwd):/app node:8 sh -c "cd /app && yarn build"'
       }
     }
-    stage('build') {
-      when {
-        expression {
-          branch = sh(returnStdout: true, script: 'echo $GIT_BRANCH').trim()
-          return branch == 'develop' || branch == 'master'
-        }
-      }
+    stage('build-image') {
       steps {
         sh 'sudo docker build . -t 10-frontend'
-        sh 'sudo docker tag 10-frontend registry.wip.camp/10-frontend:$GIT_BRANCH-$BUILD_NUMBER'
         sh 'sudo docker tag 10-frontend registry.wip.camp/10-frontend:$GIT_BRANCH'
         sh 'sudo docker tag 10-frontend registry.wip.camp/10-frontend'
       }
     }
-    stage('push') {
-      when {
-        expression {
-          branch = sh(returnStdout: true, script: 'echo $GIT_BRANCH').trim()
-          return branch == 'develop' || branch == 'master'
-        }
-      }
+    stage('push-image') {
       steps {
-        sh 'sudo docker push registry.wip.camp/10-frontend:$GIT_BRANCH-$BUILD_NUMBER'
         sh 'sudo docker push registry.wip.camp/10-frontend:$GIT_BRANCH'
         sh 'sudo docker push registry.wip.camp/10-frontend'
       }
     }
-    stage('clean') {
+    stage('versioning') {
       when {
         expression {
-          branch = sh(returnStdout: true, script: 'echo $GIT_BRANCH').trim()
-          return branch == 'develop' || branch == 'master'
+          return GIT_BRANCH == 'master'
         }
       }
       steps {
-        sh 'sudo docker image rm registry.wip.camp/10-frontend:$GIT_BRANCH-$BUILD_NUMBER'
+        sh 'sudo docker tag 10-frontend registry.wip.camp/10-frontend:$GIT_BRANCH-$BUILD_NUMBER'
+        sh 'sudo docker push registry.wip.camp/10-frontend:$GIT_BRANCH-$BUILD_NUMBER'        
+        sh 'sudo docker image rm registry.wip.camp/10-frontend:$GIT_BRANCH-$BUILD_NUMBER'        
+      }
+    }
+    stage('clean') {
+      steps {
         sh 'sudo docker image rm registry.wip.camp/10-frontend:$GIT_BRANCH'
         sh 'sudo docker image rm registry.wip.camp/10-frontend'
+        sh 'sudo docker image rm 10-frontend'
       }
     }
     stage('deploy-development') {
       when {
         expression {
-          branch = sh(returnStdout: true, script: 'echo $GIT_BRANCH').trim()
-          return branch == 'develop'
+          return GIT_BRANCH == 'develop'
         }
       }
       steps {
