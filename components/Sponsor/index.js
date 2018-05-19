@@ -157,11 +157,14 @@ const Index = props => (
                 <Gable src='/static/image/sponsor/gable.png' className='pb-2 d-flex justify-content-center' />
                 <Dsc src='/static/image/sponsor/dcs.png' className='pb-2 d-flex justify-content-center' />
                 <Aware src='/static/image/sponsor/aware_logotagline_rgb.png' className='pb-2 d-flex justify-content-center' />
-              </Row2>
-              <Row2 className='row d-flex justify-content-center align-items-center'>
                 <Lactasoy src='/static/image/sponsor/lactasoy.png' className='pb-2 d-flex justify-content-center' />
+              {/* </Row2>
+              <Row2 className='row d-flex justify-content-center align-items-center'> */}
+                <Gable src="/static/image/sponsor/Premier Marketing.png" className='pb-2 d-flex justify-content-center' />
                 <ThaibevImg src='/static/image/sponsor/ThaiBev.png' className='pb-2 d-flex justify-content-center' />
                 <Masita src='/static/image/sponsor/Masita.png' className='pb-2 d-flex justify-content-center' />
+                <Gable src="/static/image/sponsor/เด็กดี.gif" className='pb-2 d-flex justify-content-center' />
+                <Gable src="/static/image/sponsor/โบว์เบเกอรี่เฮ้าส์.png" className='pb-2 d-flex justify-content-center' />
               </Row2>
             </div>
           </div>
