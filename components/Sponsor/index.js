@@ -61,7 +61,7 @@ const Lactasoy = styled.img`
   height:auto;
   width: 13%;
   margin-right; 1%;
-  margin-left: 1%;
+  margin-left: 2%;
   @media (max-width: 720px){
     width:33%;
   }
@@ -90,7 +90,7 @@ const Aware = styled.img`
   height:auto;
   width: 13%;
   margin-right; 1%;
-  margin-left: 1%;
+  margin-left: 2%;
   @media (max-width: 720px){
     width:33%;
   }
@@ -104,20 +104,31 @@ const Yipinsoi = styled.img`
     width:35%;
   }
 `
+const Dekd = styled.img`
+  height: auto;
+  width: 13%;
+  margin-right: 1%;
+  margin-left: 2%;
+  @media (max-width: 720px) {
+    width: 35%;
+  }
+`
+const Bow = styled.img`
+  height: auto;
+  width: 13%;
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 720px) {
+    width: 35%;
+    margin-bottom:2%;
+  }
+`
 
 const SImg = styled.img`
   width: 70%;
   margin-right: 1%;
   margin-left: 1%;
 `
-
-// const SmallSponsor = [
-//   { img: "/static/image/sponsor.png' },
-//   { img: "/static/image/sponsor.png' },
-//   { img: "/static/image/sponsor.png' },
-//   { img: "/static/image/sponsor.png' },
-//   { img: "/static/image/sponsor.png' }
-// ]
 
 const Topic = H1.extend`
   font-size: 3em;
@@ -158,13 +169,13 @@ const Index = props => (
                 <Dsc src='/static/image/sponsor/dcs.png' className='pb-2 d-flex justify-content-center' />
                 <Aware src='/static/image/sponsor/aware_logotagline_rgb.png' className='pb-2 d-flex justify-content-center' />
                 <Lactasoy src='/static/image/sponsor/lactasoy.png' className='pb-2 d-flex justify-content-center' />
-              {/* </Row2>
-              <Row2 className='row d-flex justify-content-center align-items-center'> */}
+              </Row2>
+              <Row2 className='row d-flex justify-content-center align-items-center'>
                 <Gable src="/static/image/sponsor/Premier Marketing.png" className='pb-2 d-flex justify-content-center' />
                 <ThaibevImg src='/static/image/sponsor/ThaiBev.png' className='pb-2 d-flex justify-content-center' />
                 <Masita src='/static/image/sponsor/Masita.png' className='pb-2 d-flex justify-content-center' />
-                <Gable src="/static/image/sponsor/เด็กดี.gif" className='pb-2 d-flex justify-content-center' />
-                <Gable src="/static/image/sponsor/โบว์เบเกอรี่เฮ้าส์.png" className='pb-2 d-flex justify-content-center' />
+                <Dekd src="/static/image/sponsor/เด็กดี.gif" className='pb-2 d-flex justify-content-center' />
+                <Bow src="/static/image/sponsor/โบว์เบเกอรี่เฮ้าส์.png" className='pb-2 d-flex justify-content-center' />
               </Row2>
             </div>
           </div>
