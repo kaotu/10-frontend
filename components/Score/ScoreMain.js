@@ -19,8 +19,8 @@ class ScoreMain extends React.Component {
       return a.score < b.score
     })
     this.setState({
-      ranking: await this.makeRanking(data),
-      isEqualAll: await this.checkScoreEqualAll(data)
+      isEqualAll: await this.checkScoreEqualAll(data),
+      ranking: await this.makeRanking(data)
     })
   }
 
@@ -60,7 +60,9 @@ class ScoreMain extends React.Component {
       <div className='container'>
         <div className='row'>
           <div className='col'>
-            {api_url}
+            {
+              this.state.isEqualAll === true ? 'true' : 'false'
+            }
           </div>
         </div>
       </div>
