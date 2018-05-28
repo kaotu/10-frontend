@@ -5,7 +5,7 @@ import {api_url} from './api'
 
 injectGlobal`
   body{
-    background: url(/static/image/scoreboard/bg-2.png) no-repeat center center fixed;
+    background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #effde6;
     background-size: cover;
     height: 100%;
     overflow: hidden;
@@ -17,7 +17,6 @@ const ListBox = Styled.div`
   border-radius:5px;
   margin-top:1em;
   margin-bottom:2em;
-  padding-left:5em;
 `
 const Circle = Styled.div`
   border-radius:50%;
@@ -26,8 +25,8 @@ const Circle = Styled.div`
   background-color:#888;
   color:#fff;
   position:absolute;
-  left:0;
-  top:12%;
+  left: -18%;
+  top: -85%;
   padding: 0.75em 1.25em;
   font-size: 1.4em;
 `
@@ -40,6 +39,10 @@ const Score = Styled.p`
   @media(max-width:576px){
     right:10%;
   }
+`
+const Box = Styled.div`
+  background-color:#fff;
+  border-radius:5px;
 `
 class ScoreMain extends React.Component {
   
@@ -94,20 +97,33 @@ class ScoreMain extends React.Component {
     let { ranking } = this.state
     return (
       <div className='container'>
-        <div className='row my-4'>
-          <div className='col-12'>
+        <div className='row my-4 justify-content-center'>
+           <Box className='col-7'>
+            <h3 className='text-center'>ScoreBoard</h3>
+            {/* {
+              this.state.isEqualAll === true ? (
+                this.state.ranking.map((item) => {
+                  return <ListBox className='col-lg-7'>
+                            <div className='row'>
+                              <div className='col-2'>
+                                <Circle>10</Circle>
+                              </div>
+                              <div className='col-8'>
+                                {item.display_name}
+                              </div>
+                              <div className='col-2'>
+                                {item.score}
+                              </div>
+                            </div>
+                        </ListBox>
+                })
+              ):('')
+            } */}
+           </Box>
+          {/* <div className='col-12'>
             <h1 className='text-center'>WIP Camp #10 Ranking</h1>
-          </div>
+          </div> */}
           <div className='row justify-content-center'>
-          {
-            this.state.isEqualAll === true ? (
-              this.state.ranking.map((item) => {
-                return <div className='col-7'>
-                          <ListBox><Circle>{item.ranking}</Circle>{item.display_name}<Score>{item.score}</Score></ListBox>
-                       </div>
-              })
-            ):('')
-          }
 
           </div>
         </div>
