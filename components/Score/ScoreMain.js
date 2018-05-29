@@ -16,7 +16,7 @@ const ListBox = Styled.div`
   box-shadow: rgba(81, 77, 92, 0.09) 0px 5px 15px 3px;
   padding:0.4em;
   border-radius:5px;
-  margin-top:20px;
+  margin-top:15px;
 `
 const Circle = Styled.div`
   border-radius:50%;
@@ -48,11 +48,11 @@ const Trophy = Styled.img`
 `
 const WippoAvatar = Styled.div`
   border-radius: 50%;
-  background: url(/static/image/scoreboard/wippo/1.svg) no-repeat;
+  background: url(/static/image/scoreboard/wippo/${props => props.id}.svg) no-repeat;
   height: 50px;
   width: 50px;
   background-size: cover;
-  background-position: -5px -1px;
+  background-position: ${props => props.bgPosition};
   // box-shadow: rgba(81,77,92,0.09) 0px 5px 15px 3px;
 `
 const FlavorDisplay = Styled.p`
@@ -64,7 +64,8 @@ class ScoreMain extends React.Component {
   
   state = {
     ranking : [],
-    isEqualAll : false
+    isEqualAll : false,
+    bgPosition : ['-5px -1px','-5px -1px','4px 1px','5px 4px','6px 3px','-4px -16px','7px -16px','3px -19px','3px -9px','-3px -7px']
   }
 
   componentDidMount = async () => {
@@ -116,186 +117,28 @@ class ScoreMain extends React.Component {
         <div className='row my-4 justify-content-center'>
            <div className='col-7'>
             <h3 className='text-center'>ScoreBoard</h3>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy1.svg' />
+            {
+              this.state.ranking.map((item,index)=>{
+                return <div className='row justify-content-center'>
+                    <ListBox className='col-10'>
+                      <div className='row'>
+                        <div className='col-1'>
+                          <Trophy src='/static/image/scoreboard/trophy1.svg' />
+                        </div>
+                        <div className='col-2'>
+                          <WippoAvatar id={item.id} bgPosition={this.state.bgPosition[index]} />
+                        </div>
+                        <div className='col-6 align-self-center'>
+                          <FlavorDisplay>{item.display_name}</FlavorDisplay>
+                        </div>
+                        <div className="col-3 align-self-center">
+                          <Score>{item.score}</Score>
+                        </div>
+                      </div>
+                    </ListBox>
                   </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy2.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy3.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy4.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy1.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy1.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy1.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy1.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy1.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
-            <div className='row justify-content-center'>
-              <ListBox className='col-10'>
-                <div className='row'>
-                  <div className='col-1'>
-                    <Trophy src='/static/image/scoreboard/trophy1.svg' />
-                  </div>
-                  <div className='col-2'>
-                    <WippoAvatar />
-                  </div>
-                  <div className='col-6 align-self-center'>
-                    <FlavorDisplay>ขนมไข่</FlavorDisplay>
-                  </div>
-                  <div className="col-3 align-self-center">
-                    <Score>1000</Score>
-                  </div>
-                </div>
-              </ListBox>
-            </div>
+              })
+            }
             {/* {
               this.state.isEqualAll === true ? (
                 this.state.ranking.map((item) => {
