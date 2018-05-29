@@ -3,10 +3,13 @@ import styled from 'styled-components'
 import { insert } from './firebaseHelper'
 
 const Layout = styled.div`
-  background: #000;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url('/static/image/monkeyxgiant.png');
 `
 
 const MinHeight = styled.div`
+  background: linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1));
   min-height: 100vh;
 `
 
@@ -18,6 +21,7 @@ const Modal = styled.div`
   background: rgba(39, 20, 20, 0.95);
   top: 0;
   left: 0;
+  transition: .5s;
 `
 
 export default class KillerMain extends React.Component {
@@ -59,7 +63,7 @@ export default class KillerMain extends React.Component {
           <div className="container">
             <MinHeight className="row d-flex justify-content-center align-items-center">
               <div className="col-12 text-center">
-                <h1 className='text-white'>ยืนยันที่จะฆ่า​?</h1>
+                <h1 className='text-white mb-5'>ยืนยันที่จะฆ่า​?</h1>
               <button onClick={() => {
                 this.sentDied()
                 this.closeModal()
