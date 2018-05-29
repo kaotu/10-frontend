@@ -12,6 +12,9 @@ const Wrapper = Styled.div`
   min-height:100vh;
   width:100%;
   overflow: hidden;
+  @media (max-width: 576px) {
+    background-position: right bottom;
+  }
 `
 const ListBox = Styled.div`
   background-color:#fff;
@@ -20,22 +23,17 @@ const ListBox = Styled.div`
   border-radius:5px;
   margin-top:15px;
 `
-const Circle = Styled.div`
-  border-radius:50%;
-  width:65px;
-  height:65px;
-  background-color:#888;
-  color:#fff;
-  position:absolute;
-  left: -18%;
-  top: -85%;
-  padding: 0.75em 1.25em;
-  font-size: 1.4em;
-`
+
 const Score = Styled.p`
   margin: 0;
   font-size: 2em;
-  color:#000;
+  color: ${props => props.color};
+  @media (max-width: 375px) {
+    font-size:1.3em;
+  }
+  @media (min-width: 376px and max-width:576px) {
+    font-size:1.7em;
+  }
 `
 const Box = Styled.div`
   background-color:#fff;
@@ -47,6 +45,11 @@ const Trophy = Styled.img`
   left: -56%;
   top: 4%;
   width: 150%;
+  @media (max-width: 576px) {
+    left: -49%;
+    top: 13%;
+    width: 174%;
+  }
 `
 const WippoAvatar = Styled.div`
   border-radius: 50%;
@@ -55,12 +58,21 @@ const WippoAvatar = Styled.div`
   width: 50px;
   background-size: cover;
   background-position: ${props => props.bgPosition};
-  // box-shadow: rgba(81,77,92,0.09) 0px 5px 15px 3px;
+  @media (max-width: 375px) {
+    height: 35px;
+    width: 35px;
+  }
 `
 const FlavorDisplay = Styled.p`
   color:#000;
   margin:0;
   font-size:1.5em;
+  @media (max-width: 375px) {
+    font-size:1em;
+  }
+  @media (max-width: 576px) {
+    font-size:1.3em;
+  }
 `
 
 class ScoreMain extends React.Component {
@@ -72,7 +84,7 @@ class ScoreMain extends React.Component {
   }
 
   componentDidMount = async () => {
-    this.fetch
+    this.fetch()
     setInterval( this.fetch, 30000);
     
   }
@@ -138,50 +150,49 @@ class ScoreMain extends React.Component {
       <Wrapper>
         <div className='container'>
           <div className='row my-4 justify-content-center'>
-            <div className='col-7'>
+            <div className='col-12 col-sm-7'>
               <h3 className='text-center'>ScoreBoard</h3>
-              <FlipMove className="flip-wrapper" enterAnimation={{
-                from: {
-                  transform: 'rotateX(180deg)',
-                  opacity: 0.1,
-                },
-                to: {
-                  transform: '',
-                },
-              }}
-              leaveAnimation={{
-                from: {
+                <FlipMove className="flip-wrapper" enterAnimation={{
+                  from: {
+                    transform: 'rotateX(180deg)',
+                    opacity: 0.1,
+                  },
+                  to: {
                     transform: '',
-                },
-                to: {
-                  transform: 'rotateX(-120deg)',
-                  opacity: 0.1,
-                },
-              }} staggerDelayBy={150}>
-                {
-                  ranking.map((item,index)=>{
-                    return <div key={`${index}${item.id}`} >
-                        <ListBox className='col-10'>
-                          <div className='row'>
-                            <div className='col-1'>
-                              <Trophy src={`/static/image/scoreboard/trophy${item.trophy}.svg`} />
+                  },
+                }}
+                leaveAnimation={{
+                  from: {
+                      transform: '',
+                  },
+                  to: {
+                    transform: 'rotateX(-120deg)',
+                    opacity: 0.1,
+                  },
+                }} staggerDelayBy={150}>
+                  {
+                    ranking.map((item,index)=>{
+                      return <div className="row justify-content-center" key={`${index}${item.id}`} >
+                          <ListBox className='col-10'>
+                            <div className='row'>
+                              <div className='col-1'>
+                                <Trophy src={`/static/image/scoreboard/trophy${item.trophy}.svg`} />
+                              </div>
+                              <div className='col-2'>
+                                <WippoAvatar id={item.id} bgPosition={this.state.bgPosition[item.id-1]} />
+                              </div>
+                              <div className='col-5 col-sm-6 align-self-center'>
+                                <FlavorDisplay>{item.display_name}</FlavorDisplay>
+                              </div>
+                              <div className="col-4 col-sm-3 align-self-center">
+                                <Score color={item.label_color}>{item.score}</Score>
+                              </div>
                             </div>
-                            <div className='col-2'>
-                              <WippoAvatar id={item.id} bgPosition={this.state.bgPosition[item.id-1]} />
-                            </div>
-                            <div className='col-6 align-self-center'>
-                              <FlavorDisplay>{item.display_name}</FlavorDisplay>
-                            </div>
-                            <div className="col-3 align-self-center">
-                              <Score>{item.score}</Score>
-                            </div>
-                          </div>
-                        </ListBox>
-                      </div>
-                  })
-                }
-              </FlipMove>
-              
+                          </ListBox>
+                        </div>
+                    })
+                  }
+                </FlipMove>
             </div>
           </div>
         </div>
