@@ -2,14 +2,16 @@ import React from 'react'
 import axios from 'axios'
 import Styled, { injectGlobal } from 'styled-components'
 import {api_url} from './api'
+import FlipMove from 'react-flip-move'
 
-injectGlobal`
-  body{
-    background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #effde6;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-  }
+
+
+const Wrapper = Styled.div`
+  background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #effde6;
+  background-size: cover;
+  min-height:100vh;
+  width:100%;
+  overflow: hidden;
 `
 const ListBox = Styled.div`
   background-color:#fff;
@@ -60,6 +62,7 @@ const FlavorDisplay = Styled.p`
   margin:0;
   font-size:1.5em;
 `
+
 class ScoreMain extends React.Component {
   
   state = {
@@ -69,6 +72,12 @@ class ScoreMain extends React.Component {
   }
 
   componentDidMount = async () => {
+    this.fetch
+    setInterval( this.fetch, 30000);
+    
+  }
+
+  fetch = async() => {
     let { data : { data: rawRanking } } = await axios({
       method: 'get',
       url: `${api_url}/scores`
@@ -79,8 +88,7 @@ class ScoreMain extends React.Component {
     let rankUnFormatted = await this.setRanking(rawRanking)
     let rankFormatted = await this.formatRanking(rankUnFormatted)
     this.setState({
-      ranking: rankFormatted,
-      isEqualAll: this.checkIsEqualAll(rankFormatted)
+      ranking: await this.setTrophy(rankFormatted)
     })
   }
 
@@ -104,6 +112,20 @@ class ScoreMain extends React.Component {
     })
   }
 
+  setTrophy = (rankFormatted) => {
+    return rankFormatted.map((item)=>{
+      if(item.ranking === 1){
+        return {...item, trophy:1}
+      }else if(item.ranking === 2){
+        return {...item, trophy:2}
+      }else if(item.ranking === 3){
+        return {...item, trophy:3}
+      }else{
+        return {...item, trophy:4}
+      }
+    })
+  }
+
   checkIsEqualAll = (rankFormatted) => {
     return rankFormatted.every((rank) => {
       return rank.ranking === 1
@@ -113,64 +135,61 @@ class ScoreMain extends React.Component {
   render () {
     let { ranking } = this.state
     return (
-      <div className='container'>
-        <div className='row my-4 justify-content-center'>
-           <div className='col-7'>
-            <h3 className='text-center'>ScoreBoard</h3>
-            {
-              this.state.ranking.map((item,index)=>{
-                return <div className='row justify-content-center'>
-                    <ListBox className='col-10'>
-                      <div className='row'>
-                        <div className='col-1'>
-                          <Trophy src='/static/image/scoreboard/trophy1.svg' />
-                        </div>
-                        <div className='col-2'>
-                          <WippoAvatar id={item.id} bgPosition={this.state.bgPosition[index]} />
-                        </div>
-                        <div className='col-6 align-self-center'>
-                          <FlavorDisplay>{item.display_name}</FlavorDisplay>
-                        </div>
-                        <div className="col-3 align-self-center">
-                          <Score>{item.score}</Score>
-                        </div>
-                      </div>
-                    </ListBox>
-                  </div>
-              })
-            }
-            {/* {
-              this.state.isEqualAll === true ? (
-                this.state.ranking.map((item) => {
-                  return <ListBox className='col-lg-7'>
-                            <div className='row'>
-                              <div className='col-2'>
-                                <Circle>10</Circle>
-                              </div>
-                              <div className='col-8'>
-                                {item.display_name}
-                              </div>
-                              <div className='col-2'>
-                                {item.score}
-                              </div>
+      <Wrapper>
+        <div className='container'>
+          <div className='row my-4 justify-content-center'>
+            <div className='col-7'>
+              <h3 className='text-center'>ScoreBoard</h3>
+              <FlipMove className="flip-wrapper" enterAnimation={{
+                from: {
+                  transform: 'rotateX(180deg)',
+                  opacity: 0.1,
+                },
+                to: {
+                  transform: '',
+                },
+              }}
+              leaveAnimation={{
+                from: {
+                    transform: '',
+                },
+                to: {
+                  transform: 'rotateX(-120deg)',
+                  opacity: 0.1,
+                },
+              }} staggerDelayBy={150}>
+                {
+                  ranking.map((item,index)=>{
+                    return <div key={`${index}${item.id}`} >
+                        <ListBox className='col-10'>
+                          <div className='row'>
+                            <div className='col-1'>
+                              <Trophy src={`/static/image/scoreboard/trophy${item.trophy}.svg`} />
                             </div>
+                            <div className='col-2'>
+                              <WippoAvatar id={item.id} bgPosition={this.state.bgPosition[item.id-1]} />
+                            </div>
+                            <div className='col-6 align-self-center'>
+                              <FlavorDisplay>{item.display_name}</FlavorDisplay>
+                            </div>
+                            <div className="col-3 align-self-center">
+                              <Score>{item.score}</Score>
+                            </div>
+                          </div>
                         </ListBox>
-                })
-              ):('')
-            } */}
-           </div>
-          {/* <div className='col-12'>
-            <h1 className='text-center'>WIP Camp #10 Ranking</h1>
-          </div> */}
-          <div className='row justify-content-center'>
-
+                      </div>
+                  })
+                }
+              </FlipMove>
+              
+            </div>
           </div>
         </div>
-      </div>
+
+      </Wrapper>
     )
   }
 }
 
 export default ScoreMain
 
-// this.state.ranking.map((rank, index)=> <div key={index}>{rank.ranking}</div>)
