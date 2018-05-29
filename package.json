@@ -30,7 +30,9 @@
     "react-timeout": "^1.0.1",
     "recompose": "^0.26.0",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^2.4.0"
+    "styled-components": "^2.4.0",
+    "firebase": "5.0.4",
+    "firebase-admin": "5.9.1"
   },
   "version": "1.0.0",
   "main": "index.js",
