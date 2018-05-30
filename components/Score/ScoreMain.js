@@ -7,7 +7,7 @@ import FlipMove from 'react-flip-move'
 
 
 const Wrapper = Styled.div`
-  background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #effde6;
+  background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #608c86;
   background-size: cover;
   min-height:100vh;
   width:100%;
@@ -73,6 +73,10 @@ const FlavorDisplay = Styled.p`
   @media (max-width: 576px) {
     font-size:1.3em;
   }
+`
+const Title = Styled.h2`
+  color:#fff;
+  font-weight:bold;
 `
 
 class ScoreMain extends React.Component {
@@ -151,7 +155,7 @@ class ScoreMain extends React.Component {
         <div className='container'>
           <div className='row my-4 justify-content-center'>
             <div className='col-12 col-sm-7'>
-              <h3 className='text-center'>ScoreBoard</h3>
+              <Title className='text-center'>ScoreBoard</Title>
                 <FlipMove className="flip-wrapper" enterAnimation={{
                   from: {
                     transform: 'rotateX(180deg)',
