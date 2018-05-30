@@ -31,7 +31,6 @@ export default class KillerMain extends React.Component {
   }
   sentDied = async () => {
     let diedResult = await insert(`died`, {
-      key: this.state.code,
       code: this.state.code
     })
     this.setState({
