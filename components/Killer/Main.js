@@ -24,17 +24,58 @@ const Modal = styled.div`
   transition: .5s;
 `
 
+const weapon = [
+  {
+    name: 'มีดแทงไต'
+  },
+  {
+    name: 'ปืนยิงหัว'
+  },
+  {
+    name: 'เอากระเป๋าไปซ่อนจนร้องไห้ตาย'
+  },
+  {
+    name: 'ป้อนโค้ดจาวาจนตาย'
+  },
+  {
+    name: 'บังคับกินไส้กรอกจนอ้วกแล้วตาย'
+  },
+  {
+    name: 'ใส่ยาถ่ายในส้มตำจนท้องเสียแล้วเหม็นกลิ่นตัวเองตาย'
+  },
+  {
+    name: 'ป้ายชื่อรัดคอ'
+  },
+  {
+    name: 'สปอยหนังจนตรอมใจตาย'
+  },
+  {
+    name: 'ให้นับเลขฐานจนนิ้วพันตาย'
+  },
+  {
+    name: 'ฟาดด้วยสายแลนจนแผลอักเสบติดเชื้อตาย'
+  }
+]
+
 export default class KillerMain extends React.Component {
   state = {
+    name: '',
     code: '',
+    message: '',
+    weapon: 'มีดแทงไต',
+    
     modal: false
   }
   sentDied = async () => {
+    let { name, code, message, weapon } = this.state
     let diedResult = await insert(`died`, {
-      code: this.state.code
+      name, code, message, weapon
     })
     this.setState({
-      code: ''
+      name: '',
+      code: '',
+      message: '',
+      weapon: ''
     })
   }
   closeModal = () => {
@@ -42,7 +83,7 @@ export default class KillerMain extends React.Component {
   }
   render() {
     return (
-      <Layout className='container'>
+      <Layout className='container-fluid'>
         <div className="row">
           <MinHeight className="col-12 d-flex justify-content-center align-items-center flex-column">
             <form className='form-group' onSubmit={(e) => {
@@ -53,7 +94,14 @@ export default class KillerMain extends React.Component {
             }} >
               <h1 className='text-white text-center'>Code Killer</h1>
               <h6 className='text-white text-center'>#wipcamp & #wipcamp10</h6>
-              <input className='form-control col-12 mt-5 mb-3' type='text' value={this.state.code} onChange={(e) => this.setState({ code: e.target.value })} />
+              <input placeholder='นามแฝง' className='form-control col-12 mt-5 mb-2' type='text' value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
+              <input placeholder='รหัสที่ต้องการฆ่า' className='form-control col-12 mb-2' type='text' value={this.state.code} onChange={(e) => this.setState({ code: e.target.value })} />
+              <textarea placeholder='ฝากข้อความ' className='form-control col-12 mb-3' type='text' value={this.state.message} onChange={(e) => this.setState({ message: e.target.value })} />
+              <select onChange={e => this.setState({weapon: e.target.value})} className='form-control col-12 mb-3' placeholder='วิธีการฆ่า'>
+                {
+                  weapon.map( ({name}) => <option key={name} value={name}>{name}</option>)
+                }
+              </select>
               <input type='submit' value='ฆ่า !' className='btn btn-danger col-12' />
             </form>
           </MinHeight>
