@@ -1,5 +1,6 @@
 import firebase from 'firebase'
 import config from './credentials.json'
+import md5 from 'md5'
 
 if (!firebase.apps.length) {
   firebase.initializeApp(config)
@@ -7,10 +8,10 @@ if (!firebase.apps.length) {
 
 export default firebase
 
-export const db = firebase.firestore()
+export const db = firebase.database()
 
-export const getAll = (ref, attr) => db.collection(`${ref}`)
+export const getAll = (ref, attr) => db.ref(`${ref}`)
 
-export const getOne = (ref, attr, whereCause) => db.collection(`${ref}`).where(`${attr}`, '==', whereCause)
+export const getOne = (ref, attr, whereCause) => db.ref(`${ref}/${attr}/${whereCause}`)
 
-export const insert = (ref, value) => db.collection(`${ref}`).doc(`${value.key}`).set({ ...value })
+export const insert = (ref, value) => db.ref(`${ref}/${md5(ref + {...value})}`).set({ ...value })

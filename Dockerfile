@@ -1,11 +1,9 @@
-FROM node:8-alpine
+FROM node:8
 
 WORKDIR /app
 EXPOSE 3000
 
 COPY . /app
-
-RUN apk update && apk add grpc
 
 HEALTHCHECK --interval=5s --timeout=60s CMD curl --fail http://localhost:3000/ || exit 1
 
