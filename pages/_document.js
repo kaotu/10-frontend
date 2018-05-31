@@ -60,6 +60,8 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/static/image/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
           <meta name="msapplication-TileColor" content=" #002D40"/>
           <meta name="theme-color" content=" #002D40"/>
+          <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
           
           <script dangerouslySetInnerHTML={{__html: googleTagManager}} />
           <noscript dangerouslySetInnerHTML={{__html: googleNoScript}} />

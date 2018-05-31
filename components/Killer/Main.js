@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { insert } from './firebaseHelper'
 
-const Layout = styled.div`
+export const Layout = styled.div`
   background-repeat: no-repeat;
   background-position: center bottom;
   background-image: url('/static/image/monkeyxgiant.png');
 `
 
-const MinHeight = styled.div`
+export const MinHeight = styled.div`
   background: linear-gradient(to top , rgba(0,0,0,.65),rgba(255, 51, 0,1));
   min-height: 100vh;
 `
