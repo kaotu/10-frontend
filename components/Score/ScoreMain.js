@@ -92,7 +92,7 @@ class ScoreMain extends React.Component {
     setInterval( this.fetch, 30000);
     
   }
-
+  
   fetch = async() => {
     let { data : { data: rawRanking } } = await axios({
       method: 'get',
