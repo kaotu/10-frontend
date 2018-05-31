@@ -47,12 +47,14 @@ pipeline {
         sh 'sudo docker image rm 10-frontend'
       }
     }
-    steps {
-      script {
-        if (GIT_BRANCH == 'master') {
-          sh 'sudo kubectl rolling-update 10-frontend -n production --image registry.wip.camp/10-frontend:master-$BUILD_NUMBER --image-pull-policy Always'
-        } else {
-          sh 'sudo kubectl rolling-update 10-frontend -n development --image registry.wip.camp/10-frontend:develop --image-pull-policy Always'
+    stage('deploy') {
+      steps {
+        script {
+          if (GIT_BRANCH == 'master') {
+            sh 'sudo kubectl rolling-update 10-frontend -n production --image registry.wip.camp/10-frontend:master-$BUILD_NUMBER --image-pull-policy Always'
+          } else {
+            sh 'sudo kubectl rolling-update 10-frontend -n development --image registry.wip.camp/10-frontend:develop --image-pull-policy Always'
+          }
         }
       }
     }
