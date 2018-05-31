@@ -1,13 +1,13 @@
 import React from 'react'
 import axios from 'axios'
-import Styled, { injectGlobal } from 'styled-components'
+import styled, { injectGlobal } from 'styled-components'
 import {api_url} from './api'
 import FlipMove from 'react-flip-move'
 
 
 
-const Wrapper = Styled.div`
-  background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #608c86;
+const Wrapper = styled.div`
+  background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #cbece8;
   background-size: cover;
   min-height:100vh;
   width:100%;
@@ -16,18 +16,23 @@ const Wrapper = Styled.div`
     background-position: right bottom;
   }
 `
-const ListBox = Styled.div`
+const ListBox = styled.div`
   background-color:#fff;
   box-shadow: rgba(81, 77, 92, 0.09) 0px 5px 15px 3px;
-  padding:0.4em;
   border-radius:5px;
   margin-top:15px;
 `
-
-const Score = Styled.p`
+const ScoreWrapper = styled.div`
+  background-color: ${props => props.bgColor};
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+`
+const Score = styled.p`
   margin: 0;
   font-size: 2em;
-  color: ${props => props.color};
+  color: #fff;
   @media (max-width: 375px) {
     font-size:1.3em;
   }
@@ -35,23 +40,23 @@ const Score = Styled.p`
     font-size:1.7em;
   }
 `
-const Box = Styled.div`
+const Box = styled.div`
   background-color:#fff;
   border-radius:5px;
 `
-const Trophy = Styled.img`
-  margin-top:-24%;
-  position:absolute;
-  left: -56%;
-  top: 4%;
-  width: 150%;
+const Trophy = styled.img`
+  margin-top: -24%;
+  position: absolute;
+  left: 4%;
+  top: 37%;
+  width: 68%;
   @media (max-width: 576px) {
     left: -49%;
     top: 13%;
     width: 174%;
   }
 `
-const WippoAvatar = Styled.div`
+const WippoAvatar = styled.div`
   border-radius: 50%;
   background: url(/static/image/scoreboard/wippo/${props => props.id}.svg) no-repeat;
   height: 50px;
@@ -63,7 +68,7 @@ const WippoAvatar = Styled.div`
     width: 35px;
   }
 `
-const FlavorDisplay = Styled.p`
+const FlavorDisplay = styled.p`
   color:#000;
   margin:0;
   font-size:1.5em;
@@ -74,11 +79,119 @@ const FlavorDisplay = Styled.p`
     font-size:1.3em;
   }
 `
-const Title = Styled.h2`
-  color:#fff;
+const Title = styled.h2`
+  color:#000;
   font-weight:bold;
 `
+const BImg = styled.img`
+  height: auto;
+  width: 37%;
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 720px) {
+    width: 52%;
+  }
+`
+const CamphubImg = styled.img`
+  height: auto;
+  width: 20%;
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 720px) {
+    width: 45%;
+  }
+`
+const Yipinsoi = styled.img`
+  height:auto;
+  width: 20%;
+  margin-right; 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
+    width:35%;
+  }
+`
+const SponsorWrapper = styled.div`
+  background-color:#fff;
+  padding-top:1em;
+  padding-bottom:1em;
+  border-radius:6px;
+`
 
+const Gable = styled.img`
+  height: auto;
+  width: 13%;
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 720px) {
+    width: 35%;
+  }
+`
+const Lactasoy = styled.img`
+  height:auto;
+  width: 13%;
+  margin-right; 1%;
+  margin-left: 2%;
+  @media (max-width: 720px){
+    width:33%;
+  }
+`
+const Dsc = styled.img`
+  height:auto;
+  width: 13%;
+  margin-right; 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
+    width:35%;
+  }
+`
+
+const Masita = styled.img`
+  height:auto;
+  width: 13%;
+  margin-right; 1%;
+  margin-left: 1%;
+  @media (max-width: 720px){
+    width:35%;
+  }
+`
+
+const Aware = styled.img`
+  height:auto;
+  width: 13%;
+  margin-right; 1%;
+  margin-left: 2%;
+  @media (max-width: 720px){
+    width:33%;
+  }
+`
+const ThaibevImg = styled.img`
+  height: auto;
+  width: 13%;
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 720px) {
+    width: 35%;
+  }
+`
+const Dekd = styled.img`
+  height: auto;
+  width: 13%;
+  margin-right: 1%;
+  margin-left: 2%;
+  @media (max-width: 720px) {
+    width: 35%;
+  }
+`
+const Bow = styled.img`
+  height: auto;
+  width: 13%;
+  margin-right: 1%;
+  margin-left: 1%;
+  @media (max-width: 720px) {
+    width: 35%;
+    margin-bottom:2%;
+  }
+`
 class ScoreMain extends React.Component {
   
   state = {
@@ -153,7 +266,34 @@ class ScoreMain extends React.Component {
     return (
       <Wrapper>
         <div className='container'>
-          <div className='row my-4 justify-content-center'>
+          <div className='row my-4'>
+            <SponsorWrapper className="col-5 align-self-center">
+                <div className="row justify-content-center">
+                  <div className="col-12">
+                    <BImg src='/static/image/sponsor/bangmod.png' className='pb-4 mx-3' />
+                    <CamphubImg src='/static/image/sponsor/Camphub.png' className='pb-4 mx-3' />
+                    <Yipinsoi src='/static/image/sponsor/yipinsoi.png' className='pb-4 mx-3' />
+                  </div>
+                  <div className="col-12">
+                    <p className='text-center'>
+                      <Gable src='/static/image/sponsor/stream_it_logo.png' className='pb-2 mx-2' />
+                      <Gable src='/static/image/sponsor/gable.png' className='pb-2 mx-2' />
+                      <Dsc src='/static/image/sponsor/dcs.png' className='pb-2 mx-2' />
+                      <Aware src='/static/image/sponsor/aware_logotagline_rgb.png' className='pb-2 mx-2' />
+                      <Lactasoy src='/static/image/sponsor/lactasoy.png' className='pb-2 mx-2' />
+                    </p>
+                  </div>
+                  <div className="col-12">
+                    <p className="text-center">
+                      <Gable src="/static/image/sponsor/Premier Marketing.png" className='pb-2 ' />
+                      <ThaibevImg src='/static/image/sponsor/ThaiBev.png' className='pb-2 ' />
+                      <Masita src='/static/image/sponsor/Masita.png' className='pb-2 ' />
+                      <Dekd src="/static/image/sponsor/เด็กดี.gif" className='pb-2 ' />
+                      <Bow src="/static/image/sponsor/โบว์เบเกอรี่เฮ้าส์.png" className='pb-2 ' />
+                    </p>
+                  </div>
+                </div>
+            </SponsorWrapper>
             <div className='col-12 col-sm-7'>
               <Title className='text-center'>ScoreBoard</Title>
                 <FlipMove className="flip-wrapper" enterAnimation={{
@@ -179,18 +319,18 @@ class ScoreMain extends React.Component {
                       return <div className="row justify-content-center" key={`${index}${item.id}`} >
                           <ListBox className='col-10'>
                             <div className='row'>
-                              <div className='col-1'>
+                              <div className='col-2'>
                                 <Trophy src={`/static/image/scoreboard/trophy${item.trophy}.svg`} />
                               </div>
-                              <div className='col-2'>
+                              <div className='col-2 align-self-center'>
                                 <WippoAvatar id={item.id} bgPosition={this.state.bgPosition[item.id-1]} />
                               </div>
-                              <div className='col-5 col-sm-6 align-self-center'>
+                              <div className='col-5 col-sm-5 align-self-center'>
                                 <FlavorDisplay>{item.display_name}</FlavorDisplay>
                               </div>
-                              <div className="col-4 col-sm-3 align-self-center">
-                                <Score color={item.label_color}>{item.score}</Score>
-                              </div>
+                              <ScoreWrapper bgColor={item.label_color} className="col-4 col-sm-3">
+                                <Score >{item.score}</Score>
+                              </ScoreWrapper>
                             </div>
                           </ListBox>
                         </div>
