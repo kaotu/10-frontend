@@ -34,7 +34,7 @@ export default class DiedMain extends React.Component {
       dots: true,
       infinite: true,
       speed: 800,
-      autoplaySpeed: 1300,
+      autoplaySpeed: 5000,
       slidesToShow: 6,
       slidesToScroll: 2,
       autoplay: true,
