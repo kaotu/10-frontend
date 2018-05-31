@@ -60,6 +60,7 @@ const weapon = [
 export default class KillerMain extends React.Component {
   state = {
     name: '',
+    killer: '',
     code: '',
     message: '',
     weapon: 'มีดแทงไต',
@@ -67,12 +68,13 @@ export default class KillerMain extends React.Component {
     modal: false
   }
   sentDied = async () => {
-    let { name, code, message, weapon } = this.state
+    let { name, code, message, weapon, killer } = this.state
     let diedResult = await insert(`died`, {
-      name, code, message, weapon
+      name, code, message, weapon, killer
     })
     this.setState({
       name: '',
+      killer: '',
       code: '',
       message: '',
       weapon: ''
@@ -95,7 +97,8 @@ export default class KillerMain extends React.Component {
               <h1 className='text-white text-center'>Code Killer</h1>
               <h6 className='text-white text-center'>#wipcamp & #wipcamp10</h6>
               <input placeholder='นามแฝง' className='form-control col-12 mt-5 mb-2' type='text' value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })} />
-              <input placeholder='รหัสที่ต้องการฆ่า' className='form-control col-12 mb-2' type='text' value={this.state.code} onChange={(e) => this.setState({ code: e.target.value })} />
+              <input placeholder='รหัสของตัวเอง' className='form-control col-12 mb-2' type='text' value={this.state.killer} onChange={(e) => this.setState({ killer: e.target.value })} required />
+              <input placeholder='รหัสที่ต้องการฆ่า' className='form-control col-12 mb-2' type='text' value={this.state.code} onChange={(e) => this.setState({ code: e.target.value })} required />
               <textarea placeholder='ฝากข้อความ' className='form-control col-12 mb-3' type='text' value={this.state.message} onChange={(e) => this.setState({ message: e.target.value })} />
               <select onChange={e => this.setState({weapon: e.target.value})} className='form-control col-12 mb-3' placeholder='วิธีการฆ่า'>
                 {
