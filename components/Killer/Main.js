@@ -70,7 +70,7 @@ export default class KillerMain extends React.Component {
   sentDied = async () => {
     let { name, code, message, weapon, killer } = this.state
     let diedResult = await insert(`died`, {
-      name, code, message, weapon, killer
+      name, code, message, weapon, killer, createdAt: new Date().toJSON()
     })
     this.setState({
       name: '',
