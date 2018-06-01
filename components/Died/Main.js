@@ -110,6 +110,11 @@ export default class DiedMain extends React.Component {
   async componentWillMount () {
     this.fetchDied()
   }
+  async componentDidMount () {
+    setTimeout(() => {
+      this.forceUpdate()
+    }, 5000)
+  }
   render() {
     let { diedReason, diedPerson, giantTeam, totalGiant, monkeyTeam, totalMonkey, playersArray, diedPersonWithReason } = this.state
     let  settings = {
