@@ -47,23 +47,24 @@ pipeline {
         sh 'sudo docker image rm 10-frontend'
       }
     }
-    stage('deploy-development') {
-      when {
-        expression {
-          return GIT_BRANCH == 'develop'
-        }
-      }
+    stage('deploy') {
       steps {
-        sh 'sudo kubectl rolling-update 10-frontend -n development --image registry.wip.camp/10-frontend:$GIT_BRANCH --image-pull-policy Always'
+        script {
+          if (GIT_BRANCH == 'master') {
+            sh 'sudo kubectl rolling-update 10-frontend -n production --image registry.wip.camp/10-frontend:master-$BUILD_NUMBER --image-pull-policy Always'
+          } else {
+            sh 'sudo kubectl rolling-update 10-frontend -n development --image registry.wip.camp/10-frontend:develop --image-pull-policy Always'
+          }
+        }
       }
     }
   }
   post {
     success {
-      sh 'echo success'
+      slackSend(color: good, message: "10-Frontend on ${env.GIT_BRANCH} at build number ${env.BUILD_NUMBER} was built successfully & deploy. More infomation ${env.JENKINS_URL}")
     }
     failure {
-      sh 'echo failure'
+      slackSend(color: danger, message: "10-Frontend on ${env.GIT_BRANCH} was fail ${env.JENKINS_URL}")
     }
   }
 }

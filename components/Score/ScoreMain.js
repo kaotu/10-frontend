@@ -1,33 +1,74 @@
 import React from 'react'
 import axios from 'axios'
-import Styled, { injectGlobal } from 'styled-components'
+import styled, { injectGlobal } from 'styled-components'
 import {api_url} from './api'
 import FlipMove from 'react-flip-move'
 
+import { AllSponsor } from '../Sponsor/index'
 
+const WarpperSponsor = styled.div`
+  background: #fff;
+  border-radius: 3%;
+  padding-bottom: .7em;
+  position: absolute;
+  left: 2.6em;
+  top: 6.8em;
+  width: 26.5vw;
+  .row.d-flex {
+    padding-bottom: .5em;
+  }
+  .img-responsive {
+    margin-top: -1.5em;
+  }
+`
 
-const Wrapper = Styled.div`
-  background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #608c86;
-  background-size: cover;
+const Wrapper = styled.div`
+  overflow: hidden;
+  position: relative;
+  background-size: 150%;
+  background: rgba(130, 21, 21, 0.47843137254901963);
+  background-position: 130% bottom;
+  background-repeat: no-repeat;
+`
+const Background = styled.div`
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.8),rgb(0,68,138));
   min-height:100vh;
   width:100%;
   overflow: hidden;
-  @media (max-width: 576px) {
-    background-position: right bottom;
-  }
 `
-const ListBox = Styled.div`
+const Heartbox = styled.img`
+  position: absolute;
+  width: 165%;
+  bottom: -4em;
+  right: 0;
+  z-index: -1;
+`
+const Mountain = styled.img`
+  position: absolute;
+  width: 70%;
+  bottom: 0;
+  z-index: -1;
+  right: 0;
+  opacity: 0.6;
+`
+const ListBox = styled.div`
   background-color:#fff;
   box-shadow: rgba(81, 77, 92, 0.09) 0px 5px 15px 3px;
-  padding:0.4em;
   border-radius:5px;
   margin-top:15px;
 `
-
-const Score = Styled.p`
+const ScoreWrapper = styled.div`
+  background-color: ${props => props.bgColor};
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+`
+const Score = styled.p`
   margin: 0;
   font-size: 2em;
-  color: ${props => props.color};
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
   @media (max-width: 375px) {
     font-size:1.3em;
   }
@@ -35,24 +76,23 @@ const Score = Styled.p`
     font-size:1.7em;
   }
 `
-const Box = Styled.div`
+const Box = styled.div`
   background-color:#fff;
   border-radius:5px;
 `
-const Trophy = Styled.img`
-  margin-top:-24%;
-  position:absolute;
-  left: -56%;
-  top: 4%;
-  width: 150%;
+const Trophy = styled.img`
+  margin-top: -15%;
+  position: absolute;
+  left: 4%;
+  top: 37%;
+  width: 40%;
   @media (max-width: 576px) {
     left: -49%;
     top: 13%;
     width: 174%;
   }
 `
-const WippoAvatar = Styled.div`
-  border-radius: 50%;
+const WippoAvatar = styled.div`
   background: url(/static/image/scoreboard/wippo/${props => props.id}.svg) no-repeat;
   height: 50px;
   width: 50px;
@@ -63,7 +103,7 @@ const WippoAvatar = Styled.div`
     width: 35px;
   }
 `
-const FlavorDisplay = Styled.p`
+const FlavorDisplay = styled.p`
   color:#000;
   margin:0;
   font-size:1.5em;
@@ -74,8 +114,8 @@ const FlavorDisplay = Styled.p`
     font-size:1.3em;
   }
 `
-const Title = Styled.h2`
-  color:#fff;
+const Title = styled.h2`
+  color:#000;
   font-weight:bold;
 `
 
@@ -104,7 +144,7 @@ class ScoreMain extends React.Component {
     let rankUnFormatted = await this.setRanking(rawRanking)
     let rankFormatted = await this.formatRanking(rankUnFormatted)
     this.setState({
-      ranking: await this.setTrophy(rankFormatted)
+      ranking: rankFormatted
     })
   }
 
@@ -128,20 +168,6 @@ class ScoreMain extends React.Component {
     })
   }
 
-  setTrophy = (rankFormatted) => {
-    return rankFormatted.map((item)=>{
-      if(item.ranking === 1){
-        return {...item, trophy:1}
-      }else if(item.ranking === 2){
-        return {...item, trophy:2}
-      }else if(item.ranking === 3){
-        return {...item, trophy:3}
-      }else{
-        return {...item, trophy:4}
-      }
-    })
-  }
-
   checkIsEqualAll = (rankFormatted) => {
     return rankFormatted.every((rank) => {
       return rank.ranking === 1
@@ -152,10 +178,15 @@ class ScoreMain extends React.Component {
     let { ranking } = this.state
     return (
       <Wrapper>
-        <div className='container'>
-          <div className='row my-4 justify-content-center'>
-            <div className='col-12 col-sm-7'>
-              <Title className='text-center'>ScoreBoard</Title>
+        <Background className='container-fluid'>
+          <div className='row my-4'>
+            <div className="col-12 col-lg-3">
+              <WarpperSponsor>
+                <AllSponsor />
+              </WarpperSponsor>
+            </div>
+            <div className='col-12 col-lg-9'>
+              <Title className='text-center text-white mt-5'>อันดับเหล่าทัพ</Title>
                 <FlipMove className="flip-wrapper" enterAnimation={{
                   from: {
                     transform: 'rotateX(180deg)',
@@ -179,18 +210,18 @@ class ScoreMain extends React.Component {
                       return <div className="row justify-content-center" key={`${index}${item.id}`} >
                           <ListBox className='col-10'>
                             <div className='row'>
-                              <div className='col-1'>
-                                <Trophy src={`/static/image/scoreboard/trophy${item.trophy}.svg`} />
-                              </div>
                               <div className='col-2'>
+                                <Trophy src={`/static/image/scoreboard/trophy${item.ranking < 4 ? item.ranking : 4}.svg`} />
+                              </div>
+                              <div className='col-2 align-self-center'>
                                 <WippoAvatar id={item.id} bgPosition={this.state.bgPosition[item.id-1]} />
                               </div>
-                              <div className='col-5 col-sm-6 align-self-center'>
+                              <div className='col-5 col-sm-5 align-self-center'>
                                 <FlavorDisplay>{item.display_name}</FlavorDisplay>
                               </div>
-                              <div className="col-4 col-sm-3 align-self-center">
-                                <Score color={item.label_color}>{item.score}</Score>
-                              </div>
+                              <ScoreWrapper bgColor={item.label_color} className="col-4 col-sm-3">
+                                <Score >{item.score}</Score>
+                              </ScoreWrapper>
                             </div>
                           </ListBox>
                         </div>
@@ -199,7 +230,9 @@ class ScoreMain extends React.Component {
                 </FlipMove>
             </div>
           </div>
-        </div>
+          <Mountain src='/static/image/BgrightFAQs.png' />
+          <Heartbox src='/static/image/Bgheartbox.png' />
+        </Background>
 
       </Wrapper>
     )
