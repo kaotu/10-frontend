@@ -23,6 +23,7 @@ const WarpperSponsor = styled.div`
 `
 
 const Wrapper = styled.div`
+  overflow: hidden;
   position: relative;
   background-size: 150%;
   background: rgba(130, 21, 21, 0.47843137254901963);
