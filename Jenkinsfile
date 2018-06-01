@@ -61,10 +61,10 @@ pipeline {
   }
   post {
     success {
-      slackSend(color: good, message: "10-Frontend on ${env.GIT_BRANCH} at build number ${env.BUILD_NUMBER} was built successfully & deploy. More infomation ${env.JENKINS_URL}")
+      slackSend(color: "#228b22", message: "10-Frontend on ${env.GIT_BRANCH} at build number ${env.BUILD_NUMBER} was built successfully & deploy. More infomation ${env.JENKINS_URL}")
     }
     failure {
-      slackSend(color: danger, message: "10-Frontend on ${env.GIT_BRANCH} was fail ${env.JENKINS_URL}")
+      slackSend(color: "#ff0033", message: "10-Frontend on ${env.GIT_BRANCH} was fail ${env.JENKINS_URL}")
     }
   }
 }
