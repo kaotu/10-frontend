@@ -11,9 +11,9 @@ const WarpperSponsor = styled.div`
   border-radius: 3%;
   padding-bottom: .7em;
   position: absolute;
-  left: 2.3em;
+  left: 2.6em;
   top: 6.8em;
-  width: 33vw;
+  width: 20vw;
   .row.d-flex {
     padding-bottom: .5em;
   }
@@ -179,12 +179,12 @@ class ScoreMain extends React.Component {
       <Wrapper>
         <Background className='container-fluid'>
           <div className='row my-4'>
-            <div className="col-12 col-lg-4">
+            <div className="col-12 col-lg-2">
               <WarpperSponsor>
                 <AllSponsor />
               </WarpperSponsor>
             </div>
-            <div className='col-12 col-lg-8'>
+            <div className='col-12 col-lg-10'>
               <Title className='text-center text-white mt-5'>อันดับเหล่าทัพ</Title>
                 <FlipMove className="flip-wrapper" enterAnimation={{
                   from: {
