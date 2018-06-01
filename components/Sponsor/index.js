@@ -150,6 +150,30 @@ const Row2 = styled.div`
   margin-bottom: 2%;
 `
 
+export const AllSponsor = () => (
+  <div className='img-responsive col-12'>
+  <Row className='row d-flex justify-content-center align-items-center'>
+    <BImg src='/static/image/sponsor/bangmod.png' className='pb-4 d-flex justify-content-center' />
+    <CamphubImg src='/static/image/sponsor/Camphub.png' className='pb-4 d-flex justify-content-center' />
+    <Yipinsoi src='/static/image/sponsor/yipinsoi.png' className='pb-4 d-flex justify-content-center' />
+  </Row>
+  <Row2 className='row d-flex justify-content-center align-items-center'>
+    <Gable src='/static/image/sponsor/stream_it_logo.png' className='pb-2 d-flex justify-content-center' />
+    <Gable src='/static/image/sponsor/gable.png' className='pb-2 d-flex justify-content-center' />
+    <Dsc src='/static/image/sponsor/dcs.png' className='pb-2 d-flex justify-content-center' />
+    <Aware src='/static/image/sponsor/aware_logotagline_rgb.png' className='pb-2 d-flex justify-content-center' />
+    <Lactasoy src='/static/image/sponsor/lactasoy.png' className='pb-2 d-flex justify-content-center' />
+  </Row2>
+  <Row2 className='row d-flex justify-content-center align-items-center'>
+    <Gable src="/static/image/sponsor/Premier Marketing.png" className='pb-2 d-flex justify-content-center' />
+    <ThaibevImg src='/static/image/sponsor/ThaiBev.png' className='pb-2 d-flex justify-content-center' />
+    <Masita src='/static/image/sponsor/Masita.png' className='pb-2 d-flex justify-content-center' />
+    <Dekd src="/static/image/sponsor/เด็กดี.gif" className='pb-2 d-flex justify-content-center' />
+    <Bow src="/static/image/sponsor/โบว์เบเกอรี่เฮ้าส์.png" className='pb-2 d-flex justify-content-center' />
+  </Row2>
+  </div>
+)
+
 const Index = props => (
   <Bg className='d-flex'>
     <Relative className='d-flex align-items-center'>
@@ -157,27 +181,7 @@ const Index = props => (
       <DivSponsor className='container'>
         <div className='row'>
           <div className='col-md-12'>
-            <div className='img-responsive col-12'>
-              <Row className='row d-flex justify-content-center align-items-center'>
-                <BImg src='/static/image/sponsor/bangmod.png' className='pb-4 d-flex justify-content-center' />
-                <CamphubImg src='/static/image/sponsor/Camphub.png' className='pb-4 d-flex justify-content-center' />
-                <Yipinsoi src='/static/image/sponsor/yipinsoi.png' className='pb-4 d-flex justify-content-center' />
-              </Row>
-              <Row2 className='row d-flex justify-content-center align-items-center'>
-                <Gable src='/static/image/sponsor/stream_it_logo.png' className='pb-2 d-flex justify-content-center' />
-                <Gable src='/static/image/sponsor/gable.png' className='pb-2 d-flex justify-content-center' />
-                <Dsc src='/static/image/sponsor/dcs.png' className='pb-2 d-flex justify-content-center' />
-                <Aware src='/static/image/sponsor/aware_logotagline_rgb.png' className='pb-2 d-flex justify-content-center' />
-                <Lactasoy src='/static/image/sponsor/lactasoy.png' className='pb-2 d-flex justify-content-center' />
-              </Row2>
-              <Row2 className='row d-flex justify-content-center align-items-center'>
-                <Gable src="/static/image/sponsor/Premier Marketing.png" className='pb-2 d-flex justify-content-center' />
-                <ThaibevImg src='/static/image/sponsor/ThaiBev.png' className='pb-2 d-flex justify-content-center' />
-                <Masita src='/static/image/sponsor/Masita.png' className='pb-2 d-flex justify-content-center' />
-                <Dekd src="/static/image/sponsor/เด็กดี.gif" className='pb-2 d-flex justify-content-center' />
-                <Bow src="/static/image/sponsor/โบว์เบเกอรี่เฮ้าส์.png" className='pb-2 d-flex justify-content-center' />
-              </Row2>
-            </div>
+            <AllSponsor />
           </div>
         </div>
       </DivSponsor>

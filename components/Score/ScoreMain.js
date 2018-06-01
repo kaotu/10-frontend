@@ -4,17 +4,51 @@ import styled, { injectGlobal } from 'styled-components'
 import {api_url} from './api'
 import FlipMove from 'react-flip-move'
 
+import { AllSponsor } from '../Sponsor/index'
 
+const WarpperSponsor = styled.div`
+  background: #fff;
+  border-radius: 3%;
+  padding-bottom: .7em;
+  position: absolute;
+  left: 2.3em;
+  top: 6.8em;
+  width: 33vw;
+  .row.d-flex {
+    padding-bottom: .5em;
+  }
+  .img-responsive {
+    margin-top: -1.5em;
+  }
+`
 
 const Wrapper = styled.div`
-  background: url(/static/image/scoreboard/bar.png) no-repeat left bottom #cbece8;
-  background-size: cover;
+  position: relative;
+  background-size: 150%;
+  background: rgba(130, 21, 21, 0.47843137254901963);
+  background-position: 130% bottom;
+  background-repeat: no-repeat;
+`
+const Background = styled.div`
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.8),rgb(0,68,138));
   min-height:100vh;
   width:100%;
   overflow: hidden;
-  @media (max-width: 576px) {
-    background-position: right bottom;
-  }
+`
+const Heartbox = styled.img`
+  position: absolute;
+  width: 165%;
+  bottom: -4em;
+  right: 0;
+  z-index: -1;
+`
+const Mountain = styled.img`
+  position: absolute;
+  width: 70%;
+  bottom: 0;
+  z-index: -1;
+  right: 0;
+  opacity: 0.6;
 `
 const ListBox = styled.div`
   background-color:#fff;
@@ -33,6 +67,7 @@ const Score = styled.p`
   margin: 0;
   font-size: 2em;
   color: #fff;
+  text-shadow: 1px 1px 4px #000;
   @media (max-width: 375px) {
     font-size:1.3em;
   }
@@ -45,11 +80,11 @@ const Box = styled.div`
   border-radius:5px;
 `
 const Trophy = styled.img`
-  margin-top: -24%;
+  margin-top: -15%;
   position: absolute;
   left: 4%;
   top: 37%;
-  width: 68%;
+  width: 40%;
   @media (max-width: 576px) {
     left: -49%;
     top: 13%;
@@ -57,7 +92,6 @@ const Trophy = styled.img`
   }
 `
 const WippoAvatar = styled.div`
-  border-radius: 50%;
   background: url(/static/image/scoreboard/wippo/${props => props.id}.svg) no-repeat;
   height: 50px;
   width: 50px;
@@ -83,115 +117,7 @@ const Title = styled.h2`
   color:#000;
   font-weight:bold;
 `
-const BImg = styled.img`
-  height: auto;
-  width: 37%;
-  margin-right: 1%;
-  margin-left: 1%;
-  @media (max-width: 720px) {
-    width: 52%;
-  }
-`
-const CamphubImg = styled.img`
-  height: auto;
-  width: 20%;
-  margin-right: 1%;
-  margin-left: 1%;
-  @media (max-width: 720px) {
-    width: 45%;
-  }
-`
-const Yipinsoi = styled.img`
-  height:auto;
-  width: 20%;
-  margin-right; 1%;
-  margin-left: 1%;
-  @media (max-width: 720px){
-    width:35%;
-  }
-`
-const SponsorWrapper = styled.div`
-  background-color:#fff;
-  padding-top:1em;
-  padding-bottom:1em;
-  border-radius:6px;
-`
 
-const Gable = styled.img`
-  height: auto;
-  width: 13%;
-  margin-right: 1%;
-  margin-left: 1%;
-  @media (max-width: 720px) {
-    width: 35%;
-  }
-`
-const Lactasoy = styled.img`
-  height:auto;
-  width: 13%;
-  margin-right; 1%;
-  margin-left: 2%;
-  @media (max-width: 720px){
-    width:33%;
-  }
-`
-const Dsc = styled.img`
-  height:auto;
-  width: 13%;
-  margin-right; 1%;
-  margin-left: 1%;
-  @media (max-width: 720px){
-    width:35%;
-  }
-`
-
-const Masita = styled.img`
-  height:auto;
-  width: 13%;
-  margin-right; 1%;
-  margin-left: 1%;
-  @media (max-width: 720px){
-    width:35%;
-  }
-`
-
-const Aware = styled.img`
-  height:auto;
-  width: 13%;
-  margin-right; 1%;
-  margin-left: 2%;
-  @media (max-width: 720px){
-    width:33%;
-  }
-`
-const ThaibevImg = styled.img`
-  height: auto;
-  width: 13%;
-  margin-right: 1%;
-  margin-left: 1%;
-  @media (max-width: 720px) {
-    width: 35%;
-  }
-`
-const Dekd = styled.img`
-  height: auto;
-  width: 13%;
-  margin-right: 1%;
-  margin-left: 2%;
-  @media (max-width: 720px) {
-    width: 35%;
-  }
-`
-const Bow = styled.img`
-  height: auto;
-  width: 13%;
-  margin-right: 1%;
-  margin-left: 1%;
-  @media (max-width: 720px) {
-    width: 35%;
-    margin-bottom:2%;
-  }
-`
 class ScoreMain extends React.Component {
   
   state = {
@@ -217,7 +143,7 @@ class ScoreMain extends React.Component {
     let rankUnFormatted = await this.setRanking(rawRanking)
     let rankFormatted = await this.formatRanking(rankUnFormatted)
     this.setState({
-      ranking: await this.setTrophy(rankFormatted)
+      ranking: rankFormatted
     })
   }
 
@@ -241,20 +167,6 @@ class ScoreMain extends React.Component {
     })
   }
 
-  setTrophy = (rankFormatted) => {
-    return rankFormatted.map((item)=>{
-      if(item.ranking === 1){
-        return {...item, trophy:1}
-      }else if(item.ranking === 2){
-        return {...item, trophy:2}
-      }else if(item.ranking === 3){
-        return {...item, trophy:3}
-      }else{
-        return {...item, trophy:4}
-      }
-    })
-  }
-
   checkIsEqualAll = (rankFormatted) => {
     return rankFormatted.every((rank) => {
       return rank.ranking === 1
@@ -265,37 +177,15 @@ class ScoreMain extends React.Component {
     let { ranking } = this.state
     return (
       <Wrapper>
-        <div className='container'>
+        <Background className='container-fluid'>
           <div className='row my-4'>
-            <SponsorWrapper className="col-5 align-self-center">
-                <div className="row justify-content-center">
-                  <div className="col-12">
-                    <BImg src='/static/image/sponsor/bangmod.png' className='pb-4 mx-3' />
-                    <CamphubImg src='/static/image/sponsor/Camphub.png' className='pb-4 mx-3' />
-                    <Yipinsoi src='/static/image/sponsor/yipinsoi.png' className='pb-4 mx-3' />
-                  </div>
-                  <div className="col-12">
-                    <p className='text-center'>
-                      <Gable src='/static/image/sponsor/stream_it_logo.png' className='pb-2 mx-2' />
-                      <Gable src='/static/image/sponsor/gable.png' className='pb-2 mx-2' />
-                      <Dsc src='/static/image/sponsor/dcs.png' className='pb-2 mx-2' />
-                      <Aware src='/static/image/sponsor/aware_logotagline_rgb.png' className='pb-2 mx-2' />
-                      <Lactasoy src='/static/image/sponsor/lactasoy.png' className='pb-2 mx-2' />
-                    </p>
-                  </div>
-                  <div className="col-12">
-                    <p className="text-center">
-                      <Gable src="/static/image/sponsor/Premier Marketing.png" className='pb-2 ' />
-                      <ThaibevImg src='/static/image/sponsor/ThaiBev.png' className='pb-2 ' />
-                      <Masita src='/static/image/sponsor/Masita.png' className='pb-2 ' />
-                      <Dekd src="/static/image/sponsor/เด็กดี.gif" className='pb-2 ' />
-                      <Bow src="/static/image/sponsor/โบว์เบเกอรี่เฮ้าส์.png" className='pb-2 ' />
-                    </p>
-                  </div>
-                </div>
-            </SponsorWrapper>
-            <div className='col-12 col-sm-7'>
-              <Title className='text-center'>ScoreBoard</Title>
+            <div className="col-12 col-lg-4">
+              <WarpperSponsor>
+                <AllSponsor />
+              </WarpperSponsor>
+            </div>
+            <div className='col-12 col-lg-8'>
+              <Title className='text-center text-white mt-5'>อันดับเหล่าทัพ</Title>
                 <FlipMove className="flip-wrapper" enterAnimation={{
                   from: {
                     transform: 'rotateX(180deg)',
@@ -320,7 +210,7 @@ class ScoreMain extends React.Component {
                           <ListBox className='col-10'>
                             <div className='row'>
                               <div className='col-2'>
-                                <Trophy src={`/static/image/scoreboard/trophy${item.trophy}.svg`} />
+                                <Trophy src={`/static/image/scoreboard/trophy${item.ranking < 4 ? item.ranking : 4}.svg`} />
                               </div>
                               <div className='col-2 align-self-center'>
                                 <WippoAvatar id={item.id} bgPosition={this.state.bgPosition[item.id-1]} />
@@ -339,7 +229,9 @@ class ScoreMain extends React.Component {
                 </FlipMove>
             </div>
           </div>
-        </div>
+          <Mountain src='/static/image/BgrightFAQs.png' />
+          <Heartbox src='/static/image/Bgheartbox.png' />
+        </Background>
 
       </Wrapper>
     )
